@@ -1,0 +1,3 @@
+Merci à Jost Muxfeld et à James McCartney. 
+
+Les valeurs doivent être comprises entre 0 et 1.

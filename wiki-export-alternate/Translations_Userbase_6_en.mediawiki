@@ -1,0 +1,7 @@
+* [[Tutorial]]
+* [[Interaction]]
+* [[Controller Input]]
+* [[Understanding the $]]
+* [[Combining pattern structure]]
+* [[Tidal workshop worksheet]] - designed for workshops, useful even if you're not in one!
+* [[Building up patterns]] - step-by-step examples

@@ -1,0 +1,41 @@
+<languages/>
+{{DISPLAYTITLE:sometimes}} 
+''Consulte régalement : [[someCycles]]''
+
+[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>sometimes :: (Pattern a -> Pattern a) -> Pattern a -> Pattern a</syntaxhighlight>
+
+'''sometimes''' est une fonction qui applique une autre fonction sur un pattern 50% du temps, de manière aléatoire. <code>sometimes</code> requiert deux paramètres : une fonction à appliquer, et le pattern qui la reçoit. 
+
+Par exemple, voici comment ajouter de la distortion 50% du temps :
+
+<syntaxhighlight lang="haskell">
+d1 $ sometimes (# crush 2) $ n "0 1 [~ 2] 3" # sound "arpy"
+</syntaxhighlight>
+
+<code>sometimes</code> appartient à une famille plus large de fonctions similaires :
+
+{| class="wikitable"
+|-
+! function !! likelihood
+|-
+| <syntaxhighlight lang="haskell" inline>always</syntaxhighlight> || 100%
+|-
+| <syntaxhighlight lang="haskell" inline>almostAlways</syntaxhighlight> || 90%
+|-
+| <syntaxhighlight lang="haskell" inline>often</syntaxhighlight> || 75%
+|-
+| <syntaxhighlight lang="haskell" inline>sometimes</syntaxhighlight> || 50%
+|-
+| <syntaxhighlight lang="haskell" inline>rarely</syntaxhighlight> || 25%
+|-
+| <syntaxhighlight lang="haskell" inline>almostNever</syntaxhighlight> || 10%
+|-
+| <syntaxhighlight lang="haskell" inline>never</syntaxhighlight> || 0%
+|}
+
+= sometimesBy =
+
+Si vous souhaitez préciser le facteur de chance, vous pouvez utiliser <code>sometimesBy</code> suivi d'un nombre compris entre 0 et 1. Par exemple, <code>sometimesBy 0.93 (# speed 2)</code> applique l'effet 93% du temps.
+
+
+[[Category:Functions]] [[Category:Higher-order functions]] [[Category:Randomness and chance]] [[Category:Conditional Transformers]]

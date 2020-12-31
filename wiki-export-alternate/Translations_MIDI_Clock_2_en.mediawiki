@@ -1,0 +1,1 @@
+First, you can start sending MIDI clock messages, 48 per cycle, like this:

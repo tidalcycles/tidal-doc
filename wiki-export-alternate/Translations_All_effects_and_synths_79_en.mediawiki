@@ -1,0 +1,2 @@
+<small>(SuperCollider documentation for PV_BrickWall:
+Clears bins above or below a cutoff point.)</small>

@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>irand</syntaxhighlight> generates a random integer up to the number specified. e.g. to play a random sample:

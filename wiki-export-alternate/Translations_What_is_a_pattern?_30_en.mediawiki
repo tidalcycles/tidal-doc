@@ -1,0 +1,1 @@
+The only thing we haven't done is define what the <syntaxhighlight lang="Haskell" inline>ControlMap</syntaxhighlight> type is that we saw earlier. As well as being used to represent controller state, it's part of the definition of one more type, the <syntaxhighlight lang="Haskell" inline>ControlPattern</syntaxhighlight>, here we go:

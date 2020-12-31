@@ -1,0 +1,62 @@
+<languages />
+
+これまでは短いサンプルを使ってきました。長いサンプルは、注意して扱わないと問題を引き起こすことがあります。長いサンプルで何が起きるか見てみましょう。
+
+<syntaxhighlight lang="Haskell" >
+d1 $ sound "bev"
+-- wait a bit, then..
+hush
+</syntaxhighlight>
+
+聴いてわかるように、Tidalは、サンプルの再生を毎サイクル発動し続けます。途中でパターンの演奏を停止しても、サンプルの残りは流れ続けます。
+
+<syntaxhighlight lang="Haskell" inline>cut</syntaxhighlight> を使うと、次のサンプルの再生が発動したら、再生中のサンプルを切り捨てることができます。
+
+<syntaxhighlight lang="Haskell" >
+d1 $ sound "bev" # cut 1
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>cut</syntaxhighlight>の引数はグループを定義します。そのため、異なるパターン間の干渉で遊べます。
+
+<syntaxhighlight lang="Haskell" >
+d1 $ sound "bev ~" # cut 1
+d2 $ slow 4 $ sound "pebbles ~" # cut 1
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>legato</syntaxhighlight>もサンプルを切り捨てますが、固定長を使います。
+
+<syntaxhighlight lang="Haskell" >
+d1 $ sound "bev ~ bev ~" # legato 1
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>chop</syntaxhighlight> を使い、「グラニュラーシンセシス」エフェクトを得られます。
+
+<syntaxhighlight lang="Haskell" >
+d1 $ chop 32 $ sound "bev"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>striate</syntaxhighlight> は <syntaxhighlight lang="Haskell" inline>chop</syntaxhighlight> に似ていますが、再生を違った方法でコントロールします。
+
+<syntaxhighlight lang="Haskell" >
+d1 $ slow 4 $ chop 4 $ sound "arpy:1 arpy:2 arpy:3 arpy:4"
+d1 $ slow 4 $ striate 4 $ sound "arpy:1 arpy:2 arpy:3 arpy:4"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>randslice</syntaxhighlight> は、サンプルを複数に分け、各サイクルでランダムにひとつを選び、再生します。
+
+<syntaxhighlight lang="Haskell" >
+d1 $ randslice 32 $ sound "bev"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>loopAt</syntaxhighlight>を使うと、サンプルを、設定したサイクル数に合わせ調整します:
+
+<syntaxhighlight lang="Haskell" >
+d1 $ loopAt 8 $ sound "bev"
+</syntaxhighlight>
+
+これまで同様パターンや変形をこれらの関数に追加したり、組み合わせることで、面白いエフェクトが得られます。
+
+<syntaxhighlight lang="Haskell" >
+d1 $ loopAt "<8 4 16>" $ chop 64 $  sound "bev*4" # cut 1
+d1 $ rev $ loopAt 8 $ chop 128 $ sound "bev"
+</syntaxhighlight>

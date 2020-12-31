@@ -1,0 +1,62 @@
+<languages />
+
+Jusqu'à présent, nous n'avons utilisé que des samples courtes. Des samples plus longues peuvent poser problème si nous manquons de vigilance. Voyons-voir ce qui se passe si nous jouons un sample long :
+
+<syntaxhighlight lang="Haskell" >
+d1 $ sound "bev"
+-- wait a bit, then..
+hush
+</syntaxhighlight>
+
+Comme vous pouvez l'entendre, Tidal déclenche la lecture de la sample à chaque cycle, même si celle-ci est trop longue ! Même si vous stoppez la lecture du pattern, vous aurez à attendre la fin de la sample pour obtenir le silence.
+
+Vous pouvez utiliser <syntaxhighlight lang="Haskell" inline>cut</syntaxhighlight> pour tronquer le sample dès qu'un autre sample est joué.
+
+<syntaxhighlight lang="Haskell" >
+d1 $ sound "bev" # cut 1
+</syntaxhighlight>
+
+The number in ‘cut’ define a group, so you can play with interference across different patterns
+
+<syntaxhighlight lang="Haskell" >
+d1 $ sound "bev ~" # cut 1
+d2 $ slow 4 $ sound "pebbles ~" # cut 1
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>legato</syntaxhighlight> also truncates samples, but using a fixed length
+
+<syntaxhighlight lang="Haskell" >
+d1 $ sound "bev ~ bev ~" # legato 1
+</syntaxhighlight>
+
+We can also <syntaxhighlight lang="Haskell" inline>chop</syntaxhighlight> samples for a ‘granular synthesis' effect
+
+<syntaxhighlight lang="Haskell" >
+d1 $ chop 32 $ sound "bev"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>striate</syntaxhighlight> is similar to <syntaxhighlight lang="Haskell" inline>chop</syntaxhighlight> but organises the playback in a different way
+
+<syntaxhighlight lang="Haskell" >
+d1 $ slow 4 $ chop 4 $ sound "arpy:1 arpy:2 arpy:3 arpy:4"
+d1 $ slow 4 $ striate 4 $ sound "arpy:1 arpy:2 arpy:3 arpy:4"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>randslice</syntaxhighlight> chops the sample into pieces and then plays back a random one each cycle
+
+<syntaxhighlight lang="Haskell" >
+d1 $ randslice 32 $ sound "bev"
+</syntaxhighlight>
+
+We can also use <syntaxhighlight lang="Haskell" inline>loopAt</syntaxhighlight> to fit samples to a set number of cycles:
+
+<syntaxhighlight lang="Haskell" >
+d1 $ loopAt 8 $ sound "bev"
+</syntaxhighlight>
+
+As always we can add patterns and transformations to these functions, or combine them for interesting effects
+
+<syntaxhighlight lang="Haskell" >
+d1 $ loopAt "<8 4 16>" $ chop 64 $  sound "bev*4" # cut 1
+d1 $ rev $ loopAt 8 $ chop 128 $ sound "bev"
+</syntaxhighlight>

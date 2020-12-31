@@ -1,0 +1,1 @@
+TidalCycles setzt auf SuperDirt auf. SuperDirt muss laufen, damit Tidal Sounds machen kann. So wird SuperDirt installiert:

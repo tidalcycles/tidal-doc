@@ -1,0 +1,1 @@
+Nous pouvons aussi préparer des patterns qui seront joués lors d'un cycle ultérieur en utilisant  <syntaxhighlight lang="Haskell" inline><</syntaxhighlight> et <syntaxhighlight lang="Haskell" inline>></syntaxhighlight> :

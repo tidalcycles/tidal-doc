@@ -1,0 +1,2 @@
+Bien souvent, installer la version complète de la plateforme Haskell règlera tout vos problèmes. Vous pouvez l'obtenir en suivant ce lien :
+https://www.haskell.org/platform/

@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>cut</syntaxhighlight>の引数はグループを定義します。そのため、異なるパターン間の干渉で遊べます。

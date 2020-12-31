@@ -1,0 +1,1 @@
+Pour commencer, vous pouvez envoyer un certain nombre de messages horloge, par exemple, 48 par cycle :

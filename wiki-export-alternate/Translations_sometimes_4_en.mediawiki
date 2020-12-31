@@ -1,0 +1,1 @@
+For example to distort half the events in a pattern:

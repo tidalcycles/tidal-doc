@@ -1,0 +1,1 @@
+'''superimpose''' permet de superposer deux versions d'un même pattern : le pattern original et un pattern altéré.

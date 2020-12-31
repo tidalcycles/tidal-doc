@@ -1,0 +1,3 @@
+== Filtre passe-haut ==
+# hcutoff/hpf : la fréquence de coupure.
+# hresonance/hpq : la résonance.

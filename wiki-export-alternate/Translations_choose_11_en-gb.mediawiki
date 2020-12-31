@@ -1,0 +1,2 @@
+= chooseBy =
+[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>chooseBy :: Pattern Double -> [a] -> Pattern a</syntaxhighlight>

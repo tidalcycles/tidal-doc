@@ -1,0 +1,1 @@
+Hinweis: In dieser Dokumentation wird der Atom-Editor verwendet, um den Tidal-Code einzugeben. Wenn du einen anderen Editor verwenden möchtest, wirf einen Blick auf die [[List of tidal editors|Liste der Tidal-Editoren]].

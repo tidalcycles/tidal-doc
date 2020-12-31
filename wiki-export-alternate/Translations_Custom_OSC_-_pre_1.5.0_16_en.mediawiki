@@ -1,0 +1,2 @@
+<source>
+tidal <- startMulti [customTarget, anotherTarget] defaultConfig

@@ -1,0 +1,1 @@
+"備註：此文檔推薦Atom作為Tidal代碼編輯器。如果你希望使用其他編輯器，可以參閱 [[List of tidal editors]]"

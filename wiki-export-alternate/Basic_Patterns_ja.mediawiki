@@ -1,0 +1,283 @@
+<languages />
+
+Tidalで音を鳴らすには、基本このように書きます
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>silence</syntaxhighlight> で、音を止めます:
+
+<syntaxhighlight lang="Haskell">
+d1 $ silence
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>:</syntaxhighlight> で、同じセットから他の音を使います
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum:1"
+</syntaxhighlight>
+
+Tidalでデフォルトで使えるサンプルを次に挙げました。いくつか試してみましょう。
+
+<pre>
+flick sid can metal future gabba sn mouth co gretsch mt arp h cp
+cr newnotes bass hc tabla bass0 hh bass1 bass2 oc bass3 ho odx
+diphone2 house off ht tink perc bd industrial pluck trump printshort
+jazz voodoo birds3 procshort blip drum jvbass psr wobble drumtraks koy
+rave bottle kurt latibro rm sax lighter lt arpy feel less stab ul
+</pre>
+
+ほかにどんなサンプルがあるか (または自分で追加するには) は ''Dirt-Samples'' フォルダを見てみましょう。SuperColliderのメニューから 'File > Open user support directory > downloaded-quarks >
+Dirt-Samples' で見られます。
+
+== シーケンスを作る ==
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd hh sn hh"
+</syntaxhighlight>
+
+シーケンスのなかに、ステップを増やせば増やすほど、ステップはより早く再生されます:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd bd hh bd sn bd hh bd"
+</syntaxhighlight>
+
+これは、Tidalが時間を扱う方法のためです。‘サイクル’ (音楽の1小節のようなもの)が常に繰り返されています。Tidalは、明示的に指定(その方法はあとで学びます)しないかぎり、引用符("")に囲まれたすべての音を1サイクルで再生します。Tidalは、サイクル内に等しく音をちりばめます。つまり、ポリリズム構造をとれるということです(これもあとで学びます)。
+
+<div class="mw-translate-fuzzy">
+サイクルの長さを <syntaxhighlight lang="Haskell" inline>cps</syntaxhighlight> (1サイクルの秒数)を使って変えられます - BPM(分あたりの拍数)と似ていますね。
+</div>
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell">
+cps 0.6
+</syntaxhighlight>
+</div>
+
+同時に複数のシーケンスを再生するには d1, d2, d3 ... d9 を使います
+
+<syntaxhighlight lang="Haskell">
+d2 $ sound "sn sn:2 sn bd sn"
+</syntaxhighlight>
+
+全ての再生中のパターンを止めるには <syntaxhighlight lang="Haskell" inline>hush</syntaxhighlight> を使います。
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell">
+`hush`
+</syntaxhighlight>
+</div>
+
+サイクルの長さを負数(負数は括弧で囲む必要があります。覚えておきましょう)にしても、すべての再生を止めることができます。
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell">
+cps (-1)
+</syntaxhighlight>
+</div>
+
+正の数にして、もう一度再生できるようにしましょう。
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell">
+cps 0.6
+</syntaxhighlight>
+</div>
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell" inline>solo</syntaxhighlight> でひとつのチャンネルだけ再生することもできます。しかし、注意として 'unosolo' (再び複数チャンネルの再生に戻る) することはできません (ですが、次のバージョンで機能を追加する予定です!)。
+</div>
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell">
+d1 $ sound "arpy cp arpy:2"
+d2 $ sound "sn sn:2 bd sn"
+solo $ d2 $ sound "sn sn:2 bd sn"
+</syntaxhighlight>
+</div>
+
+d2 $ sound "sn sn:2 bd sn"
+
+solo 2
+
+-- now only the second pattern will be playing
+
+unsolo 2
+
+-- now both will be playing, again
+</syntaxhighlight>
+
+もう少しバリエーションを加えてみましょう。
+
+<syntaxhighlight lang="Haskell" inline>~</syntaxhighlight> で休符/休みを加えます:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd ~ sn:3 bd sn:5 ~ bd:2 sn:2"
+</syntaxhighlight>
+
+四角かっこ <syntaxhighlight lang="Haskell" inline>[ ]</syntaxhighlight> で囲んだサブシーケンスを、ステップのひとつとして並べます:
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd [bd cp] bd bd"
+<syntaxhighlight>
+</div>
+
+これより柔軟に拍子を作り出せます:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "[bd bd sn:5] [bd sn:3]"
+</syntaxhighlight>
+
+サブシーケンスの中に、サブシーケンスを入れられます:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "[[bd bd] bd sn:5] [bd sn:3]"
+</syntaxhighlight>
+
+もっと入れられます..
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "[[bd [bd bd bd bd]] bd sn:5] [bd sn:3]"
+</syntaxhighlight>
+
+ステップを <syntaxhighlight lang="Haskell" inline>*</syntaxhighlight> で繰り返せます:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd sd*2"
+</syntaxhighlight>
+
+これはサブシーケンスにも使えます:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd [sd cp]*2"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>/</syntaxhighlight> で逆のこともできます:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd sn/2"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd [sn cp]/2"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>*</syntaxhighlight> は 'スピードアップ' し、掛け合わせた回数だけステップを再生します。逆に、 <syntaxhighlight lang="Haskell" inline>/</syntaxhighlight> は遅く再生する様はたらきます。
+
+<syntaxhighlight lang="Haskell" inline><</syntaxhighlight> と <syntaxhighlight lang="Haskell" inline>></syntaxhighlight> で囲むと、サイクル間で、パターンをスケジューリングできます:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd <sd cp arpy>"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "<bd sn> <sd [cp cp]> <bd [cp cp]>"
+</syntaxhighlight>
+
+== エフェクト ==
+
+Tidalには、音の鳴り方を変えるたくさんのエフェクトがあります。 
+
+<syntaxhighlight lang="Haskell" inline>vowel</syntaxhighlight> は母音の音を加えるフィルターです。 a, e, i, o, uを試してみましょう。
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum drum drum drum" # vowel "a"
+</syntaxhighlight>
+
+エフェクトのパターンは、音のパターンと同じように作ります。エフェクトや音のパターンを「コントロール・パターン」と呼びます。
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum drum drum drum" # vowel "a o e e"
+</syntaxhighlight>
+
+サイクル間でスケジューリングするため、<syntaxhighlight lang="Haskell" inline><></syntaxhighlight>を使っているのを覚えておきましょう。
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum drum drum drum" # vowel "<a o e e>"
+</syntaxhighlight>
+
+母音でない文字を入れると、母音エフェイト(vowel effect)を止められます。
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum drum drum drum" # vowel "a o p p"
+</syntaxhighlight>
+
+Tidalは、ひとつから他方へ、うまくパターンをマッピングします。
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum drum drum drum" # vowel "a o e"
+</syntaxhighlight>
+
+構造は左から右へ渡されます。左と右のパラメータを逆転させてみましょう。
+
+<syntaxhighlight lang="Haskell">
+d1 $ vowel "a o ~ i" # sound "drum" 
+</syntaxhighlight>
+
+"警告" - これは新しいTidalの変更点のひとつです。新しいTidalでは、左右どちらから構造を渡すか、または「両側から」渡すか、指定できるようになります。
+
+<syntaxhighlight lang="Haskell" inline>gain</syntaxhighlight> は、それぞれの音のボリュームを変えます
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd hh sn:1 hh sn:1 hh" # gain "1 0.7 0.5"
+</syntaxhighlight>
+
+
+<syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> と <syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> は、サンプルの音高を変えます。
+
+<syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> は、再生の速度を変えます。例. 2 は1オクターブ上がります
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "numbers:1 numbers:2 numbers:3 numbers:4" # speed "1 1.5 2 0.5"
+</syntaxhighlight>
+
+またはパターンを <syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> パラメータから受け取ることもできます
+
+<syntaxhighlight lang="Haskell">
+d1 $ speed "1 2 4" # sound "jungbass:6"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> は、音高を半音ずつ変えます。例. 12 で1オクターブ上がります
+
+<syntaxhighlight lang="Haskell">
+d1 $ up "0 ~ 12 24" # sound "jungbass:6"
+</syntaxhighlight>
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell" inline>Pan</syntaxhighlight> はステレオ効果を作れます - 0 = 左, 0.5 = 中心, 1 = 右
+</div>
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "numbers:1 numbers:2 numbers:3 numbers:4" # pan "0 0.5 1"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>shape</syntaxhighlight>はディストーションを加えます (ですが、音量も同時に上げるため注意してください)
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "kurt:4 kurt:4" # shape "0 0.78" # gain "0.7"
+</syntaxhighlight>
+
+
+== もっと色々試してみたいですか？ ==
+
+<div class="mw-translate-fuzzy">
+他のエフェクトを試してみましょう http://tidalcycles.org/patterns.html#effects
+</div>
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell" inline>delay</syntaxhighlight> / <syntaxhighlight lang="Haskell" inline>delaytime</syntaxhighlight> / <syntaxhighlight lang="Haskell" inline>delayfeedback</syntaxhighlight> /
+<syntaxhighlight lang="Haskell" inline>cutoff</syntaxhighlight> / <syntaxhighlight lang="Haskell" inline>resonance</syntaxhighlight> /
+<syntaxhighlight lang="Haskell" inline>room</syntaxhighlight> / <syntaxhighlight lang="Haskell" inline>size</syntaxhighlight>
+</div>
+
+== 連続パターン ==
+
+<syntaxhighlight lang="Haskell" inline>sine</syntaxhighlight>は連続パターンです。sin波にしたがって、0から1に変化し、また0へ戻ります。
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd*32" # gain sine
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>tri</syntaxhighlight> や <syntaxhighlight lang="Haskell" inline>saw</syntaxhighlight> や <syntaxhighlight lang="Haskell" inline>rand</syntaxhighlight> も試せます。

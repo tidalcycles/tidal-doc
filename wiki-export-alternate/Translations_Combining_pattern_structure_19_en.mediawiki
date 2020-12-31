@@ -1,0 +1,2 @@
+Likewise, you can take the structure from the right, with <syntaxhighlight lang="Haskell" inline>+|</syntaxhighlight>. So <syntaxhighlight lang="Haskell" inline>"2
+3" +| "4 5 6"</syntaxhighlight> looks like:

@@ -1,0 +1,1 @@
+Prenez note que chaque interface MIDI est composée de deux noms complémentaires. Vous aurez besoin des deux pour vous connecter en MIDI. Evaluez la ligne suivante :

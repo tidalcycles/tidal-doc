@@ -1,0 +1,1 @@
+<syntaxhighlight lang="haskell" inline>chunk</syntaxhighlight> は、毎回パターンの異なる部分に変形やエフェクトを適用します。例えばパラメータに <syntaxhighlight lang="haskell" inline>4</syntaxhighlight> を指定すると、サイクルの1/4ごとに適用されます。

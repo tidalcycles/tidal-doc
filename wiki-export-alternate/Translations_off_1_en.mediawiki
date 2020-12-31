@@ -1,0 +1,1 @@
+[[Type]]: <source inline>Pattern Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a</source>

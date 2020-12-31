@@ -1,0 +1,1 @@
+<syntaxhighlight lang="haskell" inline>hurry</syntaxhighlight> 跟 <syntaxhighlight lang="haskell" inline>fast</syntaxhighlight> 有點像，差異在於多了撥放速度(音高)的變換。

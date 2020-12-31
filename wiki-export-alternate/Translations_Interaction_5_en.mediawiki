@@ -1,0 +1,2 @@
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd sd"

@@ -1,0 +1,1 @@
+Tidal 1.0.0 has now been released, so you can install and upgrade by following the instructions on the [[Installation]] page.

@@ -1,0 +1,3 @@
+== Spectral enhance ==
+(parameters: #enhance)<br>
+(Mads Kjeldgaard)

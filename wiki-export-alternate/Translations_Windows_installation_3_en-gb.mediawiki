@@ -1,0 +1,1 @@
+Before installing Tidal, make sure the following are installed first:

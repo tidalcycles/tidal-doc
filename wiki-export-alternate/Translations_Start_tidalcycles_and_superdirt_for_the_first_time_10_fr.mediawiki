@@ -1,0 +1,3 @@
+# Lancez Atom
+# Créez un nouveau fichier et sauvegardez le avec l'extension .tidal, par exemple : test.tidal
+# Ouvez le menu Packages et sélectionnez TidalCycles -> Boot TidalCycles. Une petite fenêtre va s'ouvrir en bas d'Atom et va afficher du texte pour confirmer que l'interpréteur GHCi est en cours d'exécution.

@@ -1,0 +1,1 @@
+Vous pouvez ajouter un sous-pattern en le spécifiant entre crochets droits :

@@ -1,0 +1,98 @@
+
+= Easy install =
+
+For an easy, automated install experience, see the [[Windows choco install]].
+
+= Manual install =
+
+If you prefer to install the different parts of a Tidal environment by hand, perhaps because you already have supercollider or haskell installed, then follow the below instructions.
+
+<div class="mw-translate-fuzzy">
+= Prerequisites =
+</div>
+
+<div class="mw-translate-fuzzy">
+== Required Prerequisites==
+</div>
+
+Before installing Tidal, make sure the following are installed first:
+
+<div class="mw-translate-fuzzy">
+* Haskell Platform - '''the 'full' version is strongly recommended''', you can [https://www.haskell.org/platform/download/8.4.3/HaskellPlatform-8.4.3-full-x86_64-setup.exe download it here for version 8.4.3] of haskell (the full platform doesn't seem to be available for the latest haskell version yet, but you [https://www.haskell.org/platform/windows.html can check here]).
+* [https://atom.io/ Atom Editor]  (if you don't like the atom editor for some reason, please check out the [[List of tidal editors|list of alternatives]])
+* [http://supercollider.github.io/download SuperCollider] (pick the latest version)
+* [https://git-scm.com/ Git]
+</div>
+
+<div class="mw-translate-fuzzy">
+== Optional Prerequisites ==
+</div>
+
+The following is optional, but recommended:
+
+* [https://supercollider.github.io/sc3-plugins/ SC3 Plugins] - you may need the SuperCollider sc3-plugins if you want to use any of the synths included in SuperDirt. Most of the examples in the documentation will still work, so you could skip this step and return to it later.
+
+<div class="mw-translate-fuzzy">
+= Install TidalCycles =
+</div>
+
+<div class="mw-translate-fuzzy">
+Open a Command Prompt (or PowerShell), then type and run these two commands ''(ignoring any complaints that cabal has of 'legacy v1 style of usage')'':
+</div>
+
+ <div class="mw-translate-fuzzy">
+cabal update
+ cabal install tidal
+</div>
+
+<div class="mw-translate-fuzzy">
+If you've never installed TidalCycles before, then the <code>cabal install tidal</code> step may take some time. At the end of the command output, it should say <code>Installed tidal-x.x.x</code> (where x.x.x is the latest version number) without any errors.
+</div>
+
+If you see an error with the network library, then you need to fix something with your Haskell install. You can [https://forum.toplap.org/t/trouble-launching-tidal-in-atom/678/3 find instructions here].
+
+<div class="mw-translate-fuzzy">
+= Install SuperDirt =
+</div>
+
+Start SuperCollider, and in the editor window paste in the following line of code:
+
+<div class="mw-translate-fuzzy">
+Quarks.checkForUpdates(); Quarks.install("SuperDirt", "v1.0")
+</div>
+
+<div class="mw-translate-fuzzy">
+Run the code by clicking on it, to make sure the cursor is on this line, then hold down Shift and press Enter. This will download SuperDirt and you will see it has completed when the Post Window displays:
+</div>
+
+<div class="mw-translate-fuzzy">
+... the class library may have to be recompiled.
+ -> SuperDirt
+</div>
+
+<source lang="plaintext">
+Installing SuperDirt
+Installing Vowel
+Vowel installed
+Installing Dirt-Samples
+Dirt-Samples installed
+SuperDirt installed
+compiling class library...
+...
+(then some blah blah, and finally, something like:)
+...
+
+*** Welcome to SuperCollider 3.10.0. *** For help press Ctrl-D.
+</source>
+
+<div class="mw-translate-fuzzy">
+= Install Atom Extension =
+</div>
+
+Start Atom, and install the TidalCycles plugin. You can find it via the menus under edit > settings > install, then typing “tidalcycles” into the search box. Once that’s installed, restart atom.
+
+<div class="mw-translate-fuzzy">
+= Test Your Installation =
+</div>
+
+Now you are ready to [[Start_tidalcycles_and_superdirt_for_the_first_time|Start TidalCycles and SuperDirt for the first time]].

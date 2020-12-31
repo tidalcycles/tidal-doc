@@ -1,0 +1,1 @@
+A moog-inspired PWM synth; pulses multiplied by phase-shifted pulses, double filtering with an envelope on the second "voice" controls the phase shift rate.

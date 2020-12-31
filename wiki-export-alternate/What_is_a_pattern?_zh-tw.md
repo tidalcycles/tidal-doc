@@ -1,0 +1,269 @@
+---
+title: What is a pattern?/zh-tw
+permalink: wiki/What_is_a_pattern?/zh-tw/
+layout: wiki
+tags:
+ - Reference|Pattern
+---
+
+在Tidal裡，究竟什麼是“圖式”呢？有很多方式可以回答這個問題：就技術層面的定義來說，圖式是一個由時間到事件，在背景運行的函數。給予圖式一個起始時間和終止時間，它會返回一個在時間段內（部分或全部）持續發生的事件。事件指的是自身作為一個包含起始和終止時間的值。
+
+在使用Tidal創作音樂時，這部分多半無法察覺，但讓我們來深入觀察一個非常簡單的圖式背後運作的方式。
+
+``` Haskell
+"1 2 3"
+```
+
+上述的代碼看上去像是一行字符串，但Tidal默默地將它語法分析為一個圖式（使用名為parseBP\_E的隱藏函數）。從字符串到Tidal圖式的類型轉換，我們可以通過加入
+
+``` Haskell
+:: Pattern String
+```
+
+向此圖式取值。在這裡，我們類似於告訴Tidal將這個字符串視為一個圖式然後輸出：
+
+``` Haskell
+"1 2 3" :: Pattern String
+```
+
+運行上述代碼，你應該可以在你的控制台內容中看到第一個循環的輸出緩衝訊息：
+
+``` Haskell
+(0>⅓)|"1"
+(⅓>⅔)|"2"
+(⅔>1)|"3"
+```
+
+其中我們可以看出第一個事件
+
+``` Haskell
+1
+```
+
+在循環內的前1/3作用中，以此類推。
+
+So a pattern is a function from a timespan (also known as an *arc*), to
+values with each have a beginning and end. A function like
+
+``` Haskell
+rev
+```
+
+, is therefore a combinator, which takes such a function as input, and
+gives a new function as output (with input and output timing
+manipulations baked-in, in order to reverse the pattern).
+
+# The Pattern types
+
+That's the basics, lets have a look at some code. The core
+representation for patterns is in the
+[Sound.Tidal.Pattern](https://github.com/tidalcycles/Tidal/blob/master/src/Sound/Tidal/Pattern.hs)
+module. The core representation is in the ten or so lines at the top.
+Lets step through it. Some Haskell knowledge will be helpful here, but
+you will hopefully get the gist even without software development
+experience.
+
+``` Haskell
+-- | Time is rational
+type Time = Rational
+```
+
+The above states that time is rational. This means that rather than
+representing time as integers (whole numbers), or as floating point
+numbers, Tidal represents time as a ratio of *two* integers. This means
+that for example a third can be represented precisely, as one over
+three. Music is of course full of such ratios, and not representing them
+as such can cause a great deal of problems.. Basically, this means that
+if you add three one-thirds together, you'll get a whole. Seems obvious
+but not all systems do this!
+
+``` Haskell
+-- | A time arc (start and end)
+type Arc = (Time, Time)
+```
+
+This is the representation of an arc, or timespan. We like to call this
+a time arc rather than a time span, because in Tidal the notion of time
+is cyclic. Here the two time values are simply the beginning and end of
+an arc.
+
+``` Haskell
+-- | The second arc (the part) should be equal to or fit inside the
+-- first one (the whole that it's a part of).
+type Part = (Arc, Arc)
+```
+
+Tidal often needs to represent *part* of an arc. It does so with two
+arcs, the first representing the whole of the part, and the second the
+part itself. Often both arcs will be the same, which simply means that
+we have a whole that has a single part.
+
+``` Haskell
+-- | An event is a value that's active during a timespan
+type Event a = (Part, a)
+```
+
+An *event* then, consists of a part, and a value of type
+
+``` Haskell
+a
+```
+
+. This
+
+``` Haskell
+a
+```
+
+can stand for *any* type (but you can only have events of the same type
+in any one pattern). For example you can have a pattern of words, of
+numbers, of colours or even of other patterns..
+
+``` Haskell
+data State = State {arc :: Arc,
+                    controls :: ControlMap
+                   }
+```
+
+Since version 1.0.0, Tidal patterns can also respond to changing state
+as well as progressing time. So the above represents the entire input to
+a Tidal pattern, the current timespan, and the current state of external
+controllers (whether MIDI controllers, or other software). What is
+interesting is that the current time (the
+
+``` Haskell
+arc
+```
+
+isn't a point in time, but an arc, or timespan. This aligns with the
+idea of the psychological 'specious present' having a duration.
+
+``` Haskell
+-- | A function that represents events taking place over time
+type Query a = (State -> [Event a])
+```
+
+Here is that function from time to events we were talking about earlier.
+We simplified a bit - it's a function from a timespan plus some
+additional state, to events. Notice the
+
+``` Haskell
+a
+```
+
+is carried from the type of the events to the type of the query. This
+again shows how a particular pattern can only represent events of the
+same type.
+
+Notice also that a list of events is returned (denoted by the square
+brackets). This simply means that tidal supports polyphony - many events
+can take place at the same time. Remember though that each event has its
+own arc; two events might be returned for the same timespan, but they
+may well not start and end at the same time, and might not overlap at
+all.
+
+It may also be that the arc of an event might extend outside the arc in
+the query state. This is one case where we get part of an arc back - the
+part will be the intersection of the arc of the query and that of the
+event.
+
+``` Haskell
+-- | Also known as Continuous vs Discrete/Amorphous vs Pulsating etc.
+data Nature = Analog | Digital
+            deriving Eq
+```
+
+An important feature of Tidal is that you can accurately compose
+analogue (continuous) and digital (discrete) patterns together. For
+example it can be nice to multiply a discrete pattern of notes by a
+continuously varying sinewave. It's a bit of a myth that computers can
+only represent digital structures, but when it comes to combining
+analogue and digital patterns together, it's useful to be able to know
+which is which, hence the above datatype for doing that.
+
+``` Haskell
+-- | A datatype that's basically a query, plus a hint about whether its events
+-- are Analogue or Digital by nature
+data Pattern a = Pattern {nature :: Nature, query :: Query a}
+```
+
+Here finally we arrive at the
+
+``` Haskell
+Pattern
+```
+
+datatype, which simply consists of an either digital or analogue nature,
+plus a query for calculating events for a particular timespan.
+
+The only thing we haven't done is define what the
+
+``` Haskell
+ControlMap
+```
+
+type is that we saw earlier. As well as being used to represent
+controller state, it's part of the definition of one more type, the
+
+``` Haskell
+ControlPattern
+```
+
+, here we go:
+
+``` Haskell
+data Value = VS { svalue :: String }
+           | VF { fvalue :: Double }
+           | VI { ivalue :: Int }
+           deriving (Eq,Ord,Typeable,Data)
+
+type ControlMap = Map.Map String Value
+type ControlPattern = Pattern ControlMap
+```
+
+A
+
+``` Haskell
+ControlMap
+```
+
+is simply a dictionary (or map) for storing some values by name (using a
+string). As well as using it for external control values within the A
+
+``` Haskell
+State
+```
+
+datatype, we also use it to make
+
+``` Haskell
+ControlPattern
+```
+
+s\. They are simply patterns of controlmaps, and are used for
+representing patterns of synthesiser messages. So for example the
+
+``` Haskell
+speed
+```
+
+function in
+
+``` Haskell
+sound "bd sn" # speed "2 3"
+```
+
+) turns a pattern of numbers into a pattern of controlmaps, the A
+
+``` Haskell
+sound
+```
+
+turns a pattern of words into a pattern of controlmaps, and the A
+
+``` Haskell
+#
+```
+
+composes them together into a new pattern of controlmaps. . Feel free to
+comment on the discussion page if something is unclear!

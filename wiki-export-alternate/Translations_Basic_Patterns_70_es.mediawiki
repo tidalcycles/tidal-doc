@@ -1,0 +1,3 @@
+<syntaxhighlight lang="Haskell">
+d1 $ speed "1 2 4" # sound "jungbass:6"
+</syntaxhighlight>

@@ -1,0 +1,3 @@
+#REDIRECT [[inside#outside]]
+
+[[Category:Functions]]

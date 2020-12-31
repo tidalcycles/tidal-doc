@@ -1,0 +1,3 @@
+#REDIRECT [[slice#splice]]
+
+[[Category:Functions]]

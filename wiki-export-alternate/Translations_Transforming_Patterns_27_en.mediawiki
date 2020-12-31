@@ -1,0 +1,1 @@
+<syntaxhighlight lang="haskell" inline>chunk</syntaxhighlight> applies a transformation or an effect to a different part of the pattern each time. For example with <syntaxhighlight lang="haskell" inline>4</syntaxhighlight> as a parameter, it will step through each quarter of the cycle.

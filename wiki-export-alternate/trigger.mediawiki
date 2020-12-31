@@ -1,0 +1,42 @@
+[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>trigger :: Show a => a -> Pattern b -> Pattern b</syntaxhighlight>
+
+The '''trigger''' function causes the pattern passed to it to be 'reset' every time its evaluated.  In the following example, the gain envelope resets each time the pattern is run:
+
+<source>
+d1 $ sound "bd*2 cp:4(5,8,<0 2>)"
+  # gain (trigger 1 $ slow 2 envL)
+</source>
+
+Or similarly with a dj filteR:
+
+<source>
+d1 $ sound "bd*2 cp:4(5,8,<0 2>)"
+  # djf (trigger 1 $ range 0.1 0.9 $ slow 2 envL)
+</source>
+
+The first parameter is the id of the pattern that does the triggering. In the above examples, it's <source inline>1</source>, so in this case <source inline>d1</source> is triggering itself.
+
+In this example, running the <source inline>d2</source> pattern resets the envelope in the <source inline>d1</source> pattern:
+
+<source>
+d1 $ sound "bd*2 cp:4(5,8,<0 2>)"
+  # djf (trigger 2 $ range 0.1 0.9 $ slow 2 envL)
+
+d2 $ sound "~ arpy*2"
+</source>
+
+Note that if you manipulate time after a trigger, e.g. with [[fast]] or [[slow]], then you will also be manipulating the trigger point and the results will probably not be what you intended. For example the <source inline>fast</source> in the following will move the trigger point into the past, so the envelope is immediately opened fully:  
+
+<source>
+d1 $ fast 2 $ sound "bd*2 cp:4(5,8,<0 2>)"
+  # djf (trigger 1 $ range 0.1 0.9 $ slow 2 envL)
+</source>
+
+The above can be fixed by only applying <source inline>fast</source> to the part of the pattern you want to speed up:
+
+<source>
+d1 $ (fast 2 $ sound "bd*2 cp:4(5,8,<0 2>)")
+  # djf (trigger 1 $ range 0.1 0.9 $ slow 2 envL)
+</source>
+
+[[Category:Functions]]

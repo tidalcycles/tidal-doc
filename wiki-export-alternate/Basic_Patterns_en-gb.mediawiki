@@ -1,0 +1,294 @@
+<languages />
+
+The basic format for making sound in Tidal looks like this
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum"
+</syntaxhighlight>
+
+You can stop making a sound using <syntaxhighlight lang="Haskell" inline>silence</syntaxhighlight>:
+
+<syntaxhighlight lang="Haskell">
+d1 $ silence
+</syntaxhighlight>
+
+Pick a different sound from the same set, with `:`
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum:1"
+</syntaxhighlight>
+
+Some of the samples which come with Tidal are listed below. Try some out!
+
+<pre>
+flick sid can metal future gabba sn mouth co gretsch mt arp h cp
+cr newnotes bass hc tabla bass0 hh bass1 bass2 oc bass3 ho odx
+diphone2 house off ht tink perc bd industrial pluck trump printshort
+jazz voodoo birds3 procshort blip drum jvbass psr wobble drumtraks koy
+rave bottle kurt latibro rm sax lighter lt arpy feel less stab ul
+</pre>
+
+You can see what other sounds there are (or add your own) by looking 
+in the ''Dirt-Samples'' folder. You can find it via the SuperCollider
+menu: 'File > Open user support directory > downloaded-quarks >
+Dirt-Samples'.
+
+== Make a sequence ==
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd hh sn hh"
+</syntaxhighlight>
+
+The more steps in the sequence, the faster it goes:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd bd hh bd sn bd hh bd"
+</syntaxhighlight>
+
+This is because of the way Tidal handles time.  There is a universal
+‘cycle’ (sort of like a musical 'bar') which is always running.  Tidal
+will play all of the sounds between the speech marks in one cycle,
+unless we tell it not to (we’ll learn how to do that later). You’ll
+also notice Tidal will space the sounds out evenly within the cycle
+Which means we can end up with polyrhythmic structures (more on those
+later).
+
+<div class="mw-translate-fuzzy">
+We can change the length of the cycle using `cps` (cycles per
+second) - this is a bit like bpm (beats per minute).
+</div>
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell">
+cps 0.6
+</syntaxhighlight>
+</div>
+
+You can use d1, d2, d3...d9 to play multiple sequences at the same time
+
+<syntaxhighlight lang="Haskell">
+d2 $ sound "sn sn:2 sn bd sn"
+</syntaxhighlight>
+
+You can stop all the running patterns with <syntaxhighlight lang="Haskell" inline>hush</syntaxhighlight>.
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell">
+`hush`
+</syntaxhighlight>
+</div>
+
+You can pause everything by changing the cycle length to a negative
+number (remember to put negative numbers in brackets).
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell">
+cps (-1)
+</syntaxhighlight>
+</div>
+
+Start it up again with a positive number
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell">
+cps 0.6
+</syntaxhighlight>
+</div>
+
+<div class="mw-translate-fuzzy">
+Or you can `solo` one channel - but be warned, you can’t 'unsolo' (...but this is coming to the next version of tidal!)
+</div>
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell">
+d1 $ sound "arpy cp arpy:2"
+d2 $ sound "sn sn:2 bd sn"
+solo $ d2 $ sound "sn sn:2 bd sn"
+</syntaxhighlight>
+</div>
+
+d2 $ sound "sn sn:2 bd sn"
+
+solo 2
+
+-- now only the second pattern will be playing
+
+unsolo 2
+
+-- now both will be playing, again
+</syntaxhighlight>
+
+Let add some more variety to our sequences.
+
+Add a silence/rest with <syntaxhighlight lang="Haskell" inline>~</syntaxhighlight>:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd ~ sn:3 bd sn:5 ~ bd:2 sn:2"
+</syntaxhighlight>
+
+Fit a subsequence into a step with square brackets:
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd [bd cp] bd bd"
+<syntaxhighlight>
+</div>
+
+This can make for flexible time signatures:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "[bd bd sn:5] [bd sn:3]"
+</syntaxhighlight>
+
+You can put subsequences inside subsequences:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "[[bd bd] bd sn:5] [bd sn:3]"
+</syntaxhighlight>
+
+Keep going..
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "[[bd [bd bd bd bd]] bd sn:5] [bd sn:3]"
+</syntaxhighlight>
+
+You can repeat a step with <syntaxhighlight lang="Haskell" inline>*</syntaxhighlight>:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd sd*2"
+</syntaxhighlight>
+
+This works with subsequences too:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd [sd cp]*2"
+</syntaxhighlight>
+
+Or you can do the opposite using <syntaxhighlight lang="Haskell" inline>/</syntaxhighlight>:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd sn/2"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd [sn cp]/2"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>*</syntaxhighlight> works by 'speeding up' a step to play it multiple times. <syntaxhighlight lang="Haskell" inline>/</syntaxhighlight> works
+by 'slowing it down'.
+
+We can also schedule patterns across cycles using <syntaxhighlight lang="Haskell" inline><</syntaxhighlight> and <syntaxhighlight lang="Haskell" inline>></syntaxhighlight>:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd <sd cp arpy>"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "<bd sn> <sd [cp cp]> <bd [cp cp]>"
+</syntaxhighlight>
+
+== Effects ==
+
+Tidal has lots of effects we can use to change the way things sound. 
+
+<syntaxhighlight lang="Haskell" inline>vowel</syntaxhighlight> is a filter which adds a vowel sound -- try a, e, i, o and u
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum drum drum drum" # vowel "a"
+</syntaxhighlight>
+
+We create patterns of effects in much the same way we create patterns of sounds. We call these effect and sound patterns 'control patterns'. So
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum drum drum drum" # vowel "a o e e"
+</syntaxhighlight>
+
+Remember that we can use "<>" to schedule across cycles
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum drum drum drum" # vowel "<a o e e>"
+</syntaxhighlight>
+
+You can add a non-vowel letter to pause the vowel effect
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum drum drum drum" # vowel "a o p p"
+</syntaxhighlight>
+
+Tidal does its best to map patterns across to one another
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum drum drum drum" # vowel "a o e"
+</syntaxhighlight>
+
+The structure comes from the left - try swapping the parameters
+
+<syntaxhighlight lang="Haskell">
+d1 $ vowel "a o ~ i" # sound "drum" 
+</syntaxhighlight>
+
+'''Health warning''' - This is one of the changes coming up in the new Tidal - you will be able to control which side the structure comes from. . Or combine structure from ''both'' sides.
+
+<syntaxhighlight lang="Haskell" inline>gain</syntaxhighlight> changes the volume of different sounds
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd hh sn:1 hh sn:1 hh" # gain "1 0.7 0.5"
+</syntaxhighlight>
+
+
+<syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> and <syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> are used for pitching samples.
+
+<syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> affects the speed of playback, e.g. 2 = up an octave
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "numbers:1 numbers:2 numbers:3 numbers:4" # speed "1 1.5 2 0.5"
+</syntaxhighlight>
+
+Or we can take the pattern from the <syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> parameter
+
+<syntaxhighlight lang="Haskell">
+d1 $ speed "1 2 4" # sound "jungbass:6"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> pitches the sample up in semitones, e.g. 12 = up an octave
+
+<syntaxhighlight lang="Haskell">
+d1 $ up "0 ~ 12 24" # sound "jungbass:6"
+</syntaxhighlight>
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell" inline>Pan</syntaxhighlight> allows us to create stereo effects - 0 = left, 0.5 = middle, 1 = right
+</div>
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "numbers:1 numbers:2 numbers:3 numbers:4" # pan "0 0.5 1"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>shape</syntaxhighlight> adds distortion (but be careful - it also makes the sound much louder)
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "kurt:4 kurt:4" # shape "0 0.78" # gain "0.7"
+</syntaxhighlight>
+
+
+== feeling brave ? ==
+
+<div class="mw-translate-fuzzy">
+Try more effects: http://tidalcycles.org/patterns.html#effects
+</div>
+
+<div class="mw-translate-fuzzy">
+<syntaxhighlight lang="Haskell" inline>delay</syntaxhighlight> / <syntaxhighlight lang="Haskell" inline>delaytime</syntaxhighlight> / <syntaxhighlight lang="Haskell" inline>delayfeedback</syntaxhighlight> /
+syntaxhighlight lang="Haskell" inline>cutoff</syntaxhighlight> / <syntaxhighlight lang="Haskell" inline>resonance</syntaxhighlight> /
+<syntaxhighlight lang="Haskell" inline>room</syntaxhighlight> / <syntaxhighlight lang="Haskell" inline>size</syntaxhighlight>
+</div>
+
+== Continuous patterns ==
+
+<syntaxhighlight lang="Haskell" inline>sine</syntaxhighlight> is a continuous pattern following a sine curve from 0 to 1 and back
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd*32" # gain sine
+</syntaxhighlight>
+
+You can also try <syntaxhighlight lang="Haskell" inline>tri</syntaxhighlight>, <syntaxhighlight lang="Haskell" inline>saw</syntaxhighlight> and <syntaxhighlight lang="Haskell" inline>rand</syntaxhighlight>.

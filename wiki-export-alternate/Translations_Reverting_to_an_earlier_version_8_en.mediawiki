@@ -1,0 +1,3 @@
+<source lang="bash">
+cabal install tidal-0.9.10
+</source>

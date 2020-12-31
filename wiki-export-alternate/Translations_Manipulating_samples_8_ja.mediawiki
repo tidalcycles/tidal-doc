@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>legato</syntaxhighlight>もサンプルを切り捨てますが、固定長を使います。

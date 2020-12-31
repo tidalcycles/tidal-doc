@@ -1,0 +1,1 @@
+Sonic Pi's octaver uses `octer` for octave harmonics, `octersub` for half-frequency harmonics, and `octersubsub` for quarter-frequency harmonics.

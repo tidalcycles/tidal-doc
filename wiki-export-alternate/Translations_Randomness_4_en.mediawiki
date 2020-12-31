@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>often</syntaxhighlight> works like <syntaxhighlight lang="Haskell" inline>sometimes</syntaxhighlight> but happens more often!

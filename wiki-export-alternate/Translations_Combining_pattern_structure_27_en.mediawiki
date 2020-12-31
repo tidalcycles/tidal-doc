@@ -1,0 +1,1 @@
+For example, these are two patterns being combined by adding together their elements:

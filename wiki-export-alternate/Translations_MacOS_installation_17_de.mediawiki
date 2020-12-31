@@ -1,0 +1,1 @@
+Wenn du TidalCycles noch nie installiert hast, kann der Schritt <code>cabal install tidal --lib</code> einige Zeit dauern. Am Ende sollte auf jeden Fall <code>Installated tidal-x.x.x</code> (wobei x.x.x die neueste Versionsnummer ist) ohne Fehler ausgegeben werden.

@@ -1,0 +1,1 @@
+<syntaxhighlight lang="haskell" inline>hurry</syntaxhighlight>  は fast に似ていますが、スピードの変形を行わない点で異なります。

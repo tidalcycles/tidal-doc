@@ -1,0 +1,3 @@
+#REDIRECT [[stripe#slowstripe]]
+
+[[Category:Functions]]

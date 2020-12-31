@@ -1,0 +1,1 @@
+Finalement, vous souhaiterez peut-être envoyer un message <code>start</code> au bon moment. La ligne suivante permet de lancer un nouveau message tout les quatre cycles :

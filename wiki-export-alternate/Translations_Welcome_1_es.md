@@ -1,0 +1,10 @@
+---
+title: Translations:Welcome/1/es
+permalink: wiki/Translations:Welcome/1/es/
+layout: wiki
+---
+
+{{\#evt: service=youtube
+\|id=<https://www.youtube.com/watch?v=1OkqxPfKsh8&t=3s&list=PLybSFICi4UliK17U6rxPneXAyxvmGAe5T>
+\|alignment=right \|dimensions=320 \|container=frame \|description=Lista
+de performances con Tidal en nuestro canal de youtube }}

@@ -1,0 +1,11 @@
+<languages/>
+{{DISPLAYTITLE:accelerate}} 
+[[Type signature|Type]]: <source inline>accelerate :: Pattern Double -> ControlPattern</source>
+
+'''accelerate''' reçoit un pattern de nombres et permet d'accélérer ou de ralentir la vitesse de lecture d'une sample :
+
+<source>
+d1 $ sound "jvbass*4" # accelerate "<0 1 -1 0.25 -0.5 2.1 -3>" 
+</source>
+
+[[Category:Control Functions]]

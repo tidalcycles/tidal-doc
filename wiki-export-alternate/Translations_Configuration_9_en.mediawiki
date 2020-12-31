@@ -1,0 +1,1 @@
+If you find Tidal is using too much CPU, increasing the frame timespan will probably help.

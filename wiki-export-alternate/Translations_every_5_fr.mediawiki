@@ -1,0 +1,1 @@
+Notez que si la fonction que vous appliquez requiert des paramètres additionnels tels que <code>fast 2</code>, vous aurez besoin d'envelopper cette fonction dans des parenthèses. Observez cet exemple :

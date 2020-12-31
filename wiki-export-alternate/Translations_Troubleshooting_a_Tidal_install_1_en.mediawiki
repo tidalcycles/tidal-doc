@@ -1,0 +1,1 @@
+If you've gone through the Tidal installation instructions, but can't get it working, here's some steps to locate what the problem is (or problems are).

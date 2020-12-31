@@ -1,0 +1,1 @@
+= Jouer un pattern une seule et unique fois =

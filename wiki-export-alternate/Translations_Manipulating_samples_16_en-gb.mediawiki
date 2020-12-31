@@ -1,0 +1,1 @@
+We can also use <syntaxhighlight lang="Haskell" inline>loopAt</syntaxhighlight> to fit samples to a set number of cycles:

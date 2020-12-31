@@ -1,0 +1,1 @@
+Freezes magnitudes at current levels when freeze > 0, and advances phase according to difference between frames to try and maintain currect spectral quality.)</small>

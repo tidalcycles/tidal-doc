@@ -1,0 +1,35 @@
+{| class="wikitable"
+|-
+! scope="col" width="5%" | Símbolo
+! scope="col" width="25%" | Descripción
+! scope="col" width="35%" | Ejemplo
+! scope="col" width="35%" | Equivalencia
+|-
+| <source inline>[ ]</source> || Crear un patron agrupado || <source inline>d1 $ s "[bd sd] hh"</source> || <source inline>d1 $ fastcat [s "bd sd", s "hh"]</source>
+|-
+| <source inline>.</source> || Atajo para agrupar patrones || <source inline>d1 $ s "bd sd . hh hh hh"</source> || <source inline>d1 $ s "[bd sd] [hh hh hh]</source>
+|-
+| <source inline>,</source> || Reproducir múltiples patrones a la vez || <source inline>d1 $ s "[bd sd, hh hh hh]"</source> ||  <source inline>d1 $ stack [s "bd sd", s "hh hh hh"]</source>
+|-
+| <source inline>*</source> || Repetir un patrón || <source inline>d1 $ s "bd*2 sd"</source> || <source inline>d1 $ s "[bd bd] sd"</source>
+|-
+| <source inline>/</source> || Ralentizar un patrón || <source inline>d1 $ s "bd/2"</source> || <source inline>d1 $ s (slow 2 $ "bd")</source>
+|-
+| <source inline>< ></source> || Alternar entre patrones || <source inline>d1 $ s "bd <sd hh cp>"</source> || <source inline>d1 $ slow 3 $ s "bd sd bd hh bd cp"</source>
+|-
+| <source inline>!</source> || Replicar un patrón || <source inline>d1 $ s "bd!3 sd"</source> || <source inline>d1 $ s "bd bd bd sd"</source>
+|-
+| <source inline>_</source> || Alargar un patrón || <source inline>d1 $ s "bd _ _ ~ sd _"</source> || Results in pattern <source inline>(0>1/2)|s: "bd" (4/6>1)|s: "sd"</source>
+|-
+| <source inline>@</source> || Alargar un patrón || <source inline>d1 $ s "superpiano@3 superpiano"</source> || <source inline>d1 $ s "superpiano _ _ superpiano"</source>
+|-
+| <source inline>?</source> || Quitar elementos del patrón aleatoriamente || <source inline>d1 $ s "bd? sd"</source> || <source inline>d1 $ fastcat [degradeBy 0.5 $ s "bd", s "sd"]</source>
+|-
+| <source inline>:</source> || Seleccionar samples || <source inline>d1 $ s "bd:3"</source> || <source inline>d1 $ s "bd" # n 3</source>
+|-
+| <source inline>( )</source> || Secuencias eucledianas || <source inline>d1 $ s "bd(3,8)"</source> || <source inline>d1 $ euclid 3 8 $ s "bd"</source>
+|-
+| <source inline>{ }</source> || Secuencias polimétricas || <source inline>d1 $ s "{bd bd bd bd, cp cp hh}"</source> || <source inline>d1 $ stack [ s "bd*4", s "cp cp hh cp" ]</source>
+|-
+| <source inline>{ }%</source> || Subdivisión de secuencias polimétricas || <source inline>d1 $ s "{bd cp hh}%8"</source> ||  <source inline>d1 $ s "bd cp hh bd cp hh bd cp"</source>
+|}

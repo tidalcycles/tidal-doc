@@ -1,0 +1,1 @@
+Starte Atom nach der Installation und Konfiguration neu.

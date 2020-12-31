@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> permet de modifier la hauteur du sample un demi-ton par demi-ton. 12 sera donc ici une octave.

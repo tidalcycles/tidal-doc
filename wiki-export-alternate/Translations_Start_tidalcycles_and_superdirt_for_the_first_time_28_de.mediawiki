@@ -1,0 +1,1 @@
+Du kannst SuperDirt mit Hilfe [https://raw.githubusercontent.com/musikinformatik/SuperDirt/develop/superdirt_startup.scd dieses Startup-Scripts] starten. Gebe dazu einfach <code>sclang superdirt_startup.scd</code> in deinem Terminal-Fenster ein.

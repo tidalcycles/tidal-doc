@@ -1,0 +1,1 @@
+You can also try <syntaxhighlight lang="Haskell" inline>tri</syntaxhighlight>, <syntaxhighlight lang="Haskell" inline>saw</syntaxhighlight> and <syntaxhighlight lang="Haskell" inline>rand</syntaxhighlight>.

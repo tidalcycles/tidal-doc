@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> と <syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> は、サンプルの音高を変えます。

@@ -1,0 +1,1 @@
+Tidal es altamente modular, de forma tal que las distintas transformaciones aplicables pueden ser fácilmente combinadas, permitiéndote crear patrones complejos con ingredientes simples.

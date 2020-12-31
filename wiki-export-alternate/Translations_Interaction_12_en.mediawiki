@@ -1,0 +1,3 @@
+<syntaxhighlight lang="Haskell">
+p "jimmy" $ sound "bd sd"
+p "susan" $ sound "cp(3,8)"

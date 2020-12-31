@@ -1,0 +1,1 @@
+'''Voir aussi : [[append]], [[append#fastAppend|fastAppend]]'''

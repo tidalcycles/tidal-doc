@@ -1,0 +1,3 @@
+<syntaxhighlight lang="haskell">
+tidal <- startTidal superdirtTarget (defaultConfig {cCtrlAddr = "0.0.0.0", cCtrlPort = 6060})
+</syntaxhighlight>

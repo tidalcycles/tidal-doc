@@ -1,0 +1,1 @@
+Añade un silencio con <syntaxhighlight lang="Haskell" inline>~</syntaxhighlight>:

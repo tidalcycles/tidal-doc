@@ -1,0 +1,1 @@
+* You can use parameters label 1 to label 15 to specify alternative labels for the links.

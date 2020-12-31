@@ -1,0 +1,1 @@
+=== Démarrage automatique de SuperDirt dans l'IDE ===

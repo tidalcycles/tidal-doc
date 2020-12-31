@@ -1,0 +1,1 @@
+When passing functions to functions like jux and [[every]], it’s possible to chain multiple transforms together with <source inline>.</source>, for example this both reverses and halves the playback speed of the pattern in the righthand channel:

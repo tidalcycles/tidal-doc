@@ -1,0 +1,1 @@
+Cela devrait jouer un pattern de quatre notes. Notez que vous utilisez le synthétiseur <code>midi</code> pour envoyer des notes MIDI.

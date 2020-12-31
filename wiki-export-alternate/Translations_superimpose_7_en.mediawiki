@@ -1,0 +1,1 @@
+Compare this function with [[jux]] which works similarly but pans the two versions of the pattern left and right, [[off]] which offsets the modified pattern in time, and [[layer]] which works like superimpose but allows you to layer up the results of more than one function.

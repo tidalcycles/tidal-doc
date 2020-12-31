@@ -1,0 +1,1 @@
+Si vous désirez contrôler plusieurs paramètres CC en même temps, vous pouvez utiliser <code>stack</code> pour ce faire :

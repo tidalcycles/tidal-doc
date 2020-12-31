@@ -1,0 +1,5 @@
+
+<source lang="shell">
+cabal update
+cabal install tidal
+</source>

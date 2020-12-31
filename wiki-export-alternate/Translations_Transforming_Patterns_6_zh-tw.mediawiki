@@ -1,0 +1,1 @@
+<syntaxhighlight lang="haskell" inline>fast</syntaxhighlight> 將pattern壓縮到比一個cycle更小的區間。

@@ -1,0 +1,28 @@
+<languages />
+Bienvenide al tutorial de Tidal. Esto está diseñado para ser usado como hoja de práctica en talleres para principiantes/mixed, y está basado en TidalCycles versión 0.9.10. 
+
+Por Lucy Cheesman, adaptado a formato wiki por Alex McLean, editado por ti (es una wiki!)
+
+= Comenzando =
+
+Una vez que todo esté instalado, haz la siguiente rutina cada vez.
+
+# Levanta SuperDirt - En SuperCollider, tipear 'SuperDirt.start' y ejecuta el código manteniendo presionando 'Ctrl' y presionando 'Enter' (mientras tu cursor está en la misma línea que el código).
+# Levanta TidalCycles - En Atom, crea un nuevo archivo y guárdalo con una extensión <syntaxhighlight lang="Haskell" inline>.tidal</syntaxhighlight> (ej. `ejemplos.tidal`).
+
+== Tomando notas ==
+
+<syntaxhighlight lang="Haskell">
+-- Si ves una línea de código con dos guiones al comienzo como ésta, se la llama comentario.
+-- Esto es texto que la computadora siempre va a ignorar, para que puedas anotar tu código.
+</syntaxhighlight>
+
+= Hojas de práctica =
+
+* [[Basic Patterns|Patrones básicos]]
+* [[Transforming Patterns|Transformando patrones]]
+* [[Different Kinds of Pattern|Diferentes tipos de patrones]]
+* [[Randomness|Aleatoriedad]]
+* [[Manipulating samples|Manipulando muestras]]
+
+[[Category:Reference]]

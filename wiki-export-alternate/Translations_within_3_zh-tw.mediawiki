@@ -1,0 +1,1 @@
+舉例來說, 將 <source inline>fast 2</source> 只應用在圖式的前半段：

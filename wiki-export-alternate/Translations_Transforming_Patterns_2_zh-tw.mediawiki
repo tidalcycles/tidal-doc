@@ -1,0 +1,1 @@
+使用如<syntaxhighlight lang="haskell" inline>slow</syntaxhighlight> 這類函數可使循環模式大為不同。

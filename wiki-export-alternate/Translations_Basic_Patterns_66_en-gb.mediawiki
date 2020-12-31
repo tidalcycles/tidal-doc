@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> and <syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> are used for pitching samples.

@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>sometimes</syntaxhighlight> 的作用與 <syntaxhighlight lang="Haskell" inline>every</syntaxhighlight>相近，與之不同的是sometimes每個循環都有機會隨機地觸發，而不是在固定的循環後觸發。

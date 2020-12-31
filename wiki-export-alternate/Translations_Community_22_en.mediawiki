@@ -1,0 +1,4 @@
+* [https://bff.fm/shows/highpoint-lowlife Highpoint lowlife radio show], sometimes features live coded/algorithmic music | [https://data.bff.fm/shows/highpoint-lowlife.rss feed]
+* [http://www.renickbell.net/ Renick Bell] - a haskell live coder, using his own Conductive system | [http://www.renickbell.net/feed.php feed]
+* [http://toplap.org/ TOPLAP] - the home of live coding | [https://toplap.org/feed feed]
+* [http://cdm.link/ CDM] - blog about creating digital music | [http://cdm.link/feed feed]

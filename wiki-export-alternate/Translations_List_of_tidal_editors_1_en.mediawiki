@@ -1,0 +1,1 @@
+The following editors support Tidal programming through either an extension, plugin, or manual configuration:

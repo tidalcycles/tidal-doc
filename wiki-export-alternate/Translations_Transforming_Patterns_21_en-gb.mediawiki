@@ -1,0 +1,2 @@
+<syntaxhighlight lang="haskell" inline>every</syntaxhighlight> allows us to schedule transformations or effects in different cycles
+e.g. every fourth cycle, play twice as fast:

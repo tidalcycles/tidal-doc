@@ -1,0 +1,2 @@
+== Superhammond ==
+(#superhammond parameters: #voice, #decay)

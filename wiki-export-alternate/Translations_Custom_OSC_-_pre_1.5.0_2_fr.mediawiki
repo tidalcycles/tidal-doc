@@ -1,0 +1,1 @@
+Il est possible de définir vos propres messages OSC (Open Sound Control), pour atteindre des logiciels autres que SuperDirt ou Dirt. Voici quelques exemples :

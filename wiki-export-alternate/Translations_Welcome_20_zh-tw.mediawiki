@@ -1,0 +1,3 @@
+* [http://toplap.org/TOPLAP TOPLAP - the home of live coding]
+* 有很多其他優秀的現場編程環境，到 TOPLAP  [https://toplap.org/all-things-live-coding-a-curated-list/ long list] 看看吧！
+* [http://algorave.com/ Algorave] - 算法跳舞文化

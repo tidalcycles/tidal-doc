@@ -1,0 +1,3 @@
+'''off''' est similaire à [[superimpose]]. Il applique une fonction sur un pattern, et joue ce pattern en même temps au-dessus du pattern original. La différence est que <code>off</code> reçoit un argument supplémentaire : un décalage temporel. 
+
+<code>off</code> joue le même pattern décalé d'une certaine valeur dans le temps.

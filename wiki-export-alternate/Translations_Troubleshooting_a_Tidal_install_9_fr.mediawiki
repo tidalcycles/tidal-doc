@@ -1,0 +1,1 @@
+Gardez votre prompt ghci ouvert et tapez (ou collez) :

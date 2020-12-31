@@ -1,0 +1,1 @@
+Un type d'ampli. Les valeurs vont de 0 à 1.

@@ -1,0 +1,3 @@
+* [http://toplap.org/TOPLAP TOPLAP - La maison-mère du live-coding]
+* Il existe d'autres langages de live-coding ! Visitez [https://toplap.org/all-things-live-coding-a-curated-list/ la liste TOPLAP].
+* [http://algorave.com/ Algorave] - Algorithmes en club.

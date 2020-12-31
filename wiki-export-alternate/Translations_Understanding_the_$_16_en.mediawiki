@@ -1,0 +1,1 @@
+Note that you ''can't'' use <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight> with operators. For example:

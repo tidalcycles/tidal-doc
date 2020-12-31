@@ -1,0 +1,3 @@
+== Spectral high pass filter ==
+(parameters: #hbrick)<br>
+(Mads Kjeldgaard)

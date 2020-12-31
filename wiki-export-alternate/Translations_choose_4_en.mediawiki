@@ -1,0 +1,1 @@
+As with all [[Oscillators|continuous patterns]], you have to be careful to give them structure; in this case '''choose''' gives you an infinitely detailed stream of random choices.

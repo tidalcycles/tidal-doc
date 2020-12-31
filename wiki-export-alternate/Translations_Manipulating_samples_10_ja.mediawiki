@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>chop</syntaxhighlight> を使い、「グラニュラーシンセシス」エフェクトを得られます。

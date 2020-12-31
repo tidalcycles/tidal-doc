@@ -1,0 +1,1 @@
+You can of course also specify the MIDI channel with <code>midichan</code>:

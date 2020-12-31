@@ -1,0 +1,72 @@
+<languages/>
+De nouveaux changements sont apparus avec Tidal 1.0.0.
+
+Il est possible de consulter toutes les fonctions pensées pour l'interaction avec les patterns en consultant le fichier suivant : [https://github.com/tidalcycles/Tidal/blob/master/BootTidal.hs bootup code].
+
+= Nommer ou numéroter les patterns =
+
+Dans les versions antérieures, il était possible d'utiliser <code>d1</code>, <code>d2</code>, etc, pour lancer plusieurs patterns :
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd sd"
+
+d1 $ silence
+</syntaxhighlight>
+
+Désormais, vous pouvez également utiliser <code>p</code> suivi d'un <code>"nom"</code> entre guillemets :
+
+<syntaxhighlight lang="Haskell">
+p 100323523 $ sound "bd sd"
+
+p 100323523 $ silence
+</syntaxhighlight>
+
+De cette manière, vous pouvez théoriquement lancer un nombre infini de patterns.
+
+Vous pouvez faire référence à un pattern par son nom.
+
+<syntaxhighlight lang="Haskell">
+p "jimmy" $ sound "bd sd"
+p "susan" $ sound "cp(3,8)"
+
+p "jimmy" $ silence
+p "susan" $ silence
+</syntaxhighlight>
+
+= Transitions =
+
+Si vous souhaitez réaliser une transition, vous pouvez utiliser les patterns nommés :
+
+<syntaxhighlight lang="haskell">
+xfade "susan" $ sound "gabba(3,8,<0 2 4>)"
+xfade "susan" $ sound "cp*2"
+</syntaxhighlight>
+
+(Les vieilles méthodes <code>t1</code> et <code>t2</code> ne fonctionnent plus.)
+
+= Jouer un pattern une seule et unique fois =
+
+Si vous souhaitez jouer un pattern pour un seul et unique cycle, vous pouvez utiliser <code>once</code>.
+
+<syntaxhighlight lang="haskell">
+once $ s "bd sd(3,8)"
+</syntaxhighlight>
+
+= Changer le tempo avec setcps =
+
+Donnez à <code>setcps</code> le nombre de cycles par seconde que vous désirez. Si votre cycle vaut 1, il sera équivalent à 120 BPM.
+
+<source>
+setcps 1
+</source>
+
+= Changer de tempo avec cps =
+
+<code>cps</code> n'est plus une fonction indépendante mais une fonction de contrôle. Jouer à modifier les <code>cps</code> est assez fun. Les patterns n'ont pas pour le moment de tempo indépendant ! Si vous changez le <code>cps</code> d'un pattern, tout les patterns suivront.
+
+<syntaxhighlight lang="haskell">
+p "cpsfun" $ s "bd sd(3,8)" # cps (slow 8 $ 0.5 + saw)
+</syntaxhighlight>
+
+[[Category:Reference]]
+[[Category:Tidal-1+]]

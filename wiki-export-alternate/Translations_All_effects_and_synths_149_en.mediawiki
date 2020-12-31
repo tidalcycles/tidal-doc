@@ -1,0 +1,2 @@
+== Supervibe ==
+(#supervibe parameters: #decay, #velocity, #accelerate, #modamp, #modfreq, #detune)

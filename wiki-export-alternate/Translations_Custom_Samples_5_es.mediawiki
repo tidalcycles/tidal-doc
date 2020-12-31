@@ -1,0 +1,1 @@
+Para correr el código de arriba, posiciona tu cursos en cualquier lugar dentro de ese bloque de código, luego aprieta <code>Ctrl+Enter</code> (o <code>Command+Enter</code> en MacOS) para evaluar el bloque entero.

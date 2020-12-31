@@ -1,0 +1,2 @@
+{{DISPLAYTITLE:release}} 
+[[Type signature|Type]]: <source inline>release :: Pattern Double -> ControlPattern</source>

@@ -1,0 +1,1 @@
+Si vous avez besoin de définir la valeur pour plusieurs hôtes SuperDirt, séparez les par un point :  (<source inline>{oAddress = "1.2.3.4", oLatency = 0.04}</source>).

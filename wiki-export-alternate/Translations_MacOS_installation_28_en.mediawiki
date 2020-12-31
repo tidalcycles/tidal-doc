@@ -1,0 +1,3 @@
+== Install VS Code Extension ==
+Start VS Code, and install the TidalCycles extension by searching the extensions marketplace.
+You can follow the instructions from [https://marketplace.visualstudio.com/items?itemName=tidalcycles.vscode-tidalcycles here] to ensure you know how to use it correctly.

@@ -1,0 +1,1 @@
+Si vous ne parvenez pas à faire fonctionner Tidal après avoir suivi toutes les étapes de l'installation, voici quelques étapes qui vous permettront de comprendre quel est le problème :

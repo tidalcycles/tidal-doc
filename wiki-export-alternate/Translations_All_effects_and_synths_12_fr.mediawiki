@@ -1,0 +1,1 @@
+Le legato contrôle le temps de transition entre deux sons consécutifs.

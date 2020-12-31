@@ -1,0 +1,1 @@
+Das Default Startup-Skript ist sehr simple.  Es unterstützt zwei Orbits und lädt die Standard-Samples. Das kannst du ändern, um zum Beispiel [[Custom Samples]] zu laden oder weitere Orbits hinzuzufügen.

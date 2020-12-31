@@ -1,0 +1,33 @@
+<languages/>
+<translate>
+<!--T:1-->
+{{DISPLAYTITLE:append}} 
+[[Type signature|Type]]: <source inline>append :: Pattern a -> Pattern a -> Pattern a</source>
+
+<!--T:2-->
+'''append''' combines two patterns into a new pattern, where cycles alternate between the first and second pattern.
+
+<!--T:3-->
+<source>
+d1 $ append (sound "bd*2 sn") (sound "arpy jvbass*2")
+</source>
+
+<!--T:4-->
+It has the alias <source inline>slowAppend</source>, in sympathy with [[append#fastAppend|fastAppend]], described below.
+
+= fastAppend = <!--T:5-->
+[[Type signature|Type]]: <source inline>fastAppend :: Pattern a -> Pattern a -> Pattern a</source>
+
+<!--T:6-->
+'''fastAppend''' works like [[append]] described above, but each pair of cycles from the two patterns are squashed to fit a single cycle.
+
+<!--T:7-->
+<source>
+d1 $ fastAppend (sound "bd*2 sn") (sound "arpy jvbass*2")
+</source>
+
+<!--T:8-->
+'''See also: [[cat]], [[cat#fastcat|fastcat]]'''
+
+</translate>
+[[Category:Functions]]

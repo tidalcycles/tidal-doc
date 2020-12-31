@@ -1,0 +1,1 @@
+You will probably also need to install an old version of the atom package to match. You can do this from the commandline too. For example, to install a version of the atom package compatible with tidal 0.9.x, you can do this:

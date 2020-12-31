@@ -1,0 +1,1 @@
+每次啟動TidalCycles有兩個步驟：

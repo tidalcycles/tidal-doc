@@ -1,0 +1,4 @@
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd(3,8) sn*2"
+d1 $ sound "bd(3,8) sn(5,8)"
+</syntaxhighlight>

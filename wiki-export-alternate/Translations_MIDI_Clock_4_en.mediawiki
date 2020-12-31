@@ -1,0 +1,1 @@
+Your MIDI device should then adjust its BPM to Tidal's [[cps]]. Then it's worth sending a 'stop' message like this:

@@ -1,0 +1,3 @@
+== Spectral comb filter ==
+(parameters: #comb)<br>
+(Mads Kjeldgaard)

@@ -1,0 +1,3 @@
+<syntaxhighlight lang="Haskell">
+d1 $ sound "tink*16" # gain rand
+</syntaxhighlight>

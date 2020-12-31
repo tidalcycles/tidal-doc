@@ -1,0 +1,1 @@
+要啟動SuperDirt，在SuperCollider視窗內貼上以下代碼：

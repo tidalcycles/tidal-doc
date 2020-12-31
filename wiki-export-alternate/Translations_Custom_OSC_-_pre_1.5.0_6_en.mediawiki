@@ -1,0 +1,1 @@
+In the first example above, <source inline>BundleStamp</source> causes the message to be sent ahead of time in batches (at the rate defined by the <source inline>cFrameTimespan</source> config setting). Each OSC message will be placed inside a timestamped bundle. In this case, it's up to the receiving client to schedule accordingly.

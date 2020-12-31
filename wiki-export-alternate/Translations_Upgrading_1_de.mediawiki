@@ -1,0 +1,2 @@
+
+Um Probleme zu vermeiden, empfehlen wir dringend, alle drei Komponenten von TidalCycles zusammen zu aktualisieren - die TidalCycles-Library, das Editor-Plugin und den SuperDirt-Synth.

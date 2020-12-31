@@ -1,0 +1,2 @@
+# Démarrer SuperCollider et lancer SuperDirt.
+# Démarrer Tidal Cycles depuis votre éditeur de code.

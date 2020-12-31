@@ -1,0 +1,1 @@
+Vous pouvez trouver un <code>startup file</code> plus long en consultant [[https://github.com/musikinformatik/SuperDirt/blob/develop/superdirt_startup.scd | le lien suivant]].

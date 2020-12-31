@@ -1,0 +1,1 @@
+If you already have Tidal installed, you can upgrade it with the following commands in a terminal window:

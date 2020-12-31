@@ -1,0 +1,18 @@
+<languages/>
+= Tidal aktualisieren =
+
+Wenn du Tidal bereits installiert hast, folge den Anweisungen zur [[Upgrading|Aktualisierung]].
+
+= Neuinstallation =
+
+Hinweis: In dieser Dokumentation wird der Atom-Editor verwendet, um den Tidal-Code einzugeben. Wenn du einen anderen Editor verwenden möchtest, wirf einen Blick auf die [[List of tidal editors|Liste der Tidal-Editoren]].
+
+Wähle dein Betriebssystem:
+
+* [[Linux_installation|Linux]]
+* Mac - [[MacOS automated installation|einfach]] (via tidal-bootstrap) oder [[MacOS installation|manuell]]
+* Windows - [[Windows choco install|einfach]] (via chocolatey) oder [[Windows_installation|manuell]]
+
+= Probleme? =
+
+* [[Troubleshooting a Tidal install|Troubleshooting]] bei der Installation von Tidal

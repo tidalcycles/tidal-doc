@@ -1,0 +1,2 @@
+==== 自動初始 SuperDirt ====
+若你想要SuperDirt在每次開啟SuperCollider時自動初始，試著在SuperCollider初始檔案內加入 <code>SuperDirt.start</code>。

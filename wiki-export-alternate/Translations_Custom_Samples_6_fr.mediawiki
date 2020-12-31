@@ -1,0 +1,1 @@
+Ce code va lancer le serveur SuperCollider, puis SuperDirt, avec les sample situés à l'emplacement <code>/Users/myUserName/Dirt/samples</code>.

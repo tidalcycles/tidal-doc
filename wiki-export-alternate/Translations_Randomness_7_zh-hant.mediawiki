@@ -1,0 +1,3 @@
+<syntaxhighlight lang="Haskell">
+d1 $ sound "arpy(3,8)" # n (irand 16)
+</syntaxhighlight>

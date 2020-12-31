@@ -1,0 +1,1 @@
+<syntaxhighlight lang="haskell" inline>rev</syntaxhighlight> で、パターンを逆再生します。

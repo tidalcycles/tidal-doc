@@ -1,0 +1,3 @@
+= Créer des patterns rythmiques simples =
+== Jouer avec un sample == 
+Tidal possède par défaut 16 connexions au synthétiseur SuperDirt, numérotées de <code>d1</code> à <code>d16</code>. Voici un exemple minimal, qui joue une grosse caisse sur tout les temps :

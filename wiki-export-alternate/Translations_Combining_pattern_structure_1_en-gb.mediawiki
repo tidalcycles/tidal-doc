@@ -1,0 +1,1 @@
+'''This does not describe current behaviour - this is upcoming in version 1.0.0.'''

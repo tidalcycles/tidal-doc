@@ -1,0 +1,23 @@
+{{DISPLAYTITLE:contrast}} 
+[[Type signature|Type]]: <source inline>contrast :: (ControlPattern -> ControlPattern) -> (ControlPattern -> ControlPattern) -> ControlPattern -> ControlPattern -> ControlPattern</source>
+
+'''contrast''' is like a if-else-statement over patterns. For <source inline>contrast f g p</source> you can think of <source inline>f</source> as the true-branch, <source inline>g</source> as the false branch, and <source inline>p</source> as the test.
+
+For contrast, you can use any control pattern as a test of equality: <source inline>n "<0 1>"</source>, <source inline>speed "0.5"</source>, or things like that. This lets you choose specific properties of the pattern you're transforming for testing, like in the following example
+
+<source>
+  d1 $ contrast (|+ n 12) (|- n 12) (n "c") $ n (run 4) # s "superpiano"
+</source>
+
+where every note that isn't middle-c will be shifted down an octave but middle-c will be shifted up to c5.
+
+Since the test given to <source inline>contrast</source> is also a pattern, you can do things like have it alternate between options
+
+<source>
+d1 $ contrast (|+ n 12) (|- n 12) (s "<superpiano superchip>") $ s "superpiano superchip" # n 0
+</source>
+
+If you listen to this you'll hear that which instrument is shifted up and which instrument is shifted down alternates between cycles.
+
+'''See also: [[fix]],[[unfix]]'''
+[[Category:Functions]]

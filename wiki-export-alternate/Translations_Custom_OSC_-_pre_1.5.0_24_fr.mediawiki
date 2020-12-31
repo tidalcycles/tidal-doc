@@ -1,0 +1,5 @@
+Si vous faites <source>d1 $ level "0.5 1 --let the level jump between -6 and 0 dBFS</source>, le résultat OSC équivalent sera : <source>
+$ oscsend localhost 5510 "/noise/level" f 0.5
+$ sleep 1
+$ oscsend localhost 5510 "/noise/level" f 1
+</source> en ligne de commande.

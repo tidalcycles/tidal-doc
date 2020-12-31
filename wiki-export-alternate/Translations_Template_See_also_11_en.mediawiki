@@ -1,0 +1,1 @@
+* If more than 15 entries are supplied, a message will be displayed pointing out the problem.

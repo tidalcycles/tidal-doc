@@ -1,0 +1,1 @@
+Vous pouvez télécharger une version du <code>startup code</code> en suivant [[https://github.com/tidalcycles/Tidal/blob/master/BootTidal.hs | ce lien]].

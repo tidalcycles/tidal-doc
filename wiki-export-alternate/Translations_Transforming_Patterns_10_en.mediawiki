@@ -1,0 +1,2 @@
+d1 $ fast 0.5 $ sound "arpy arpy:1 arpy:2 arpy:3"
+</syntaxhighlight>

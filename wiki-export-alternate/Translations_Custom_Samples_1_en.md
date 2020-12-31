@@ -1,0 +1,10 @@
+---
+title: Translations:Custom Samples/1/en
+permalink: wiki/Translations:Custom_Samples/1/en/
+layout: wiki
+---
+
+Adding and using your own custom samples in TidalCycles is relatively
+easy. You don't actually add samples into TidalCycles, but instead add
+them into SuperCollider and the SuperDirt quark. To do this, you will
+need to customize your SuperDirt startup code.

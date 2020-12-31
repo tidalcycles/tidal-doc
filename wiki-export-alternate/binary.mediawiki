@@ -1,0 +1,38 @@
+[[Type signature|Type]]: <source inline>binary :: Pattern Int -> Pattern Bool</source>
+
+'''binary''' allows you to express a boolean pattern as a decimal number.
+
+For example `163` in binary is `10100011`, and so these are equivalent:
+
+<source>
+d1 $ struct (binary 163) $ sound "clap:4"
+
+d1 $ struct "t f t f f f t t" $ sound "clap:4"
+</source>
+
+That number can be patterned:
+<source>
+d1 $ struct (binary ("163 63")) $ sound "clap:4"
+</source>
+
+= binaryN =
+
+[[Type signature|Type]]: <source inline>binaryN :: Int -> Pattern Int -> Pattern Bool</source>
+
+'''binaryN''' lets you specify a number of bits for the pattern. For example <source inline>55532</source> gives the boolean pattern <source inline>1101100011101100</source>:
+
+<source>
+d1 $ struct (binaryN 16 55532) $ sound "bd"
+</source>
+
+= ascii =
+
+[[Type signature|Type]]: <source inline>ascii :: Pattern String -> Pattern Bool</source>
+
+Turns characters into 8-bit binary patterns, using their ASCII encoding. E.g. the letter 'a' give the binary pattern <source inline>01100001</source>.
+
+<source>
+d1 $ struct (ascii "<[a b] [c d] [e f] [g h]>") $ sound "bd" # speed 2
+</source>
+
+[[Category:Functions]]

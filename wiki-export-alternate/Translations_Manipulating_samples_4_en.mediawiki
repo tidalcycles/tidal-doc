@@ -1,0 +1,1 @@
+You can use <syntaxhighlight lang="Haskell" inline>cut</syntaxhighlight> to truncate the sample when the next one is triggered

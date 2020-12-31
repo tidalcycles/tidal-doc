@@ -1,0 +1,1 @@
+A MELPA package is provided for TidalCycles integration within Emacs. You must first make sure you have MELPA installed on your machine ([https://melpa.org/#/getting-started here are the instructions]) then simply run <code>M-x install-package return tidal return</code>.

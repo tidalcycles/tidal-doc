@@ -1,0 +1,1 @@
+vas a necesitar acondicionar Jack con el comando <source inline>sudo dpkg-reconfigure jackd2</source> y escribir tu nombre de usuarix en el grupo de audio con <source inline>sudo addgroup -username- audio</source>.

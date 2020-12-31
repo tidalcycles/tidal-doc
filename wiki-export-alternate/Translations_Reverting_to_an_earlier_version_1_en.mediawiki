@@ -1,0 +1,1 @@
+To return to an earlier version of tidal, use the <source inline lang="bash">ghc-pkg</source> command. For example:

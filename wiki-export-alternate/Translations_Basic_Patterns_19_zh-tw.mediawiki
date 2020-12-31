@@ -1,0 +1,1 @@
+使用<syntaxhighlight lang="Haskell" inline>hush</syntaxhighlight>來停止所有正在運行的pattern。

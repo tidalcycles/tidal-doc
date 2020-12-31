@@ -1,0 +1,1 @@
+Il peut être utile d'utiliser [https://www.wireshark.org/ wireshark | Wireshark]. Vous pouvez filtrer les messages OSC dans le champ de recherche. Si vous cliquez sur un paquet OSC, vous trouverez une représentation bien formatée de votre message OSC.

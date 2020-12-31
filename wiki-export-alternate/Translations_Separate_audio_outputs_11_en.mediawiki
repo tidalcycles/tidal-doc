@@ -1,0 +1,1 @@
+However if you want to work in stereo, you should keep this number to 2, i.e. the number of channels per orbit.

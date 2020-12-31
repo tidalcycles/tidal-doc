@@ -1,0 +1,1 @@
+你可以使用<syntaxhighlight lang="Haskell" inline>cut</syntaxhighlight> 使下個音源被觸發時將原本在播放的截止。

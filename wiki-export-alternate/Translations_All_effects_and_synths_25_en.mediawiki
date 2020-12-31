@@ -1,0 +1,2 @@
+== Bandpass filter ==
+(#bandf/#bpf, #bandq/#bpfq).

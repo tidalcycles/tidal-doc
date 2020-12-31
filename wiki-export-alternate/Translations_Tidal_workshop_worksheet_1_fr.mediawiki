@@ -1,0 +1,1 @@
+Bienvenue dans ce tutorial consacré à Tidal Cycles. Celui-ci est pensé pour être utilisé comme une antisèche, tant pour les débutants que pour les groupes de niveau plus avancé. Ce tutorial est basé sur la version 0.9.10 de TidalCycles.

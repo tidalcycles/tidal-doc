@@ -1,0 +1,3 @@
+* [[Linux_installation|Linux]]
+* Mac - [[MacOS automated installation|easy]] (via tidal-bootstrap), or [[MacOS installation|manual]]
+* Windows - [[Windows choco install|easy]] (via chocolatey), or [[Windows_installation|manual]]

@@ -1,0 +1,1 @@
+Puedes dejar de hacer sonido usando <syntaxhighlight lang="Haskell" inline>silence</syntaxhighlight>:

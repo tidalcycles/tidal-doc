@@ -1,0 +1,3 @@
+#REDIRECT [[scale#toScale]]
+
+[[Category:Functions]]

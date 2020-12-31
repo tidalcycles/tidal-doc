@@ -1,0 +1,7 @@
+<source>pickF :: Pattern Int -> [Pattern a -> Pattern a] -> Pattern a -> Pattern a</source>
+
+chooses between a list of functions, using a pattern of integers
+
+see also: [[squeeze]], [[selectF]], [[select]]
+
+[[Category:Functions]]

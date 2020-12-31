@@ -1,0 +1,1 @@
+<syntaxhighlight lang="haskell" inline>iter</syntaxhighlight> は、サイクルごとに異なる点からパターンを開始します。開始された点に戻るまで、指定回数ずらしながら再生を続けます。

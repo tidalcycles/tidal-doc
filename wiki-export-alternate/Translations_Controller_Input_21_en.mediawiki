@@ -1,0 +1,3 @@
+if (~stopMidiToOsc != nil, {
+	~stopMidiToOsc.value;
+});

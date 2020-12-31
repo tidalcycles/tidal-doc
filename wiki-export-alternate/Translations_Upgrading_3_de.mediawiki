@@ -1,0 +1,1 @@
+Aktualisiere Tidal direkt im Terminal-Fenster mit folgenden Befehlen:

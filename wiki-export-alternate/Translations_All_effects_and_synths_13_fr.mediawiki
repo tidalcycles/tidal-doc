@@ -1,0 +1,4 @@
+== Tremolo ==
+Paramètres : 
+# tremolodepth/tremdp : amplitude du trémolo.
+# tremolorate/tremr : vitesse du tremolo.

@@ -1,0 +1,1 @@
+Pour retourner à une version antérieure, vous pouvez 'unregister' la version la plus récente. Pour ce faire, tapez :

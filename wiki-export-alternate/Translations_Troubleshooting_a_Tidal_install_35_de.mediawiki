@@ -1,0 +1,1 @@
+Das bedeutet wahrscheinlich, dass 'verstreute' SuperCollider-Prozesse laufen, die die Netzwerk-Ports blockieren. Fahre SuperCollider herunter und beende die Prozesse `sclang` und `scserver` über deinen Task-Manager. Sollte das nicht möglich sein, hilft ein Neustart deines Computers.

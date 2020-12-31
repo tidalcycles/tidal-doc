@@ -1,0 +1,13 @@
+---
+title: Translations:History of Tidal/4/en
+permalink: wiki/Translations:History_of_Tidal/4/en/
+layout: wiki
+---
+
+From the start I'd always shared the code for Tidal under a free/open
+source license, but it wasn't until 2013 I was invited to do [a month's
+residency at Hangar
+Barcelona](https://hangar.org/en/recerca/noticies/addicted2random-taller-drawing-weaving-and-speaking-live-generative-music-dalex-mc-lean/)
+supported by L'ull cec that I really had time and pressure to start
+documenting Tidal. It was there that I did my first proper workshop in
+TidalCycles, it was a fun time.

@@ -1,0 +1,2 @@
+<source>
+p "susan" $ sound "bd sd:1"

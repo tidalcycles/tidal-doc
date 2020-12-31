@@ -1,0 +1,1 @@
+Das bedeutet, dass SuperDirt nicht installiert ist. Das kannst du mit folgendem Befehl nachholen:

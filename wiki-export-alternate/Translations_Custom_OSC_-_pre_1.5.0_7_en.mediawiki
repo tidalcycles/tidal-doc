@@ -1,0 +1,1 @@
+The second example above instead uses <source inline>MessageStamp</source>, which is similar but instead of placing the message in a bundle, the timestamp is added as two integer values - sec and usec giving the number of seconds and microseconds since the UNIX epoch.

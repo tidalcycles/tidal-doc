@@ -1,0 +1,2 @@
+Pattern一字是不是不翻譯比較好 
+Different Kinds of原本想用不同"類型" 但擔心跟type混淆

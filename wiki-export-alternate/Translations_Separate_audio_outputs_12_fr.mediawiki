@@ -1,0 +1,1 @@
+Le fichier <code>BootTidal.hs</code> de votre éditeur de code envoie automatiquement <code>d1</code> sur l'<code>orbit</code> 0, <code>d2</code> sur l'<code>orbit</code> 1, etc... Vous pouvez définir explicitement quel <code>orbit</code> utiliser : <source inline>d1 $ sound "bd" # orbit 3</source>.

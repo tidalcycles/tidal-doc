@@ -1,0 +1,10 @@
+[[Type signature|Type]]: <source inline>Pattern Bool -> Pattern a -> Pattern a -> Pattern a</source>
+
+'''stitch''' uses the first (binary) pattern to switch between the following two patterns. The resulting structure comes from the binary pattern, not the source patterns. This differs from '''sew''' where the resulting structure comes from the source patterns.
+
+For example, the following uses a euclidean pattern to control CC0:
+<source>d1 $ ccv (stitch "t(7,16)" 127 0) # ccn 0  # "midi"</source>
+
+See also [[sew]]
+
+[[Category:Functions]]

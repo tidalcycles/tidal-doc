@@ -1,0 +1,2 @@
+= wchooseBy =
+[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>wchooseBy :: Pattern Double -> [(a,Double)] -> Pattern a </syntaxhighlight>

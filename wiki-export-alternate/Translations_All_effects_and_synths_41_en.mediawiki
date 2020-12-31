@@ -1,0 +1,3 @@
+== Frequency shifter ==
+(parameters: #fshift, #fshiftnote, #fshiftphase)<br>
+(Ben Gold)

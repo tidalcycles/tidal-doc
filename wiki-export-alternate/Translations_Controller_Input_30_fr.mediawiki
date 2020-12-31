@@ -1,0 +1,1 @@
+Téléchargez ensuite le fichier suivant : [https://raw.githubusercontent.com/tidalcycles/Tidal/master/pd/midi-osc-bridge.pd lien].

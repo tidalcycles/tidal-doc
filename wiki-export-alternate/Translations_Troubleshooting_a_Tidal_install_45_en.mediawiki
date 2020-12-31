@@ -1,0 +1,1 @@
+If everything seems to be working, but not all sounds play, then probably there was a problem causing the download of Tidal's extensive library of 'default' sounds to fail part way through.

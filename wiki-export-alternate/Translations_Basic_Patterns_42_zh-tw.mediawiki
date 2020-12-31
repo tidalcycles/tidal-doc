@@ -1,0 +1,1 @@
+與之相反，使用 <syntaxhighlight lang="Haskell" inline>/</syntaxhighlight>符號。

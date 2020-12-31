@@ -1,0 +1,2 @@
+# Pour Atom : File > Settings > Packages > cherchez TidalCycles.
+# Pour VSCode : Extensions > TidalCycles > Update.

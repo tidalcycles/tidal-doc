@@ -1,0 +1,89 @@
+<translate>
+
+= Easy install = <!--T:22-->
+
+<!--T:23-->
+For an easy, automated install experience, see the [[Windows choco install]].
+
+= Manual install = <!--T:24-->
+
+<!--T:25-->
+If you prefer to install the different parts of a Tidal environment by hand, perhaps because you already have supercollider or haskell installed, then follow the below instructions.
+
+== Prerequisites == <!--T:1-->
+
+=== Required Prerequisites=== <!--T:2-->
+
+<!--T:3-->
+Before installing Tidal, make sure the following are installed first:
+
+<!--T:4-->
+* Haskell Platform - Please note! There's a bug in the windows haskell installer, please install [https://www.haskell.org/platform/download/8.4.3/HaskellPlatform-8.4.3-full-x86_64-setup.exe this version] (Haskell 8.4.3 'full' install) and it should work
+* [https://atom.io/ Atom Editor]  (if you don't like the atom editor for some reason, please check out the [[List of tidal editors|list of alternatives]])
+* [http://supercollider.github.io/download SuperCollider] (pick the latest version)
+* [https://git-scm.com/ Git]
+
+=== Optional Prerequisites === <!--T:5-->
+
+<!--T:6-->
+The following is optional, but recommended:
+
+<!--T:7-->
+* [https://supercollider.github.io/sc3-plugins/ SC3 Plugins] - you may need the SuperCollider sc3-plugins if you want to use any of the synths included in SuperDirt. Most of the examples in the documentation will still work, so you could skip this step and return to it later.
+
+== Install TidalCycles == <!--T:8-->
+
+<!--T:9-->
+Open a Command Prompt (or PowerShell), then type and run these two commands:
+
+ <!--T:10-->
+ cabal update
+  cabal install tidal
+
+<!--T:11-->
+If you've never installed TidalCycles before, then the <code>cabal install tidal</code> step may take some time.
+
+<!--T:26-->
+If you see an error with the network library, then you need to fix something with your Haskell install. You can [https://forum.toplap.org/t/trouble-launching-tidal-in-atom/678/3 find instructions here].
+
+== Install SuperDirt == <!--T:12-->
+
+<!--T:13-->
+Start SuperCollider, and in the editor window paste in the following line of code:
+
+<!--T:14-->
+<source>Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.1.3"); thisProcess.recompile()})</source>
+
+<!--T:15-->
+Run the code by clicking on it, to make sure the cursor is on this line, then hold down Shift and press Enter.
+
+<!--T:16-->
+It'll take a while to install. You'll see something like the following:
+
+<!--T:27-->
+<source lang="plaintext">
+Installing SuperDirt
+Installing Vowel
+Vowel installed
+Installing Dirt-Samples
+Dirt-Samples installed
+SuperDirt installed
+compiling class library...
+...
+(then some blah blah, and finally, something like:)
+...
+
+<!--T:28-->
+*** Welcome to SuperCollider 3.10.0. *** For help press Ctrl-D.
+</source>
+
+== Install Atom Extension == <!--T:18-->
+
+<!--T:19-->
+Start Atom, and install the TidalCycles plugin. You can find it via the menus under edit > settings > install, then typing “tidalcycles” into the search box. Once that’s installed, restart atom.
+
+== Test Your Installation == <!--T:20-->
+
+<!--T:21-->
+Now you are ready to [[Start_tidalcycles_and_superdirt_for_the_first_time|Start TidalCycles and SuperDirt for the first time]].
+</translate>

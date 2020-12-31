@@ -1,0 +1,1 @@
+Le second exemple privilégie plutôt <source inline>MessageStamp</source>, qui est similaire. Au lieu de placer le message dans un lot, la signature temporelle est définie par deux entiers (<code>sec</code> et <code>usec</code>), à savoir le nombre de secondes et de micro-secondes depuis l'epoch UNIX.

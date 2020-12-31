@@ -1,0 +1,2 @@
+{{DISPLAYTITLE:within}}
+{{Type|<source inline>within :: Arc -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a</source>}}

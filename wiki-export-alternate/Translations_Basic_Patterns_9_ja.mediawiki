@@ -1,0 +1,2 @@
+ほかにどんなサンプルがあるか (または自分で追加するには) は ''Dirt-Samples'' フォルダを見てみましょう。SuperColliderのメニューから 'File > Open user support directory > downloaded-quarks >
+Dirt-Samples' で見られます。

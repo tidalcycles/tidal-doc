@@ -1,0 +1,2 @@
+== Lowpass filter ==
+(#cutoff/#lpf, #resonance/#lpq)

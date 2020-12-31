@@ -1,0 +1,1 @@
+Essayez de jouer un pattern simple en pressant Shift+Entrée. Ctrl+Entrée fonctionne également, et jouera plusieurs lignes.

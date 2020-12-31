@@ -1,0 +1,1 @@
+Abrí una terminal (o PowerShell). Luego escribí y ejecutá los siguientes comandos (ignorando cualquier queja alrededor de que cabal tiene un "legado v1 de estilo de uso"):

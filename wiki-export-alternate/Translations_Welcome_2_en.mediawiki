@@ -1,0 +1,1 @@
+'''TidalCycles''' (or 'tidal' for short) is free/open source software, that allows you to make patterns with code, whether live coding music at algoraves or composing in the studio.

@@ -1,0 +1,3 @@
+== Spectral delay ==
+(parameters: #xsdelay, #tsdelay)<br>
+(Mads Kjeldgaard)

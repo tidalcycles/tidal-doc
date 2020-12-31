@@ -1,0 +1,1 @@
+'''fastcat''' works like <source inline>cat</source> above, but squashes all the patterns to fit a single cycle. Examples:

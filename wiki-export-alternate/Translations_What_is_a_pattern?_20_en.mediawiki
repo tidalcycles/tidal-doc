@@ -1,0 +1,5 @@
+<syntaxhighlight lang="Haskell">
+data State = State {arc :: Arc,
+                    controls :: ControlMap
+                   }
+</syntaxhighlight>

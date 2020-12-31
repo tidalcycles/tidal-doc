@@ -1,0 +1,3 @@
+<source>
+d1 $ slow 32 $ jux (rev) $ striate' 32 (1/16) $ sound "bev"
+</source>

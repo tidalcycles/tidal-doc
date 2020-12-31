@@ -1,0 +1,1 @@
+Wenn alles zu funktionieren scheint, aber nicht alle Sounds abgespielt werden, dann gibt es wahrscheinlich ein Problem beim Herunterladen der umfangreichen Sound-Bibliothek von TidalCycles.

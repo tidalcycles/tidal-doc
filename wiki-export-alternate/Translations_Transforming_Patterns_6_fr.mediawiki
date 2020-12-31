@@ -1,0 +1,1 @@
+<syntaxhighlight lang="haskell" inline>fast</syntaxhighlight> produit l'effet inverse. Il compresse un pattern en x fois de moins de cycles.

@@ -1,0 +1,2 @@
+== Phaser ==
+(parameters: #phaserrate/#phasr, #phaserdepth/#phasdp)

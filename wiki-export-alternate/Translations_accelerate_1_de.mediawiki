@@ -1,0 +1,3 @@
+
+{{DISPLAYTITLE:accelerate}} 
+[[Type signature|Type]]: <source inline>accelerate :: Pattern Double -> ControlPattern</source>

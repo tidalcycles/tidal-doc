@@ -1,0 +1,2 @@
+#啟用SuperDirt--在Supercollider輸入<syntaxhighlight lang="Haskell" inline>'SuperDirt.start'</syntaxhighlight> 後，指標在同一行內，按下Ctrl+Enter執行。
+#啟用TidalCycles--在Atom開始一個新文件並另存新檔，副檔名請設為<syntaxhighlight lang="Haskell" inline>.tidal</syntaxhighlight>。(例如 examples.tidal)

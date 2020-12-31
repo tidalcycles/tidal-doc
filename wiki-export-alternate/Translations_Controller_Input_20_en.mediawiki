@@ -1,0 +1,3 @@
+cc = MIDIFunc.cc({ |val, num, chan, src|
+	osc.sendMsg("/ctrl", num.asString, val/127);
+});

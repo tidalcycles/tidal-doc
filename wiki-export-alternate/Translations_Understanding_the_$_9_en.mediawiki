@@ -1,0 +1,1 @@
+Here the dollar takes care of passing <syntaxhighlight lang="Haskell" inline>rev "1 2 3"</syntaxhighlight> to <syntaxhighlight lang="Haskell" inline>fast 2</syntaxhighlight>. If we missed it out, then we'd get an error.

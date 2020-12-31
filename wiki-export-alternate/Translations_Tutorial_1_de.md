@@ -1,0 +1,13 @@
+---
+title: Translations:Tutorial/1/de
+permalink: wiki/Translations:Tutorial/1/de/
+layout: wiki
+---
+
+Du hast TidalCycles und (Super)Dirt installiert, vielleicht sogar ein
+paar Sounds gemacht, aber jetzt bist du bereit, dich an die Arbeit zu
+machen und wirklich zu lernen wie TidalCycles funktioniert. Dieser
+Leitfaden zeigt Dir wie du von einfachen Pattern zu zu komplexeren
+Kompositionen kommst. Einen schnellen Überblick über die Pattern-Syntax
+findest du hier: [Sequence parser
+syntax](/wiki/Sequence_parser_syntax "wikilink").

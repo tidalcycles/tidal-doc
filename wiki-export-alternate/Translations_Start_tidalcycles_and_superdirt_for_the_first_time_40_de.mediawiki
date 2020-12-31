@@ -1,0 +1,3 @@
+# Starte Atom
+# Erzeuge eine neue Datei und speichere sie mit der Dateiendung .tidal ab, z.B. test.tidal
+# Wähle TidalCycles -> Boot TidalCycles aus dem Packages-Menü. Am unteren Fensterrand sollte ein kleines Fenster erscheinen und darin als Eingabeaufforderung 't>' (und hoffentlich keine Fehlermeldungen).

@@ -1,0 +1,1 @@
+Dans le code ci-dessus, <code>sound</code> définit un pattern de sons (samples), et <code>"bd"</code> est un pattern simple, délimité par les guillemets, qui contient le son <code>bd</code>, correspondant à la grosse caisse. Les samples se situent dans le dossier Dirt-Samples. Chaque sous-dossier est un nom de sample utilisable par Tidal.

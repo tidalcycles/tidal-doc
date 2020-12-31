@@ -1,0 +1,14 @@
+<languages/>
+= Controlling MIDI synths with Tidal =
+
+If you want to control MIDI synths, then use SuperDirt MIDI. The older 'tidal-midi' Haskell module is not currently working (although may return!). Try out the new [[SuperDirt MIDI Tutorial]].
+
+== Synchronising MIDI clock ==
+
+[[MIDI Clock]]
+
+= Controlling Tidal with external controllers =
+
+To control Tidal from an external MIDI device, look at the [[Controller Input]] page.
+
+[[Category:Reference]]

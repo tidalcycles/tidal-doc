@@ -1,0 +1,2 @@
+# Starte Supercollider und dann dann SuperDirt innerhalb von Supercollider
+# Starte TidlaCycles in deinem bevorzugtem Editor

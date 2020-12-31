@@ -1,0 +1,1 @@
+If your synth is listening on a different channel, let's say, MIDI channel 5, you would use <code>midichan 4</code>:

@@ -1,0 +1,18 @@
+<languages/>
+= Mettre à jour Tidal =
+
+Si vous avez déjà installé Tidal, suivez les [[Upgrading| instructions de mise à jour]].
+
+= Installation =
+
+''Note : la documentation recommande l'éditeur Atom pour programmer avec Tidal. Si vous souhaitez utiliser un éditeur différent, jetez un œil à [[List of tidal editors| la liste des éditeurs supportant Tidal]].
+
+Choisissez votre système d'exploitation :
+
+* [[Linux_installation| Linux]]
+* [[MacOS_installation| MacOS]]
+* [[Windows_installation|Windows]]
+
+= Des problèmes ? =
+
+* [[Troubleshooting a Tidal install|Résoudre un problème d'installation de Tidal]]

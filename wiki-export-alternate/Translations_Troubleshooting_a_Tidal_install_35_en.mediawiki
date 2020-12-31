@@ -1,0 +1,1 @@
+This probably means you have stray supercollider processes running, blocking network ports. Shut down supercollider, and force quit `sclang` and `scserver` in your task manager. Failing that, a reboot will clear them.

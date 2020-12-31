@@ -1,0 +1,3 @@
+== Shape ==
+Paramètres : 
+# shape : l'intensité de l'effet par rapport au signal d'origine.

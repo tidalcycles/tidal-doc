@@ -1,0 +1,1 @@
+To upgrade the SuperDirt sound synthesiser/sampler, open supercollider, and run the following (paste it in, put your cursor on that line, hit shift-enter):

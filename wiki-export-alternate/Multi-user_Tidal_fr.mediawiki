@@ -1,0 +1,10 @@
+<languages/>
+Il existe plusieurs manières de faire de la musique sur Tidal avec vos amis : 
+
+* éditeurs collaboratifs
+** [https://github.com/Qirky/Troop Troop] un éditeur multi-utilisateur avec une expérience proche de etherpad/Google Docs. 
+** [https://github.com/d0kt0r0/extramuros Extramuros] éditeur de texte collaboratif dans un navigateur internet.
+** [https://github.com/d0kt0r0/Estuary Estuary] éditeur de texte collaboratif dans un navigateur internet. Inclut 'minitidal'.
+* [[Network tempo sharing]] - Tidal sur des ordinateurs différents, en réseau.
+* [[EspGrid tempo sharing]] - Synchronisation entre différents langages, sur des ordinateurs différents.
+* [[Link synchronisation]] - entre Tidal et tout les logiciels compatibles avec le protocole Link de Ableton.

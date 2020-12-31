@@ -1,0 +1,1 @@
+[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>sometimes :: (Pattern a -> Pattern a) -> Pattern a -> Pattern a</syntaxhighlight>

@@ -1,0 +1,1 @@
+Puede detener todos los patrones en ejecución con <syntaxhighlight lang="Haskell" inline>hush</syntaxhighlight>.

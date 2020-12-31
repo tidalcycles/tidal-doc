@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>sine</syntaxhighlight> 為一個連續型的pattern，以正弦波(sine)的軌跡在數值0到1間擺盪。

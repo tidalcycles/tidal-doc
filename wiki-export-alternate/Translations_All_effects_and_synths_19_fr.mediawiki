@@ -1,0 +1,3 @@
+== Vowel ==
+Paramètres :
+# vowel : la voyelle souhaitée.

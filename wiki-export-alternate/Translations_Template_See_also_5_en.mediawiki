@@ -1,0 +1,1 @@
+$1 is used to create [[w:Wikipedia:Hatnote|hatnotes]] to point to a small number of other, related, titles at the '''top''' of [[w:Help:Section|article sections]] according to [[w:Wikipedia:Layout|Wikipedia:Layout]].

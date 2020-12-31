@@ -1,0 +1,16 @@
+---
+title: Category:Metapattern
+permalink: wiki/Category:Metapattern/
+layout: tagpage
+tag: Metapattern
+---
+
+As TidalCycles is a language about patterns, it seems fit to discuss
+**metapatterns**, which we can loosely define as 'patterns of patterns'.
+Use this page to describe patterns of:
+
+-   activity/techniques in your approach to livecoding
+-   code structure or combinations of functions
+-   snippets that you've found useful
+-   BootTidal hacks
+-   etc

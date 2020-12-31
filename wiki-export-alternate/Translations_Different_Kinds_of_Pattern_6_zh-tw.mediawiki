@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>Run</syntaxhighlight> 是生產出一個漸增序列的簡單方法。

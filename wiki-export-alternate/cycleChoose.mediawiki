@@ -1,0 +1,7 @@
+[[Type signatures|Type]]: <source inline>cycleChoose :: [a] -> Pattern a</source>
+
+similar to [[choose]], but only picks once per cycle
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "drum ~ drum drum" # n (cycleChoose [0,2,3])
+</syntaxhighlight>

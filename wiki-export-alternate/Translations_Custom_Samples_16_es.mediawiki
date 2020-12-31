@@ -1,0 +1,4 @@
+<source>
+d1 $ s "myBass hits*4" # n (slow 2 $ run 3)
+d2 $ n "<0 2 1>" # s "field" # cut 1
+</source>

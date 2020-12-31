@@ -1,0 +1,1 @@
+<syntaxhighlight lang="haskell" inline>every</syntaxhighlight> nous permet de prévoir certaines transformations et de les appliquer lors de la lecture d'un cycle particulier. Par exemple : joue les samples deux fois plus rapidement tout les quatre cycles.

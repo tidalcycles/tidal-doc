@@ -1,0 +1,1 @@
+You should then be able to run a pattern such as the following, that uses CC value 12:

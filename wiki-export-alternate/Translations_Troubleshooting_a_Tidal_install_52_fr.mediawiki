@@ -1,0 +1,1 @@
+Vous n'aurez qu'à spécifier l'emplacement de votre installation stack dans Atom. Remplacez la <code>ghci path</code> par  <source inline>stack exec --package tidal -- ghci</source>. Relancez Atom et tout devrait fonctionner.

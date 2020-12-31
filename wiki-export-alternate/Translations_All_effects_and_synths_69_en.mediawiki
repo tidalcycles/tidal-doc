@@ -1,0 +1,3 @@
+== Magnitude smearing ==
+(parameters: #smear)<br>
+(Mads Kjeldgaard)

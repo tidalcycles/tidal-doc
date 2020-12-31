@@ -1,0 +1,1 @@
+Let's think about some different kinds of pattern and how Tidal can represent them

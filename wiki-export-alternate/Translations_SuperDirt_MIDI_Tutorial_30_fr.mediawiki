@@ -1,0 +1,1 @@
+Le pattern ci-dessus joue les notes 0 et 2 sur le canal 1 et les notes 4 et 7 sur le canal 5.

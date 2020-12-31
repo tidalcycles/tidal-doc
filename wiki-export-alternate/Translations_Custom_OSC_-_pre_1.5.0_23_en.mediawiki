@@ -1,0 +1,4 @@
+To make <code>level</code> usable like usual also define
+<source>
+let level = pF "level"
+</source>

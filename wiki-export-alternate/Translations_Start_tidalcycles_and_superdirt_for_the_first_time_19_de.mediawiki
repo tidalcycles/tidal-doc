@@ -1,0 +1,2 @@
+Es gibt zwei Möglichkeiten, um SuperDirt zu starten.
+Du kannst ihn entweder über die SuperCollider-IDE laufen starten oder den SuperCollider-Interpreter <code>sclang</code> in einem Terminal verwenden. Neuen Benutzern wird empfohlen, die Entwicklungsumgebung von SuperCollider zu nutzen.

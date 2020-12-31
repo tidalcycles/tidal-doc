@@ -1,0 +1,1 @@
+... or you could schedule an effect in the same way, using <syntaxhighlight lang="haskell" inline>#</syntaxhighlight>

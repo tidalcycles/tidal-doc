@@ -1,0 +1,50 @@
+<languages/>
+
+Pour configurer Tidal, vous aurez besoin d'éditer le code de la séquence de lancement dans votre éditeur favori.
+
+Vous pouvez télécharger une version du <code>startup code</code> en suivant [[https://github.com/tidalcycles/Tidal/blob/master/BootTidal.hs | ce lien]].
+
+Sauvegardez-le quelque part. Si vous utilisez Atom, renseignez le chemin de destination vers le fichier dans les options. Vous pouvez ensuite éditer le fichier pour configurer Tidal.
+
+= Latence =
+
+Il existe deux options permettant de configurer la latence :
+# <code>frame timespan</code> 
+# <code>latency</code>
+
+Pour connaître la latence maximale, additionnez ces deux valeurs. Voici un exemple de configuration :
+
+<source>
+tidal <- startTidal (superdirtTarget {oLatency = 0.02}) (defaultConfig {cFrameTimespan = 1/20})
+</source>
+
+== Frame timespan ==
+
+Il s'agit de la fenêtre de calcul de Tidal exprimée en secondes. Le paramètre par défaut est 0.05, soit 20 frames par seconde.
+
+Si vous trouvez que Tidal utilise trop de CPU, augmenter cette valeur vous sera utile.
+
+== Latence ==
+
+Si vous recevez beaucoup de <code>late messages</code> dans SuperCollider, vous pouvez augmenter la latence (la valeur par défaut est de 0.02).
+
+= SuperDirt sur un autre hôte =
+
+Si vous utilisez SuperDirt sur un autre hôte (en réseau ou configuration multi-utilisateur), vous aurez besoin de définir la latence. Cette fois-ci, le paramètre dont vous aurez besoin s'appelle <code>oAddress</code>.
+
+<syntaxhighlight lang="Haskell">
+tidal <- startTidal (superdirtTarget {oAddress = "192.168.0.23", oPort = 57120}) defaultConfig
+</syntaxhighlight>
+
+Si vous avez besoin de définir la valeur pour plusieurs hôtes SuperDirt, séparez les par un point :  (<source inline>{oAddress = "1.2.3.4", oLatency = 0.04}</source>). 
+
+Notez que pour Emacs (et très certainement pour d'autres éditeurs), vous aurez besoin d'une 'escape sequence'.
+
+Vous aurez à configurer SuperDirt pour recevoir des messages en provenance d'un autre hôte. Par exemple, en démarrant Tidal avec la configuration suivante, vous lui donnerez pour ordre d'écouter tout les messages OSC sur une adresse particulière :
+
+<source>
+~dirt.start(57120, [0, 0], NetAddr("0.0.0.0"));
+</source>
+
+[[Category:Tidal-1+]]
+[[Category:Reference]]

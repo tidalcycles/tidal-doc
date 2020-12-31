@@ -1,0 +1,3 @@
+In diesem Wiki findest du Informationen für die aktuelle Tidal-Version 1.0.x. Um auf die Dokumentation der vorherigen Version 0.9.10 zuzugreifen, besuche bitte unsere [http://pages.tidalcycles.org/ alte Webseite].
+
+'''Hinweis''': Die Arbeit an der deutschen Übersetzung hat gerade erst angefangen. Sehr viele Seiten sind noch nicht übersetzt. Wir arbeiten daran!

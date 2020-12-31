@@ -1,0 +1,3 @@
+== VS Code-Erweiterung installieren  ==
+Starte VS Code und installiere die TidalCycles-Erweiterung - zu finden im Marketplace.
+Du kannst dieser Anleitung [https://marketplace.visualstudio.com/items?itemName=tidalcycles.vscode-tidalcycles hier] folgen, wenn du nicht sicher bist wie das genau funktioniert.

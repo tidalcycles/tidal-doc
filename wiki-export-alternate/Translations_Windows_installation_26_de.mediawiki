@@ -1,0 +1,1 @@
+Wenn Dir ein Fehler in der Netzwerkbibliothek angezeigt wird, dann musst du deine Haskell-Installation anpassen. Die Anweisungen dazu findest du [https://forum.toplap.org/t/trouble-launching-tidal-in-atom/678/3 hier].

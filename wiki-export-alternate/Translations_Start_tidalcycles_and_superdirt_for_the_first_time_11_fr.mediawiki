@@ -1,0 +1,1 @@
+Essayez de lancer un pattern simple en tapant le code ci-dessous et maintenez Shift puis Entrée pour l'évaluer (maintenir Control puis Entrée fonctionnera aussi, cette commande évalue plusieurs lignes).

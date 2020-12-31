@@ -1,0 +1,3 @@
+Functions that are mainly or wholly about manipulating time.
+
+[[Category:Functions]]

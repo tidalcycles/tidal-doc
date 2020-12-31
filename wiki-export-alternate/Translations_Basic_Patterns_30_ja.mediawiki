@@ -1,0 +1,1 @@
+四角かっこ <syntaxhighlight lang="Haskell" inline>[ ]</syntaxhighlight> で囲んだサブシーケンスを、ステップのひとつとして並べます:

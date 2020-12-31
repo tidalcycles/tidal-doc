@@ -1,0 +1,1 @@
+(<syntaxhighlight lang="Haskell" inline>degrade</syntaxhighlight> on its own is the same as <syntaxhighlight lang="Haskell" inline>degradeBy 0.5</syntaxhighlight>)

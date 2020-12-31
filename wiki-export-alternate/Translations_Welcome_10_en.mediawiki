@@ -1,0 +1,1 @@
+The above is for the current 1.0.x release of Tidal. To access the documentation for the previous version 0.9.10, please see the [http://pages.tidalcycles.org/ old website].

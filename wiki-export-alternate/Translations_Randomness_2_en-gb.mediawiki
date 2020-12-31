@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>sometimes</syntaxhighlight> works a bit like <syntaxhighlight lang="Haskell" inline>every</syntaxhighlight>, but instead of happening after a set period, changes have a random chance of appearing

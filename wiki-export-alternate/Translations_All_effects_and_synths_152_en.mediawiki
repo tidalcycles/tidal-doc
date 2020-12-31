@@ -1,0 +1,2 @@
+== Superhoover ==
+(#superhoover parameters: #slide, #decay, #accelerate)

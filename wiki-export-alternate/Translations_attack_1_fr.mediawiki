@@ -1,0 +1,2 @@
+{{DISPLAYTITLE:attack}} 
+[[Type signature|Type]]: <source inline>attack :: Pattern Double -> ControlPattern</source>

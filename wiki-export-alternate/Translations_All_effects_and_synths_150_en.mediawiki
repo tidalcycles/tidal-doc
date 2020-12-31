@@ -1,0 +1,1 @@
+Vibraphone simulation, adapted with some help from Kevin Larke's thesis Real Time Vibraphone Pitch and Timbre Classification.
