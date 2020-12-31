@@ -1,0 +1,13 @@
+site_name: TidalCycles
+theme:
+  name: material
+  palette:
+    primary: teal
+    accent: pink
+  repo_url: https://github.com/tidalcycles/tidal-doc
+  features:
+    - search.suggest
+    - search.highlight
+    - search.share
+plugins:
+  - search
