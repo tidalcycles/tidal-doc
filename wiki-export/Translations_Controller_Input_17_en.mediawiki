@@ -1,0 +1,2 @@
+MIDIClient.init;
+MIDIIn.connectAll;

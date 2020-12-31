@@ -1,0 +1,3 @@
+<source>
+~dirt.loadSoundFiles("c:\\Users\\myUserName\\Dirt\\samples\\*")
+</source>

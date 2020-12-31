@@ -1,0 +1,5 @@
+<syntaxhighlight lang="Haskell">
+data Value = VS { svalue :: String }
+           | VF { fvalue :: Double }
+           | VI { ivalue :: Int }
+           deriving (Eq,Ord,Typeable,Data)

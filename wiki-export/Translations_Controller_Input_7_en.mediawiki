@@ -1,0 +1,1 @@
+If you prefer to switch off listening to controls all together, use this instead:

@@ -1,0 +1,1 @@
+我們可以使用<syntaxhighlight lang="Haskell" inline>n</syntaxhighlight>來選擇資料夾內的音檔，音檔變換也能被pattern。

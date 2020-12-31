@@ -1,0 +1,1 @@
+全ての再生中のパターンを止めるには <syntaxhighlight lang="Haskell" inline>hush</syntaxhighlight> を使います。

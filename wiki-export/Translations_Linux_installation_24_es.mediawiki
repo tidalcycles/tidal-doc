@@ -1,0 +1,1 @@
+Para iniciar el intérprete, ejecutá run <code>sclang</code> en la terminal, después copiá la lénea de código de abajo y apretá Enter para correrla. Una vez que la instalación está completa, podés salir del intérprete apretando Ctrl + C.

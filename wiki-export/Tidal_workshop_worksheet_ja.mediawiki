@@ -1,0 +1,28 @@
+<languages />
+Tidalチュートリアルへようこそ。このページは、初心者/mixedワークショップでのハンズオンで、ワークシートとして使うため作りました。TidalCycles version 0.9.10で動作します。 
+
+Lucy Cheesmanが作成、Alex McLeanがWikiフォーマットへ整形しました。みなさんの編集をお待ちしています(これはwikiですから!)
+
+= はじめましょう =
+
+全てのインストールを終えあと、TidalCyclesを使うときは、毎回次のセットアップ手順に従いましょう。
+
+# SuperDirtを起動する - Supercolliderで、 'SuperDirt.start' と入力し、'Ctrl' を押しながらら 'Enter' を押すことで、コードを実行します (入力したのと同じ行にカーソルを置きながらですよ).
+# TidalCyclesを起動する - Atomでは、<syntaxhighlight lang="Haskell" inline>.tidal</syntaxhighlight> 拡張子 (例 <syntaxhighlight lang="Haskell" inline>examples.tidal</syntaxhighlight>) の新しいファイルを作成し、保存します。
+
+== 注釈をつける ==
+
+<syntaxhighlight lang="Haskell">
+-- このようにダッシュ二つ(--)ではじまる行は、コメントを表します
+-- このテキストを、コンピュータは無視し実行しないため、コードに注釈をつけることができます
+</syntaxhighlight>
+
+= ワークシート =
+
+* [[Basic Patterns/ja|基本パターン]]
+* [[Transforming Patterns/ja|パターンの変形]]
+* [[Different Kinds of Pattern/ja|さまざまなパターン]]
+* [[Randomness/ja|ランダム性の導入]]
+* [[Manipulating samples/ja|サンプルの操作]]
+
+[[Category:Reference]]

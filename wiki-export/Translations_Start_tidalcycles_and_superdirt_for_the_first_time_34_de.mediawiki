@@ -1,0 +1,2 @@
+Wenn du das Emacs-PlugIn noch nicht installiert hast, schau Dir noch mal die  [[Linux installation]] an. Nachdem das TidalCycles-PlugIn installiert ist, musst du nur eine  <code>*.tidal</code> Datei öffnen und dann <code>C-c C-s</code> drücken, um Tidal in Emacs zu starten. 
+Wenn alles geklappt hat solltest du den Output von Tidal in einem separatem Fenster sehen.

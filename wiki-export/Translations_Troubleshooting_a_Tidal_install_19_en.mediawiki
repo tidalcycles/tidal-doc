@@ -1,0 +1,1 @@
+Start SuperCollider, and paste the following in:

@@ -1,0 +1,4 @@
+* Haskell-Plattform - Bitte beachten! Es gibt einen Fehler im Windows-Haskell-Installationsprogramm, also installiere [https://www.haskell.org/platform/download/8.4.3/HaskellPlatform-8.4.3-full-x86_64-setup.exe diese Version] (Haskell 8.4.3 'full' install). So sollte es funktionieren.
+* [https://atom.io/ Atom-Editor] (wenn du den Atom-Editor aus irgendeinem Grund nicht magst, schau Dir die [[List of tidal editors|Liste der Alternativen]] an)
+* [http://supercollider.github.io/download SuperCollider] (installiere die neueste Version)
+* [https://git-scm.com/ Git]

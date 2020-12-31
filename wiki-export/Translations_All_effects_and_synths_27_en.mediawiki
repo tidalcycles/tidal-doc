@@ -1,0 +1,2 @@
+== ASR-Envelope ==
+(#attack/#att, #hold, #release/#rel)

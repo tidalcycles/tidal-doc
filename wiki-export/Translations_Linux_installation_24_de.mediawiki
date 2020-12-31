@@ -1,0 +1,1 @@
+Um den Interpreter zu starten, führe einfach <code>sclang</code> in einem Terminal aus, füge dann die Befehlszeile von oben ein und drücke die Eingabetaste, um sie auszuführen. Wenn die Installation abgeschlossen ist, kannst du den Interpreter durch Drücken von 'Strg + C' verlassen.

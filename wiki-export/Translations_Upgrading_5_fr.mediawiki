@@ -1,0 +1,1 @@
+Vous pouvez vérifier votre version de Tidal en tapant la commande suivante :

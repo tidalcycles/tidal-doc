@@ -1,0 +1,7 @@
+Die folgenden Editoren unterstützen die Programmierung von Tidal - entweder durch eine Erweiterung, ein Plugin oder eine manuelle Konfiguration:
+
+* [[Atom]]
+* [[Vim]]
+* [[Emacs]]
+* [[VS Code]]
+* [[Sublime Text]]

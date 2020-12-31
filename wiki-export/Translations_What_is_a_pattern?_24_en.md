@@ -1,0 +1,12 @@
+---
+title: Translations:What is a pattern?/24/en
+permalink: wiki/Translations:What_is_a_pattern?/24/en/
+layout: wiki
+---
+
+Notice also that a list of events is returned (denoted by the square
+brackets). This simply means that tidal supports polyphony - many events
+can take place at the same time. Remember though that each event has its
+own arc; two events might be returned for the same timespan, but they
+may well not start and end at the same time, and might not overlap at
+all.

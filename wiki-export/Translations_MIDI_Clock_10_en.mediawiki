@@ -1,0 +1,1 @@
+However now if you do <source inline>hush</source>, the midiclock will stop as well as all the other patterns. To avoid this, you can overwrite the <source inline>hush</source> function with a version that silences particular patterns:

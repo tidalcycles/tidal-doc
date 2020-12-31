@@ -1,0 +1,1 @@
+<source>ghc-pkg unregister tidal-1.4.0</source>

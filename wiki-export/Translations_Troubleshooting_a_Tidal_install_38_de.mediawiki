@@ -1,0 +1,4 @@
+<source lang="shell">
+cabal update
+cabal new-install tidal --lib
+</source>

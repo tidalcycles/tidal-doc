@@ -1,0 +1,34 @@
+---
+title: Use adjacent samples
+permalink: wiki/Use_adjacent_samples/
+layout: wiki
+tags:
+ - Metapattern
+---
+
+With the exception of the SuperDirt synths, most of the sound in
+TidalCycles comes from sample playback. Some folders of samples have
+only a few samples, some more. A lot of tonal variety can be achieved by
+finding / creating sample folders where there are similar samples
+adjacent to each other in the folder.
+
+Take this example, which is fairly monotonous
+
+    d1 $ n "0*8" # s "jungbass" # cut "1"
+
+We can spice it up, adding movement & variety simply by playing the
+adjacent samples in order. Take these examples - which have the exact
+same rhythm as above.
+
+    d1 $ n (run 8) # s "jungbass" # cut "1"
+
+    d1 $ n (slow 2 $ run 16 ) # s "jungbass" # cut "1"
+
+In this example we increment the base sample '5' at different cycles,
+which will alternate between samples '5', '6', '7', & '8'.
+
+    d1 $ whenmod 2 1 (+ n "1") 
+       $ whenmod 4 2 (+ n "1") 
+       $ whenmod 8 4 (+ n "1") 
+       $ sound "jungbass:5(<3 5>,8)"
+       # cut "1"

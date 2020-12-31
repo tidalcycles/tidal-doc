@@ -1,0 +1,89 @@
+<languages/>
+<translate>
+= Discussion = <!--T:1-->
+
+<!--T:2-->
+We're now transitioning to a new "Tidal club" forum here: https://club.tidalcycles.org/
+For older threads, join the [https://forum.toplap.org/c/communities/tidalcycles TidalCycles community] on the toplap forum.
+
+<!--T:3-->
+The above forums are accessible via web forum and email.
+
+There is also the legacy [https://we.lurk.org/postorius/lists/tidal.we.lurk.org/ tidal mailing list], which is largely mailing-list only.
+
+= Chat = <!--T:4-->
+
+<!--T:5-->
+The Tidal club forum is the recommended place for community support. For more immediate, interactive chatter, join https://chat.toplap.org/, which has the following tidal channels (along with channels for a lot of other live coding topics and systems)
+
+<!--T:6-->
+* [https://chat.toplap.org/channel/tidal #tidal] - general channel, anything tidal-related goes
+* [https://chat.toplap.org/channel/tidal-install #tidal-install] - in-depth help with installing tidal takes place here
+* [https://chat.toplap.org/channel/tidal-snippets #tidal-snippets] - where you can share interesting/weird tidal patterns
+* [https://chat.toplap.org/channel/tidal-innards #tidal-innards] - we don't like separating end-user live coders from tidal developers too much, but discussion around the tidal 'innards' goes on here
+* [https://chat.toplap.org/channel/tidal-doc #tidal-doc] - coordination around the tidal documentation effort
+* [https://chat.toplap.org/channel/algorave #algorave], [https://talk.lurk.org/channel/algorave #livecode] etc - meet people using other live coding environments
+* There's a lot more!
+
+= Development, bug reporting etc = <!--T:7-->
+
+<!--T:8-->
+For tidal development, see the [https://github.com/tidalcycles/tidal tidal repository] on github.
+
+= Social media = <!--T:9-->
+
+<!--T:10-->
+* [https://www.twitter.com/tidalcycles/ twitter]
+* [https://www.facebook.com/tidalcycles/ facebook]
+* [https://www.youtube.com/tidalcycles/ youtube]
+
+= Tidal-related feeds = <!--T:11-->
+
+<!--T:12-->
+A list of blogs, podcasts, and so on.
+
+<!--T:13-->
+Subscribable via RSS/atom feed reader, such as:
+
+<!--T:14-->
+* [https://www.inoreader.com/ inoreader]
+* [https://theoldreader.com/ The old reader]
+* [https://feedly.com/ Feedly]
+
+== Tidal related == <!--T:15-->
+
+<!--T:16-->
+Tidal news etc
+
+<!--T:17-->
+* [https://tidalcycles.org/index.php/Special:RecentChanges Updates to this wiki] | [https://tidalcycles.org/api.php?hidebots=1&translations=filter&urlversion=1&days=7&limit=50&action=feedrecentchanges&feedformat=atom feed]
+* [http://blog.tidalcycles.org/ TidalCycles blog] | [http://blog.tidalcycles.org/feed/ feed]
+* [https://www.youtube.com/tidalcycles/ youtube channel] | [https://www.youtube.com/tidalcycles/ feed]
+* [https://www.reddit.com/r/TidalCycles/ Reddit]
+* [https://www.facebook.com/groups/tidalcycles/ Facebook Group]
+
+<!--T:18-->
+Tidal people
+
+<!--T:19-->
+* [http://slab.org/ Alex's blog] | [https://slab.org/feed/ feed]
+* [https://malitzincortes.net/ Malitzin Cortes] aka CNDSD  | [https://malitzincortes.net/feed/ feed]
+* [http://kindohm.com/ Kindohm] aka Mike Hodnick | [http://feed.kindohm.com/ feed]
+
+== Other feeds == <!--T:20-->
+
+<!--T:21-->
+Anything Tidal people might be interested in, related to live coding, strange electronic music, free media art etc
+
+<!--T:22-->
+* [https://bff.fm/shows/highpoint-lowlife Highpoint lowlife radio show], sometimes features live coded/algorithmic music | [https://data.bff.fm/shows/highpoint-lowlife.rss feed]
+* [http://www.renickbell.net/ Renick Bell] - a haskell live coder, using his own Conductive system | [http://www.renickbell.net/feed.php feed]
+* [http://toplap.org/ TOPLAP] - the home of live coding | [https://toplap.org/feed feed]
+* [http://cdm.link/ CDM] - blog about creating digital music | [http://cdm.link/feed feed]
+
+<!--T:23-->
+Computer science type things
+
+<!--T:24-->
+* [http://lambda-the-ultimate.org/]
+</translate>

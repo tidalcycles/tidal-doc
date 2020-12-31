@@ -1,0 +1,1 @@
+Le second exemple utilise un <code>oshape</code>, une liste de noms et de valeurs par défaut. Notez que le paramètre de contrôle <code>s</code> ne possède pas de valeur par défaut. Cela signifie que les messages OSC ne seront pas envoyés tant que <code>s</code> ne sera pas défini.

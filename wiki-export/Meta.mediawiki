@@ -1,0 +1,26 @@
+A page for thoughts and ideas about this wiki.
+
+There's also a short guide for [[Help:How to contribute|how to contribute]]
+
+= Ideas for this wiki =
+
+* Step by Step tutorials about integrating new SynthDefs, custom samples. 
+* Tutorial covering the technical aspect of Tidal Cycles : how does Tidal interacts with SuperCollider, etc...
+* Gentle intro to Haskell with a Tidal focus, creating custom functions, etc..
+* List of useful links to other websites, notable users blogs, etc..
+* Link also to related systems - siren, estuary, troop, editor plugins etc.
+* Performance examples (code).
+* Troubleshooting errors
+* Establish purpose of wiki (to help guide contributions) - maybe a new section in [[How to contribute]]?
+* Offline version of the docs for inclusion in packages and workspaces without net.
+
+= Tasks ongoing = 
+
+* Transfer everything from https://tidalcycles.org/functions.html into [[:Category:Functions|the functions category]]
+* Cover undocumented functions in [[:Category:Functions]] too
+* Bring stuff over into the [[:Category:Reference]] category too, and update it in the process.
+* Translation into more (human) languages
+
+= Tasks done! =
+
+* <del>Reproduce full installation docs from tidalcycles.org.</del>

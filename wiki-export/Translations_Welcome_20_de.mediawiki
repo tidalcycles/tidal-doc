@@ -1,0 +1,3 @@
+* [http://toplap.org/TOPLAP TOPLAP - the home of live coding]
+* Es gibt viele andere gute Live-Coding-Enviroments! Auf TOPLAP findest du eine [https://toplap.org/all-things-live-coding-a-curated-list/ ausführliche Übersicht].
+* [http://algorave.com/ Algorave] - algorithmic dance culture

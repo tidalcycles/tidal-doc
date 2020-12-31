@@ -1,0 +1,30 @@
+[[Type signatures|Type]]: <syntaxhighlight lang="haskell" inline>slowSqueeze :: Pattern Time -> Pattern a -> Pattern a</syntaxhighlight>
+
+'''fastSqueeze''' slows down a pattern according to the given time pattern. It is the <source inline>slow</source> analogue to [[fastSqueeze]].
+
+If the time pattern only has a single value in a cycle, <source inline>slowSqueeze</source> becomes equivalent to <source inline>slow</source>:
+<source>
+d1 $ slow "<2 4>" $ s "bd*8"
+</source>
+is the same as
+<source>
+d1 $ slowSqueeze "<2 4>" $ s "bd*8"
+</source>
+
+but when the time pattern has ''multiple'' values in it the behavior is a little different! Instead, a slowed version of the pattern will be made for each value in the time pattern and then they're ''all'' combined together in a cycle, according to the structure of the time pattern. For example,
+
+<source>
+d1 $ slowSqueeze "2 4 8 16" $ s "bd*8"
+</source>
+is equivalent to
+<source>
+d1 $ s "bd*4 bd*2 bd bd/2"
+</source>
+and 
+<source>
+d1 $ slowSqueeze "2 4 [8 16]" $ s "bd*8"
+</source>
+is equivalent to
+<source>
+d1 $ s "bd*4 bd*2 [bd bd/2]"
+</source>

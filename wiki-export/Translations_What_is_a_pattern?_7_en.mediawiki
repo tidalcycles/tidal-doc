@@ -1,0 +1,5 @@
+<syntaxhighlight lang="Haskell">
+(0>⅓)|"1"
+(⅓>⅔)|"2"
+(⅔>1)|"3"
+</syntaxhighlight>

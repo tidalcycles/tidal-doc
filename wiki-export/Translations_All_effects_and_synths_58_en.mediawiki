@@ -1,0 +1,1 @@
+Accepts integers: 1 freezes the audio, 0 doesn't.

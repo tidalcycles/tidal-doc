@@ -1,0 +1,4 @@
+<syntaxhighlight lang="Haskell">
+-- | An event is a value that's active during a timespan
+type Event a = (Part, a)
+</syntaxhighlight>

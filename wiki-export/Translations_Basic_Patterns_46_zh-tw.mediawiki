@@ -1,0 +1,1 @@
+可以使用<syntaxhighlight lang="Haskell" inline><</syntaxhighlight> and <syntaxhighlight lang="Haskell" inline>></syntaxhighlight>在循環中依序改變pattern

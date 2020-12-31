@@ -1,0 +1,1 @@
+Pour démarrer SuperDirt, collez le code suivant dans une fenêtre SuperCollider :

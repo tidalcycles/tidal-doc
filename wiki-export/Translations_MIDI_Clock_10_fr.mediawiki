@@ -1,0 +1,1 @@
+Toutefois, si vous utilisez <code>hush</code>, l'horloge MIDI s'arrêtera, ainsi que tout les autres patterns. Pour éviter cela, vous souhaiterez peut-être réécrire la fonction <code>hush</code> pour qu'elle ne stoppe que certains patterns particuliers :

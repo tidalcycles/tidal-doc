@@ -1,0 +1,1 @@
+This is done with the following command in a terminal window:

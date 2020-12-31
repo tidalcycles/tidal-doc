@@ -1,0 +1,1 @@
+=== Automatic SuperDirt Startup in the IDE ===

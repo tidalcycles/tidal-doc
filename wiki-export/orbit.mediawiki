@@ -1,0 +1,25 @@
+[[Type signature|Type]]: <source inline>orbit :: Pattern Int -> ControlPattern</source>
+
+'''orbit''' is used to separate out audio channels. One use is to deal with global effects such as [[room]] and [[delay]].
+
+For example if you run both of the following patterns at the same time, the reverb will switch on and off, seemingly at random. This is because reverb is a global effect, is therefore shared by both patterns, and one is trying to turn it on, while the other is trying to switch it off.
+
+<source>
+d1 $ sound "feel*4" # room 0.9 # sz 0.9
+
+d2 $ sound "bd*16" # room 0
+</source>
+
+The answer is to put them into different orbits:
+
+<source>
+d1 $ sound "feel*4" # room 0.9 # sz 0.9 # orbit 0
+
+d2 $ sound "bd*16" # room 0 # orbit 1
+</source>
+
+Orbits can also be used for sending out [[Separate audio outputs|separate audio outputs]] to external software, such as a DAW.
+
+There are two orbits (0 and 1) available by default, but you can add more by [[Configuring SuperDirt]].
+
+[[Category:Control Functions]]

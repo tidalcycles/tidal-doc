@@ -1,0 +1,1 @@
+Sonic Pi's krush modified a bit so krush "0" is the same as dry signal uses `krush` and `kcutoff` as parameters

@@ -1,0 +1,1 @@
+In previous versions of Tidal, the structure always came from the left. You can still do this, but in this case using <syntaxhighlight lang="Haskell" inline>|+</syntaxhighlight>.

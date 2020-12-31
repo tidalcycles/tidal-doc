@@ -1,0 +1,1 @@
+Nous pouvons utiliser <syntaxhighlight lang="Haskell" inline>n</syntaxhighlight> pour choisir une sample dans un dossier. Cela nous permet d'appliquer un pattern ici aussi !

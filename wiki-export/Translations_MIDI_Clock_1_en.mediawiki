@@ -1,0 +1,1 @@
+Once you've set up SuperDirt MIDI by following [[SuperDirt_MIDI_Tutorial|the tutorial]], sending midiclock is fairly straightforward and works well, although still in development. This will become easier still in the future.

@@ -1,0 +1,1 @@
+Si vous rencontrez problèmes sur problèmes en installant Tidal à partir de <code>cabal</code>, l'installation à partir de <code>stack</code> résoudra vos problèmes.

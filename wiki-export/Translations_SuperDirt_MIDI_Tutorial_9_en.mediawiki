@@ -1,0 +1,3 @@
+<source>
+~midiOut = MIDIOut.newByName("Focusrite USB MIDI", "Focusrite USB MIDI"); // substitute your own device here
+</source>

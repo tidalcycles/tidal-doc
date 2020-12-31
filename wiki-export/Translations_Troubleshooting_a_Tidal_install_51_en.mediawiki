@@ -1,0 +1,3 @@
+<source lang="bash">
+stack install tidal
+</source>

@@ -1,0 +1,1 @@
+<syntaxhighlight lang="haskell" inline>density</syntaxhighlight> という記法を見ることがあるでしょう。これも行うことは同じです!

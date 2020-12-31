@@ -1,0 +1,1 @@
+Often the problem is with installing the tidal haskell library. When this comes up with errors, you know that's (part of) your installation problem.

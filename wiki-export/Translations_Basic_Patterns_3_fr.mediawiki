@@ -1,0 +1,1 @@
+Vous pouvez stopper la lecture d'un son en utilisant <syntaxhighlight lang="Haskell" inline>silence</syntaxhighlight>:

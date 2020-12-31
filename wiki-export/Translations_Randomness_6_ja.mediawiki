@@ -1,0 +1,2 @@
+<syntaxhighlight lang="Haskell" inline>irand</syntaxhighlight> は、指定した数字までの、ランダムなinteger(整数)を生成します。
+例 ランダムなサンプルを再生したいときは:

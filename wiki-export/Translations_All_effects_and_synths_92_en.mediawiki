@@ -1,0 +1,2 @@
+== Psin == 
+(#psin parameters: #sustain, #accelerate)

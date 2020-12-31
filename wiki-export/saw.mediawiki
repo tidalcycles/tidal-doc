@@ -1,0 +1,3 @@
+#redirect [[Oscillators#saw]]
+[[Category:Functions]]
+[[Category:Elemental patterns]]

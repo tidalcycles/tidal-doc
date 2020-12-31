@@ -1,0 +1,1 @@
+We can use <syntaxhighlight lang="Haskell" inline>n</syntaxhighlight> to choose samples from a folder, this allows us to apply patterns there too!

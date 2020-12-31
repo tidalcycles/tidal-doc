@@ -1,0 +1,1 @@
+Il est possible d'appliquer plusieurs transformations en même temps en utilisant <syntaxhighlight lang="haskell" inline>.</syntaxhighlight>.

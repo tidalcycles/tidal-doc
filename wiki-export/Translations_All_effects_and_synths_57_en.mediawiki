@@ -1,0 +1,3 @@
+== Magnitude freeze ==
+(parameters: #freeze)<br>
+(Mads Kjeldgaard)

@@ -1,0 +1,1 @@
+Or, to apply <source inline>(# speed "0.5")</source> to only the last quarter of a pattern:

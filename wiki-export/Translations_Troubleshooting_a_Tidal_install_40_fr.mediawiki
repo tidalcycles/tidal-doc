@@ -1,0 +1,1 @@
+Si des packages <code>cabal</code> ne parviennent pas à se compiler, cette ligne peut aider :

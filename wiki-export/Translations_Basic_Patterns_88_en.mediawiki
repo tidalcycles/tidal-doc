@@ -1,0 +1,2 @@
+-- now both will be playing, again
+</syntaxhighlight>

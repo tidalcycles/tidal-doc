@@ -1,0 +1,45 @@
+[[Type signatures|Type]]: <source inline>inside :: Pattern Time -> (Pattern a -> Pattern b) -> Pattern a -> Pattern b</source>
+
+'''inside''' carries out an operation 'inside' a cycle. 
+
+For example, while <source inline>rev "0 1 2 3 4 5 6 7"</source> is the same as <source inline>"7 6 5 4 3 2 1 0"</source>, <source inline>inside 2 rev "0 1 2 3 4 5 6 7"</source> gives <source inline>"3 2 1 0 7 6 5 4"</source>.
+
+What this function is really doing is 'slowing down' the pattern by a given factor, applying the given function to it, and then 'speeding it up' by the same factor. In other words, this:
+
+<source>
+inside 2 rev "0 1 2 3 4 5 6 7"
+</source>
+
+Is doing this:
+
+<source>
+fast 2 $ rev $ slow 2 "0 1 2 3 4 5 6 7"
+</source>
+
+.. so rather than whole cycles, each half of a cycle is reversed.
+
+= outside =
+
+[[Type signatures|Type]]: <source inline>outside :: Pattern Time -> (Pattern a -> Pattern b) -> Pattern a -> Pattern b</source>
+
+'''outside''' is the inverse of the '''inside''' function. '''outside''' applies its function outside the cycle. 
+
+Say you have a pattern that takes 4 cycles to repeat and apply the `rev` function. 
+
+<source inline> d1 $ rev $ cat [s "bd bd sn",s "sn sn bd", s"lt lt sd", s "sd sd bd"] </source >
+
+The above generates: <source inline>  d1 $ rev $ cat [s "sn bd bd",s "bd sn sn", s "sd lt lt", s "bd sd sd"] </source>
+
+However if you apply `outside`: <source inline> d1 $ outside 4 (rev) $ cat [s "bd bd sn",s "sn sn bd", s"lt lt sd", s "sd sd bd"]  </source>
+
+The result is :  <source inline>  d1 $ rev $ cat [s "bd sd sd", s "sd lt lt", s "sn sn bd", s "bd bd sn"] </source>
+
+Notice the whole idea has been reversed.
+
+What this function is really doing is 'speeding up' the pattern by a given factor, applying the given function to it, and then 'slowing it down' by the same factor. In other words, this:
+
+ <source inline> d1 $ slow 4 $ rev $ fast 4 $ cat [s "bd bd sn",s "sn sn bd", s"lt lt sd", s "sd sd bd"]  </source>
+
+This compresses the idea into a single cycle before `rev` operates and then slows it back to the original speed.
+
+[[Category:Functions]]

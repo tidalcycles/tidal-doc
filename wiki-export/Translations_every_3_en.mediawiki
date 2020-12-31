@@ -1,0 +1,1 @@
+For example to reverse a pattern every three cycles (and for the other two play it normally):

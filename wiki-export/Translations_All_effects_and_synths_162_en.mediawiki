@@ -1,0 +1,2 @@
+== Superwavemechanics ==
+(#superwavemechanics parameters: #accelerate, #detune, #voice, #resonance)

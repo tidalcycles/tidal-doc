@@ -1,0 +1,1 @@
+Le bitcrushing reçoit un pattern de nombres, allant de 1 (pour un effet dramatique de compressoin audio) jusqu'à 16 (presque pas de compression).

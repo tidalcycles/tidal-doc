@@ -1,0 +1,1 @@
+Supercollider funciona en un server de audio Jack para enviar sonido a tus parlantes. Si en la ventana de posteos de Supercollider ves:

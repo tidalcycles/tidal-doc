@@ -1,0 +1,28 @@
+<languages/>
+<translate>
+<!--T:1-->
+{{DISPLAYTITLE:fromList}}
+[[Type signature|Type]]: <source inline>fromList :: [a] -> Pattern a</source>
+
+<!--T:2-->
+'''fromList''' takes a list of things and turns them into a pattern where each item in the list has a duration of one cycle, looping back around at the end of the list. 
+
+<!--T:3-->
+<source>
+d1 $ n (fromList [0, 1, 2]) # s "superpiano"
+</source>
+
+<!--T:4-->
+is equivalent to 
+
+<!--T:5-->
+<source>
+d1 $ n "<0 1 2>" # s "superpiano"
+</source>
+
+<!--T:6-->
+'''See also: [[listToPat]]'''
+
+<!--T:7-->
+[[Category:Functions]]
+</translate>

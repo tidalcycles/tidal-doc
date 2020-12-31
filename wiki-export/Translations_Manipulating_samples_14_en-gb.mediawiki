@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>randslice</syntaxhighlight> chops the sample into pieces and then plays back a random one each cycle

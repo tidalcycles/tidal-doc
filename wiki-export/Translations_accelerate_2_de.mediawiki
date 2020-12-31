@@ -1,0 +1,1 @@
+'''accelerate''' verwandelt ein 'number pattern' in ein 'control pattern', das die Samples während der Wiedergabe beschleunigt (oder verlangsamt).

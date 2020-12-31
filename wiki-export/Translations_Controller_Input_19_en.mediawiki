@@ -1,0 +1,3 @@
+off = MIDIFunc.noteOff({ |val, num, chan, src|
+	osc.sendMsg("/ctrl", num.asString, 0);
+});

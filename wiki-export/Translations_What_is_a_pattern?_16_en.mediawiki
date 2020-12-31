@@ -1,0 +1,5 @@
+<syntaxhighlight lang="Haskell">
+-- | The second arc (the part) should be equal to or fit inside the
+-- first one (the whole that it's a part of).
+type Part = (Arc, Arc)
+</syntaxhighlight>

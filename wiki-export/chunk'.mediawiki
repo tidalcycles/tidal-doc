@@ -1,0 +1,2 @@
+#REDIRECT [[chunk#chunk']]
+[[Category:Functions]] [[Category:Time Functions]]

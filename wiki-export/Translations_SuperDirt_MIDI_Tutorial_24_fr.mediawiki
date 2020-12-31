@@ -1,0 +1,1 @@
+Le canal par défaut est le canal MIDI 1. SuperDirt commence à les indexer à partir de 0. Le premier canal est donc : <code>midichan 0</code>.

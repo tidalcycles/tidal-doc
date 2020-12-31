@@ -1,0 +1,16 @@
+---
+title: Translations:Custom Samples/4/es
+permalink: wiki/Translations:Custom_Samples/4/es/
+layout: wiki
+---
+
+``` c
+(
+s.waitForBoot {
+    ~dirt = SuperDirt(2, s); // Dos canales de salida
+    ~dirt.loadSoundFiles("/Users/myUserName/Dirt/samples/*"); // Especificar carpeta de samples a cargar
+    s.sync; // Esperar a que SuperCollider termine de iniciarse
+    ~dirt.start(57120, [0, 0]); // Arrancar SuperDirt, escuchando al puerto 57120, creando dos órbitas -Orbits- que envían audio al canal 0.
+};
+);
+```

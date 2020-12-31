@@ -1,0 +1,1 @@
+...或著安排一個效果，使用<syntaxhighlight lang="haskell" inline>#</syntaxhighlight>

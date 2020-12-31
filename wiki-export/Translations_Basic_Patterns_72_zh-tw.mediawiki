@@ -1,0 +1,3 @@
+<syntaxhighlight lang="Haskell">
+d1 $ up "0 ~ 12 24" # sound "jungbass:6"
+</syntaxhighlight>

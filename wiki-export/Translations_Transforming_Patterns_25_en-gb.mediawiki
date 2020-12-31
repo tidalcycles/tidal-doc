@@ -1,0 +1,1 @@
+<syntaxhighlight lang="haskell" inline>jux</syntaxhighlight> (short for 'juxtapose') takes a transformation or an effect and plays it in one speaker the original pattern plays in the other speaker.

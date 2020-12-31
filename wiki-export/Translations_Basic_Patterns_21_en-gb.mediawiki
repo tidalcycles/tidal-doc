@@ -1,0 +1,2 @@
+You can pause everything by changing the cycle length to a negative
+number (remember to put negative numbers in brackets).

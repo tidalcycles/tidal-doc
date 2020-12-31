@@ -1,0 +1,27 @@
+{{DISPLAYTITLE:cps}} 
+[[Type signature|Type]]: <source inline>cps :: Pattern Double -> ControlPattern</source>
+
+'''cps''' turns a number pattern into a control pattern that changes the tempo of all running patterns:
+
+<source>
+d1 $ s "bd*8" # cps "0.7 1 0.5 1.2"
+
+d1 $ s "bd*8" # cps "<0.7 1 0.5 1.2>"
+</source>
+
+This allows for smooth, continuous time stretches with a continuous function:
+
+<source>
+d1 $ s "bd*8" # cps (range 1 2 $ slow 4 sine)
+</source>
+
+Note that the behavior of '''cps''' is ''global'' and affects all running patterns, even though it only needs to be used on one pattern:
+
+<source>
+d1 $ s "bd*8" # cps "<1 1.5 0.75>"
+
+-- this pattern is affected by the cps changes
+d2 $ s "cp(3,8)"
+</source>
+
+[[Category:Control Functions]]

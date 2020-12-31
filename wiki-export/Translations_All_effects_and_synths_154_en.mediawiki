@@ -1,0 +1,2 @@
+== Superzow ==
+(#superzow parameters: #decay, #accelerate, #slide, #detune)

@@ -1,0 +1,1 @@
+目前Tidal釋出1.0.x版本。若需參考0.9.10以前版本文檔，請到[http://pages.tidalcycles.org/ 舊網址]。

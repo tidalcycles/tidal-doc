@@ -1,0 +1,1 @@
+The '''wchooseBy''' function is like [[wchoose]] but instead of selecting elements of the list randomly, it uses the given pattern to select elements.

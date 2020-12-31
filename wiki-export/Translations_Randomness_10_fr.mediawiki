@@ -1,0 +1,1 @@
+Vous pouvez utiliser <syntaxhighlight lang="Haskell" inline>degradeBy</syntaxhighlight> pour supprimer aléatoirement certains événements.  Le nombre indique la chance qu'à la sample d'être lue.

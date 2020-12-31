@@ -1,0 +1,70 @@
+<languages/>
+= 開始你的旅程 =
+
+* [[Installation|安裝]]
+* [[Upgrading|更新]]
+* [[Start tidalcycles and superdirt for the first time|第一次使用Tidalcylces 和 SuperDirt]]
+* [[Tutorial|教程]]
+
+= 設定 =
+
+* [[Installation troubleshooting|安裝障礙排除]]
+* [[Configuration|設定]]
+* [[Reverting to an earlier version|使用較早版本]]
+* [[Custom Samples|自定義音訊樣本]]
+* [[Multi-user Tidal|多用戶Tidal]]
+* [[Custom OSC|自定義OSC]]
+* [[MIDI]]
+* [[Separate audio outputs|拆分輸出音訊]]
+* [[Multichannel sound|多頻道音訊 ]]
+
+= 使用"圖式" =
+
+* [[Tutorial|教程]]
+* [[Interaction|互動]]
+* [[Controller Input|控制器輸入]]
+* [[Understanding the $|了解"$"符號]]
+* [[Combining pattern structure|組合圖式結構]]
+* [[Tidal workshop worksheet|Tidal工作坊教學]] - 為了工作坊設計，即便沒有參加也十分實用！
+* [[Building up patterns|建立圖式]] - 包含步驟範例
+
+= 參考 =
+
+* [[:Category:Elemental patterns|基礎圖式]] - [[Oscillators|振盪器]] 和其他圖式
+* [[:Category:Functions|函數]] - 變化和組合圖式
+* [[:Category:Control Functions|控制器函數]] - 控制效果器圖式等
+* [[All the functions|所有函數]] - 包含內置和未建立文檔的函數清單
+* [[:Category:Transitions|轉場]] - 如何在圖式之間轉換
+* [[All effects and synths|所有效果及合成器]] - 內置效果器和合成器清單
+* [[Sequence parser syntax|序列分析器語法]]
+
+= 深入理解 =
+
+* [[What is a pattern?|什麼是"圖式"？]]
+* [[Type signatures|類型特徵]]
+* [[Haskell resources|Haskell參考]]
+
+= 其他參考資料 =
+
+== 影片教程 ==
+
+* [https://www.youtube.com/playlist?list=PLybSFICi4UlgKU6ZVerY0HfdNCl3AIoPU Tidal Cycles 官方影片教程]
+* [https://www.youtube.com/playlist?list=PLKgxw7RG3hcRHyBFsPr5opr1iu8wbNIgP Kindohm 影片教程] 
+
+== 文字教程 ==
+
+<div class="mw-translate-fuzzy">
+* [http://ericfairbanks.org/music/tidal/code/2017/05/31/an-introduction-to-tidal.html Tidal介紹 (透過Haskell)]
+</div>
+
+== 出版物、訪談等 ==
+
+* [[Academic publications|學術出版]]
+* [[Interviews and articles|訪談及文章]]
+
+= 社群及開發團隊 =
+
+* [[Contributing tests|貢獻測試]]
+* [[History of Tidal|Tidal的歷史]]
+* [[Changes in Tidal 1.0.0|Tidal 1.0.0更新]]
+* [[Friends and relations|朋友們]]

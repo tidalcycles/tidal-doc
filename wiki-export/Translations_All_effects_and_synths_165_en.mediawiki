@@ -1,0 +1,1 @@
+Feedback PWM. Can use "accelerate" "voice" and "detune" parameters.

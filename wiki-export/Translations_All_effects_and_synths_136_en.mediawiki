@@ -1,0 +1,1 @@
+A moog-inspired sawtooth synth; slightly detuned saws with triangle harmonics, filter frequency modulated by LFO. "voice" controls a relative phase and detune amount

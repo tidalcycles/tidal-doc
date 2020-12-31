@@ -1,0 +1,1 @@
+'''attack''' turns a number pattern into a control pattern that changes the "fade in" time of a sample.

@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline><</syntaxhighlight> と <syntaxhighlight lang="Haskell" inline>></syntaxhighlight> で囲むと、サイクル間で、パターンをスケジューリングできます:

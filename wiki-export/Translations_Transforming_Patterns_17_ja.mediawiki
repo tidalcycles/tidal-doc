@@ -1,0 +1,1 @@
+<syntaxhighlight lang="haskell" inline>palindrome</syntaxhighlight> は、順に再生と逆再生をつなげて行います。

@@ -1,0 +1,18 @@
+<languages/>
+= Upgrading tidal =
+
+If you already have Tidal installed, follow the [[Upgrading|upgrading instructions]] instead.
+
+= Installing from scratch =
+
+''Note: the documentation here recommends the Atom editor for typing Tidal code. If you wish to use a different editor, take a look at the [[List of tidal editors]].
+
+Choose your operating system:
+
+* [[Linux_installation|Linux]]
+* Mac - [[MacOS automated installation|easy]] (via tidal-bootstrap), or [[MacOS installation|manual]]
+* Windows - [[Windows choco install|easy]] (via chocolatey), or [[Windows_installation|manual]]
+
+= Problems? =
+
+* [[Troubleshooting a Tidal install]]

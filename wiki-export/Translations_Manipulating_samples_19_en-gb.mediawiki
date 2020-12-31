@@ -1,0 +1,4 @@
+<syntaxhighlight lang="Haskell" >
+d1 $ loopAt "<8 4 16>" $ chop 64 $  sound "bev*4" # cut 1
+d1 $ rev $ loopAt 8 $ chop 128 $ sound "bev"
+</syntaxhighlight>

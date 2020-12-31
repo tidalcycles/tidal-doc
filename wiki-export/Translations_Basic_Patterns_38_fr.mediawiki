@@ -1,0 +1,1 @@
+Vous pouvez répéter un step avec <syntaxhighlight lang="Haskell" inline>*</syntaxhighlight> :

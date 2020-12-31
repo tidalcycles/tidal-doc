@@ -1,0 +1,72 @@
+<languages />
+とにかく、パターンとはなんでしょう。
+
+さまざまな種類のパターンと、どのようにTidal上でそれを表現するか考えてみましょう。
+
+== 反復 / 繰り返し ==
+
+<syntaxhighlight lang="Haskell" inline>n</syntaxhighlight> を使い、フォルダからサンプルを選べます。パターンをそこに適用することもできます!
+
+<syntaxhighlight lang="Haskell">
+d1 $ n "0 1 2 3" # sound "arpy"
+</syntaxhighlight>
+
+
+<syntaxhighlight lang="Haskell" inline>Run</syntaxhighlight> で、連続パターンを短く書くことができます。
+
+<syntaxhighlight lang="Haskell">
+d1 $ n (run 4) # sound "arpy"
+</syntaxhighlight>
+
+または <syntaxhighlight lang="Haskell" inline>..</syntaxhighlight> を使えます。
+
+<syntaxhighlight lang="Haskell">
+d1 $ n "0..4" # sound "arpy"
+</syntaxhighlight>
+
+== 対称 ==
+
+<syntaxhighlight lang="Haskell" >
+d1 $ slow 2 $ n "0 1 2 3 3 2 1 0" # sound "arpy"
+d1 $ palindrome $ n (run 4) # sound "arpy"
+</syntaxhighlight>
+
+== ポリメトリック / ポリリズムシーケンス ==
+
+角括弧 <syntaxhighlight lang="Haskell" inline>[ ]</syntaxhighlight>（大きなサブシーケンスのようなもの）内をカンマで2つに区切り、一度に2つのサブシーケンスを再生します:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "[voodoo voodoo:3, arpy arpy:4 arpy:2]"
+</syntaxhighlight>
+
+<syntaxhighlight lang="Haskell" inline>[ ]</syntaxhighlight>の代わりに <syntaxhighlight lang="Haskell" inline>{ }</syntaxhighlight>を使うと、別の効果が得られます。<syntaxhighlight lang="Haskell" inline>[ ]</syntaxhighlight>は、シーケンスの両半分がサイクルにフィットします(ポリリズム)。<syntaxhighlight lang="Haskell" inline>{ }</syntaxhighlight>は、パルスは左側のパターンで設定されます。右手のパターンは上から(または下に)重なります(ポリメーター)。
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "[voodoo voodoo:3, arpy arpy:4 arpy:2]"
+d1 $ sound "{voodoo voodoo:3, arpy arpy:4 arpy:2}"
+d1 $ sound "[drum bd hh bd, can can:2 can:3 can:4 can:2]"
+d1 $ sound "{drum bd hh bd, can can:2 can:3 can:4 can:2}"
+d1 $ sound "[bd sn, can:2 can:3 can:1, arpy arpy:1 arpy:2 arpy:3 arpy:5]"
+d1 $ sound "{bd sn, can:2 can:3 can:1, arpy arpy:1 arpy:2 arpy:3 arpy:5}"
+</syntaxhighlight>
+
+== ユークリッド・リズム / ビョークルンド  ==
+
+パターン内の要素の後ろに<syntaxhighlight lang="Haskell" inline>( )</syntaxhighlight>で2つの数字を付けると、Tidalは2つ目の数のステップにわたり、1つめの数の音を均等に分配しようとします。
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd(5,8)"
+</syntaxhighlight>
+
+この表記は、パターンの1つの要素内でも使えます:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd(3,8) sn*2"
+d1 $ sound "bd(3,8) sn(5,8)"
+</syntaxhighlight>
+
+3番目のパラメータを追加することもできます。これはパターンを '回転させる' ので、異なるステップで開始されます:
+
+<syntaxhighlight lang="Haskell">
+d1 $ sound "bd(5,8,2)"
+</syntaxhighlight>

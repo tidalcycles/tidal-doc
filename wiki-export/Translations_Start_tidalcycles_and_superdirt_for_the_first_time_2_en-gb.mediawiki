@@ -1,0 +1,2 @@
+# start SuperDirt inside SuperCollider
+# start TidalCycles inside Atom

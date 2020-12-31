@@ -1,0 +1,4 @@
+Cette fonction est similaire à d'autres, basées sur le même principe : 
+#  [[jux]] superpose mais joue le pattern originel et le pattern modifié avec une panoramique différente (gauche <-> droite).
+# [[off]] superpose deux patterns mais les décale dans le temps. 
+# [[layer]] permet de superposer un pattern modifié par plusieurs fonctions.

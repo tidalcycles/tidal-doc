@@ -1,0 +1,1 @@
+That's it for initialization. You should now have a MIDI device connected in SuperDirt, running as a synth named "midi".

@@ -1,0 +1,1 @@
+You can now simply press <code>C-return</code> to evaluate any statement under your cursor. You can try this one as an example to check that everything runs fine:

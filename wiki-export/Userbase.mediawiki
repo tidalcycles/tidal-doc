@@ -1,0 +1,79 @@
+<languages/>
+<translate>
+= Getting started = <!--T:1-->
+
+<!--T:2-->
+* [[Installation]]
+* [[Upgrading]]
+* [[Start tidalcycles and superdirt for the first time]]
+* [[Tutorial]]
+
+= Configuration = <!--T:3-->
+
+<!--T:4-->
+* [[Installation troubleshooting]]
+* [[Configuration]]
+* [[Reverting to an earlier version]]
+* [[Custom Samples]]
+* [[Multi-user Tidal]]
+* [[Custom OSC]]
+* [[MIDI]]
+* [[Separate audio outputs]]
+* [[Multichannel sound]]
+
+= Working with patterns = <!--T:5-->
+
+<!--T:6-->
+* [[Tutorial]]
+* [[Interaction]]
+* [[Controller Input]]
+* [[Understanding the $]]
+* [[Combining pattern structure]]
+* [[Tidal workshop worksheet]] - designed for workshops, useful even if you're not in one!
+* [[Building up patterns]] - step-by-step examples
+
+= Reference = <!--T:7-->
+
+<!--T:8-->
+* [[:Category:Elemental patterns|Elemental patterns]] - [[Oscillators]] and other patterns
+* [[:Category:Functions|Functions]] - for transforming and combining patterns
+* [[:Category:Control Functions|Control functions]] - For making patterns of effects, etc.
+* [[All the functions]] - The long list, including internal and undocumented functions
+* [[:Category:Transitions|Transitions]] - For smooth transition between patterns
+* [[All effects and synths]] - A list of internal effects and synthesizers
+* [[Mini notation syntax]]
+
+= Understanding innards = <!--T:9-->
+
+<!--T:10-->
+* [[What is a pattern?]]
+* [[Type signatures]]
+* [[Haskell resources]]
+
+= External Resources = <!--T:11-->
+
+== Video tutorials == <!--T:12-->
+
+<!--T:13-->
+* [https://www.youtube.com/playlist?list=PLybSFICi4UlgKU6ZVerY0HfdNCl3AIoPU 'Official' Tidal Cycles video tutorial playlist]
+* [https://www.youtube.com/playlist?list=PLKgxw7RG3hcRHyBFsPr5opr1iu8wbNIgP Kindohm video tutorials] 
+
+== Written tutorials == <!--T:14-->
+
+<!--T:15-->
+* [https://web.archive.org/web/20190427222710/http://ericfairbanks.org/music/tidal/code/2017/05/31/an-introduction-to-tidal.html An Introduction to Tidal (via Haskell)]
+
+== Publications, interviews etc == <!--T:16-->
+
+<!--T:17-->
+* [[Academic publications]]
+* [[Interviews and articles]]
+
+= Community and development = <!--T:18-->
+
+<!--T:19-->
+* [[Contributing tests]]
+* [[History of Tidal]]
+* [[Changes in Tidal 1.0.0]]
+* [[Friends and relations]]
+</translate>

@@ -1,0 +1,4 @@
+Pour évitez les problèmes, nous vous recommandons de mettre à jour les trois composants qui forment Tidal Cycles en même temps :
+# La bibliothèque Tidal.
+# Le plugin de votre éditeur de code.
+# Le synthétiseur SuperDirt.

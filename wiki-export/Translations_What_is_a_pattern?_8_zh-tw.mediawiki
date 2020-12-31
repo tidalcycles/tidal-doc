@@ -1,0 +1,1 @@
+其中我們可以看出第一個事件<syntaxhighlight lang="Haskell" inline>1</syntaxhighlight> 在循環內的前1/3作用中，以此類推。

@@ -1,0 +1,2 @@
+Du kannst SuperCollider auch mit Hilfe des Terminals installieren. Mach Dich damit vertraut, wenn du einen eigenen Texteditor verwenden möchtest. 
+Es sind großartige SuperCollider-Plugins für [https://github.com/supercollider/scel Emacs], [https://github.com/supercollider/scvim Vim] oder [https://atom.io/packages/supercollider Atom] verfügbar.

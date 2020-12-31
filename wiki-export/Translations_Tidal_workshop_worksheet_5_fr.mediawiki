@@ -1,0 +1,2 @@
+# Lancez SuperDirt : dans SuperCollider, tapez 'SuperDirt.start' et exécutez le code en maintenant enfoncée la touche 'Ctrl' et en appuyant sur 'Enter'. Votre curseur doit se situer sur la même ligne de code.
+# Lancez TidalCycles - Ouvrez Atom, créez un nouveau fichier et sauvegardez-le avec une extension <syntaxhighlight lang="Haskell"inline>.tidal</syntaxhighlight> (par exemple : test.tidal)

@@ -1,0 +1,5 @@
+== Reverb ==
+Paramètres : 
+# room : la profondeur de la reverb et non la taille de la pièce !
+# size : la taille de la pièce.
+# dry : permet d'ajuste le signal non modifié.

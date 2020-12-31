@@ -1,0 +1,1 @@
+Dans l'exemple ci-dessus, la valeur de <code>pan</code> pour nos deux patterns sont de 0.25 et 0.75. Ces valeurs sont plus raisonnables que 0 et 1.

@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>shape</syntaxhighlight> ajoute de la distorsion. Attention, cela augmente drastiquement le volume.

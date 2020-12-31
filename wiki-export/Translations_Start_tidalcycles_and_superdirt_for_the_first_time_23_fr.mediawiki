@@ -1,0 +1,1 @@
+Cliquez ensuite sur le code et pressez les touches Shift + Entrée. La console devrait vous avertir des étapes du lancement. Si tout se passe bien, vous devriez voir :

@@ -1,0 +1,1 @@
+'''sometimes''' est une fonction qui applique une autre fonction sur un pattern 50% du temps, de manière aléatoire. <code>sometimes</code> requiert deux paramètres : une fonction à appliquer, et le pattern qui la reçoit.

@@ -1,0 +1,1 @@
+''Une version de Tidal supérieure à la 1.0.6 est nécessaire.''

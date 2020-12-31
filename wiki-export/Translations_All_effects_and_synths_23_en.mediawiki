@@ -1,0 +1,2 @@
+== Highpass filter ==
+(#hcutoff/#hpf, #hresonance/#hpq)

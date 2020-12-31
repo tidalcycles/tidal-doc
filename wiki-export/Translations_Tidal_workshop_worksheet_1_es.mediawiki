@@ -1,0 +1,1 @@
+Bienvenide al tutorial de Tidal. Esto está diseñado para ser usado como hoja de práctica en talleres para principiantes/mixed, y está basado en TidalCycles versión 0.9.10.

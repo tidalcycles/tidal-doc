@@ -1,0 +1,24 @@
+<languages/>
+{{DISPLAYTITLE:append}} 
+[[Type signature|Type]]: <source inline>append :: Pattern a -> Pattern a -> Pattern a</source>
+
+'''append''' permet de combiner deux patterns pour n'en faire qu'un. Les cycles alternent entre le premier pattern et le second :
+
+<source>
+d1 $ append (sound "bd*2 sn") (sound "arpy jvbass*2")
+</source>
+
+Cette fonction possède un alias : <code>slowAppend</code>, pour la différencier de <code>fastAppend</code>.
+
+= fastAppend =
+[[Type signature|Type]]: <source inline>fastAppend :: Pattern a -> Pattern a -> Pattern a</source>
+
+'''fastAppend''' fonctionne comme [[append]], à une différence près. La combinaison des deux patterns s'effectue au cours d'un seul et unique cycle (accélération) :
+
+<source>
+d1 $ fastAppend (sound "bd*2 sn") (sound "arpy jvbass*2")
+</source>
+
+'''Voir aussi : [[cat]], [[cat#fastcat|fastcat]]'''
+
+[[Category:Functions]]

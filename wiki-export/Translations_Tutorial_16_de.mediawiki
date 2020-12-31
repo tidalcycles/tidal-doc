@@ -1,0 +1,1 @@
+Wenn du diesen Code ausführst, ersetzt du das vorherige Pattern durch ein anderes und das im laufenden Betrieb. Herzlichen Glückwunsch, das ist LiveCoding.

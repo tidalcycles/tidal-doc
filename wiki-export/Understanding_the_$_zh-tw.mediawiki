@@ -1,0 +1,55 @@
+The dollar (<syntaxhighlight lang="Haskell" inline>$</syntaxhighlight>) is a mysterious thing. It doesn't really do anything, but is super useful. It's easy to get it mixed up with other operators in Tidal, for example <syntaxhighlight lang="Haskell" inline>#</syntaxhighlight>, because in a way they both 'join things together'. But what is <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight>, exactly?
+
+The <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight> is used a ''lot'' in Haskell (the language which Tidal lives inside). Like a lot of things in Haskell, <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight> is a ''function''. Like all operators (e.g. <syntaxhighlight lang="Haskell" inline>+</syntaxhighlight>), it has two inputs - the left side, and the right side, and has one output. The left input must be a function, and all that <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight> does is pass what's on the right hand side, and give it to that function.
+
+In other words, in this expression:
+
+<syntaxhighlight lang="Haskell">
+rev $ "1 2 3"
+</syntaxhighlight>
+
+... the dollar takes <syntaxhighlight lang="Haskell" inline>"1 2 3"</syntaxhighlight> and passes it to the function <syntaxhighlight lang="Haskell" inline>rev</syntaxhighlight>. So actually the above is the same as this:
+
+<syntaxhighlight lang="Haskell">
+rev "1 2 3"
+</syntaxhighlight>
+
+So if we can do without it, why is it useful? Lets look at a slightly more complex example:
+
+<syntaxhighlight lang="Haskell">
+fast 2 $ rev "1 2 3"
+</syntaxhighlight>
+
+Here the dollar takes care of passing <syntaxhighlight lang="Haskell" inline>rev "1 2 3"</syntaxhighlight> to <syntaxhighlight lang="Haskell" inline>fast 2</syntaxhighlight>. If we missed it out, then we'd get an error.
+
+<syntaxhighlight lang="Haskell">
+-- this gives an error!
+fast 2 rev "1 2 3"
+</syntaxhighlight>
+
+That's because the computer will first read <syntaxhighlight lang="Haskell" inline>fast 2</syntaxhighlight>, then <syntaxhighlight lang="Haskell" inline>rev</syntaxhighlight>, and try to treat <syntaxhighlight lang="Haskell" inline>rev</syntaxhighlight> as a pattern to be speeded up. But on its own, <syntaxhighlight lang="Haskell" inline>rev</syntaxhighlight> isn't a pattern, but a function for transforming pattern.
+
+To avoid this error, we could use parenthesis:
+
+<syntaxhighlight lang="Haskell">
+fast 2 (rev "1 2 3")
+</syntaxhighlight>
+
+Here the brackets make sure <syntaxhighlight lang="Haskell" inline>rev "1 2 3"</syntaxhighlight> is calculated first, before it is passed as a pattern to <syntaxhighlight lang="Haskell" inline>fast 2</syntaxhighlight>.
+
+So, both <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight> and parenthesis can be used to control which code is calculated first. The <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight> is often used to avoid having to match opening and closing brackets, but sometimes parenthesis makes more sense.
+
+Note that you ''can't'' use <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight> with operators. For example:
+
+<syntaxhighlight lang="Haskell">
+-- this doesn't work either!
+4 * $ 2 + 3
+-- but this does
+4 * (2 + 3)
+</syntaxhighlight>
+
+
+= Comparing <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight> and <syntaxhighlight lang="Haskell" inline>#</syntaxhighlight> =
+
+So, <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight> is used to join a parameter (on the right) with a function (on the left). <syntaxhighlight lang="Haskell" inline>#</syntaxhighlight> (and all its friends <syntaxhighlight lang="Haskell" inline>|+|</syntaxhighlight>, <syntaxhighlight lang="Haskell" inline>|*|</syntaxhighlight>, etc) are used to combine a pattern on the right with a pattern on the left.
+[[Category:Reference|$]]

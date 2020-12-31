@@ -1,0 +1,26 @@
+{{DISPLAYTITLE:unit}} 
+[[Type signature|Type]]: <source inline>unit :: Pattern String -> ControlPattern</source>
+
+<code>unit</code> controls how the [[speed]] parameter is interpreted. It accepts a pattern of the following values: <code>"r"</code> (default), <code>"c"</code>, or <code>"s"</code>.
+
+With <code>unit "r"</code>, <code>speed</code> multiplies the sample playback rate, so <code>1</code> is normal <code>2</code> is double speed, <code>0.5</code> half speed, etc.
+
+With <code>unit "c"</code>, <code>speed</code> specifies the playback rate ''relative to cycle length''.  So <code>unit "c" # speed "1"</code> will speed up or slow down the sample to fit in one cycle, <code>unit "c" # speed "2"</code> will play the sample twice as fast (so that it fits in half a cycle), etc.  This can be useful for beat matching if your sample is a drum loop.
+
+With <code>unit "s"</code>, <code>speed</code> specifies the playback ''length'' in seconds.
+
+<source>
+-- stretches sample to fit in 1 cycle
+d1 $ sound "breaks125" # unit "c"
+
+-- stretchs sample to fit in half a cycle
+d1 $ sound "breaks125" # unit "c" # speed 2
+d1 $ sound "breaks125*2" # unit "c" # speed 2
+</source>
+
+<source>
+d1 $ stack [
+  n "[0 1 1 1]/2" # sound "casio"
+, sound "breaks125/2" # unit "c" # cut 1 # speed 0.5
+] # cps "[0.5 1 1.5 2]/8"
+</source>

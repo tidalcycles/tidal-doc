@@ -1,0 +1,2 @@
+{{DISPLAYTITLE:superimpose}} 
+[[Type signature|Type]]: <source inline>superimpose :: (Pattern a -> Pattern a) -> Pattern a -> Pattern a</source>

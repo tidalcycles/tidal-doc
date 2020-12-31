@@ -1,0 +1,1 @@
+Das geht mit folgendem Kommando in einem Terminal-Fenster:

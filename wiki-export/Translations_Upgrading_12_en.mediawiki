@@ -1,0 +1,1 @@
+In VSCode, you can upgrade the TidalCycles package by viewing your extensions (View > Extensions menu, or click on the Extensions icon on the left-hand activity bar), searching for TidalCycles and then choose to upgrade.

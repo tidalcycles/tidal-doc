@@ -1,0 +1,56 @@
+<languages/>
+<translate>
+<!--T:1-->
+Once you've set up SuperDirt MIDI by following [[SuperDirt_MIDI_Tutorial|the tutorial]], sending midiclock is fairly straightforward and works well, although still in development. This will become easier still in the future.
+
+<!--T:2-->
+First, you can start sending MIDI clock messages, 48 per cycle, like this:
+
+<!--T:3-->
+<source>
+p "midiclock" $ midicmd "midiClock*48" # s "midi"
+</source>
+
+<!--T:4-->
+Your MIDI device should then adjust its BPM to Tidal's [[cps]]. Then it's worth sending a 'stop' message like this:
+
+<!--T:5-->
+<source>
+once $ midicmd "stop" # s "midi" 
+</source>
+
+<!--T:6-->
+and then finally a start message to start the MIDI clock at the right time. The following sends a start message every fourth cycle:
+
+<!--T:7-->
+<source>
+p "midictl" $ midicmd "start/4" # s "midi" 
+</source>
+
+<!--T:8-->
+Once everything's started and in sync, it's probably best to stop sending the start messages to avoid glitching:
+
+<!--T:9-->
+<source>
+p "midictl" $ silence
+</source>
+
+<!--T:10-->
+However now if you do <source inline>hush</source>, the midiclock will stop as well as all the other patterns. To avoid this, you can overwrite the <source inline>hush</source> function with a version that silences particular patterns:
+
+<!--T:11-->
+<source>
+let hush = mapM_ ($ silence) [d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15,d16]
+</source>
+
+<!--T:12-->
+You will probably find that the downbeats for superdirt and your MIDI devices don't align. As a starting point, set MIDI latency in supercollider to 0:
+
+<!--T:13-->
+<source>
+~midiOut.latency = 0;
+</source>
+
+<!--T:14-->
+Make sure any offset on the MIDI side is also set to 0, then gradually adjust one of them until they align. If they stay in alignment when you change the cps, all is good!
+</translate>

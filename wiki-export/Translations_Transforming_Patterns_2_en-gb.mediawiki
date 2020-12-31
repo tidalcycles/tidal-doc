@@ -1,0 +1,1 @@
+Using functions like <syntaxhighlight lang="haskell" inline>slow</syntaxhighlight> you can start to transcend the cycle

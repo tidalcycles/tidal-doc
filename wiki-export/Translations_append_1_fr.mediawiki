@@ -1,0 +1,2 @@
+{{DISPLAYTITLE:append}} 
+[[Type signature|Type]]: <source inline>append :: Pattern a -> Pattern a -> Pattern a</source>

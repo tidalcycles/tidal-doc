@@ -1,0 +1,26 @@
+<languages/>
+{{DISPLAYTITLE:superimpose}} 
+[[Type signature|Type]]: <source inline>superimpose :: (Pattern a -> Pattern a) -> Pattern a -> Pattern a</source>
+
+'''superimpose''' permet de superposer deux versions d'un même pattern : le pattern original et un pattern altéré.
+
+<source>
+d1 $ superimpose (fast 2) $ sound "bd sn [cp ht] hh"
+</source>
+
+... donne le même résultat que :
+
+<source>
+d1 $ stack [sound "bd sn [cp ht] hh",
+            fast 2 $ sound "bd sn [cp ht] hh"
+           ]
+</source>
+
+== Voir aussi ==
+
+Cette fonction est similaire à d'autres, basées sur le même principe : 
+#  [[jux]] superpose mais joue le pattern originel et le pattern modifié avec une panoramique différente (gauche <-> droite).
+# [[off]] superpose deux patterns mais les décale dans le temps. 
+# [[layer]] permet de superposer un pattern modifié par plusieurs fonctions.
+
+[[Category:Functions]]

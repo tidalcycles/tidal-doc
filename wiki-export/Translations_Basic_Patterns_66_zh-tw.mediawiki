@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> 以及 <syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> 用來改變音檔播放的音高。

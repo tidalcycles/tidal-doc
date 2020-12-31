@@ -1,0 +1,5 @@
+<source lang="shell">
+sudo ghc-pkg recache
+cabal update
+cabal new-install tidal --lib
+</source>

@@ -1,0 +1,1 @@
+Vous pouvez utiliser <syntaxhighlight lang="Haskell" inline>cut</syntaxhighlight> pour tronquer le sample dès qu'un autre sample est joué.

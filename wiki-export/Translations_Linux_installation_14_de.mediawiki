@@ -1,0 +1,1 @@
+Wenn du noch nie TidalCycles installiert hast, kann der Schritt <code>cabal install tidal</code> einige Zeit in Anspruch nehmen. Am Ende der Befehlsausgabe sollte <code>Installated tidal-x.x.x</code> (wobei x.x.x die neueste Versionsnummer ist) ohne Fehler erscheinen.

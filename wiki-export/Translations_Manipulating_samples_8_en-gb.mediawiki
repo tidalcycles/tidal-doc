@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>legato</syntaxhighlight> also truncates samples, but using a fixed length

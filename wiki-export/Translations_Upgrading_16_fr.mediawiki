@@ -1,0 +1,1 @@
+Vous devrez recompiler la "class library". Pour ce faire, redémarrez SuperCollider, ou utilisez "Recompile class library" dans le menu "Language".

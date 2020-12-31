@@ -1,0 +1,10 @@
+{{DISPLAYTITLE:asap}} 
+[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>asap :: ControlPattern -> IO ()</syntaxhighlight>
+
+Play one cycle of pattern immediately.
+
+<syntaxhighlight lang="haskell">
+asap $ sound "cp"
+</syntaxhighlight>
+
+See also [[once]].

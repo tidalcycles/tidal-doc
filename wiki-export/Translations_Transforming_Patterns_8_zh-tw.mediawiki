@@ -1,0 +1,1 @@
+<syntaxhighlight lang="haskell" inline>fast 0.5</syntaxhighlight> 以及<syntaxhighlight lang="haskell" inline>slow 2</syntaxhighlight>是一樣的!

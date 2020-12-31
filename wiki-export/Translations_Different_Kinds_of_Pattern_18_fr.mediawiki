@@ -1,0 +1,2 @@
+Si vous indiquez deux nombres entre parenthèses après un élément dans un pattern,
+alors Tidal distribuera le premier nombre (sons) équitablement par rapport au second (nombre de steps).

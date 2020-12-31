@@ -1,0 +1,69 @@
+<languages/>
+
+{{#evt:
+service=youtube
+|id=https://www.youtube.com/watch?v=1OkqxPfKsh8&t=3s&list=PLybSFICi4UliK17U6rxPneXAyxvmGAe5T
+|alignment=right
+|dimensions=320
+|container=frame
+|description=Playlist von Tidal-Performances auf unserem [https://www.youtube.com/channel/UCG5Ynx9mvouuSHYEyxaJ0Cg/playlists youtube-Kanal]
+}}
+
+
+'''TidalCycles''' (oder kurz 'Tidal') ist eine OpenSource-Software, mit der du Pattern mit Hilfe von Code erzeugen kannst, zum Beispiel beim Live-Coding von Musik auf Algoraves oder beim Komponieren im Studio.
+
+Tidal bietet Dir eine Sprache zur Erstellung flexibler (z.B. polyphoner, polyrhythmischer, generativer) Sequenzen und verfügt über eine umfangreiche Bibliothek von Pattern-Funktionen, um diese zu transformieren und zu kombinieren.
+
+Tidal ist sehr flexible, da Transformationen von Pattern leicht miteinander kombiniert werden können. So können aus wenigen Elementen schnell komplexe Pattern erzeugt werden.
+
+Tidal erzeugt selbst keinen Sound, sondern ist für den Einsatz mit dem leistungsstarken SuperDirt-Synthesizer konzipiert und kann auch andere Synthesizer über Open Sound Control (OSC) oder MIDI steuern. Egal, ob du SuperDirt oder einen Synth verwendest, jeder Filter und Effekt kann unabhängig voneinander mit Tidal-Pattern gesteuert und manipuliert werden.
+
+Tidal ist in die Programmiersprache Haskell eingebettet. Aber du musst Haskell nicht lernen, um Tidal zu nutzen - die meisten Tidal-Nutzer haben wenig oder gar keine Erfahrung im Software-Engineering.
+
+= Dokumentation =
+
+Nutze unsere [[Userbase]] für Informationen zur Installation, Referenzmaterial, Tutorials und Anleitungen!
+
+Diese Website ist jetzt ein Wiki. Das bedeutet, dass du nicht nur die Hilfe hier nutzen, sondern auch [[Help:How to contribute|verbessern und ergänzen]] kannst.
+
+In diesem Wiki findest du Informationen für die aktuelle Tidal-Version 1.0.x. Um auf die Dokumentation der vorherigen Version 0.9.10 zuzugreifen, besuche bitte unsere [http://pages.tidalcycles.org/ alte Webseite].
+
+'''Hinweis''': Die Arbeit an der deutschen Übersetzung hat gerade erst angefangen. Sehr viele Seiten sind noch nicht übersetzt. Wir arbeiten daran!
+
+
+[[File:kofi1.png|thumb|link=http://ko-fi.com/yaxulive]]
+
+= Unterstützung mit ko-fi =
+
+Wenn Dir TidalCycles gefällt, denk bitte darüber nach, das Projekt mit [http://ko-fi.com/yaxulive Kaffee] für Alex zu unterstützen! Er hat Jahre in die Entwicklung von Tidal investiert, und einmaliger oder regelmäßiger Kaffee hilft ihm, dessen Entwicklung und Dokumentation zu beschleunigen.
+
+= Events =
+
+Kommende Events + Veranstaltungsreihen
+
+*[https://www.facebook.com/pg/musichackspace/events/?ref=page_internal Tidal meetups] im London Music hackspace
+* [https://livecode-summerschool.github.io/ Live code summer school], Sheffield UK
+
+Vergangene Events
+
+* [https://toplap.org/wearefifteen/ TOPLAP birthday stream]
+* [[TidalCycles BoF 2019]] - im ICLC 2019, Madrid
+
+= Weiterführende Links =
+
+* [http://toplap.org/TOPLAP TOPLAP - the home of live coding]
+* Es gibt viele andere gute Live-Coding-Enviroments! Auf TOPLAP findest du eine [https://toplap.org/all-things-live-coding-a-curated-list/ ausführliche Übersicht].
+* [http://algorave.com/ Algorave] - algorithmic dance culture
+
+= Credits =
+
+TidalCycles und SuperDirt wurde mit Hilfe zahlreicher Unterstützer  entwickelt - [https://github.com/tidalcycles/Tidal/graphs/contributors Tidal contributors] / [https://github.com/musikinformatik/SuperDirt/graphs/contributors SuperDirt contributors].
+
+TidalCycles wurde von Alex McLean ab 2009 während einer von der EPSRC finanzierten Doktorarbeit initiiert. Alex' laufende Arbeit an Tidal wird teilweise von Ko-Fi-Supportern und dem Projekt [https://penelope.hypotheses.org/ PENELOPE] (im Rahmen des Forschungs- und Innovationsprogramms Horizon 2020 der Europäischen Union, Fördervereinbarung Nr. 682711) unterstützt.
+
+TidalCycles wurde sehr von der Arbeit vieler anderer inspiriert, darunter Bernard Bel, Laurie Spiegel und Adrian Ward.
+
+= Meta =
+
+* [[Help:How to contribute]] - Wie kannst du zu diesem wiki beitragen
+* [[Ideas for this wiki]] - Ideen für dieses wiki

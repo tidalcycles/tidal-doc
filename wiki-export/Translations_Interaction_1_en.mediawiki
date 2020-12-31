@@ -1,0 +1,1 @@
+In Tidal 1.0.0, the way you interact with patterns has changed a bit.

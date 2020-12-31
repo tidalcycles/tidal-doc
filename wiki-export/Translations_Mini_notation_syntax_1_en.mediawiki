@@ -1,0 +1,31 @@
+{| class="wikitable"
+|-
+! scope="col" width="5%" | Symbol
+! scope="col" width="25%" | Description
+! scope="col" width="35%" | Example
+! scope="col" width="35%" | Equivalent
+|-
+| <source inline>[ ]</source> || Create a pattern grouping || <source inline>d1 $ s "[bd sd] hh"</source> || <source inline>d1 $ fastcat [s "bd sd", s "hh"]</source>
+|-
+| <source inline>.</source> || Shorthand for pattern grouping || <source inline>d1 $ s "bd sd . hh hh hh"</source> || <source inline>d1 $ s "[bd sd] [hh hh hh]</source>
+|-
+| <source inline>,</source> || Play multiple patterns at the same time || <source inline>d1 $ s "[bd sd, hh hh hh]"</source> ||  <source inline>d1 $ stack [s "bd sd", s "hh hh hh"]</source>
+|-
+| <source inline>*</source> || Repeat a pattern || <source inline>d1 $ s "bd*2 sd"</source> || <source inline>d1 $ s "[bd bd] sd"</source>
+|-
+| <source inline>/</source> || Slow down a pattern || <source inline>d1 $ s "bd/2"</source> || <source inline>d1 $ s (slow 2 $ "bd")</source>
+|-
+| <source inline>< ></source> || Alternate between patterns || <source inline>d1 $ s "bd <sd hh cp>"</source> || <source inline>d1 $ slow 3 $ s "bd sd bd hh bd cp"</source>
+|-
+| <source inline>!</source> || Replicate a pattern || <source inline>d1 $ s "bd!3 sd"</source> || <source inline>d1 $ s "bd bd bd sd"</source>
+|-
+| <source inline>_</source> || Elongate a pattern || <source inline>d1 $ s "bd _ _ ~ sd _"</source> || Results in pattern <source inline>(0>1/2)|s: "bd" (4/6>1)|s: "sd"</source>
+|-
+| <source inline>@</source> || Elongate a pattern || <source inline>d1 $ s "superpiano@3 superpiano"</source> || <source inline>d1 $ s "superpiano _ _ superpiano"</source>
+|-
+| <source inline>?</source> || Randomly remove events from pattern || <source inline>d1 $ s "bd? sd"</source> || <source inline>d1 $ fastcat [degradeBy 0.5 $ s "bd", s "sd"]</source>
+|-
+| <source inline>:</source> || Selecting samples || <source inline>d1 $ s "bd:3"</source> || <source inline>d1 $ s "bd" # n 3</source>
+|-
+| <source inline>( )</source> || Euclidean sequences || <source inline>d1 $ s "bd(3,8)"</source> || <source inline>d1 $ euclid 3 8 $ s "bd"</source>
+|}

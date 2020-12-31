@@ -1,0 +1,1 @@
+Si tout fonctionne, mais que vous n'entendez aucun son : il y a probablement eu un problème lors du téléchargement de la très large librairie de sons par défaut de Tidal.

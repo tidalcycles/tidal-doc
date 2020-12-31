@@ -1,0 +1,53 @@
+Starting a list of projects connected with TidalCycles - ones that interface with/inspired/are inspired by tidal.
+
+(For a long list of _all_ the live coding environments, see the [https://github.com/toplap/awesome-livecoding all things livecoding] list.)
+
+= Ports and parsers =
+
+* [https://github.com/dktr0/estuary Estuary] is a platform for collaboration and learning through live coding, hosting a range of environments in a web-browser, including "minitidal", a parser for tidal
+
+= Editors =
+
+* [https://github.com/dktr0/extramuros Extramuros], a language-neutral shared-buffer networked live coding system in the browser (precursor of Estuary)
+* [https://github.com/yaxu/feedforward Feedforward], a strange terminal-based editor in development
+* [https://github.com/cannc4/Siren Siren] - a tracker interface for TidalCycles and SuperCollider
+* [https://github.com/qirky/troop Troop], a real-time collaborative tool that enables group live coding within the same document across multiple computers. Works with a range of live coding languages, including Tidal
+
+== Editor plugins ==
+
+* [https://github.com/tidalcycles/Tidal/blob/master/tidal.el Emacs]
+* [https://tidalcycles.org/index.php/Sublime_Text Sublime text]
+* [https://github.com/supercollider/scvim vim]
+* [https://github.com/tidalcycles/vscode-tidalcycles VS Code]
+
+= Synths and samplers =
+
+* [https://github.com/tidalcycles/dirt Dirt] - the original 'classic' dirt, implemented in c
+* [https://github.com/musikinformatik/SuperDirt/ SuperDirt] - the SuperCollider rewrite, recommended for general use (unless running in a web browser) 
+* [https://github.com/dktr0/WebDirt webdirt] - the javascript rewrite, part of estuary
+
+== SuperCollider (or SuperDirt) add-ons ==
+
+* [https://github.com/calumgunn/StageMaster StageMaster] - light mastering chain for use during live performance in SuperCollider
+
+= Visual systems =
+
+* [https://github.com/ivan-abreu/didacticpatternvisualizer Didactic pattern visualizer] - Sound pattern visualizer programmed in Processing
+* [https://github.com/Dsm0/p5jsDirt/ p5jsDirt] - integration with p5.js
+
+= Syncing / interfacing =
+
+* [https://github.com/Deep-Symmetry/carabiner Carabiner], for bridging with the Link protocol
+* [https://github.com/dktr0/espgrid ESPGrid], synchronisation designed for live coding environments including supercollider, foxdot as well as tidal
+* [https://www.npmjs.com/package/@vliegwerk/tidal Node.js interface] for sending messages between javascript and tidal
+
+= Tidal-inspired systems =
+
+* [https://github.com/Mdashdotdashn/krill Krill] - a javascript-based live coding environment inspired by tidal
+* [https://github.com/gibber-cc/tidal.pegjs tidal.pegjs] - is a parsing expression grammar for the TidalCycles mini-notation, written using PEG.js. The goal of the PEG is to easily translate strings of Tidal-style mini notation into annotated JavaScript data structures for use in sequencing. Works with [http://gibber.cc/ Gibber] and [https://hydra-editor.glitch.me/ Hydra]!
+
+= Systems that inspired Tidal =
+
+* [http://bolprocessor.sourceforge.net/ Bol processor] - algorithmic music system based on compositional grammars, grown from research into symbolic notation of tabla rhythms
+* [http://www.euterpea.com/ Euterpea] is a cross-platform, domain-specific language for computer music applications embedded in the Haskell programming language
+* Douglas Repetto's beat rotation experiments, e.g. rotcomposer in [http://www.meapsoft.com/showcase.php MEAPsoft]

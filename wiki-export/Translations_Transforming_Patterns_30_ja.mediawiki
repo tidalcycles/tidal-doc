@@ -1,0 +1,1 @@
+1つ以上の変形を連ねることができます! <syntaxhighlight lang="haskell" inline>.</syntaxhighlight> で、変形やエフェクトを連鎖できます。

@@ -1,0 +1,22 @@
+[[Type signatures|Type]]: <syntaxhighlight lang="haskell" inline> compress :: (Time, Time) -> Pattern a -> Pattern a </syntaxhighlight>
+
+'''compress''' takes a pattern and ''squeezes'' it within the specified time span (i.e. the 'arc').
+The new resulting pattern is a sped up version of the original.
+
+<source>
+d1 $ compress (1/4, 3/4) $ s "[bd sn]!"
+</source>
+
+In the above example, the pattern will play in an arc spanning from 25% to 75% of the duration of a cycle. It is equivalent to:
+
+<source>
+d1 $ s "~ [bd sn]! ~"
+</source>
+
+Another example, where all events are different:
+<source>
+d1 $ compress (1/4, 3/4) $ n (run 4) # s "arpy"
+</source>
+
+
+It differs from [[zoom]] in that it preserves the original pattern but it speeds up its events so to match with the new time period.

@@ -1,0 +1,2 @@
+== Supergrind ==
+(#supergrind parameters: #accelerate, #detune, #voice, #speed)

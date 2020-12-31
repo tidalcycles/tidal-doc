@@ -1,0 +1,2 @@
+Puis cliquez sur le code, maintenez Shift et pressez Entrée.
+La fenêtre "post window" devrait maintenant afficher la progression du démarrage de SuperDirt, vous devriez obtenir à la fin :

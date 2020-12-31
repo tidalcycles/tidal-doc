@@ -1,0 +1,1 @@
+= Nommer ou numéroter les patterns =

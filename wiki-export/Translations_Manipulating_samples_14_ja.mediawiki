@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>randslice</syntaxhighlight> は、サンプルを複数に分け、各サイクルでランダムにひとつを選び、再生します。

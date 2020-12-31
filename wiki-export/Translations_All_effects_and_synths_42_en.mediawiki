@@ -1,0 +1,1 @@
+Total shift is sum of `fshift` (in Hz) and `fshiftnote` times the current note frequency. `fshiftphase` allows control over the phase

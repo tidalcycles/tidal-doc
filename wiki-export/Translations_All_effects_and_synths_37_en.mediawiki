@@ -1,0 +1,2 @@
+Reminiscent of some weird mixture of filter, ring-modulator and pitch-shifter.
+Try passing multiples of 2 to it - 2, 4, 8 etc.

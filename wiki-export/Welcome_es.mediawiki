@@ -1,0 +1,64 @@
+<languages/>
+{{#evt:
+service=youtube
+|id=https://www.youtube.com/watch?v=1OkqxPfKsh8&t=3s&list=PLybSFICi4UliK17U6rxPneXAyxvmGAe5T
+|alignment=right
+|dimensions=320
+|container=frame
+|description=Lista de performances con Tidal en nuestro canal de youtube
+}}
+
+'''TidalCycles''' (o simplemente 'tidal') es un software libre, que te permite crear patrones con código, sea para la programar música en vivo o para componer dentro del estudio.
+
+Incluye múltiples formas de describir secuencias flexibles (incluyendo polifónicas, polirítmicas, generativas, etc). También cuenta con una extensa librería de funciones cíclicas para transformar y combinar dichas secuencias.
+
+Tidal es altamente modular, de forma tal que las distintas transformaciones aplicables pueden ser fácilmente combinadas, permitiéndote crear patrones complejos con ingredientes simples.
+
+Tidal no genera sonido por si mismo, sino que está diseñado para usarse con el sintetizador SuperDirt, y puede usarse para controlar otros sintetizadores a través de Open Sound Control o MIDI. Ya sea que estés usando SuperDirt o un sintetizador, cada filtro y efecto puede ser usado cíclicamente y manipulado independientemente con patrones de Tidal.
+
+Tidal está creado e integrado con el lenguaje Haskell, pero no es necesario aprender Haskell para aprender Tidal - la mayoría de los usuarios de Tidal tienen poca o nada de experiencia en programación.
+
+= Documentación =
+
+Ingresa a la [[Userbase]] para obtener información sobre instalación, material de referencia, tutoriales y guías!
+
+Esta página web es una wiki, lo que significa que aparte de disfrutar de estos recursos, puedes [[Help:How to contribute|ayudar a mejorarlos y añadir nuevos]].
+
+The above is for the current 1.0.x release of Tidal. To access the documentation for the previous version 0.9.10, please see the [http://pages.tidalcycles.org/ old website].
+
+[[File:kofi1.png|thumb|link=http://ko-fi.com/yaxulive]]
+
+= Contributing coffee =
+
+If you enjoy TidalCycles, please consider helping speed up development by [http://ko-fi.com/yaxulive contributing coffees] to Alex! He's put years into making Tidal, and one-off or regular coffees help speed up both its development and documentation.
+
+= Eventos =
+
+Próximos eventos + series de eventos
+
+* [https://www.facebook.com/pg/musichackspace/events/?ref=page_internal Tidal meetups] at London Music hackspace
+* [https://livecode-summerschool.github.io/ Live code summer school], Sheffield UK
+
+Eventos pasados
+
+* [https://toplap.org/wearefifteen/ TOPLAP birthday stream]
+* [[TidalCycles BoF 2019]] - at ICLC 2019, Madrid
+
+= Links relacionados =
+
+* [http://toplap.org/TOPLAP TOPLAP - the home of live coding]
+* There's a lot of other fine live coding environments! See the TOPLAP [https://toplap.org/all-things-live-coding-a-curated-list/ long list] of them.
+* [http://algorave.com/ Algorave] - algorithmic dance culture
+
+= Créditos =
+
+TidalCycles and SuperDirt have been developed with contributions from a wide range of people - [https://github.com/tidalcycles/Tidal/graphs/contributors Tidal contributors] / [https://github.com/musikinformatik/SuperDirt/graphs/contributors SuperDirt contributors].
+
+TidalCycles was initiated by Alex McLean around 2009 during doctoral work funded by EPSRC. Alex's ongoing work on Tidal is partly supported by Ko-Fi contributors and the [https://penelope.hypotheses.org/ PENELOPE] project (under the Horizon 2020 research and innovation programme of the European Union, grant agreement No 682711).
+
+TidalCycles se inspira intensivamente en los trabajos de otrxs, incluyendo Bernard Bel, Laurie Spiegel y Adrian Ward.
+
+= Meta =
+
+* [[Help:How to contribute]] to this wiki
+* [[Ideas for this wiki]]

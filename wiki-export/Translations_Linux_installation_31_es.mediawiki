@@ -1,0 +1,1 @@
+Un paquete MELPA es proveido para la integración de TidalCycles con Emacs. Primero tenes que asegurarte que MELPA esta instalado en tu equipo ([https://melpa.org/#/getting-started aquí las instrucciones]) luego simplemente ejecutá <code>M-x install-package return tidal return</code>.

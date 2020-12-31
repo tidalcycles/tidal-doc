@@ -1,0 +1,19 @@
+[[Category:Transitions]]
+
+[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>interpolateIn :: Time -> [ControlPattern] -> ControlPattern</syntaxhighlight>
+
+Morph control values between patterns in a given number of cycles.  The first argument supplied to `interpolate` is the ID of the new pattern that is created and the second is the number of cycles.
+
+<syntaxhighlight lang="haskell" inline>
+d1 $ sound "arpy*16" # cutoff 100
+</syntaxhighlight>
+
+<syntaxhighlight lang="haskell" inline>
+interpolateIn 1 2 $ sound "arpy*16" # cutoff 16000
+</syntaxhighlight>
+
+Stop the newly created pattern using its id:
+
+<syntaxhighlight lang="haskell" inline>
+d1 silence
+</syntaxhighlight>

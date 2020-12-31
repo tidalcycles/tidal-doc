@@ -1,0 +1,1 @@
+Añadir y usar tus propios samples en TidalCycles es relativamente fácil. Para empezar, unx no añade sus samples directamente a TidalCycles, sino que los añade a SuperCollider y al quark SuperDirt. Para hacer esto vas a necesitar personalizar el arranque de SuperDirt.

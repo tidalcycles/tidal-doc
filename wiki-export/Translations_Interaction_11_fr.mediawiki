@@ -1,0 +1,1 @@
+Vous pouvez faire référence à un pattern par son nom.

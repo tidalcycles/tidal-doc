@@ -1,0 +1,1 @@
+Vous n'aurez désormais qu'à taper <code>C-return</code> pour évaluer tout ce qui se trouve sous le curseur d'édition. Vous pouvez vérifier que tout fonctionne bien en reproduisant l'exemple ci-dessous :

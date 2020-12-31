@@ -1,0 +1,3 @@
+<source>
+chooseBy "0 0.25 0.5" ["a","b","c","d"]
+</source>

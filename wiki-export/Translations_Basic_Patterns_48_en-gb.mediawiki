@@ -1,0 +1,3 @@
+<syntaxhighlight lang="Haskell">
+d1 $ sound "<bd sn> <sd [cp cp]> <bd [cp cp]>"
+</syntaxhighlight>

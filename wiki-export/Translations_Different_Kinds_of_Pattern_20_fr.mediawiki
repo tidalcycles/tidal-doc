@@ -1,0 +1,1 @@
+Si vous le souhaitez, vous pouvez n'utiliser ce type de notation que pour un seul élément dans votre pattern.

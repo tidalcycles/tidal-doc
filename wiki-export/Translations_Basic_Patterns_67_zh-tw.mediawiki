@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> 造成了播放速度的改變, 例如 2 = 升高一個8度 (octave)。

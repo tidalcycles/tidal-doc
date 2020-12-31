@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>shape</syntaxhighlight>はディストーションを加えます (ですが、音量も同時に上げるため注意してください)

@@ -1,0 +1,5 @@
+<source>
+// Ce bloc mappe les contrôles MIDI en OSC.
+(
+var on, off, cc;
+var osc;

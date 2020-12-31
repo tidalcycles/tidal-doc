@@ -1,0 +1,1 @@
+and then finally a start message to start the MIDI clock at the right time. The following sends a start message every fourth cycle:

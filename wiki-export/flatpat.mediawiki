@@ -1,0 +1,15 @@
+{{DISPLAYTITLE:inv}} 
+[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>flatpat :: Pattern [a] -> Pattern a</syntaxhighlight>
+
+'''flatpat''' takes a pattern of lists and ''flattens'' it into a pattern where all the events in each list happen simultaneously. 
+
+For example, the following code uses <source inline>flatpat</source> in combination with [[listToPat]] to create an alternating pattern of chords.
+<source>
+d1 $ n (flatpat $ listToPat [[0,4,7],[(-12),(-8),(-5)]]) # s "superpiano" # sustain 2
+</source>
+This code is equivalent to
+<source>
+d1 $ n ("[0,4,7] [-12,-8,-5]") # s "superpiano" # sustain 2
+</source>
+
+[[Category:Functions]]

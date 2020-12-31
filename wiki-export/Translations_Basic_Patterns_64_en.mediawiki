@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>gain</syntaxhighlight> changes the volume of different sounds

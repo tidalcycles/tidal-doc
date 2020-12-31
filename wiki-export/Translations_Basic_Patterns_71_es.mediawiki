@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> aumenta el tono de la muestra en semitonos, por ej. 12 = una octava arriba

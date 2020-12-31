@@ -1,0 +1,1 @@
+Once that's done, you just have to tell the atom plugin to use the tidal installed with stack. In atom, find the settings for the tidalcycles package, and set the 'ghci path' setting to <source inline>stack exec --package tidal -- ghci</source>. Then, restart atom and all should be well.

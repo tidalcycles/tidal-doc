@@ -1,0 +1,1 @@
+[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>choose :: [a] -> Pattern a</syntaxhighlight>

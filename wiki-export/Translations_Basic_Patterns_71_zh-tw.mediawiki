@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> 改變音檔的音高，以半音(semitone)為單位，例如 12 = 升高一個八度(octave)

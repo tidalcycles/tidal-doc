@@ -1,0 +1,2 @@
+== Superhat ==
+(#superhat parameters: #n, #sustain, #accelerate)

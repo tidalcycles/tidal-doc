@@ -1,0 +1,1 @@
+または <syntaxhighlight lang="Haskell" inline>..</syntaxhighlight> を使えます。

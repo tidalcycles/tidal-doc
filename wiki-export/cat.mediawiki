@@ -1,0 +1,59 @@
+<languages/>
+<translate>
+<!--T:1-->
+{{DISPLAYTITLE:cat}}
+[[Type signature|Type]]: <source inline>cat :: [Pattern a] -> Pattern a</source>
+
+<!--T:2-->
+'''cat''', (also known as <source inline>slowcat</source>, to match with <source inline>fastcat</source> defined below) concatenates a list of patterns into a new pattern; each pattern in the list will maintain its original duration. For example:
+
+<!--T:3-->
+<source>
+d1 $ cat [sound "bd*2 sn", sound "arpy jvbass*2"]
+
+<!--T:4-->
+d1 $ cat [sound "bd*2 sn", sound "arpy jvbass*2", sound "drum*2"]
+
+<!--T:5-->
+d1 $ cat [sound "bd*2 sn", sound "jvbass*3", sound "drum*2", sound "ht mt"]
+</source>
+
+= fastcat = <!--T:6-->
+[[Type signature|Type]]: <source inline>fastcat :: [Pattern a] -> Pattern a</source>
+
+<!--T:7-->
+'''fastcat''' works like <source inline>cat</source> above, but squashes all the patterns to fit a single cycle. Examples:
+
+<!--T:8-->
+<source>
+d1 $ fastcat [sound "bd*2 sn", sound "arpy jvbass*2"]
+
+<!--T:9-->
+d1 $ fastcat [sound "bd*2 sn", sound "arpy jvbass*2", sound "drum*2"]
+
+<!--T:10-->
+d1 $ fastcat [sound "bd*2 sn", sound "jvbass*3", sound "drum*2", sound "ht mt"]
+</source>
+
+= timeCat = <!--T:11-->
+[[Type signature|Type]]: <source inline>timeCat :: [(Time, Pattern a)] -> Pattern a</source>
+
+<!--T:12-->
+'''timeCat''' is like '''fastcat''' except that you provide proportionate sizes of the patterns to each other for when they're concatenated into one cycle. The larger the value in the list, the larger relative size the pattern takes in the final loop. If all values are equal then this is equivalent to '''fastcat''', e.g. the following two code fragments are equivalent.
+
+<source>
+d1 $ fastcat [s "bd*4", s "hh27*8", s "superpiano" # n 0]
+</source>
+
+<source>
+d1 $ timeCat [(1, s "bd*4"),
+              (1, s "hh27*8"),
+              (1, s "superpiano" # n 0)]
+</source>
+
+<!--T:14-->
+'''See also: [[append]], [[append#fastAppend|fastAppend]]'''
+
+<!--T:12-->
+[[Category:Functions]]
+</translate>

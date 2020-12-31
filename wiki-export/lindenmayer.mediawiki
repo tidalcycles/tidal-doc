@@ -1,0 +1,17 @@
+{{DISPLAYTITLE:lindenmayer}} 
+[[Type signature|Type]]: <source inline> Num b => Int -> String -> String -> [b] </source>
+
+'''lindenmayer''' takes an integer <code>b</code>, a Lindenmayer system rule set and an initiating string as input in order to generate an L-system tree string of <code>b</code> iterations. It can be used in conjunction with a <source inline>step</source> function to convert the generated string into a playable pattern.
+
+For example:
+
+<source>
+d1 $ slow 16 $ sound $ step' ["feel:0", "sn:1", "bd:0"]
+(take 512 $ lindenmayer 5 "0:1~~~,1:0~~~2~~~~~0~~~2~,2:2~1~,~:~~1~"
+"0")
+</source>
+
+... generates an L-system with initiating string <source inline>"0"</source> and maps it onto a list of samples. 
+
+
+Complex L-system trees with many rules and iterations can sometimes result in unwieldy strings. Using <source inline> take n </source> to only use the first <code>n</code> elements of the string, along with a <source inline> slow </source> function, can make the generated values more manageable.

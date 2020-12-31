@@ -1,0 +1,1 @@
+Pour finir, vous aurez besoin de déclarer un nouveau synthétiseur MIDI que Tidal peut reconnaître. Nous avons fait le choix de l'appeler <code>midi</code> :

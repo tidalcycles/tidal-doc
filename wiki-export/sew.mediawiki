@@ -1,0 +1,23 @@
+[[Type signature|Type]]: <source inline>Pattern Bool -> Pattern a -> Pattern a -> Pattern a</source>
+
+'''sew''' Uses a pattern of boolean (true or false) values to switch between two other patterns. For example the following will play the first pattern for the first half of a cycle, and the second pattern for the other half.
+
+<source>
+d1 $ sound (sew "t f" "bd*8" "cp*8")
+</source>
+
+The above combines two patterns of strings, and passes the result to the [[sound]] function. It's also possible to sew together two control patterns, for example:
+
+<source>
+d1 $ sew "t <f t> <f [f t] t>" (n "0 .. 15" # s "future") (s "cp:3*16" # speed saw + 1.2)
+</source>
+
+You can also use Euclidean rhythm syntax in the boolean sequence:
+
+<source>
+d1 $ sew "t(11,16)" (n "0 .. 15" # s "future") (s "cp:3*16" # speed sine + 1.5)
+</source>
+
+See also [[stitch]]
+
+[[Category:Functions]]

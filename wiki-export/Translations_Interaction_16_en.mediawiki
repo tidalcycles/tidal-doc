@@ -1,0 +1,4 @@
+<syntaxhighlight lang="haskell">
+xfade "susan" $ sound "gabba(3,8,<0 2 4>)"
+xfade "susan" $ sound "cp*2"
+</syntaxhighlight>

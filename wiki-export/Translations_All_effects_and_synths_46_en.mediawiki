@@ -1,0 +1,1 @@
+Triode-like distortion, uses only the `triode` parameter

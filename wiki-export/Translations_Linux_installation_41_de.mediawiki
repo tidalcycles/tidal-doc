@@ -1,0 +1,2 @@
+*** Welcome to SuperCollider 3.10.0. *** For help press Ctrl-D.
+</source>

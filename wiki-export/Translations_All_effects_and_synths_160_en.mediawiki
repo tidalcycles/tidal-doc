@@ -1,0 +1,2 @@
+== Superprimes ==
+(#superprimes parameters: #accelerate, #detune, #voice, #speed

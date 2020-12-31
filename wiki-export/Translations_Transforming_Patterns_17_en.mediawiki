@@ -1,0 +1,1 @@
+Or play it forwards and then backwards with ‘palindrome’

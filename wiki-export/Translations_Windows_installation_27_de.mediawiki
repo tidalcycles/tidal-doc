@@ -1,0 +1,10 @@
+<source lang="plaintext">
+Installing SuperDirt
+Installing Vowel
+Vowel installed
+Installing Dirt-Samples
+Dirt-Samples installed
+SuperDirt installed
+compiling class library...
+...
+(dann noch mehr blah blah und zum Schluss so etwas hier:)

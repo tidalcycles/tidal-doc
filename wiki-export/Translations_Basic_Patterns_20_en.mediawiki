@@ -1,0 +1,3 @@
+<syntaxhighlight lang="Haskell">
+hush
+</syntaxhighlight>

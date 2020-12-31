@@ -1,0 +1,1 @@
+'''release''' permet de spécifier le temps d'extinction d'une sample :

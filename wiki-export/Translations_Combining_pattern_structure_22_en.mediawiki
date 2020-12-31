@@ -1,0 +1,3 @@
+Note that <syntaxhighlight lang="Haskell" inline>+</syntaxhighlight> is actually an alias for <syntaxhighlight lang="Haskell" inline>|+|</syntaxhighlight>. So <syntaxhighlight lang="Haskell" inline>|+</syntaxhighlight> is to take the
+structure from the left, <syntaxhighlight lang="Haskell" inline>+|</syntaxhighlight> from the right, and <syntaxhighlight lang="Haskell" inline>|+|</syntaxhighlight> or <syntaxhighlight lang="Haskell" inline>+</syntaxhighlight> for
+both. Here are the basic operators you can use to combine numerical patterns:

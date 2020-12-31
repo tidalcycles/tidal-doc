@@ -1,0 +1,2 @@
+* <code>ccn</code> - le numéro attribué au contrôle désiré : <code>ccn 30</code>
+* <code>ccv</code> - la valeur que vous souhaitez assigner à votre paramètre, sur une échelle de 0 à 127 : <code>ccv 64</code>

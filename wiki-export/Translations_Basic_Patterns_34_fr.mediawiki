@@ -1,0 +1,1 @@
+Vous pouvez encore ajouter des sous-patterns au sein même des sous-patterns :

@@ -1,0 +1,1 @@
+Voici une description de tout les effets disponibles dans Tidal, ainsi qu'une description des paramètres qu'ils reçoivent. Chaque paramètre est précédé d'un #.

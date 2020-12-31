@@ -1,0 +1,1 @@
+Vous pouvez jouez deux sous-patterns en même temps en définissant chacun d'entre eux entre crochets droits, et en les séparant par une virgule :

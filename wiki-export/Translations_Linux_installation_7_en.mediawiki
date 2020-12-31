@@ -1,0 +1,1 @@
+Just paste in the four commandline instructions under "How to?" in turn (you can ignore the bit about 'the debian way')

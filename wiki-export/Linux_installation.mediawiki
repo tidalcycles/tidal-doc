@@ -1,0 +1,138 @@
+<translate>
+= Required Prerequisites= <!--T:1-->
+
+<!--T:2-->
+There's a few things to install as part of a complete tidal system:
+
+<!--T:3-->
+* [https://git-scm.com/ Git]
+* [https://www.haskell.org/platform/ Haskell]
+* [http://supercollider.github.io/download SuperCollider]
+* [https://atom.io/ Atom Editor]  (if you don't like the atom editor for some reason, please check out the [[List of tidal editors|list of alternatives]])
+
+<!--T:4-->
+Hopefully your Linux distribution makes the pre-requisites easily available to you via a package manager. For example, if you are using recent version of Ubuntu or similar, you can install Haskell with the following command in a terminal window:
+
+ <!--T:5-->
+sudo apt-get install build-essential cabal-install git jackd2
+
+= Install Supercollider = <!--T:6-->
+Installing supercollider via this method (i.e. <code>sudo apt-get install supercollider sc3-plugins</code>) generally doesn't work. Either the supercollider version is too old (superdirt needs at least version 3.7), or the version of supercollider is mismatched with sc3-plugins. If you're using ubuntu, mint or a similar distribution, my advice is to ignore the supercollider packages and just compile them yourself. Instructions for compiling from source on various distros is available [https://supercollider.github.io/development/building.html here]. If you're using a recent Debian-based distro (for example, Ubuntu >= 18.04), these scripts make it easy to do so:
+  https://github.com/lvm/build-supercollider
+
+<!--T:7-->
+Just paste in the four commandline instructions under "How to?" in turn (you can ignore the bit about 'the debian way')
+
+= Optional Prerequisites = <!--T:8-->
+
+(This section can be ignored if in the previous section ‘Install Supercollider’ you have decided to execute the scripts in [https://github.com/lvm/build-supercollider https://github.com/lvm/build-supercollider] since those scripts already contain the installation of the sc3-plugins through ‘$ sh build-sc3-plugins.sh')
+
+<!--T:9-->
+The following is optional, but recommended:
+
+<!--T:10-->
+* [https://supercollider.github.io/sc3-plugins/ SC3 Plugins] - you may need the SuperCollider sc3-plugins if you want to use any of the synths included in SuperDirt. Most of the examples in the documentation will still work, so you could skip this step and return to it later.
+
+= Install TidalCycles = <!--T:11-->
+
+<!--T:12-->
+Open a Terminal. If you’re unsure how to open a terminal window in Linux, it varies according to distribution but generally find “Terminal” in the menus. Then type and run these two commands ''(ignoring any complaints that cabal has of 'legacy v1 style of usage')'':
+
+ <!--T:13-->
+cabal update
+ cabal install tidal --lib
+
+<!--T:14-->
+If you've never installed TidalCycles before, then the <code>cabal install tidal</code> step may take some time. At the end of the command output, it should say <code>Installed tidal-x.x.x</code> (where x.x.x is the latest version number) without any errors.
+
+= Install SuperDirt = <!--T:15-->
+
+<!--T:16-->
+TidalCycles is meant to run on top of SuperDirt, so you will have to run it first to make sound. Here's how to install it.
+
+<!--T:17-->
+Start SuperCollider IDE (to start the ide through a terminal type ‘scide’), and in the editor window paste in the following line of code:
+
+ <!--T:18-->
+Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.1.3"); thisProcess.recompile()})
+
+<!--T:19-->
+Run the code by clicking on it, to make sure the cursor is on this line, then hold down Shift and press Enter.
+
+<!--T:20-->
+It'll take a while to install. You'll see something like the following:
+
+<!--T:40-->
+<source lang="plaintext">
+Installing SuperDirt
+Installing Vowel
+Vowel installed
+Installing Dirt-Samples
+Dirt-Samples installed
+SuperDirt installed
+compiling class library...
+...
+(then some blah blah, and finally, something like:)
+...
+
+<!--T:41-->
+*** Welcome to SuperCollider 3.10.0. *** For help press Ctrl-D.
+</source>
+
+== Using the SuperCollider interpreter in a terminal == <!--T:22-->
+
+<!--T:23-->
+You can also install it using the terminal interpreter. You might want to get familiar with it if you prefer using your own text editor. There are great SuperCollider integration plugins available for [https://github.com/supercollider/scel Emacs], [https://github.com/supercollider/scvim Vim] or [https://atom.io/packages/supercollider Atom].
+
+<!--T:24-->
+To start the interpreter just run <code>sclang</code> in a terminal, then just paste the command line from above and press Enter to run it. Once the installation is done, you can exit the interpreter by pressing Ctrl + C.
+
+= Install editor extensions = <!--T:25-->
+
+<!--T:26-->
+TidalCycles was made to be run in an interactive environment. The way to do it is to get a text editor and install an extension for it. Here's a list of extensions you might want to try:
+
+<!--T:27-->
+* [https://github.com/supercollider/scel Emacs extension]
+* [https://github.com/supercollider/scvim Vim extension]
+* [https://github.com/crucialfelix/atom-supercollider Atom extension]
+
+== Instructions: Atom Extension == <!--T:28-->
+
+<!--T:29-->
+Start Atom, and install the TidalCycles plugin. You can find it via the menus under edit > settings/preferences > install, then typing “tidalcycles” into the search box. Once that’s installed, restart atom.
+
+== Instructions: Emacs Extension == <!--T:30-->
+
+<!--T:31-->
+A MELPA package is provided for TidalCycles integration within Emacs. You must first make sure you have MELPA installed on your machine ([https://melpa.org/#/getting-started here are the instructions]; basically modifying your init.el or .emacs files with the first code snippet and then executing <code>M-x package-refresh-contents</code> in Emacs; Here some [https://elpa.gnu.org/packages/gnu-elpa-keyring-update.html keyring update] information if it fails to verify signature after running the last command) then simply run <code>M-x package-install <return> tidal <return></code>.
+For more information or troubleshooting check the [https://tidalcycles.org/index.php/Emacs Emacs page]
+
+<!--T:32-->
+This extension provides a major mode for <code>*.tidal</code> files. Once the package is installed, you can just open a Tidal script and press <code>C-c C-s</code> to start Tidal in Emacs, then <code>C-return</code> to run the statement under your cursor.
+
+= Test Your Installation = <!--T:33-->
+
+<!--T:34-->
+Now you are ready to [[Start_tidalcycles_and_superdirt_for_the_first_time|Start TidalCycles and SuperDirt for the first time]].
+
+= Installation Troubleshooting = <!--T:35-->
+
+<!--T:36-->
+Supercollider run on a Jack audio server in order to deliver sound to your speakers. If you see in Supercollider's Post Window a error
+
+<!--T:37-->
+<source>
+Couldn't set realtime scheduling priority 1: Operation not permitted
+</source>
+
+<!--T:38-->
+you'll need to setup Jack with the command <source inline> sudo dpkg-reconfigure jackd2 </source> and add your username to the audio group with <source inline> sudo addgroup -username- audio </source> (with your Linux username instead of -username-).
+
+<!--T:39-->
+You can check if your username is already in the audio group by typing the command <source inline>groups -username-</source>.  You may need to log out and log back in for this to take effect.
+
+<!--T:40-->
+More Troubleshooting in [https://tidalcycles.org/index.php/Troubleshooting_a_Tidal_install Troubleshooting a Tidal installation]
+
+</translate>

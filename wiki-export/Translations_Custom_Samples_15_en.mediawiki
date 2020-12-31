@@ -1,0 +1,1 @@
+Given the folder structure above, you can now use the <code>myBass</code>, <code>hits</code>, and <code>field</code> sounds in your Tidal patterns:

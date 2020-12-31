@@ -1,0 +1,2 @@
+若是你改用<syntaxhighlight lang="Haskell" inline>{ }</syntaxhighlight>括號而非<syntaxhighlight lang="Haskell" inline>[ ]</syntaxhighlight>括號，將有不同的結果。
+<syntaxhighlight lang="Haskell" inline>[ ]</syntaxhighlight> 每個子序列都在一個cycle時間內結束，產生複節奏(polyrhythm)的結構。<syntaxhighlight lang="Haskell" inline>{ }</syntaxhighlight>則是以左手邊的pattern為主結構，右邊的pattern在主結構之上變化其值，產生混合拍的結構(polymetric or polymeter)。

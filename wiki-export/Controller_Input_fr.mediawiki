@@ -1,0 +1,97 @@
+<languages/>
+
+Tidal 1.0.0 vous permet de contrôler le code directement à l'aide d'un contrôleur. Voici quelques explications rapides pour mettre en place le système. Nous avons inclus un petit outil qui permet de mettre en place le système.
+
+= Open Sound Control =
+
+Si vous souhaitez faire entrer du MIDI dans Tidal, vous pouvez sauter la section suivante.
+
+Si la dernière version de Tidal est installée (> 1.0.0), Tidal écoute automatiquement les messages reçus par OSC (Open Sound Control), sur le <code>localhost</code> (127.0.0.1), port 6010.
+
+Vous pouvez changer cette configuration : écouter une autre interface, changer le port, etc :
+
+<syntaxhighlight lang="haskell">
+tidal <- startTidal superdirtTarget (defaultConfig {cCtrlAddr = "0.0.0.0", cCtrlPort = 6060})
+</syntaxhighlight>
+
+Si vous souhaitez empêcher Tidal d'écouter les messages entrants, utilisez cette ligne :
+
+
+<syntaxhighlight lang="haskell">
+tidal <- startTidal superdirtTarget (defaultConfig {cCtrlListen = False})
+</syntaxhighlight>
+
+Les messages OSC attendus par Tidal ont un nom de chemin particulier : <syntaxhighlight inline>/ctrl</syntaxhighlight>, suivi de deux valeurs, la clé correspondant au contrôle et sa valeur effective. La clé peut être sous forme textuelle ou numérique. La valeur peut être un <code>float</code>, un <code>int</code> ou une <code>string</code>. Exemple de message : <syntaxhighlight inline>/ctrl sf hello 0.4</syntaxhighlight>. Dans cet exemple, <code>sf</code> est un <code>typetag</code>. Il spécifie que la première value est une <code>string</code> et que la seconde valeur est un <code>float</code>. Consultez  [http://opensoundcontrol.org/spec-1_0 la documentation OSC] pour en apprendre plus.
+
+Vous pouvez utiliser un message pour contrôler un pattern :
+
+<syntaxhighlight lang="haskell">
+d1 $ sound "bd" # speed (cF 1 "hello")
+</syntaxhighlight>
+
+<syntaxhighlight lang="haskell" inline>cF</syntaxhighlight> est utilisé pour les messages de type <code>float</code>. Le second paramètre <code> 1</code> est la valeur par défaut, utilisée lorsque Tidal n'a pas encore reçu de contrôle. Il existe également <syntaxhighlight lang="haskell" inline>cS</syntaxhighlight>  pour les <code>string</code> et <syntaxhighlight lang="haskell" inline>cI</syntaxhighlight> pour les <code>int</code>. Pour des valeurs qui évoluent dans le temps, utilisez <syntaxhighlight lang="haskell" inline>cT</syntaxhighlight>. Pour des ratios, utilisez <syntaxhighlight lang="haskell" inline>cR</syntaxhighlight>.
+
+= MIDI =
+
+Si vous utilisez le MIDI, vous n'aurez pas à vous soucier de la section précedente. Vous aurez besoin de quelque chose qui convertira le MIDI en OSC. Voici comment procéder en utilisant SuperCollider. Avec Atom et SuperCollider lancés, évaluez la ligne suivante dans SuperCollider :
+
+<source>
+// Ce bloc mappe les contrôles MIDI en OSC.
+(
+var on, off, cc;
+var osc;
+
+osc = NetAddr.new("127.0.0.1", 6010);
+
+MIDIClient.init;
+MIDIIn.connectAll;
+
+on = MIDIFunc.noteOn({ |val, num, chan, src|
+	osc.sendMsg("/ctrl", num.asString, val/127);
+});
+
+off = MIDIFunc.noteOff({ |val, num, chan, src|
+	osc.sendMsg("/ctrl", num.asString, 0);
+});
+
+cc = MIDIFunc.cc({ |val, num, chan, src|
+	osc.sendMsg("/ctrl", num.asString, val/127);
+});
+
+if (~stopMidiToOsc != nil, {
+	~stopMidiToOsc.value;
+});
+
+~stopMidiToOsc = {
+	on.free;
+	off.free;
+	cc.free;
+};
+)
+
+// Evaluez cette ligne pour tout arrêter.
+~stopMidiToOsc.value;
+</source>
+
+Vous devriez pouvoir jouer avec un pattern qui utilise le paramètre CC 12 :
+
+<source>
+d1 $ sound "bd" # speed (cF 1 "12")
+</source>
+
+Si vous souhaitez utiliser le MIDI pour créer un pattern, vous aurez besoin de [[segment | le segmenter]], puisque les valeurs entrantes sont généralement en très haute résolution. Cet exemple ne sélectionne qu'une valeur par cycle, et l'applique à l'aide de la fonction <code>range</code> :
+
+<source>
+d1 $ sound "amencutup" + n (run (segment 1 $ range 1 16 $ cF 0 "32" ))
+</source> 
+
+== Alternative : Pure Data ==
+
+Les instructions pour SuperCollider sont utiles si vous utilisez SuperDirt, mais Pure Data fonctionne tout aussi bien pour convertir du MIDI en OSC. Vous pouvez télécharger Pure Data [[https://puredata.info/ à cette adresse]]. Nous recommandons la version 'vanilla'. 
+
+Téléchargez ensuite le fichier suivant : [https://raw.githubusercontent.com/tidalcycles/Tidal/master/pd/midi-osc-bridge.pd lien].
+
+Démarrez Tidal et lancez le fichier que vous venez de télécharger. Configurez votre MIDI dans Pure Data et tout devrait fonctionner.
+
+[[Category:Reference]]
+[[Category:Tidal-1+]]

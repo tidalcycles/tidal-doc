@@ -1,0 +1,9 @@
+मूलभूत पैटर्न [[Basic Patterns]]
+
+पैटर्न को बदलन [[Transforming Patterns]]
+
+विभिन्न प्रकार के पैटर्न [[Different Kinds of Pattern]]
+
+अनियमितता [[Randomness]]
+
+सैम्पल्ज़ में फेर बदल करना [[Manipulating samples]]

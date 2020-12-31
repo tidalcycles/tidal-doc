@@ -1,0 +1,12 @@
+{{DISPLAYTITLE:ghost}} 
+[[Type signature|Type]]: <source inline>ghost :: Pattern ControlMap -> Pattern ControlMap</source>
+
+'''ghost''' adds quieter, pitch-shifted, copies of an event after the event, emulating ghost notes that are common in drumming patterns. 
+
+<source>
+d1 $ stack [ ghost $ sound "~ sn", sound "bd*2 [~ bd]" ]
+</source>
+
+The example above creates a kick snare pattern with ghost notes applied to the snare hit.
+
+[[Category:Functions]]

@@ -1,0 +1,1 @@
+也可以使用 <syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> 的pattern當主要結構，只要把它移到左邊。

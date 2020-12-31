@@ -1,0 +1,30 @@
+<languages/>
+Pour revenir à une version antérieure de Tidal, utilisez la commande <source inline lang="bash">ghc-pkg</source>. Par exemple :
+
+<source lang="bash">
+ghc-pkg list tidal
+</source>
+
+Cette ligne va lister toutes les versions installées. S'il y en a plus d'une, la plus récente sera utilisée.
+
+Pour désinstaller une version, vous pouvez taper :
+
+<source lang="bash">
+ghc-pkg unregister tidal-1.0.6
+</source>
+
+Faites cela pour chaque version jusqu'à ce que la plus récente soit celle que vous désirez. 
+
+Si vous ne possédez pas la version que vous souhaitez, vous pouvez taper la ligne suivante :
+
+<source lang="bash">
+cabal install tidal-0.9.10
+</source>
+
+= Atom =
+
+Vous aurez besoin d'installer une version antérieure du package atom, qui correspond à votre version. Vous pouvez également faire cela depuis le terminal. Pour installer une version compatible avec Tidal 0.9.x, faites :
+
+<source lang="bash">
+apm install tidalcycles@0.12.1
+</source>

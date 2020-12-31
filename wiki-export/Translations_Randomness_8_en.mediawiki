@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>rand</syntaxhighlight> generates a random decimal between 0 and 1

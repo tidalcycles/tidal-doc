@@ -1,0 +1,6 @@
+These functions are used to turn patterns of strings (words) or numbers into ''control patterns'', which govern how samples are played in the SuperDirt audio synthesiser (or other software you're controlling with tidal). This includes audio control functions such as [[gain]] and [[pan]], sample manipulation functions such as [[begin]] and [[end]], and effect functions such as [[delay]] and [[shape]].
+
+See the [[Control Functions]] page for a handy summary of the available control functions.
+
+[[Category:Functions]]
+[[Category:Reference]]

@@ -1,0 +1,26 @@
+<languages/>
+{{DISPLAYTITLE:every}} 
+[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>every :: Pattern Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a</syntaxhighlight>
+
+'''every''' est une fonction qui appliquer une autre fonction de manière conditionnelle. <code>every</code> requiert trois arguments : 
+# une fréquence (3 pour appliquer la fonction tout les trois cycles)
+# une fonction
+# un pattern 
+
+Voici comment renverser un pattern tout les trois cycles :
+
+<syntaxhighlight lang="haskell">
+d1 $ every 3 rev $ n "0 1 [~ 2] 3" # sound "arpy"
+</syntaxhighlight>
+
+Notez que si la fonction que vous appliquez requiert des paramètres additionnels tels que <code>fast 2</code>, vous aurez besoin d'envelopper cette fonction dans des parenthèses. Observez cet exemple :
+
+<syntaxhighlight lang="haskell">
+d1 $ every 3 (fast 2) $ n "0 1 [~ 2] 3" # sound "arpy"
+</syntaxhighlight>
+
+Si vous ne le faites pas, <code>every</code> pensera que vous utilisez un nombre trop important d'arguments.
+
+'''Voir aussi :''' [[every']]
+
+[[Category:Functions]] [[Category:Higher-order functions]] [[Category:Conditional Transformers]]

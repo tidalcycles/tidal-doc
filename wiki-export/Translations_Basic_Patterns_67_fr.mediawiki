@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> affecte la vitesse de lecture de la sample. Puisque 2 jouera le sample deux fois plus rapidement, la hauteur du sample joué sera une octave plus haut.

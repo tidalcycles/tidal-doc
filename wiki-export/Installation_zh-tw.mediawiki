@@ -1,0 +1,20 @@
+<languages/>
+= 更新 tidal =
+
+如果你已經安裝好tidal, 到[[Upgrading|更新導覽]]頁面一步步操作
+
+= 從頭開始安裝 =
+
+"備註：此文檔推薦Atom作為Tidal代碼編輯器。如果你希望使用其他編輯器，可以參閱 [[List of tidal editors]]"
+
+選擇你的操作系統：
+
+<div class="mw-translate-fuzzy">
+* [[Linux_installation|Linux]]
+* [[MacOS_installation|macOS]]
+* [[Windows_installation|Windows]]
+</div>
+
+= 疑難雜症？ =
+
+* [[Tidal安裝疑難排除]]

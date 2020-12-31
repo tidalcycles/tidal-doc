@@ -1,0 +1,3 @@
+<syntaxhighlight lang="haskell">
+d1 $ sound "bd" # speed (cF 1 "hello")
+</syntaxhighlight>

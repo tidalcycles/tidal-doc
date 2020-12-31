@@ -1,0 +1,1 @@
+Ajusta una subsecuencia en un paso usando corchetes:

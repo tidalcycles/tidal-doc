@@ -1,0 +1,2 @@
+* <code>ccn</code> - the CC param number you want to control: <code>ccn 30</code>
+* <code>ccv</code> - the value to send to the CC param, ranging from 0 to 127: <code>ccv 64</code>

@@ -1,0 +1,1 @@
+See the standard [https://github.com/tidalcycles/Tidal/blob/master/BootTidal.hs BootTidal.hs] for how the usual functions for interacting with tidal are defined.

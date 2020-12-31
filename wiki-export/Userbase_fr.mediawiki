@@ -1,0 +1,68 @@
+<languages/>
+= Bien démarrer =
+
+* [[Installation]]
+* [[Upgrading | Mise à jour]]
+* [[Start tidalcycles and superdirt for the first time | Démarrer Tidal Cycles et SuperDirt pour la première fois]]
+* [[Tutorial]]
+
+= Configuration =
+
+* [[Installation troubleshooting | Dépannage]]
+* [[Configuration]]
+* [[Reverting to an earlier version | Revenir à une version antérieure]]
+* [[Custom Samples | Samples personnalisées]]
+* [[Multi-user Tidal | Tidal collaboratif]]
+* [[Custom OSC | OSC]]
+* [[MIDI]]
+* [[Separate audio outputs | Séparer les pistes audio]]
+* [[Multichannel sound | Son multicanal]]
+
+= Les patterns =
+
+* [[Tutorial | Guide]]
+* [[Interaction | Interaction]]
+* [[Controller Input | Contrôles]]
+* [[Understanding the $ | Comprendre le $ ]]
+* [[Combining pattern structure | Combiner des patterns ]]
+* [[Tidal workshop worksheet | Feuille pour apprendre Tidal]] - pensée pour des ateliers, mais utile pour apprendre seul !
+* [[Building up patterns | Construire des patterns]] - exemples pas à pas.
+
+= Documentation =
+
+* [[:Category:Elemental patterns| Patterns élémentaires ]] - [[Oscillators | Oscillateurs]] et autres patterns.
+* [[:Category:Functions|Fonctions]] - pour transformer et combiner les patterns 
+* [[:Category:Control Functions| Fonctions de contrôle]] - Pour créer des patterns d'effets !
+* [[All the functions | Toutes les fonctions]] - La (longue) liste de toutes les fonctions, documentées et non documentées
+* [[:Category:Transitions|Transitions]] - Pour créer des transitions souples entre les patterns
+* [[All effects and synths | Tout les effets et synthétiseurs ]] - Une liste des effets internes et des synthétiseurs
+* [[Sequence parser syntax | Syntaxe du système de patterns]]
+
+= Comprendre Tidal =
+
+* [[What is a pattern? | Qu'est-ce qu'un pattern ? ]]
+* [[Type signatures | Type de données ]]
+* [[Haskell resources | Ressources pour Haskell]]
+
+= Ressources externes =
+
+== Guides vidéo ==
+
+* [https://www.youtube.com/playlist?list=PLybSFICi4UlgKU6ZVerY0HfdNCl3AIoPU Playlist "officielle" de vidéos pour Tidal]
+* [https://www.youtube.com/playlist?list=PLKgxw7RG3hcRHyBFsPr5opr1iu8wbNIgP Guides vidéos de Kindohm] 
+
+== Guides au format texte ==
+
+* [https://web.archive.org/web/20190427222710/http://ericfairbanks.org/music/tidal/code/2017/05/31/an-introduction-to-tidal.html Une introduction à Tidal (via Haskell)]
+
+== Publications, interviews, etc ==
+
+* [[Academic publications | Publications académiques]]
+* [[Interviews and articles | Interviews et articles ]]
+
+= Communauté et développement =
+
+* [[Contributing tests | Contribuer aux tests]]
+* [[History of Tidal | Histoire de Tidal]]
+* [[Changes in Tidal 1.0.0 | Changements survenus lors de Tidal 1.0.0]]
+* [[Friends and relations | Amis et réseaux]]

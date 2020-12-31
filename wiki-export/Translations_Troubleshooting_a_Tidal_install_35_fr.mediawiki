@@ -1,0 +1,1 @@
+Cela signifie que des processus zombies de SuperCollider tournent déjà, bloquant les ports. Quittez SuperCollider et tuez les processus <code>sclang</code> et <code>scserver</code> dans votre gestionnaire de tâches. Si cela ne fonctionne toujours pas, redémarrez votre ordinateur.

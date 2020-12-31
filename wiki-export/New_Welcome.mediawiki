@@ -1,0 +1,55 @@
+<languages/>
+<translate>
+
+'''TidalCycles''' (or 'tidal' for short) is free/open source software, that allows you to make patterns with code, whether live coding music at algoraves or composing in the studio.
+
+It includes language for describing flexible (e.g. polyphonic, polyrhythmic, generative) sequences. It also has an extensive library of patterning functions, for transforming and combining them.
+
+Tidal is highly composable in that pattern transformations can be easily combined together, allowing you to quickly create complex patterns from simple ingredients.
+
+Tidal does not make sound itself, but is designed for use with the featureful SuperDirt synth, and can control other synths over Open Sound Control or MIDI. Whether you're using SuperDirt or a synth, every filter and effect can be patterned and manipulated independently with Tidal patterns.
+
+Tidal is embedded in the Haskell language, although you don't have to learn Haskell to learn Tidal - most tidal coders have little or no experience in software engineering.
+
+{{#evt:
+service=youtube
+|id=https://www.youtube.com/watch?v=n9AqNvIbFXo&list=PLybSFICi4UliK17U6rxPneXAyxvmGAe5T&index=4|alignment=right
+|dimensions=320
+|container=frame
+|description=Playlist of performances with Tidal from our [https://www.youtube.com/channel/UCG5Ynx9mvouuSHYEyxaJ0Cg/playlists youtube channel]
+}}
+
+== Getting started ==
+* [[Installation]]
+* [[Upgrading]]
+* [[Start tidalcycles and superdirt for the first time]]
+* [[Tutorial]]
+* [[Userbase]] (reference)
+
+This website is a wiki, which means that as well as enjoying these resources, you can [[Help:How to contribute|improve and add to them]].
+
+== "Learning TidalCycles" Course ==
+There's now an online "Learning TidalCycles" course, lead by Alex who created Tidal. It's based on around pre-recorded videos so you can join at any time. The [https://club.tidalcycles.org/t/weeks-1-4-index/395 first four weeks] is now fully open access, and the second four weeks is available on a [https://blog.tidalcycles.org/shop/ pay-as-you-feel basis].
+[[File:kofi1.png|thumb|link=http://ko-fi.com/yaxulive]]
+
+== Contributing coffee ==
+If you enjoy TidalCycles, please consider helping speed up development by [http://ko-fi.com/yaxulive contributing coffees] to Alex! He's put years into making Tidal, and one-off or regular coffees help speed up both its development and documentation.
+
+== Related links ==
+* [https://club.tidalcycles.org/ TidalCycles club] - community forum
+* [http://toplap.org/ TOPLAP] - the home of live coding
+* There's a lot of other fine live coding environments! See the TOPLAP [https://toplap.org/all-things-live-coding-a-curated-list/ long list] of them.
+* [http://algorave.com/ Algorave] - algorithmic dance culture
+
+== Credits ==
+TidalCycles and SuperDirt have been developed with contributions from a wide range of people - [https://github.com/tidalcycles/Tidal/graphs/contributors Tidal contributors] / [https://github.com/musikinformatik/SuperDirt/graphs/contributors SuperDirt contributors].
+
+TidalCycles was initiated by Alex McLean around 2009 during doctoral work funded by EPSRC. Alex's ongoing work on Tidal is partly supported by Ko-Fi contributors and the [https://penelope.hypotheses.org/ PENELOPE] project (under the Horizon 2020 research and innovation programme of the European Union, grant agreement No 682711).
+
+TidalCycles has been heavily inspired by the work of many others including Bernard Bel, Laurie Spiegel and Adrian Ward.
+
+== Meta ==
+* [[Help:How to contribute]] to this wiki
+* [[Ideas for this wiki]]
+
+</translate>

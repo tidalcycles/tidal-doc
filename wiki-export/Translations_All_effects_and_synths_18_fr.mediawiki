@@ -1,0 +1,4 @@
+== Phaser ==
+Paramètres :
+# phaserrate/phasr : la vitesse de l'effet. 
+# phaserdepth/phasdp : la profondeur de l'effet.

@@ -1,0 +1,1 @@
+Plus il y aura de steps dans votre pattern, plus celui-ci aura tendance à accélérer en proportion.

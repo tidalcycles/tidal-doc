@@ -1,0 +1,5 @@
+<source>
+// Evaluate the block below to start the mapping MIDI -> OSC.
+(
+var on, off, cc;
+var osc;

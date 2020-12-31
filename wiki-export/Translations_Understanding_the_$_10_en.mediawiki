@@ -1,0 +1,4 @@
+<syntaxhighlight lang="Haskell">
+-- this gives an error!
+fast 2 rev "1 2 3"
+</syntaxhighlight>

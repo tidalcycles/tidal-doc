@@ -1,0 +1,1 @@
+If you just want a pattern to run for one cycle and then stop, you can do use <syntaxhighlight lang="haskell" inline>once</syntaxhighlight>:

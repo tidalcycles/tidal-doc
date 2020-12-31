@@ -1,0 +1,1 @@
+'''append''' combines two patterns into a new pattern, where cycles alternate between the first and second pattern.

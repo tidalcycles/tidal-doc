@@ -1,0 +1,3 @@
+<source>
+p "midictl" $ midicmd "start/4" # s "midi" 
+</source>

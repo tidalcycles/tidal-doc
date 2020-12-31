@@ -1,0 +1,1 @@
+Nach der Installation musst du noch die Einstellung für den "ghci path"-des tidalcycles-Packages  ändern: <source inline>~/.ghcup/bin/ghci</source>

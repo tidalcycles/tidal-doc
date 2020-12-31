@@ -1,0 +1,2 @@
+If you give two numbers in brackets after an element in a pattern,
+then Tidal will try to distribute the first number of sounds equally across the second number of steps.

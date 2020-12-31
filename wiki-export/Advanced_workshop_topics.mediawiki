@@ -1,0 +1,28 @@
+
+= Worksheet for Tokyo advanced tidal workshop =
+
+https://github.com/yaxu/tidal-workshop/blob/master/advanced.tidal
+
+== Useful wiki links ==
+
+** [[Installation]]
+** [[Configuration]]
+** [[Interaction]]
+** [[Controller Input]]
+** [[Combining pattern structure]]
+** [[Tempo patterns]]
+* community
+
+== Scratchpad for ideas ==
+
+* orbits for multiple global effects and routing
+* hidden gems
+* weave
+* stripe
+* combining functions with .
+* making your own functions
+* monads
+* midi
+* troop
+* escaping the grid - with nudge
+* tidal 1.0.0-pre changes

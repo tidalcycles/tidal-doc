@@ -1,0 +1,1 @@
+Randomizes the order of the bins. The trigger will select a new random ordering.)</small>

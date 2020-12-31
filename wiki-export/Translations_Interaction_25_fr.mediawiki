@@ -1,0 +1,1 @@
+<code>cps</code> n'est plus une fonction indépendante mais une fonction de contrôle. Jouer à modifier les <code>cps</code> est assez fun. Les patterns n'ont pas pour le moment de tempo indépendant ! Si vous changez le <code>cps</code> d'un pattern, tout les patterns suivront.

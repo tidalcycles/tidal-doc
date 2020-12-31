@@ -1,0 +1,2 @@
+
+Wenn du die Installationsanweisungen für TidalCycles befolgt hast, es aber trotzdem nicht funktioniert, findest du hier einige Möglichkeiten, um das Problem (oder die Probleme) zu lokalisieren und zu beheben.

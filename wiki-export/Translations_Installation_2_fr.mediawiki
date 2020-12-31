@@ -1,0 +1,1 @@
+Si vous avez déjà installé Tidal, suivez les [[Upgrading| instructions de mise à jour]].

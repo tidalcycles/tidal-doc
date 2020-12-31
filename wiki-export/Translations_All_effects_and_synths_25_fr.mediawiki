@@ -1,0 +1,3 @@
+== Filtre passe-bande ==
+# bandf/bpf : la fréquence de coupure.
+# bandq/bpfq : la résonance.

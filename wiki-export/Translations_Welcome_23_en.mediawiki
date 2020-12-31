@@ -1,0 +1,1 @@
+TidalCycles was initiated by Alex McLean around 2009 during doctoral work funded by EPSRC. Alex's ongoing work on Tidal is partly supported by Ko-Fi contributors and the [https://penelope.hypotheses.org/ PENELOPE] project (under the Horizon 2020 research and innovation programme of the European Union, grant agreement No 682711).

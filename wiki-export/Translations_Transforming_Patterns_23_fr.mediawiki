@@ -1,0 +1,1 @@
+... vous pouvez aussi prévoir un effet de la même manière, en utilisant <syntaxhighlight lang="haskell" inline>#</syntaxhighlight>.

@@ -1,0 +1,3 @@
+<syntaxhighlight lang="haskell">
+p "cpsfun" $ s "bd sd(3,8)" # cps (slow 8 $ 0.5 + saw)
+</syntaxhighlight>

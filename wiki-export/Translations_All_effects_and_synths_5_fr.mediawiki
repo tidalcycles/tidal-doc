@@ -1,0 +1,5 @@
+== Leslie ==
+Paramètres : 
+# leslie : intensité de l'effet sur le signal d'origine.
+# lrate : vitesse de la cabine.
+# lsize : taille de la cabine. Selon la valeur, créé un effet doppler intéressant.

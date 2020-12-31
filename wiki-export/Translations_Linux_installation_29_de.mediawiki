@@ -1,0 +1,1 @@
+Starte Atom und installiere das TidalCycles-Plugin. Du findest es im Menü unter Bearbeiten > Einstellungen > Installieren. Gib hier dann "tidalcycles" in das Suchfeld ein. Sobald das PlugIn installiert ist, starte Atom neu.

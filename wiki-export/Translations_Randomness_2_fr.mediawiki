@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>sometimes</syntaxhighlight> fonctionne un peu comme <syntaxhighlight lang="Haskell" inline>every</syntaxhighlight>, mais au lieu de se produire de façon certaine après un certain intervalle de temps, ici, notre transformation n'aura qu'une chance aléatoire d'avoir lieu.

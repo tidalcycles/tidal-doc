@@ -1,0 +1,2 @@
+We can change the length of the cycle using <source inline>setcps</source> (where cps stands for cycles per
+second) - this is a bit like bpm (beats per minute).

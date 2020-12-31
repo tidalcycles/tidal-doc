@@ -1,0 +1,1 @@
+It may also be that the arc of an event might extend outside the arc in the query state. This is one case where we get part of an arc back - the part will be the intersection of the arc of the query and that of the event.

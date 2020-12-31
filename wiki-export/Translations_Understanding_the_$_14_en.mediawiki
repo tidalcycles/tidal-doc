@@ -1,0 +1,1 @@
+Here the brackets make sure <syntaxhighlight lang="Haskell" inline>rev "1 2 3"</syntaxhighlight> is calculated first, before it is passed as a pattern to <syntaxhighlight lang="Haskell" inline>fast 2</syntaxhighlight>.

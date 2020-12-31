@@ -1,0 +1,1 @@
+Notice that <code>midichan</code> accepts a pattern of numbers, so you can use a pattern to play on different MIDI channels:

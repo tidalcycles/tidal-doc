@@ -1,0 +1,7 @@
+---
+title: Translations:All effects and synths/110/en
+permalink: wiki/Translations:All_effects_and_synths/110/en/
+layout: wiki
+---
+
+    d1 $ n (slow 2 $ fmap (*7) $ run 8) # s "supergong" # decay "[1 0.2]/4" # voice "[0.5 0]/8"

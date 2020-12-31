@@ -1,0 +1,28 @@
+<languages />
+Welcome to Tidal tutorial. This is designed to be used as a worksheet during hands-on beginner/mixed workshops, and is based on Tidalcycles version 0.9.10. 
+
+By Lucy Cheesman, adapted to wiki format by Alex McLean, edited by you (it's a wiki!).
+
+= Getting started =
+
+Once everything is installed, follow the following startup procedure each time.
+
+# Launch SuperDirt - In Supercollider, type 'SuperDirt.start' and run the code by holding down 'Ctrl' and pressing 'Enter' (while your cursor is on the same line as the code).
+# Launch TidalCycles - In Atom, start a new file and save it with a <syntaxhighlight lang="Haskell" inline>.tidal</syntaxhighlight> extension (e.g. `examples.tidal`)
+
+== Making notes ==
+
+<syntaxhighlight lang="Haskell">
+-- If you see a line of code with two dashes at the start like this, it’s called a comment.
+-- This is text that the computer will always ignore, so you can annotate your code.
+</syntaxhighlight>
+
+= Worksheets =
+
+* [[Basic Patterns]]
+* [[Transforming Patterns]]
+* [[Different Kinds of Pattern]]
+* [[Randomness]]
+* [[Manipulating samples]]
+
+[[Category:Reference]]

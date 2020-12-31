@@ -1,0 +1,1 @@
+<syntaxhighlight lang="Haskell" inline>~</syntaxhighlight> で休符/休みを加えます:

@@ -1,0 +1,1 @@
+Tidal hace todo lo posible para mapear patrones entre sí.
