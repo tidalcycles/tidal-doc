@@ -1,4 +1,4 @@
-# Welcome to TidalCycles
+# TidalCycles: Live coding and algorithmic pattern
 
 Tidalcycles (or just 'Tidal' for short) is software for making
 patterns with code, whether live coding music at algoraves or
