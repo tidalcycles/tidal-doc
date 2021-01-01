@@ -1,17 +1,20 @@
-# Welcome to MkDocs
+# Welcome to TidalCycles
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Tidalcycles (or just 'Tidal' for short) is software for making
+patterns with code, whether live coding music at algoraves or
+composing in the studio.
 
-## Commands
+It includes a simple and flexible notation for rhythmic sequences, and
+an extensive library of patterning functions for combining and
+transforming them. This allows you to quickly create complex patterns
+from simple ingredients.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+By default sound is made with the featureful *SuperDirt*
+synth/sampler, but you can control other synths using Open Sound
+Control or MIDI. Whether you're using SuperDirt or a synth, every
+filter and effect can be manipulated independently with Tidal
+patterns.
 
-## Project layout
+You can learn Tidal through experimentation and play - most Tidal
+coders have little or no experience in software engineering.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.

@@ -1,4 +1,5 @@
 site_name: TidalCycles
+site_url: https://doc.tidalcycles.org/
 theme:
   name: material
   palette:
@@ -11,3 +12,50 @@ theme:
     - search.share
 plugins:
   - search
+
+copyright: '&copy; 2020 contributors, CC BY-SA'
+
+# from patchbox os - useful?
+markdown_extensions:
+  - meta
+  - toc:
+      permalink: ''
+  - pymdownx.arithmatex
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  - footnotes
+
+nav:
+  - Introduction: index.md
+  - Installation: installation.md
+  - Tutorials: tutorials.md
+  - How-To guides: howtos.md
+  - Innards: innards.md
+  - Reference: reference.md
+  - Community:
+    - Getting help: help.md
+    - Discussion and sharing: forums.md
+  # - Raspberry Pi Essentials: 
+  #     - Install the Operating System to the SD Card: install-os-to-sd-card.md
+  #     - Find the IP Address: find-the-ip-address.md
+  #     - Remote Control Options: remote-control.md
+  # - First Run: 
+  #     - First Run Options: first-run-options.md
+  #     - Setup Wizard: setup-wizard.md
+  # - Modules: 
+  #     - Modules: modules.md
+  #     - Creating a Module: creating-a-module.md
+  #     - patchbox-module.json reference: patchbox-module-json.md
+  # - Software Guides: software-guides.md
+  # - amidiauto: amidiauto.md
+  # - Troubleshooting: troubleshooting.md
