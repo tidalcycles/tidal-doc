@@ -40,11 +40,9 @@ nav:
   - Installation: installation.md
   - Tutorials: tutorials.md
   - How-To guides: howtos.md
-  - Innards: innards.md
+  - Background: background.md
   - Reference: reference.md
-  - Community:
-    - Getting help: help.md
-    - Discussion and sharing: forums.md
+  - Community: community.md
   # - Raspberry Pi Essentials: 
   #     - Install the Operating System to the SD Card: install-os-to-sd-card.md
   #     - Find the IP Address: find-the-ip-address.md
