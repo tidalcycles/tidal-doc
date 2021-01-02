@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block site_meta %}
+  {{ super() }}
+      {% if config.extra.alternate is iterable %}
+        {% for alt in config.extra.alternate %}
+          <link rel="alternate" href="{{ alt.link | url }}" hreflang="{{ alt.lang | d(lang.t('language')) }}">
+        {% endfor %}
+      {% endif %}
+{% endblock %}
+
