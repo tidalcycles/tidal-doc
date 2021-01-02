@@ -11,7 +11,7 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
-  custom_dir: tidal-doc-theme
+  custom_dir: tidal-doc-theme/material
 plugins:
   - search
 
