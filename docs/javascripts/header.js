@@ -1,12 +1,9 @@
-function getOtherLanguages() {
-    let res = []
-    let links = document.getElementsByClassName('lang');
-    links.forEach((link) => {
-        if (link.dataset.lang !== link.dataset.defaultLang) {
-            res.push(langLinks[i].dataset.lang);
-        }
-    })
-    return res;
+function removeLangFromPath(path, otherLangs) {
+    let parts = path.split('/').filter(p => p !== '');
+    if (otherLangs.some(lang => parts[0] === lang)) {
+        parts = parts.slice(1);
+    }
+    return '/' + parts.join('/');
 }
 
 function setLanguageHrefs() {
@@ -17,14 +14,14 @@ function setLanguageHrefs() {
     let allLangs = links.map(link => link.dataset.lang);
     let otherLangs = allLangs.filter(lang => lang !== defaultLang);
 
+    let path = window.location.pathname;
+    let pathWithoutLang = removeLangFromPath(path, otherLangs);
+
     links.forEach(link => {
         let lang = link.dataset.lang;
-        let pathname = window.location.pathname;
-        let parts = pathname.split('/');
-        if (otherLangs.some(lang => lang === parts[0])) {
-            pathname = parts.slice(1).join('/');
-        }
-        let href = lang === defaultLang ? pathname : `/${lang}${pathname}`
+        let href = lang === defaultLang
+            ? pathWithoutLang
+            : `/${lang}${pathWithoutLang}`
         link.setAttribute('href', href);
     })
 }
