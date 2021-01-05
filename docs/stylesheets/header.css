@@ -1,0 +1,84 @@
+/* _header.scss */
+/* .md-header was replaced to .md-header-nav */
+.md-header-nav__options {
+    display: flex;
+    flex-shrink: 0;
+    max-width: 100%;
+    white-space: nowrap;
+    transition: max-width 0ms 250ms, opacity 250ms 250ms;
+}
+.md-header-nav__options > [data-md-state="hidden"] {
+    display: none;
+}
+[data-md-toggle="search"]:checked ~ .md-header-nav .md-header-nav__options {
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 0ms, opacity 0ms;
+}
+
+/* _select.scss */
+.md-select {
+    position: relative;
+    z-index: 1;
+}
+.md-select__inner {
+    position: absolute;
+    top: calc(100% - px2rem(4px));
+    left: 50%;
+    max-height: 0;
+    margin-top: px2rem(4px);
+    color: var(--md-default-fg-color);
+    background-color: var(--md-default-bg-color);
+    border-radius: px2rem(2px);
+    box-shadow: 0 px2rem(4px) px2rem(10px) rgba(0, 0, 0, 0.1), 0 0 px2rem(1px) rgba(0, 0, 0, 0.25);
+    transform: translate3d(-50%, px2rem(6px), 0);
+    opacity: 0;
+    transition: transform 250ms 375ms, opacity 250ms 250ms, max-height 0ms 500ms;
+}
+.md-select:focus-within .md-select__inner, .md-select:hover .md-select__inner {
+    max-height: px2rem(200px);
+    transform: translate3d(-50%, 0, 0);
+    opacity: 1;
+    transition: transform 250ms cubic-bezier(0.1, 0.7, 0.1, 1), opacity 250ms, max-height 250ms;
+}
+.md-select__inner::after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-top: px2rem(-4px);
+    margin-left: px2rem(-4px);
+    border: px2rem(4px) solid transparent;
+    border-top: 0;
+    border-bottom-color: var(--md-default-bg-color);
+    content: "";
+}
+.md-select__list {
+    max-height: inherit;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-size: px2rem(16px);
+    list-style-type: none;
+    border-radius: px2rem(2px);
+}
+.md-select__item {
+    line-height: px2rem(36px);
+}
+.md-select__link {
+    display: block;
+    width: 100%;
+    padding-right: px2rem(24px);
+    padding-left: px2rem(12px);
+    cursor: pointer;
+    transition: background-color 250ms, color 250ms;
+    scroll-snap-align: start;
+}
+[dir="rtl"] .md-select__link {
+    padding-right: px2rem(12px);
+    padding-left: px2rem(24px);
+}
+.md-select__link:focus, .md-select__link:hover {
+    background-color: var(--md-default-fg-color--lightest);
+}

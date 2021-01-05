@@ -12,6 +12,8 @@ theme:
     - search.highlight
     - search.share
   custom_dir: material-custom/
+extra_css:
+  - stylesheets/header.css
 plugins:
   - search
 
@@ -19,18 +21,12 @@ copyright: '&copy; 2020 contributors, CC BY-SA'
 
 extra:
   alternate:
-
-    # Switch to English
     - name: English
       link: /en/
       lang: en
-
-    # Switch to German
     - name: Deutsch
       link: /de/
       lang: de
-
-    # Switch to Japanese
     - name: 日本語
       link: /ja/
       lang: jaextra
@@ -77,14 +73,14 @@ nav:
   - Background: background.md
   - Reference: reference.md
   - Community: community.md
-  # - Raspberry Pi Essentials: 
+  # - Raspberry Pi Essentials:
   #     - Install the Operating System to the SD Card: install-os-to-sd-card.md
   #     - Find the IP Address: find-the-ip-address.md
   #     - Remote Control Options: remote-control.md
-  # - First Run: 
+  # - First Run:
   #     - First Run Options: first-run-options.md
   #     - Setup Wizard: setup-wizard.md
-  # - Modules: 
+  # - Modules:
   #     - Modules: modules.md
   #     - Creating a Module: creating-a-module.md
   #     - patchbox-module.json reference: patchbox-module-json.md
