@@ -12,6 +12,8 @@ theme:
     - search.highlight
     - search.share
   custom_dir: material-custom/
+extra_javascript:
+  - javascripts/header.js
 extra_css:
   - stylesheets/header.css
 plugins:
@@ -20,16 +22,13 @@ plugins:
 copyright: '&copy; 2020 contributors, CC BY-SA'
 
 extra:
-  alternate:
+  languages:
     - name: English
-      link: /en/
       lang: en
     - name: Deutsch
-      link: /de/
       lang: de
     - name: 日本語
-      link: /ja/
-      lang: jaextra
+      lang: ja
 
   social:
     - icon: fontawesome/brands/discourse

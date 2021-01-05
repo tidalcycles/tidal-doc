@@ -17,4 +17,3 @@ patterns.
 
 You can learn Tidal through experimentation and play - most Tidal
 coders have little or no experience in software engineering.
-
