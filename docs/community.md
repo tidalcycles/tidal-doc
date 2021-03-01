@@ -1,4 +1,7 @@
-# Community
+---
+id: community
+title: Community
+---
 
 ## Getting Help
 

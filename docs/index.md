@@ -1,4 +1,9 @@
-# TidalCycles: Live coding and algorithmic pattern
+---
+id: TidalCycles
+title: TidalCycles
+sidebar_label: Live coding and algorithmic pattern
+slug: /
+---
 
 Tidalcycles (or just 'Tidal' for short) is software for making
 patterns with code, whether live coding music at algoraves or

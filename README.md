@@ -1,33 +1,33 @@
-# tidal-doc
+# Website
 
-## Install
+This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
-This website is built using [mkdocs](https://www.mkdocs.org/).  We recommend
-you create a virtual environment for Python 3 first:
+## Installation
 
-```
-virtualenv -p python3 .venv/
-```
-
-Then, activate it and install requirements:
-
-```
-source .venv/bin/activate
-pip install -r requirements.txt
+```console
+yarn install
 ```
 
-## Usage
+## Local Development
 
-Run `mkdocs serve` to start a local web server. Then visit
-http://localhost:8000/ on your browser.  Page will refresh when some file
-changes.
+```console
+yarn start
+```
 
-There is a GitHub Action config file that automatically deploys on pushes in
-the main branch, so there is no need to deploy manually.  Please read more
-[here](https://www.mkdocs.org/user-guide/deploying-your-docs/).
+This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
 
+## Build
 
-## License
+```console
+yarn build
+```
 
-(c) contributors
-Licensed under Creative commons CC-BY-SA
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+## Deployment
+
+```console
+GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
