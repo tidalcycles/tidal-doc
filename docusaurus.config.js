@@ -24,6 +24,10 @@ module.exports = {
         },
         {to: 'blog', label: 'Blog', position: 'left'},
         {
+          type: 'localeDropdown',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/tidalcycles/Tidal',
           label: 'GitHub',
           position: 'right',
@@ -110,4 +114,17 @@ module.exports = {
       },
     ],
   ],
+  plugins: ['tidal-tailwindcss-loader'],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      fr: {
+        label: 'Français',
+      },
+    },
+  },
 };
