@@ -3,7 +3,7 @@ module.exports = {
   tagline: 'Live coding and algorithmic pattern',
   url: 'https://doc.tidalcycles.org',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'tidalcycles', // Usually your GitHub org/user name.
@@ -23,6 +23,10 @@ module.exports = {
           position: 'left',
         },
         {to: 'blog', label: 'Blog', position: 'left'},
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
         {
           href: 'https://github.com/tidalcycles/Tidal',
           label: 'GitHub',
@@ -110,4 +114,17 @@ module.exports = {
       },
     ],
   ],
+  plugins: ['tidal-tailwindcss-loader'],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      fr: {
+        label: 'Français',
+      },
+    },
+  },
 };

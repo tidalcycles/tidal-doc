@@ -12,12 +12,13 @@
     "clear": "docusaurus clear"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-alpha.70",
-    "@docusaurus/preset-classic": "2.0.0-alpha.70",
+    "@docusaurus/core": "2.0.0-alpha.99d83995a",
+    "@docusaurus/preset-classic": "2.0.0-alpha.99d83995a",
     "@mdx-js/react": "^1.6.21",
     "clsx": "^1.1.1",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "tidal-tailwindcss-loader": "file:plugins/tidal-tailwindcss-loader"
   },
   "browserslist": {
     "production": [
@@ -30,5 +31,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "postcss-import": "^12.0.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }
