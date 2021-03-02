@@ -3,7 +3,7 @@ module.exports = {
   tagline: 'Live coding and algorithmic pattern',
   url: 'https://doc.tidalcycles.org',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'tidalcycles', // Usually your GitHub org/user name.
