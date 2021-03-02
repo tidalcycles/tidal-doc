@@ -1,7 +1,7 @@
 module.exports = {
   title: 'TidalCycles',
   tagline: 'Live coding and algorithmic pattern',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://doc.tidalcycles.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
