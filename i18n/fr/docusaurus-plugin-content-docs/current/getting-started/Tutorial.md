@@ -1,6 +1,6 @@
 ---
 id: tutorial
-title: Tutorial
+title: Guide
 tags:
  - Functions|functions category
 ---

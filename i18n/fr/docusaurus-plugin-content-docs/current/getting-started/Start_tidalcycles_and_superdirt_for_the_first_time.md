@@ -1,6 +1,6 @@
 ---
 id: start-tidalcycles-and-superdirt-for-the-first-time
-title: Start tidalcycles and superdirt for the first time
+title: Démarrer Tidal Cycles et SuperDirt pour la première fois
 ---
 
 Démarrer Tidal Cycles est un processus en deux étapes :

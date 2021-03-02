@@ -1,6 +1,6 @@
 ---
 id: upgrading
-title: Upgrading
+title: Mise à jour
 ---
 
 Pour évitez les problèmes, nous vous recommandons de mettre à jour les
