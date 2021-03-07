@@ -3,12 +3,12 @@ id: installation
 title: Installation
 ---
 
-# Upgrading tidal
+## Upgrading tidal
 
 If you already have Tidal installed, follow the [upgrading
 instructions](/wiki/Upgrading "wikilink") instead.
 
-# Installing from scratch
+## Installing from scratch
 
 ''Note: the documentation here recommends the Atom editor for typing
 Tidal code. If you wish to use a different editor, take a look at the
@@ -16,13 +16,13 @@ Tidal code. If you wish to use a different editor, take a look at the
 
 Choose your operating system:
 
--   [Linux](/wiki/Linux_installation "wikilink")
--   Mac - [easy](/wiki/MacOS_automated_installation "wikilink") (via
+- [Linux](/wiki/Linux_installation "wikilink")
+- Mac - [easy](/wiki/MacOS_automated_installation "wikilink") (via
     tidal-bootstrap), or [manual](/wiki/MacOS_installation "wikilink")
--   Windows - [easy](/wiki/Windows_choco_install "wikilink") (via chocolatey),
+- Windows - [easy](/wiki/Windows_choco_install "wikilink") (via chocolatey),
     or [manual](/wiki/Windows_installation "wikilink")
 
-# Problems?
+## Problems?
 
--   [Troubleshooting a Tidal
+- [Troubleshooting a Tidal
     install](/wiki/Troubleshooting_a_Tidal_install "wikilink")
