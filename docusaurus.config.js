@@ -13,7 +13,7 @@ module.exports = {
       title: 'tidalcycles',
       logo: {
         alt: 'tidalcycles Logo',
-        src: 'img/logo.svg',
+        src: 'img/tidal.png',
       },
       items: [
         {
