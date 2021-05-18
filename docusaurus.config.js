@@ -10,19 +10,37 @@ module.exports = {
   projectName: 'tidal-doc', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'tidalcycles',
+      title: 'TidalCycles',
       logo: {
-        alt: 'tidalcycles Logo',
-        src: 'img/logo.svg',
+        alt: 'TidalCycles Logo',
+        src: 'img/tidal.png',
       },
       items: [
         {
           to: 'docs/',
-          activeBasePath: 'docs',
+          activeBaseRegex: 'docs/(?!api|advanced)',
           label: 'Docs',
           position: 'left',
         },
+        {
+          to: 'docs/advanced/understanding-innards/What_is_a_pattern',
+          activeBasePath: 'docs/advanced',
+          label: 'Advanced',
+          position: 'left',
+        },
+        {
+          to: 'docs/api/Functions',
+          activeBasePath: 'docs/api',
+          label: 'API',
+          position: 'left',
+        },
         {to: 'blog', label: 'Blog', position: 'left'},
+        {
+          to: 'docs/resource/Community',
+          activeBasePath: 'docs/resource/',
+          label: 'Community',
+          position: 'right',
+        },
         {
           type: 'localeDropdown',
           position: 'right',
@@ -99,14 +117,14 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/tidalcycles/tidal-doc/tree/main/',
+          editUrl: 'https://github.com/tidalcycles/tidal-doc/tree/main/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/tidalcycles/tidal-doc/tree/main/blog/',
+          editUrl: 'https://github.com/tidalcycles/tidal-doc/tree/main/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
