@@ -9,6 +9,9 @@ module.exports = {
   organizationName: "tidalcycles", // Usually your GitHub org/user name.
   projectName: "tidal-doc", // Usually your repo name.
   themeConfig: {
+    prism: {
+      additionalLanguages: ['haskell'],
+    },
     navbar: {
       title: "Tidal Cycles",
       logo: {
