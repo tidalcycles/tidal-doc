@@ -1,5 +1,5 @@
 ---
-id: TidalCycles
+id: Tidal Cycles
 title: French TidalCycles
 sidebar_label: Live coding and algorithmic pattern
 slug: /

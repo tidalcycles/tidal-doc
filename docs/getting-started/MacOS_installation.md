@@ -1,26 +1,22 @@
 ---
-title: MacOS installation
+title: MacOS (manual)
 permalink: wiki/MacOS_installation/
 layout: wiki
 ---
 
 <languages /> <translate>
 
-# Easy Installation
+## Try the easy installation script
 
 For an easy, hands-off install, try
 [tidal-bootstrap](https://github.com/tidalcycles/tidal-bootstrap/blob/master/README.md)
-instead of the manual instructions below.
-
-# Manual Installation
+. If you want to install Tidal Cycles manually, read the instructions below.
 
 ## Prerequisites
 
-### Required Prerequisites
-
 Before installing Tidal, make sure the following are installed first:
 
--   [Haskell](https://www.haskell.org/ghcup/) (via ghcup)
+-   [Haskell](https://www.haskell.org/ghcup/) (via [Ghcup](https://www.haskell.org/ghcup/))
 -   [Atom Editor](https://atom.io/) (if you don't like the atom editor
     for some reason, please check out the [list of
     alternatives](/wiki/List_of_tidal_editors "wikilink"))

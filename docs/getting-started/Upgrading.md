@@ -3,13 +3,13 @@ id: upgrading
 title: Upgrading
 ---
 
-To avoid problems, we warmly recommend upgrading all three components of
-TidalCycles together - the tidalcycles library itself, the editor
-plugin, and the SuperDirt synth.
+-----
+    
+Tidal Cycles is a composite software. To upgrade it, it is **highly** recommanded to upgrade everything along with the pattern library (the text editor and the SuperDirt audio engine as well). Each time a new version of **Tidal** is released, a new version of **SuperDirt** will likely follow, etc...
 
-# TidalCycles library
+## Library 
 
-Upgrade tidal with the following from a terminal window:
+Upgrade tidal with the following from a terminal window (**Linux**/**MacOS**/**Windows**):
 
 ``` shell
 cabal update
@@ -17,29 +17,19 @@ cabal install tidal --lib
 ```
 
 If you're using an older version of haskell you might have to miss the
-\`--lib\` off the above command.
+`--lib` off the above command.
 
-# Editor plugin
+## Editor plugin
 
-To upgrade your tidalcycles editor plugin (which might be referred to as
-an 'extension' or 'package'). In atom, you can do this via the
-preferences &gt; updates menu.
+Your text editor might refer to the Tidal Cycles plugin as an *extension* or as a *package*. Check the sidebar to get more information about ways to update your favorite text editor. 
 
-In VSCode, you can upgrade the TidalCycles package by viewing your
-extensions (View &gt; Extensions menu, or click on the Extensions icon
-on the left-hand activity bar), searching for TidalCycles and then
-choose to upgrade.
+## SuperDirt
 
-# SuperDirt
-
-To upgrade the SuperDirt sound synthesiser/sampler, open supercollider,
-and run the following (paste it in, put your cursor on that line, hit
-shift-enter):
+To upgrade the **SuperDirt** sound synthesiser/sampler, open **SuperCollider**,
+and paste the following command in the interactive editor. Select the text and press Shift+Enter:
 
 ``` c
 Quarks.update("SuperDirt")
 ```
 
-After this, you'll need to recompile the class library. You can do this
-either by restarting supercollider, or via the "Recompile class library"
-entry on the "Language" menu.
+You'll need to recompile the class library. You can do this either by simply restarting the software or via the *Recompile class library* entry on the *Language* top-bar menu.
