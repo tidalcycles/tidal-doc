@@ -3,6 +3,9 @@ title: Transitions
 id: transitions
 ---
 
+Transitions are functions you can use to switch musically between patterns.
+
+
 ## List of transitions
 ### anticipate / anticipateln
 ### clutch / clutchln
