@@ -1,6 +1,6 @@
 ---
 id: community
-title: Community
+title: Meet the community 
 ---
 
 ## Getting Help
@@ -13,19 +13,29 @@ sections. You can [search the
 forum](https://club.tidalcycles.org/search) to see if someone had the
 same problem or question as you before, or post a new topic (requires [free signup](https://club.tidalcycles.org/signup)).
 
+![tidal club](tidalclub.png)
 ## Discussion and sharing
 
-Again the [Tidal Club](https://club.tidalcycles.org/) forum is the main place for discussion and sharing.
+For live chat, you can find other TidalCyclists and live-coders on the following platforms:
 
-For live chat, you can find other TidalCyclists on the [TidalCycles
-discord server](https://discord.gg/CqWhZEfNbq), and in the `#tidal`
-channel on the [TOPLAP rocketchat
-server](https://chat.toplap.org/channel/tidal).
+[Discord](https://discord.com/invite/CqWhZEfNbq)             | [Rocket Chat](https://chat.toplap.org/channel/tidal) on the `#tidal` channel
+:-----------------------------------------------------------:|:-------------------------:
+![](discord.png)                                             |  ![](rocketchat.png)
+
+:::caution
+
+For troubleshooting, head for the Discord chat.
+
+:::
 
 ## Development and reporting issues
 
+If you wish to report an issue or to be involved in the development process:
+- [Tidal Cycles](https://github.com/tidalcycles/tidal) repository on GitHub (language and pattern library).
+- [SuperDirt](https://github.com/musikinformatik/SuperDirt) repository on GitHub (sound synthesis and SC).
+
 For Tidal development and issue tracker, see the [tidal
-repository](https://github.com/tidalcycles/tidal) on github.
+repository]on github.
 
 ## Social media
 

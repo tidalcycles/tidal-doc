@@ -1,103 +1,131 @@
 module.exports = {
   docs: {
-    Intro: ['TidalCycles', 'community', 'doc1'],
-    "Getting Started": [
+    "Presentation": [
+      "TidalCycles",
+      "community",
       {
-        'Installation': [
-          'getting-started/installation',
-          'getting-started/Linux_installation',
-          'getting-started/MacOS_automated_installation',
-          'getting-started/MacOS_installation',
-          'getting-started/Windows_choco_install',
-          'getting-started/Windows_installation',
+        "Install Tidal": [
+          "getting-started/linux_install",
+          "getting-started/macos_install",
+          "getting-started/windows_install",
+          "getting-started/tidal_start",
         ],
-        'Editor': [
-          'getting-started/editor/List_of_tidal_editors',
-          'getting-started/editor/Atom',
-          'getting-started/editor/Vim',
-          'getting-started/editor/Emacs',
-          'getting-started/editor/VS_Code',
-          'getting-started/editor/Sublime_Text',
-        ]
+        "Upgrade & Downgrade": [
+          "getting-started/upgrading",
+          "getting-started/downgrading",
+        ],
+        "Troubleshoot": [
+          "troubleshoot/troubleshoot_linux",
+          "troubleshoot/troubleshoot_macos",
+          "troubleshoot/troubleshoot_windows",
+        ],
+        "Get a Text Editor": [
+          "getting-started/editor/Atom",
+          "getting-started/editor/Vim",
+          "getting-started/editor/Emacs",
+          "getting-started/editor/VS_Code",
+          "getting-started/editor/Sublime_Text",
+        ],
       },
-      'getting-started/upgrading',
-      'getting-started/start-tidalcycles-and-superdirt-for-the-first-time',
-      'getting-started/tutorial'
     ],
     "Configuration": [
-      'configuration/Troubleshooting_a_Tidal_install',
-      'configuration/Configuration',
-      'configuration/Reverting_to_an_earlier_version',
-      'configuration/Custom_Samples',
-      'configuration/Multi-user_Tidal',
-      'configuration/Custom_OSC',
-      'configuration/MIDI',
-      'configuration/Separate_audio_outputs',
-      'configuration/Multichannel_sound',
+      {
+        "Tidal Configuration": [
+          "configuration/multiuser-tidal",
+          "configuration/boot-tidal",
+        ],
+        "I/O (MIDI, OSC)": [
+          "configuration/MIDIOSC/midi",
+          "configuration/MIDIOSC/osc",
+          "configuration/MIDIOSC/connecting_to_a_daw",
+        ],
+        "Audio samples": [
+          "configuration/Audio Samples/audiosamples",
+          "configuration/Audio Samples/default_library",
+        ],
+        "Sound and audio": [
+          "configuration/AudioConfig/audio_outputs",
+        ]
+      },
     ],
-    "Working With Patterns": [
-      'working-with-patterns/Interaction',
-      'working-with-patterns/Controller_Input',
-      'working-with-patterns/Understanding_the_$',
-      'working-with-patterns/Combining_pattern_structure',
-      'working-with-patterns/Building_up_patterns',
+    "Pattern Library": [
+      {
+        "Tutorials": [
+          "patternlib/tutorials/cycles",
+          "patternlib/tutorials/patterns",
+          "patternlib/tutorials/pattern_structure",
+          "patternlib/tutorials/mini_notation",
+          "patternlib/tutorials/oscillators",
+          "patternlib/tutorials/synthesizers",
+          "patternlib/tutorials/audio_effects",
+          "patternlib/tutorials/controls",
+          "patternlib/tutorials/tempo",
+          "patternlib/tutorials/transitions",
+        ],
+        "How-tos": [
+
+        ],
+      },
+      "working-with-patterns/Controller_Input",
+      "working-with-patterns/Understanding_the_$",
+      "working-with-patterns/Building_up_patterns",
     ],
     "Tidal workshop worksheet": [
-      'Tidal_workshop_worksheet/Introduction',
-      'Tidal_workshop_worksheet/Basic_Patterns',
-      'Tidal_workshop_worksheet/Transforming_Patterns',
-      'Tidal_workshop_worksheet/Different_Kinds_of_Pattern',
-      'Tidal_workshop_worksheet/Randomness',
-      'Tidal_workshop_worksheet/Manipulating_samples',
-    ]
+      "Tidal_workshop_worksheet/Introduction",
+      "Tidal_workshop_worksheet/Basic_Patterns",
+      "Tidal_workshop_worksheet/Transforming_Patterns",
+      "Tidal_workshop_worksheet/Different_Kinds_of_Pattern",
+      "Tidal_workshop_worksheet/Randomness",
+      "Tidal_workshop_worksheet/Manipulating_samples",
+    ],
   },
   advanced: {
     "Understanding innards": [
-      'advanced/understanding-innards/What_is_a_pattern',
-      'advanced/understanding-innards/Type_signatures',
-      'advanced/understanding-innards/Haskell_resources',
-    ]
+      "advanced/understanding-innards/What_is_a_pattern",
+      "advanced/understanding-innards/Type_signatures",
+      "advanced/understanding-innards/Haskell_resources",
+    ],
   },
-  api: [
-    'api/Functions',
-    'api/All_the_functions',
-    'api/All_the_controls',
-    'api/All_effects_and_synths',
+  reference: [
+    "reference/Functions",
+    "reference/All_the_functions",
+    "reference/All_the_controls",
+    "reference/All_effects_and_synths",
     {
-      'Transitions': [
-        'api/transitions/Category_Transitions',
-        'api/transitions/Quick_example_for_transition',
+      Transitions: [
+        "reference/transitions/Category_Transitions",
+        "reference/transitions/Quick_example_for_transition",
         {
-          'List of Transitions': [
-            'api/transitions/List_of_Transitions',
-            'api/transitions/anticipate',
-            'api/transitions/anticipateIn',
-            'api/transitions/clutch',
-            'api/transitions/clutchIn',
-            'api/transitions/histpan',
-            'api/transitions/interpolate',
-            'api/transitions/interpolateIn',
-            'api/transitions/jump',
-            'api/transitions/jumpIn',
-            'api/transitions/jumpIn\'',
-            'api/transitions/jumpMod',
-            'api/transitions/histpan',
-            'api/transitions/wait',
-            'api/transitions/waitT',
-            'api/transitions/wash',
-            'api/transitions/washIn',
-            'api/transitions/xfade',
-            'api/transitions/xfadeIn',
-          ]
-        }
-      ]
-    }
+          "List of Transitions": [
+            "reference/transitions/List_of_Transitions",
+            "reference/transitions/anticipate",
+            "reference/transitions/anticipateIn",
+            "reference/transitions/clutch",
+            "reference/transitions/clutchIn",
+            "reference/transitions/histpan",
+            "reference/transitions/interpolate",
+            "reference/transitions/interpolateIn",
+            "reference/transitions/jump",
+            "reference/transitions/jumpIn",
+            "reference/transitions/jumpIn'",
+            "reference/transitions/jumpMod",
+            "reference/transitions/histpan",
+            "reference/transitions/wait",
+            "reference/transitions/waitT",
+            "reference/transitions/wash",
+            "reference/transitions/washIn",
+            "reference/transitions/xfade",
+            "reference/transitions/xfadeIn",
+          ],
+        },
+      ],
+    },
   ],
   community: [
-    'resource/Community',
-    'resource/Friends_and_relations',
-    'resource/Contributing_tests',
-    'resource/Academic_publications',
-    'resource/History_of_Tidal',
-  ]
-}
+    "resource/Community",
+    "resource/Friends_and_relations",
+    "resource/Contributing_tests",
+    "resource/Academic_publications",
+    "resource/History_of_Tidal",
+  ],
+};

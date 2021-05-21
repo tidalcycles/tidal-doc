@@ -1,5 +1,5 @@
 ---
-title: Windows installation
+title: Windows (manual)
 permalink: wiki/Windows_installation/
 layout: wiki
 ---
@@ -98,3 +98,7 @@ the search box. Once that’s installed, restart atom.
 Now you are ready to [Start TidalCycles and SuperDirt for the first
 time](/wiki/Start_tidalcycles_and_superdirt_for_the_first_time "wikilink").
 </translate>
+
+## I've installed Tidal Cycles. What's next?
+
+Look at the sidebar. You will see a list of text editors you can install to interact with Tidal and start playing :smile:.
