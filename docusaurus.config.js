@@ -135,7 +135,7 @@ module.exports = {
   plugins: ["tidal-tailwindcss-loader"],
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "fr"],
+    locales: ["en"],
     localeConfigs: {
       en: {
         label: "English",
