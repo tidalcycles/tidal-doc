@@ -190,4 +190,67 @@ You will probably find that the downbeats for SuperDirt and your MIDI devices do
 Make sure any offset on the MIDI side is also set to 0, then gradually adjust one of them until they align. If they stay in alignment when you change the cps, all is good! 
 
 
+## Controller Input
 
+**Tidal** 1.0.0 now has support for external input, using the OSC protocol. Here's a quick guide to getting it going, including using a simple 'bridge' for getting MIDI input working. 
+
+### Setup
+
+To use MIDI, you don't have to worry too much about mapping OSC. However, you do have to run something to convert MIDI into OSC (**Tidal** is listening for OSC messages). Here's how to do that using SuperCollider. First, with **Tidal** and **SuperDirt** already running, run the below code block in **SuperCollider**:
+
+
+```c
+// Evaluate the block below to start the mapping MIDI -> OSC.
+(
+var on, off, cc;
+var osc;
+
+osc = NetAddr.new("127.0.0.1", 6010);
+
+MIDIClient.init;
+MIDIIn.connectAll;
+
+on = MIDIFunc.noteOn({ |val, num, chan, src|
+	osc.sendMsg("/ctrl", num.asString, val/127);
+});
+
+off = MIDIFunc.noteOff({ |val, num, chan, src|
+	osc.sendMsg("/ctrl", num.asString, 0);
+});
+
+cc = MIDIFunc.cc({ |val, num, chan, src|
+	osc.sendMsg("/ctrl", num.asString, val/127);
+});
+
+if (~stopMidiToOsc != nil, {
+	~stopMidiToOsc.value;
+});
+
+~stopMidiToOsc = {
+	on.free;
+	off.free;
+	cc.free;
+};
+)
+
+// Evaluate the line below to stop it.
+~stopMidiToOsc.value;
+```
+
+### Usage
+
+You should then be able to run a pattern such as the following, that uses `CC value 12`:
+
+```haskell
+d1 $ sound "bd" # speed (cF 1 "12")
+```
+
+If you want to use MIDI in a pattern forming statement, you may find it helpful to `segment` the input first, as the raw pattern coming from your MIDI device will be at very high resolution. This example takes only one value per cycle & remaps the value with the `range` function: 
+
+```haskell
+d1 $ sound "amencutup" + n (run (segment 1 $ range 1 16 $ cN 0 "32" ))
+```
+
+### Alternative with Pure Data
+
+The above **SuperCollider** instructions are most convenient if you're using **SuperDirt**, but as an alternative you can use **Pure Data** to convert midi to **OSC**. You can get puredata from [here](https://puredata.info/) (the `vanilla` version is recommended). Then, download [this file](https://raw.githubusercontent.com/tidalcycles/Tidal/main/pd/midi-osc-bridge.pd). Then if you start **Tidal**, open that file in **Pure Data**, and configure your **MIDI** device in **Pure Data**, things should start working.

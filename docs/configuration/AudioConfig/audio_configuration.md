@@ -119,3 +119,8 @@ for more fun with orbits:
 * Audio looping
 * Adding global / local effects
 
+## Audio mixing and mastering
+
+### StageMaster
+
+[StageMaster](https://github.com/calumgunn/StageMaster), made by Calum Gunn, is a light mastering chain for use during live coding performance in **SuperCollider**. It adds light compression, EQ and limiting to all output.

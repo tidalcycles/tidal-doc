@@ -3,6 +3,7 @@ module.exports = {
     "Presentation": [
       "TidalCycles",
       "community",
+      "showcase",
       {
         "Install Tidal": [
           "getting-started/linux_install",
@@ -42,6 +43,7 @@ module.exports = {
         "Audio samples": [
           "configuration/Audio Samples/audiosamples",
           "configuration/Audio Samples/default_library",
+          "configuration/Audio Samples/lazy_loading",
         ],
         "Sound and audio": [
           "configuration/AudioConfig/audio_outputs",
@@ -69,6 +71,9 @@ module.exports = {
       "working-with-patterns/Controller_Input",
       "working-with-patterns/Understanding_the_$",
       "working-with-patterns/Building_up_patterns",
+    ],
+    "Around Tidal": [
+      "around_tidal/tidal_history",
     ],
     "Tidal workshop worksheet": [
       "Tidal_workshop_worksheet/Introduction",
