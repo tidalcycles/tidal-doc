@@ -72,6 +72,11 @@ module.exports = {
       },
       "working-with-patterns/Understanding_the_$",
     ],
+    "How does Tidal Work?": [
+      "innards/meaning_of_dollar",
+      "innards/what_is_a_pattern",
+      "innards/type_signatures",
+    ],
     "Around Tidal": [
       "around_tidal/tidal_history",
     ],
