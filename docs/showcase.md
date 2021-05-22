@@ -114,3 +114,5 @@ All of these are open access publications:
 * [Hacking Perl in Nightclubs](https://www.perl.com/pub/2004/08/31/livecode.html/)
 
 
+## Other tutorials and documentations
+- [Eris Fairbanks Introduction to Tidal](https://web.archive.org/web/20190427222710/http://ericfairbanks.org/music/tidal/code/2017/05/31/an-introduction-to-tidal.html)
