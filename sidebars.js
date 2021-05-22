@@ -51,8 +51,9 @@ module.exports = {
       },
     ],
     "Pattern Library": [
+      "patternlib/tutorials/online_course",
       {
-        "Tutorials": [
+        "Basics": [
           "patternlib/tutorials/cycles",
           "patternlib/tutorials/patterns",
           "patternlib/tutorials/pattern_structure",
@@ -65,12 +66,11 @@ module.exports = {
           "patternlib/tutorials/transitions",
         ],
         "How-tos": [
-
+          "patternlib/howtos/buildarpeggios",
+          "patternlib/howtos/buildrhythms",
         ],
       },
-      "working-with-patterns/Controller_Input",
       "working-with-patterns/Understanding_the_$",
-      "working-with-patterns/Building_up_patterns",
     ],
     "Around Tidal": [
       "around_tidal/tidal_history",
