@@ -35,6 +35,10 @@ module.exports = {
           "configuration/multiuser-tidal",
           "configuration/boot-tidal",
         ],
+        "SuperDirt Configuration": [
+          "configuration/adding_effects",
+          "configuration/adding_global_effects",
+        ],
         "I/O (MIDI, OSC)": [
           "configuration/MIDIOSC/midi",
           "configuration/MIDIOSC/osc",
