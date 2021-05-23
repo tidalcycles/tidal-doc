@@ -74,11 +74,25 @@ module.exports = {
         "How-tos": [
           "patternlib/howtos/buildarpeggios",
           "patternlib/howtos/buildrhythms",
+          "patternlib/howtos/playchords",
           "patternlib/howtos/startpattern",
         ],
         "Tutorials": [
           "patternlib/tutorials/workshop",
         ],
+        "Small reference": [
+          "patternlib/tour/concatenation",
+          "patternlib/tour/accumulation",
+          "patternlib/tour/alteration",
+          "patternlib/tour/performance",
+          "patternlib/tour/conditions",
+          "patternlib/tour/time",
+          "patternlib/tour/harmony_melody",
+          "patternlib/tour/transitions",
+          "patternlib/tour/sampling",
+          "patternlib/tour/randomness",
+          "patternlib/tour/composition",
+        ]
       },
     ],
     "How does Tidal Work?": [
@@ -86,6 +100,7 @@ module.exports = {
         "Haskell": [
           "innards/haskell",
           "innards/meaning_of_dollar",
+          "innards/meaning_of_dot",
           "innards/type_signatures",
           "innards/contributing_test",
         ],
