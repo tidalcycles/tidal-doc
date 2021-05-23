@@ -64,6 +64,7 @@ module.exports = {
           "patternlib/tutorials/controls",
           "patternlib/tutorials/tempo",
           "patternlib/tutorials/transitions",
+          "patternlib/tutorials/state_values",
         ],
         "How-tos": [
           "patternlib/howtos/buildarpeggios",
@@ -89,6 +90,7 @@ module.exports = {
     ],
     "Around Tidal": [
       "around_tidal/tidal_history",
+      "around_tidal/changelog"
     ],
   },
   advanced: {

@@ -279,3 +279,35 @@ d1 $ sound "bd" # speed (cF 1 "hello")
 ## Debugging
 
 One way to debug OSC is to use a packet sniffer like [WireShark](https://www.wireshark.org/). You can put `osc` in the filter field to filter out everything except OSC packets. If you click on an `OSC network packet` and expand fields you can find a nicely formatted representation of your OSC message. 
+
+## OSC SuperDirt API
+
+For the curious, this is what an OSC trigger message from **Tidal Cycles** to **SuperDirt** looks like, as of **Tidal** version 1.7.x and probably later:
+
+Lets consider this pattern: `sound "bd" # speed 2`. This is the kind of OSC message it generates: 
+
+``` Bundle
+Timetag: Feb 22, 2021 21:54:04.960054397 UTC
+Size: 92 bytes
+Message: /dirt/play ,sfsfsfsisssf
+    Header
+        Path: /dirt/play
+        Format: ,sfsfsfsisssf
+    String: cps
+    Float: 0.4
+    String: cycle
+    Float: 40549
+    String: delta
+    Float: 2.5
+    String: orbit
+    Int32: 0
+    String: s
+    String: bd
+    String: speed
+     Float: 2
+```
+
+It consists of a single message, wrapped in a bundle, which provides the timestamp for when the event should be triggered. Because the OSC target for superdirt has `oSchedule` set to `Pre BundleStamp`, messages will be sent in bursts, ahead of time, and it's up to the receiver (such as superdirt) to schedule them accurately.
+
+The message inside the bundle has the path `/dirt/play`, and contains a variable number of name-value pairs. You can see the `s bd` and "speed 2" pairs, but Tidal adds a number of additional ones.. The current `cps` tempo, the position of the event in cycles (since **Tidal** started), the `delta` or duration of the event in seconds, and the `orbit` number.
+

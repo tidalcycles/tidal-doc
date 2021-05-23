@@ -3,9 +3,11 @@ title: Changelog
 id: changelog
 ---
 
+## Tidal 1.0.0
+
 Under the hood, **Tidal** `1.0.0` is a major rewrite. If you're used to previous versions, this will mostly be evident in terms of new functionality. But there are some breaking changes too. Below is a growing list of changes and additions. I, Yaxu, have tried to thank people who have done/contributed towards things, apologies to those I've missed. Things not marked are probably entirely my fault.
 
-## Name changes, new functions, changed behaviour
+### Name changes, new functions, changed behaviour
 
 * The old `scale` has been renamed to `range`
 * `scale` is now used to specify musical scale
@@ -26,13 +28,13 @@ Under the hood, **Tidal** `1.0.0` is a major rewrite. If you're used to previous
 * Easy ways to send Custom OSC to systems other than **SuperDirt** 
 * The meaning of `stut` and `stutWith` parameters have changed to match each other.
 
-## Interaction
+### Interaction
 
 * `solo` now does a 'true' solo. I.e. there is now also `unsolo`.
 * You can now run a cycle immediately, once, with `once`
 * Experimental transition interpolate for merging between new and old values
 
-## Other new features
+### Other new features
 
 * Tidal now takes input from OSC and MIDI - see `Configuration > I/O`. This means you can send numbers and strings into **Tidal** to be used as control values, function parameters, or parsed sequences
 * `'Show'` instance for patterns (and control patterns) is now more readable
@@ -41,17 +43,17 @@ Under the hood, **Tidal** `1.0.0` is a major rewrite. If you're used to previous
 * The parser can now produce binary (boolean) patterns where euclidean rhythms produce `true` and `false` values not, true and silence. Useful for use with e.g. `sew` and `struct`
 * Configuration is done via a boot script and not environment variables
 
-## Documentation
+### Documentation
 
 * Documentation has moved to a wiki (thanks to many, including `kindohm`)
 * What we used to call a 'param pattern' is now called a 'control pattern'
 
-## Tempo and scheduling changes
+### Tempo and scheduling changes
 
 * `setcps` is now used to set a fixed tempo
 * Tempo can now be patterned, using `cps` as a control pattern
 
-## Pattern structure
+### Pattern structure
 
 The way patterns are combined has been reworked:
 
@@ -59,13 +61,13 @@ The way patterns are combined has been reworked:
 * The behaviour of `|+|`, `|*|` has changed.
 * `#` works the same as before, but is now an alias for `>|`, rather than `|=|` (which no longer exists).
 
-## Regressions
+### Regressions
 
 * `tidal-midi` is not currently working (but midi is still working great via **SuperDirt**)
 * `tidalink` is not currently working (should be fixed soon)
 * classic **Dirt** is not currently supported (should also be fixed soon)
 
-## Internal and dev changes
+### Internal and dev changes
 
 * Switched to `system.random` for random number generation (thanks `d0kt0r0`
 * **MiniTidal** moved into core tidal repo (thanks `d0kt0r0`)
