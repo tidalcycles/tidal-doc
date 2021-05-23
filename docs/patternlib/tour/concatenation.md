@@ -105,3 +105,31 @@ Type: wedge :: Time -> Pattern a -> Pattern a -> Pattern a
 ```haskell
 d1 $ wedge (1/4) (sound "bd*2 arpy*3 cp sn*2") (sound "odx [feel future]*2 hh hh")
 ```
+
+## brak
+
+```haskell
+Type: brak :: Pattern a -> Pattern a
+```
+
+`brak` makes a pattern sound a bit like a breakbeat. It does this by every other cycle, squashing the pattern to fit half a cycle, and offsetting it by a quarter of a cycle.
+
+```haskell
+d1 $ brak $ sound "[feel feel:3, hc:3 hc:2 hc:4 ho:1]"
+```
+
+## flatpat
+
+```haskell
+Type: flatpat :: Pattern [a] -> Pattern a
+```
+
+`flatpat` takes a pattern of lists and flattens it into a pattern where all the events in each list happen simultaneously. For example, the following code uses flatpat in combination with listToPat to create an alternating pattern of chords.
+
+```haskell
+d1 $ n (flatpat $ listToPat [[0,4,7],[(-12),(-8),(-5)]]) # s "superpiano" # sustain 2
+```
+This code is equivalent to:
+```haskell
+d1 $ n ("[0,4,7] [-12,-8,-5]") # s "superpiano" # sustain 2
+```

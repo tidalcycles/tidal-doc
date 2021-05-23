@@ -92,6 +92,27 @@ sometimesBy 0.93 (# speed 2)
 
 to apply the speed control on average 93 times out of a hundred.
 
+
+### someCycles
+
+`someCycles` is similar to `sometimes`, but instead of applying the given function to random events, it applies it to random cycles. For example the following will either distort all of the events in a cycle, or none of them:
+
+```haskell
+d1 $ someCycles (# crush 2) $ n "0 1 [~ 2] 3" # sound "arpy"
+```
+
+### someCyclesBy
+
+As with `sometimesBy`, if you want to be specific, you can use `someCyclesBy` and a number. For example:
+
+```haskell
+someCyclesBy 0.93 (# speed 2)
+```
+
+will apply the speed control on average `93` cycles out of a hundred.
+
+
+
 ## Choosing
 ### choose
 ```haskell
@@ -200,3 +221,130 @@ d1 $ mask "1 ~ 1 ~ 1 1 ~ 1"
   $ s (cat ["can*8", "[cp*4 sn*4, jvbass*16]"])
   # n (run 8)
 ```
+
+### sew
+```haskell
+Type: Pattern Bool -> Pattern a -> Pattern a -> Pattern a
+```
+
+`sew` uses a pattern of boolean (true or false) values to switch between two other patterns. For example the following will play the first pattern for the first half of a cycle, and the second pattern for the other half.
+
+```haskell
+d1 $ sound (sew "t f" "bd*8" "cp*8")
+```
+The above combines two patterns of strings, and passes the result to the sound function. It's also possible to sew together two control patterns, for example:
+
+```haskell
+d1 $ sew "t <f t> <f [f t] t>" (n "0 .. 15" # s "future") (s "cp:3*16" # speed saw + 1.2)
+```
+You can also use Euclidean rhythm syntax in the boolean sequence:
+
+```haskell
+d1 $ sew "t(11,16)" (n "0 .. 15" # s "future") (s "cp:3*16" # speed sine + 1.5)
+```
+
+### stitch
+
+```haskell
+Type: Pattern Bool -> Pattern a -> Pattern a -> Pattern a
+```
+
+`stitch` uses the first (binary) pattern to switch between the following two patterns. The resulting structure comes from the binary pattern, not the source patterns. This differs from sew where the resulting structure comes from the source patterns. For example, the following uses a euclidean pattern to control CC0:
+
+```haskell
+d1 $ ccv (stitch "t(7,16)" 127 0) # ccn 0  # "midi"
+```
+
+### select
+
+```haskell
+select :: Pattern Double -> [Pattern a] -> Pattern a
+```
+Chooses between a list of patterns, using a pattern of floats (from `0` to `1`). 
+
+### selectF
+
+```haskell
+selectF :: Pattern Double -> [Pattern a -> Pattern a] -> Pattern a -> Pattern a
+```
+Chooses between a list of functions, using a pattern of floats (from `0` to `1`) 
+
+### pickF
+
+```haskell
+pickF :: Pattern Int -> [Pattern a -> Pattern a] -> Pattern a -> Pattern a
+```
+Chooses between a list of functions, using a pattern of integers.
+
+### squeeze
+
+```haskell
+squeeze :: Pattern Int -> [Pattern a] -> Pattern a
+```
+Chooses between a list of patterns, using a pattern of integers.
+
+### euclid
+
+```haskell
+Type: euclid :: Pattern Int -> Pattern Int -> Pattern a -> Pattern a
+```
+
+`euclid` creates a Euclidean rhythmic structure. It produces the same output as the Euclidean pattern string. For example:
+
+```haskell
+d1 $ euclid 3 8 $ sound "cp"
+```
+is the same as:
+
+```haskell
+d1 $ sound "cp(3,8)"
+```
+
+`euclid` accepts two parameters that can be patterns:
+```haskell
+d1 $ euclid "<3 5>" "[8 16]/4" $ s "bd"
+```
+
+### euclidInv
+```haskell
+Type: euclidInv :: Pattern Int -> Pattern Int -> Pattern a -> Pattern a
+```
+
+Inverts the pattern given by `euclid`. For example:
+```haskell
+d1 $ stack [euclid 5 8 $ s "bd",
+            euclidInv 5 8 $ s "hh27"]
+```
+to hear that the hi-hat event fires on every one of the eight even beats that the bass drum does not.
+
+### euclidFull
+
+```
+Type: euclidFull :: Pattern Int -> Pattern Int -> Pattern a -> Pattern a ->Pattern a
+```
+
+`euclidFull` is a convenience function for playing one pattern on the euclidean rhythm and a different pattern on the off-beat.
+```haskell
+euclidFull 5 8 (s "bd") (s "hh27")
+```
+
+is equivalent to our above example. 
+
+## ifp
+
+```haskell
+Type: ifp :: (Int -> Bool) -> (Pattern a -> Pattern a) -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+
+`ifp` decides whether to apply one or another function depending on the result of a test function, which is passed the current cycle as a number. For example:
+```haskell
+d1 $ ifp ((== 0).(flip mod 2))
+  (striate 4)
+  (# coarse "24 48") $
+  sound "hh hc"
+```
+This will apply `striate 4` for every even cycle, and `# coarse "24 48"` for every odd one.
+
+:::tip
+The test function does not rely on anything Tidal-specific, it uses plain Haskell functionality for operating on numbers. That is, it calculates the modulo of `2` of the current cycle which is either `0` (for even cycles) or `1`. It then compares this value against `0` and returns the result, which is either `True` or `False`. This is what the first part of `ifp`'s type signature signifies `(Int -> Bool)`, a function that takes a whole number and returns either `True` or `False`. 
+:::
