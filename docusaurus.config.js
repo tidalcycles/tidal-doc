@@ -107,10 +107,14 @@ module.exports = {
               label: "GitHub",
               href: "https://github.com/tidalcycles/Tidal",
             },
+            {
+              label: "Creative Commons Attribution ShareAlike",
+              href: "https://creativecommons.org/licenses/by-sa/4.0/",
+            },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} TidalCycles. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} TidalCycles. Creative Commons Attribution-ShareAlike`,
     },
   },
   presets: [
