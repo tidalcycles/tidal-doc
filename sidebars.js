@@ -35,6 +35,11 @@ module.exports = {
           "configuration/multiuser-tidal",
           "configuration/boot-tidal",
         ],
+        "SuperDirt Configuration": [
+          "configuration/adding_effects",
+          "configuration/adding_global_effects",
+          "configuration/adding_synthesizers",
+        ],
         "I/O (MIDI, OSC)": [
           "configuration/MIDIOSC/midi",
           "configuration/MIDIOSC/osc",
@@ -64,10 +69,12 @@ module.exports = {
           "patternlib/tutorials/controls",
           "patternlib/tutorials/tempo",
           "patternlib/tutorials/transitions",
+          "patternlib/tutorials/state_values",
         ],
         "How-tos": [
           "patternlib/howtos/buildarpeggios",
           "patternlib/howtos/buildrhythms",
+          "patternlib/howtos/startpattern",
         ],
         "Tutorials": [
           "patternlib/tutorials/workshop",
@@ -89,6 +96,7 @@ module.exports = {
     ],
     "Around Tidal": [
       "around_tidal/tidal_history",
+      "around_tidal/changelog"
     ],
   },
   advanced: {
