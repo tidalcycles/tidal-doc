@@ -38,6 +38,7 @@ module.exports = {
         "SuperDirt Configuration": [
           "configuration/adding_effects",
           "configuration/adding_global_effects",
+          "configuration/adding_synthesizers",
         ],
         "I/O (MIDI, OSC)": [
           "configuration/MIDIOSC/midi",
@@ -73,6 +74,7 @@ module.exports = {
         "How-tos": [
           "patternlib/howtos/buildarpeggios",
           "patternlib/howtos/buildrhythms",
+          "patternlib/howtos/startpattern",
         ],
         "Tutorials": [
           "patternlib/tutorials/workshop",
