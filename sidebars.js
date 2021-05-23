@@ -69,26 +69,26 @@ module.exports = {
           "patternlib/howtos/buildarpeggios",
           "patternlib/howtos/buildrhythms",
         ],
+        "Tutorials": [
+          "patternlib/tutorials/workshop",
+        ],
       },
-      "working-with-patterns/Understanding_the_$",
     ],
     "How does Tidal Work?": [
-      "innards/haskell",
-      "innards/meaning_of_dollar",
-      "innards/what_is_a_pattern",
-      "innards/type_signatures",
-      "innards/contributing_test",
+      {
+        "Haskell": [
+          "innards/haskell",
+          "innards/meaning_of_dollar",
+          "innards/type_signatures",
+          "innards/contributing_test",
+        ],
+        "Concept": [
+          "innards/what_is_a_pattern",
+        ]
+      },
     ],
     "Around Tidal": [
       "around_tidal/tidal_history",
-    ],
-    "Tidal workshop worksheet": [
-      "Tidal_workshop_worksheet/Introduction",
-      "Tidal_workshop_worksheet/Basic_Patterns",
-      "Tidal_workshop_worksheet/Transforming_Patterns",
-      "Tidal_workshop_worksheet/Different_Kinds_of_Pattern",
-      "Tidal_workshop_worksheet/Randomness",
-      "Tidal_workshop_worksheet/Manipulating_samples",
     ],
   },
   advanced: {
