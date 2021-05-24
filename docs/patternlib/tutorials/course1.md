@@ -1,13 +1,18 @@
 ---
-title: Course (> 1.6)
-id: course
+title: Course I (> 1.6)
+id: course1
 ---
+
 ## Week 1
+
+----
 ### Lesson 1: Tidal Interaction
 
 [![week1lesson1](https://img.youtube.com/vi/i9Rsn8-BAY4/0.jpg)](https://www.youtube.com/watch?v=i9Rsn8-BAY4)
 
 Aimed at people new to live coding, and goes through the basics of how to interact with **Tidal** - starting and stopping code and so on. Look at the video description to jump to different parts, and switch subtitles on if I'm speaking too fast.
+
+----
 
 ### Lesson 2: Loading sample packs
 
@@ -57,6 +62,7 @@ Here's the contents of samples-extra:
 * `lo` - 'lo' handdrum samples
 * `snare` - snare drums
 
+-----
 
 ### Lesson 3: mini-notation (part I)
 
@@ -119,6 +125,8 @@ d1 $ sound "[hi lo hi] [hi lo hi lo]"
 There's a lot more to go through with the `mini-notation`. Have fun with it, while also exploring the sounds in the `default samples` and `extra-samples` samplepack (You'll see a list of them in the **SuperCollider** "post window" when you start **SuperDirt**). If you haven't loaded up the `extra-samples` yet, have a look at the previous lesson 5.
 
 If you make something you like, be sure to save it somewhere and keep it safe! You might also like to keep several versions of a pattern, saving not only the final pattern but how you got there.. A lot of the music in live coding is in the edits, and not just the end result!
+
+-----
 
 ### Lesson 4: mini-notation (part II)
 
@@ -300,6 +308,9 @@ d1 $ sound "bd sd sd sd bd [sd sd sd]"
 ```
 
 ## Week 2
+
+-----
+
 ### Lesson 1: starting out with effects
 
 [![week2lesson1](https://img.youtube.com/vi/_bcG2_zDjyw/0.jpg)](https://www.youtube.com/watch?v=_bcG2_zDjyw)
@@ -372,6 +383,8 @@ d1 $ sound "kurt:4 kurt:4"
 
 d1 $ sound "kurt:4(3,8)" # shape "0 0.98" # gain "0.7"
 ```
+
+-----
 
 ### Lesson 2: manipulating time
 
@@ -460,6 +473,7 @@ d1 $ slow "0.5 <1 2>" $
 setcps 0.7
 ```
 
+-----
 
 ### Lesson 3: combining patterns with arithmetic
 
@@ -622,6 +636,8 @@ d1 $ n "[0 4 2] [4 1] 3 [2 0] 3 [3 1] 4 4" # sound "cpu"
   |+ speed (slow 4 saw)
 ```
 
+-----
+
 ## Week 3
 ### Lesson 1: exploring "every", meaning of "$"
 
@@ -743,6 +759,8 @@ d1 $ every 3 $ fast 2 $ sound "bd sd ~ cp"
 -- result in silence!
 ```
 
+-----
+
 ### Lesson 2: cut VS legato
 
 [![week3lesson1](https://img.youtube.com/vi/dQPmE1WaD1k/0.jpg)](https://www.youtube.com/watch?v=dQPmE1WaD1k)
@@ -757,7 +775,9 @@ d2 $ jux rev $ sound "sax(3,8)" # legato 1 # n 3
   # note "<[9 7] 5 [9 12]>" # djf 0.7 # sz 0.4 # room 0.4
 ```
 
-### Lesson3: slice and splice
+-----
+
+### Lesson 3: slice and splice
 
 [![week3lesson3](https://img.youtube.com/vi/hKhPdO0RKDQ/0.jpg)](https://www.youtube.com/watch?v=hKhPdO0RKDQ)
 
@@ -787,6 +807,9 @@ d1 $ splice 8 (fast "1 [0.5 0.75]" "6 1 [2 3] ~ 4 1 6*2 7")
 d1 $ splice 8 ("0 1 2 3 4 5") $ sound "break:4" # gain 1.1
 d2 $ sound "kick snare*2 clap:4" # speed 2
 ```
+
+-----
+
 ### Lesson 4: chop and striate
 
 [![week3lesson4](https://img.youtube.com/vi/A199q_kMhb0/0.jpg)](https://www.youtube.com/watch?v=A199q_kMhb0)
@@ -854,6 +877,8 @@ d1 $ slow 4 $ jux rev $ loopAt 16 $ striate 128 $ sound "bev*4"
 ```
 
 ## Week 4
+
+-----
 
 ### Lesson 1: continous patterns and random functions
 
@@ -948,6 +973,8 @@ d1 $ sound "bd(7,16)"
    # room 0.7
    # sz (range 0.4 1 $ slow 4 perlin)
 ```
+
+-----
 
 ### Lesson 2: random marathon (part I)
 
@@ -1143,9 +1170,11 @@ d1 $ sound "clap*2" # speed (range 0.1 2 rand)
 -- you're as likely to get lower speeds on the left as on the right.
 ```
 
+-----
+
 ### Lesson 3: random marathon (part II)
 
-[![week4lesson3](https://img.youtube.com/vi//0.jpg)](https://www.youtube.com/watch?v=nRMWkKTjsRk)
+[![week4lesson3](https://img.youtube.com/vi/nRMWkKTjsRk/0.jpg)](https://www.youtube.com/watch?v=nRMWkKTjsRk)
 
 ```haskell
 -- randcat
