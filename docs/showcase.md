@@ -59,6 +59,7 @@ Some **TidalCyclists**:
 * [Lil Data](http://data.pcmusic.info/) (Internet)
 * [Lysuc](http://lysuc888.blogspot.co.uk/) (Northern Argentina, AR)
 * [Miri Kat](https://mirikat.bandcamp.com/) (London, UK)
+* [MrReason](https://mrreason.org/) (Leipzig, DE)
 * [munshkr + x/q](http://ikag.github.io/) (Buenos Aires, AR)
 * [Nullish](http://nullish.org/) (Sheffield, UK)
 * [Polinski](http://www.paulwolinski.co.uk/) (Manchester, UK)
