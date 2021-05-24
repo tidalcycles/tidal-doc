@@ -88,7 +88,7 @@ function Home() {
  <iframe width="720" height="420" src="https://www.youtube.com/embed/xAo66V2rTUk"> </iframe>
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
  <iframe width="720" height="420" src="https://www.youtube.com/embed/ca3J1cztnrc"> </iframe>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
         </header>
         <main>
           {features && features.length > 0 && (

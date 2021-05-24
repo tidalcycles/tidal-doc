@@ -26,14 +26,14 @@ module.exports = {
           position: "left",
         },
         {
-          to: "docs/reference/Functions",
+          to: "docs/reference/cycles",
           activeBasePath: "docs/reference",
           label: "Reference",
           position: "left",
         },
         { to: "blog", label: "Blog", position: "left" },
         {
-          to: "docs/resource/Community",
+          to: "docs/community",
           activeBasePath: "docs/resource/",
           label: "Community",
           position: "right",
