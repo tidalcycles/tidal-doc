@@ -4,12 +4,15 @@ id: haskell
 ---
 ![haskell](haskellicon.png)
 
-**Tidal Cycles** is a domain-specific language made with the **Haskell** programming language. Here's a place to collect recommended **Haskell** resources.
+**Tidal Cycles** is a domain-specific language made with the **Haskell** programming language. **Haskell** is a general-purpose, statically typed and purely functional programming language. Haskell had always been used, since its creation, by researchers/teachers, industrials, finance, etc... Haskell is renowned for some of its most distinctive features: type classes, insistance on the purely-functional programming paradigm, elegant syntax. 
 
+**Haskell** can be compiled or interpreted. The **Glasgow Haskell Compiler** (a.k.a **GHC**) is the most widely used implementation. Tidal is using **GHCI**, the interpreted mode of **GHC** as a **REPL** to do *conversational programming* with the **Tidal** library. The text editor you are using when playing with **Tidal** acts as a "code-formatter" and "emitter", sending lines and statements directly to the **Haskell** interpreter.
+
+**Haskell** is sometimes considered to be a difficult language for newcomers. In reality, the situation is more complex than it appears. **Haskell** can confuse some programmers that are accustomed to another programming paradigm: imperative, object-oriented, etc... However, if you don't know anything about programming yet, Haskell can be a wonderful language to learn.
 
 ## General resources
 
-Note that a lot of **Haskell** tutorials focus on lists, which are important to learn, but aren't used very often in Tidal.
+Many **Haskell** tutorials are focusing on lists. They are important to learn, but are not very often used in **Tidal**.
 
 * [Haskell study plan](https://github.com/soupi/haskell-study-plan/blob/master/README.org)
 * [Learn Haskell in Y minutes](https://learnxinyminutes.com/docs/haskell/)
