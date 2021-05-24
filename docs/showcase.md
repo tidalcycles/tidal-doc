@@ -66,7 +66,7 @@ Some **TidalCyclists**:
 * [Nullish](http://nullish.org/) (Sheffield, UK)
 * [Polinski](http://www.paulwolinski.co.uk/) (Manchester, UK)
 * [Spednar](https://soundcloud.com/spednar) (Pittsburgh, US)
-* [u-mano u-dito](https://umanoudito.bandcamp.com) (Pittsburgh, US)
+* [u-mano u-dito](https://umanoudito.bandcamp.com) (Trento, IT)
 * [voodoochild](http://voodoochild.bandcamp.com/) (Valdivia, Chile)
 * [Yaxu](http://slab.org/) + also in [CCAI](http://ccai.lurk.org/), [Canute](http://canute.lurk.org/) and [Slub](http://slub.org/) etc (Sheffield, UK)
 * [yecto](https://yecto.github.io/) (Montréal / Mexico)
