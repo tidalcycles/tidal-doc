@@ -55,20 +55,21 @@ Some **TidalCyclists**:
 * [Digital Selves](https://www.youtube.com/watch?v=t2KeNblKSFM) (London UK)
 * [DuoF](https://duo-f.github.io/) fer + rapo (La Plata, AR)
 * [Heavy Lifting](https://heavy-lifting.github.io/) (Sheffield, UK)
+* [Khoparzi](https://khoparzi.com/) (Allahabad / Bombay, India)
 * [Kindohm](http://kindohm.com/) (Minneapolis, US)
 * [Lil Data](http://data.pcmusic.info/) (Internet)
 * [Lysuc](http://lysuc888.blogspot.co.uk/) (Northern Argentina, AR)
+* [Mancvso](https://soundcloud.com/mancvso/) (Chile)
 * [Miri Kat](https://mirikat.bandcamp.com/) (London, UK)
 * [MrReason](https://mrreason.org/) (Leipzig, DE)
 * [munshkr + x/q](http://ikag.github.io/) (Buenos Aires, AR)
 * [Nullish](http://nullish.org/) (Sheffield, UK)
 * [Polinski](http://www.paulwolinski.co.uk/) (Manchester, UK)
 * [Spednar](https://soundcloud.com/spednar) (Pittsburgh, US)
+* [u-mano u-dito](https://umanoudito.bandcamp.com) (Trento, IT)
 * [voodoochild](http://voodoochild.bandcamp.com/) (Valdivia, Chile)
 * [Yaxu](http://slab.org/) + also in [CCAI](http://ccai.lurk.org/), [Canute](http://canute.lurk.org/) and [Slub](http://slub.org/) etc (Sheffield, UK)
 * [yecto](https://yecto.github.io/) (Montréal / Mexico)
-* [Khoparzi](https://khoparzi.com/) (Allahabad / Bombay, India)
-* [Mancvso](https://soundcloud.com/mancvso/) (Chile)
 
 ## Press
 
@@ -100,7 +101,7 @@ Some **TidalCyclists**:
 
 ### Tidal blog interviews
 * [Malitzin Cortes](http://blog.tidalcycles.org/cndsd/) a.k.a. CNDSD
-* [Mike Hodnick](http://blog.tidalcycles.org/kindohm-interview/) a.k.a. Kindohm 
+* [Mike Hodnick](http://blog.tidalcycles.org/kindohm-interview/) a.k.a. Kindohm
 
 ## Academic Publications
 

@@ -32,7 +32,7 @@ Once you are done with this first installation phase, please follow the tutorial
 
 `SuperDirt` is the audio engine for Tidal Cycles. Tidal will not be able to make any sound or to send MIDI/OSC without it! SuperDirt is also embedding the default audio samples used by Tidal. To install `SuperDirt`, open SuperCollider and paste the following line of code. Evaluate it by pressing Ctrl+Return:
 ```shell
-Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.1.3"); thisProcess.recompile()})
+Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.2"); thisProcess.recompile()})
 ```
 
 It might take a while :smile:! You will know when the installation process is done by looking at the logs. You should see the following:
@@ -63,10 +63,10 @@ installation is done, you can exit the interpreter by pressing Ctrl + C.
 
 **III - SC3 Plugins**
 
-`SC3Plugins` is a community-made extension for SuperCollider. Installing it is **highly** recommanded. You won't be able to use the default synthesizers provided with Tidal Cycles without it. Please be sure to read [these instructions](https://supercollider.github.io/sc3-plugins/) to get the extension. 
+`SC3Plugins` is a community-made extension for SuperCollider. Installing it is **highly** recommanded. You won't be able to use the default synthesizers provided with Tidal Cycles without it. Please be sure to read [these instructions](https://supercollider.github.io/sc3-plugins/) to get the extension.
 
 - **Ubuntu** / **Mint** / **Debian**: follow the instructions above.
-- **Arch** / **Manjaro**: there is an up-to-date package in the [Community repository](https://archlinux.org/packages/community/x86_64/sc3-plugins/). 
+- **Arch** / **Manjaro**: there is an up-to-date package in the [Community repository](https://archlinux.org/packages/community/x86_64/sc3-plugins/).
 
 :::caution
 
