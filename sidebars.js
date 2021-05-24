@@ -50,6 +50,7 @@ module.exports = {
           "configuration/Audio Samples/audiosamples",
           "configuration/Audio Samples/default_library",
           "configuration/Audio Samples/lazy_loading",
+          "configuration/Audio Samples/find_samples"
         ],
         "Sound and audio": [
           "configuration/AudioConfig/audio_outputs",
