@@ -112,6 +112,7 @@ module.exports = {
       },
     ],
     "Around Tidal": [
+      "around_tidal/toplap_manifesto",
       "around_tidal/tidal_history",
       "around_tidal/changelog"
     ],
