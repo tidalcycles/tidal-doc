@@ -14,6 +14,7 @@ module.exports = {
         "Upgrade & Downgrade": [
           "getting-started/upgrading",
           "getting-started/downgrading",
+          "getting-started/uninstalling",
         ],
         "Troubleshoot": [
           "troubleshoot/troubleshoot_linux",
@@ -122,6 +123,8 @@ module.exports = {
     ],
   },
   reference: [
+    "patternlib/tutorials/synthesizers",
+    "patternlib/tutorials/audio_effects",
     "reference/Functions",
     "reference/All_the_functions",
     "reference/All_the_controls",
