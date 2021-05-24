@@ -62,7 +62,7 @@ function Home() {
   const { siteConfig = {} } = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`Live code with ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
       <div id="tailwind">
@@ -82,6 +82,13 @@ function Home() {
               </Link>
             </div>
           </div>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+ <iframe width="720" height="420" src="https://www.youtube.com/embed/Db0QJo1eaoI?t"> </iframe>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+ <iframe width="720" height="420" src="https://www.youtube.com/embed/xAo66V2rTUk"> </iframe>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+ <iframe width="720" height="420" src="https://www.youtube.com/embed/ca3J1cztnrc"> </iframe>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
         </header>
         <main>
           {features && features.length > 0 && (

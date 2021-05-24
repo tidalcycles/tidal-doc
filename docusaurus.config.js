@@ -26,12 +26,6 @@ module.exports = {
           position: "left",
         },
         {
-          to: "docs/advanced/understanding-innards/What_is_a_pattern",
-          activeBasePath: "docs/advanced",
-          label: "What is Tidal?",
-          position: "left",
-        },
-        {
           to: "docs/reference/Functions",
           activeBasePath: "docs/reference",
           label: "Reference",

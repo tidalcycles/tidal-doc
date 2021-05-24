@@ -4,6 +4,8 @@ id: showcase
 ---
 The **TidalCyclists** have been busy! Here are some of the releases, videos, performances that people have made with **Tidal**. You will also find a list of artists working with **Tidal**.
 
+![kindohmshowcase](kindohmshowcase.png)
+
 ## YouTube
 ### YouTube Playlists
 * [Performances](https://www.youtube.com/playlist?list=PLybSFICi4UliK17U6rxPneXAyxvmGAe5T)
