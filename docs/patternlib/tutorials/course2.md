@@ -1,0 +1,1050 @@
+---
+title: Course II (> 1.6)
+id: course2
+---
+
+## Week 5
+----
+### Lesson 1: musical notes
+[![week5lesson1](https://img.youtube.com/vi/ZtCx-YMrwVU/0.jpg)](https://www.youtube.com/watch?v=ZtCx-YMrwVU)
+
+Ok we're back with a surprisingly long video about how to play notes, giving them as numbers or names, and controlling samples and synths.. With a sidetrack about how to look at the actual values inside (the first cycle of) a pattern.
+
+```haskell
+-- If you 'run' a pattern by itself, without a 'd1' or so, then Tidal
+-- will do its best at telling you what's in the first cycle. For
+-- example:
+
+note "3"
+
+-- gives:
+
+-- (0>1)|note: 3.0f
+
+-- 0>1 tells you it's an event that starts at position 0 (the start of
+-- the first cycle) and lasts up to 1 (the start of the next cycle).
+-- note is the name of the 'control' or 'effect' 3.0f is the value
+-- ('f' tells you that it's a floating point, decimal number).
+
+note "3 ~ 5"
+
+-- the above gives two events:
+
+-- (0>⅓)|note: 3.0f
+-- (⅔>1)|note: 5.0f
+
+-- We can listen to them:
+
+d1 $ note "3 ~ 5" # s "superpiano"
+
+-- Great notes!
+
+-- (.. if you don't hear any, you probably need to install "sc3plugins".)
+
+-- Tidal can also understand note names, and turn them into numbers
+-- for you.
+
+-- For example 'c' is the same as '0'
+
+note "c"
+
+-- This:
+
+note "a b c d e f g"
+
+-- is the same as:
+
+note "9 11 0 2 4 5 7"
+
+-- What happened to 1, 3, 6, 8, and 10?
+-- You can get to them by adding 's' for 'sharp', to add 1 to a note:
+
+note "cs ds fs gs as"
+
+-- or by using 'f' for 'flat' to subtract 1:
+
+note "df ef gf af bf"
+
+-- In theory, you can get to them all via really sharp 'c'
+-- notes. These two notes are identical:
+d1 $ note "csssssss g" # s "superpiano"
+
+-- In practice, that surely doesn't make a lot of sense.
+
+-- Normally, there are twelve notes in an octave. The default octave
+-- is 5, you can pick notes from other octaves by adding a different
+-- number:
+note "c5 c6 c4 c6"
+
+-- Lets have a listen
+d1 $ note "c5 c6 c4 c6" # s "superpiano"
+
+-- Lets think about the difference between 'note', 'n', synths and
+-- samples.
+
+-- There is no folder of samples called 'superpiano', the sounds you
+-- hear are being synthesised on-the-fly.
+
+-- With synths, you can use either 'note' or 'n' to specify notes,
+-- they mean the same thing.
+
+d1 $ n "c a f e" # s "superpiano"
+
+d1 $ note "c a f e" # s "superpiano"
+
+-- For samples, they mean something different. 'n' chooses a sample,
+-- 'note' plays it at a different speed, corresponding to a note.
+
+-- Different sounds:
+d1 $ n "0 1" # sound "dsynth"
+
+-- Different notes:
+d1 $ note "0 1" # sound "dsynth"
+
+-- If you pick a high note, then you'll notice the sound is a lot
+-- shorter, because it's making it higher by playing it faster.
+d1 $ note "0 24" # sound "dsynth"
+
+-- You might feel that's not good, because it doesn't sound as natural
+-- as a synthesiser
+-- You might feel that's great, because nature is a myth and this is
+-- how old school 'tracker' music from early rave music and the
+-- demoscene works
+-- You might change your mind on different days
+
+-- You can still use note names in mininotation:
+d1 $ note "c a f e" # sound "dsynth"
+
+-- (Actually you can use do this in any control/effect pattern that
+-- expects a number.. Tidal just treats them as numbers)
+
+-- This dsynth sample is in 'c'. If it wasn't, the notes would
+-- probably sound out of tune with another synth or samplebank.
+
+-- The 'dbass' sample has three bass sounds, again in 'c', of
+-- different lengths.  So it makes sense to use *both* 'note' and 'n'
+-- together, to pattern both the pitch and the sample that's used:
+d1 $ note "c a f e" # sound "dbass" # n "<0 1 2>"
+
+-- The 'rash' samplebank is organised differently.. There's a load of
+-- samples, one for each note of 6 octaves. There's 12 notes in an
+-- octave, so that's 72 samples. (actually there's 73, there's an
+-- extra one note-084.wav which you could delete..) I sampled these
+-- from my lovely Roland JV1080 synth.
+
+-- So you can play notes as numbers using the 'n' instead of the
+-- 'note' pattern. This sounds a bit more 'natural' than pitching them
+-- up with 'note'.
+d1 $ n "20 50" # sound "rash"
+
+-- You can still use note names, but whereas for synths '0' is *middle*
+-- c, with these samples that's right at the *bottom* of the scale.
+d1 $ n "c a f e" # sound "rash"
+
+-- So in this case you'll want to pick a higher octave
+d1 $ n "c7 a7 f8 e7" # sound "rash"
+
+-- I tend to add a few octaves like this:
+d1 $ n "c a f e" # sound "rash"
+  |+ n 24
+
+-- Adding notes together is fun :
+d1 $ n "c a f e" # sound "rash"
+  |+ n 24
+  |+ n "<0 2 7 12>"
+
+-- You can also do it this way, adding together number patterns
+-- 'inside' a single control pattern
+d1 $ n ("c a f e" |+ 24 |+ "<0 2 7 12>")
+  # sound "rash"
+
+-- There's also an 'octave' control to jump up/down in twelves:
+d1 $ note "c a f e" # sound "superpiano"
+  # octave "<4 6 3>"
+```
+
+----
+### Lesson 2: chords, arpeggios and.. Algoraoke
+
+[![week5lesson2](https://img.youtube.com/vi/oDsXT68J9Kw/0.jpg)](https://www.youtube.com/watch?v=oDsXT68J9Kw)
+
+Ok warming up now! Here's a video exploring chords, arpeggios and the emerging form of Algoraoke, which I think was a term coined at the first live coding conference in Leeds by Ash Sagar. This video contains a preview of the next challenge, to make a 'cover version', which I'll write up in more detail a bit later..
+
+
+```haskell
+
+-- Ok chords! We can play a 'major' chord like this:
+
+d1 $ n "'maj" # sound "supermandolin"
+  # legato 2 # gain 1.4
+
+-- The default is c major, you can choose others like this, e.g. to
+-- play c then e major:
+d1 $ n "c'maj e'maj" # sound "supermandolin"
+  # legato 2 # gain 1.4
+
+-- Karaoke (algoraoke) time
+-- Lets take the chord from a well known song:
+-- https://ukutabs.com/r/radiohead/creep/
+
+d1 $ n "<g'maj b'maj c'maj c'min>" # s "supermandolin"
+  # room 0.6 # sz 0.9
+
+-- and strum it a bit with struct:
+d1 $ qtrigger 1 $ jux ((|- n "12") . rev) $ struct "t(5,8,<0 4>)" $ n "<g'maj b'maj c'maj c'min>" # s "supermandolin"
+  # room 0.6 # sz 0.9
+
+-- You can get a list of all the chords like this:
+import Sound.Tidal.Chords
+
+chordList
+
+-- Try some out:
+d1 $ n "c'sevenFlat9 a'm9sharp5" # sound "supermandolin"
+
+-- Here's the raw data:
+chordTable
+
+-- Again, this all ends up being turned into plain note numbers. These
+-- two patterns are the same:
+d1 $ n "c'sevenFlat9 a'm9sharp5" # sound "supermandolin"
+
+d1 $ n "[0,4,7,10,13] [9,10,23]" # sound "supermandolin"
+
+-- You can say how many notes you want in a chord, with another ' and
+-- the number of notes you want.
+
+-- If you ask for more notes than exist in the basic chord, it will go
+-- up the octaves to find more notes, sounding more and more impressive:
+d1 $ n "c'maj'4" # s "superpiano"
+d1 $ n "c'maj'8" # s "superpiano"
+d1 $ n "c'maj'12" # s "superpiano"
+
+-- This is clearer when we start doing.. ARPEGGIOS
+
+-- These are 'broken' chords, where instead of playing the notes at
+-- once, they're played one after another:
+d1 $ arpeggiate $ n "c'maj" # s "superpiano"
+
+-- The arpeggio happens within the 'step' that the chord occupies:
+d1 $ arpeggiate $ n "c'maj e'min7" # s "superpiano"
+
+-- Above, you can hear major chords have three notes, and minor 7
+-- chords have four. You can modify that with ' so they have the same
+-- number, if you want:
+d1 $ arpeggiate $ n "c'maj'4 e'min7'4" # s "superpiano"
+
+-- "arpeggiate" has a shorter, but more flexible cousin "arp", that
+-- allows you to specify a different way of breaking up the chord:
+d1 $ arp "updown thumbup" $ n "<c'maj'4 e'min7'4>" # s "superpiano"
+
+-- Here's the list of currently available arp styles to explore:
+-- up, down, updown, downup, converge, diverge, disconverge, pinkyup,
+-- pinkyupdown, thumbup thumbupdown
+
+-- Lots of fun
+d1 $ jux rev $ arp "<updown thumbup pinkyupdown converge diverge>"
+  $ n "<c4'maj'6 e4'min7'8 g5'maj'5 a5'maj'4>" # s "superpiano"
+  # room 0.3 # sz 0.7
+```
+
+----
+### Lesson 3: adding and using SuperDirt synths
+[![week5lesson3](https://img.youtube.com/vi/ZM8OEcjlkzo/0.jpg)](https://www.youtube.com/watch?v=ZM8OEcjlkzo)
+
+As I say, **SuperDirt** and **SuperCollider** isn't my greatest area of expertise, I think `@eris` is looking at putting together a more in-depth video. As I also say, getting into synthesis is not mandatory, although **SuperCollider** is a fantastic world of possibilities system to get into if you're curious.
+
+----
+### Lesson 4: SuperDirt (part II)
+[![week5lesson4](https://img.youtube.com/vi/qZKDI8sVy8Q/0.jpg)](https://www.youtube.com/watch?v=qZKDI8sVy8Q)
+
+
+Here's the code:
+```haskell
+SynthDef(\test, {
+ |out,sustain=1,freq=440,speed=1,begin=0,end=1,pan,accelerate,offset,clamp=1|
+ var line, env, volume, tone, outAudio;
+ freq=freq*speed;
+ line = Line.ar(begin,end,sustain/speed,doneAction: Done.freeSelf);
+ env = Env.new(levels: [0, 1, 0.9, 0], times: [0.1, 0.5, 1], curve: [-5, 0, -5]);
+ volume = IEnvGen.ar(env, line);
+ tone = (Pulse.ar(freq,line)+Pulse.ar(freq*1.01,line)+Pulse.ar(freq*0.99,line))/3;
+ outAudio = RLPF.ar(tone*volume, 20000*clamp*volume,0.3);
+ OffsetOut.ar(out,DirtPan.ar(outAudio, ~dirt.numChannels, pan, volume));
+}).add;
+```
+At the time of writing the subtitles are auto-generated, we're looking into getting them edited.
+
+#### Julian Rohrhuber commentary
+
+Julian Rohrhuber, author of **SuperDirt**, added a long and interesting comment to this video.
+
+Ok, here you go! The following concerns only synths that come from the **Tidal** `sound` function (not global effect synths like `# delay`, that are handled differently).
+
+In **SuperDirt**, the freeing of synths is done by one internal synth that makes the end of the chain of effects. It is the `dirt_gate` synth. Its definition is in `core-synths.scd`. I posted it below [1]. It applies a minimal envelope to the whole event (including all the effects you applied to it). The `doneAction` is called after this envelope is completed. By setting the `fadeInTime` and `fadeTime` parameters in **Tidal**, you can harden or soften the `attack`/`decay`.
+
+This means that you can make `SynthDefs` with synths that do not release themselves, something we normally avoid in **SuperCollider**, because you'd pile up synths endlessly. But here, you could simply define a synth like this:
+
+```c
+SynthDef(\mess, { |out| Out.ar(out, GrayNoise.ar) }).add;
+```
+and you could play it in **Tidal** with: `sound "mess"`. The synths are freed by the `dirt_gate` synth.
+
+But usually, you want a synth to have a particular amplitude envelope. Then you can define one in your `SynthDef`, see below [2]. Note that `sustain` means the duration of the whole synth (this is what it is called in `SuperCollider` in general), which is sent over from **Tidal** (for setting it directly, try `# sustain "0.1 0.3 0.5 1"`). Then you can have a `doneAction: 2` if you like (this will free the synth after the envelope is done), but you can also leave this `doneAction` out altogether, because the synth is freed externally anyhow. For example: 
+```c
+SynthDef(\mess, {
+  | out, sustain = 0.2 | 
+  Out.ar(out, GrayNoise.ar * XLine.kr(1, 0.001, sustain))
+}).add
+```
+
+But sometimes, you may want to use the synth outside **SuperDirt**, and then it is polite that it cleans up after itself. Just make sure that you multiply your envelope with the audible signal, otherwise you'll hear clicks at the end of each synth.
+
+```c
+SynthDef(\mess, 
+  { 
+    | out, sustain = 0.2 | 
+    Out.ar(out,
+       GrayNoise.ar * XLine.kr(1, 0.001, sustain, doneAction: 2)
+   ) 
+  }
+).add
+```
+
+Hope this helps!
+
+[1]
+
+```c
+SynthDef("dirt_gate" ++ numChannels, { |out, in, sustain = 1, fadeInTime = 0.001, fadeTime = 0.001, amp = 1|
+		var signal = In.ar(in, numChannels);
+		 //  doneAction: 14: free surrounding group and all nodes
+		var env = EnvGen.ar(Env([0, 1, 1, 0], [fadeInTime, sustain, fadeTime], \sin), levelScale: amp, doneAction: 14);
+		signal = signal * env * DirtGateCutGroup.ar(fadeTime, doneAction: 14);
+		OffsetOut.ar(out, signal);
+		ReplaceOut.ar(in, Silent.ar(numChannels)) // clears bus signal for subsequent synths
+	}, [\ir, \ir, \ir, \ir, \ir, \ir]).add;
+```
+
+[2]
+```c
+(
+SynthDef(\imp, { |out, sustain = 1, freq = 440, speed = 1, begin=0, end=1, pan, accelerate, offset|
+	var env, sound, rate, phase;
+	env = EnvGen.ar(Env.perc(0.01, 0.99, 1, -1), timeScale:sustain, doneAction:2);
+	phase = Line.kr(begin, end, sustain);
+	rate = (begin + 1) * (speed + Sweep.kr(1, accelerate));
+	sound = Blip.ar(rate.linexp(0, 1, 1, freq) * [1, 1.25, 1.51, 1.42], ExpRand(80, 118) * phase).sum;
+	OffsetOut.ar(out,
+		DirtPan.ar(sound, ~dirt.numChannels, pan, env)
+	)
+}).add
+);
+```
+
+
+
+## Week 6
+
+-----
+### Lesson 1: cannons with "off"
+[![week6lesson1](https://img.youtube.com/vi/uWVfteb71vc/0.jpg)](https://www.youtube.com/watch?v=uWVfteb71vc)
+
+A little bit ahead of time, here's an intro to a function close to my heart, `off`. Here's the worksheet:
+
+```haskell
+
+-- Let's start with two notes:
+d1 $ n "c e" # sound "supermandolin"
+
+-- What does 'off' do? Switch between the above and below versions to hear
+-- the difference.
+d1 $ off 0.25 (# crush 4) $ n "c e" # sound "supermandolin"
+
+-- You can hear that the original two notes are untouched, but there is
+-- something else added.
+
+-- 'off' takes three inputs; a number, a function and a pattern.
+-- What it does is leave the original pattern as is, but adds a copy of
+-- it on top. That copy is offset in time by the number given in the first
+-- input - the number. The copy also has the function applied to it.
+-- So we end up with a version of the pattern that 'follows' the original
+-- in time, and is transformed. In this case, it is distorted.
+
+-- Instead of using the bitcrush effect, lets add to the 'n' note, instead.
+d1 $ off "0.25" (|+ n 7) $ n "c e" # sound "supermandolin"
+
+-- Now we hear a simple 'canon' - it sounds like one voice following another.
+
+-- We can swap '0.25' for the shorthand 'q', which stands for a *q*uarter of a
+-- cycle.
+d1 $ off "q" (|+ n 7) $ n "c e" # sound "supermandolin"
+
+-- Lets change that for 'e', which stands for an eighth of a cycle.
+d1 $ off "e" (|+ n 7) $ n "c e" # sound "supermandolin"
+
+-- Here's the current list of shorthands available:
+-- w = 1 (whole)
+-- h = 0.5 (half)
+-- q = 0.25 (quarter)
+-- e = 0.125 (eighth)
+-- s = 0.0624 (sixteenth)
+-- t = 1/3 (third)
+-- f = 0.2 (fifth)
+
+-- You can have multiples of these shorthands by prefixing them with a
+-- number, for example:
+d1 $ off "2f" (|+ n 7) $ n "c a f e" # sound "supermandolin"
+
+-- For a 32nd, you could do 0.5s:
+d1 $ off "0.5s" (|+ n 7) $ n "c a f e" # sound "supermandolin"
+
+-- Let's try with a more complex pattern:
+d1 $ off "e" (|+ n 7) $ n (slow 2 "c(3,8) a(3,8) f(5,8) e*2")
+  # sound "supermandolin"
+
+-- The notes are getting very short now, to match the shorter 'step' sizes
+-- within this denser pattern. To make them proportionally longer we can
+-- use legato, for example to make them all twice as long:
+d1 $ off "e" (|+ n 7) $ n (slow 2 "c(3,8) a(3,8) f(5,8) e*2")
+  # sound "supermandolin"
+  # legato 2
+
+-- Or alternatively we can use sustain for a duration in seconds:
+d1 $ off "e" (|+ n 7) $ n (slow 2 "c(3,8) a(3,8) f(5,8) e*2")
+  # sound "supermandolin"
+  # sustain 0.75
+
+-- We can pattern the 'n' of the transformed version of the pattern:
+d1 $ off "e" (|+ n "<7 12 -5>") $ n (slow 2 "c(3,8) a(3,8) f(5,8) e*2")
+  # sound "supermandolin"
+  # sustain 0.75
+
+-- In the above the 7 - 12 - -5 pattern repeats every third cycle, and the
+-- c a f e one repeats every two cycles (due to the slow 2). The combination
+-- of (or interference between) them repeats lasts six cycles.
+
+-- Lets add another 'off', this time offset by a sixteenth of a cycle, and
+-- dropping the octave.
+d1 $ off "s" (|+ n (-12)) $ off "e" (|+ n "<7 12 -5>") $
+ n (slow 2 "c(3,8) a(3,8) f(5,8) e*2")
+ # sound "supermandolin"
+ # sustain 0.75
+
+-- Note that negative numbers have to be in parenthesis, otherwise Haskell
+-- gets confused and things you're trying to do a subtraction!
+
+-- This isn't the case in the mininotation, so an alternative is to put
+-- all negative numbers in double quotes:
+d1 $ off "s" (|+ n "-12") $ off "e" (|+ n "<7 12 -5>") $
+ n (slow 2 "c(3,8) a(3,8) f(5,8) e*2")
+ # sound "supermandolin"
+ # sustain 0.75
+
+-- The same principles can be applied to percussion, for example:
+d1 $ off "<s q e>" (# squiz 2) $ n "{0 1 [~ 2] 3*2, 5 ~ 3 6 4}"
+  # sound "cpu2"
+  # sustain 0.75
+
+-- Notice the offset is patterned in the above, so the 'following'
+-- pattern shifts forwards and backwards.
+```
+
+----
+### Lesson 2: musical scales
+[![week6lesson2](https://img.youtube.com/vi/xUMNN74OSPs/0.jpg)](https://www.youtube.com/watch?v=xUMNN74OSPs)
+
+Time to look at musical scales. Moving around scales can be especially fun with waveforms, so there's a lot of focus on that. It's a bit fiddly because as I explain in the video, you have to convert between decimal and whole numbers with e.g. `floor <$>`.. I'm going to have to look at making that easier in **Tidal**. And the worksheet:
+
+```haskell
+-- The 'arpy' folder contains sounds sampled using a pentatonic
+-- 'ritusen' scale, starting with 'c'. In this scale there are five
+-- notes per octave.  So these are the same notes:
+d1 $ n "0 5" # sound "arpy"
+
+d2 $ n "0 12" # sound "superpiano"
+
+-- Pentatonic scales like this are nice to work with because they all
+-- sound good together. So if we add a random note to a melody, it
+-- always sounds 'good':
+
+d1 $ n ("0 [7 2] 3 2" |+ irand 3) # sound "arpy"
+
+-- This isn't really the case on the usual twelve-tone "equal
+-- temperament" (12-TET) scale:
+d1 $ n ("0 [7 2] 3 2" |+ (irand 3)) # sound "superpiano"
+
+-- 12-TET is the scale that pianos etc are normally tuned to in the west.
+
+-- To use a different scale, we can use the "scale" function for converting
+-- numbers from a different scale to 12-TET.
+d1 $ n (scale "ritusen" $ "0 [7 2] 3 2" |+ (irand 3))
+  # sound "superpiano"
+
+-- There's quite a few available:
+scaleList
+
+-- It's fun to use waveforms to pick notes from a scale. For example,
+-- use a smooth sinewave to select notes from a minor scale:
+d1 $ segment 16 $ n (scale "minor"
+                     $ floor <$> (range 0 14 sine)
+                    )
+  # sound "supersaw"
+  # legato 0.5
+  # lpf 1000 # lpq 0.1
+
+-- Remember that waveforms don't have structure, so don't produce
+-- events until you use something like 'segment', which in the example
+-- above picks 16 notes per cycle.
+
+-- There's also a complication that waveforms produce 'floating point'
+-- decimal numbers, but scale only accepts 'integers' - whole numbers.
+-- The 'floor <$>' bit converts from decimal to whole numbers.  The
+-- "range 0 14" bit converts from the usual range of 0 to 1 to the
+-- given range of 0 to 14.
+
+-- We can make this more exciting by patterning the range:
+d1 $ segment 16 $ n (scale "minor"
+                     $ floor <$> (range "<0 4 -8>" "<12 14 13 -13>" sine)
+                    )
+  # sound "supersaw"
+  # legato 0.5
+  # lpf 1000 # lpq 0.1
+
+-- And maybe even more exciting by using 'struct' to pattern the
+-- rhythm using Euclidean syntax.. Taking the opportunity to pattern
+-- the lpf (low pass filter) as well:
+d1 $ struct "t(<9 7>,16)"
+  $ n (scale "minor"
+        $ floor <$> (range "<0 4 -8>" "<12 14 13 -13>" sine)
+      )
+  # sound "supersaw"
+  # legato 0.5
+  # lpf (range 400 5000 saw) # lpq 0.1
+
+
+-- Using scales in this way allows us to play with movement while
+-- still making tunes that make 'sense'. Here I add together
+-- waveforms to create some longer-form movement:
+d1 $ segment 16 $
+  n (scale "minor"
+      $ floor <$> (slow 2 $ (slow 2 sine + slow 3 cosine) * "<6 -3>"
+                  )
+    )
+  # sound "supersaw"
+  # legato 0.5
+  # lpf (range 400 5000 saw) # lpq 0.1
+
+-- Back with the struct:
+d1 $ struct "t(<9 7>,16)" $
+  n (scale "minor"
+      $ floor <$> (slow 2 $ (slow 2 sine + slow 3 cosine) * "<6 -3>"
+                  )
+    )
+  # sound "supersaw"
+  # legato 0.5
+  # lpf (range 400 5000 saw) # lpq 0.1
+
+-- And with an 'off' going up an octave:
+d1 $ off 0.25 (|+ n 12) $ struct "t(<9 7>,16)" $ segment 16 $
+  n (scale "minor"
+      $ floor <$> (slow 2 $ (slow 2 sine + slow 3 cosine) * "<6 -3>"
+                  )
+    )
+  # sound "supersaw"
+  # legato 0.5
+  # lpf (range 400 5000 saw) # lpq 0.1
+
+-- Note that in the above the 'off' is outside of the 'scale'
+-- function, So we're back in 12-TET land, so add '12' to go up an
+-- octave, rather than the number of notes in the minor scale (7)
+```
+
+----
+### Lesson 3: controlling MIDI devices
+[![week6lesson3](https://img.youtube.com/vi/QmDmMpu9-T0/0.jpg)](https://www.youtube.com/watch?v=QmDmMpu9-T0)
+
+Here's a quick video running through connecting up a MIDI synth to Tidal, and controlling it with **CC** and **NRPN**.
+
+----
+### Lesson 4: controlling Tidal with MIDI
+[![week6lesson4](https://img.youtube.com/vi/XZH4IoBG5Pg/0.jpg)](https://www.youtube.com/watch?v=XZH4IoBG5Pg)
+
+Here's the basics covered with controlling **Tidal** from MIDI. There's a bit more to cover here in terms of tips and tricks, so I think I'll do another video soon.. In the meantime feel free to ask questions, as it'll help me decide what to cover, thanks!
+
+## Week 7
+
+-----
+### Lesson 1: Composing patterns together
+[![week7lesson1](https://img.youtube.com/vi/OcDcTyEZuBs/0.jpg)](https://www.youtube.com/watch?v=OcDcTyEZuBs)
+
+Sorry a bit of a late start to the week. Here's a starter, looking at different ways of composing patterns together. I'll continue this in the next video with a look at the ur function for composing patterns of patterns.
+
+```haskell
+-- Composing patterns together
+
+-- We've already looked at different ways of composing patterns
+-- together. Something as simple as this is a composition:
+
+d1 $ fast "1 2 3 4" $ sound "lt mt ht bd*2"
+
+-- Not a super interesting one, but it composes together a pattern of
+-- densities, and a pattern of sounds, to create a new pattern that is
+-- more than the sum of its parts.
+
+-- In this lesson though we're going to look at ways to compose what
+-- you could call 'independent' patterns, where one isn't used to
+-- manipulate the other.
+
+-- Tidal is often used in live situations, but there are some
+-- functions that help you assemble multiple patterns into something
+-- like a complete 'piece', such as a structured four-minute track.
+
+-- Before we get to that, lets look at some extra-simple ways of
+-- composing patterns together.. as they can be surprisingly useful
+
+-- First, there's `overlay` that simply plays the two given patterns
+-- at the same time:
+d1 $ overlay (fast "1 2 3 4" $ sound "lt mt ht ~")
+             (sound "clap:4(3,8)" # speed 2)
+
+-- Similar to this is `stack`, which lets you overlay any number of
+-- patterns on top of each other. People tend to use this rather than
+-- `overlay`, as it's more flexible:
+d1 $ stack [(fast "1 2 3 4" $ sound "lt mt ht ~"),
+            (sound "clap:4(3,8)" # speed 2),
+            sound "[kick:5(5,8), snare:3(7,16,3)]"
+           ]
+
+-- The above composes a list of three patterns together. You can see that
+-- a list is given using square brackets ('[' and ']'), with the patterns
+-- in the list separated by commas (','). You have to remember *not* to
+-- put a comma at the end of the list, only between the elements.
+
+-- The above might not seem too useful, as you could do the same with
+-- separate patterns. This sounds exactly the same as the above:
+d1 $ fast "1 2 3 4" $ sound "lt mt ht ~"
+d2 $ sound "clap:4(3,8)" # speed 2
+d3 $ sound "[kick:5(5,8), snare:3(7,16,3)]"
+
+-- Remember though that stack combines everything into a single
+-- pattern. This is useful as you can manipulate all those patterns as
+-- one. For example:
+d1 $ chunk 4 (hurry 2) $
+  stack [(fast "1 2 3 4" $ sound "lt mt ht ~"),
+         (sound "clap:4(3,8)" # speed 2),
+         sound "[kick:5(5,8), snare:3(7,16,3)]"
+        ]
+
+-- Or adding a parameter that applies to the whole stack:
+d1 $ stack [(fast "1 2 3 4" $ sound "lt mt ht ~"),
+            (sound "clap:4(3,8)" # speed 2),
+            sound "[kick:5(5,8), snare:3(7,16,3)]"
+           ] # squiz "<0 2>"
+
+-- So `overlay` and `stack` stack things up, so that they happen at
+-- the same time. Howabout sticking things together over time, so they
+-- happen one after another?
+
+-- Like overlay and stack, there is one function, 'append' for
+-- composing two patterns together, and another, 'cat' for composing a
+-- list of patterns together.
+
+-- For two patterns:
+d1 $ append (fast "1 2 3 4" $ sound "lt mt ht ~")
+            (sound "clap:4(3,8)" # speed 2)
+
+-- For a list of patterns:
+d1 $ cat [fast "1 2 3 4" $ sound "lt mt ht ~",
+          sound "clap:4(3,8)" # speed 2,
+          sound "[kick:5(5,8), snare:3(7,16,3)]"
+         ]
+
+-- Again, you'll see `cat` used more often than `append`.
+
+-- `append` and `cat` maintain the original 'density' of the patterns,
+-- taking one cycle per cycle.
+
+-- There are variants `fastappend` and `fastcat`, that take a cycle
+-- from each of the patterns, and squash them all into a single cycle:
+
+-- For two patterns:
+d1 $ fastappend (fast "1 2 3 4" $ sound "lt mt ht ~")
+  (sound "clap:4(3,8)" # speed 2)
+
+-- For a list of patterns:
+d1 $ fastcat [fast "1 2 3 4" $ sound "lt mt ht ~",
+              sound "clap:4(3,8)" # speed 2,
+              sound "[kick:5(5,8), snare:3(7,16,3)]"
+             ]
+
+-- That's fine, but what if you don't want to loop between patterns a
+-- cycle at a time, but have something between a `stack` and a `cat`,
+-- where you can have the patterns overlap? `seqPLoop` is one answer.
+
+-- With `seqPLoop`, you say when each pattern starts and stops.
+-- Lets first emulate the `cat` from earlier, by having each
+-- pattern last one cycle.
+d1 $ seqPLoop [(0, 1, fast "1 2 3 4" $ sound "lt mt ht ~"),
+               (1, 2, sound "clap:4(3,8)" # speed 2),
+               (2, 3, sound "[kick:5(5,8), snare:3(7,16,3)]")
+              ]
+
+-- Now let's adjust the starts and stops, so the first two overlap by
+-- a pattern, then there's a gap of a cycle before the last one plays:
+d1 $ seqPLoop [(0, 2, fast "1 2 3 4" $ sound "lt mt ht ~"),
+               (1, 3, sound "clap:4(3,8)" # speed 2),
+               (5, 6, sound "[kick:5(5,8), snare:3(7,16,3)]")
+              ]
+
+-- If you want to use the same pattern more than once, you can give it a name
+--, like this:
+let florence = fast "1 2 3 4" $ sound "lt mt ht ~"
+in
+d1 $ seqPLoop [(0, 2, florence),
+               (1, 3, sound "clap:4(3,8)" # speed 2),
+               (3, 4, sound "[kick:5(5,8), snare:3(7,16,3)]"),
+               (3, 5, florence # coarse 5)
+              ]
+
+-- If you don't want the pattern sequence to loop, then use
+-- seqP. You'll need to use something like `qtrigger`, so it starts
+-- from cycle 0
+d1 $ qtrigger 1 $ seqP [(0, 2, fast "1 2 3 4" $ sound "lt mt ht ~"),
+                        (1, 3, sound "clap:4(3,8)" # speed 2),
+                        (5, 6, sound "[kick:5(5,8), snare:3(7,16,3)]")
+                       ]
+```
+
+----
+### Lesson 2: Composing functions together
+[![week7lesson2](https://img.youtube.com/vi/5YCERGiAHUU/0.jpg)](https://www.youtube.com/watch?v=5YCERGiAHUU)
+
+Here's a quick video about the handy `.` operator. Worksheet:
+```haskell
+-- Composing functions together
+
+-- Lets say you wanted to both chop up, _and_ reverse this pattern,
+-- every 3 cycles.
+d1 $ sound "bd [~ sd] bd sd" # squiz 2
+
+-- You could do it like this:
+d1 $ every 3 (rev) $ every 3 (chop 8) $
+  sound "bd [~ sd] bd sd" # squiz 2
+
+-- That works, but is a bit fiddly. This is where the `.` operator
+-- comes in handy, by turning two functions into one:
+d1 $ every 3 (rev . chop 8) $
+  sound "bd [~ sd] bd sd" # squiz 2
+
+-- That works the same, but with less typing, good!
+
+-- You can just think of the `.` as piping together two functions
+-- into one.
+
+-- But technically speaking:, the `.` will take the input, pass it into the
+-- function on the right, take the output from _that_ function, pass
+-- it to the function on the left, and finally return the return of
+-- _that_ function.
+
+-- You can keep piping in more functions, if you want:
+d1 $ every 3 (rev . chop 8 . fast 2) $
+  sound "bd [~ sd] bd sd" # squiz 2
+
+-- You can also add in effects:
+d1 $ every 3 ((# room 0.7) . rev . chop 8 . fast 2) $
+  sound "bd [~ sd] bd sd" # squiz 2
+
+Have fun!
+```
+
+
+----
+### Lesson 3: Composing tracks with the "ur" function
+[![week7lesson3](https://img.youtube.com/vi/7Y3aKx2w5dQ/0.jpg)](https://www.youtube.com/watch?v=7Y3aKx2w5dQ)
+
+Here's an introduction to the `ur` function, which lets you make patterns out of patterns, to make a track. I also talk about issues with `orbits` and global effects (e.g. `reverb`, `delay`) you might have when using `ur`, `seqPLoop` and `stack`. This is still an area of **Tidal** that could be developed, so I'd be happy to have your ideas about possible features/improvements.
+
+Here's the pattern I deconstruct:
+```haskell
+d1 $ ur 16 "[bdsd, ~ claps, ~ [bass bass:crunch] ~ bass]"
+  [("bdsd", sound "bd [~ sd] bd sd" # squiz 2),
+   ("claps", sound "clap:4*2 clap:4*3"
+     # delay 0.8 # dt "t" # dfb 0.4
+     # orbit 4 # speed 4
+   ),
+   ("bass", struct "t(3,8)" $ sound "dbass" # shape 0.7 # speed "[1, ~ 2]")
+  ]
+  [("crunch", (# crush 3))
+  ]
+```
+
+----
+## Week 8
+
+----
+### Lesson 1: Shifting time / beat rotation
+[![week8lesson1](https://img.youtube.com/vi/5Jq4pLjUDDk/0.jpg)](https://www.youtube.com/watch?v=5Jq4pLjUDDk)
+
+Bliemy, it's week 8 already.. Lets do some time travel with `<~` and `~>`. Here's the worksheet:
+```haskell
+-- SHIFTING TIME
+
+-- Lets start with a rhythm:
+d1 $ n "[0 [1 0] 6*2 [3 4*2], 8(5,8)]" # sound "cpu2"
+
+-- That's repeating nicely. Keep it running, then run this:
+d1 $ 0.25 <~ (n "[0 [1 0] 6*2 [3 4*2], 8(5,8)]" # sound "cpu2")
+
+-- If you switch between them, you can hear the pattern is shifting in
+-- time. The `0.25` means it's shifting by a quarter of a cycle.
+
+-- You only hear any difference between them at the point where you
+-- switch to the other one. You're jumping forward / backward in time,
+-- but once you're there, nothing has changed. (!)
+
+-- Ok, time travel is difficult to talk about.
+
+-- Lets visualise this, compare these two:
+drawLine "a b c d"
+
+drawLine $ 0.25 <~ "a b c d"
+
+-- You can see the a b c d sequence is the same, but in the latter
+-- case, the cycle begins on the 'b'.
+
+-- So '<~' has moved us _forward_ into the future. So shouldn't it be
+-- '~>', rather than '<~'?? Well, we might have moved into the future,
+-- but it's all relative - from the perspective of the pattern, it's
+-- moved backwards into the past. Furthermore, while we like to think
+-- about us moving forwards into the future, from the perspective of
+-- the future, it's moving backwards into the past. Furthermore
+-- different human cultures think about time in different ways.
+
+-- Anyway, '~>' does indeed exist, compare these two:
+
+drawLine $ 0.25 <~ "a b c d"
+
+drawLine $ 0.25 ~> "a b c d"
+
+-- Time is most interesting if you keep jumping around
+-- For example jump every 3 cycles:
+d1 $ every 3 (0.25 <~) $ n "[0 [1 0] 6*2 [3 4*2], 8(5,8)]" # sound "cpu2"
+  # crush 4
+
+-- Jumping in the other direction has quite a different feel:
+d1 $ every 3 (0.25 ~>) $ n "[0 [1 0] 6*2 [3 4*2], 8(5,8)]" # sound "cpu2"
+  # crush 4
+
+-- You can also use a pattern for the time shift amount:
+d1 $ "<0 0.25 0.75>" ~>
+  (n "[0 [1 0] 6*2 [3 4*2], 8(5,8)]" # sound "cpu2" # crush 4)
+
+-- Even with this straightforward shifting, things quickly start
+-- sounding 'random', until your ears lock on to the longer loop..
+
+-- SIDETRACK - a note on syntax..
+
+-- Unfortunately this use of the dollar *doesn't work*:
+d1 $ "<0 0.25 0.75>" ~> $ n "[0 [1 0] 6*2 [3 4*2], 8(5,8)]"
+  # sound "cpu2" # crush 4
+
+-- This is because like all operators, you can't use a dollar to group
+-- together a pattern to send to `~>` in this way. haskell gets
+-- confused about seeing two operators ('$' and '~>') next to each
+-- other.
+
+-- So you have to use parenthesis:
+d1 $ "<0 0.25 0.75>" ~> (n "[0 [1 0] 6*2 [3 4*2], 8(5,8)]"
+  # sound "cpu2" # crush 4)
+
+-- Or another way around this is to wrap the *operator* in
+-- parenthesis, then you can use it like a normal function:
+d1 $ (~>) "<0 0.25 0.75>" $ n "[0 [1 0] 6*2 [3 4*2], 8(5,8)]"
+  # sound "cpu2" # crush 4
+
+-- Or wrap the first input and the operator in parenthesis:
+d1 $ ("<0 0.25 0.75>" ~>) $ n "[0 [1 0] 6*2 [3 4*2], 8(5,8)]"
+  # sound "cpu2" # crush 4
+
+-- This all works nicely with chopped-up loops:
+d1 $ every 2 ("e" <~) $ every 3 (0.25 <~) $
+  loopAt 1 $ chop 8 $ sound "break:8"
+```
+
+----
+### Lesson 2: Binary patterns
+[![week8lesson2](https://img.youtube.com/vi/U4cauoY3-6k/0.jpg)](https://www.youtube.com/watch?v=U4cauoY3-6k)
+
+Here's a quick introduction to binary patterns, focussing on using them to switch between a pair of functions with `stitch` and `sew`. Here is the worksheet:
+```haskell
+-- Binary patterns
+
+-- The patterns you send to SuperDirt tend to contain values of type
+-- String (for words), Double (for decimal numbers) or Int (for whole
+-- numbers). One pattern type you probably won't send to SuperDirt is
+-- of type Bool - short for Boolean.
+
+-- Boolean values can be either True or False. You've probably seen
+-- then used with with 'struct', e.g.:
+
+d1 $ struct "t f t t f t f f" $ sound "snare:4"
+
+-- 'struct' provides structure for the pattern on the right; whenever
+-- there's a 't' (i.e., a true value) in the boolean pattern, the
+-- snare fires.
+
+-- It works with euclidean syntax too:
+d1 $ struct "t(3,8)" $ sound "snare:4"
+
+-- The above creates a new pattern with three events per cycle,
+-- according to a Euclidean pattern.
+
+-- Lets have a look at that euclidean pattern:
+drawLine $ struct "t(3,8)" "a"
+
+-- So what do you think would happen if you changed that 't' (for
+-- true) for an 'f' (for false)? Lets try:
+drawLine $ struct "f(3,8)" "a"
+
+-- Lets listen to that structure too:
+d1 $ struct "f(3,8)" $ sound "snare:4"
+
+-- You can see and hear that the *inverse* of the Euclidean pattern is
+-- played. What was true, is now false, and vice-versa.. It's the
+-- 'empty' steps which get the true values, and which we end up
+-- hearing.
+
+-- This is clearer if we play a t(3,8) against an inverted f(3,8):
+d1 $ stack [struct "t(3,8)" $ sound "kick:4",
+            struct "f(3,8)" $ sound "snare:4"
+           ]
+
+-- You can hear that the snares are 'filling in' where the kicks
+-- aren't playing - they never play at the same time.
+
+-- Filling in patterns like this is a lot of fun, and there's a
+-- function called 'stitch' that makes it easier:
+d1 $ stitch "t(3,8)" (sound "kick:4") (sound "snare:4")
+
+-- You only have to give the boolean pattern once, 'stitch' takes care
+-- of inverting the pattern for the second pattern. It's called
+-- 'stitch', because it's like going up and down to stitch two things
+-- together.
+
+-- You can make more complicated boolean patterns to quickly get some
+-- fun patterns going:
+d1 $ stitch "t(<3 5>,8,<0 2 3>)" (sound "kick:4") (sound "hc")
+
+d1 $ stitch "t(<3 5>,<8 8 8 6>,<0 2 4>)" (sound "kick:4") (sound "hc")
+
+-- Actually it'd be less typing do the stitching _inside_ the sound
+-- control pattern:
+d1 $ sound (stitch "t(<3 5>,<8 8 8 6>,<0 2 4>)" "kick:4" "hc")
+
+-- In the above, I only have to write 'sound' once, because the
+-- 'stitch' is working on patterns of words, not patterns of sounds.
+
+-- You can also alternate between patterns of true, and patterns of false
+-- values:
+drawLine $ struct "<t f>(3,8)" "a"
+
+-- If you prefer you can use '1' or '0' instead of 't' and 'f', the
+-- result is exactly the same:
+drawLine $ struct "<1 0>(3,8)" "a"
+
+d1 $ struct "<1 0>(3,8)" $ sound "clap"
+
+-- You don't have to use the Euclidean syntax, you can just right them
+-- out by hand:
+d1 $ stitch "t f t t f f t f" (sound "kick:4") (sound "hc")
+
+-- .. and use the usual mininotation syntax:
+d1 $ stitch "t f t [t f]*2 f ~ t f" (sound "kick:4") (sound "hc")
+  # room 0.2 # sz 0.8
+
+-- With stitch, the rhythmic structure comes from the boolean
+-- pattern. It has a synonym friend called 'sew', which instead
+-- preserves the structure of the patterns it's sewing together.
+
+-- Lets try it:
+d1 $ sew "t f" (sound "kick") (sound "clap:4")
+
+-- Oh! We only hear the kick. That's because the 'f' only switches to
+-- the second pattern for the second half of the cycle, and no new
+-- 'clap's happen then.
+
+-- If we have four claps spread over the cycle, we hear the second two
+-- of them:
+d1 $ sew "t f" (sound "kick") (sound "clap:4*4")
+
+-- Sew can be really nice for blending together two more complicated
+-- patterns. Lets have a listen to them individually first:
+
+d1 $ chunk 4 (hurry 2) $ n "0 .. 7" # sound "cpu"
+
+d1 $ n "0 .. 7" # sound "cpu2" # speed 1.5 # squiz 2
+
+-- And now sewn:
+d1 $ sew (iter 4 "t f")
+  (chunk 4 (hurry 2) $ n "0 .. 7" # sound "cpu")
+  (n "0 .. 7" # sound "cpu2" # speed 1.5 # squiz 2)
+
+-- In the above I have a really simple "t f" binary pattern, but use
+-- 'iter 4' so that it shifts by a quarter every cycle.. So you get
+-- different parts of the sewn patterns coming through.
+```
+
+----
+### Lesson 3: Fitting values to patterns
+[![week8lesson3](https://img.youtube.com/vi/2YlI02lqPWc/0.jpg)](https://www.youtube.com/watch?v=2YlI02lqPWc)
+
+Ok after some delay, I'm back to finish off week 8 finally! Here's a look at the `fit` function. I'd be happy to see your thoughts and questions about this one! Here's the worksheet:
+```haskell
+
+-- Lets fit things from a list, into a pattern!
+
+-- Here's the 'type signature', what's it telling us?
+fit :: Int -> [a] -> Pattern Int -> Pattern a
+
+-- 'fit' takes a whole number, a list of things, a pattern of whole numbers,
+-- and then gives back a pattern of things.
+
+-- Int - a 'step size' - how far to advance through the list each cycle
+-- [a] - a list - the things you want to put in the tattern
+-- Pattern Int - a pattern of numbers referring to things in the list
+-- Pattern a - the result! 'Pattern a' means it can work with any kind of
+-- pattern
+
+-- Let's start simple, with a step size of 0
+
+d1 $ n (fit 0 [9,10,11,12,13,14] "0 1 2 3") # s "alphabet"
+
+-- That's just cycling through four letters of the alphabet (j,k,l,m).
+-- We have six numbers in our list, but we're only using the first four
+-- (from 0 to 3).
+
+-- Let's use all six, and add a bit more structure:
+d1 $ n (fit 0 [9,10,11,12,13,14] "[0 3] [1 2] 4 [~ 5]") # s "alphabet"
+
+-- Note that if you go past the end of the list, you go back to the start again.
+-- So '0' and '6' end up pointing at the first of the six numbers, which is '9'
+-- (which gives us 'j')
+d1 $ n (fit 0 [9,10,11,12,13,14] "0 6") # s "alphabet"
+
+-- Ok what if we start playing with that 'step size'?
+d1 $ n (fit 1 [9,10,11,12,13,14] "0 1 2 ~") # s "alphabet"
+
+-- It starts getting confusing, but you should be able to hear that each cycle,
+-- the pattern moves through the list by one step, until it gets back to the
+-- start again. So if it starts from 'j', 'k', 'l', the next cycle it'll shift
+-- along by one and give 'k', 'l', 'm', and so on, until it starts wrapping
+-- around to the start again.
+
+-- This can be nice for generating melodies. The rhythm stays the same, but
+-- the notes evolve, moving through the pattern
+d1 $ note (fit 2 [0,2,7,5,12] "0 ~ 1 [2 3]") # sound "supermandolin"
+  # legato 2 # gain 1.3
+
+d2 $ n "0 ~ 2 [3*2 4*2]" # sound "cpu" # speed 2
+```
