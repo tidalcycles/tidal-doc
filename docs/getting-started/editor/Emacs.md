@@ -60,7 +60,20 @@ The Tidal mode will load automatically whenever you open a `.tidal` file. Press 
 
 ### Using Doom Emacs
 
-The installation of `tidal.el` for Doom Emacs is currently undocumented. It is known to work pretty well. 
+Edit your `packages.el` file. Enter `space f p`, and select `packages.el`. Add the following line: `(package! tidal)`. In your terminal, go to `~/.emacs.d/bin` and run `./doom sync`. Wait until the update process is done. Relaunch **Doom Emacs**.
+
+Edit your `BootTidal.hs` path by typing `space f p`, and selecting `config.el`. Anywhere in this file, enter the following line:
+
+```lisp
+(setq tidal-boot-script-path "~/.cabal/share/x86_64-osx-ghc-8.8.4/tidal-1.7.4/BootTidal.hs")
+```
+
+:::tip
+You might want to use a specific `BootTidal.hs` file. Point to the one you like. I've picked the default `BootTidal.hs` file installed with **Tidal**.
+:::
+
+You can now open any `.tidal` file you want. If the highlighting is not showing up, run `tidal-mode`. Launch **Haskell** with `C-c C-s`, and eval regions with `C-c C-e`.
+
 
 ### Using the MELPA Package 
 
@@ -160,7 +173,21 @@ The Tidal mode will load automatically whenever you open a `.tidal` file. Press 
 
 ### Using Doom Emacs
 
-The installation of `tidal.el` for Doom Emacs is currently undocumented. It is known to work pretty well. 
+
+Edit your `packages.el` file. Enter `space f p`, and select `packages.el`. Add the following line: `(package! tidal)`. In your terminal, go to `~/.emacs.d/bin` and run `./doom sync`. Wait until the update process is done. Relaunch **Doom Emacs**.
+
+Edit your `BootTidal.hs` path by typing `space f p`, and selecting `config.el`. Anywhere in this file, enter the following line:
+
+```lisp
+(setq tidal-boot-script-path "~/.cabal/share/x86_64-osx-ghc-8.8.4/tidal-1.7.4/BootTidal.hs")
+```
+
+:::tip
+You might want to use a specific `BootTidal.hs` file. Point to the one you like. I've picked the default `BootTidal.hs` file installed with **Tidal**.
+:::
+
+You can now open any `.tidal` file you want. If the highlighting is not showing up, run `tidal-mode`. Launch **Haskell** with `C-c C-s`, and eval regions with `C-c C-e`.
+
 
 ### Using the MELPA Package 
 
