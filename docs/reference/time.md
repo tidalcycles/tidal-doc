@@ -409,6 +409,14 @@ d1 $ stack [ ghost $ sound "~ sn", sound "bd*2 [~ bd]" ]
 
 The example above creates a kick snare pattern with ghost notes applied to the snare hit. 
 
+### ghost'
+
+`ghost'` is currently undocumented.
+
+### ghost''
+
+`ghost''` is currently undocumented.
+
 ## Inside and outside
 
 ### inside

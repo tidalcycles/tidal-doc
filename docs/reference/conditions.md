@@ -176,6 +176,17 @@ Type: wchooseBy :: Pattern Double -> [(a,Double)] -> Pattern a
 
 The `wchooseBy` function is like `wchoose` but instead of selecting elements of the list randomly, it uses the given pattern to select elements. 
 
+### cycleChoose
+
+```haskell
+Type: cycleChoose :: [a] -> Pattern a
+```
+
+Similar to `choose`, but only picks once per cycle:
+```haskell
+d1 $ sound "drum ~ drum drum" # n (cycleChoose [0,2,3])
+```
+
 ## Boolean conditions
 
 ### struct
@@ -369,6 +380,10 @@ d1 $ contrast (|+ n 12) (|- n 12) (s "<superpiano superchip>") $ s "superpiano s
 ```
 
 If you listen to this you'll hear that which instrument is shifted up and which instrument is shifted down alternates between cycles. 
+
+### contrastBy
+
+`contrastBy` is currently undocumented.
 
 ## ifp
 

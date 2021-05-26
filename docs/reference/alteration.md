@@ -58,6 +58,44 @@ all the releases selected be rounded to the nearest `0.1` and the notes selected
 
 `quantise` with fractional inputs does the consistent thing: `quantise 0.5` rounds values to the nearest `2`, `quantise 0.25` rounds the nearest `4`, etc... 
 
+## Degrade
+
+### degrade
+
+```haskell
+Type: degrade :: Pattern a -> Pattern a
+```
+
+`degrade` randomly removes events from a pattern, `50%` of the time. Example usage:
+
+```haskell
+d1 $ slow 2 $ degrade $ sound "[[[feel:5*8,feel*3] feel:3*8], feel*4]"
+   # accelerate "-6"
+   # speed "2"
+```
+
+### degradeBy
+
+```haskell
+Type: degradeBy :: Double -> Pattern a -> Pattern a
+```
+
+Similarly to `degrade`, `degradeBy` allows you to control the percentage of events that are removed. For example, to remove events `90%` of the time:
+
+```haskell
+d1 $ slow 2 $ degradeBy 0.9 $ sound "[[[feel:5*8,feel*3] feel:3*8], feel*4]"
+   # accelerate "-6"
+   # speed "2"
+```
+
+### unDegradeBy
+
+```haskell
+Type: unDegradeBy :: Double -> Pattern a -> Pattern a
+```
+
+`unDegradeBy` is `degradeBy` but with the percentage describing how many events to keep on average not remove. 
+
 ## Repetitions
 ### ply
 
