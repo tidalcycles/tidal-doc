@@ -263,7 +263,7 @@ Useful when building and testing out longer sequences.
 Type: spin :: Pattern Int -> ControlPattern -> ControlPattern
 ```
 
-`spin` will play the given number of copies of the given control pattern at once. For `n` copies, each successive copy will be offset in time by an additional `1/n` of a cycle, and also panned in space by an additional n1/n</source>. This function works particularly well on multichannel systems.
+`spin` will play the given number of copies of the given control pattern at once. For `n` copies, each successive copy will be offset in time by an additional `1/n` of a cycle, and also panned in space by an additional `n1`. This function works particularly well on multichannel systems.
 
 ```haskell
 d1 $ slow 3 $ spin 4 $ sound "drum*3 tabla:4 [arpy:2 ~ arpy] [can:2 can:3]"
