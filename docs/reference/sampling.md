@@ -97,6 +97,70 @@ d1 $ slow 32 $ striateBy 32 (1/16) $ sound "bev"
 
 Note that striate uses the `begin` and `end` parameters internally. This means that if you’re using `striate` or `striateBy` you probably shouldn’t also specify begin or end.
 
+### slice
+
+```haskell
+Type: Pattern Int -> Pattern Int -> ControlPattern -> ControlPattern
+```
+
+`slice` is similar to `chop` and `striate`, in that it's used to slice samples up into bits. The difference is that it allows you to rearrange those bits as a pattern.
+
+```haskell
+d1 $ slice 8 "7 6 5 4 3 2 1 0" $ sound "breaks165"
+  # legato 1
+```
+
+The above slices the sample into eight bits, and then plays them backwards, equivalent of applying `rev $ chop 8`. Here's a more complex example:
+
+```haskell
+d1 $ slice 8 "[<0*8 0*2> 3*4 2 4] [4 .. 7]" $ sound "breaks165"
+  # legato 1
+```
+
+Note that the order of the first two parameters changed since tidal version `1.0.0`.
+
+### splice
+
+```haskell
+Type: splice :: Pattern Int -> Pattern Int -> ControlPattern -> ControlPattern
+```
+`splice` is similar to slice, but the slices are automatically pitched up or down to fit their 'slot'.
+
+```haskell
+d1 $ splice 8 "[<0*8 0*2> 3*4 2 4] [4 .. 7]" $ sound "breaks165"
+```
+
+### randslice
+
+```haskell
+Type: randslice :: Pattern Int -> ControlPattern -> ControlPattern
+```
+`randslice` chops the sample into the given number of pieces and then plays back a random one each cycle:
+
+```haskell
+d1 $ randslice 32 $ sound "bev"
+```
+
+Use `fast` to get more than one per cycle;
+```haskell
+d1 $ fast 4 $ randslice 32 $ sound "bev"
+```
+
+### chew
+
+```haskell
+Type: chew :: Int -> Pattern Int -> Pattern a -> Pattern a
+```
+`chew` works the same as bite, but speeds up/slows down playback of sounds as well as squeezing / contracting the slices of pattern.
+
+Compare these:
+
+```haskell
+d1 $ bite 4 "0 1*2 2*2 [~ 3]" $ n "0 .. 7" # sound "drum"
+
+d1 $ chew 4 "0 1*2 2*2 [~ 3]" $ n "0 .. 7" # sound "drum"
+```
+
 ### loopAt
     
 ```haskell
@@ -119,6 +183,50 @@ Like all **Tidal** functions, you can mess about with this considerably. The bel
 ```haskell
 d1 $ juxBy 0.6 (|* speed "2") $ loopAt "<4 6 2 3>" $ chop 12 $ sound "fm:14"
 ```
+
+### smash
+
+```haskell
+Type: smash :: Pattern Int -> [Pattern Time] -> ControlPattern -> ControlPattern
+```
+
+`smash` is a combination of `spread` and `striate` - it cuts the samples into the given number of bits, and then cuts between playing the loop at different speeds according to the values in the list. So this:
+
+```haskell
+d1 $ smash 3 [2,3,4] $ sound "ho ho:2 ho:3 hc"
+```
+
+Is a bit like this:
+```haskell
+d1 $ slow "<2 3 4>" $ striate 3 $ sound "ho ho:2 ho:3 hc"
+```
+
+### smash'
+
+```haskell
+Type: smash' :: Int -> [Pattern Time] -> ControlPattern -> ControlPattern
+```
+
+`smash'` is `smash` but based on `chop` instead of `striate`.
+
+Compare:
+
+```haskell
+d1 $ smash 6 [2,3,4] $ sound "ho ho:2 ho:3 hc"
+```
+to
+```haskell
+d1 $ smash' 6 [2,3,4] $ sound "ho ho:2 ho:3 hc"
+```
+or
+```haskell
+d1 $ smash 12 [2,3,4] $ s "bev*4"
+```
+vs
+```haskell
+d1 $ smash' 12 [2,3,4] $ s "bev*4"
+```
+for a dramatic difference.
 
 ## Signal sampling 
 ### segment

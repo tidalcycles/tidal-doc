@@ -53,6 +53,10 @@ d1 $ sound (slow 2 "bd sn kurt")
    # slow 3 (vowel "a e o")
 ```
 
+### sparsity
+
+`sparsity` is a synonym of `slow`.
+
 ### hurry
 ```haskell
 Type: hurry :: Pattern Time -> Pattern a -> Pattern a
@@ -62,6 +66,82 @@ Type: hurry :: Pattern Time -> Pattern a -> Pattern a
 
 ```haskell
 d1 $ every 2 (hurry 2) $ sound "bd sn:2 ~ cp"
+```
+
+### slowSqueeze 
+
+```haskell
+Type: slowSqueeze :: Pattern Time -> Pattern a -> Pattern a
+```
+
+`fastSqueeze` slows down a pattern according to the given time pattern. It is the slow analogue to `fastSqueeze`. If the time pattern only has a single value in a cycle, `slowSqueeze` becomes equivalent to slow:
+```haskell
+d1 $ slow "<2 4>" $ s "bd*8"
+```
+
+is the same as:
+```haskell
+d1 $ slowSqueeze "<2 4>" $ s "bd*8"
+```
+
+but when the time pattern has multiple values in it the behavior is a little different! Instead, a slowed version of the pattern will be made for each value in the time pattern and then they're all combined together in a cycle, according to the structure of the time pattern. For example:
+```haskell
+d1 $ slowSqueeze "2 4 8 16" $ s "bd*8"
+```
+is equivalent to:
+```haskell
+d1 $ s "bd*4 bd*2 bd bd/2"
+```
+and:
+```haskell
+d1 $ slowSqueeze "2 4 [8 16]" $ s "bd*8"
+```
+is equivalent to:
+```haskell
+d1 $ s "bd*4 bd*2 [bd bd/2]"
+```
+### fastSqueeze
+
+```haskell
+Type: fastSqueeze :: Pattern Time -> Pattern a -> Pattern a
+```
+`fastSqueeze` speeds up a pattern by a time pattern given as input, squeezing the resulting pattern inside one cycle and playing the original pattern at every repetition.
+
+To better understand how it works let's compare it with `fast`:
+```haskell
+d1 $ fast "1 2" $ s "bd sn"
+```
+
+```haskell
+-- output
+(0>½)|s: "bd"
+(½>¾)|s: "bd"
+(¾>1)|s: "sn"
+```
+
+This will give bd played in the first half cycle and bd sn in the second half. On the other hand, using `fastSqueeze`;
+
+```haskell
+fastSqueeze "1 2" $ s "bd sn"
+```
+```haskell
+--output
+(0>¼)|s: "bd"
+(¼>½)|s: "sn"
+(½>⅝)|s: "bd"
+(⅝>¾)|s: "sn"
+(¾>⅞)|s: "bd"
+(⅞>1)|s: "sn"
+```
+The original pattern will play in the first half and two repetitions of the original pattern will play in the second half. That is, every repetition contains the whole pattern.
+
+If the time pattern has a single value, it becomes equivalent to fast:
+```haskell
+d1 $ fastSqueeze 2 $ s "bd sn"
+-- is equal to
+d1 $ fast 2 $ s "bd sn"
+-- and equivalent to
+d1 $ s "[bd sn]*2"
 ```
 
 ## Zooming in, Zooming Out
@@ -177,6 +257,17 @@ Useful when building and testing out longer sequences.
 
 `rotR` is the opposite of `rotL` as it shifts the pattern forwards in time. 
 
+### spin
+
+```haskell
+Type: spin :: Pattern Int -> ControlPattern -> ControlPattern
+```
+
+`spin` will play the given number of copies of the given control pattern at once. For `n` copies, each successive copy will be offset in time by an additional `1/n` of a cycle, and also panned in space by an additional n1/n</source>. This function works particularly well on multichannel systems.
+
+```haskell
+d1 $ slow 3 $ spin 4 $ sound "drum*3 tabla:4 [arpy:2 ~ arpy] [can:2 can:3]"
+```
 
 ## Reversing time
 ### rev

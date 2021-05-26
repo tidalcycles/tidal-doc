@@ -42,6 +42,23 @@ For example, `every' 3 0 (fast 2)` will speed up the cycle on cycles 0,3,6,… w
 
 With this in mind, setting the second argument of `every'` to `0` gives the equivalent `every` function. For example, `every 3` is equivalent to `every' 3 0`. 
 
+### when
+
+```haskell
+Type: when :: (Int -> Bool) -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+
+Only when the given test function returns `True` the given pattern transformation is applied. The test function will be called with the current cycle as a number.
+
+```haskell
+d1 $ when ((elem '4').show) (striate 4) $ sound "hh hc"
+```
+
+The above will only apply striate `4` to the pattern if the current cycle number contains the number `4`. So the fourth cycle will be striated and the fourteenth and so on. Expect lots of striates after cycle number `399`. 
+
+### whenT
+
+This function is not documented.
 
 ### whenmod
 
