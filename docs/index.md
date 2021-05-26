@@ -14,8 +14,8 @@ for rhythmic sequences, and an extensive library of patterning functions for com
 
 By default, sound is made with the featureful [SuperDirt](https://github.com/musikinformatik/SuperDirt)
 synth/sampler, but you can control other synths using Open Sound
-Control (OSC) or MIDI. Whether you're using SuperDirt or a synth, every
-filter and effect can be manipulated independently with Tidal
+Control (**OSC**) or **MIDI**. Whether you're using **SuperDirt** or a synth, every
+filter and effect can be manipulated independently with **Tidal**
 patterns. Tidal is embedded in the **Haskell** language, although you don't have to learn **Haskell** to learn **Tidal** - most tidal coders have little or no experience in software engineering. 
 
 You can learn **Tidal** through experimentation and play - most **Tidal**

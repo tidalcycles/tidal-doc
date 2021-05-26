@@ -42,6 +42,23 @@ For example, `every' 3 0 (fast 2)` will speed up the cycle on cycles 0,3,6,… w
 
 With this in mind, setting the second argument of `every'` to `0` gives the equivalent `every` function. For example, `every 3` is equivalent to `every' 3 0`. 
 
+### when
+
+```haskell
+Type: when :: (Int -> Bool) -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+
+Only when the given test function returns `True` the given pattern transformation is applied. The test function will be called with the current cycle as a number.
+
+```haskell
+d1 $ when ((elem '4').show) (striate 4) $ sound "hh hc"
+```
+
+The above will only apply striate `4` to the pattern if the current cycle number contains the number `4`. So the fourth cycle will be striated and the fourteenth and so on. Expect lots of striates after cycle number `399`. 
+
+### whenT
+
+This function is not documented.
 
 ### whenmod
 
@@ -158,6 +175,17 @@ Type: wchooseBy :: Pattern Double -> [(a,Double)] -> Pattern a
 ```
 
 The `wchooseBy` function is like `wchoose` but instead of selecting elements of the list randomly, it uses the given pattern to select elements. 
+
+### cycleChoose
+
+```haskell
+Type: cycleChoose :: [a] -> Pattern a
+```
+
+Similar to `choose`, but only picks once per cycle:
+```haskell
+d1 $ sound "drum ~ drum drum" # n (cycleChoose [0,2,3])
+```
 
 ## Boolean conditions
 
@@ -329,6 +357,33 @@ euclidFull 5 8 (s "bd") (s "hh27")
 ```
 
 is equivalent to our above example. 
+
+
+### contrast
+
+```haskell
+Type: contrast :: (ControlPattern -> ControlPattern) -> (ControlPattern -> ControlPattern) -> ControlPattern -> ControlPattern -> ControlPattern
+```
+`contrast` is like a if-else-statement over patterns. For `contrast t f p` you can think of `t` al the true-branch, `f` as the false branch, and `p` as the test.
+
+For contrast, you can use any control pattern as a test of equality: `n "<0 1>"`, `speed "0.5"`, or things like that. This lets you choose specific properties of the pattern you're transforming for testing, like in the following example:
+
+```haskell
+d1 $ contrast (|+ n 12) (|- n 12) (n "c") $ n (run 4) # s "superpiano"
+```
+where every note that isn't middle-c will be shifted down an octave but middle-c will be shifted up to c5.
+
+Since the test given to contrast is also a pattern, you can do things like have it alternate between options:
+
+```haskell
+d1 $ contrast (|+ n 12) (|- n 12) (s "<superpiano superchip>") $ s "superpiano superchip" # n 0
+```
+
+If you listen to this you'll hear that which instrument is shifted up and which instrument is shifted down alternates between cycles. 
+
+### contrastBy
+
+`contrastBy` is currently undocumented.
 
 ## ifp
 

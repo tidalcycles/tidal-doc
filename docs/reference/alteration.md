@@ -58,6 +58,44 @@ all the releases selected be rounded to the nearest `0.1` and the notes selected
 
 `quantise` with fractional inputs does the consistent thing: `quantise 0.5` rounds values to the nearest `2`, `quantise 0.25` rounds the nearest `4`, etc... 
 
+## Degrade
+
+### degrade
+
+```haskell
+Type: degrade :: Pattern a -> Pattern a
+```
+
+`degrade` randomly removes events from a pattern, `50%` of the time. Example usage:
+
+```haskell
+d1 $ slow 2 $ degrade $ sound "[[[feel:5*8,feel*3] feel:3*8], feel*4]"
+   # accelerate "-6"
+   # speed "2"
+```
+
+### degradeBy
+
+```haskell
+Type: degradeBy :: Double -> Pattern a -> Pattern a
+```
+
+Similarly to `degrade`, `degradeBy` allows you to control the percentage of events that are removed. For example, to remove events `90%` of the time:
+
+```haskell
+d1 $ slow 2 $ degradeBy 0.9 $ sound "[[[feel:5*8,feel*3] feel:3*8], feel*4]"
+   # accelerate "-6"
+   # speed "2"
+```
+
+### unDegradeBy
+
+```haskell
+Type: unDegradeBy :: Double -> Pattern a -> Pattern a
+```
+
+`unDegradeBy` is `degradeBy` but with the percentage describing how many events to keep on average not remove. 
+
 ## Repetitions
 ### ply
 
@@ -245,8 +283,37 @@ d1 $ chunk 4 (hurry 2) $ sound "bd sn:2 [~ bd] sn:2"
 
 `chunk'` does the same as chunk but cycles through the parts in the reverse direction. 
 
+### runWith
+
+Old name for `chunk`.
+
+### runWith'
+
+Old name for `chunk'`?
 
 ## Shuffling and scrambling
+
+### bite
+
+```haskell
+Type: bite :: Int -> Pattern Int -> Pattern a -> Pattern a
+```
+The `bite` function allows you to slice each cycle into a given number of equal sized bits, and then pattern those bits by number. It's similar to `slice`, but is for slicing up patterns, rather than samples. The following slices the pattern into four bits, and then plays those bits in turn.
+
+```haskell
+d1 $ bite 4 "0 1 2 3" $ n "0 .. 7" # sound "arpy"
+```
+
+Of course that doesn't actually change anything, but then you can reorder those bits:
+```haskell
+d1 $ bite 4 "2 0 1 3" $ n "0 .. 7" # sound "arpy"
+```
+
+The slices bits of pattern will be squeezed or contracted to fit:
+```haskell
+d1 $ bite 4 "2 [0 3] 1*4 1" $ n "0 .. 7" # sound "arpy"
+```
+
 ### shuffle
 
 ```haskell

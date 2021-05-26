@@ -53,6 +53,10 @@ d1 $ sound (slow 2 "bd sn kurt")
    # slow 3 (vowel "a e o")
 ```
 
+### sparsity
+
+`sparsity` is a synonym of `slow`.
+
 ### hurry
 ```haskell
 Type: hurry :: Pattern Time -> Pattern a -> Pattern a
@@ -62,6 +66,82 @@ Type: hurry :: Pattern Time -> Pattern a -> Pattern a
 
 ```haskell
 d1 $ every 2 (hurry 2) $ sound "bd sn:2 ~ cp"
+```
+
+### slowSqueeze 
+
+```haskell
+Type: slowSqueeze :: Pattern Time -> Pattern a -> Pattern a
+```
+
+`fastSqueeze` slows down a pattern according to the given time pattern. It is the slow analogue to `fastSqueeze`. If the time pattern only has a single value in a cycle, `slowSqueeze` becomes equivalent to slow:
+```haskell
+d1 $ slow "<2 4>" $ s "bd*8"
+```
+
+is the same as:
+```haskell
+d1 $ slowSqueeze "<2 4>" $ s "bd*8"
+```
+
+but when the time pattern has multiple values in it the behavior is a little different! Instead, a slowed version of the pattern will be made for each value in the time pattern and then they're all combined together in a cycle, according to the structure of the time pattern. For example:
+```haskell
+d1 $ slowSqueeze "2 4 8 16" $ s "bd*8"
+```
+is equivalent to:
+```haskell
+d1 $ s "bd*4 bd*2 bd bd/2"
+```
+and:
+```haskell
+d1 $ slowSqueeze "2 4 [8 16]" $ s "bd*8"
+```
+is equivalent to:
+```haskell
+d1 $ s "bd*4 bd*2 [bd bd/2]"
+```
+### fastSqueeze
+
+```haskell
+Type: fastSqueeze :: Pattern Time -> Pattern a -> Pattern a
+```
+`fastSqueeze` speeds up a pattern by a time pattern given as input, squeezing the resulting pattern inside one cycle and playing the original pattern at every repetition.
+
+To better understand how it works let's compare it with `fast`:
+```haskell
+d1 $ fast "1 2" $ s "bd sn"
+```
+
+```haskell
+-- output
+(0>½)|s: "bd"
+(½>¾)|s: "bd"
+(¾>1)|s: "sn"
+```
+
+This will give bd played in the first half cycle and bd sn in the second half. On the other hand, using `fastSqueeze`;
+
+```haskell
+fastSqueeze "1 2" $ s "bd sn"
+```
+```haskell
+--output
+(0>¼)|s: "bd"
+(¼>½)|s: "sn"
+(½>⅝)|s: "bd"
+(⅝>¾)|s: "sn"
+(¾>⅞)|s: "bd"
+(⅞>1)|s: "sn"
+```
+The original pattern will play in the first half and two repetitions of the original pattern will play in the second half. That is, every repetition contains the whole pattern.
+
+If the time pattern has a single value, it becomes equivalent to fast:
+```haskell
+d1 $ fastSqueeze 2 $ s "bd sn"
+-- is equal to
+d1 $ fast 2 $ s "bd sn"
+-- and equivalent to
+d1 $ s "[bd sn]*2"
 ```
 
 ## Zooming in, Zooming Out
@@ -177,6 +257,62 @@ Useful when building and testing out longer sequences.
 
 `rotR` is the opposite of `rotL` as it shifts the pattern forwards in time. 
 
+### spin
+
+```haskell
+Type: spin :: Pattern Int -> ControlPattern -> ControlPattern
+```
+
+`spin` will play the given number of copies of the given control pattern at once. For `n` copies, each successive copy will be offset in time by an additional `1/n` of a cycle, and also panned in space by an additional n1/n</source>. This function works particularly well on multichannel systems.
+
+```haskell
+d1 $ slow 3 $ spin 4 $ sound "drum*3 tabla:4 [arpy:2 ~ arpy] [can:2 can:3]"
+```
+
+### weave
+
+```haskell
+Type: weave :: Time -> ControlPattern -> [ControlPattern] -> ControlPattern
+```
+
+`weave` applies one control pattern to a list of other control patterns, with a successive time offset. For example:
+
+```haskell
+d1 $ weave 16 (pan sine)
+  [sound "bd sn cp",
+   sound "casio casio:1",
+   sound "[jvbass*2 jvbass:2]/2",
+   sound "hc*4"
+  ]
+```
+
+In the above, the `pan sine` control pattern is slowed down by the given number of cycles, in particular `16`, and applied to all of the given sound patterns. What makes this interesting is that the `pan` control pattern is successively offset for each of the given sound patterns; because the `pan` is closed down by 16 cycles, and there are four patterns, they are 'spread out', i.e. with a gap of four cycles. For this reason, the four patterns seem to chase after each other around the stereo field. Try listening on headphones to hear this more clearly.
+
+You can even have it the other way round, and have the effect parameters chasing after each other around a sound parameter, like this:
+
+```haskell
+d1 $ weave 16 (sound "arpy" >| n (run 8))
+  [vowel "a e i",
+   vowel "i [i o] o u",
+   vowel "[e o]/3 [i o u]/2",
+   speed "1 2 3"
+  ]
+```
+
+### weaveWith
+
+```haskell
+Type: weaveWith :: Time -> Pattern a -> [Pattern a -> Pattern a] -> Pattern a
+```
+
+`weaveWith` (formerly known as `weave'`) is similar to the above, but `weaves` with a list of functions, rather than a list of controls. For example:
+```haskell
+d1 $ weaveWith 3 (sound "bd [sn drum:2*2] bd*2 [sn drum:1]")
+  [fast 2, 
+   (# speed "0.5"),
+   chop 16
+  ]
+```
 
 ## Reversing time
 ### rev
@@ -273,6 +409,14 @@ d1 $ stack [ ghost $ sound "~ sn", sound "bd*2 [~ bd]" ]
 
 The example above creates a kick snare pattern with ghost notes applied to the snare hit. 
 
+### ghost'
+
+`ghost'` is currently undocumented.
+
+### ghost''
+
+`ghost''` is currently undocumented.
+
 ## Inside and outside
 
 ### inside
@@ -322,3 +466,37 @@ Notice the whole idea has been reversed. What this function is really doing is '
 d1 $ slow 4 $ rev $ fast 4 $ cat [s "bd bd sn",s "sn sn bd", s"lt lt sd", s "sd sd bd"]
 ```
 This compresses the idea into a single cycle before `rev` operates and then slows it back to the original speed. 
+
+## Delay effects
+### stut
+
+```haskell
+Type: stut :: Pattern Integer -> Pattern Double -> Pattern Rational -> ControlPattern -> ControlPattern
+```
+`stut` applies a type of delay to a pattern. It has three parameters, which could be called `depth`, `feedback` and `time`. Depth is an integer and the others floating point. This adds a bit of echo:
+```haskell
+d1 $ stut 4 0.5 0.1 $ sound "bd sn"
+```
+
+The above results in `4` repeats (the original plus `3` echoes), each echo `50%` (that's the `0.5`) quieter than the last, separated by 1/10th (that's the `0.1`) of a cycle.
+
+It is possible to reverse the echo:
+```haskell
+d1 $ stut 4 0.5 (-0.1) $ sound "bd sn"
+```
+
+### stutWith
+
+```haskell
+Type: stutWith :: Pattern Int -> Pattern Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+`stutWith` (formerly known as `stut'`) is similar to stut described above, but instead of just decreasing volume to produce echoes, `stutWith` applies a function each step and overlays the result delayed by the given time.
+```haskell
+d1 $ stutWith 3 (1/3) (# vowel "{a e i o u}%2") $ sound "bd sn"
+```
+
+In this case there are two overlays delayed by 1/3 of a cycle, where each has the vowel filter applied.
+```haskell
+d1 $ stutWith 4 (1/6) (|* speed "1.5") $ sound "arpy arpy:2"
+```
+In the above, three versions are put on top, with each step getting higher in pitch as `|* speed "1.5"` is successively applied. 
