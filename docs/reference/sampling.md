@@ -136,3 +136,14 @@ d1 $ n (slow 2 $ segment 16 $ range 0 32 $ sine) # sound "amencutup"
 ### discretise
 
 `segment` used to be known as `discretise`. The old name remains as an alias and will still work, but may be removed or repurposed in a future version of **Tidal**. 
+
+### sig
+
+```haskell
+Type: sig :: (Time -> a) -> Pattern a
+```
+`sig` takes a function of time and turns it into a pattern. It's very useful for creating continuous patterns such as `sine` or `perlin`. For example, `saw` is defined as
+
+```haskell
+saw = sig $ \t -> mod' (fromRational t) 1
+```

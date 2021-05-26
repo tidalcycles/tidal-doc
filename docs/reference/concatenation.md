@@ -133,3 +133,30 @@ This code is equivalent to:
 ```haskell
 d1 $ n ("[0,4,7] [-12,-8,-5]") # s "superpiano" # sustain 2
 ```
+
+## run
+
+```haskell
+Type: run :: (Num a, Enum a) => Pattern a -> Pattern a
+```
+
+The `run` function generates a pattern representing a cycle of numbers from `0` to `n-1` inclusive. Notably used to `run` through a folder of samples in order:
+```haskell
+d1 $ n (run 8) # sound "amencutup"
+```
+
+The first parameter to run can be given as a pattern:
+```haskell
+d1 $ n (run "<4 8 4 6>") # sound "amencutup"
+```
+
+## scan
+
+```haskell
+Type: scan :: (Num a, Enum a) => Pattern a -> Pattern a
+```
+
+`scan` is similar to `run`, but starts at 1 for the first cycle, adding an additional number each cycle until it reaches `n`:
+```haskell
+d1 $ n (scan 8) # sound "amencutup"
+```
