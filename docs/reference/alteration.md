@@ -283,6 +283,13 @@ d1 $ chunk 4 (hurry 2) $ sound "bd sn:2 [~ bd] sn:2"
 
 `chunk'` does the same as chunk but cycles through the parts in the reverse direction. 
 
+### runWith
+
+Old name for `chunk`.
+
+### runWith'
+
+Old name for `chunk'`?
 
 ## Shuffling and scrambling
 
