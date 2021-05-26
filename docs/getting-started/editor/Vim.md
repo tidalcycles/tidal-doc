@@ -21,4 +21,10 @@ Vim is generally used by experienced users: developers, system administrators, t
 
 ----
 
-## Vim: Tips and tricks 
+## Vim: Tips and tricks
+
+### Undotree
+
+![undotree](undotree.png)
+
+As suggested by `@guiot` on the **Tidal Club** Forum. You can keep track of your improvisations using the [undotree](https://github.com/mbbill/undotree) plugin for Vim/Neovim. Using the undotree wisely is a great way to backtrack in time or to keep a `plaintext` trace of your improvisations. By default, `undotree` will record every little tiny changes in your text file. Activate the `undotree` for a file by entering the `:UndotreeToggle` command.
