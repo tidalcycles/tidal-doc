@@ -9,6 +9,10 @@ module.exports = {
   organizationName: "tidalcycles", // Usually your GitHub org/user name.
   projectName: "tidal-doc", // Usually your repo name.
   themeConfig: {
+    algolia: {
+      apiKey: 'cfaa4cd6c37cd93ded7774e6a93171b1',
+      indexName: 'tidalcycles',
+    },
     prism: {
       additionalLanguages: ['haskell'],
     },
