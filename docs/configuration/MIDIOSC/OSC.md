@@ -311,3 +311,160 @@ It consists of a single message, wrapped in a bundle, which provides the timesta
 
 The message inside the bundle has the path `/dirt/play`, and contains a variable number of name-value pairs. You can see the `s bd` and "speed 2" pairs, but Tidal adds a number of additional ones.. The current `cps` tempo, the position of the event in cycles (since **Tidal** started), the `delta` or duration of the event in seconds, and the `orbit` number.
 
+## Playback controllers
+
+**Tidal** `1.7.4` adds the ability to interact with patterns through the same OSC interface used for controller input. By default, it listens for OSC messages on localhost (`127.0.0.1`), port `6010`. 
+
+The next section describes the playback control functions that are available, followed by an example of using MIDI control in **SuperCollider** to control several patterns.
+
+###  Open Sound Control Functions
+
+#### Mute a Pattern
+
+You can mute or unmute a pattern by sending an OSC message with the path `/mute` or `/unmute` and an argument specifying a pattern. Just like in regular tidal code, this can be either a number (for `d1`, `d2`, etc) or a string (for named patterns).
+
+For example the OSC message `/mute 3` would mute `d3`.
+
+#### Solo a Pattern
+
+You can also solo or unsolo a pattern by sending an OSC message with the path `/solo` or `/unsolo` and an argument specifying a pattern, which can again be a number and a string.
+
+For example the OSC message `/solo 3` would solo `d3`.
+
+#### Control All Patterns
+
+You can also control all playing patterns using the OSC paths `/muteAll`, `/unmuteAll`, `/unsoloAll` and, of course, `/hush`. All of these messages have no arguments.
+
+#### MIDI Example
+
+Here is a full **SuperCollider** example for mapping buttons on a **MIDI** controller to patterns so that the note on/off messages from the buttons toggle pattern muting or trigger other effects.
+
+This example uses the **MIDI** buttons for the notes `C4` (MIDI value 60), `D4` and `E4` for toggling mute on `d1`, `d2` and `d3`. It uses notes `F4`, `G4` and `A4` to toggle solo on `d1`, `d2` and `d3`. It also uses the note `C5` to trigger muteAll and note `D5` to trigger unmuteAll.
+
+Edit the first section of the code (MIDI Controller Mapping) to define which controller buttons you want to use for controlling patterns. The rest of the code should work with the mappings you define, and shouldn't need any editing, but can also be useful for adapting.
+
+Start with **Tidal** (e.g. inside `Atom`) and **SuperDirt** already running and then run the below code block in **SuperCollider**:
+
+```c
+// Evaluate the block below to start the mapping MIDI -> OSC.
+(
+var mutes, solos, muteAll, unmuteAll, unsoloAll, hush;
+var playbackControl, playbackState;
+var osc;
+
+/* -- MIDI Controller Mapping ---------------------------- */
+// Edit this section to configure your MIDI controller
+
+// "mutes" and "solos" are each a Dictionary of MIDI numbers -> Pattern IDs
+
+// In this case, C4, D4 & E4 mute patterns d1, d2 & d3
+mutes = Dictionary[
+	60 -> 1,
+	62 -> 2,
+	64 -> 3
+];
+
+// In this case, F4, G4 & A4 solo patterns d1, d2 & d3
+solos = Dictionary[
+	65 -> 1,
+	67 -> 2,
+	69 -> 3
+];
+
+// This MIDI note triggers "muteAll"
+// In this case, it's set to C5
+muteAll = 72;
+
+// This MIDI note triggers "unmuteAll"
+// In this case, it's set to D5
+unmuteAll = 74;
+
+// This MIDI note triggers "unsoloAll"
+// In this case, it's unused
+unsoloAll = nil;
+
+// This MIDI note triggers "hush"
+// In this case, it's unused
+hush = nil;
+
+/* ------------------------------------------------------- */
+
+playbackState = Dictionary[];
+
+union(mutes.values.asSet, solos.values.asSet).do({
+	arg item;
+	playbackState.put(item, Dictionary[\mute -> false, \solo -> false]);
+});
+
+osc = NetAddr.new("127.0.0.1", 6010);
+
+MIDIClient.init;
+MIDIIn.connectAll;
+
+playbackControl = MIDIFunc.noteOn({ |val, num, chan, src|
+	var patID, patState;
+	if (mutes.at(num) !== nil, {
+		patID = mutes.at(num);
+		patState = playbackState.at(patID);
+		if (patState.trueAt(\mute), {
+			osc.sendMsg("/unmute", patID);
+			patState.put(\mute, false);
+		}, {
+			osc.sendMsg("/mute", patID);
+			patState.put(\mute, true);
+		});
+	});
+
+	if (solos.at(num) !== nil, {
+		patID = solos.at(num);
+		patState = playbackState.at(patID);
+		if (patState.trueAt(\solo), {
+			osc.sendMsg("/unsolo", patID);
+			patState.put(\solo, false);
+		}, {
+			osc.sendMsg("/solo", patID);
+			patState.put(\solo, true);
+		});
+	});
+
+	if (muteAll == num, {
+		osc.sendMsg("/muteAll");
+		playbackState.do({
+			arg patState;
+			patState.put(\mute, true);
+		});
+	});
+
+	if (unmuteAll == num, {
+		osc.sendMsg("/unmuteAll");
+		playbackState.do({
+			arg patState;
+			patState.put(\mute, false);
+		});
+	});
+
+	if (unsoloAll == num, {
+		osc.sendMsg("/unsoloAll");
+		playbackState.do({
+			arg patState;
+			patState.put(\solo, false);
+		});
+	});
+
+	if (hush == num, {
+		osc.sendMsg("/hush");
+	});
+});
+
+if (~stopMidiMuteControl != nil, {
+	~stopMidiMuteControl.value;
+});
+
+~stopMidiMuteControl = {
+	playbackControl.free;
+};
+)
+
+// Evaluate the line below to stop it.
+~stopMidiMuteControl.value;
+```
