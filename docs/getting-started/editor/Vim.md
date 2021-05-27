@@ -28,3 +28,23 @@ Vim is generally used by experienced users: developers, system administrators, t
 ![undotree](undotree.png)
 
 As suggested by `@guiot` on the **Tidal Club** Forum. You can keep track of your improvisations using the [undotree](https://github.com/mbbill/undotree) plugin for Vim/Neovim. Using the undotree wisely is a great way to backtrack in time or to keep a `plaintext` trace of your improvisations. By default, `undotree` will record every little tiny changes in your text file. Activate the `undotree` for a file by entering the `:UndotreeToggle` command.
+
+### Hacky custom completion
+
+You can create custom code completions by placing the following lines in your `.vimrc` file. This function will working only if a `.tidal` file is currently being edited with `vim-tidal`:
+
+```c
+autocmd FileType tidal call s:tidal_abbr()
+function! s:tidal_abbr()
+    inoreabbr billybd "[t ~ ~ ~] [~ ~ ~ ~] [t ~ ~ ~] [~ ~ ~ ~]"
+    inoreabbr billysn "[~ ~ ~ ~] [t ~ ~ ~] [~ ~ ~ ~] [t ~ ~ ~]"
+    inoreabbr billych "[t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~]"
+    inoreabbr bluemondaybd "[t ~ ~ ~] [~ ~ ~ ~] [t ~ ~ ~] [~ ~ ~ ~]"
+    inoreabbr bluemondaysn "[~ ~ ~ ~] [t ~ ~ ~] [~ ~ ~ ~] [t ~ ~ ~]"
+    inoreabbr bluemondaycp "[~ ~ ~ ~] [t ~ ~ ~] [~ ~ ~ ~] [t ~ ~ ~]"
+    inoreabbr bluemondayoh "[~ ~ t ~] [~ ~ t ~] [~ ~ t ~] [~ ~ t ~]"
+    ... etc ...
+endfunction
+```
+
+Simply write `billybd` or `billysn` to see the text being replaced by your pattern. Try to give these snippets very distinctive names so that they don't enter in conflict with language or library keywords.
