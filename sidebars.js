@@ -1,6 +1,6 @@
 module.exports = {
   docs: {
-    "Presentation": [
+    Presentation: [
       "TidalCycles",
       "community",
       "showcase",
@@ -16,7 +16,7 @@ module.exports = {
           "getting-started/downgrading",
           "getting-started/uninstalling",
         ],
-        "Troubleshoot": [
+        Troubleshoot: [
           "troubleshoot/troubleshoot_linux",
           "troubleshoot/troubleshoot_macos",
           "troubleshoot/troubleshoot_windows",
@@ -30,13 +30,18 @@ module.exports = {
         ],
       },
     ],
-    "Configuration": [
+    Configuration: [
       {
-        "Tidal Configuration": [
+        "Tidal Configuration": [
           "configuration/multiuser-tidal",
           "configuration/boot-tidal",
         ],
-        "SuperDirt Configuration": [
+        "Tidal Tools": [
+          "configuration/tidal-vis",
+          "configuration/tidal-listener",
+        ],
+
+        "SuperDirt Configuration": [
           "configuration/adding_effects",
           "configuration/adding_global_effects",
           "configuration/adding_synthesizers",
@@ -50,17 +55,15 @@ module.exports = {
           "configuration/Audio Samples/audiosamples",
           "configuration/Audio Samples/default_library",
           "configuration/Audio Samples/lazy_loading",
-          "configuration/Audio Samples/find_samples"
+          "configuration/Audio Samples/find_samples",
         ],
-        "Sound and audio": [
-          "configuration/AudioConfig/audio_outputs",
-        ]
+        "Sound and audio": ["configuration/AudioConfig/audio_outputs"],
       },
     ],
     "Pattern Library": [
       "patternlib/tutorials/online_course",
       {
-        "Basics": [
+        Basics: [
           "patternlib/tutorials/cycles",
           "patternlib/tutorials/patterns",
           "patternlib/tutorials/pattern_structure",
@@ -79,7 +82,7 @@ module.exports = {
           "patternlib/howtos/playchords",
           "patternlib/howtos/startpattern",
         ],
-        "Tutorials": [
+        Tutorials: [
           "patternlib/tutorials/workshop",
           "patternlib/tutorials/course1",
           "patternlib/tutorials/course2",
@@ -96,28 +99,26 @@ module.exports = {
           "patternlib/tour/sampling",
           "patternlib/tour/randomness",
           "patternlib/tour/composition",
-        ]
+        ],
       },
     ],
     "How does Tidal Work?": [
       {
-        "Haskell": [
+        Haskell: [
           "innards/haskell",
           "innards/meaning_of_dollar",
           "innards/meaning_of_dot",
           "innards/type_signatures",
           "innards/contributing_test",
         ],
-        "Concept": [
-          "innards/what_is_a_pattern",
-        ]
+        Concept: ["innards/what_is_a_pattern"],
       },
     ],
-    "Around Tidal": [
+    "Around Tidal": [
       "around_tidal/typing_fast_and_well",
       "around_tidal/toplap_manifesto",
       "around_tidal/tidal_history",
-      "around_tidal/changelog"
+      "around_tidal/changelog",
     ],
   },
   advanced: {
@@ -127,8 +128,8 @@ module.exports = {
       "advanced/understanding-innards/Haskell_resources",
     ],
   },
-  reference: {
-    "Basics": [
+  reference: {
+    Basics: [
       "reference/cycles",
       "reference/patterns",
       "reference/pattern_structure",
@@ -141,7 +142,7 @@ module.exports = {
       "reference/transitions",
       "reference/state_values",
     ],
-    "Reference": [
+    Reference: [
       "reference/concatenation",
       "reference/accumulation",
       "reference/alteration",
