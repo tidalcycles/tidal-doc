@@ -88,6 +88,7 @@ module.exports = {
           "patternlib/tutorials/course2",
         ],
         "Small reference": [
+          "patternlib/tour/even-more",
           "patternlib/tour/concatenation",
           "patternlib/tour/accumulation",
           "patternlib/tour/alteration",
