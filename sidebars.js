@@ -88,7 +88,6 @@ module.exports = {
           "patternlib/tutorials/course2",
         ],
         "Small reference": [
-          "patternlib/tour/even-more",
           "patternlib/tour/concatenation",
           "patternlib/tour/accumulation",
           "patternlib/tour/alteration",
@@ -144,6 +143,7 @@ module.exports = {
       "reference/state_values",
     ],
     Reference: [
+      "reference/even-more",
       "reference/concatenation",
       "reference/accumulation",
       "reference/alteration",
