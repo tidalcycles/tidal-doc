@@ -5,7 +5,7 @@ title: Upgrading
 
 -----
     
-Tidal Cycles is a composite software. To upgrade it, it is **highly** recommanded to upgrade everything along with the pattern library (the text editor and the SuperDirt audio engine as well). Each time a new version of **Tidal** is released, a new version of **SuperDirt** will likely follow, etc...
+Tidal Cycles is a composite software. To upgrade it, it is **highly** recommended to upgrade everything along with the pattern library (the text editor and the SuperDirt audio engine as well). Each time a new version of **Tidal** is released, a new version of **SuperDirt** will likely follow, etc...
 
 ## Library 
 
