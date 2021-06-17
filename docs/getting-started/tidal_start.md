@@ -20,7 +20,7 @@ Tidal Cycles is not a big monolithic software. It is better to think about it as
 
 ## Launching Tidal 
 
-There will always be to steps to launch Tidal:
+There will always be two steps to launch Tidal:
 1. Start **SuperCollider** and then **SuperDirt** inside of it.
 2. Start **Tidal Cycles** from your text editor.
 
