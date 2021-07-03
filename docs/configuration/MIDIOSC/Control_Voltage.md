@@ -1,6 +1,6 @@
 ---
-title: Control Voltage
-id: contol-voltage
+title: Control Voltage/CV
+id: control-voltage
 permalink: wiki/CV/
 layout: wiki
 ---
