@@ -26,8 +26,6 @@ d1 $ pitch "0 10 8 1" # scale "<12 31 8>" # x 0
 d1 $ pitch "0 10 8 1" # scale "<12 31 8>" # x 0 # glide 12 0.5
 ```
 
-
-
 ### Gate
 
 ```haskell
