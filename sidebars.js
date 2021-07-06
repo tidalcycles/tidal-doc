@@ -50,6 +50,7 @@ module.exports = {
           "configuration/MIDIOSC/midi",
           "configuration/MIDIOSC/osc",
           "configuration/MIDIOSC/connecting_to_a_daw",
+          "configuration/MIDIOSC/control-voltage",
         ],
         "Audio samples": [
           "configuration/Audio Samples/audiosamples",
