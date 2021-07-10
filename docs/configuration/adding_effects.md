@@ -15,12 +15,14 @@ We are going to add a weird spectral delay to **SuperDirt**. This assumes that y
 
 ### Tidal Side
 
-Open `Sound/Tidal/Params.hs`. We are going to add two parameters: `tsdelay` (float, delay time) and `xsdelay` (int, delay structure). Run the following Tidal Code by putting it in your Tidal Boot script:
+We are going to add two parameters: `tsdelay` (float, delay time) and `xsdelay` (int, delay structure). Run the following Tidal Code (as if it was a tidal pattern):
 
 ```haskell
 let tsdelay = pF "tsdelay"
     xsdelay = pI "xsdelay"
 ```
+
+If you want this to be automatically available every time you start tidal, you could add it to your [BootTidal.hs boot file](https://tidalcycles.org/docs/configuration/boot-tidal/_.
 
 ### SuperCollider Side
 
