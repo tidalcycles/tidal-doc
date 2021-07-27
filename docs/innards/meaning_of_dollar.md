@@ -51,7 +51,7 @@ Note that you can't use `$` with operators. For example:
 4 * (2 + 3)
 ```
 
-## Comparing $ and #
+## Comparing $ and # #
 
 So, `$` is used to join a parameter (on the right) with a function (on the left). `#` (and all its friends `|+|`, `|*|`, etc) are used to combine a pattern on the right with a pattern on the left. Check out the page `Pattern structure` in the `Basics` section.
 
