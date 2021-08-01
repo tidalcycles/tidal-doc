@@ -68,7 +68,7 @@ the latest version number) without any errors.
 Start your freshly installed version of SuperCollider. Paste the following line of code in the text editor you see and press Cmd+Return to evaluate :
 
 ```c
-Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.1.3"); thisProcess.recompile()})
+Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.2"); thisProcess.recompile()})
 ```
 
 Run the code by clicking on it, to make sure the cursor is on this line,
