@@ -25,7 +25,7 @@ Once you are done with this first installation phase, please follow the tutorial
 
 **I - SuperCollider**
 
-- **Ubuntu** / **Mint** / **Debian** : compiling Tidal Cycles from source is recommanded to get the last version running. Packages are generally too old. Alternatively, try these scripts: [build-supercollider](https://github.com/lvm/build-supercollider).
+- **Ubuntu** / **Mint** / **Debian** : compiling Tidal Cycles from source is recommended to get the last version running. Packages are generally too old. Alternatively, try these scripts: [build-supercollider](https://github.com/lvm/build-supercollider).
 - **Arch** / **Manjaro**: install via your [package manager](https://archlinux.org/packages/community/x86_64/supercollider/).
 
 **II - SuperDirt**
@@ -63,7 +63,7 @@ installation is done, you can exit the interpreter by pressing Ctrl + C.
 
 **III - SC3 Plugins**
 
-`SC3Plugins` is a community-made extension for SuperCollider. Installing it is **highly** recommanded. You won't be able to use the default synthesizers provided with Tidal Cycles without it. Please be sure to read [these instructions](https://supercollider.github.io/sc3-plugins/) to get the extension.
+`SC3Plugins` is a community-made extension for SuperCollider. Installing it is **highly** recommended. You won't be able to use the default synthesizers provided with Tidal Cycles without it. Please be sure to read [these instructions](https://supercollider.github.io/sc3-plugins/) to get the extension.
 
 - **Ubuntu** / **Mint** / **Debian**: follow the instructions above.
 - **Arch** / **Manjaro**: there is an up-to-date package in the [Community repository](https://archlinux.org/packages/community/x86_64/sc3-plugins/).
@@ -77,7 +77,7 @@ If you installed SuperCollider using the [build-supercollider](https://github.co
 ### Tidal Cycles
 
 Open a Terminal. If you’re unsure how to open a terminal window in
-Linux, it varies according to distribution but generally find `Terminal`
+Linux, it varies according to distribution, but generally you can find `Terminal`
 in the menus. Then type and run these two commands *(ignoring any
 complaints that cabal has of 'legacy v1 style of usage')*:
 ```bash
