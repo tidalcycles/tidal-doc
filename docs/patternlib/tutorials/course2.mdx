@@ -3,10 +3,13 @@ title: Course II (> 1.6)
 id: course2
 ---
 
+import { YouTube } from "@site/src/components/youtube";
+
 ## Week 5
 ----
 ### Lesson 1: musical notes
-[![week5lesson1](https://img.youtube.com/vi/ZtCx-YMrwVU/0.jpg)](https://www.youtube.com/watch?v=ZtCx-YMrwVU)
+
+<YouTube id="ZtCx-YMrwVU" />
 
 Ok we're back with a surprisingly long video about how to play notes, giving them as numbers or names, and controlling samples and synths.. With a sidetrack about how to look at the actual values inside (the first cycle of) a pattern.
 
@@ -166,10 +169,9 @@ d1 $ note "c a f e" # sound "superpiano"
 ----
 ### Lesson 2: chords, arpeggios and.. Algoraoke
 
-[![week5lesson2](https://img.youtube.com/vi/oDsXT68J9Kw/0.jpg)](https://www.youtube.com/watch?v=oDsXT68J9Kw)
+<YouTube id="oDsXT68J9Kw" />
 
 Ok warming up now! Here's a video exploring chords, arpeggios and the emerging form of Algoraoke, which I think was a term coined at the first live coding conference in Leeds by Ash Sagar. This video contains a preview of the next challenge, to make a 'cover version', which I'll write up in more detail a bit later..
-
 
 ```haskell
 
@@ -250,14 +252,15 @@ d1 $ jux rev $ arp "<updown thumbup pinkyupdown converge diverge>"
 
 ----
 ### Lesson 3: adding and using SuperDirt synths
-[![week5lesson3](https://img.youtube.com/vi/ZM8OEcjlkzo/0.jpg)](https://www.youtube.com/watch?v=ZM8OEcjlkzo)
+
+<YouTube id="ZM8OEcjlkzo" />
 
 As I say, **SuperDirt** and **SuperCollider** isn't my greatest area of expertise, I think `@eris` is looking at putting together a more in-depth video. As I also say, getting into synthesis is not mandatory, although **SuperCollider** is a fantastic world of possibilities system to get into if you're curious.
 
 ----
 ### Lesson 4: SuperDirt (part II)
-[![week5lesson4](https://img.youtube.com/vi/qZKDI8sVy8Q/0.jpg)](https://www.youtube.com/watch?v=qZKDI8sVy8Q)
 
+<YouTube id="qZKDI8sVy8Q" />
 
 Here's the code:
 ```haskell
@@ -347,8 +350,9 @@ SynthDef(\imp, { |out, sustain = 1, freq = 440, speed = 1, begin=0, end=1, pan, 
 ## Week 6
 
 -----
-### Lesson 1: cannons with "off"
-[![week6lesson1](https://img.youtube.com/vi/uWVfteb71vc/0.jpg)](https://www.youtube.com/watch?v=uWVfteb71vc)
+### Lesson 1: canons with "off"
+
+<YouTube id="uWVfteb71vc" />
 
 A little bit ahead of time, here's an intro to a function close to my heart, `off`. Here's the worksheet:
 
@@ -452,7 +456,8 @@ d1 $ off "<s q e>" (# squiz 2) $ n "{0 1 [~ 2] 3*2, 5 ~ 3 6 4}"
 
 ----
 ### Lesson 2: musical scales
-[![week6lesson2](https://img.youtube.com/vi/xUMNN74OSPs/0.jpg)](https://www.youtube.com/watch?v=xUMNN74OSPs)
+
+<YouTube id="xUMNN74OSPs" />
 
 Time to look at musical scales. Moving around scales can be especially fun with waveforms, so there's a lot of focus on that. It's a bit fiddly because as I explain in the video, you have to convert between decimal and whole numbers with e.g. `floor <$>`.. I'm going to have to look at making that easier in **Tidal**. And the worksheet:
 
@@ -562,13 +567,15 @@ d1 $ off 0.25 (|+ n 12) $ struct "t(<9 7>,16)" $ segment 16 $
 
 ----
 ### Lesson 3: controlling MIDI devices
-[![week6lesson3](https://img.youtube.com/vi/QmDmMpu9-T0/0.jpg)](https://www.youtube.com/watch?v=QmDmMpu9-T0)
+
+<YouTube id="QmDmMpu9-T0" />
 
 Here's a quick video running through connecting up a MIDI synth to Tidal, and controlling it with **CC** and **NRPN**.
 
 ----
 ### Lesson 4: controlling Tidal with MIDI
-[![week6lesson4](https://img.youtube.com/vi/XZH4IoBG5Pg/0.jpg)](https://www.youtube.com/watch?v=XZH4IoBG5Pg)
+
+<YouTube id="XZH4IoBG5Pg" />
 
 Here's the basics covered with controlling **Tidal** from MIDI. There's a bit more to cover here in terms of tips and tricks, so I think I'll do another video soon.. In the meantime feel free to ask questions, as it'll help me decide what to cover, thanks!
 
@@ -576,7 +583,8 @@ Here's the basics covered with controlling **Tidal** from MIDI. There's a bit mo
 
 -----
 ### Lesson 1: Composing patterns together
-[![week7lesson1](https://img.youtube.com/vi/OcDcTyEZuBs/0.jpg)](https://www.youtube.com/watch?v=OcDcTyEZuBs)
+
+<YouTube id="OcDcTyEZuBs" />
 
 Sorry a bit of a late start to the week. Here's a starter, looking at different ways of composing patterns together. I'll continue this in the next video with a look at the ur function for composing patterns of patterns.
 
@@ -718,7 +726,8 @@ d1 $ qtrigger 1 $ seqP [(0, 2, fast "1 2 3 4" $ sound "lt mt ht ~"),
 
 ----
 ### Lesson 2: Composing functions together
-[![week7lesson2](https://img.youtube.com/vi/5YCERGiAHUU/0.jpg)](https://www.youtube.com/watch?v=5YCERGiAHUU)
+
+<YouTube id="5YCERGiAHUU" />
 
 Here's a quick video about the handy `.` operator. Worksheet:
 ```haskell
@@ -761,7 +770,8 @@ Have fun!
 
 ----
 ### Lesson 3: Composing tracks with the "ur" function
-[![week7lesson3](https://img.youtube.com/vi/7Y3aKx2w5dQ/0.jpg)](https://www.youtube.com/watch?v=7Y3aKx2w5dQ)
+
+<YouTube id="7Y3aKx2w5dQ" />
 
 Here's an introduction to the `ur` function, which lets you make patterns out of patterns, to make a track. I also talk about issues with `orbits` and global effects (e.g. `reverb`, `delay`) you might have when using `ur`, `seqPLoop` and `stack`. This is still an area of **Tidal** that could be developed, so I'd be happy to have your ideas about possible features/improvements.
 
@@ -784,7 +794,8 @@ d1 $ ur 16 "[bdsd, ~ claps, ~ [bass bass:crunch] ~ bass]"
 
 ----
 ### Lesson 1: Shifting time / beat rotation
-[![week8lesson1](https://img.youtube.com/vi/5Jq4pLjUDDk/0.jpg)](https://www.youtube.com/watch?v=5Jq4pLjUDDk)
+
+<YouTube id="5Jq4pLjUDDk" />
 
 Bliemy, it's week 8 already.. Lets do some time travel with `<~` and `~>`. Here's the worksheet:
 ```haskell
@@ -874,7 +885,8 @@ d1 $ every 2 ("e" <~) $ every 3 (0.25 <~) $
 
 ----
 ### Lesson 2: Binary patterns
-[![week8lesson2](https://img.youtube.com/vi/U4cauoY3-6k/0.jpg)](https://www.youtube.com/watch?v=U4cauoY3-6k)
+
+<YouTube id="U4cauoY3-6k" />
 
 Here's a quick introduction to binary patterns, focussing on using them to switch between a pair of functions with `stitch` and `sew`. Here is the worksheet:
 ```haskell
@@ -997,7 +1009,8 @@ d1 $ sew (iter 4 "t f")
 
 ----
 ### Lesson 3: Fitting values to patterns
-[![week8lesson3](https://img.youtube.com/vi/2YlI02lqPWc/0.jpg)](https://www.youtube.com/watch?v=2YlI02lqPWc)
+
+<YouTube id="2YlI02lqPWc" />
 
 Ok after some delay, I'm back to finish off week 8 finally! Here's a look at the `fit` function. I'd be happy to see your thoughts and questions about this one! Here's the worksheet:
 ```haskell

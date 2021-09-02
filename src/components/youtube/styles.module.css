@@ -1,0 +1,15 @@
+.video {
+  height: 0;
+  margin: 0 0 var(--ifm-leading);
+  overflow: hidden;
+  padding-top: var(--ifm-leading);
+  position: relative;
+}
+
+.video iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
