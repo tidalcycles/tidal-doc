@@ -3,12 +3,14 @@ title: Course I (> 1.6)
 id: course1
 ---
 
+import { YouTube } from "@site/src/components/youtube";
+
 ## Week 1
 
 ----
 ### Lesson 1: Tidal Interaction
 
-[![week1lesson1](https://img.youtube.com/vi/i9Rsn8-BAY4/0.jpg)](https://www.youtube.com/watch?v=i9Rsn8-BAY4)
+<YouTube id="i9Rsn8-BAY4"/>
 
 Aimed at people new to live coding, and goes through the basics of how to interact with **Tidal** - starting and stopping code and so on. Look at the video description to jump to different parts, and switch subtitles on if I'm speaking too fast.
 
@@ -16,7 +18,7 @@ Aimed at people new to live coding, and goes through the basics of how to intera
 
 ### Lesson 2: Loading sample packs
 
-[![week1lesson2](https://img.youtube.com/vi/nzKjNlgOkTk/0.jpg)](https://www.youtube.com/watch?v=nzKjNlgOkTk)
+<YouTube id="nzKjNlgOkTk" />
 
 Here's the **Tidal Club** [sample pack](https://slab.org/tmp/samples-extra.zip).
 First, save and extract the samples somewhere:
@@ -66,7 +68,7 @@ Here's the contents of samples-extra:
 
 ### Lesson 3: mini-notation (part I)
 
-[![week1lesson3](https://img.youtube.com/vi/nBpCJcduMso/0.jpg)](https://www.youtube.com/watch?v=nBpCJcduMso)
+<YouTube id="nBpCJcduMso" />
 
 Ok welcome to `mini-notation` week! Here's the first video and WorkSheet, exploring sequencing of sounds in **Tidal**'s mini-notation. Copy and paste the following into atom (or whatever editor you've set up with tidal), to explore the concepts in the video.
 
@@ -130,7 +132,7 @@ If you make something you like, be sure to save it somewhere and keep it safe! Y
 
 ### Lesson 4: mini-notation (part II)
 
-[![week1lesson4](https://img.youtube.com/vi/h_f11uago28/0.jpg)](https://www.youtube.com/watch?v=h_f11uago28)
+<YouTube id="h_f11uago28" />
 
 Ok lets go deeper into the `mini-notation`! Here's a video. I experimented with fitting more things in a 'lesson', making a longer video accordingly.. But I think I was flagging by the end! I put a clarification or two in the subtitles. I also experimented with visualisation, which turned out more helpful at some points than others..
 
@@ -313,7 +315,7 @@ d1 $ sound "bd sd sd sd bd [sd sd sd]"
 
 ### Lesson 1: starting out with effects
 
-[![week2lesson1](https://img.youtube.com/vi/_bcG2_zDjyw/0.jpg)](https://www.youtube.com/watch?v=_bcG2_zDjyw)
+<YouTube id="_bcG2_zDjyw" />
 
 Ok, time to start exploring some effects! In this video I introduce some of the many effects available with **SuperDirt** and begin to explain how **Tidal** goes about combining two or more such patterns into one. We'll return to this later..
 
@@ -388,7 +390,7 @@ d1 $ sound "kurt:4(3,8)" # shape "0 0.98" # gain "0.7"
 
 ### Lesson 2: manipulating time
 
-[![week2lesson2](https://img.youtube.com/vi/ARCZE_XLhfk/0.jpg)](https://www.youtube.com/watch?v=ARCZE_XLhfk)
+<YouTube id="ARCZE_XLhfk" />
 
 Hi all, here's a new video, exploring ways of manipulating time. I enjoyed this one! Here's a worksheet to go with it:
 
@@ -477,7 +479,7 @@ setcps 0.7
 
 ### Lesson 3: combining patterns with arithmetic
 
-[![week2lesson3](https://img.youtube.com/vi/qdfXTQJqUGE/0.jpg)](https://www.youtube.com/watch?v=qdfXTQJqUGE)
+<YouTube id="qdfXTQJqUGE" />
 
 Here's another video as promised. To tell the truth, I'm super tired at the moment, so despite a couple of takes the video ended up a bit "non-linear", with an explanation of the `hurry` function dropped in the middle of an exploration of the different ways of combining control patterns of the same type.
 
@@ -641,7 +643,7 @@ d1 $ n "[0 4 2] [4 1] 3 [2 0] 3 [3 1] 4 4" # sound "cpu"
 ## Week 3
 ### Lesson 1: exploring "every", meaning of "$"
 
-[![week3lesson1](https://img.youtube.com/vi/2I74QEdXzBY/0.jpg)](https://www.youtube.com/watch?v=2I74QEdXzBY)
+<YouTube id="2I74QEdXzBY" />
 
 Before getting on to working with longer samples, here's something about the every function. It's a nice clear example of how functions work, and gives us the opportunity to start to get a feel for how parenthesis and `$` works. I also go through how to add an effect as a function.
 
@@ -763,7 +765,7 @@ d1 $ every 3 $ fast 2 $ sound "bd sd ~ cp"
 
 ### Lesson 2: cut VS legato
 
-[![week3lesson1](https://img.youtube.com/vi/dQPmE1WaD1k/0.jpg)](https://www.youtube.com/watch?v=dQPmE1WaD1k)
+<YouTube id="dQPmE1WaD1k" />
 
 Here's the first of three videos sharing techniques for dealing with longer samples, this time looking at the `cut` and `legato` control patterns, and the difference between them. Here's a couple of examples to play with. Note what happens to the `bev` sample when you `hush` and there's nothing to `cut` it:
 
@@ -779,7 +781,7 @@ d2 $ jux rev $ sound "sax(3,8)" # legato 1 # n 3
 
 ### Lesson 3: slice and splice
 
-[![week3lesson3](https://img.youtube.com/vi/hKhPdO0RKDQ/0.jpg)](https://www.youtube.com/watch?v=hKhPdO0RKDQ)
+<YouTube id="hKhPdO0RKDQ" />
 
 Lets look at a way of 'beat slicing' looping samples, using `slice` and `splice`:
 
@@ -812,7 +814,7 @@ d2 $ sound "kick snare*2 clap:4" # speed 2
 
 ### Lesson 4: chop and striate
 
-[![week3lesson4](https://img.youtube.com/vi/A199q_kMhb0/0.jpg)](https://www.youtube.com/watch?v=A199q_kMhb0)
+<YouTube id="A199q_kMhb0" />
 
 Continuing on from Week 3 lesson 3, let's round off our week of work with longer samples, to look at a different way of 'beat slicing', using `chop` and `striate`. Here is the worksheet:
 
@@ -882,7 +884,7 @@ d1 $ slow 4 $ jux rev $ loopAt 16 $ striate 128 $ sound "bev*4"
 
 ### Lesson 1: continous patterns and random functions
 
-[![week4lesson1](https://img.youtube.com/vi/ZVQ-YPblUXA/0.jpg)](https://www.youtube.com/watch?v=ZVQ-YPblUXA)
+<YouTube id="ZVQ-YPblUXA" />
 
 Ok, lets have a look at some continuous functions! This is quite a large topic (hence the longer video, partly also because I got sidetracked playing with binary patterns) but will help for getting stuck into randomness later in the week. This video is basically all about waveforms (apart from that binary sidetrack).
 
@@ -978,8 +980,7 @@ d1 $ sound "bd(7,16)"
 
 ### Lesson 2: random marathon (part I)
 
-[![week4lesson2](https://img.youtube.com/vi/7Hzc-28ergY/0.jpg)](https://www.youtube.com/watch?v=7Hzc-28ergY)
-
+<YouTube id="7Hzc-28ergY" />
 
 Continuing from our look at waveforms including random ones, here's the first of a two-parter looking at a wide range of random functions.. Starting with a bit of armchair philosophising about the nature of randomness in algorithmic music.
 
@@ -1174,7 +1175,7 @@ d1 $ sound "clap*2" # speed (range 0.1 2 rand)
 
 ### Lesson 3: random marathon (part II)
 
-[![week4lesson3](https://img.youtube.com/vi/nRMWkKTjsRk/0.jpg)](https://www.youtube.com/watch?v=nRMWkKTjsRk)
+<YouTube id="nRMWkKTjsRk" />
 
 ```haskell
 -- randcat
