@@ -41,7 +41,7 @@ sudo pacman –S emacs
 To install the Emacs interface to Tidal, you’ll need to edit a configuration file in your home folder called `.emacs`. If it doesn’t exist, create it. Then, add the following, replacing `\~/projects/tidal` with the location of the `tidal.el` file:
 
 ```elisp
-(add-to-list 'load-path "~/projects/tidal")`
+(add-to-list 'load-path "~/projects/tidal")
 (require 'haskell-mode)`
 (require 'tidal)`
 ```
