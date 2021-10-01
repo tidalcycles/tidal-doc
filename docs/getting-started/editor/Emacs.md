@@ -42,8 +42,8 @@ To install the Emacs interface to Tidal, you’ll need to edit a configuration f
 
 ```elisp
 (add-to-list 'load-path "~/projects/tidal")
-(require 'haskell-mode)`
-(require 'tidal)`
+(require 'haskell-mode)
+(require 'tidal)
 ```
 
 #### Download tidal.el
