@@ -274,7 +274,7 @@ You could then use this control in a pattern like so:
 d1 $ sound "bd" # speed (cF 1 "hello")
 ```
 
-`cF` is what you use for floating point controls. The second parameter `1` is the default value, for when tidal hasn't received that control yet. There is also `cS` for strings and `cI` for integers. For time values (for using e.g. as the first parameter of fast/slow), use `cT`. For ratios add `cR`. 
+`cF` is what you use for floating point controls. The second parameter `1` is the default value, for when tidal hasn't received that control yet. There is also `cS` for strings and `cI` for integers. For time values (for using e.g. as the first parameter of fast/slow), use `cT`. For ratios add `cR`. If you want to receive entire patterns (written as a string of mini notation), use `cP`.
 
 ## Debugging
 
