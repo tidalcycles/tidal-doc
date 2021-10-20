@@ -42,6 +42,14 @@ For example, `every' 3 0 (fast 2)` will speed up the cycle on cycles 0,3,6,… w
 
 With this in mind, setting the second argument of `every'` to `0` gives the equivalent `every` function. For example, `every 3` is equivalent to `every' 3 0`. 
 
+### foldEvery
+
+```haskell
+Type: foldEvery' :: [Int] -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+
+`foldEvery` is similar to chaining multiple `every` functions together. It transforms a pattern with a function, once per any of the given number of cycles. If a particular cycle is the start of more than one of the given cycle periods, then it it applied more than once. 
+
 ### when
 
 ```haskell
