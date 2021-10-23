@@ -14,7 +14,7 @@ install](/wiki/Windows_choco_install "wikilink").
 # Manual install
 
 If you prefer to install the different parts of a Tidal environment by
-hand, perhaps because you already have supercollider or haskell
+hand, perhaps because you already have SuperCollider or Haskell
 installed, then follow the below instructions.
 
 ## Prerequisites
@@ -25,8 +25,8 @@ Before installing Tidal, make sure the following are installed first:
 
 -   Haskell Platform - Please note! There's a bug in the windows haskell
     installer, please install [this
-    version](https://www.haskell.org/platform/download/8.4.3/HaskellPlatform-8.4.3-full-x86_64-setup.exe)
-    (Haskell 8.4.3 'full' install) and it should work
+    version](https://downloads.haskell.org/platform/8.6.5/HaskellPlatform-8.6.5-core-x86_64-setup.exe)
+    (Haskell 8.6.5 'full' install) and it should work
 -   [Atom Editor](https://atom.io/) (if you don't like the atom editor
     for some reason, please check out the [list of
     alternatives](/wiki/List_of_tidal_editors "wikilink"))
@@ -49,11 +49,11 @@ The following is optional, but recommended:
 Open a Command Prompt (or PowerShell), then type and run these two
 commands:
 
-`cabal update`  
-` cabal install tidal`
+`cabal v1-update`  
+`cabal v1-install tidal`
 
 If you've never installed TidalCycles before, then the
-`cabal install tidal` step may take some time.
+`cabal v1-install tidal` step may take some time.
 
 If you see an error with the network library, then you need to fix
 something with your Haskell install. You can [find instructions
@@ -64,7 +64,7 @@ here](https://forum.toplap.org/t/trouble-launching-tidal-in-atom/678/3).
 Start SuperCollider, and in the editor window paste in the following
 line of code:
 
-    Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.1.3"); thisProcess.recompile()})
+    Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.2"); thisProcess.recompile()})
 
 Run the code by clicking on it, to make sure the cursor is on this line,
 then hold down Shift and press Enter.
@@ -84,7 +84,7 @@ compiling class library...
 ...
 
 <!--T:28-->
-*** Welcome to SuperCollider 3.10.0. *** For help press Ctrl-D.
+*** Welcome to SuperCollider 3.12.1. *** For help press Ctrl-D.
 ```
 
 ## Install Atom Extension

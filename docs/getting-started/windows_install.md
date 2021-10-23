@@ -72,7 +72,7 @@ compiling class library...
 ...
 
 <!--T:28-->
-*** Welcome to SuperCollider 3.10.0. *** For help press Ctrl-D.
+*** Welcome to SuperCollider 3.12.1. *** For help press Ctrl-D.
 ```
 
 
@@ -81,8 +81,8 @@ compiling class library...
 You will need [Haskell](https://www.haskell.org/ghcup/) (Ghcup) to install Tidal Cycles. If you just installed it or already got it installed, open `PowerShell` in **administrator mode** (see above). Enter the following commands:
 
 ```shell
-cabal update
-cabal install tidal
+cabal v1-update
+cabal v1-install tidal
 ```
 
 The last command might take some time to complete. Be patient, and everything will be alright :smile:. 
