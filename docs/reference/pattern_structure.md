@@ -63,13 +63,13 @@ Note that `+` is actually an alias for `|+|`. So `|+` is to take the structure f
 
 | Function     | Both           | Left  | Right |
 |--------------|----------------|-------|-------|
-| Add          | `\|+\|` or (+) | `\|+` | `+\|` |
-| Substract    | `\|-\|` or (-) | `\|-` | `-\|` |
-| Multiply     | `\|*\|` or (*) | `\|*` | `*\|` |
-| Divide       | `\|/\|` or (/) | `\|/` | `/\|` |
-| Modulo       | `\|%\|` or (%) | `\|%` | `%\|` |
-| Left values  | `\|<\|` or (<) | `\|<` | `<\|` |
-| Right Values | `\|>\|` or (>) | `\|>` | `>\|` |
+| Add          | `|+|` or (+) | `|+` | `+|` |
+| Substract    | `|-|` or (-) | `|-` | `-|` |
+| Multiply     | `|*|` or (*) | `|*` | `*|` |
+| Divide       | `|/|` or (/) | `|/` | `/|` |
+| Modulo       | `|%|` or (%) | `|%` | `%|` |
+| Left values  | `|<|` or (<) | `|<` | `<|` |
+| Right Values | `|>|` or (>) | `|>` | `>|` |
 
 
 The last two are interesting, they let you only take values from one side. So for example you could take structure from the left, but values from the right with `|>`, for example:
@@ -84,7 +84,7 @@ This is very similar to how `|+|` used to work in the versions of tidal prior to
 
 ## Combining control patterns
 
-A control pattern (formerly known as a `param pattern`), is a pattern that's been given a control name. For example the number pattern `"1 2 3"` can be turned into a control pattern like this:
+A **control pattern** (formerly known as a **param pattern**), is a pattern that's been given a control name. For example the number pattern `"1 2 3"` can be turned into a control pattern by prefixing the `speed` control name:
 ```plaintext
 speed "1 2 3"
 ```
