@@ -8,6 +8,14 @@ layout: wiki
 
 -----
 
+## Automatic installation
+
+There are user-made guides to install Tidal Cycles. Be sure to check out the following solutions:
+- [Ansible method](https://club.tidalcycles.org/t/now-with-early-arch-manjaro-support-install-manage-upgrades-to-tidal-environment-with-a-single-command-on-ubuntu-debian-linux-mint-ansible-method/544) : Ubuntu / debian / Mint (/ most debian-based distros) 
+- [Yay](https://roosnaflak.com/tech-and-research/install-tidal-cycles-on-arch-linux/) : installation on Arch / Manjaro.
+
+-----
+
 ## Manual installation
 
 You need to install several components to get a complete Tidal Cycles system ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/platform/), [SuperCollider](http://supercollider.github.io/download) and [SuperDirt](https://github.com/musikinformatik/SuperDirt)). Hopefully, your Linux distribution makes the pre-requisites easily available to you via a package manager. You will also need a text editor. Check the sidebar to get a list of supported editors along with instructions for setting them up.
@@ -89,14 +97,5 @@ If you've never installed TidalCycles before, then the
 `cabal install tidal` step may take some time. At the end of the command
 output, it should say `Completed tidal-x.x.x` (where x.x.x is the latest
 version number) without any errors.
-
-
------
-
-## Automatic installation
-
-There are user-made guides to install Tidal Cycles. Be sure to check out the following solutions:
-- [Ansible method](https://club.tidalcycles.org/t/now-with-early-arch-manjaro-support-install-manage-upgrades-to-tidal-environment-with-a-single-command-on-ubuntu-debian-linux-mint-ansible-method/544) : Ubuntu / Debian / Mint / early Arch support.
-- [Yay](https://roosnaflak.com/tech-and-research/install-tidal-cycles-on-arch-linux/) : installation on Arch / Manjaro.
 
 </translate>
