@@ -33,6 +33,10 @@ If you enjoy using **Tidal Cycles**, please consider contributing to the [Tidal 
 
 ## Credits
 
-**Tidal Cycles** and **SuperDirt** have been developed with contributions from a wide range of people - [Tidal contributors](https://github.com/tidalcycles/Tidal/graphs/contributors) / [SuperDirt contributors](https://github.com/musikinformatik/SuperDirt/graphs/contributors). **Tidal Cycles** was initiated by Alex McLean around 2009 during doctoral work funded by EPSRC. Alex's ongoing work on Tidal is partly supported by Ko-Fi contributors and the [PENELOPE](https://penelope.hypotheses.org/) project (under the Horizon 2020 research and innovation programme of the European Union, grant agreement No 682711).
+**Tidal Cycles** and **SuperDirt** have been developed with contributions from a wide range of people - [Tidal contributors](https://github.com/tidalcycles/Tidal/graphs/contributors) / [SuperDirt contributors](https://github.com/musikinformatik/SuperDirt/graphs/contributors).
+
+**Tidal Cycles** was initiated by Alex McLean around 2009 during doctoral work funded by EPSRC. Alex' ongoing work on Tidal has been supported in part by various ad-hoc contributors, and grants (eg the [PENELOPE](https://penelope.hypotheses.org/) project, under the Horizon 2020 research and innovation programme of the European Union, grant agreement No 682711).
+
+In 2021, Alex moved the project's public financial contribution support model from an individual/personal contribution type (via Ko-fi), to a an Organisational Model via the [OpenCollective platform](https://opencollective.com/tidalcycles), at the same time appointing an experienced admin team to handle the ongoing project accounting in a transparent and ethical manner.
 
 TidalCycles has been heavily inspired by the work of many others including Bernard Bel, Laurie Spiegel and Adrian Ward. 
