@@ -193,7 +193,7 @@ d1 $ trunc "<0.75 0.25 1>" $ sound "bd sn:2 [mt rs] hc"
 Type: linger :: Pattern Time -> Pattern a -> Pattern a
 ```
 
-`linger` is similar to `trunc`, in that it truncates a pattern so that only the first fraction of the pattern is played. However unlike trunk, `linger` repeats that part to fill the remainder of the cycle.
+`linger` is similar to `trunc`, in that it truncates a pattern so that only the first fraction of the pattern is played. However unlike trunc, `linger` repeats that part to fill the remainder of the cycle.
 
 For example this repeats the first quarter, so you only hear a single repeating note:
 ```haskell
