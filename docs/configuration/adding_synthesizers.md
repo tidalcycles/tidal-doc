@@ -89,7 +89,7 @@ SynthDef(\test, {
     OffsetOut.ar(out, Pan2.ar(in: output, pos: pan));
 }).add;
 ```
-Using `doneAction` is **extremely important**. Our synth will now free whatever ressource he was using when playing. 
+Using `doneAction` is **extremely important**. Our synth will now free whatever resource it was using while playing. 
 
 ### Adapt your synth to SuperDirt
 
