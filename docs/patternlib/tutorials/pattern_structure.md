@@ -80,7 +80,7 @@ The last two are interesting, they let you only take values from one side. So fo
  = |  4  |  5  |
 ```
 
-This is very similar to how `|+|` used to work in the versions of tidal prior to 1.0.0 - it took structure from the left, but values from the right. In fact, # is an alias for `|>`, mirroring the behaviour in previous versions of tidal.
+This is very similar to how `|+|` used to work in the versions of tidal prior to 1.0.0 - it took structure from the left, but values from the right. In fact, `#` is an alias for `|>`, mirroring the behaviour in previous versions of tidal.
 
 ## Combining control patterns
 
