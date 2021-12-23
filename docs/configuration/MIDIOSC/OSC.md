@@ -91,7 +91,7 @@ let oscplay = OSC "/play" $ ArgList [("s", Nothing),
 Instead of giving an argument list as above, you can specify named parameters like this:
 
 ```c
-let oscplay = OSC "/play" Named {required = ["s"]}
+let oscplay = OSC "/play" Named {requiredArgs = ["s"]}
 ```
 
 With such a definition, all parameters in a pattern will be sent to the target. Instead of having fixed positions in a message as with an argument list, the parameters will be in an arbitrary order, but as name-value pairs. That is, each parameter will be prefixed by an additional string parameter, giving its name. As you can see in the example, a list of 'required' parameters is given - unless all of the parameters named in this list are present in an patterned event, it will not be sent.
