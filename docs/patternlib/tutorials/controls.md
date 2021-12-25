@@ -24,7 +24,7 @@ d1 $ note "c d e f g a"
 
 Most of the time, you will use control patterns to use effects on your patterns. For instance, this drum pattern will be filtered:
 ```c
-d1 $ s " bd hh bd hh*2*"
+d1 $ s " bd hh bd hh*2"
   # lpf "500 1000 1500"
   # lpq 0.5
 ```
