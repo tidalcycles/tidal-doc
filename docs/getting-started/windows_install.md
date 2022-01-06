@@ -26,16 +26,18 @@ windows to give a few security pop-ups for you to accept. Windows 7 users: pleas
 **II - Installing Chocolatey: the package manager**
 
 > The [Chocolatey](https://chocolatey.org/) package
->  manager is required. If you haven't installed it previously, you can
->   get it by running this command:
->   ```powershell
->    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
->   ```
+> manager is required. If you haven't installed it previously, you can
+> get it by running this command:
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
 
 **III - Installing Tidal Cycles**
 
-Run the following command to install Tidal Cycles using Chocolatey:
->    ```shell choco install tidalcycles ```
+> Run the following command to install Tidal Cycles using Chocolatey:
+```bash
+choco install tidalcycles
+```
 
 *Note:* We are still working on the automatic installer. A lot of confusing information will scroll past. Please ignore messages about restarting Powershell. Just let the process run to the end.
 
@@ -81,7 +83,7 @@ compiling class library...
 
 You will need [Haskell](https://www.haskell.org/ghcup/) (Ghcup) to install Tidal Cycles. If you just installed it or already got it installed, open `PowerShell` in **administrator mode** (see above). Enter the following commands:
 
-```shell
+```bash
 cabal v1-update
 cabal v1-install tidal
 ```
