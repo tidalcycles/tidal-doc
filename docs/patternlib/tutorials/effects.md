@@ -109,7 +109,7 @@ Be gentle with the resonance amount
 
 #### Bandpass filter
 
-* `bandf` / `bpf`: cutoff amount in hertz
+* `bandf` / `bpf`: center frequency in hertz
 * `bandq` / `bpq`: resonance
 
 #### Vowel
