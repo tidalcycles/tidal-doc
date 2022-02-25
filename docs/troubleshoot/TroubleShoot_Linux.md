@@ -157,6 +157,17 @@ If the **Tidal Haskell Library** has stubborn problems when installed with
 `cabal`, particularly if it brings up errors related to the 'network'
 library under library, then instead installing with `stack` solves it.
 
+For most -nix operating systems, the easiest way to install **stack** is to run:
+
+```bash
+curl -sSL https://get.haskellstack.org/ | sh
+```
+or:
+
+```bash
+wget -qO- https://get.haskellstack.org/ | sh
+```
+
 This is done with the following command in a terminal window:
 
 ```bash
@@ -171,4 +182,4 @@ package, and set the `ghci path` setting to:
 stack exec --package tidal -- ghci
 ```
 
-Restart *Atom** and all should be well.
+Restart **Atom** and all should be well.
