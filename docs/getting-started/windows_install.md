@@ -34,7 +34,9 @@ windows to give a few security pop-ups for you to accept. Windows 7 users: pleas
 **III - Installing Tidal Cycles**
 
 Run the following command to install Tidal Cycles using Chocolatey:
->    ```shell choco install tidalcycles ```
+>    ```shell 
+>    choco install tidalcycles 
+>    ```
 
 *Note:* We are still working on the automatic installer. A lot of confusing information will scroll past. Please ignore messages about restarting Powershell. Just let the process run to the end.
 
