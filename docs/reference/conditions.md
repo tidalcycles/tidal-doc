@@ -195,6 +195,30 @@ Similar to `choose`, but only picks once per cycle:
 d1 $ sound "drum ~ drum drum" # n (cycleChoose [0,2,3])
 ```
 
+### fix
+
+```haskell
+Type: fix :: (ControlPattern -> ControlPattern) -> ControlPattern -> ControlPattern -> ControlPattern
+```
+
+The `fix` function applies another function to matching events in a pattern of controls. `fix` is `contrast` where the false-branching function is set to the identity `id`.
+
+For example:
+```haskell
+d1 $ slow 2 $ fix (# crush 3) (n "[1,4]") $ n "0 1 2 3 4 5 6" # sound "arpy"
+```
+The above only adds the `crush` control when the `n` control is set to either `1` or `4`.
+
+You can be quite specific, for example 
+```haskell
+fix (hurry 2) (s "drum" # n "1")
+```
+to apply the function `hurry 2` to sample `1` of the drum sample set, and leave the rest as they are.
+
+### unfix
+
+`unfix` is `fix` but only applies when the testing pattern is *not* a match.
+
 ## Boolean conditions
 
 ### struct

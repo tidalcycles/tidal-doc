@@ -12,10 +12,10 @@ This page will present you all the functions that can be used to concatenate (e.
 
 ### cat
 ```haskell
-Type: cat :: [Pattern a] -> Pattern a 
+Type: cat :: [Pattern a] -> Pattern a
 ```
 
-`cat`, (also known as `slowcat`, to match with `fastcat` defined below) concatenates a list of patterns into a new pattern; each pattern in the list will maintain its original duration. For example: 
+`cat`, (also known as `slowcat`, to match with `fastcat` defined below) concatenates a list of patterns into a new pattern; each pattern in the list will maintain its original duration. For example:
 
 ```haskell
 d1 $ cat [sound "bd*2 sn", sound "arpy jvbass*2"]
@@ -31,10 +31,10 @@ There is also a `slowcat` function, perfectly similar to `cat`. This function ex
 
 ### fastcat
 ```haskell
-Type: fastcat :: [Pattern a] -> Pattern a 
+Type: fastcat :: [Pattern a] -> Pattern a
 ```
 
-`fastcat` works like cat above, but squashes all the patterns to fit a single cycle. 
+`fastcat` works like cat above, but squashes all the patterns to fit a single cycle.
 
 ```haskell
 d1 $ fastcat [sound "bd*2 sn", sound "arpy jvbass*2"]
@@ -46,7 +46,7 @@ d1 $ fastcat [sound "bd*2 sn", sound "jvbass*3", sound "drum*2", sound "ht mt"]
 
 ### timeCat
 ```haskell
-Type: timeCat :: [(Time, Pattern a)] -> Pattern a 
+Type: timeCat :: [(Time, Pattern a)] -> Pattern a
 ```
 
 `timeCat` is like `fastcat` except that you provide proportionate sizes of the patterns to each other for when they're concatenated into one cycle. The larger the value in the list, the larger relative size the pattern takes in the final loop. If all values are equal then this is equivalent to `fastcat` (e.g. the following two code fragments are equivalent).
@@ -61,10 +61,10 @@ d1 $ timeCat [(1, s "bd*4"),
 
 ### randcat
 ```haskell
-Type: randcat :: [Pattern a] -> Pattern a 
+Type: randcat :: [Pattern a] -> Pattern a
 ```
 
-`randcat` is similar to `cat`, but rather than playing the given patterns in order, it picks them at random. For example: 
+`randcat` is similar to `cat`, but rather than playing the given patterns in order, it picks them at random. For example:
 
 ```haskell
 d1 $ randcat [sound "bd*2 sn", sound "jvbass*3", sound "drum*2", sound "ht mt"]
@@ -97,7 +97,7 @@ d1 $ fastAppend (sound "bd*2 sn") (sound "arpy jvbass*2")
 
 ## wedge
 ```haskell
-Type: wedge :: Time -> Pattern a -> Pattern a -> Pattern a 
+Type: wedge :: Time -> Pattern a -> Pattern a -> Pattern a
 ```
 
 `wedge` combines two patterns by squashing them into a single cycle. It takes a ratio as the first argument. The ratio determines what percentage of the pattern cycle is taken up by the first pattern. The second pattern fills in the remainder of the pattern cycle. For example:
@@ -116,6 +116,55 @@ Type: brak :: Pattern a -> Pattern a
 
 ```haskell
 d1 $ brak $ sound "[feel feel:3, hc:3 hc:2 hc:4 ho:1]"
+```
+
+## listToPat
+
+```haskell
+Type: listToPat :: [a] -> Pattern a
+```
+
+`listToPat` takes a list of things and turns them into a pattern where each item in the list becomes an event all happening in the same cycle, looping upon subsequent cycles. Can also be called as `fastFromList`
+
+```haskell
+d1 $ n (listToPat [0, 1, 2]) # s "superpiano"
+```
+is equivalent to
+
+```haskell
+d1 $ n "[0 1 2]" # s "superpiano"
+```
+
+## fromList
+
+`fromList` takes a list of things and turns them into a pattern where each item in the list has a duration of one cycle, looping back around at the end of the list.
+
+```haskell
+d1 $ n (fromList [0, 1, 2]) # s "superpiano"
+```
+
+is equivalent to
+
+```haskel
+d1 $ n "<0 1 2>" # s "superpiano"
+```
+
+## fromMaybes
+
+```haskel
+Type: fromMaybes :: [Maybe a] -> Pattern a
+```
+
+`fromMaybes` is much like `listToPat` but when it encounters a Nothing it puts a gap in the pattern and when it encounters Just x puts x in the pattern.
+
+```haskel
+d1 $ n (fromMaybes [Just 0, Nothing, Just 2]) # s "superpiano"
+```
+
+is equivalent to
+
+```haskel
+d1 $ n "0 ~ 2" # s "superpiano"
 ```
 
 ## flatpat
