@@ -467,7 +467,10 @@ d1 $ slow 4 $ rev $ fast 4 $ cat [s "bd bd sn",s "sn sn bd", s"lt lt sd", s "sd 
 ```
 This compresses the idea into a single cycle before `rev` operates and then slows it back to the original speed. 
 
-## Delay effects
+## Delay functions
+
+See also: [Effects/Delay](https://tidalcycles.org/docs/reference/audio_effects#delay)
+
 ### stut
 
 ```haskell
