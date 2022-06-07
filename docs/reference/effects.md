@@ -50,6 +50,14 @@ Made by Ben Gold. Ring modulation:
 * `delaytime` / `delayt`: delay time
 * `delayfeedback` / `delayfb`: feedback amount
 
+#### Reverb
+
+**Tidal** default reverb effect, by Jost Muxfeld and James McCartney. Values from 0 to 1:
+
+* `dry`: dry amount
+* `room`: room size
+* `size` / `sz`: metaphor for depth
+
 #### Leslie
 
 Emulation of a Leslie speaker: speakers rotating in a wooden amplified cabinet: 
