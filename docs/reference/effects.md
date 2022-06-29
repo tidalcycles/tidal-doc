@@ -83,12 +83,13 @@ Spectral delay coded by [Mads Kjeldgaard](https://madskjeldgaard.dk/):
 Made by [Mads Kjeldgaard](https://madskjeldgaard.dk/). Freeze magnitudes at current levels when `freze > 0` and advances phase according to difference between frames to try and maintain current spectral quality:
 * `freeze`: freeze amount
 
-### Enveloppe
+### Envelope
 
-#### ASR Enveloppe
+#### ASR Envelope
 
 * `attack` / `att`: in seconds.
-* `hold` / `release` / `rel`: in seconds.
+* `hold` : in seconds. 
+* `release` / `rel`: in seconds.
 
 #### Legato
 
