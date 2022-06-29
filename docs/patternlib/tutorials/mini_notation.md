@@ -131,13 +131,13 @@ Elongate or `_` will extend the duration of an event for `x` steps:
 d2 $ s "bd _ _ hh*4"
 ```
 
-You might here a lot of silence between the first hit and the hi-hat. That's perfectly normal. Silence is cool too.
+You might hear a lot of silence between the first hit and the hi-hat. That's perfectly normal. Silence is cool too.
 
 ### Randomization
 
-You can use a question mark `?` to randomly remove some events from the patter, with a probability of `1/2`.
+You can use a question mark `?` to randomly remove some events from the pattern, with a probability of `1/2`. To use a different probabilty, use a number after the question mark.
 ```c
-d1 $ s "bd hh? bd hh?"
+d1 $ s "bd hh? bd hh?0.8"
 ```
 
 ### Random choice

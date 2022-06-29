@@ -33,14 +33,16 @@ Type: scaleList :: String
 The `scaleList` function outputs all the available scales, at the time of writing:
 
 ```plaintext
-minPent majPent ritusen egyptian kumai hirajoshi iwato chinese indian pelog 
-prometheus scriabin gong shang jiao zhi yu whole augmented augmented2 hexMajor7 
-hexDorian hexPhrygian hexSus hexMajor6 hexAeolian major ionian dorian phrygian 
-lydian mixolydian aeolian minor locrian harmonicMinor harmonicMajor melodicMinor 
-melodicMinorDesc melodicMajor bartok hindu todi purvi marva bhairav ahirbhairav 
-superLocrian romanianMinor hungarianMinor neapolitanMinor enigmatic spanish 
-leadingWhole lydianMinor neapolitanMajor locrianMajor diminished diminished2 
-chromatic
+minPent majPent ritusen egyptian kumai hirajoshi iwato chinese indian pelog
+prometheus scriabin gong shang jiao zhi yu whole wholetone augmented augmented2
+hexMajor7 hexDorian hexPhrygian hexSus hexMajor6 hexAeolian major ionian
+dorian phrygian lydian mixolydian aeolian minor locrian harmonicMinor harmonicMajor
+melodicMinor melodicMinorDesc melodicMajor bartok hindu todi purvimarva
+bhairav ahirbhairav superLocrian romanianMinor hungarianMinor neapolitanMinor
+enigmatic spanish leadingWhole lydianMinor neapolitanMajor locrianMajor
+diminished octatonic diminished2 octatonic2 messiaen1 messiaen2 messiaen3
+messiaen4 messiaen5 messiaen6 messiaen7 chromatic bayati hijaz sikah rast
+saba iraq
 ```
 
 ### getScale

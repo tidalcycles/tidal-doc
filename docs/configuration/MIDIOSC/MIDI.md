@@ -139,7 +139,7 @@ If you have many CC params you want to control at once, a stack works well:
 d2 $ density 8 $ stack [
   ccn 30 # ccv (range 0 127 $ slow 30 sine),
   ccn 31 # ccv "[0 70 30 110]/3",
-  ccn 32 # ccv 10 
+  ccn 32 # ccv 10
   ] # s "midi"
 ```
 
@@ -187,12 +187,12 @@ You will probably find that the downbeats for SuperDirt and your MIDI devices do
 ~midiOut.latency = 0;
 ```
 
-Make sure any offset on the MIDI side is also set to 0, then gradually adjust one of them until they align. If they stay in alignment when you change the cps, all is good! 
+Make sure any offset on the MIDI side is also set to 0, then gradually adjust one of them until they align. If they stay in alignment when you change the cps, all is good!
 
 
 ## Controller Input
 
-**Tidal** 1.0.0 now has support for external input, using the OSC protocol. Here's a quick guide to getting it going, including using a simple 'bridge' for getting MIDI input working. 
+**Tidal** 1.0.0 now has support for external input, using the OSC protocol. Here's a quick guide to getting it going, including using a simple 'bridge' for getting MIDI input working.
 
 ### Setup
 
@@ -245,10 +245,49 @@ You should then be able to run a pattern such as the following, that uses `CC va
 d1 $ sound "bd" # speed (cF 1 "12")
 ```
 
-If you want to use MIDI in a pattern forming statement, you may find it helpful to `segment` the input first, as the raw pattern coming from your MIDI device will be at very high resolution. This example takes only one value per cycle & remaps the value with the `range` function: 
+If you want to use MIDI in a pattern forming statement, you may find it helpful to `segment` the input first, as the raw pattern coming from your MIDI device will be at very high resolution. This example takes only one value per cycle & remaps the value with the `range` function:
 
 ```haskell
 d1 $ sound "amencutup" + n (run (segment 1 $ range 1 16 $ cN 0 "32" ))
+```
+
+### Renaming MIDI notes
+
+In case you have a MIDI drum machine, where the bassdrum is on MIDI note 231 and you don't want to write `231` every time, you could either do this:
+
+```haskell
+s2n :: String -> Note
+s2n "BD" = 231
+s2n _ = 0
+
+d1 $ n (s2n <$> "BD*4") # sound "tr8" # midichan 9
+```
+
+Another approach is using `inhabit`, you pass it a list of names and patterns, like this:
+
+```haskell
+let drum pat = sound (inhabit [("bd", "231"), ("sd", "232")] pat)
+```
+
+```haskell
+d1 $ drum "bd sd" # midichan 9
+```
+
+You could also hide the midi channel in there so you don't have to type it each time
+
+```haskell
+let drum pat = sound (inhabit [("bd", "231"), ("sd", "232")] pat) # midichan 9
+
+d1 $ drum "bd sd"
+d2 $ drum "bd*3 sd*2"
+```
+
+Note that the `232` bit is a pattern, so you could have one name trigger more than one event e.g.
+
+```haskell
+let drum pat = sound (inhabit [("bd", "231"), ("rush", "232*8"), ("sd", "232")] pat) # midichan 9
+
+d1 $ drum "bd sd rush"
 ```
 
 ### Alternative with Pure Data

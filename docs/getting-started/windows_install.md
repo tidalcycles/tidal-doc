@@ -8,7 +8,7 @@ layout: wiki
 
 ## Automatic installation
 
-There is an automatic installer for Tidal Cycles for Windows. It will install everything you need, including the required dependencies ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/ghcup/), [Atom Editor](https://atom.io/), [SuperCollider](http://supercollider.github.io/download), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). The installer assumes that these components aren't installed already. If they are, you might be better off installing all the rest by hand!
+There is an automatic installer for Tidal Cycles for Windows. It will install everything you need, including the required dependencies ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/ghcup/), [Atom Editor](https://atom.io/), [SuperCollider](http://supercollider.github.io/downloads), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). The installer assumes that these components aren't installed already. If they are, you might be better off installing all the rest by hand!
 
 ### Installation procedure
 
@@ -38,6 +38,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 ```bash
 choco install tidalcycles
 ```
+
 
 *Note:* We are still working on the automatic installer. A lot of confusing information will scroll past. Please ignore messages about restarting Powershell. Just let the process run to the end.
 
@@ -83,10 +84,11 @@ compiling class library...
 
 You will need [Haskell](https://www.haskell.org/ghcup/) (Ghcup) to install Tidal Cycles. If you just installed it or already got it installed, open `PowerShell` in **administrator mode** (see above). Enter the following commands:
 
-```bash
-cabal v1-update
+```shell
+cabal update
 cabal v1-install tidal
 ```
+Make sure to use `v1-install`, as `v2-install tidal` *may not work*.
 
 The last command might take some time to complete. Be patient, and everything will be alright :smile:. 
 
