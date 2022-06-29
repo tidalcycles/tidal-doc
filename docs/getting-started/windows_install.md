@@ -84,9 +84,10 @@ compiling class library...
 You will need [Haskell](https://www.haskell.org/ghcup/) (Ghcup) to install Tidal Cycles. If you just installed it or already got it installed, open `PowerShell` in **administrator mode** (see above). Enter the following commands:
 
 ```shell
-cabal v1-update
+cabal update
 cabal v1-install tidal
 ```
+Make sure to use `v1-install`, as `v2-install tidal` *may not work*.
 
 The last command might take some time to complete. Be patient, and everything will be alright :smile:. 
 
