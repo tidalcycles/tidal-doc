@@ -35,7 +35,7 @@ d1 $ jux (iter 4) $ sound "arpy arpy:2*2"
 Type: rangex :: (Floating b, Functor f) => b -> b -> f b -> f b
 ```
 
-`rangex` is an exponential version of `range` described above, good to use for frequencies. For example, `range 20 2000 "0.5"` will give `1010` - halfway between `20` and `2000`. But `rangex 20 2000 0.5` will give `200` - halfway between on a logarithmic scale. This usually sounds better if you’re using the numbers as pitch frequencies. Since rangex uses logarithms, don’t try to scale things to zero or less! 
+`rangex` is an exponential version of `range` described above, good to use for frequencies. For example, `range 20 2000 "0.5"` will give `1010` - halfway between `20` and `2000`. But `rangex 20 2000 0.5` will give `200` - halfway between on a logarithmic scale. This usually sounds better if you’re using the numbers as pitch frequencies. Since rangex uses logarithms, don’t try to scale things to zero or less!
 
 ### quantise
 
@@ -50,13 +50,13 @@ quantise 5 [0, 1.3 ,2.6,3.2,4.7,5]
 
 It will round all the values to the nearest `(1/5)=0.2` and thus will output the list `[0.0,1.2,2.6,3.2,4.8,5.0]`. You can use this function to force a continuous pattern like sine into specific values. In the following example:
 ```haskell
-d1 $ s "superchip*8" # n (quantise 1 $ range (-10) (10) $ slow 8 $ cosine) 
+d1 $ s "superchip*8" # n (quantise 1 $ range (-10) (10) $ slow 8 $ cosine)
                      # release (quantise 5 $ slow 8 $ sine + 0.1)
 ```
-    
+
 all the releases selected be rounded to the nearest `0.1` and the notes selected to the nearest `1`.
 
-`quantise` with fractional inputs does the consistent thing: `quantise 0.5` rounds values to the nearest `2`, `quantise 0.25` rounds the nearest `4`, etc... 
+`quantise` with fractional inputs does the consistent thing: `quantise 0.5` rounds values to the nearest `2`, `quantise 0.25` rounds the nearest `4`, etc...
 
 ## Degrade
 
@@ -94,7 +94,7 @@ d1 $ slow 2 $ degradeBy 0.9 $ sound "[[[feel:5*8,feel*3] feel:3*8], feel*4]"
 Type: unDegradeBy :: Double -> Pattern a -> Pattern a
 ```
 
-`unDegradeBy` is `degradeBy` but with the percentage describing how many events to keep on average not remove. 
+`unDegradeBy` is `degradeBy` but with the percentage describing how many events to keep on average not remove.
 
 ## Repetitions
 ### ply
@@ -185,7 +185,7 @@ d1 $ slowstripe 3 $ sound "bd sd ~ [mt ht]"
 d2 $ sound "cp"
 ```
 
-### palindrome 
+### palindrome
 
 ```haskell
 Type: palindrome :: Pattern a -> Pattern a
@@ -281,7 +281,7 @@ d1 $ chunk 4 (hurry 2) $ sound "bd sn:2 [~ bd] sn:2"
 
 ### chunk'
 
-`chunk'` does the same as chunk but cycles through the parts in the reverse direction. 
+`chunk'` does the same as chunk but cycles through the parts in the reverse direction.
 
 ### runWith
 
@@ -325,7 +325,7 @@ Type: shuffle :: Int -> Pattern a -> Pattern a
 ```haskell
 d1 $ sound $ shuffle 3 "bd sn hh"
 ```
-... will sometimes play `"sn bd hh"` or `"hh sn bd"`, but will never play `"bd sn bd"` or `"hh hh hh"`, because that isn't a permutation of the three parts. 
+... will sometimes play `"sn bd hh"` or `"hh sn bd"`, but will never play `"bd sn bd"` or `"hh hh hh"`, because that isn't a permutation of the three parts.
 
 ### scramble
 
@@ -356,7 +356,7 @@ The first parameter is the number of steps, and may be given as a pattern, for e
 ```haskell
 d1 $ rot "<0 0 1 3>" $ n "0 ~ 1 2 0 2 ~ 3*2" # sound "drum"
 ```
-The above will not rotate the pattern for the first two cycles, will rotate it by one the third cycle, and by three the fourth cycle. 
+The above will not rotate the pattern for the first two cycles, will rotate it by one the third cycle, and by three the fourth cycle.
 
 
 
@@ -409,7 +409,7 @@ d1 $ slow 16 $ sound $ step' ["feel:0", "sn:1", "bd:0"]
 ```
 ... generates an L-system with initiating string "0" and maps it onto a list of samples.
 
-Complex L-system trees with many rules and iterations can sometimes result in unwieldy strings. Using `take n` to only use the first `n` elements of the string, along with a `slow` function, can make the generated values more manageable. 
+Complex L-system trees with many rules and iterations can sometimes result in unwieldy strings. Using `take n` to only use the first `n` elements of the string, along with a `slow` function, can make the generated values more manageable.
 
 ## Higher-order
 
@@ -459,6 +459,8 @@ cycle 5: (# speed "0.8") - pattern samples will be played back more slowly
 ```
 After `(# speed "0.8")`, the transforms will repeat and start at `density 2` again.
 
+(This is the same as `slowspread` in earlier versions of TidalCycles.)
+
 ### spreadf
 
 A convenient shorthand for spread (`$`).
@@ -477,5 +479,5 @@ d1 $ fastspread ($) [gap 4, striate 4] $ sound "ho ho:2 ho:3 hc"
 `spreadChoose` (alias `spreadr`) works the same as spread, but the values are selected at random, one cycle at a time. For example:
 
 ```haskell
-d1 $ spreadChoose ($) [gap 4, striate 4] $ sound "ho ho:2 ho:3 hc" 
+d1 $ spreadChoose ($) [gap 4, striate 4] $ sound "ho ho:2 ho:3 hc"
 ```

@@ -61,7 +61,7 @@ control to
     sf
 
 is the OSC typetag. It specifies that the first value is a (s)tring and
-the second value is a(f)loat see [OSC
+the second value is a (f)loat see [OSC
 specs](http://opensoundcontrol.org/spec-1_0)
 
 You could then use this control in a pattern like so:

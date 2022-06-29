@@ -12,7 +12,7 @@ Under the hood, **Tidal** `1.0.0` is a major rewrite. If you're used to previous
 * The old `scale` has been renamed to `range`
 * `scale` is now used to specify musical scale
 * `protate` and friends has been replaced with `rot`
-* New function fix for manipulating control patterns with matching control values
+* New function `fix` for manipulating control patterns with matching control values
 * New function `mono` for making a pattern monophonic (thanks `bgold`)
 * New function `smooth` for turning a discrete/digital numerical pattern into a continuous/analog one, by interpolating between the values (thanks `bgold`)
 * Chord names can now be put into numerical patterns, e.g. n "c'maj e'min". The old `chordP` has been removed.
@@ -25,7 +25,7 @@ Under the hood, **Tidal** `1.0.0` is a major rewrite. If you're used to previous
 * `wchoose` weights no longer have to add up to `1`
 * `weave'` is now known as `weaveWith`
 * New `arp` function for arpeggiation
-* Easy ways to send Custom OSC to systems other than **SuperDirt** 
+* Easy ways to send Custom OSC to systems other than **SuperDirt**
 * The meaning of `stut` and `stutWith` parameters have changed to match each other.
 
 ### Interaction
