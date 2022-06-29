@@ -14,7 +14,7 @@ module.exports = {
       indexName: 'tidalcycles',
     },
     prism: {
-      additionalLanguages: ['haskell'],
+      additionalLanguages: ['haskell','powershell'],
     },
     navbar: {
       title: "Tidal Cycles",
