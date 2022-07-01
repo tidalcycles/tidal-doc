@@ -8,7 +8,7 @@ layout: wiki
 
 ## Automatic installation
 
-There is an automatic installer for Tidal Cycles for Windows. It will install everything you need, including the required dependencies ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/ghcup/), [Atom Editor](https://atom.io/), [SuperCollider](http://supercollider.github.io/downloads), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). The installer assumes that these components aren't installed already. If they are, you might be better off installing all the rest by hand!
+There is an automatic installer for Tidal Cycles for Windows. It will install everything you need, including the required dependencies ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/ghcup/), [Atom Editor](https://atom.io/), [SuperCollider](http://supercollider.github.io/), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). The installer assumes that these components aren't installed already. If they are, you might be better off installing all the rest by hand!
 
 ### Installation procedure
 
