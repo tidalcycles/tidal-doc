@@ -84,8 +84,10 @@ in the menus. Then type and run these two commands *(ignoring any
 complaints that cabal has of 'legacy v1 style of usage')*:
 ```bash
 cabal update
-cabal install tidal
+cabal install tidal --lib
 ```
+
+(If the last command doesn't work, try leaving off the `--lib`.)
 
 If you've never installed TidalCycles before, then the
 `cabal install tidal` step may take some time. At the end of the command
