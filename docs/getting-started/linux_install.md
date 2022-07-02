@@ -40,7 +40,7 @@ Once you are done with this first installation phase, please follow the tutorial
 
 `SuperDirt` is the audio engine for Tidal Cycles. Tidal will not be able to make any sound or to send MIDI/OSC without it! SuperDirt is also embedding the default audio samples used by Tidal. To install `SuperDirt`, open SuperCollider and paste the following line of code. Evaluate it by pressing Ctrl+Return:
 ```shell
-Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.2"); thisProcess.recompile()})
+Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recompile()})
 ```
 
 It might take a while :smile:! You will know when the installation process is done by looking at the logs. You should see the following:
