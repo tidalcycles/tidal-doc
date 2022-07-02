@@ -64,7 +64,7 @@ here](https://forum.toplap.org/t/trouble-launching-tidal-in-atom/678/3).
 Start SuperCollider, and in the editor window paste in the following
 line of code:
 
-    Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.2"); thisProcess.recompile()})
+    Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recompile()})
 
 Run the code by clicking on it, to make sure the cursor is on this line,
 then hold down Shift and press Enter.
