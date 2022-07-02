@@ -71,16 +71,18 @@ installation is done, you can exit the interpreter by pressing Ctrl + C.
 
 **III - SC3 Plugins**
 
-`SC3Plugins` is a community-made extension for SuperCollider. Installing it is **highly** recommended. You won't be able to use the default synthesizers provided with Tidal Cycles without it. Please be sure to read [these instructions](https://supercollider.github.io/sc3-plugins/) to get the extension.
-
-- **Ubuntu** / **Mint** / **Debian**: follow the instructions above.
-- **Arch** / **Manjaro**: there is an up-to-date package in the [Community repository](https://archlinux.org/packages/community/x86_64/sc3-plugins/).
-
 :::caution
 
 If you installed SuperCollider using the [build-supercollider](https://github.com/lvm/build-supercollider) method, you won't need to install them. SC3Plugins is compiled and installed by the script.
 
 :::
+  
+  
+`SC3Plugins` is a community-made extension for SuperCollider. Installing it is **highly** recommended. You won't be able to use the default synthesizers provided with Tidal Cycles without it. Please be sure to read [these instructions](https://supercollider.github.io/sc3-plugins/) to get the extension.
+
+- **Ubuntu** / **Mint** / **Debian**: follow the instructions above.
+- **Arch** / **Manjaro**: there is an up-to-date package in the [Community repository](https://archlinux.org/packages/community/x86_64/sc3-plugins/).
+
 
 ### Tidal Cycles
 
@@ -90,8 +92,10 @@ in the menus. Then type and run these two commands *(ignoring any
 complaints that cabal has of 'legacy v1 style of usage')*:
 ```bash
 cabal update
-cabal install tidal --lib
+cabal install tidal --lib
 ```
+
+(Depending on your cabal version, you might have to leave off the `--lib` on the last command.)
 
 If you've never installed TidalCycles before, then the
 `cabal install tidal` step may take some time. At the end of the command
