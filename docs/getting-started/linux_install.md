@@ -87,7 +87,7 @@ cabal update
 cabal install tidal --lib
 ```
 
-(If the last command doesn't work, try leaving off the `--lib`.)
+(Depending on your cabal version, you might have to leave off the `--lib` on the last command.)
 
 If you've never installed TidalCycles before, then the
 `cabal install tidal` step may take some time. At the end of the command
