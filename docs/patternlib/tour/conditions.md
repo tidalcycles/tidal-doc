@@ -330,6 +330,28 @@ euclidFull 5 8 (s "bd") (s "hh27")
 
 is equivalent to our above example. 
 
+## ControlPattern conditions
+
+### fix
+```haskell
+Type: fix :: (ControlPattern -> ControlPattern) -> ControlPattern -> ControlPattern -> ControlPattern
+```
+
+With `fix` you can apply a ControlPattern as a condition and apply a function wich matches the controls. The first parameter is the function to apply and the second paramete is the condition.
+```haskell
+d1 $ fix (ply 2) (s "hh") $ s "bd hh sn hh"
+```
+
+### fixRange
+```haskell
+fixRange :: (ControlPattern -> Pattern ValueMap) -> Pattern (Map.Map String (Value, Value)) -> ControlPattern -> ControlPattern
+```
+The `fixRange` function isn't very user-friendly at the moment but you can create a `fix` variant with a range condition. Any value of a ControlPattern wich matches the values will apply the passed function.
+
+```haskell
+d1 $ (fixRange ((# distort 1) . (# gain 0.8)) (pure $ Map.singleton "note"  ((VN 0, VN 7)))) $ s "superpiano" <| note "1 12 7 11"
+```
+
 ## ifp
 
 ```haskell
