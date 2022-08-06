@@ -149,15 +149,57 @@ The older `tidal-midi` Haskell module is not currently working (although it migh
 
 ### Synchronising MIDI clock
 
-Once you've set up **SuperDirt MIDI** by following the tutorial, sending `midiclock` is fairly straightforward and works well, although still in development. This will become easier still in the future.
+It is often important to send MIDI clock events to synchronize tempo between devices.
+Tidal can't sync its tempo to MIDI clock events that it receives, but it can act as a MIDI clock source.
+The following sections show two alternatives for sending MIDI clock events that follow the tempo of Tidal.
 
-First, you can start sending MIDI clock messages, 48 per cycle, like this:
+#### Synchronising MIDI clock via SuperCollider
+
+Since version 1.9, Tidal uses Ableton Link for scheduling events.
+Ableton Link is a technology that synchronizes musical beat, tempo, and phase across multiple applications.
+We can use Link to synchronize Tidal with SuperCollider and set up SuperCollider to send MIDI clock events.
+This is the preferred method for sending MIDI clock events as it is easy, performant, stable, and has fewer quirks than [Synchronising MIDI clock via Tidal](#synchronising-midi-clock-via-tidal).
+
+This method uses [MIDIClockOut](https://pustota.basislager.org/_/sc-help/Help/Classes/MIDIClockOut.html) from the [crucial-library](https://github.com/crucialfelix/crucial-library) [quark](github.com/supercollider-quarks/quarks). Install it by evaluating the code below in SuperCollider.
+
+```c
+Quarks.install("crucial-library");
+```
+
+After installing the crucial-library quark, follow the [initialization](#Initialization) guide. We will use the MIDI device variable named `~midiOut` from the initialization in the examples below.
+
+After the MIDI device is initialized, create a [LinkClock](https://doc.sccode.org/Classes/LinkClock.html) in SuperCollider.
+
+```c
+~lc = LinkClock.new.latency_(Server.default.latency);
+```
+
+Then, create a [MIDIClockOut](https://pustota.basislager.org/_/sc-help/Help/Classes/MIDIClockOut.html) that is connected to the MIDI device `~midiOut` and the LinkClock `~lc`.
+
+```c
+~mc = MIDIClockOut(~midiOut, ~lc);
+```
+
+MIDI clock events will be sent continously after we tell it to play.
+```c
+~mc.play;
+```
+
+For more details on Tidal's integration with Link, see [Multi-User Tidal](../multiuser-tidal#link-protocol-synchronization).
+
+#### Synchronising MIDI clock via Tidal
+
+We can alternatively use Tidal and **SuperDirt MIDI** for sending MIDI clock events. The advantage is that it also works in older versions of Tidal, but the method is somewhat more complicated.
+
+Set up **SuperDirt MIDI** by following the [initialization](#Initialization) guide.
+
+When that is done, you can start sending MIDI clock messages, 48 per cycle, like this:
 
 ```c
 p "midiclock" $ midicmd "midiClock*48" # s "midi"
 ```
 
-Your MIDI device should then adjust its BPM to Tidal's cps. Then it's worth sending a `stop` message like this:
+Your MIDI device should adjust its BPM to Tidal's cps. It's then a good idea to send a `stop` message like this:
 
 ```c
 once $ midicmd "stop" # s "midi"
