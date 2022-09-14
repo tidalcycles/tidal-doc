@@ -13,11 +13,16 @@ Upgrade tidal with the following from a terminal window (**Linux**/**MacOS**/**W
 
 ``` shell
 cabal update
+cabal v1-install tidal
+```
+
+If you originally installed tidal, with 'cabal install' rather than 'cabal v1-install', you might have to run the following command instead. However this tends to be less reliable than the above method.
+```shell
+cabal update
 cabal install tidal --lib
 ```
 
-If you're using an older version of haskell you might have to miss the
-`--lib` off the above command.
+If things get messed up, under linux and macos you can remove the folders `.ghc` and `.cabal` from your home folder, and try again. Under windows, you can try the same but by deleting the `c:\Users\<user>\AppData\Roaming\cabal` where `<user>` is your username.
 
 ## Editor plugin
 
