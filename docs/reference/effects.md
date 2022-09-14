@@ -49,6 +49,7 @@ Made by Ben Gold. Ring modulation:
 * `delay`: wet/dry
 * `delaytime` / `delayt`: delay time
 * `delayfeedback` / `delayfb`: feedback amount
+* `lock`: a pattern of numbers. Specifies whether `delaytime` is calculated relative to cps. When set to 1, `delaytime` is a direct multiple of a cycle.
 
 #### Reverb
 
