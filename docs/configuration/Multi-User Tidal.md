@@ -95,12 +95,15 @@ In addition to aligning beats, Link aligns bars / loop boundaries. Quoting [Link
 
 Quantum can be set in the Tidal Boot configuration, using the option `cQuantum`. The default value of `cQuantum` is `4`.
 
-In addition to quantum, Tidal lets you configure the number of cycles there should be per beat. This is done using the option `cCyclesPerBeat`. The default value is `4`, meaning that `1` cycle passes per `0.25` beats. In this case, a BPM (beats per minute) of `120` corresponds to a CPS (cycles per second) of `120 / 60 / 4`. See the [Getting Started Tutorial](../getting-started/Tutorial.md) for more information on converting between BPM and CPS.
+In addition to quantum, Tidal lets you configure the number of beats there should be per cycle. This is done using the option `cBeatsPerCycle`. The default value is `4`. In this case, a BPM (beats per minute) of `120` corresponds to a CPS (cycles per second) of `120 / 60 / 4`. See the [Getting Started Tutorial](../getting-started/Tutorial.md) for more information on converting between BPM and CPS.
 
-This example configures Tidal to use a quantum value of 2 and a cycles per beat of 3, producing a phase alignment of 6 cycles:
+It's possible to use any combination of `cQuantum` and `cBeatsPerCycle` but some combinations might produce unintuitive results.
+We advice you to start with `cQuantum = cBeatsPerCycle`, but please share findings from your experiments!
+
+Example:
 
 ```haskell
-tidal <- startTidal superdirtTarget (defaultConfig {cQuantum = 2, cCyclesPerBeat = 3})
+tidal <- startTidal superdirtTarget (defaultConfig {cQuantum = 3, cBeatsPerCycle = 3})
 ```
 
 ### Disabling Link synchronization
