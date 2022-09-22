@@ -18,7 +18,7 @@ There are user-made guides to install Tidal Cycles. Be sure to check out the fol
 
 ## Manual installation
 
-You need to install several components to get a complete Tidal Cycles system ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/platform/), [SuperCollider](http://supercollider.github.io/download) and [SuperDirt](https://github.com/musikinformatik/SuperDirt)). Hopefully, your Linux distribution makes the pre-requisites easily available to you via a package manager. You will also need a text editor. Check the sidebar to get a list of supported editors along with instructions for setting them up.
+You need to install several components to get a complete Tidal Cycles system ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/platform/), [SuperCollider](https://supercollider.github.io/downloads) and [SuperDirt](https://github.com/musikinformatik/SuperDirt)). Hopefully, your Linux distribution makes the pre-requisites easily available to you via a package manager. You will also need a text editor. Check the sidebar to get a list of supported editors along with instructions for setting them up.
 
 
 If your distribution comes with the `apt` package manager (Debian family), you can install some of these dependencies using the following command:
