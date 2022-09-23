@@ -47,7 +47,7 @@ choco install tidalcycles
 
 ## Manual installation
 
-You might prefer to install the different components of Tidal Cycles by hand. This is the recommand way for users who already installed some of the components ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/ghcup/), [Atom Editor](https://atom.io/), [SuperCollider](http://supercollider.github.io/download), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). All these components are needed to install Tidal Cycles.
+You might prefer to install the different components of Tidal Cycles by hand. This is the recommand way for users who already installed some of the components ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/ghcup/), [Atom Editor](https://atom.io/), [SuperCollider](https://supercollider.github.io/downloads), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). All these components are needed to install Tidal Cycles.
 
 ### SC3 Plugins
 

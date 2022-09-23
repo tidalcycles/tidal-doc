@@ -20,7 +20,7 @@ Before installing Tidal, make sure the following are installed first:
 -   [Atom Editor](https://atom.io/) (if you don't like the atom editor
     for some reason, please check out the [list of
     alternatives](/wiki/List_of_tidal_editors "wikilink"))
--   [SuperCollider](http://supercollider.github.io/download) (pick the
+-   [SuperCollider](https://supercollider.github.io/downloads) (pick the
     latest version)
 -   [Git](https://git-scm.com/)
 
