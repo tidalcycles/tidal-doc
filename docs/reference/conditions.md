@@ -66,7 +66,17 @@ The above will only apply striate `4` to the pattern if the current cycle number
 
 ### whenT
 
-This function is not documented.
+```haskell
+Type: whenT :: (Time -> Bool) -> (Pattern a -> Pattern a) ->  Pattern a -> Pattern a
+```
+
+Only when the given test function returns `True` the given pattern transformation is applied. It differs from `when`, being passed a continuous `Time` value instead of the cycle number. Basically, a `Rational` version of `when`.
+
+```haskell
+d1 $ whenT ((< 0.5).(flip Data.Fixed.mod' 2)) (# speed 2) $ sound "hh(4,8) hc(3,8)"
+```
+
+The above will apply `# speed 2` only when the remainder of the current `Time` divided by `2` is less than `0.5`.
 
 ### whenmod
 
