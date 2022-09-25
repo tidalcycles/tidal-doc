@@ -7,9 +7,8 @@ id: online_course
 
 ![alex](alex.png)
 
-There's now an online **Learning TidalCycles** course, lead by Alex McLean who created **Tidal**. It's based on around pre-recorded videos so you can join at any time. The first four weeks is now fully open access, and the second four weeks is available on a *pay-as-you-feel* basis. The course will teach you everything there is to know on **Tidal**.
+There's now an online **Learning TidalCycles** course, lead by Alex McLean who created **Tidal**. It's based on around pre-recorded videos so you can join at any time. It was originally 'pay as you feel', but is now completely open access. If you find it helpful though, you can still contribute to the [TidalCycles open collective fund](https://opencollective.com/tidalcycles).
 
-
-- You can get access to the weeks 1 to 4 following this link: [here](https://club.tidalcycles.org/t/weeks-1-4-index/395).
-
-- To gain access to the rest of the lessons, click [here](https://blog.tidalcycles.org/shop/).
+* [Index for weeks 1-4](https://club.tidalcycles.org/t/weeks-1-4-index/395)
+* [Index for weeks 5-8](https://club.tidalcycles.org/t/weeks-5-8-index/1345)
+* Or you might prefer to see [everything in date order](https://club.tidalcycles.org/c/course/14?ascending=true&order=created)

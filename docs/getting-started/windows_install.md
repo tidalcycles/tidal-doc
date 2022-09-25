@@ -8,7 +8,7 @@ layout: wiki
 
 ## Automatic installation
 
-There is an automatic installer for Tidal Cycles for Windows. It will install everything you need, including the required dependencies ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/ghcup/), [Atom Editor](https://atom.io/), [SuperCollider](http://supercollider.github.io/download), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). The installer assumes that these components aren't installed already. If they are, you might be better off installing all the rest by hand!
+There is an automatic installer for Tidal Cycles for Windows. It will install everything you need, including the required dependencies ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/ghcup/), [Atom Editor](https://atom.io/), [SuperCollider](http://supercollider.github.io/), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). The installer assumes that these components aren't installed already. If they are, you might be better off installing all the rest by hand!
 
 ### Installation procedure
 
@@ -26,15 +26,19 @@ windows to give a few security pop-ups for you to accept. Windows 7 users: pleas
 **II - Installing Chocolatey: the package manager**
 
 > The [Chocolatey](https://chocolatey.org/) package
->  manager is required. If you haven't installed it previously, you can
->   get it by running this command:
->   ```shell
->    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))```
+> manager is required. If you haven't installed it previously, you can
+> get it by running this command:
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
 
 **III - Installing Tidal Cycles**
 
-Run the following command to install Tidal Cycles using Chocolatey:
->    ```shell choco install tidalcycles ```
+> Run the following command to install Tidal Cycles using Chocolatey:
+```bash
+choco install tidalcycles
+```
+
 
 *Note:* We are still working on the automatic installer. A lot of confusing information will scroll past. Please ignore messages about restarting Powershell. Just let the process run to the end.
 
@@ -43,7 +47,7 @@ Run the following command to install Tidal Cycles using Chocolatey:
 
 ## Manual installation
 
-You might prefer to install the different components of Tidal Cycles by hand. This is the recommand way for users who already installed some of the components ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/ghcup/), [Atom Editor](https://atom.io/), [SuperCollider](http://supercollider.github.io/download), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). All these components are needed to install Tidal Cycles.
+You might prefer to install the different components of Tidal Cycles by hand. This is the recommand way for users who already installed some of the components ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/ghcup/), [Atom Editor](https://atom.io/), [SuperCollider](https://supercollider.github.io/downloads), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). All these components are needed to install Tidal Cycles.
 
 ### SC3 Plugins
 
@@ -54,7 +58,7 @@ You might prefer to install the different components of Tidal Cycles by hand. Th
 SuperDirt is the audio engine used by Tidal. Without it, Tidal Cycles will not emit any sound and will not be able to communicate through OSC or MIDI with other synthesizers. To install it, open SuperCollider and run the following command in the interactive editor (press Ctrl+Return to evaluate):
 
 ```c
-Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.2"); thisProcess.recompile()})
+Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recompile()})
 ```
 
 The installation will take a little while. You will know when the installation process is done by looking at the logs window. It will likely print something like the following:
@@ -81,9 +85,10 @@ compiling class library...
 You will need [Haskell](https://www.haskell.org/ghcup/) (Ghcup) to install Tidal Cycles. If you just installed it or already got it installed, open `PowerShell` in **administrator mode** (see above). Enter the following commands:
 
 ```shell
-cabal v1-update
+cabal update
 cabal v1-install tidal
 ```
+Make sure to use `v1-install`, as `v2-install tidal` *may not work*.
 
 The last command might take some time to complete. Be patient, and everything will be alright :smile:. 
 

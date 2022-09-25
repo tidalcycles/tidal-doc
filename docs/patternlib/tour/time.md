@@ -36,7 +36,7 @@ You can also use this function by its older alias, `density`.
 ```haskell
 Type: fastGap :: Pattern Time -> Pattern a -> Pattern a
 ```
-`fastGap` speeds up a pattern like `fast`, but rather than it playing multiple times as fast would it instead leaves a gap in the remaining space of the cycle. For example, the following will play the sound pattern `"bd sn"` only once but compressed into the first half of the cycle, i.e. twice as fast.
+`fastGap` (alias `densityGap`) speeds up a pattern like `fast`, but rather than it playing multiple times as fast would it instead leaves a gap in the remaining space of the cycle. For example, the following will play the sound pattern `"bd sn"` only once but compressed into the first half of the cycle, i.e. twice as fast.
 
 ```haskell
 d1 $ sound (fastGap 2 "bd sn")

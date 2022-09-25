@@ -398,7 +398,7 @@ Type: swing :: Pattern Time -> Pattern a -> Pattern a
 ### ghost
 
 ```haskell
-Type: ghost :: Pattern ControlMap -> Pattern ControlMap
+Type: ghost :: Pattern ValueMap -> Pattern ValueMap
 ```
 
 `ghost` adds quieter, pitch-shifted, copies of an event after the event, emulating ghost notes that are common in drumming patterns.
@@ -407,15 +407,41 @@ Type: ghost :: Pattern ControlMap -> Pattern ControlMap
 d1 $ stack [ ghost $ sound "~ sn", sound "bd*2 [~ bd]" ]
 ```
 
-The example above creates a kick snare pattern with ghost notes applied to the snare hit. 
+The example above creates a kick snare pattern with ghost notes applied to the snare hit.
 
 ### ghost'
 
-`ghost'` is currently undocumented.
+```haskell
+Type: ghost' :: Time -> Pattern ValueMap -> Pattern ValueMap
+```
+
+`ghost'` is a variation from `ghost` above, where you can also specify the base delay used to create the pattern of ghosts notes.
+
+```haskell
+d1 $ stack [ ghost' (1/16) $ sound "~ sn", sound "bd*2 [~ bd]" ]
+```
+
+The example above creates a kick snare pattern with ghost notes applied to the snare hit. The 1/16 is a sixteenth of a cycle, but that doesn't mean ghost notes will be displaced exactly by this amount: this is just the base value from where repetitions are calculated.
 
 ### ghost''
 
-`ghost''` is currently undocumented.
+```haskell
+Type: ghost'' :: Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+
+This variation of `ghost` adds another parameter to the ones present in `ghost'`, which is the function used to modify the ghost notes. So here you can decide which changes will be applied to the ghost notes compared to the original notes.
+
+```haskell
+d1 $ slow 2 $ ghost'' (1/8) (id) $ sound "sn"
+```
+
+In this first example, ghost notes will be identical than the original.
+
+```haskell
+d1 $ slow 2 $ ghost'' (1/16) ((|*| gain 1.1) . (|> begin 0.05)) $ sound "sn"
+```
+
+The example above applies ghost notes to the snare hit, but these notes will be louder, not quieter, and the sample will have it's beginning slightly cut.
 
 ## Inside and outside
 
@@ -467,36 +493,59 @@ d1 $ slow 4 $ rev $ fast 4 $ cat [s "bd bd sn",s "sn sn bd", s"lt lt sd", s "sd 
 ```
 This compresses the idea into a single cycle before `rev` operates and then slows it back to the original speed. 
 
-## Delay effects
+## Delay functions
+
+See also: [Effects/Delay](https://tidalcycles.org/docs/reference/audio_effects#delay)
+
+### echo
+
+```haskell
+Type: echo :: Pattern Integer -> Pattern Rational -> Pattern Double -> ControlPattern -> ControlPattern
+```
+
+`echo`applies a type of delay to a pattern. It has three parameters, which could be called `depth`, `time` and `feedback`. `depth` is and integer, and `time` and `feedback` are floating point numbers.
+
+This adds a bit of echo:
+
+```haskell
+d1 $ echo 4 0.2 0.5 $ sound "bd sn"
+```
+
+The above results in `4` echos, each one `50%` (that's the `0.5`) quieter than the last, with 1/5th (that's the `0.2`) of a cycle between them.
+
+It is possible to reverse the echo:
+```haskell
+d1 $ echo 4 (-0.2) 0.5 $ sound "bd sn" 
+```
+
+### echoWith
+
+```haskell
+Type: echoWith :: Pattern Int -> Pattern Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a 
+```
+
+`echoWith` is similar to `echo` described above, but instead of just decreasing volume to produce echoes, `echoWith` applies a function each step and overlays the result delayed by the given time.
+```haskell
+d1 $ echoWith 3 (1/3) (# vowel "{a e i o u}%2") $ sound "bd sn"
+```
+
+In this case there are two overlays delayed by 1/3 of a cycle, where each has the vowel filter applied.
+```haskell
+d1 $ echoWith 4 (1/6) (|* speed "1.5") $ sound "arpy arpy:2"
+```
+In the above, three versions are put on top, with each step getting higher in pitch as `|* speed "1.5"` is successively applied. 
+
 ### stut
 
 ```haskell
 Type: stut :: Pattern Integer -> Pattern Double -> Pattern Rational -> ControlPattern -> ControlPattern
 ```
-`stut` applies a type of delay to a pattern. It has three parameters, which could be called `depth`, `feedback` and `time`. Depth is an integer and the others floating point. This adds a bit of echo:
-```haskell
-d1 $ stut 4 0.5 0.1 $ sound "bd sn"
-```
-
-The above results in `4` repeats (the original plus `3` echoes), each echo `50%` (that's the `0.5`) quieter than the last, separated by 1/10th (that's the `0.1`) of a cycle.
-
-It is possible to reverse the echo:
-```haskell
-d1 $ stut 4 0.5 (-0.1) $ sound "bd sn"
-```
+_Deprecated_: use [echo](https://tidalcycles.org/docs/reference/time#echo) instead.
 
 ### stutWith
 
 ```haskell
 Type: stutWith :: Pattern Int -> Pattern Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 ```
-`stutWith` (formerly known as `stut'`) is similar to stut described above, but instead of just decreasing volume to produce echoes, `stutWith` applies a function each step and overlays the result delayed by the given time.
-```haskell
-d1 $ stutWith 3 (1/3) (# vowel "{a e i o u}%2") $ sound "bd sn"
-```
 
-In this case there are two overlays delayed by 1/3 of a cycle, where each has the vowel filter applied.
-```haskell
-d1 $ stutWith 4 (1/6) (|* speed "1.5") $ sound "arpy arpy:2"
-```
-In the above, three versions are put on top, with each step getting higher in pitch as `|* speed "1.5"` is successively applied. 
+_Deprecated_: use [echoWith](https://tidalcycles.org/docs/reference/time#echoWith) instead.

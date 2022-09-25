@@ -31,7 +31,7 @@ installs them if they are missing.
 
 ## Manual installation
 
-Before installing Tidal, make sure to install [Haskell](https://www.haskell.org/ghcup/) (via [Ghcup](https://www.haskell.org/ghcup/)), [SuperCollider](http://supercollider.github.io/download) with  [SC3 Plugins](https://supercollider.github.io/sc3-plugins/),   [Git](https://git-scm.com/). You also need to choose and install a text editor for interacting with Tidal Cycles (see the sidebar).
+Before installing Tidal, make sure to install [Haskell](https://www.haskell.org/ghcup/) (via [Ghcup](https://www.haskell.org/ghcup/)), [SuperCollider](https://supercollider.github.io/downloadss) with  [SC3 Plugins](https://supercollider.github.io/sc3-plugins/),   [Git](https://git-scm.com/). You also need to choose and install a text editor for interacting with Tidal Cycles (see the sidebar).
 
 ### Installation process
 
@@ -68,7 +68,7 @@ the latest version number) without any errors.
 Start your freshly installed version of SuperCollider. Paste the following line of code in the text editor you see and press Cmd+Return to evaluate :
 
 ```c
-Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.2"); thisProcess.recompile()})
+Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recompile()})
 ```
 
 Run the code by clicking on it, to make sure the cursor is on this line,

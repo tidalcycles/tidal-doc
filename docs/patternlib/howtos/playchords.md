@@ -66,5 +66,5 @@ d1 $ n ("c e f" |+ "<'maj 'min>") # s "supermandolin"
 This will give a pattern equivalent to:
 
 ```haskell
-d1 $ n ("<[c'maj e'maj f'maj] [c'min e'min f'min]>") # s "supermandolin"
+d1 $ n "<[c'maj e'maj f'maj] [c'min e'min f'min]>" # s "supermandolin"
 ```

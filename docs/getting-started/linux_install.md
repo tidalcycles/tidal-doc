@@ -18,7 +18,7 @@ There are user-made guides to install Tidal Cycles. Be sure to check out the fol
 
 ## Manual installation
 
-You need to install several components to get a complete Tidal Cycles system ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/platform/), [SuperCollider](http://supercollider.github.io/download) and [SuperDirt](https://github.com/musikinformatik/SuperDirt)). Hopefully, your Linux distribution makes the pre-requisites easily available to you via a package manager. You will also need a text editor. Check the sidebar to get a list of supported editors along with instructions for setting them up.
+You need to install several components to get a complete Tidal Cycles system ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/platform/), [SuperCollider](https://supercollider.github.io/downloads) and [SuperDirt](https://github.com/musikinformatik/SuperDirt)). Hopefully, your Linux distribution makes the pre-requisites easily available to you via a package manager. You will also need a text editor. Check the sidebar to get a list of supported editors along with instructions for setting them up.
 
 
 If your distribution comes with the `apt` package manager (Debian family), you can install some of these dependencies using the following command:
@@ -40,7 +40,7 @@ Once you are done with this first installation phase, please follow the tutorial
 
 `SuperDirt` is the audio engine for Tidal Cycles. Tidal will not be able to make any sound or to send MIDI/OSC without it! SuperDirt is also embedding the default audio samples used by Tidal. To install `SuperDirt`, open SuperCollider and paste the following line of code. Evaluate it by pressing Ctrl+Return:
 ```shell
-Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.2"); thisProcess.recompile()})
+Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recompile()})
 ```
 
 It might take a while :smile:! You will know when the installation process is done by looking at the logs. You should see the following:
@@ -71,16 +71,18 @@ installation is done, you can exit the interpreter by pressing Ctrl + C.
 
 **III - SC3 Plugins**
 
-`SC3Plugins` is a community-made extension for SuperCollider. Installing it is **highly** recommended. You won't be able to use the default synthesizers provided with Tidal Cycles without it. Please be sure to read [these instructions](https://supercollider.github.io/sc3-plugins/) to get the extension.
-
-- **Ubuntu** / **Mint** / **Debian**: follow the instructions above.
-- **Arch** / **Manjaro**: there is an up-to-date package in the [Community repository](https://archlinux.org/packages/community/x86_64/sc3-plugins/).
-
 :::caution
 
 If you installed SuperCollider using the [build-supercollider](https://github.com/lvm/build-supercollider) method, you won't need to install them. SC3Plugins is compiled and installed by the script.
 
 :::
+  
+  
+`SC3Plugins` is a community-made extension for SuperCollider. Installing it is **highly** recommended. You won't be able to use the default synthesizers provided with Tidal Cycles without it. Please be sure to read [these instructions](https://supercollider.github.io/sc3-plugins/) to get the extension.
+
+- **Ubuntu** / **Mint** / **Debian**: follow the instructions above.
+- **Arch** / **Manjaro**: there is an up-to-date package in the [Community repository](https://archlinux.org/packages/community/x86_64/sc3-plugins/).
+
 
 ### Tidal Cycles
 
@@ -90,8 +92,10 @@ in the menus. Then type and run these two commands *(ignoring any
 complaints that cabal has of 'legacy v1 style of usage')*:
 ```bash
 cabal update
-cabal install tidal --lib
+cabal install tidal --lib
 ```
+
+(Depending on your cabal version, you might have to leave off the `--lib` on the last command.)
 
 If you've never installed TidalCycles before, then the
 `cabal install tidal` step may take some time. At the end of the command
