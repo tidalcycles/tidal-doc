@@ -43,6 +43,30 @@ leadingWhole lydianMinor neapolitanMajor locrianMajor diminished diminished2
 chromatic
 ```
 
+### scaleTable
+
+```haskell
+Type: scaleTable :: Fractional a => [(String, [a])]
+```
+
+The `scaleTable` function outputs a list of all available scales and their corresponding notes. For example, its first entry is `("minPent",[0.0,3.0,5.0,7.0,10.0])` which means that a minor pentatonic scale is formed by the fundamental (`0`), the minor third (`3` semitones above the fundamental), the perfect fourth (`5` semitones above the fundamental), etc.
+
+As the list is big, you can use the Haskell function `lookup` to look up a specific scale:
+
+```haskell
+lookup "phrygian" scaleTable
+```
+
+This will output `Just [0.0,1.0,3.0,5.0,7.0,8.0,10.0]`.
+
+You can also do a reverse look up into the scale table. For example:
+
+```haskell
+filter (\(_,x)->take 3 x==[0,2,4]) scaleTable
+```
+
+The above example will output all scales, the first three notes of which are the fundamental, the major second (`2` semitones above the fundamental), and the major third (`4` semitones above the fundamental).
+
 ### getScale
 
 ```haskell
@@ -83,7 +107,7 @@ d1 $ n (toScale [0,2,3,5,7,8,10] "0 1 2 3 4 5 6 7") # sound "superpiano"
 Type: chordList :: String
 ```
 
-The chordList function outputs all the available chords. At the time of writing:
+The `chordList` function outputs all the available chords. At the time of writing:
 
 ```plaintext
 major maj aug plus sharp5 six 6 sixNine six9 sixby9 6by9 major7 maj7 major9 maj9 add9 major11 maj11 add11 major13 maj13
@@ -94,6 +118,34 @@ in7sharp9 m7sharp9 m7s9 diminished7 dim7 minor9 min9 m9 minor11 min11 m11 minor1
 Sus2 7sus2 sevenSus4 7sus4 nineSus4 ninesus4 9sus4 sevenFlat10 7f10 nineSharp5 9s5 m9sharp5 m9s5 sevenSharp5flat9 7s5f9 
 m7sharp5flat9 elevenSharp 11s m11sharp m11s
 ```
+
+:::caution
+You'll need to run `import Sound.Tidal.Chords` before using this function.
+:::
+
+### chordTable
+
+```haskell
+Type: chordTable :: Num a => [(String, [a])]
+```
+
+The `chordTable` function outputs a list of all available chords and their corresponding notes. For example, its first entry is `("major",[0,4,7])` which means that a major triad is formed by the fundamental (`0`), the major third (`4` semitones above the fundamental), and the perfect fifth (`7` semitones above the fundamental).
+
+As the list is big, you can use the function `chordL` to look up a specific chord:
+
+```haskell
+chordL "minor7"
+```
+
+This will output `(0>1)|[0,3,7,10]`.
+
+If you know the notes from a chord, but can't find the name of it, you can use this Haskell code to do a reverse look up into the table:
+
+```haskell
+filter (\(_,x)->x==[0,4,7,10]) chordTable
+```
+
+This will output: `[("dom7",[0,4,7,10])]`
 
 :::caution
 You'll need to run `import Sound.Tidal.Chords` before using this function.
