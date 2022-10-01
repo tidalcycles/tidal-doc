@@ -14,6 +14,27 @@ Each function will be presented following the same model:
 
 ## Basic sample manipulation
 
+### amp
+
+```haskell
+Type: amp :: Pattern Double -> ControlPattern
+```
+
+`amp` is used to control the amplitude (volume) of the sound. It's very similar
+to `gain`, but it uses a linear function. Its default value is `0.4`.
+
+```haskell
+d1 $ s "arpy" # amp 0.6
+```
+
+This will play the first `arpy` sample at a volume slightly louder than the default.
+
+```haskell
+d1 $ s "arpy" # amp "<0.4 0.8 0.2>"
+```
+
+In the above example, the volume changes at each cycle.
+
 ### begin
 
 ```haskell
@@ -75,3 +96,63 @@ d1 $ s "ab*16" # gain (range 0.8 1.3 $ sine)
 ```
 
 This plays a hihat sound, `16` times per cycle, with a `gain` moving from `0.8` to `1.3` following a sine wave.
+
+### grain
+
+```haskell
+Type: grain :: Pattern Double -> Pattern Double -> ControlPattern
+```
+
+`grain` is another way to specify what part of samples we want to play. Instead of specifying the `begin` and `end`, here we write the `begin` and the `length`.
+
+For example:
+
+```haskell
+d1 $ slow 2 $ s "bev" # grain 0.2 0.1 # legato 1
+```
+
+is equivalent to:
+
+```haskell
+d1 $ slow 2 $ s "bev" # begin 0.2 # end 0.3 # legato 1
+```
+
+### grain'
+
+```haskell
+Type: grain' :: Pattern String -> ControlPattern
+```
+
+`grain'` is simply a fast shortcut to join a `begin` and an `end`.
+
+```haskell
+d1 $ slow 2 $ s "bev" # grain' "0.2:0.3" # legato 1
+```
+
+This example is equivalent to:
+
+```haskell
+d1 $ slow 2 $ s "bev" # begin 0.2 # end 0.3 # legato 1
+ ```
+
+## Sample effects
+
+### accelerate
+
+```haskell
+Type: accelerate :: Pattern Double -> ControlPattern
+```
+
+A pattern of numbers that speed up (or slow down) samples while they play.
+
+```haskell
+d1 $ s "arpy" # accelerate 2
+```
+
+In this example, the sound starts at the original pitch, and gets higher as it plays. You can use a negative number to make the sound get lower.
+
+```haskell
+d1 $ arp "up" $ note "c'maj'4" # s "arpy" # accelerateTake "susan" [0.2,1,-1]
+```
+
+Using [state values](https://tidalcycles.org/docs/reference/state_values/#introduction-to-state-values), in this example we apply a different acceleration to each played note.
