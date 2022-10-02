@@ -49,7 +49,7 @@ chromatic
 Type: scaleTable :: Fractional a => [(String, [a])]
 ```
 
-The `scaleTable` function outputs a list of all available scales and their corresponding notes. For example, its first entry is `("minPent",[0.0,3.0,5.0,7.0,10.0])` which means that a minor pentatonic scale is formed by the fundamental (`0`), the minor third (`3` semitones above the fundamental), the perfect fourth (`5` semitones above the fundamental), etc.
+The `scaleTable` function outputs a list of all available scales and their corresponding notes. For example, its first entry is `("minPent",[0.0,3.0,5.0,7.0,10.0])` which means that a minor pentatonic scale is formed by the root (`0`), the minor third (`3` semitones above the root), the perfect fourth (`5` semitones above the root), etc.
 
 As the list is big, you can use the Haskell function `lookup` to look up a specific scale:
 
@@ -65,7 +65,7 @@ You can also do a reverse look up into the scale table. For example:
 filter (\(_,x)->take 3 x==[0,2,4]) scaleTable
 ```
 
-The above example will output all scales, the first three notes of which are the fundamental, the major second (`2` semitones above the fundamental), and the major third (`4` semitones above the fundamental).
+The above example will output all scales, the first three notes of which are the root, the major second (`2` semitones above the fundamental), and the major third (`4` semitones above the root).
 
 ### getScale
 
@@ -129,7 +129,7 @@ You'll need to run `import Sound.Tidal.Chords` before using this function.
 Type: chordTable :: Num a => [(String, [a])]
 ```
 
-The `chordTable` function outputs a list of all available chords and their corresponding notes. For example, its first entry is `("major",[0,4,7])` which means that a major triad is formed by the fundamental (`0`), the major third (`4` semitones above the fundamental), and the perfect fifth (`7` semitones above the fundamental).
+The `chordTable` function outputs a list of all available chords and their corresponding notes. For example, its first entry is `("major",[0,4,7])` which means that a major triad is formed by the root (`0`), the major third (`4` semitones above the root), and the perfect fifth (`7` semitones above the root).
 
 As the list is big, you can use the function `chordL` to look up a specific chord:
 
