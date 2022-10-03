@@ -185,7 +185,7 @@ In the example above, we set tempo at 130 beats per minute. But we want to play 
 Type: timescalewin :: Pattern Double -> ControlPattern
 ```
 
-The algorithm used to time-stretch a sample divides our sample in many little parts, modifies them, and put them all together again. It uses one particular parameter, called `windowSize`, which is the length of each sample part.
+The algorithm used to time-stretch a sample divides our sample in many little parts, modifies them, and puts them all together again. It uses one particular parameter, called `windowSize`, which is the length of each sample part.
 
 The `windowSize` value is automatically calculated, but we can change it using `timescalewin`. The `windowSize` value is multiplied by the number we provide to `timescalewin`.
 
