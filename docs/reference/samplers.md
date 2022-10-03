@@ -156,3 +156,51 @@ d1 $ arp "up" $ note "c'maj'4" # s "arpy" # accelerateTake "susan" [0.2,1,-1]
 ```
 
 Using [state values](https://tidalcycles.org/docs/reference/state_values/#introduction-to-state-values), in this example we apply a different acceleration to each played note.
+
+## Time stretching
+
+According to Wikipedia, *time stretching* is the process of changing the speed or duration of an audio signal without affecting its pitch.
+
+This section presents the functions available in TidalCycles that let us time-stretch our samples at real time.
+
+### timescale
+
+```haskell
+Type: timescale :: Pattern Double -> ControlPattern
+```
+
+`timescale` is the main function used to activate time-stretching, and usually the only one you need. It receives a single parameter which is the stretching rate to apply.
+
+You can use any positive number as the ratio, but the particular method used is designed for ratios greater than 1, and work reasonably well for values between 0.1 and 3.
+
+```haskell
+d1 $ slow 2 $ s "breaks152" # legato 1 # timescale (152/130) # cps (130/60/4)
+```
+
+In the example above, we set tempo at 130 beats per minute. But we want to play one of the `breaks152` samples, which are, as indicated, at 152 BPM. So, the ratio we want is 152 over 130. This will slow down the sample to fit in our 130 BPM tempo.
+
+### timescalewin
+
+```haskell
+Type: timescalewin :: Pattern Double -> ControlPattern
+```
+
+The algorithm used to time-stretch a sample divides our sample in many little parts, modifies them, and put them all together again. It uses one particular parameter, called `windowSize`, which is the length of each sample part.
+
+The `windowSize` value is automatically calculated, but we can change it using `timescalewin`. The `windowSize` value is multiplied by the number we provide to `timescalewin`.
+
+`timescalewin` can be used to improve the quality of time-stretching for some samples, or simply as an effect.
+
+Let's compare the next two code examples:
+
+```haskell
+d1 $ slow 2 $ s "breaks152" # legato 1 # timescale (152/130) # timescalewin 0.01 # cps (130/60/4)
+```
+
+```haskell
+d1 $ slow 2 $ s "breaks152" # legato 1 # timescale (152/130) # timescalewin 10 # cps (130/60/4)
+```
+
+In the first one, passing `0.01` makes the window size a lot smaller, and the extreme chopping of the sample causes a rougher sound.
+
+In the second one, passing `10` makes the chunks a lot bigger. The method used overlaps the treated chunks when recomposing the sample, and, with the bigger window size, this overlap is noticeable and causes a kind of delay effect.
