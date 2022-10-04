@@ -207,6 +207,26 @@ Or, to apply `(# speed "0.5")` to only the last quarter of a pattern:
 d1 $ within (0.75, 1) (# speed "0.5") $ sound "bd*2 sn lt mt hh hh hh hh"
 ```
 
+### stretch
+
+```haskell
+Type: stretch :: Pattern a -> Pattern a
+```
+
+Stretch takes a pattern, and if there's silences at the start or end of the current cycle, it will zoom in to avoid them.
+
+```haskell
+d1 $ note (stretch "~ 0 1 5 8*4 ~") # s "superpiano"
+-- is the same as
+d1 $ note "0 1 5 8*4" # s "superpiano"
+```
+
+You can pattern silences on the extremes of a cycle to make changes to the rhythm:
+
+```haskell
+d1 $ note (stretch "~ <0 ~> 1 5 8*4 ~") # s "superpiano"
+```
+
 ## Shifting time
 
 
