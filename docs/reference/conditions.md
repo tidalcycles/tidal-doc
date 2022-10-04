@@ -425,7 +425,18 @@ If you listen to this you'll hear that which instrument is shifted up and which 
 
 ### contrastBy
 
-`contrastBy` is currently undocumented.
+```haskell
+Type: contrastBy :: (a -> Value -> Bool) -> (ControlPattern -> Pattern b) -> (ControlPattern -> Pattern b) -> Pattern (Map.Map String a) -> Pattern (Map.Map String Value) -> Pattern b
+```
+`contrastBy` is a more general version of `contrast` where you can specify an abritrary boolean function that will be used to compare the control patterns. For example, `contrast` itself is defined as `contrastBy (==)`, to test for equality.
+
+Compare the following:
+```haskell
+d1 $ contrast (|+ n 12) (|- n 12) (n "2") $ n "0 1 2 [3 4]" # s "superpiano"
+
+d2 $ contrastBy (>=) (|+ n 12) (|- n 12) (n "2") $ n "0 1 2 [3 4]" # s "superpiano"
+```
+In the latter example, we test for "greater than or equals to" instead of simple equality.
 
 ## ifp
 
