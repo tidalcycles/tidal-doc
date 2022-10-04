@@ -89,7 +89,7 @@ Type: whenmod :: Int -> Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern 
 d1 $ whenmod 8 4 (fast 2) (sound "bd sn kurt")
 ```
 
-## ifp
+### ifp
 
 ```haskell
 Type: ifp :: (Int -> Bool) -> (Pattern a -> Pattern a) -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
