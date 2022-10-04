@@ -9,7 +9,7 @@ This page will present you all the functions that can be used to add conditions 
 * **Examples**: a small list of examples that you can copy/paste in your editor.
 
 
-## Conditions on cycles
+## Conditions on cycle numbers
 
 ### every
 ```haskell
@@ -268,7 +268,7 @@ Type: Pattern Bool -> Pattern a -> Pattern a -> Pattern a
 d1 $ ccv (stitch "t(7,16)" 127 0) # ccn 0  # "midi"
 ```
 
-## Choosing patterns
+## Choosing patterns and functions
 
 ### select
 
