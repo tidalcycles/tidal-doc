@@ -153,6 +153,7 @@ module.exports = {
       "reference/time",
       "reference/harmony_melody",
       "reference/transitions",
+      "reference/samplers",
       "reference/sampling",
       "reference/randomness",
       "reference/composition",

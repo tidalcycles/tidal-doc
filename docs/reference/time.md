@@ -398,7 +398,7 @@ Type: swing :: Pattern Time -> Pattern a -> Pattern a
 ### ghost
 
 ```haskell
-Type: ghost :: Pattern ControlMap -> Pattern ControlMap
+Type: ghost :: Pattern ValueMap -> Pattern ValueMap
 ```
 
 `ghost` adds quieter, pitch-shifted, copies of an event after the event, emulating ghost notes that are common in drumming patterns.
@@ -407,15 +407,41 @@ Type: ghost :: Pattern ControlMap -> Pattern ControlMap
 d1 $ stack [ ghost $ sound "~ sn", sound "bd*2 [~ bd]" ]
 ```
 
-The example above creates a kick snare pattern with ghost notes applied to the snare hit. 
+The example above creates a kick snare pattern with ghost notes applied to the snare hit.
 
 ### ghost'
 
-`ghost'` is currently undocumented.
+```haskell
+Type: ghost' :: Time -> Pattern ValueMap -> Pattern ValueMap
+```
+
+`ghost'` is a variation from `ghost` above, where you can also specify the base delay used to create the pattern of ghosts notes.
+
+```haskell
+d1 $ stack [ ghost' (1/16) $ sound "~ sn", sound "bd*2 [~ bd]" ]
+```
+
+The example above creates a kick snare pattern with ghost notes applied to the snare hit. The 1/16 is a sixteenth of a cycle, but that doesn't mean ghost notes will be displaced exactly by this amount: this is just the base value from where repetitions are calculated.
 
 ### ghost''
 
-`ghost''` is currently undocumented.
+```haskell
+Type: ghost'' :: Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+
+This variation of `ghost` adds another parameter to the ones present in `ghost'`, which is the function used to modify the ghost notes. So here you can decide which changes will be applied to the ghost notes compared to the original notes.
+
+```haskell
+d1 $ slow 2 $ ghost'' (1/8) (id) $ sound "sn"
+```
+
+In this first example, ghost notes will be identical than the original.
+
+```haskell
+d1 $ slow 2 $ ghost'' (1/16) ((|*| gain 1.1) . (|> begin 0.05)) $ sound "sn"
+```
+
+The example above applies ghost notes to the snare hit, but these notes will be louder, not quieter, and the sample will have it's beginning slightly cut.
 
 ## Inside and outside
 

@@ -75,16 +75,16 @@ Spectral delay coded by [Mads Kjeldgaard](https://madskjeldgaard.dk/):
 Made by [Mads Kjeldgaard](https://madskjeldgaard.dk/). Freeze magnitudes at current levels when `freze > 0` and advances phase according to difference between frames to try and maintain current spectral quality:
 * `freeze`: freeze amount
 
-### Enveloppe
+### Envelope
 
-#### ASR Enveloppe
+#### ASR Envelope
 
 * `attack` / `att`: in seconds.
 * `hold` / `release` / `rel`: in seconds.
 
 #### Legato
 
-* `legato`: amount of overlap between two adjacent synth sounds. Vazlues less than one (e.g. `0.5`) will cut the sound off sooner. Values greater than one (e.g. 1.5) will cut the sound off later
+* `legato`: amount of overlap between two adjacent synth sounds. Values less than one (e.g. `0.5`) will cut the sound off sooner. Values greater than one (e.g. `1.5`) will cut the sound off later
 
 ### Filters
 
