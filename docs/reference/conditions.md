@@ -298,6 +298,23 @@ squeeze :: Pattern Int -> [Pattern a] -> Pattern a
 ```
 Chooses between a list of patterns, using a pattern of integers.
 
+### inhabit
+
+```haskell
+inhabit :: [(String, Pattern a)] -> Pattern String -> Pattern a
+```
+`inhabit` allows you to link patterns to some String, or in other words, to give patterns a name and then call them from within another pattern of Strings.
+
+For example, we may make our own bassdrum, hi-hat and snaredrum kit using tidal:
+
+```haskell
+do
+  let drum = inhabit [("bd",s "sine" |- accelerate 1.5),("hh",s "alphabet:7" # begin 0.7 # hpf 7000),("sd",s "invaders:3" # speed 12)]
+  d1 $ drum "[bd*8?, [~hh]*4, sd(6,16)]"
+```
+
+`inhabit` can be very useful when using MIDI controlled drum machines, since you can give understandable drum names to patterns of notes.
+
 ## Euclidians
 
 ### euclid
