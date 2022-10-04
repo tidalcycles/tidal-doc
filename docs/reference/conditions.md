@@ -9,7 +9,7 @@ This page will present you all the functions that can be used to add conditions 
 * **Examples**: a small list of examples that you can copy/paste in your editor.
 
 
-## Every and the others
+## Conditions on cycles
 
 ### every
 ```haskell
@@ -89,121 +89,27 @@ Type: whenmod :: Int -> Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern 
 d1 $ whenmod 8 4 (fast 2) (sound "bd sn kurt")
 ```
 
-
-## The "sometimes" family
-
-### sometimes
+## ifp
 
 ```haskell
-Type: sometimes :: (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+Type: ifp :: (Int -> Bool) -> (Pattern a -> Pattern a) -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 ```
 
-`sometimes` is function, that applies another function to a pattern, around 50% of the time, at random. It takes two inputs, the function to be applied, and the pattern you are applying it to.
-
-For example to distort half the events in a pattern:
+`ifp` decides whether to apply one or another function depending on the result of a test function, which is passed the current cycle as a number. For example:
 ```haskell
-d1 $ sometimes (# crush 2) $ n "0 1 [~ 2] 3" # sound "arpy"
+d1 $ ifp ((== 0).(flip mod 2))
+  (striate 4)
+  (# coarse "24 48") $
+  sound "hh hc"
 ```
+This will apply `striate 4` for every even cycle, and `# coarse "24 48"` for every odd one.
 
-`sometimes` has a number of variants, which apply the function with different likelihood: 
-
-| function     |  likelihood |
-|--------------|-------------|
-| always       | 100%        |
-| almostAlways | 90%         |
-| often        | 75%         |
-| sometimes    | 50%         |
-| rarely       | 25%         |
-| almostNever  | 10%         |
-| never        | 0%          |
-
-
-### sometimesBy
-
-If you want to be specific, you can use `sometimesBy` and a number, for example:
-```haskell
-sometimesBy 0.93 (# speed 2)
-```
-
-to apply the speed control on average 93 times out of a hundred.
-
-
-### someCycles
-
-`someCycles` is similar to `sometimes`, but instead of applying the given function to random events, it applies it to random cycles. For example the following will either distort all of the events in a cycle, or none of them:
-
-```haskell
-d1 $ someCycles (# crush 2) $ n "0 1 [~ 2] 3" # sound "arpy"
-```
-
-### someCyclesBy
-
-As with `sometimesBy`, if you want to be specific, you can use `someCyclesBy` and a number. For example:
-
-```haskell
-someCyclesBy 0.93 (# speed 2)
-```
-
-will apply the speed control on average `93` cycles out of a hundred.
-
-
-
-## Choosing
-### choose
-```haskell
-Type: choose :: [a] -> Pattern a
-```
-The `choose` function emits a stream of randomly choosen values from the given list, as a continuous pattern:
-```haskell
-d1 $ sound "drum ~ drum drum" # n (choose [0,2,3])
-```
-
-As with all continuous patterns, you have to be careful to give them structure; in this case choose gives you an infinitely detailed stream of random choices. 
-
-### chooseby
-
-```haskell
-Type: chooseBy :: Pattern Double -> [a] -> Pattern a
-```
-The `chooseBy` function is like choose but instead of selecting elements of the list randomly, it uses the given pattern to select elements.
-```haskell
-chooseBy "0 0.25 0.5" ["a","b","c","d"]
-```
-will result in the pattern `"a b c" `.
-
-### wchoose
-
-```haskell
-Type: wchoose :: [(a, Double)] -> Pattern a
-```
-
-`wchoose` is similar to `choose`, but allows you to 'weight' the choices, so some are more likely to be chosen than others. The following is similar to the previous example, but the `2` is twice as likely to be chosen than the `0` or `3`.
-
-```haskell
-d1 $ sound "drum ~ drum drum" # n (wchoose [(0,0.25),(2,0.5),(3,0.25)])
-```
-:::caution
-Prior to version `1.0.0` of **Tidal**, the weights had to add up to `1`, but this is no longer the case. 
+:::tip
+The test function does not rely on anything Tidal-specific, it uses plain Haskell functionality for operating on numbers. That is, it calculates the modulo of `2` of the current cycle which is either `0` (for even cycles) or `1`. It then compares this value against `0` and returns the result, which is either `True` or `False`. This is what the first part of `ifp`'s type signature signifies `(Int -> Bool)`, a function that takes a whole number and returns either `True` or `False`. 
 :::
 
-### wchooseby
 
-```haskell
-Type: wchooseBy :: Pattern Double -> [(a,Double)] -> Pattern a
-```
-
-The `wchooseBy` function is like `wchoose` but instead of selecting elements of the list randomly, it uses the given pattern to select elements. 
-
-### cycleChoose
-
-```haskell
-Type: cycleChoose :: [a] -> Pattern a
-```
-
-Similar to `choose`, but only picks once per cycle:
-```haskell
-d1 $ sound "drum ~ drum drum" # n (cycleChoose [0,2,3])
-```
+## Conditions on ControlPatterns
 
 ### fix
 
@@ -228,6 +134,43 @@ to apply the function `hurry 2` to sample `1` of the drum sample set, and leave 
 ### unfix
 
 `unfix` is `fix` but only applies when the testing pattern is *not* a match.
+
+### contrast
+
+```haskell
+Type: contrast :: (ControlPattern -> ControlPattern) -> (ControlPattern -> ControlPattern) -> ControlPattern -> ControlPattern -> ControlPattern
+```
+`contrast` is like a if-else-statement over patterns. For `contrast t f p` you can think of `t` al the true-branch, `f` as the false branch, and `p` as the test.
+
+For contrast, you can use any control pattern as a test of equality: `n "<0 1>"`, `speed "0.5"`, or things like that. This lets you choose specific properties of the pattern you're transforming for testing, like in the following example:
+
+```haskell
+d1 $ contrast (|+ n 12) (|- n 12) (n "c") $ n (run 4) # s "superpiano"
+```
+where every note that isn't middle-c will be shifted down an octave but middle-c will be shifted up to c5.
+
+Since the test given to contrast is also a pattern, you can do things like have it alternate between options:
+
+```haskell
+d1 $ contrast (|+ n 12) (|- n 12) (s "<superpiano superchip>") $ s "superpiano superchip" # n 0
+```
+
+If you listen to this you'll hear that which instrument is shifted up and which instrument is shifted down alternates between cycles. 
+
+### contrastBy
+
+```haskell
+Type: contrastBy :: (a -> Value -> Bool) -> (ControlPattern -> Pattern b) -> (ControlPattern -> Pattern b) -> Pattern (Map.Map String a) -> Pattern (Map.Map String Value) -> Pattern b
+```
+`contrastBy` is a more general version of `contrast` where you can specify an abritrary boolean function that will be used to compare the control patterns. For example, `contrast` itself is defined as `contrastBy (==)`, to test for equality.
+
+Compare the following:
+```haskell
+d1 $ contrast (|+ n 12) (|- n 12) (n "2") $ n "0 1 2 [3 4]" # s "superpiano"
+
+d2 $ contrastBy (>=) (|+ n 12) (|- n 12) (n "2") $ n "0 1 2 [3 4]" # s "superpiano"
+```
+In the latter example, we test for "greater than or equals to" instead of simple equality.
 
 ## Boolean conditions
 
@@ -325,6 +268,8 @@ Type: Pattern Bool -> Pattern a -> Pattern a -> Pattern a
 d1 $ ccv (stitch "t(7,16)" 127 0) # ccn 0  # "midi"
 ```
 
+## Choosing patterns
+
 ### select
 
 ```haskell
@@ -352,6 +297,8 @@ Chooses between a list of functions, using a pattern of integers.
 squeeze :: Pattern Int -> [Pattern a] -> Pattern a
 ```
 Chooses between a list of patterns, using a pattern of integers.
+
+## Euclidians
 
 ### euclid
 
@@ -399,60 +346,3 @@ euclidFull 5 8 (s "bd") (s "hh27")
 ```
 
 is equivalent to our above example. 
-
-
-### contrast
-
-```haskell
-Type: contrast :: (ControlPattern -> ControlPattern) -> (ControlPattern -> ControlPattern) -> ControlPattern -> ControlPattern -> ControlPattern
-```
-`contrast` is like a if-else-statement over patterns. For `contrast t f p` you can think of `t` al the true-branch, `f` as the false branch, and `p` as the test.
-
-For contrast, you can use any control pattern as a test of equality: `n "<0 1>"`, `speed "0.5"`, or things like that. This lets you choose specific properties of the pattern you're transforming for testing, like in the following example:
-
-```haskell
-d1 $ contrast (|+ n 12) (|- n 12) (n "c") $ n (run 4) # s "superpiano"
-```
-where every note that isn't middle-c will be shifted down an octave but middle-c will be shifted up to c5.
-
-Since the test given to contrast is also a pattern, you can do things like have it alternate between options:
-
-```haskell
-d1 $ contrast (|+ n 12) (|- n 12) (s "<superpiano superchip>") $ s "superpiano superchip" # n 0
-```
-
-If you listen to this you'll hear that which instrument is shifted up and which instrument is shifted down alternates between cycles. 
-
-### contrastBy
-
-```haskell
-Type: contrastBy :: (a -> Value -> Bool) -> (ControlPattern -> Pattern b) -> (ControlPattern -> Pattern b) -> Pattern (Map.Map String a) -> Pattern (Map.Map String Value) -> Pattern b
-```
-`contrastBy` is a more general version of `contrast` where you can specify an abritrary boolean function that will be used to compare the control patterns. For example, `contrast` itself is defined as `contrastBy (==)`, to test for equality.
-
-Compare the following:
-```haskell
-d1 $ contrast (|+ n 12) (|- n 12) (n "2") $ n "0 1 2 [3 4]" # s "superpiano"
-
-d2 $ contrastBy (>=) (|+ n 12) (|- n 12) (n "2") $ n "0 1 2 [3 4]" # s "superpiano"
-```
-In the latter example, we test for "greater than or equals to" instead of simple equality.
-
-## ifp
-
-```haskell
-Type: ifp :: (Int -> Bool) -> (Pattern a -> Pattern a) -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
-```
-
-`ifp` decides whether to apply one or another function depending on the result of a test function, which is passed the current cycle as a number. For example:
-```haskell
-d1 $ ifp ((== 0).(flip mod 2))
-  (striate 4)
-  (# coarse "24 48") $
-  sound "hh hc"
-```
-This will apply `striate 4` for every even cycle, and `# coarse "24 48"` for every odd one.
-
-:::tip
-The test function does not rely on anything Tidal-specific, it uses plain Haskell functionality for operating on numbers. That is, it calculates the modulo of `2` of the current cycle which is either `0` (for even cycles) or `1`. It then compares this value against `0` and returns the result, which is either `True` or `False`. This is what the first part of `ifp`'s type signature signifies `(Int -> Bool)`, a function that takes a whole number and returns either `True` or `False`. 
-:::
