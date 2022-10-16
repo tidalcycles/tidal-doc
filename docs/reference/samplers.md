@@ -157,6 +157,69 @@ d1 $ arp "up" $ note "c'maj'4" # s "arpy" # accelerateTake "susan" [0.2,1,-1]
 
 Using [state values](https://tidalcycles.org/docs/reference/state_values/#introduction-to-state-values), in this example we apply a different acceleration to each played note.
 
+### speed
+
+```haskell
+Type: speed :: Pattern Double -> ControlPattern
+```
+
+A pattern of numbers which changes the speed of sample playback. As a result, the sample duration and pitch will be modified. Negative values will play the sample backwards.
+
+```haskell
+d1 $ slow 5 $ s "sax:5" # legato 1 # speed 0.5
+```
+
+This will play the `sax:5` sample at half its rate. As a result, the sample will last twice the normal time, and will be pitched a whole octave lower. This is equivalent to `d1 $ slow 5 $ s "sax:5" # legato 1 |- note 12`.
+
+```haskell
+d1 $ fast 2 $ s "breaks125:1" # cps (125/60/4) # speed (-2)
+```
+
+In the above example, the break (which lasts for exactly one bar at 125 BPM), will be played backwards, and at double speed (so, we use `fast 2` to fill the whole cycle).
+
+### sustain
+
+```haskell
+Type: sustain :: Pattern Double -> ControlPattern
+```
+
+A pattern of numbers that indicates the total duration of sample playback in seconds.
+
+:::caution
+This `sustain` refers to the whole playback duration, and is not to be confused with the sustain level of a typical ADSR envelope.
+:::
+
+```haskell
+d1 $ fast 2 $ s "breaks125:1" # cps (120/60/4) # sustain 1
+```
+
+At 120 BPM, a cycle lasts for two seconds. In the above example, we cut the sample so it plays just for one second, and repeat this part two times, so we fill the whole cycle. Note that sample pitch isn't modified.
+
+```haskell
+d1 $ s "breaks125:2!3" # cps (120/60/4) # sustain "0.4 0.2 0.4" # begin "0 0 0.4"
+```
+
+Here, we take advantage that `sustain` receives a pattern to build a different break from the original sample.
+
+### unit
+
+```haskell
+Type: unit :: Pattern String -> ControlPattern
+```
+
+`unit` is used in conjunction with `speed`. It accepts values of "r" (rate), "c" (cycles), or "s" (seconds).
+
+`unit "r"` is the default. See the above `speed` section.
+
+Using `unit "c"` means `speed` will be interpreted in cycles. For example, `speed 2` means samples will be stretched to fill half a cycle:
+
+```haskell
+d1 $ stack [
+s "sax:5" # legato 1 # speed 2 # unit "c",
+s "bd*2"
+]
+```
+
 ## Time stretching
 
 According to Wikipedia, *time stretching* is the process of changing the speed or duration of an audio signal without affecting its pitch.
