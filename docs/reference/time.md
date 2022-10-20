@@ -29,7 +29,7 @@ The first parameter can be patterned, for example to play the pattern at twice t
 d1 $ fast "2 4" $ sound "bd sn kurt cp"
 ```
 
-You can also use this function by its older alias, `density`. 
+You can also use this function by its older alias, `density`.
 
 ### fastGap
 
@@ -68,7 +68,7 @@ Type: hurry :: Pattern Time -> Pattern a -> Pattern a
 d1 $ every 2 (hurry 2) $ sound "bd sn:2 ~ cp"
 ```
 
-### slowSqueeze 
+### slowSqueeze
 
 ```haskell
 Type: slowSqueeze :: Pattern Time -> Pattern a -> Pattern a
@@ -145,7 +145,12 @@ d1 $ s "[bd sn]*2"
 ```
 
 ## Zooming in, Zooming Out
+
 ### compress
+
+```haskell
+Type: compress :: (Time, Time) -> Pattern a -> Pattern a
+```
 
 `compress` takes a pattern and squeezes it within the specified time span (i.e. the 'arc'). The new resulting pattern is a sped up version of the original.
 
@@ -163,9 +168,9 @@ Another example, where all events are different:
 d1 $ compress (1/4, 3/4) $ n (run 4) # s "arpy"
 ```
 
-It differs from `zoom` in that it preserves the original pattern but it speeds up its events so to match with the new time period. 
+It differs from `zoom` in that it preserves the original pattern but it speeds up its events so to match with the new time period.
 
-### zoom 
+### zoom
 
 ```haskell
 Type: zoom :: (Time, Time) -> Pattern a -> Pattern a
@@ -233,7 +238,7 @@ d1 $ note (stretch "~ <0 ~> 1 5 8*4 ~") # s "superpiano"
 ### off
 
 ```haskell
-Type: Pattern Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+Type: off :: Pattern Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 ```
 
 `off` is similar to superimpose, in that it applies a function to a pattern, and layers up the results on top of the original pattern. The difference is that `off` takes an extra pattern being a time (in cycles) to shift the transformed version of the pattern by.
@@ -247,10 +252,66 @@ d1 $ off 0.125 (# crush 2) $ sound "bd [~ sn:2] mt lt*2"
 The following makes arpeggios by adding offset patterns that are shifted up the scale:
 
 ```haskell
-d1 $ slow 2 $ 
-  n (off 0.25 (+12) $ off 0.125 (+7) $ slow 2 "c(3,8) a(3,8,2) f(3,8) e(3,8,4)") 
+d1 $ slow 2 $
+  n (off 0.25 (+12) $ off 0.125 (+7) $ slow 2 "c(3,8) a(3,8,2) f(3,8) e(3,8,4)")
   # sound "superpiano"
 ```
+
+### press
+
+```haskell
+Type: press :: Pattern a -> Pattern a
+```
+
+`press` delays a sound for half the time in its slot. In mini notation terms, it basically turns every instance of `a` into `[~ a]`. Every beat then becomes an offbeat, and so the overall effect is to syncopate a pattern.
+
+```haskell
+do
+  resetCycles
+  d1 $ stack [
+    press $ n "~ c'maj ~ c'maj" # s "superpiano" # gain 0.9 # pan 0.6,
+    s "[bd,clap sd bd sd]" # pan 0.4
+    ] # cps (90/60/4)
+```
+
+In this example, you can hear that the piano chords play between the snare and the bass drum. In 4/4 time, they are playing in the 2 and a half, and 4 and a half beats.
+
+```haskell
+do
+  resetCycles
+  d1 $ stack [
+    press $ n "~ [c'maj ~] ~ ~" # s "superpiano" # gain 0.9 # pan 0.6,
+    press $ n "~ g'maj ~ ~" # s "superpiano" # gain 0.9 # pan 0.4,
+    s "[bd,clap sd bd sd]"
+    ] # cps (90/60/4)
+```
+
+Here, the C major chord plays before the G major. As the slot that occupies the C chord is that of one eighth note, it is displaced by `press` only a sixteenth note.
+
+### pressBy
+
+```haskell
+Type: pressBy :: Pattern Time -> Pattern a -> Pattern a
+```
+
+`pressBy` is similar to `press`, but it takes one additional parameter which is the displacement of the pattern, from 0 (inclusive) to 1 (exclusive). `pressBy 0.5` is equivalent to `press`.
+
+You can pattern the displacement to create interesting rhythmic effects:
+
+```haskell
+d1 $ stack [
+s "bd sd bd sd",
+pressBy "<0 0.5>" $ s "co:2*4"
+]
+```
+
+```haskell
+d1 $ stack [
+s "[bd,co sd bd sd]",
+pressBy "<0 0.25 0.5 0.75>" $ s "cp"
+]
+```
+
 ### rotL
 
 ```haskell
@@ -263,9 +324,9 @@ Type: rotL :: Time -> Pattern a -> Pattern a -> Pattern a
 do
 {
   resetCycles;
-  d1 $ rotL 4 $ seqP [ 
-    (0, 12, sound "bd bd*2"), 
-    (4, 12, sound "hh*2 [sn cp] cp future*4"), 
+  d1 $ rotL 4 $ seqP [
+    (0, 12, sound "bd bd*2"),
+    (4, 12, sound "hh*2 [sn cp] cp future*4"),
     (8, 12, sound (samples "arpy*8" (run 16)))
   ]
 }
@@ -275,7 +336,7 @@ Useful when building and testing out longer sequences.
 
 ### rotR
 
-`rotR` is the opposite of `rotL` as it shifts the pattern forwards in time. 
+`rotR` is the opposite of `rotL` as it shifts the pattern forwards in time.
 
 ### spin
 
@@ -328,7 +389,7 @@ Type: weaveWith :: Time -> Pattern a -> [Pattern a -> Pattern a] -> Pattern a
 `weaveWith` (formerly known as `weave'`) is similar to the above, but `weaves` with a list of functions, rather than a list of controls. For example:
 ```haskell
 d1 $ weaveWith 3 (sound "bd [sn drum:2*2] bd*2 [sn drum:1]")
-  [fast 2, 
+  [fast 2,
    (# speed "0.5"),
    chop 16
   ]
@@ -387,7 +448,7 @@ With `jux`, the original and effected versions of the pattern are panned hard le
 d1 $ juxBy 0.5 (fast 2) $ sound "bd sn:1"
 ```
 
-In the above, the two versions of the pattern would be panned at `0.25` and `0.75`, rather than `0` and `1`. 
+In the above, the two versions of the pattern would be panned at `0.25` and `0.75`, rather than `0` and `1`.
 
 
 
@@ -492,12 +553,12 @@ Type: outside :: Pattern Time -> (Pattern a -> Pattern b) -> Pattern a -> Patter
 ```haskell
 d1 $ rev $ cat [s "bd bd sn",s "sn sn bd", s"lt lt sd", s "sd sd bd"]
 ```
-The above generates: 
+The above generates:
 ```haskell
 d1 $ rev $ cat [s "sn bd bd",s "bd sn sn", s "sd lt lt", s "bd sd sd"]
 ```
 
-However if you apply `outside`: 
+However if you apply `outside`:
 ```haskell
 d1 $ outside 4 (rev) $ cat [s "bd bd sn",s "sn sn bd", s"lt lt sd", s "sd sd bd"]
 ```
@@ -511,7 +572,7 @@ Notice the whole idea has been reversed. What this function is really doing is '
 ```haskell
 d1 $ slow 4 $ rev $ fast 4 $ cat [s "bd bd sn",s "sn sn bd", s"lt lt sd", s "sd sd bd"]
 ```
-This compresses the idea into a single cycle before `rev` operates and then slows it back to the original speed. 
+This compresses the idea into a single cycle before `rev` operates and then slows it back to the original speed.
 
 ## Delay functions
 
@@ -535,13 +596,13 @@ The above results in `4` echos, each one `50%` (that's the `0.5`) quieter than t
 
 It is possible to reverse the echo:
 ```haskell
-d1 $ echo 4 (-0.2) 0.5 $ sound "bd sn" 
+d1 $ echo 4 (-0.2) 0.5 $ sound "bd sn"
 ```
 
 ### echoWith
 
 ```haskell
-Type: echoWith :: Pattern Int -> Pattern Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a 
+Type: echoWith :: Pattern Int -> Pattern Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 ```
 
 `echoWith` is similar to `echo` described above, but instead of just decreasing volume to produce echoes, `echoWith` applies a function each step and overlays the result delayed by the given time.
@@ -553,7 +614,7 @@ In this case there are two overlays delayed by 1/3 of a cycle, where each has th
 ```haskell
 d1 $ echoWith 4 (1/6) (|* speed "1.5") $ sound "arpy arpy:2"
 ```
-In the above, three versions are put on top, with each step getting higher in pitch as `|* speed "1.5"` is successively applied. 
+In the above, three versions are put on top, with each step getting higher in pitch as `|* speed "1.5"` is successively applied.
 
 ### stut
 
