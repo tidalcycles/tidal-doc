@@ -166,7 +166,7 @@ This method uses [MIDIClockOut](https://pustota.basislager.org/_/sc-help/Help/Cl
 Quarks.install("crucial-library");
 ```
 
-After installing the crucial-library quark, follow the [initialization](#Initialization) guide. We will use the MIDI device variable named `~midiOut` from the initialization in the examples below.
+After installing the crucial-library quark, follow the [initialization](#Initialization) guide.
 
 After the MIDI device is initialized, create a [LinkClock](https://doc.sccode.org/Classes/LinkClock.html) in SuperCollider.
 
@@ -174,10 +174,10 @@ After the MIDI device is initialized, create a [LinkClock](https://doc.sccode.or
 ~lc = LinkClock.new.latency_(Server.default.latency);
 ```
 
-Then, create a [MIDIClockOut](https://pustota.basislager.org/_/sc-help/Help/Classes/MIDIClockOut.html) that is connected to the MIDI device `~midiOut` and the LinkClock `~lc`.
+Then, create a [MIDIClockOut](https://pustota.basislager.org/_/sc-help/Help/Classes/MIDIClockOut.html) that is connected to the MIDI device and the LinkClock `~lc`. You should provide the name of the MIDI device as reported by MIDIClient.init during initialization.
 
 ```c
-~mc = MIDIClockOut(~midiOut, ~lc);
+~mc = MIDIClockOut.new("Focusrite USB MIDI", "Focusrite USB MIDI", ~lc);
 ```
 
 MIDI clock events will be sent continously after we tell it to play.
