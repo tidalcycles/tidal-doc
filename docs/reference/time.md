@@ -629,4 +629,4 @@ _Deprecated_: use [echo](https://tidalcycles.org/docs/reference/time#echo) inste
 Type: stutWith :: Pattern Int -> Pattern Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 ```
 
-_Deprecated_: use [echoWith](https://tidalcycles.org/docs/reference/time#echoWith) instead.
+_Deprecated_: use [echoWith](https://tidalcycles.org/docs/reference/time#echowith) instead.
