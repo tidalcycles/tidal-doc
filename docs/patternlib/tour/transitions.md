@@ -43,8 +43,8 @@ anticipateIn 2 2 $ fast 4 $ sound "hh*2" *| gain "0.9 0.6"
 d2 silence
 ```
 
-## Clutch 
-### Clutch 
+## Clutch
+### Clutch
 
 ```haskell
 clutch :: Show a => a -> ControlPattern -> IO ()
@@ -264,7 +264,7 @@ xfade "drums" $ s "arpy*8" # n (run 8)
 xfadeIn :: Show a => a -> Time -> ControlPattern -> IO ()
 ```
 
-Same thing as xfadeIn but you can specify the number of cycles that the transition takes to complete:
+Same thing as `xfade`, but you can specify the number of cycles that the transition takes to complete:
 
 ```haskell
 xfadeIn 1 8 $ s "arpy*8" # n (run 8)
