@@ -17,7 +17,7 @@ Vim is generally used by experienced users: developers, system administrators, t
 
 ![vimtidal](https://camo.githubusercontent.com/d42afb94633db9b527910d87e2b3320f28c2221c1711043854976e3f8628104b/687474703a2f2f692e696d6775722e636f6d2f66724f4c4646492e676966)
 
-[Vim-Tidal](https://github.com/tidalcycles/vim-tidal) is the recommanded plugin to interact with Tidal Cycles. It will work for both [Vim](https://www.vim.org/) and [Neovim](https://neovim.io/), and will adapt to your setup. You can use Neovim's native `terminal` functionality, as well as `tmux` or other multiplexers. Check the [README](https://github.com/tidalcycles/vim-tidal#readme) file for more information about the installation process.
+[Vim-Tidal](https://github.com/tidalcycles/vim-tidal) is the recommended plugin to interact with Tidal Cycles. It will work for both [Vim](https://www.vim.org/) and [Neovim](https://neovim.io/), and will adapt to your setup. You can use Neovim's native `terminal` functionality, as well as `tmux` or other multiplexers. Check the [README](https://github.com/tidalcycles/vim-tidal#readme) file for more information about the installation process.
 
 ----
 
