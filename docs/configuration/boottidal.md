@@ -84,15 +84,17 @@ let setI = streamSetI tidal
 
 ## Controlling Latency
 
-There are two configuration values which control overall latency: `frame timespan` and `latency`. To find the maximum total latency, add them together. Here's an example configuration:
+There are three configuration values which relate to latency: `cProcessAhead`, `cFrameTimespan`, and `oLatency`. Here's an example configuration:
 
 ```haskell
-tidal <- startTidal (superdirtTarget {oLatency = 0.02}) (defaultConfig {cFrameTimespan = 1/20})
+tidal <- startTidal (superdirtTarget {oLatency = 0.05}) (defaultConfig {cFrameTimespan = 1/20, cProcessAhead = 3/10})
 ```
 
-* **Frame timespan**:  This is the duration of Tidal's calculation window in seconds. The default is `0.05 seconds`, in other words a calculation rate of 20 frames per second. If you find Tidal is using too much CPU, increasing the frame timespan will probably help. 
+* **Frame timespan**: This is the duration of Tidal's calculation window in seconds. The default is `0.05 seconds`, in other words a calculation rate of 20 frames per second. If you find Tidal is using too much CPU, increasing the frame timespan will probably help. 
 
-*  **Latency**: If you get late messages in supercollider, you can increase the latency by increasing this from its default value (which at the time of writing is `0.02`).
+*  **Latency**: This parameter lets you account for the time a target takes to produce a sound. For example, we might need SuperDirt to schedule the event 100 ms before it should it the speaker. A higher latency parameter will move the sound earlier in time. The default is `0.05 seconds`.
+
+* **Process Ahead**: This parameter controls how far ahead Tidal will start processing events. It might need to be adjusted when a high latency value is set. Adjust this value if you get late messages in SuperCollider. The default is `0.3 seconds`.
 
 ## SuperDirt running in another host
 

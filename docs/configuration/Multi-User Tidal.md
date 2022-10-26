@@ -106,6 +106,43 @@ Example:
 tidal <- startTidal superdirtTarget (defaultConfig {cQuantum = 3, cBeatsPerCycle = 3})
 ```
 
+### Adjusting latency
+
+You might find that even though tempo is synchronized, events don't quite line up. This happens because Ableton Link is not aware of the latencies of different devices or software.
+
+Ableton Link uses the concept of a shared timeline where a timestamp corresponds to when the sound should hit the speakers. But it does not know how far ahead a sound should be produced to hit the speakers at the right time. Different devices or software will have different latency and we thus need to adjust for that. The document [How to adjust sync when using Link](https://help.ableton.com/hc/en-us/articles/360003280139-How-to-adjust-sync-when-using-Link) says "Sometimes playback might be slightly offset, this is usually due to different playback latency of devices."
+
+#### How to adjust latency
+
+The first step of adjusting latency is to find how much to adjust it.
+Set the cps low, e.g.
+```
+setcps 0.25
+```
+
+Run a simple pattern, e.g.
+```
+d1 $ s "cp"
+```
+
+Use [nudge](../patternlib/howtos/startpattern.md#nudge) to
+find the offset
+```
+d1 $ s "cp" # nudge 0.05
+```
+
+Once you know the right offset you can make it permanent by subtracting it from
+the [oLatency value in your configuration](./boottidal.md#controlling-latency). As
+long as you use the same audio device and so on, you shouldn't have to
+adjust it again. We need to use subtraction because nudge moves events later in time whereas oLatency moves events earlier in time.
+
+You might have to nudge backwards, e.g.
+```
+d1 $ s "cp" # nudge (-0.05)
+```
+
+This is equivalent to increasing oLatency. When nudging backwards a lot, or when olatency is very high, Tidal might start processing the event too late. This can be avoided by adjusting [cProcessAhead in your configuration](./boottidal.md#controlling-latency)
+
 ### Disabling Link synchronization
 
 Tidal can be configured to not synchronize with other Link session.
