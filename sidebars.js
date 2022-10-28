@@ -158,6 +158,7 @@ module.exports = {
       "reference/randomness",
       "reference/composition",
       "reference/mi-ugens",
+      "reference/control_busses",
     ],
   },
   community: [
