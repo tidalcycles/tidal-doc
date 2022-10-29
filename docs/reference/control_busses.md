@@ -83,6 +83,26 @@ d2 $ sound "sax" # legato 1 # hpfrecv "<2 1>" # pan 1
 
 Most effects have a `bus` and a `recv` function to be used this way.
 
+Control busses can also be used to create LFOs on effects:
+
+```haskell
+d1 $ slow 6 $ note "c'maj" # s "superpiano" # legato 2 # lpq 0.2 # (lpfbus 1 $ segment 512 $ fast 4 $ range 200 2000 $ sine)
+
+d1 $ slow 6 $ note "c'maj" # s "superpiano" # legato 2 # lpq 0.2 # (lpfbus 1 $ segment 512 $ fast 4 $ smooth "200 2000")
+```
+
+Note that in these examples, we use `segment` to sample the value of `sine` and `smooth`, as these are continuous patterns and won't work directly.
+
+Additionally, you can prepare patterns to receive control signals, and then send them from other patterns:
+
+```haskell
+d1 $ s "ade" # panrecv 1 # lpfrecv 2
+
+once $ slow 4 $ panbus 1 $ segment 128 $ range (-1) 1 $ fast 4 $ sine
+
+d2 $ lpfbus 2 $ segment 128 $ smooth "2000 0"
+```
+
 ## Limitations
 
 Not all control parameters can be controlled via a bus. The following is the whole list of parameters that can't be:
