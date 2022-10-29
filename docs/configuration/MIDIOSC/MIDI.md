@@ -227,6 +227,11 @@ After the MIDI device is initialized, create a [LinkClock](https://doc.sccode.or
 ~lc = LinkClock.new.latency_(Server.default.latency);
 ```
 
+You can check that Tidal and SuperCollider have connected over Link by checking the number of Link peers:
+```
+~lc.numPeers; '0 means no connection, 1 means connection
+```
+
 Then, create a `LinkToMidiClock` that is connected to the MIDI device `~midiOut` and the `LinkClock` `~lc`.
 
 ```supercollider
@@ -239,7 +244,7 @@ MIDI clock events will be sent continously after we tell it to start, until we t
 ~ltmc.stop;
 ```
 
-Note: If SuperCollider and Tidal don't connect over Link, try starting Tidal before the LinkClock is created, but after SuperDirt is started. It appears like SuperCollider or Tidal is sensitive to the start order.
+Note: If SuperCollider and Tidal don't connect over Link, try starting Tidal before the LinkClock is created, but after SuperDirt is started. Alternatively, try creating the LinkClock before starting Tidal. This has anecdotally worked in some cases. Please report your findings in [the TidalCycles version 1.9.0 nnouncement thread](https://club.tidalcycles.org/t/tidalcycles-version-1-9-0/4292).
 
 For more details on Tidal's integration with Link, see [Multi-User Tidal](../multiuser-tidal#link-protocol-synchronization).
 
