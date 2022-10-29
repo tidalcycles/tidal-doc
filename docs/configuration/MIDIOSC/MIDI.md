@@ -201,7 +201,7 @@ LinkToMidiClock {
 					midiOut.midiClock;
 					(thisThread.clock.beats.ceil - thisThread.beats).wait;
 				}
-			}.play(~clock, [linkClock.quantum, 0]);
+			}.play(linkClock, [linkClock.quantum, 0]);
 		});
 	}
 
