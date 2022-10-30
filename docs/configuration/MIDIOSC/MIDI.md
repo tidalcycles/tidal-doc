@@ -153,37 +153,98 @@ It is often important to send MIDI clock events to synchronize tempo between dev
 Tidal can't sync its tempo to MIDI clock events that it receives, but it can act as a MIDI clock source.
 The following sections show two alternatives for sending MIDI clock events that follow the tempo of Tidal.
 
-#### Synchronising MIDI clock via SuperCollider
-
+#### Synchronising MIDI clock using the Link protocol
 Since version 1.9, Tidal uses Ableton Link for scheduling events.
 Ableton Link is a technology that synchronizes musical beat, tempo, and phase across multiple applications.
-We can use Link to synchronize Tidal with SuperCollider and set up SuperCollider to send MIDI clock events.
+We can use Link to synchronize Tidal with a separate program that will act as the MIDI clock source.
 This is the preferred method for sending MIDI clock events as it is easy, performant, stable, and has fewer quirks than [Synchronising MIDI clock via Tidal](#synchronising-midi-clock-via-tidal).
 
-This method uses [MIDIClockOut](https://pustota.basislager.org/_/sc-help/Help/Classes/MIDIClockOut.html) from the [crucial-library](https://github.com/crucialfelix/crucial-library) [quark](github.com/supercollider-quarks/quarks). Install it by evaluating the code below in SuperCollider.
+##### Ableton Live as the MIDI clock source
+Ableton Live can synchronize with Tidal over Link and simultaneously send MIDI clock messages.
+To achieve this, follow both instructions:
 
-```c
-Quarks.install("crucial-library");
+* Turn on Link sync in Ableton Live. See [Synchronizing via Link](https://www.ableton.com/en/manual/synchronizing-with-link-tempo-follower-and-midi/#32-1-synchronizing-via-link).
+* Turn the MIDI device on as a sync destination in Live’s Link/Tempo/MIDI Preferences. See [Synchronizing External MIDI Devices to Live](https://www.ableton.com/en/manual/synchronizing-with-link-tempo-follower-and-midi/#32-3-1-synchronizing-external-midi-devices-to-live).
+
+##### SuperCollider as the MIDI clock source
+
+We can use Link to synchronize Tidal with SuperCollider and set up SuperCollider to send MIDI clock events. This method was inspired by [jamshark70's thread](https://scsynth.org/t/midi-clock-out-separate-process-for-better-stability/5089). This requires extending SuperCollider with a new class `LinkToMidiClock`.
+
+First decide if the SuperCollider class should be available only to your user account or to all users on the machine. Then find the corresponding extensions directory by running one of these lines in SuperCollider:
+```supercollider
+Platform.userExtensionDir;   // Extensions available only to your user account
+Platform.systemExtensionDir; // Extensions available to all users on the machine
 ```
 
-After installing the crucial-library quark, follow the [initialization](#Initialization) guide.
+Create a file `LinkToMidiClock.sc` in the selected extensions directory and save it with this content:
+```supercollider
+LinkToMidiClock {
+	var <midiOut, <linkClock, routine, <isPlaying = false, d;
+
+	*new { arg midiOut, linkClock;
+		^super.newCopyArgs(midiOut, linkClock)
+	}
+
+	start {
+		if(isPlaying,{
+			"Can't start. LinkToMidiClock is already playing".inform;
+		},{
+			isPlaying = true;
+			d = 1/24;
+			routine = Routine {
+				midiOut.start;
+				loop {
+					23.do { |i|
+						midiOut.midiClock;
+						d.wait;
+					};
+					midiOut.midiClock;
+					(thisThread.clock.beats.ceil - thisThread.beats).wait;
+				}
+			}.play(linkClock, [linkClock.quantum, 0]);
+		});
+	}
+
+	stop {
+		if(isPlaying,{
+			isPlaying = false;
+			midiOut.stop;
+			routine.stop;
+		},{
+			"Can't stop. LinkToMidiClock is not playing".inform;
+		})
+	}
+}
+```
+
+Reboot SuperCollider or use `Language > Recompile Class Library`.
+
+We are now ready to follow the [initialization](#Initialization) guide. We will use the MIDI device variable named `~midiOut` from the initialization in the examples below.
 
 After the MIDI device is initialized, create a [LinkClock](https://doc.sccode.org/Classes/LinkClock.html) in SuperCollider.
 
-```c
+```supercollider
 ~lc = LinkClock.new.latency_(Server.default.latency);
 ```
 
-Then, create a [MIDIClockOut](https://pustota.basislager.org/_/sc-help/Help/Classes/MIDIClockOut.html) that is connected to the MIDI device and the LinkClock `~lc`. You should provide the name of the MIDI device as reported by MIDIClient.init during initialization.
-
-```c
-~mc = MIDIClockOut.new("Focusrite USB MIDI", "Focusrite USB MIDI", ~lc);
+You can check that Tidal and SuperCollider have connected over Link by checking the number of Link peers:
+```
+~lc.numPeers; '0 means no connection, 1 means connection
 ```
 
-MIDI clock events will be sent continously after we tell it to play.
-```c
-~mc.play;
+Then, create a `LinkToMidiClock` that is connected to the MIDI device `~midiOut` and the `LinkClock` `~lc`.
+
+```supercollider
+~ltmc = LinkToMidiClock(~midiOut, ~lc);
 ```
+
+MIDI clock events will be sent continously after we tell it to start, until we tell it to stop.
+```supercollider
+~ltmc.start;
+~ltmc.stop;
+```
+
+Note: If SuperCollider and Tidal don't connect over Link, try starting Tidal before the LinkClock is created, but after SuperDirt is started. Alternatively, try creating the LinkClock before starting Tidal. This has anecdotally worked in some cases. Please report your findings in [the TidalCycles version 1.9.0 nnouncement thread](https://club.tidalcycles.org/t/tidalcycles-version-1-9-0/4292).
 
 For more details on Tidal's integration with Link, see [Multi-User Tidal](../multiuser-tidal#link-protocol-synchronization).
 
