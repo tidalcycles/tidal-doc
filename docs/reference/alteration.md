@@ -231,7 +231,7 @@ d1 $ trunc "<0.75 0.25 1>" $ sound "bd sn:2 [mt rs] hc"
 Type: linger :: Pattern Time -> Pattern a -> Pattern a
 ```
 
-`linger` is similar to `trunc`, in that it truncates a pattern so that only the first fraction of the pattern is played. However unlike trunk, `linger` repeats that part to fill the remainder of the cycle.
+`linger` is similar to `trunc`, in that it truncates a pattern so that only the first fraction of the pattern is played. However unlike trunc, `linger` repeats that part to fill the remainder of the cycle.
 
 For example this repeats the first quarter, so you only hear a single repeating note:
 ```haskell
@@ -267,12 +267,12 @@ Type: chunk :: Int -> (Pattern b -> Pattern b) -> Pattern b -> Pattern b
 d1 $ chunk 4 (# speed 2) $ sound "bd hh sn cp"
 ```
 
-The below highlights in bold which part of the above pattern has the (# speed 2) function applied to it over four cycles:
+The below highlights in uppercase which part of the above pattern has the (# speed 2) function applied to it over four cycles:
 ```plaintext
-bd hh sn cp
-bd hh sn cp
-bd hh sn cp
-bd hh sn cp
+BD hh sn cp
+bd HH sn cp
+bd hh SN cp
+bd hh sn CP
 ```
 Another example:
 ```haskell
@@ -282,6 +282,18 @@ d1 $ chunk 4 (hurry 2) $ sound "bd sn:2 [~ bd] sn:2"
 ### chunk'
 
 `chunk'` does the same as chunk but cycles through the parts in the reverse direction.
+
+### loopFirst
+
+`loopFirst` is a function that takes a pattern and loops only the first cycle of the pattern. For example, in the following code will only play the bass drum sample.
+```haskell
+d1 $ loopFirst $ s "<<bd*4 ht*8> cp*4>"
+```
+
+This function combines with sometimes to insert events from the first cycle randomly into subsequent cycles of the pattern:
+```haskell
+d1 $ sometimes loopFirst $ s "<<bd*4 ht*8> cp*4>"
+```
 
 ### runWith
 
