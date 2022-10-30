@@ -12,34 +12,33 @@ id: tidal-vis
 
 ## Setup tidal-vis
 
+1. Comment out any existing lines in *BootTidal.hs* that begin with `tidal <- startTidal`.
 
-1. Add the following lines to *BootTidal.hs*:
+2. Add the following lines to *BootTidal.hs*:
 
 ```haskell
- -- OSCTarget for pattern visualizing.
- patternTarget = OSCTarget { oName = "Pattern handler", oAddress = "127.0.0.1", oPort = 5050, oPath = "/trigger/something", oShape = Nothing, oLatency = 0.02, oPreamble = [], oTimestamp = BundleStamp }
+ -- Target and shape for pattern visualizing.
+ patternTarget = Target { oName = "Pattern handler", oAddress = "127.0.0.1", oPort = 5050, oBusPort = Nothing, oLatency = 0.02, oWindow = Nothing, oSchedule = Pre BundleStamp, oHandshake = False }
+ patternShape = OSC "/trigger/something" $ Named {requiredArgs = []}
 
- -- OSCTarget for play music via SuperCollider.
+ -- Target for playing music via SuperCollider.
  musicTarget = superdirtTarget { oLatency = 0.1, oAddress = "127.0.0.1", oPort = 57120 }
 
  config = defaultConfig {cFrameTimespan = 1/20}
 
- -- Send pattern as osc both to SC and to tidal-vis
- tidal <- startMulti [musicTarget, patternTarget] config
+ -- Send pattern as OSC both to SuperCollider and to tidal-vis.
+ tidal <- startStream config [(musicTarget, [superdirtShape]), (patternTarget, [patternShape])]
 
- -- Send pattern as osc to SC only
+ -- Send pattern as OSC to SuperCollider only.
  -- tidal <- startTidal musicTarget config
 ```
 
-
-2. Comment `tidal <- startTidal...` and uncomment `tidal <- startMulti...`
-
-3. Build **tidal-vis** and run:
+3. Install **tidal-vis** and run:
 
 ```bash
- cd /tidal-vis
- stack build
- stack exec tidal-vis
+ cabal update
+ cabal install tidal-vis
+ tidal-vis
 ```
 
 4. Eval your **Tidal** code.
