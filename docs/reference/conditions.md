@@ -40,7 +40,7 @@ Type: every' :: Int -> Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 
 For example, `every' 3 0 (fast 2)` will speed up the cycle on cycles 0,3,6,… whereas `every' 3 1 (fast 2)` will transform the pattern on cycles 1,4,7,…
 
-With this in mind, setting the second argument of `every'` to `0` gives the equivalent `every` function. For example, `every 3` is equivalent to `every' 3 0`. 
+With this in mind, setting the second argument of `every'` to `0` gives the equivalent `every` function. For example, `every 3` is equivalent to `every' 3 0`.
 
 ### foldEvery
 
@@ -48,7 +48,7 @@ With this in mind, setting the second argument of `every'` to `0` gives the equi
 Type: foldEvery' :: [Int] -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 ```
 
-`foldEvery` is similar to chaining multiple `every` functions together. It transforms a pattern with a function, once per any of the given number of cycles. If a particular cycle is the start of more than one of the given cycle periods, then it it applied more than once. 
+`foldEvery` is similar to chaining multiple `every` functions together. It transforms a pattern with a function, once per any of the given number of cycles. If a particular cycle is the start of more than one of the given cycle periods, then it it applied more than once.
 
 ### when
 
@@ -62,7 +62,7 @@ Only when the given test function returns `True` the given pattern transformatio
 d1 $ when ((elem '4').show) (striate 4) $ sound "hh hc"
 ```
 
-The above will only apply striate `4` to the pattern if the current cycle number contains the number `4`. So the fourth cycle will be striated and the fourteenth and so on. Expect lots of striates after cycle number `399`. 
+The above will only apply striate `4` to the pattern if the current cycle number contains the number `4`. So the fourth cycle will be striated and the fourteenth and so on. Expect lots of striates after cycle number `399`.
 
 ### whenT
 
@@ -105,9 +105,64 @@ d1 $ ifp ((== 0).(flip mod 2))
 This will apply `striate 4` for every even cycle, and `# coarse "24 48"` for every odd one.
 
 :::tip
-The test function does not rely on anything Tidal-specific, it uses plain Haskell functionality for operating on numbers. That is, it calculates the modulo of `2` of the current cycle which is either `0` (for even cycles) or `1`. It then compares this value against `0` and returns the result, which is either `True` or `False`. This is what the first part of `ifp`'s type signature signifies `(Int -> Bool)`, a function that takes a whole number and returns either `True` or `False`. 
+The test function does not rely on anything Tidal-specific, it uses plain Haskell functionality for operating on numbers. That is, it calculates the modulo of `2` of the current cycle which is either `0` (for even cycles) or `1`. It then compares this value against `0` and returns the result, which is either `True` or `False`. This is what the first part of `ifp`'s type signature signifies `(Int -> Bool)`, a function that takes a whole number and returns either `True` or `False`.
 :::
 
+## The "sometimes" family
+
+### sometimes
+
+```haskell
+Type: sometimes :: (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+
+`sometimes` is function, that applies another function to a pattern, around 50% of the time, at random. It takes two inputs, the function to be applied, and the pattern you are applying it to.
+
+For example to distort half the events in a pattern:
+```haskell
+d1 $ sometimes (# crush 2) $ n "0 1 [~ 2] 3" # sound "arpy"
+```
+
+`sometimes` has a number of variants, which apply the function with different likelihood:
+
+| function     |  likelihood |
+|--------------|-------------|
+| always       | 100%        |
+| almostAlways | 90%         |
+| often        | 75%         |
+| sometimes    | 50%         |
+| rarely       | 25%         |
+| almostNever  | 10%         |
+| never        | 0%          |
+
+
+### sometimesBy
+
+If you want to be specific, you can use `sometimesBy` and a number, for example:
+```haskell
+sometimesBy 0.93 (# speed 2)
+```
+
+to apply the speed control on average 93 times out of a hundred.
+
+
+### someCycles
+
+`someCycles` is similar to `sometimes`, but instead of applying the given function to random events, it applies it to random cycles. For example the following will either distort all of the events in a cycle, or none of them:
+
+```haskell
+d1 $ someCycles (# crush 2) $ n "0 1 [~ 2] 3" # sound "arpy"
+```
+
+### someCyclesBy
+
+As with `sometimesBy`, if you want to be specific, you can use `someCyclesBy` and a number. For example:
+
+```haskell
+someCyclesBy 0.93 (# speed 2)
+```
+
+will apply the speed control on average `93` cycles out of a hundred.
 
 ## Conditions on ControlPatterns
 
@@ -125,7 +180,7 @@ d1 $ slow 2 $ fix (# crush 3) (n "[1,4]") $ n "0 1 2 3 4 5 6" # sound "arpy"
 ```
 The above only adds the `crush` control when the `n` control is set to either `1` or `4`.
 
-You can be quite specific, for example 
+You can be quite specific, for example
 ```haskell
 fix (hurry 2) (s "drum" # n "1")
 ```
@@ -155,7 +210,7 @@ Since the test given to contrast is also a pattern, you can do things like have 
 d1 $ contrast (|+ n 12) (|- n 12) (s "<superpiano superchip>") $ s "superpiano superchip" # n 0
 ```
 
-If you listen to this you'll hear that which instrument is shifted up and which instrument is shifted down alternates between cycles. 
+If you listen to this you'll hear that which instrument is shifted up and which instrument is shifted down alternates between cycles.
 
 ### contrastBy
 
@@ -171,6 +226,97 @@ d1 $ contrast (|+ n 12) (|- n 12) (n "2") $ n "0 1 2 [3 4]" # s "superpiano"
 d2 $ contrastBy (>=) (|+ n 12) (|- n 12) (n "2") $ n "0 1 2 [3 4]" # s "superpiano"
 ```
 In the latter example, we test for "greater than or equals to" instead of simple equality.
+
+## Choosing patterns and functions
+### choose
+```haskell
+Type: choose :: [a] -> Pattern a
+```
+The `choose` function emits a stream of randomly choosen values from the given list, as a continuous pattern:
+```haskell
+d1 $ sound "drum ~ drum drum" # n (choose [0,2,3])
+```
+
+As with all continuous patterns, you have to be careful to give them structure; in this case choose gives you an infinitely detailed stream of random choices.
+
+### chooseby
+
+```haskell
+Type: chooseBy :: Pattern Double -> [a] -> Pattern a
+```
+The `chooseBy` function is like choose but instead of selecting elements of the list randomly, it uses the given pattern to select elements.
+```haskell
+chooseBy "0 0.25 0.5" ["a","b","c","d"]
+```
+will result in the pattern `"a b c" `.
+
+### wchoose
+
+```haskell
+Type: wchoose :: [(a, Double)] -> Pattern a
+```
+
+`wchoose` is similar to `choose`, but allows you to 'weight' the choices, so some are more likely to be chosen than others. The following is similar to the previous example, but the `2` is twice as likely to be chosen than the `0` or `3`.
+
+```haskell
+d1 $ sound "drum ~ drum drum" # n (wchoose [(0,0.25),(2,0.5),(3,0.25)])
+```
+:::caution
+Prior to version `1.0.0` of **Tidal**, the weights had to add up to `1`, but this is no longer the case.
+:::
+
+### wchooseby
+
+```haskell
+Type: wchooseBy :: Pattern Double -> [(a,Double)] -> Pattern a
+```
+
+The `wchooseBy` function is like `wchoose` but instead of selecting elements of the list randomly, it uses the given pattern to select elements.
+
+### select
+
+```haskell
+select :: Pattern Double -> [Pattern a] -> Pattern a
+```
+Chooses between a list of patterns, using a pattern of floats (from `0` to `1`).
+
+### selectF
+
+```haskell
+selectF :: Pattern Double -> [Pattern a -> Pattern a] -> Pattern a -> Pattern a
+```
+Chooses between a list of functions, using a pattern of floats (from `0` to `1`)
+
+### pickF
+
+```haskell
+pickF :: Pattern Int -> [Pattern a -> Pattern a] -> Pattern a -> Pattern a
+```
+Chooses between a list of functions, using a pattern of integers.
+
+### squeeze
+
+```haskell
+squeeze :: Pattern Int -> [Pattern a] -> Pattern a
+```
+Chooses between a list of patterns, using a pattern of integers.
+
+### inhabit
+
+```haskell
+inhabit :: [(String, Pattern a)] -> Pattern String -> Pattern a
+```
+`inhabit` allows you to link patterns to some String, or in other words, to give patterns a name and then call them from within another pattern of Strings.
+
+For example, we may make our own bassdrum, hi-hat and snaredrum kit using tidal:
+
+```haskell
+do
+  let drum = inhabit [("bd",s "sine" |- accelerate 1.5),("hh",s "alphabet:7" # begin 0.7 # hpf 7000),("sd",s "invaders:3" # speed 12)]
+  d1 $ drum "[bd*8?, [~hh]*4, sd(6,16)]"
+```
+
+`inhabit` can be very useful when using MIDI controlled drum machines, since you can give understandable drum names to patterns of notes.
 
 ## Boolean conditions
 
@@ -268,53 +414,6 @@ Type: Pattern Bool -> Pattern a -> Pattern a -> Pattern a
 d1 $ ccv (stitch "t(7,16)" 127 0) # ccn 0  # "midi"
 ```
 
-## Choosing patterns and functions
-
-### select
-
-```haskell
-select :: Pattern Double -> [Pattern a] -> Pattern a
-```
-Chooses between a list of patterns, using a pattern of floats (from `0` to `1`). 
-
-### selectF
-
-```haskell
-selectF :: Pattern Double -> [Pattern a -> Pattern a] -> Pattern a -> Pattern a
-```
-Chooses between a list of functions, using a pattern of floats (from `0` to `1`) 
-
-### pickF
-
-```haskell
-pickF :: Pattern Int -> [Pattern a -> Pattern a] -> Pattern a -> Pattern a
-```
-Chooses between a list of functions, using a pattern of integers.
-
-### squeeze
-
-```haskell
-squeeze :: Pattern Int -> [Pattern a] -> Pattern a
-```
-Chooses between a list of patterns, using a pattern of integers.
-
-### inhabit
-
-```haskell
-inhabit :: [(String, Pattern a)] -> Pattern String -> Pattern a
-```
-`inhabit` allows you to link patterns to some String, or in other words, to give patterns a name and then call them from within another pattern of Strings.
-
-For example, we may make our own bassdrum, hi-hat and snaredrum kit using tidal:
-
-```haskell
-do
-  let drum = inhabit [("bd",s "sine" |- accelerate 1.5),("hh",s "alphabet:7" # begin 0.7 # hpf 7000),("sd",s "invaders:3" # speed 12)]
-  d1 $ drum "[bd*8?, [~hh]*4, sd(6,16)]"
-```
-
-`inhabit` can be very useful when using MIDI controlled drum machines, since you can give understandable drum names to patterns of notes.
-
 ## Euclidians
 
 ### euclid
@@ -362,4 +461,45 @@ Type: euclidFull :: Pattern Int -> Pattern Int -> Pattern a -> Pattern a ->Patte
 euclidFull 5 8 (s "bd") (s "hh27")
 ```
 
-is equivalent to our above example. 
+is equivalent to our above example.
+
+## ControlPattern conditions
+
+### fix
+```haskell
+Type: fix :: (ControlPattern -> ControlPattern) -> ControlPattern -> ControlPattern -> ControlPattern
+```
+
+With `fix` you can apply a ControlPattern as a condition and apply a function wich matches the controls. The first parameter is the function to apply and the second paramete is the condition.
+```haskell
+d1 $ fix (ply 2) (s "hh") $ s "bd hh sn hh"
+```
+
+### fixRange
+```haskell
+fixRange :: (ControlPattern -> Pattern ValueMap) -> Pattern (Map.Map String (Value, Value)) -> ControlPattern -> ControlPattern
+```
+The `fixRange` function isn't very user-friendly at the moment but you can create a `fix` variant with a range condition. Any value of a ControlPattern wich matches the values will apply the passed function.
+
+```haskell
+d1 $ (fixRange ((# distort 1) . (# gain 0.8)) (pure $ Map.singleton "note"  ((VN 0, VN 7)))) $ s "superpiano" <| note "1 12 7 11"
+```
+
+## ifp
+
+```haskell
+Type: ifp :: (Int -> Bool) -> (Pattern a -> Pattern a) -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+
+`ifp` decides whether to apply one or another function depending on the result of a test function, which is passed the current cycle as a number. For example:
+```haskell
+d1 $ ifp ((== 0).(flip mod 2))
+  (striate 4)
+  (# coarse "24 48") $
+  sound "hh hc"
+```
+This will apply `striate 4` for every even cycle, and `# coarse "24 48"` for every odd one.
+
+:::tip
+The test function does not rely on anything Tidal-specific, it uses plain Haskell functionality for operating on numbers. That is, it calculates the modulo of `2` of the current cycle which is either `0` (for even cycles) or `1`. It then compares this value against `0` and returns the result, which is either `True` or `False`. This is what the first part of `ifp`'s type signature signifies `(Int -> Bool)`, a function that takes a whole number and returns either `True` or `False`.
+:::
