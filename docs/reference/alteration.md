@@ -407,7 +407,7 @@ d1 $ s "superpiano ~ supermandolin ~ superpiano!3 ~ supermandolin" # sustain 4 #
 There is also `steps`. You can take a look at this function in the `Accumulation` section
 :::
 
-### lindenmeyer
+### lindenmayer
 
 ```haskell
 Type: Num b => Int -> String -> String -> [b]
