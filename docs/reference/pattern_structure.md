@@ -63,13 +63,13 @@ Note that `+` is actually an alias for `|+|`. So `|+` is to take the structure f
 
 | Function     | Both           | Left  | Right |
 |--------------|----------------|-------|-------|
-| Add          | `\|+\|` or (+) | `\|+` | `+\|` |
-| Substract    | `\|-\|` or (-) | `\|-` | `-\|` |
-| Multiply     | `\|*\|` or (*) | `\|*` | `*\|` |
-| Divide       | `\|/\|` or (/) | `\|/` | `/\|` |
-| Modulo       | `\|%\|` or (%) | `\|%` | `%\|` |
-| Left values  | `\|<\|` or (<) | `\|<` | `<\|` |
-| Right Values | `\|>\|` or (>) | `\|>` | `>\|` |
+| Add          | &vert;+&vert; or (+) | &vert;+ | +&vert; |
+| Subtract     | &vert;-&vert; or (-) | &vert;- | -&vert; |
+| Multiply     | &vert;&ast;&vert; or (*) | &vert;&ast; | &ast;&vert; |
+| Divide       | &vert;/&vert; or (/) | &vert;/ | /&vert; |
+| Modulo       | &vert;%&vert; or (%) | &vert;% | %&vert; |
+| Left values  | &vert;<&vert; or (<) | &vert;< | <&vert; |
+| Right Values | &vert;>&vert; or (>) | &vert;> | >&vert; |
 
 
 The last two are interesting, they let you only take values from one side. So for example you could take structure from the left, but values from the right with `|>`, for example:
@@ -80,7 +80,7 @@ The last two are interesting, they let you only take values from one side. So fo
  = |  4  |  5  |
 ```
 
-This is very similar to how `|+|` used to work in the versions of tidal prior to 1.0.0 - it took structure from the left, but values from the right. In fact, # is an alias for `|>`, mirroring the behaviour in previous versions of tidal.
+This is very similar to how `|+|` used to work in the versions of tidal prior to 1.0.0 - it took structure from the left, but values from the right. In fact, `#` is an alias for `|>`, mirroring the behaviour in previous versions of tidal.
 
 ## Combining control patterns
 
