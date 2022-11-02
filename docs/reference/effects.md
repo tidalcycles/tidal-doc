@@ -9,7 +9,7 @@ id: audio_effects
 
 #### Octer
 
-Made by Ben Gold. [Sonic Pi](https://sonic-pi.net/)'s octaver. 
+Made by Ben Gold. [Sonic Pi](https://sonic-pi.net/)'s octaver.
 * `octer`: octave harmonics
 * `octersub`: half-frequency harmonics
 * `octersubsub`: quarter-frequency harmonics
@@ -17,7 +17,7 @@ Made by Ben Gold. [Sonic Pi](https://sonic-pi.net/)'s octaver.
 #### Frequency Shifter
 
 Made by Ben Gold. Simple frequency shifter. Description taken from the SuperCollider `FreqShift` object documentation:
-> FreqShift implements single sideband amplitude modulation, also known as frequency shifting, but not to be confused with pitch shifting. Frequency shifting moves all the components of a signal by a fixed amount but does not preserve the original harmonic relationships.) 
+> FreqShift implements single sideband amplitude modulation, also known as frequency shifting, but not to be confused with pitch shifting. Frequency shifting moves all the components of a signal by a fixed amount but does not preserve the original harmonic relationships.)
 
 * `fshift`: shift
 * `fshiftnote`:
@@ -61,7 +61,7 @@ Made by Ben Gold. Ring modulation:
 
 #### Leslie
 
-Emulation of a Leslie speaker: speakers rotating in a wooden amplified cabinet: 
+Emulation of a Leslie speaker: speakers rotating in a wooden amplified cabinet:
 
 * `leslie`: dry and wet amount
 * `lrate`: modulation rate (`6.7` for fast, `0.7` for slow)
@@ -89,18 +89,18 @@ Made by [Mads Kjeldgaard](https://madskjeldgaard.dk/). Freeze magnitudes at curr
 #### ASR Envelope
 
 * `attack` / `att`: in seconds.
-* `hold` : in seconds. 
+* `hold` : in seconds.
 * `release` / `rel`: in seconds.
 
 #### Legato
 
-* `legato`: amount of overlap between two adjacent synth sounds. Vazlues less than one (e.g. `0.5`) will cut the sound off sooner. Values greater than one (e.g. 1.5) will cut the sound off later
+* `legato`: amount of overlap between two adjacent synth sounds. Values less than one (e.g. `0.5`) will cut the sound off sooner. Values greater than one (e.g. `1.5`) will cut the sound off later
 
 ### Filters
 
 #### DJ Filter
 
-Made by Alex McLean. A fun classic DJ Filter. Low pass filter for the first half of the range, high pass for the rest: 
+Made by Alex McLean. A fun classic DJ Filter. Low pass filter for the first half of the range, high pass for the rest:
 * `djf`: 0 to 1
 
 #### Lowpass filter
@@ -119,8 +119,8 @@ Be gentle with the resonance amount
 
 #### Bandpass filter
 
-* `bandf` / `bpf`: cutoff amount in hertz
-* `bandq` / `bpfq`: resonance
+* `bandf` / `bpf`: center frequency in hertz
+* `bandq` / `bpq`: resonance
 
 #### Vowel
 
@@ -136,12 +136,12 @@ Made by [Mads Kjeldgaard](https://madskjeldgaard.dk/). Number of teeth and width
 #### Spectral high pass filter
 
 Made by [Mads Kjeldgaard](https://madskjeldgaard.dk/).
-* `hbrick`: floats from `0.0` to `1.0` 
+* `hbrick`: floats from `0.0` to `1.0`
 
 #### Spectral low pass filter
 
 Made by [Mads Kjeldgaard](https://madskjeldgaard.dk/).
-* `lbrick`: floats from `0.0` to `1.0` 
+* `lbrick`: floats from `0.0` to `1.0`
 
 
 ### Distortion
@@ -168,7 +168,7 @@ It might get loud
 #### Squiz
 
 Made by Calum Gunn. Reminiscent of some weird mixture of filter, ring-modulator and pitch-shifter. Try passing multiples of `2` to it - `2`, `4`, `8` etc. The SuperCollider manual defines `Squiz` as:
-> A simplistic pitch-raising algorithm. It's not meant to sound natural; its sound is reminiscent of some weird mixture of filter, ring-modulator and pitch-shifter, depending on the input. The algorithm works by cutting the signal into fragments (delimited by upwards-going zero-crossings) and squeezing those fragments in the time domain (i.e. simply playing them back faster than they came in), leaving silences inbetween. All the parameters apart from memlen can be modulated. 
+> A simplistic pitch-raising algorithm. It's not meant to sound natural; its sound is reminiscent of some weird mixture of filter, ring-modulator and pitch-shifter, depending on the input. The algorithm works by cutting the signal into fragments (delimited by upwards-going zero-crossings) and squeezing those fragments in the time domain (i.e. simply playing them back faster than they came in), leaving silences inbetween. All the parameters apart from memlen can be modulated.
 
 * `squiz`: squiz amount
 
@@ -185,7 +185,7 @@ Made by [Mads Kjeldgaard](https://madskjeldgaard.dk/). Shift and scale the posit
 
 * `binshift`: stretching and shifting of bins
 
-#### Bin srambling
+#### Bin scrambling
 
 Made by [Mads Kjeldgaard](https://madskjeldgaard.dk/). Accepts floats to control the width and placement of the scrambling in the spectrum:
 * `scram`: ???
@@ -198,14 +198,14 @@ A classic bitcrushing effect:
 #### Coarse
 
 Fake audio resampling:
-* `coarse`: 1 for original, 2 for half, 3 for a third and so on 
+* `coarse`: 1 for original, 2 for half, 3 for a third and so on
 
 #### Waveloss
 
 Made by Calum Gunn. Divides an audio stream into tiny segments, using the signal's zero-crossings as segment boundaries, and discards a fraction of them. Takes a number between `1` and `100`, denoted the percentage of segments to drop. The SuperCollider manual describes the Waveloss effect this way:
 
 > Divide an audio stream into tiny segments, using the signal's zero-crossings as segment boundaries, and discard a fraction of them (i.e. replace them with silence of the same length). The technique was described by Trevor Wishart in a lecture.
-> Parameters: the filter drops drop out of out of chunks. mode can be 1 to drop chunks in a simple deterministic fashion (e.g. always dropping the first 30 out of a set of 40 segments), or 2 to drop chunks randomly but in an appropriate proportion.) 
+> Parameters: the filter drops drop out of out of chunks. mode can be 1 to drop chunks in a simple deterministic fashion (e.g. always dropping the first 30 out of a set of 40 segments), or 2 to drop chunks randomly but in an appropriate proportion.)
 
 * `mode`: ???
 * `waveloss`: ???
@@ -220,10 +220,10 @@ Made by Ben Gold from [Sonic Pi](https://sonic-pi.net/)'s `krush`.
 
 #### Magnitude smearing
 
-Made by Mads Kjeldgaard. Accepts floats to determine the amount of smearing: 
+Made by Mads Kjeldgaard. Accepts floats to determine the amount of smearing:
 * `smear`: amount of smearing
 
-#### Spectral conformer 
+#### Spectral conformer
 
 Made by [Mads Kjeldgaard](https://madskjeldgaard.dk/). SuperCollider description:
 > Applies the conformal mapping z → (z - a) / (1 - za*) to the phase vocoder bins z with a given by the real and imag inputs to the UGen. Makes a transformation of the complex plane so the output is full of phase vocoder artifacts but may be musically fun. Usually keep |a| < 1 but you can of course try bigger values to make it really noisy. a = 0 should give back the input mostly unperturbed.
@@ -240,10 +240,9 @@ Made by [Mads Kjeldgaard](https://madskjeldgaard.dk/).
 
 ## MIDI
 
-Yes, MIDI is an effect :clap: . Whatever, here are the supported parameters: 
+Yes, MIDI is an effect :clap: . Whatever, here are the supported parameters:
 
 * `dur`: duration in ???
 * `modwheel`: modwheel modulation amount
 * `expression`: expression pedal amount
 * `sustainpedal`: sustain pedal amount
-
