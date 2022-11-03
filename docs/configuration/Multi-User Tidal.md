@@ -82,12 +82,20 @@ If you find you have to nudge backwards (e.g. `d1 $ s "cp" # nudge (-0.05)`) thi
 
 ## Link Protocol Synchronization
 
-[Link](https://www.ableton.com/en/link/) is a protocol developed by Ableton for synchronizing musical gear, software or hardware. Link will synchronize all the devices found on a local network together. Timing and tempo will be shared by all clients. Even though Link originally appeared for Ableton, there are independant open-source clients you can use to synchronize using this protocol.
+[Link](https://www.ableton.com/en/link/) is a protocol for
+synchronizing musical gear, software or hardware. Link will
+synchronize all the devices found on a local network together. Timing
+and tempo will be shared by all clients. It was originally created by
+a music software company called Ableton, but they shared it with the
+open source community and it doesn't require any of their software to
+use.
 
 ## Native Link Protocol Synchronization
 
-Tidal version 1.9 directly integrates with Ableton Link.
-Link Synchronization is enabled by default and Tidal will automatically connect with other link-compatible applications on the same local network.
+Tidal version 1.9 directly integrates with Ableton Link.  Link
+Synchronization is enabled by default and Tidal will automatically
+connect with other link-compatible applications on the same local
+network, including other Tidal instances.
 
 ### Adjusting Quantum and Cycles per Beat
 
@@ -110,7 +118,7 @@ tidal <- startTidal superdirtTarget (defaultConfig {cQuantum = 3, cBeatsPerCycle
 
 You might find that even though tempo is synchronized, events don't quite line up. This happens because Ableton Link is not aware of the latencies of different devices or software.
 
-Ableton Link uses the concept of a shared timeline where a timestamp corresponds to when the sound should hit the speakers. But it does not know how far ahead a sound should be produced to hit the speakers at the right time. Different devices or software will have different latency and we thus need to adjust for that. The document [How to adjust sync when using Link](https://help.ableton.com/hc/en-us/articles/360003280139-How-to-adjust-sync-when-using-Link) says "Sometimes playback might be slightly offset, this is usually due to different playback latency of devices."
+Link uses the concept of a shared timeline where a timestamp corresponds to when the sound should hit the speakers. But it does not know how far ahead a sound should be produced to hit the speakers at the right time. Different devices or software will have different latency and we thus need to adjust for that. The document [How to adjust sync when using Link](https://help.ableton.com/hc/en-us/articles/360003280139-How-to-adjust-sync-when-using-Link) says "Sometimes playback might be slightly offset, this is usually due to different playback latency of devices."
 
 #### How to adjust latency
 
@@ -155,13 +163,13 @@ tidal <- startTidal superdirtTarget (defaultConfig {cEnableLink = False})
 
 ### Tidal instances don't automatically have the same cycle
 
-Ableton Link does not align beat/cycle values between session participants. Quoting [Link documentation](http://ableton.github.io/link/) "For example, beat 1 on one participant’s timeline might correspond to beat 3 or beat 4 on another’s, but it cannot correspond to beat 3.5". If aligned cycles is desired, use `resetcycles` in each Tidal instance simultaneously.
+Link does not align beat/cycle values between session participants. Quoting [Link documentation](http://ableton.github.io/link/) "For example, beat 1 on one participant’s timeline might correspond to beat 3 or beat 4 on another’s, but it cannot correspond to beat 3.5". If aligned cycles is desired, use `resetcycles` in each Tidal instance simultaneously.
 
 See [Automatic alignment of cycles in Link sessions - issue #936](https://github.com/tidalcycles/Tidal/issues/936) for further discussion.
 
 ## Link Protocol Synchronization using Carabiner
 
-Tidal version 1.0.11 and 1.8 supports a rudimentary integration with Ableton Link, using [Carabiner](https://github.com/Deep-Symmetry/carabiner).
+Tidal version 1.0.11 and 1.8 supports a rudimentary integration with Link, using [Carabiner](https://github.com/Deep-Symmetry/carabiner).
 
 To synchronise with the Link protocol, follow the following steps:
 
@@ -184,7 +192,7 @@ To change the BPM from tidal, you currently have to run e.g. `sendMsg sock "bpm 
 
 EspGrid is a language-neutral, separate piece of open source software for sharing tempo and other things in electronic ensembles. The software is available on [dktr0's website](https://dktr0.github.io/EspGrid/install.html). It is made so that changing the tempo on one instance will change the tempo on all the instances. Every change is reflected everywhere.
 
-Note: The ESPGrid integration was removed in Tidal 1.9 when Tidal started using Ableton Link for scheduling events.
+Note: The ESPGrid integration was removed in Tidal 1.9 when Tidal started using Link for scheduling events.
 
 ### 1) Start EspGrid/espgridd
 
