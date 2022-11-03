@@ -7,7 +7,7 @@ id: connecting_to_a_daw
 This page is incomplete. You can help by extending it.
 :::
 
-Many people are connecting **Tidal** to a **DAW** (*digital audio workstation*) like Ableton, Bitwig, Renoise, Reaper, and so on. There are many reasons to do so: using external instruments, sound post-treatment, mixing, etc... For this reason, there are many guides you can find here and there detailing how to connect Tidal with specific DAWs.
+Many people are connecting **Tidal** to a **DAW** (*digital audio workstation*) like the free/open source Ardour software, and proprietary Ableton, Bitwig, Renoise, Reaper, and so on. There are many reasons to do so: using external instruments, sound post-treatment, mixing, etc... For this reason, there are many guides you can find here and there detailing how to connect Tidal with specific DAWs.
 
 ## Ableton
 
