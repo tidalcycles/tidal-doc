@@ -64,19 +64,6 @@ module.exports = {
     "Pattern Library": [
       "patternlib/tutorials/online_course",
       {
-        Basics: [
-          "patternlib/tutorials/cycles",
-          "patternlib/tutorials/patterns",
-          "patternlib/tutorials/pattern_structure",
-          "patternlib/tutorials/mini_notation",
-          "patternlib/tutorials/oscillators",
-          "patternlib/tutorials/synthesizers",
-          "patternlib/tutorials/audio_effects",
-          "patternlib/tutorials/controls",
-          "patternlib/tutorials/tempo",
-          "patternlib/tutorials/transitions",
-          "patternlib/tutorials/state_values",
-        ],
         "How-tos": [
           "patternlib/howtos/buildarpeggios",
           "patternlib/howtos/buildrhythms",
