@@ -61,20 +61,16 @@ module.exports = {
         "Sound and audio": ["configuration/AudioConfig/audio_outputs"],
       },
     ],
-    "Pattern Library": [
-      {
-        "How-tos": [
-          "patternlib/howtos/buildarpeggios",
-          "patternlib/howtos/buildrhythms",
-          "patternlib/howtos/playchords",
-          "patternlib/howtos/startpattern",
-        ],
-        Tutorials: [
-          "patternlib/tutorials/workshop",
-          "patternlib/tutorials/course1",
-          "patternlib/tutorials/course2",
-        ],
-      },
+    "How-tos": [
+      "patternlib/howtos/buildarpeggios",
+      "patternlib/howtos/buildrhythms",
+      "patternlib/howtos/playchords",
+      "patternlib/howtos/startpattern",
+    ],
+    Tutorials: [
+      "patternlib/tutorials/workshop",
+      "patternlib/tutorials/course1",
+      "patternlib/tutorials/course2",
     ],
     "How does Tidal Work?": [
       {
