@@ -62,7 +62,6 @@ module.exports = {
       },
     ],
     "Pattern Library": [
-      "patternlib/tutorials/online_course",
       {
         "How-tos": [
           "patternlib/howtos/buildarpeggios",
