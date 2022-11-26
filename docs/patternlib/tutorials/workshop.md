@@ -17,10 +17,21 @@ Welcome to this **Tidal Cycles** tutorial. This is designed to be used as a work
 Once everything is installed, follow the following startup procedure
 each time.
 
-1.  Launch **SuperDirt** - In **SuperCollider**, type `'SuperDirt.start'` and run
-    the code by holding down `Ctrl` and pressing `Enter` (while your
-    cursor is on the same line as the code).
-2.  Launch **Tidal Cycles** - In Atom, start a new file and save it with a `.tidal` extension (e.g. `examples.tidal`).
+1.  Launch **SuperDirt**
+
+   `SuperDirt` should be started automatically when you run the **SuperCollider IDE** application. If now, in the editor window of the **SuperCollider IDE**, type `'SuperDirt.start'` and run the code by holding down `Ctrl` and pressing `Enter` (while your cursor is on the same line as the code).
+
+2.  Launch **Tidal Cycles**
+
+   In Atom, start a new file and save it with a `.tidal` extension (e.g. `examples.tidal`). **Tidal** will be automatically launch when you type and execute your first command.
+
+### Estuary
+
+Even if you haven't installed **Tidal** on your computer yet, it's still possible to play with it online. [Estuary](https://estuary.mcmaster.ca/) lets you play with **Tidal** and several other live-coding systems inside your browser, without the need to install anything in your own computer.
+
+**Estuary** is a perfect place to learn, teach, play with others, and test distinct live-coding languages.
+
+However, note that not all features in **Tidal** will work on **Estuary**, only a subset (called **Mini-Tidal**).
 
 ### Notes in Haskell
 
@@ -280,7 +291,7 @@ d1 $ palindrome $ sound "arpy arpy:1 arpy:2 arpy:3"
 d1 $ iter 4 $ sound "arpy arpy:1 arpy:2 arpy:3"
 ```
 
-`every` allows us to schedule transformations or effects in different cycles. The following example will play twice as fast every four cycles: 
+`every` allows us to schedule transformations or effects in different cycles. The following example will play twice as fast every four cycles:
 ```haskell
 d1 $ every 4 (fast 2) $ sound "arpy arpy:1 arpy:2 arpy:3"
 ```
