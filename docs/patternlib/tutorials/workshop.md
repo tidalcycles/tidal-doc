@@ -62,9 +62,13 @@ You can stop making a sound using `silence`:
 ```haskell
 d1 $ silence
 ```
-Pick a different sound from the same set, with `:`:
+There are two types of sounds you can use with `sound`: either they are synths definitions (like `superpiano`, see [Synthesizers](https://tidalcycles.org/docs/reference/synthesizers)), or they are samples. In the latter case, you write the name of the folder that contain the sample set. By default, the first sample is used, but you can pick a different sample from the same set, with `:`:
 ```haskell
 d1 $ sound "drum:1"
+```
+Also, it is possible to specify the folder and the sample in two parts:
+```haskell
+d1 $ sound "drum" # n 1
 ```
 
 ### Default sample library
@@ -79,7 +83,9 @@ jazz voodoo birds3 procshort blip drum jvbass psr wobble drumtraks koy
 rave bottle kurt latibro rm sax lighter lt arpy feel less stab ul
 ```
 
-You can see what other sounds there are (or add your own) by looking in the `Dirt-Samples` folder. You can find it via the `SuperCollider` menu: `'File > Open user support directory > downloaded-quarks > Dirt-Samples'`. Make a sequence:
+You can see what other sounds there are in the [default library](https://tidalcycles.org/docs/configuration/Audio%20Samples/default_library) by looking in the `Dirt-Samples` folder. Find it via the `SuperCollider` menu: `'File > Open user support directory > downloaded-quarks > Dirt-Samples'`. Additionally, you can also add your own [custom samples](https://tidalcycles.org/docs/configuration/Audio%20Samples/audiosamples).
+
+Make a sequence:
 
 ```haskell
 d1 $ sound "bd hh sn hh"
@@ -91,7 +97,7 @@ The more steps in the sequence, the faster it goes:
 d1 $ sound "bd bd hh bd sn bd hh bd"
 ```
 
-This is because of the way **Tidal** handles time. There is a universal `‘cycle’` (sort of like a musical 'bar') which is always running. **Tidal** will play all of the sounds between the speech marks in one cycle, unless we tell it not to (we’ll learn how to do that later). You’ll also notice `Tidal` will space the sounds out evenly within the cycle Which means we can end up with polyrhythmic structures (more on those later). We can change the length of the cycle using `setcps` (where `cps` stands for cycles per second) - this is a bit like bpm (beats per minute).
+This is because of the way **Tidal** handles time. There is a universal [cycle](https://tidalcycles.org/docs/reference/cycles) (sort of like a musical 'bar') which is always running. **Tidal** will play all of the sounds between the speech marks in one cycle, unless we tell it not to (we’ll learn how to do that later). You’ll also notice `Tidal` will space the sounds out evenly within the cycle Which means we can end up with polyrhythmic structures (more on those later). We can change the length of the cycle using `setcps` (where `cps` stands for cycles per second) - this is a bit like bpm (beats per minute).
 
 ```haskell
 setcps 0.6
@@ -103,7 +109,7 @@ You can use `d1, d2, d3...d9` to play multiple sequences at the same time:
 d2 $ sound "sn sn:2 sn bd sn"
 ```
 
-You can stop all the running patterns with `hush`.
+You can stop all the running patterns with `hush` (or by pressing `Ctrl+.`).
 
 You can pause everything by changing the cycle length to a negative number (remember to put negative numbers in brackets).
 ```haskell
@@ -126,7 +132,17 @@ solo 2
 unsolo 2
 
 -- now both will be playing, again
+
+mute 2
+
+-- now only the first pattern will be playing
+
+unmute 2 -- (or unmuteAll)
+
+-- now both will be playing
 ```
+
+The Atom plugin adds some key shortcuts for this common operations, like `Ctrl+1` to toggle mute for the first pattern, or `Ctrl+0` to unmute all. You can see the complete list of keybindings inside Atom, by going to `Edit > Preferences > Packages`, selecting tidalcycles, and scrolling down to the `Keybindings` section.
 
 ### More variety
 
