@@ -71,6 +71,8 @@ Also, it is possible to specify the folder and the sample in two parts:
 d1 $ sound "drum" # n 1
 ```
 
+Note that `s` is a synonym of `sound`, so `d1 $ s "drum" # n 1` is the same pattern.
+
 ### Default sample library
 
 Some of the samples which come with **Tidal** are listed below. Try some out!
@@ -192,6 +194,29 @@ d1 $ sound "bd <sd cp arpy>"
 
 d1 $ sound "<bd sn> <sd [cp cp]> <bd [cp cp]>"
 ```
+
+The syntax we are using in these examples is called [mini-notation](https://tidalcycles.org/docs/reference/mini_notation), and can be used in many places within Tidal, not only the `sound` function.
+
+Other common mini-notation symbols are `|` to choose a random option, `,` to play two patterns simultaneously, and `!` to replicate a pattern.
+
+Choose one of the two samples randomly:
+```haskell
+d1 $ sound "[bd:0|bd:1]"
+
+d1 $ sound "[sn|cp]"
+```
+
+Play a snare and a clap at the same time:
+```haskell
+d1 $ sound "[sn,cp]"
+```
+
+Play three bass drums and a snare:
+```haskell
+d1 $ sound "bd!3 sn"
+```
+
+Note the difference between this and `"bd*3 sn"`: in the first example there are four events, all of them lasting the same time. In the latter, the three `bd` last for half a cycle, and the `sn` lasts the other half. `"bd!3 sn"` is the same as `bd bd bd sn`.
 
 ## Effects
 
