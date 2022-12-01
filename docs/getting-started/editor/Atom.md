@@ -8,6 +8,14 @@ id: Atom
 
 ![atom logo](atomlogo.svg)
 
+---
+**UPDATE:** The Atom Editor will be sunsetting on Dec. 15, 2022. See the official [Sunsetting Atom](https://github.blog/2022-06-08-sunsetting-atom/)
+page for more details. Tidal will be moving to the new [Pulsar editor](https://pulsar-edit.dev/). Projected timeline to have Pulsar ready with the Tidalcycles package: end of 2022. Until then, new Tidal users are encouraged to wait for the new Pulsar editor or select one of the other editors. 
+
+Note: Tidal users who have a working Atom editor configured with the Tidalcycles package can continue to use it. But post Atom sunsetting, the Atom package manager will stop working.
+
+---
+
 [Atom](https://atom.io) is assumed to be Tidal Cycles's default text editor for newcomers. It is an intuitive but featureful code editor that can be extended with numerous plugins. You will see quite a lot of users coding with Atom because it has been recommanded for quite a while and for good reasons. The [Tidal Cycles Package](https://atom.io/packages/tidalcycles) is one of the most complete you can currently find. Atom is a free, cross-platform and open-source software. Note that there is also a [SuperCollider package](https://atom.io/packages/supercollider) that you can use as an alternative to the official IDE. Atom also supports alternative modes of input (Vim-like) through the help of various packages.
 
 ## Installation
