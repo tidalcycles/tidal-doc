@@ -3,7 +3,7 @@ title: Mini Notation
 id: mini_notation
 ---
 
-**Mini-notation** is the name of a special notation used for writing patterns of various sort (*notes*, *samples*, *parameters*).  To use the mini-notation, use a string delimited by quotation marks: `""`. Internally, the mini-notation is actually parsed and understood as a shortcut for a function that you could otherwise write using longer function compositions. 
+**Mini-notation** is the name of a special notation used for writing patterns of various sort (*notes*, *samples*, *parameters*).  To use the mini-notation, use a string delimited by quotation marks: `""`. Internally, the mini-notation is actually parsed and understood as a shortcut for a function that you could otherwise write using longer function compositions.
 
 Learning the mini-notation is **essential** for learning how to make music with **Tidal Cycles**. The notation is rather intuitive. We encourage you to try all these examples to see if you understand what effect every symbol can have on your pattern.
 
@@ -68,9 +68,10 @@ p "demo" $ s "[bd*3 . hh:2*2] . hh*4 cp"
 
 ### Superposition
 
-You can play multiple patterns at the same time inside one pattern. This is one of the most intuitive ways of dealing with superposition/polyphony. This small pattern is a complete rhythm section:
+You can play multiple patterns at the same time inside one pattern. This is one of the most intuitive ways of dealing with superposition/polyphony. These patterns have the 4 samples sounding together, but with different rhythmic subdivisions. The second pattern is a complete rhythm section:
 
 ```c
+d1 $ s "[bd*2,hh*3,[~ cp]*2, bass]"
 d1 $ s "[bd*3,hh*4,[~ cp]*2, bass*4]"
 ```
 
@@ -87,7 +88,7 @@ d1 $ note "[[c3*3],[c e g c6*3]]" # s "superpiano"
 d2 $ s "cp cp cp*2"
 ```
 
-### Step division 
+### Step division
 
 You can slow down a pattern by using division (`/`). This one needs a little bit of practice to be understood:
 
@@ -142,7 +143,7 @@ d1 $ s "bd hh? bd hh?0.8"
 
 ### Random choice
 
-You can use the &#124 symbol between brackets `[]` to choose between multiple events with an equal probability: 
+You can use the &#124 symbol between brackets `[]` to choose between multiple events with an equal probability:
 ```c
 d1 $ s "[bd*4|hh*12|cp*2]"
 ```
@@ -167,9 +168,9 @@ Tidal will not complain. It will just cycle in the folder until it finds the rig
 
 ### Euclidian Sequences
 
-Euclidian rhythms are rhythms obtained using the greatest common divisor of two numbers. They were described in 2004 by [Godfried Toussaint](https://en.wikipedia.org/wiki/Godfried_Toussaint), a canadian computer scientist. Euclidian rhythms are really useful for computer/algorithmic music because they can accurately describe a large number of rhythms used in the most important music world traditions. The algorithm work by providing two numbers: 
+Euclidian rhythms are rhythms obtained using the greatest common divisor of two numbers. They were described in 2004 by [Godfried Toussaint](https://en.wikipedia.org/wiki/Godfried_Toussaint), a canadian computer scientist. Euclidian rhythms are really useful for computer/algorithmic music because they can accurately describe a large number of rhythms used in the most important music world traditions. The algorithm work by providing two numbers:
 * the number of beats
-* the number of steps/silences to fill 
+* the number of steps/silences to fill
 
 An euclidian rhythm will distribute the first number of beats to the second numbers of steps to be filled. With Tidal, you can create euclidian rhythms by adding an event followed by the `(x,y)` indicator, `x` and `y` corresponding to the numbers described above:
 ```c
@@ -210,9 +211,10 @@ The Euclidean Algorithm Generates Traditional Musical Rhythms by Toussaint
 
 ### Polymetric Sequences
 
-Creating polymetric sequences is a fairly advanced thing you can do using the **Tidal** mini-notation. To do so, enclose your pattern between curly brackets (`{}`):
+Creating polymetric sequences is a fairly advanced thing you can do using the **Tidal** mini-notation. To do so, enclose your pattern between curly brackets (`{}`). In the 1st example the 3 note and 4 note patterns sound together. The 4 beat pattern wraps and you hear the cr sample on different parts of the 3 beat pattern:
 
 ```c
+d1 $ s "{bd sd stab, cp arpy cr arpy}"
 d1 $ s "{bd*2, hh*4, bd hh 808:4}"
 ```
 
