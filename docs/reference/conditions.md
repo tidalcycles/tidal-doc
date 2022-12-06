@@ -42,7 +42,9 @@ For example, `every' 3 0 (fast 2)` will speed up the cycle on cycles 0,3,6,… w
 
 With this in mind, setting the second argument of `every'` to `0` gives the equivalent `every` function. For example, `every 3` is equivalent to `every' 3 0`.
 
-**Note**: The `every` functions applys to other functions but not directly on the cycle. You can use `every silent` or `every mask ("~")` to silence a full cycle. Mask gives additional flexibility to turn on/off individual steps.
+:::tip
+The `every` functions can be used to silence a full cycle or part of a cycle by using `silent` or `mask "~"`. Mask provides additional flexibility to turn on/off individual steps.
+:::
 
 ```haskell
 d1 $ every 3 silent $ n "2 9 11 2" # s "hh27"
