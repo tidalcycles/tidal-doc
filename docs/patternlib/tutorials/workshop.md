@@ -283,7 +283,7 @@ d1 $ sound "kurt:4 kurt:4" # shape "0 0.78" # gain "0.7"
 
 ### Learn more about effects
 
-You can take a look at the `Basics > Effects` section to learn more about effects and to see the complete list of effects. We also suggest you to take a look at the `Basics > Oscillators` section to see how you can apply an LFO to some of these effects.
+You can take a look at the [Effects](https://tidalcycles.org/docs/reference/audio_effects/) section to learn more about effects and to see the complete list of effects. We also suggest you to take a look at the [Oscillators](https://tidalcycles.org/docs/reference/oscillators) section to see how you can apply an LFO to some of these effects.
 
 ----
 
@@ -316,7 +316,11 @@ d1 $ hurry 2 $ sound "arpy arpy arpy:1 arpy:2"
 d1 $ hurry 0.5 $ sound "arpy arpy arpy:1 arpy:2"
 ```
 
+See the [Time](https://tidalcycles.org/docs/reference/time/) section in the Reference to learn more about time-changing functions.
+
 ### Reorganise patterns
+
+**Tidal Cycles** offers many functions you can use to alter your patterns in different ways. In this section, some of them are introduced, but there are many more. You can check these reference sections to find more: [alteration](https://tidalcycles.org/docs/reference/alteration), [accumulation](https://tidalcycles.org/docs/reference/accumulation) and [conditions](https://tidalcycles.org/docs/reference/conditions).
 
 You can reverse a pattern with `rev`:
 ```haskell
