@@ -24,7 +24,7 @@ If you are comfortable with package installs - using git, adding npm, troublesho
 There are two ways to download:
 1. Pulsar [download page](https://pulsar-edit.dev/download.html). There are detailed instructions to get the latest stable build via Cirrus CI. Navigating Cirrus CI is a bit involved, so the 2nd method may be easier.
 2. Pulsar download link + add your specific query parameters:
-    - https://web.pulsar-edit.dev/download
+    - https://web.pulsar-edit.dev/download (need to add query string)
     - https://github.com/pulsar-edit/package-frontend/blob/main/docs/download_links.md instructions on building your URL query string.
     - For example: https://web.pulsar-edit.dev/download?os=intel_mac&type=mac_dmg
 
@@ -51,9 +51,9 @@ If you have npm installed (Node package manager) you just need to run `npm insta
 
 If you need npm, the recommended method is via nvm - Node Version Manager.
 - See [NPM Docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) instructions
-- Or go directly to the [nvm install script](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+- Or go directly to the [nvm install script](https://github.com/nvm-sh/nvm) - has lots of detail, troubleshooting, support for different multiple OS, etc.
 - The nvm install script will add lines to your shell profile (.bash_profile, ~/.zshrc, ~/.bashrc etc). This can result in a short delay when starting the shell.
-- run `> command -v nvm` to verify nvm install. (expected output `nvm`)
+- run `command -v nvm` to verify nvm install. (expected output `nvm`)
 - now use nvm to install npm:
 
 ```bash
