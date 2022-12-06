@@ -40,10 +40,10 @@ From a command line using git:
 > git clone https://github.com/tidalcycles/atom-tidalcycles
 ```
 
-Rename the folder from "atom-tidalcycles" to "tidalcycles". Without this, the Settings feature won't work properly.
+Rename the new folder from `atom-tidalcycles` to `tidalcycles`. Without this, the Settings feature won't work properly.
 
 ### Install the node.js modules
-If you have npm installed (Node package manager) you just need to run `npm install` from the tidalcycles directory: `.pulsar/packages/tidalcycles`
+If you have npm installed (Node package manager) you just need to run `npm install` from the tidalcycles directory: `~/.pulsar/packages/tidalcycles`
 
 ```bash
 [userHome]/.pulsar/packages/tidalcycles > npm install
@@ -52,7 +52,15 @@ If you have npm installed (Node package manager) you just need to run `npm insta
 If you need npm, the recommended method is via nvm - Node Version Manager.
 - See [NPM Docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) instructions
 - Or go directly to the [nvm install script](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
-- Then run the `npm install` command (above).
+- The nvm install script will add lines to your shell profile (.bash_profile, ~/.zshrc, ~/.bashrc etc). This can result in a short delay when starting the shell.
+- run `> command -v nvm` to verify nvm install. (expected output `nvm`)
+- now use nvm to install npm:
+
+```bash
+> nvm install node
+```
+
+- Now the tidalcycles npm modules can be installed `npm install`. (see above)
 
 #### Validate results
 The node modules directory should now be present: `~/.pulsar/packages/tidalcycles/node_modules/`
@@ -60,7 +68,7 @@ The node modules directory should now be present: `~/.pulsar/packages/tidalcycle
 ### Configure Pulsar
 Pulsar works just like Atom. To configure:
 - Main menu: Pulsar > Preferences  (will load the Settings page)
-- Select Packages > Community Packages > tidalcycles > Settings
+- Select: Packages > Community Packages > tidalcycles > Settings
 - set your Ghci Path, Boot Tidal Path
 - Set your Sound Browser Folders - if you add the full path to your SuperCollider - Dirt-Samples directly, then you can easily browse and play these from Pulsar.
 - MacOS: disable the GitHub package. There is a known performance issue on MacOS. See https://pulsar-edit.dev/
