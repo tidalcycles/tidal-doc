@@ -92,7 +92,7 @@ After:
 ```
         ...
         :script "FULL_PATH_TO_mi-ugens-params.hs"
-        ^:set prompt (.*$)
+        :set prompt (.*$)
         ...
 ```
 
