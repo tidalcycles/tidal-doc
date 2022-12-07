@@ -13,7 +13,7 @@ id: Pulsar
 **Status**: Pulsar is still in Beta. New releases are available regularly. "The releases do seem to be working for most people and use cases." There is a known issue with MacOS performance. "Often times this can be resolved by disabling the `github` package."
 
 ---
-**NOTE**: The projected timeline to have Pulsar ready with the Tidalcycles package is the end of 2022. Until then, new Tidal users are encouraged to wait for the new Pulsar editor or select one of the other editors. Tidal users who have a working Atom editor configured with the Tidalcycles package can continue to use it. But post Atom sunsetting, the Atom package manager will stop working.
+**NOTE**: The projected timeline to have Pulsar ready with the Tidalcycles package is the end of 2022. Until then, new Tidal users are encouraged to wait for the new Pulsar editor or select one of the other editors. Tidal users who have a working Atom editor configured with the Tidalcycles package can continue to use it. But post Atom sunsetting, the Atom package manager will stop working. At that point you will no longer be able to use the Atom package manager to install or update the tidalcycles package.
 
 ---
 
@@ -33,42 +33,46 @@ When you start Pulsar the first time, it will create a hidden folder in your hom
 ### Manual install of Tidal package
 There is a Tidal community package to be manually installed: [atom-tidalcycles on github](https://github.com/tidalcycles/atom-tidalcycles)
 
-From a command line using git:
+From a command line using `git`:
 
 ```bash
 > cd ~/.pulsar/packages
-> git clone https://github.com/tidalcycles/atom-tidalcycles
+> git clone https://github.com/tidalcycles/atom-tidalcycles tidalcycles
 ```
 
-Rename the new folder from `atom-tidalcycles` to `tidalcycles`. Without this, the Settings feature won't work properly.
+This will install the tidalcycles package into a directory named `tidalcycles`.
 
 ### Install the node.js modules
-If you have npm installed (Node package manager) you just need to run `npm install` from the tidalcycles directory: `~/.pulsar/packages/tidalcycles`
+Pre-requisite: npm (node package manager)
 
-```bash
-[userHome]/.pulsar/packages/tidalcycles > npm install
-```
+#### Install nvm (node version manager - used to install and manage npm)
+If npm is installed, you can skip these steps and go to Install the tidalcycles node modules.
 
-If you need npm, the recommended method is via nvm - Node Version Manager.
-- See [NPM Docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) instructions
-- Or go directly to the [nvm install script](https://github.com/nvm-sh/nvm) - has lots of detail, troubleshooting, support for different multiple OS, etc.
+The recommended method to install npm is via the node version manager.
+- See [NPM Docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) for options and instructions.
+- Or go directly to the [nvm install script](https://github.com/nvm-sh/nvm) in GH. It has lots of detail, troubleshooting, and support for different OS, etc. See the section on Installing and Updating. The `curl` option is good.  
 - The nvm install script will add lines to your shell profile (.bash_profile, ~/.zshrc, ~/.bashrc etc). This can result in a short delay when starting the shell.
-- run `command -v nvm` to verify nvm install. (expected output `nvm`)
+- run `command -v nvm` to verify nvm install - expected output `nvm`.
 - now use nvm to install npm:
 
 ```bash
 > nvm install node
 ```
 
-- Now the tidalcycles npm modules can be installed `npm install`. (see above)
+#### Install the tidalcycle node modules
+
+```bash
+[userHome]/.pulsar/packages/tidalcycles > npm install
+```
 
 #### Validate results
 The node modules directory should now be present: `~/.pulsar/packages/tidalcycles/node_modules/`
+There should be three sub-directories: `binpack` `directory-tree` `osc-min`.
 
 ### Configure Pulsar
 Pulsar works just like Atom. To configure:
-- Main menu: Pulsar > Preferences  (will load the Settings page)
+- Main menu: Pulsar > Preferences  (will load the Settings tab)
 - Select: Packages > Community Packages > tidalcycles > Settings
 - set your Ghci Path, Boot Tidal Path
-- Set your Sound Browser Folders - if you add the full path to your SuperCollider - Dirt-Samples directly, then you can easily browse and play these from Pulsar.
+- optional: Set your Sound Browser Folders - if you add the full path to your SuperCollider - Dirt-Samples, then you can easily browse and play these from Pulsar once you start tidal.
 - MacOS: disable the GitHub package. There is a known performance issue on MacOS. See https://pulsar-edit.dev/
