@@ -13,8 +13,9 @@ id: Pulsar
 **Status**: Pulsar is still in Beta. New releases are available regularly. "The releases do seem to be working for most people and use cases." There is a known issue with MacOS performance. "Often times this can be resolved by disabling the `github` package."
 
 ---
-**NOTE**: The projected timeline to have Pulsar ready with the Tidalcycles package is the end of 2022. Until then, new Tidal users are encouraged to wait for the new Pulsar editor or select one of the other editors. Tidal users who have a working Atom editor configured with the Tidalcycles package can continue to use it. But post Atom sunsetting, the Atom package manager will stop working. At that point you will no longer be able to use the Atom package manager to install or update the tidalcycles package.
+**NOTE**: The projected timeline to have Pulsar ready with the Tidalcycles package is the end of 2022. Until then, new Tidal users are encouraged to wait for the full release of the new Pulsar editor or select one of the other editors. Tidal users who have a working Atom editor configured with the Tidalcycles package can continue to use it. But post Atom sunsetting, the Atom package manager will stop working. At that point you will no longer be able to use the Atom package manager to install or update the tidalcycles package.
 
+See our Discord / pulsar channel for more info: https://discord.com/channels/779427371270275082/1047429699346903132
 ---
 
 ## Manual Installation
