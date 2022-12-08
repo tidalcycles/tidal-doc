@@ -10,7 +10,7 @@ id: Atom
 
 ---
 **UPDATE:** The Atom Editor will be sunsetting on Dec. 15, 2022. See the official [Sunsetting Atom](https://github.blog/2022-06-08-sunsetting-atom/)
-page for more details. Tidal will be moving to the new [Pulsar editor](https://pulsar-edit.dev/). Projected timeline to have Pulsar ready with the Tidalcycles package: end of 2022. Until then, new Tidal users are encouraged to wait for the new Pulsar editor or select one of the other editors. 
+page for more details. Tidal will be moving to the new [Pulsar editor](https://pulsar-edit.dev/). Projected timeline to have Pulsar ready with the Tidalcycles package: end of 2022. Until then, new Tidal users are encouraged to wait for the new Pulsar editor or select one of the other editors. See also the documentation on [how to use Tidal with Pulsar](https://tidalcycles.org/docs/getting-started/editor/Pulsar/).
 
 Note: Tidal users who have a working Atom editor configured with the Tidalcycles package can continue to use it. But post Atom sunsetting, the Atom package manager will stop working.
 

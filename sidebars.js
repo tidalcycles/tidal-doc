@@ -23,6 +23,7 @@ module.exports = {
         ],
         "Get a Text Editor": [
           "getting-started/editor/Atom",
+          "getting-started/editor/Pulsar",
           "getting-started/editor/Vim",
           "getting-started/editor/Emacs",
           "getting-started/editor/VS_Code",
