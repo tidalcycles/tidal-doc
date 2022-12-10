@@ -106,23 +106,23 @@ Type: ply :: Pattern Int -> Pattern a -> Pattern a
 The `ply` function repeats each event the given number of times. For example:
 
 ```haskell
-ply 3 $ s "bd ~ sn cp"
+d1 $ ply 3 $ s "bd ~ sn cp"
 ```
 ... is equivalent to ...
 
 ```haskell
-s "[bd bd bd] ~ [sn sn sn] [cp cp cp]"
+d1 $ s "[bd bd bd] ~ [sn sn sn] [cp cp cp]"
 ```
 
 The first parameter may be given as a pattern, so that:
 
 ```haskell
-ply "2 3" $ s "bd ~ sn cp"
+d1 $ ply "2 3" $ s "bd ~ sn cp"
 ```
 ... is equivalent to ...
 
 ```haskell
-s "[bd bd] ~ [sn sn sn] [cp cp cp]"
+d1 $ s "[bd bd] ~ [sn sn sn] [cp cp cp]"
 ```
 Here is an example of it being used conditionally:
 
@@ -140,11 +140,13 @@ Type: stutter :: Integral i => i -> Time -> Pattern a -> Pattern a
 ```haskell
 d1 $ stutter 4 (1/16) $ s "bd cp"
 ```
-should be functionally equivalent to
+
+is functionally equivalent to ...
 
 ```haskell
 d1 $ stut 4 1 (1/16) $ s "bd cp"
 ```
+
 Specific conveniences functions that use stutter are:
 
 ```haskell
@@ -166,7 +168,6 @@ For example in the following example, the start of every third repetition of the
 
 ```haskell
 d1 $ stripe 3 $ sound "bd sd ~ [mt ht]"
-
 
 d2 $ sound "cp"
 ```
@@ -197,6 +198,7 @@ The `palindrome` function applies `rev` to a pattern every other cycle, so that 
 d1 $ palindrome $ sound "arpy:0 arpy:1 arpy:2 arpy:3"
 ```
 ... is the same as this:
+
 ```haskell
 d1 $ slow 2 $ sound "arpy:0 arpy:1 arpy:2 arpy:3 arpy:3 arpy:2 arpy:1 arpy:0"
 ```
@@ -215,6 +217,7 @@ Type: trunc :: Pattern Time -> Pattern a -> Pattern a
 ```
 
 `trunc` truncates a pattern so that only a fraction of the pattern is played. The following example plays only the first three quarters of the pattern:
+
 ```haskell
 d1 $ trunc 0.75 $ sound "bd sn*2 cp hh*4 arpy bd*2 cp bd*2"
 ```
@@ -234,16 +237,19 @@ Type: linger :: Pattern Time -> Pattern a -> Pattern a
 `linger` is similar to `trunc`, in that it truncates a pattern so that only the first fraction of the pattern is played. However unlike trunc, `linger` repeats that part to fill the remainder of the cycle.
 
 For example this repeats the first quarter, so you only hear a single repeating note:
+
 ```haskell
 d1 $ linger 0.25 $ n "0 2 [3 4] 2" # sound "arpy"
 ```
 
 or slightly more interesting, applied only every fourth cycle:
+
 ```haskell
 d1 $ every 4 (linger 0.25) $ n "0 2 [3 4] 2" # sound "arpy"
 ```
 
 or to a chopped-up sample:
+
 ```haskell
 d1 $ every 2 (linger 0.25) $ loopAt 2 $ chop 8 $ sound "breaks125"
 ```
