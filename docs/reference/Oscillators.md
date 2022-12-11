@@ -84,6 +84,20 @@ An inverted sawtooth, starting at 1, then linearly falling to 0 over one cycle, 
 d1 $ sound "bd*8" # pan (slow 2 isaw)
 ```
 
+#### Smooth
+
+```haskell
+Type: smooth :: Fractional a => Pattern a -> Pattern a
+```
+
+`Smooth` receives a pattern of numbers and linearly goes from one to the next, passing through all of them. As time is cycle-based, after reaching the last number in the pattern, it will smoothly go to the first one again.
+
+```haskell
+d1 $ sound "bd*4" # pan (slow 4 $ smooth "0 1 0.5 1")
+```
+
+Note how the sound goes gradually from left to right, then to the center, then to the right again, and finally comes back to the left.
+
 ### Non-periodic oscillators
 
 #### Rand
