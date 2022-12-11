@@ -301,14 +301,6 @@ This function combines with sometimes to insert events from the first cycle rand
 d1 $ sometimes loopFirst $ s "<<bd*4 ht*8> cp*4>"
 ```
 
-### runWith
-
-Old name for `chunk`.
-
-### runWith'
-
-Old name for `chunk'`?
-
 ## Shuffling and scrambling
 
 ### bite
