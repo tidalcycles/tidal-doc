@@ -281,6 +281,23 @@ d1 $ sound "numbers:1 numbers:2 numbers:3 numbers:4" # pan "0 0.5 1"
 d1 $ sound "kurt:4 kurt:4" # shape "0 0.78" # gain "0.7"
 ```
 
+[Delay](/reference/effects.md#delay) is achieved using the combination of up to four functions:
+```haskell
+d1 $ sound "cp" # delay 0.8 # delaytime (1/6) # delayfeedback 0.6 # lock 1
+```
+
+Use `lock 1` to indicate that the time provided to `delaytime` is in cycles instead of seconds.
+
+All of them receive patterns:
+```haskell
+d1 $ sound "industrial:3*4" # delay "<0 0.4 0.8>" # delaytime "0.2 0.05" # delayfeedback "<0.5 0.9>" # lock 1
+```
+
+To add a [reverb](/reference/effects.md#reverb) effect use the functions `dry`, `room` and `size`:
+```haskell
+d1 $ sound "[~ sn]*2" # dry 0.4 # room 0.6 # size 0.8
+```
+
 ### Learn more about effects
 
 You can take a look at the [Effects](https://tidalcycles.org/docs/reference/audio_effects/) section to learn more about effects and to see the complete list of effects. We also suggest you to take a look at the [Oscillators](https://tidalcycles.org/docs/reference/oscillators) section to see how you can apply an LFO to some of these effects.
