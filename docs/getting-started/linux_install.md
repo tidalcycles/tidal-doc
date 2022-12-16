@@ -10,8 +10,11 @@ layout: wiki
 
 ## Automatic installation
 
-There are user-made guides to install Tidal Cycles. Be sure to check out the following solutions:
-- [Ansible method](https://club.tidalcycles.org/t/now-with-early-arch-manjaro-support-install-manage-upgrades-to-tidal-environment-with-a-single-command-on-ubuntu-debian-linux-mint-ansible-method/544) : Ubuntu / debian / Mint (/ most debian-based distros) 
+There are user-made tools to install the Tidalcycles stack. Be sure to check out the following solutions:
+- [Ansible method](https://github.com/cleary/ansible-tidalcycles): Ubuntu / debian / Mint (/ most debian-based distros)
+    - full featured solution including SuperCollider, Haskell, Tidal, SuperDirt, code editor, and package dependencies
+    - has customization options, including adding additional sample sources and bus channel settings
+    - for more information, see the [Tidal Club thread](https://club.tidalcycles.org/t/install-manage-upgrades-to-tidal-environment-with-a-single-command-on-ubuntu-debian-linux-mint-ansible-method/544)
 - [Yay](https://roosnaflak.com/tech-and-research/install-tidal-cycles-on-arch-linux/) : installation on Arch / Manjaro.
 
 -----
@@ -76,8 +79,8 @@ installation is done, you can exit the interpreter by pressing Ctrl + C.
 If you installed SuperCollider using the [build-supercollider](https://github.com/lvm/build-supercollider) method, you won't need to install them. SC3Plugins is compiled and installed by the script.
 
 :::
-  
-  
+
+
 `SC3Plugins` is a community-made extension for SuperCollider. Installing it is **highly** recommended. You won't be able to use the default synthesizers provided with Tidal Cycles without it. Please be sure to read [these instructions](https://supercollider.github.io/sc3-plugins/) to get the extension.
 
 - **Ubuntu** / **Mint** / **Debian**: follow the instructions above.
@@ -101,5 +104,9 @@ If you've never installed TidalCycles before, then the
 `cabal install tidal` step may take some time. At the end of the command
 output, it should say `Completed tidal-x.x.x` (where x.x.x is the latest
 version number) without any errors.
+
+## I've installed Tidal Cycles. What's next?
+
+Look at the sidebar. You will see a list of text editors you can install to interact with Tidal. Note that the Atom editor is now sunset. It is replaced with Pulsar. 
 
 </translate>
