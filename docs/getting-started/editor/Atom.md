@@ -9,39 +9,17 @@ id: Atom
 ![atom logo](atomlogo.svg)
 
 ---
-**UPDATE:** The Atom Editor will be sunsetting on Dec. 15, 2022. See the official [Sunsetting Atom](https://github.blog/2022-06-08-sunsetting-atom/)
-page for more details. Tidal will be moving to the new [Pulsar editor](https://pulsar-edit.dev/). Projected timeline to have Pulsar ready with the Tidalcycles package: end of 2022. Until then, new Tidal users are encouraged to wait for the new Pulsar editor or select one of the other editors. See also the documentation on [how to use Tidal with Pulsar](https://tidalcycles.org/docs/getting-started/editor/Pulsar/).
+**UPDATE Dec 15:** The Atom Editor has sunset, see the official [Sunsetting Atom](https://github.blog/2022-06-08-sunsetting-atom/)
+page for more details. Tidal is adopting the new [Pulsar editor](https://pulsar-edit.dev/). The projected timeline to have Pulsar ready with the Tidalcycles package is the end of 2022. Until then, new Tidal users can use Pulsar and install the Tidal package manually or select one of the other editors. See the documentation on [how to use Tidal with Pulsar](https://tidalcycles.org/docs/getting-started/editor/Pulsar/).
 
-Note: Tidal users who have a working Atom editor configured with the Tidalcycles package can continue to use it. But post Atom sunsetting, the Atom package manager will stop working.
+Note: Tidal users who have a working Atom editor configured with the Tidalcycles package can continue to use it. But the Atom package manager is no longer available to install or update the Tidal package and no further updates to Atom will be available. Tidal users are encouraged to migrate to Pulsar.
 
 ---
 
-[Atom](https://atom.io) is assumed to be Tidal Cycles's default text editor for newcomers. It is an intuitive but featureful code editor that can be extended with numerous plugins. You will see quite a lot of users coding with Atom because it has been recommanded for quite a while and for good reasons. The [Tidal Cycles Package](https://atom.io/packages/tidalcycles) is one of the most complete you can currently find. Atom is a free, cross-platform and open-source software. Note that there is also a [SuperCollider package](https://atom.io/packages/supercollider) that you can use as an alternative to the official IDE. Atom also supports alternative modes of input (Vim-like) through the help of various packages.
+If you have a requirement to use Atom:
 
-## Installation
-
-The easiest way to find out how to install Atom is to head to the [official website](https://atom.io). Linux and MacOS users, you are likely to find it in your package manager. The installation process is hassle-free.
-
-### Installing the Tidal Cycles plugin
-
-Open Atom. Click on `Preferences > Install`. Search for `tidalcycles`. Click on `install`. Wait a moment.. and that's all :smile:. Be sure to check the package options as well for more customization.
-
-### Revert to an earlier version of the plugin
-
-Sometimes, you will need to install and old version of the Atom Package to match with a particular Tidal version. You can do this by using the command line. To install the hypothetic `3.10.0` version of the package, run the following line:
-
-```bash
-apm install tidalcycles@3.10.0
-```
-
------
-
-## More about the Tidal Package
-
-### Forum discussion
-
-The Tidal Package for Atom is developed by `ndr_brt`. You can find a [thread](https://club.tidalcycles.org/t/the-atom-plugin-thread/2244) on the Tidal Club forum to get more information directly from the community: features, requests, bug reports, etc...
-
-### GitHub repository
-
-There is a [GitHub repository](https://github.com/tidalcycles/atom-tidalcycles) if you want to contribute, report an issue or follow the development.
+- [Atom GitHub](https://github.com/atom/atom)
+- [Atom Final Release - download](https://github.com/atom/atom/releases/tag/v1.63.1)
+- For the Tidalcycles package
+    - Do a manual install with use the instructions on the [Pulsar page](https://tidalcycles.org/docs/getting-started/editor/Pulsar/)
+    - substitute `~/.atom/` for `~/.pulsar` so that the package installs to Atom and not Pulsar
