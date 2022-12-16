@@ -10,7 +10,7 @@ module.exports = {
   projectName: "tidal-doc", // Usually your repo name.
   themeConfig: {
     algolia: {
-      apiKey: 'cfaa4cd6c37cd93ded7774e6a93171b1',
+      apiKey: '9f885d5c8b4b783286a2aa22669d983f',
       indexName: 'tidalcycles',
     },
     prism: {
