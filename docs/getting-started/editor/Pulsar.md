@@ -18,8 +18,6 @@ Known issues:
 - *macOS performance:* this may be resolved by disabling the `github` package
 - *macOS dmg install:* Current binaries are not signed. Launching Pulsar will produce an error "Pulsar cannot be opened because the developer cannot be verified". This can be fixed by running: `xattr -cr /Applications/Pulsar.app/`
 
-![macOS launch error](pulsarUnsigned.jpg)
-
 Other issues:
 - Auto-complete with default settings can be slower and more intrusive for livecoding. Possble workarounds:
     - *autocomplete-plus package:* increase "Delay Before Suggestions are Shown": to 100 or 1000.
