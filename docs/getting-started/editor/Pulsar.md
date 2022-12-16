@@ -8,7 +8,9 @@ id: Pulsar
 
 ![pulsaricon](pulsaricon.png)
 
-[Pulsar](https://pulsar-edit.dev/) is a new code editor that is open-source and community-led. It is based on Atom and was started after the announcement to [Sunset Atom](https://github.blog/2022-06-08-sunsetting-atom/). The [stated goal](https://pulsar-edit.dev/about.html) is to "modernize, update and improve the original Atom project into a contemporary, hackable and fully open editor." This includes support for the package repository which provides for community contributions, include our Tidal package.
+[Pulsar](https://pulsar-edit.dev/) is a new code editor that is open-source and community-led. It is based on Atom and was started after the announcement to [Sunset Atom](https://github.blog/2022-06-08-sunsetting-atom/). The [stated goal](https://pulsar-edit.dev/about.html) is to "modernize, update and improve the original Atom project into a contemporary, hackable and fully open editor." This includes support for the package repository which provides for community contributions, including our Tidal package.
+
+---
 
 **UPDATE - Dec 15,2022**: [Pulsar v1.100.0](https://github.com/pulsar-edit/pulsar/releases/tag/v1.100.0-beta) is released (first tagged beta). See the [ChangeLog](https://github.com/pulsar-edit/pulsar/blob/master/CHANGELOG.md) - including support for Apple Silicon. The new [Pulsar web site](https://pulsar-edit.dev/) is also a good source of information, including downloads and documentation.
 
@@ -19,22 +21,22 @@ Known issues:
 ![macOS launch error](pulsarUnsigned.jpg)
 
 Other issues:
-- Auto-complete with default settings can be slower and more intrusive for livecoding. Workarounds:
+- Auto-complete with default settings can be slower and more intrusive for livecoding. Possble workarounds:
     - *autocomplete-plus package:* increase "Delay Before Suggestions are Shown": to 100 or 1000.
     - disable the autocomplete-plus package
 
 ---
-**NOTE**: The timeline to have Pulsar ready with the Tidalcycles package automation is the end of 2022. Tidal users who have a working Atom editor configured with the Tidalcycles package can continue to use it. *However, the Atom package manager is no longer available to install or update the Tidal package and no further updates to Atom will be available.* Tidal users are encouraged to migrate to Pulsar.
+**NOTE for Atom Users**: The timeline to have Pulsar ready with the Tidalcycles package automation is the end of 2022. Tidal users who have a working Atom editor configured with the Tidalcycles package can continue to use it. *However, the Atom package manager is no longer available to install or update the Tidal package and no further updates to Atom will be available.* Tidal users are encouraged to migrate to Pulsar.
 
 See our Discord / #pulsar channel for more info: https://discord.com/channels/779427371270275082/1047429699346903132
 
 ---
 
 ## Installation
-Installation of the Tidalcycles Pulsar package is not automated. Proceed with manual install only you are comfortable with package installs, using git, troubleshooting, etc.
+Installation of the Tidalcycles Pulsar package is not automated. Proceed with manual install only if you are comfortable with package installs, using git, troubleshooting, etc.
 - MacOS: see below
 - Linux: the manual instructions below should generally apply to Linux. Be sure to get the correct Pulsar download for your flavor.
-- Linux, automated install: the Ansible install for a complete Tidal environment now includes Pulsar.
+- Linux with automated install: the Ansible install for a complete Tidal environment now includes Pulsar.
     - See [Installation of tidalcycles and editor(s) with ansible](https://github.com/cleary/ansible-tidalcycles)
 - Windows (documentation coming)
 
@@ -99,7 +101,7 @@ Pulsar works just like Atom. To configure:
 
 ### Forum discussion
 
-The Tidal Package for Atom is developed by `ndr_brt`. There is a [Tidal Club forum thread](https://club.tidalcycles.org/t/the-atom-plugin-thread/2244) with more information and history of the development.
+The Tidal Package for Atom is developed by `ndr_brt` - who is also working on preparing this for use in the new Pulsar package manager. There is a [Tidal Club forum thread](https://club.tidalcycles.org/t/the-atom-plugin-thread/2244) with more information and history of the development.
 
 ### GitHub repository
 
