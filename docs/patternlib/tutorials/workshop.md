@@ -62,7 +62,7 @@ You can stop making a sound using `silence`:
 ```haskell
 d1 $ silence
 ```
-There are two types of sounds you can use with `sound`: either they are synths definitions (like `superpiano`, see [Synthesizers](https://tidalcycles.org/docs/reference/synthesizers)), or they are samples. In the latter case, you write the name of the folder that contain the sample set. By default, the first sample is used, but you can pick a different sample from the same set, with `:`:
+There are two types of sounds you can use with `sound`: either they are synths definitions (like `superpiano`, see [Synthesizers](/reference/synthesizers.md)), or they are samples. In the latter case, you write the name of the folder that contain the sample set. By default, the first sample is used, but you can pick a different sample from the same set, with `:`:
 ```haskell
 d1 $ sound "drum:1"
 ```
@@ -85,7 +85,7 @@ jazz voodoo birds3 procshort blip drum jvbass psr wobble drumtraks koy
 rave bottle kurt latibro rm sax lighter lt arpy feel less stab ul
 ```
 
-You can see what other sounds there are in the [default library](https://tidalcycles.org/docs/configuration/Audio%20Samples/default_library) by looking in the `Dirt-Samples` folder. Find it via the `SuperCollider` menu: `'File > Open user support directory > downloaded-quarks > Dirt-Samples'`. Additionally, you can also add your own [custom samples](https://tidalcycles.org/docs/configuration/Audio%20Samples/audiosamples).
+You can see what other sounds there are in the [default library]("/configuration/Audio Samples/default_library.md") by looking in the `Dirt-Samples` folder. Find it via the `SuperCollider` menu: `'File > Open user support directory > downloaded-quarks > Dirt-Samples'`. Additionally, you can also add your own [custom samples]("/configuration/Audio%20Samples/samples.md").
 
 Make a sequence:
 
@@ -99,7 +99,7 @@ The more steps in the sequence, the faster it goes:
 d1 $ sound "bd bd hh bd sn bd hh bd"
 ```
 
-This is because of the way **Tidal** handles time. There is a universal [cycle](https://tidalcycles.org/docs/reference/cycles) (sort of like a musical 'bar') which is always running. **Tidal** will play all of the sounds between the speech marks in one cycle, unless we tell it not to (we’ll learn how to do that later). You’ll also notice `Tidal` will space the sounds out evenly within the cycle Which means we can end up with polyrhythmic structures (more on those later). We can change the length of the cycle using `setcps` (where `cps` stands for cycles per second) - this is a bit like bpm (beats per minute).
+This is because of the way **Tidal** handles time. There is a universal [cycle](/reference/cycles.md) (sort of like a musical 'bar') which is always running. **Tidal** will play all of the sounds between the speech marks in one cycle, unless we tell it not to (we’ll learn how to do that later). You’ll also notice `Tidal` will space the sounds out evenly within the cycle Which means we can end up with polyrhythmic structures (more on those later). We can change the length of the cycle using `setcps` (where `cps` stands for cycles per second) - this is a bit like bpm (beats per minute).
 
 ```haskell
 setcps 0.6
@@ -195,7 +195,7 @@ d1 $ sound "bd <sd cp arpy>"
 d1 $ sound "<bd sn> <sd [cp cp]> <bd [cp cp]>"
 ```
 
-The syntax we are using in these examples is called [mini-notation](https://tidalcycles.org/docs/reference/mini_notation), and can be used in many places within Tidal, not only the `sound` function.
+The syntax we are using in these examples is called [mini-notation](/reference/mini_notation.md), and can be used in many places within Tidal, not only the `sound` function.
 
 Other common mini-notation symbols are `|` to choose a random option, `,` to play two patterns simultaneously, and `!` to replicate a pattern.
 
@@ -298,9 +298,7 @@ To add a [reverb](/reference/effects.md#reverb) effect use the functions `dry`, 
 d1 $ sound "[~ sn]*2" # dry 0.4 # room 0.6 # size 0.8
 ```
 
-### Learn more about effects
-
-You can take a look at the [Effects](https://tidalcycles.org/docs/reference/audio_effects/) section to learn more about effects and to see the complete list of effects. We also suggest you to take a look at the [Oscillators](https://tidalcycles.org/docs/reference/oscillators) section to see how you can apply an LFO to some of these effects.
+You can take a look at the [Effects](/reference/effects.md) section to learn more about effects and to see the complete list of effects.
 
 ----
 
@@ -333,11 +331,11 @@ d1 $ hurry 2 $ sound "arpy arpy arpy:1 arpy:2"
 d1 $ hurry 0.5 $ sound "arpy arpy arpy:1 arpy:2"
 ```
 
-See the [Time](https://tidalcycles.org/docs/reference/time/) section in the Reference to learn more about time-changing functions.
+See the [Time](/reference/time.md) section in the Reference to learn more about time-changing functions.
 
 ### Reorganise patterns
 
-**Tidal Cycles** offers many functions you can use to alter your patterns in different ways. In this section, some of them are introduced, but there are many more. You can check these reference sections to find more: [alteration](https://tidalcycles.org/docs/reference/alteration), [accumulation](https://tidalcycles.org/docs/reference/accumulation) and [conditions](https://tidalcycles.org/docs/reference/conditions).
+**Tidal Cycles** offers many functions you can use to alter your patterns in different ways. In this section, some of them are introduced, but there are many more. You can check these reference sections to find more: [alteration](/reference/alteration.md), [accumulation](/reference/accumulation.md) and [conditions](/reference/conditions.md).
 
 You can reverse a pattern with `rev`:
 ```haskell
@@ -472,7 +470,7 @@ d1 $ sound "bd(5,8,2)"
 
 ## Randomness
 
-Randomness can help us quickly introduce character and variation into our patterns. `sometimes` works a bit like `every`, but instead of happening after a set period, changes have a random chance of appearing:
+[Randomness](/reference/randomness.md) can help us quickly introduce character and variation into our patterns. `sometimes` works a bit like `every`, but instead of happening after a set period, changes have a random chance of appearing:
 ```haskell
 d1 $ sometimes (# speed "2") $ sound "drum*8"
 ```
@@ -559,3 +557,5 @@ As always we can add patterns and transformations to these functions, or combine
 d1 $ loopAt "<8 4 16>" $ chop 64 $  sound "bev*4" # cut 1
 d1 $ rev $ loopAt 8 $ chop 128 $ sound "bev"
 ```
+
+See more ways to manipulate longer samples at the [Sampling reference section](/reference/sampling.md).
