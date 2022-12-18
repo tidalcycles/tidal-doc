@@ -389,7 +389,22 @@ d1 $ sound "jvbass [jvbass jvbass] jvbass ~" # note "1 [3 5] 7"
 d1 $ sound "jvbass [jvbass jvbass] jvbass ~" # iter 3 (note "1 [3 5] 7")
 ```
 
-What about slowing down or scaling (using `scale`) `sine` and `saw`?
+You can create an LFO on any parameter by using `fast` or `slow`, `range`,  and an oscillator such as `sine` or `saw`:
+
+```haskell
+d1 $ d1 $ s "bd*8" # pan (slow 4 $ sine)
+d1 $ s "moog*16" # n "<0 1 2>" # legato 1 # cutoff (range 200 2400 $ saw) # resonance 0.2
+```
+
+By default, [oscillators](/reference/Oscillators.md) such as `sine`, `cosine` or `saw` give values from 0 to 1. This is fine for some parameters (like `pan`), but you can use `range` to scale these values to whatever range you want.
+
+The previous examples trigger one oscillator value for event. This is fine if there are a lot of events per cycle. However, if there are fewer, longer events, we need to pick several values from the oscillator in order to accomplish a smooth movement of the LFO. You can do this using [control busses](/reference/control_busses.md):
+
+```haskell
+d1 $ s "moog" # n "<0 1 2>" # legato 1 # cutoffbus 1 (segment 32 $ range 200 2400 $ saw) # resonance 0.2
+```
+
+Here we can hear how the sound changes gradually during the cycle. There are busses for many parameters, all of them named like the parameter plus `bus`. In this last example, `segment 32` tells the oscillator to pick 32 values each cycle.
 
 -----
 
