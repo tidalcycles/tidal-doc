@@ -14,9 +14,10 @@ id: Pulsar
 
 **UPDATE - Dec 15,2022**: [Pulsar v1.100.0](https://github.com/pulsar-edit/pulsar/releases/tag/v1.100.0-beta) is released (first tagged beta). See the [ChangeLog](https://github.com/pulsar-edit/pulsar/blob/master/CHANGELOG.md) - including support for Apple Silicon. The new [Pulsar web site](https://pulsar-edit.dev/) is also a good source of information, including downloads and documentation.
 
-Known issues:
+**Known issues**:
 - *macOS performance:* this may be resolved by disabling the `github` package
-- *macOS dmg install:* Current binaries are not signed. Launching Pulsar will produce an error "Pulsar cannot be opened because the developer cannot be verified". This can be fixed by running: `xattr -cr /Applications/Pulsar.app/`
+- *macOS dmg install:* Current binaries are not signed. Launching Pulsar will produce an error "Pulsar cannot be opened because the developer cannot be verified". This can be fixed by running:
+`xattr -cr /Applications/Pulsar.app/`
 
 Other issues:
 - Auto-complete with default settings can be slower and more intrusive for livecoding. Possble workarounds:
@@ -26,12 +27,15 @@ Other issues:
 ---
 **NOTE for Atom Users**: The timeline to have Pulsar ready with the Tidalcycles package automation is the end of 2022. Tidal users who have a working Atom editor configured with the Tidalcycles package can continue to use it. *However, the Atom package manager is no longer available to install or update the Tidal package and no further updates to Atom will be available.* Tidal users are encouraged to migrate to Pulsar.
 
-See our Discord / #pulsar channel for more info: https://discord.com/channels/779427371270275082/1047429699346903132
+---
+
+**Discord #pulsar channel**: https://discord.com/channels/779427371270275082/1047429699346903132
 
 ---
 
 ## Installation
-Installation of the Tidalcycles Pulsar package is not automated. Proceed with manual install only if you are comfortable with package installs, using git, troubleshooting, etc.
+Installation of the Tidalcycles Pulsar package is not currently automated. This improvement is expected soon. Check here for updates. Proceed with manual install only if you are comfortable with package installs, using git, troubleshooting, etc.
+
 - MacOS: see below
 - Linux: the manual instructions below should generally apply to Linux. Be sure to get the correct Pulsar download for your flavor.
 - Linux with automated install: the Ansible install for a complete Tidal environment now includes Pulsar.
@@ -46,12 +50,17 @@ There are two ways to download:
     - https://github.com/pulsar-edit/package-frontend/blob/main/docs/download_links.md instructions on building your URL query string.
     - For example: https://web.pulsar-edit.dev/download?os=intel_mac&type=mac_dmg
 
-When you start Pulsar the first time, it will create a hidden folder in your home directory `~/.pulsar`.
+#### After install - fix file attributes (macOS)
+
+```bash
+> xattr -cr /Applications/Pulsar.app/
+```
+**Start Pulsar** This will create a hidden folder in your home directory `~/.pulsar`.
 
 ### Manual install of Tidal package
 There is a community package for Tidal to be manually installed: [atom-tidalcycles on github](https://github.com/tidalcycles/atom-tidalcycles)
 
-From a command line using `git`:
+From a command line using `git`: (make sure you have launched the Pulsar application)
 
 ```bash
 > cd ~/.pulsar/packages
@@ -80,20 +89,27 @@ The recommended method to install npm is via the node version manager.
 #### Install the tidalcycle node modules
 
 ```bash
+> cd ~/.pulsar/packages/tidalcycles
 [userHome]/.pulsar/packages/tidalcycles > npm install
 ```
 
 #### Validate results
-The node modules directory should now be present: `~/.pulsar/packages/tidalcycles/node_modules/`
-There should be three sub-directories: `binpack` `directory-tree` `osc-min`.
+- The node modules directory should now be present: `~/.pulsar/packages/tidalcycles/node_modules/`
+- There should be three sub-directories: `binpack` `directory-tree` `osc-min`
+- Restart the Pulsar app.
+- Create a Tidal file (file extension *.tidal) and run a command. See the [Start Tidal page](https://tidalcycles.org/docs/getting-started/tidal_start) for more instructions if you are new to Tidal.
 
 ### Configure Pulsar
-Pulsar works just like Atom. To configure:
+Pulsar works just like Atom. To configure and change preferences:
 - Main menu: Pulsar > Preferences  (will load the Settings tab)
 - Select: Packages > Community Packages > tidalcycles > Settings
-- set your Ghci Path, Boot Tidal Path
 - optional: Set your Sound Browser Folders - if you add the full path to your SuperCollider - Dirt-Samples, then you can easily browse and play these from Pulsar once you start tidal.
-- MacOS: disable the GitHub package. There is a known performance issue on MacOS. See https://pulsar-edit.dev/
+- MacOS (optional): disable the GitHub package. There is a known performance issue on MacOS. See https://pulsar-edit.dev/
+
+### Troubleshooting
+Potential errors:
+- `Couldn't find module:  'Sound.Tidal.Context'`  This indicates that Pulsar could not load tidal properly.
+- `Variable not in scope: streamSetCycle`  Your "BootTidal.hs" file is not compatible. There is an easy fix by commenting out this line: `-- setCycle = streamSetCycle tidal`
 
 ## More about the Tidalcycles Package
 
