@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Tidal Cycles Blog</title>
         <link>https://doc.tidalcycles.org/blog</link>
@@ -7,12 +7,14 @@
         <lastBuildDate>Thu, 30 May 2019 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
         <item>
             <title><![CDATA[New Documentation]]></title>
             <link>https://doc.tidalcycles.org/blog/2019/05/30/welcome</link>
-            <guid>New Documentation</guid>
+            <guid>/2019/05/30/welcome</guid>
             <pubDate>Thu, 30 May 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[I've started working on a major overhaul / reorganization of the old Tidal Userbase website. I think that this new documentation is now pretty much on par with the old one. I hope that you will like it.]]></description>
+            <content:encoded><![CDATA[<p>I've started working on a major overhaul / reorganization of the old <a href="https://tidalcycles.org/Userbase" target="_blank" rel="noopener noreferrer">Tidal Userbase</a> website. I think that this new documentation is now pretty much on par with the old one. I hope that you will like it.</p>]]></content:encoded>
         </item>
     </channel>
 </rss>

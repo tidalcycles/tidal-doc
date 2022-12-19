@@ -9,9 +9,13 @@
     <icon>https://doc.tidalcycles.org/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[New Documentation]]></title>
-        <id>New Documentation</id>
+        <id>/2019/05/30/welcome</id>
         <link href="https://doc.tidalcycles.org/blog/2019/05/30/welcome"/>
         <updated>2019-05-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[I've started working on a major overhaul / reorganization of the old Tidal Userbase website. I think that this new documentation is now pretty much on par with the old one. I hope that you will like it.]]></summary>
+        <content type="html"><![CDATA[<p>I've started working on a major overhaul / reorganization of the old <a href="https://tidalcycles.org/Userbase" target="_blank" rel="noopener noreferrer">Tidal Userbase</a> website. I think that this new documentation is now pretty much on par with the old one. I hope that you will like it.</p>]]></content>
+        <author>
+            <name>Raphaël Forment</name>
+        </author>
     </entry>
 </feed>
