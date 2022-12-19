@@ -13,8 +13,8 @@ const features = [
     imageUrl: "img/logo.svg",
     description: (
       <>
-        Tidal Cycles (or 'Tidal') for short is free/open source software written
-        in Haskell. Tidal is using SuperCollider, another open-source software,
+        Tidal Cycles (or 'Tidal' for short) is a free/open source live coding environment
+        for algorithmic patterns, written in Haskell. Tidal is using SuperCollider, another open-source software,
         for synthesis and I/O.
       </>
     ),
@@ -63,7 +63,7 @@ function Home() {
   return (
     <Layout
       title={`Live code with ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="Live coding environment for making algorithmic patterns"
     >
       <div id="tailwind">
         <header className={clsx("hero hero--primary", styles.heroBanner)}>
