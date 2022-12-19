@@ -10,6 +10,12 @@ layout: wiki
 
 You can run the installation script by opening a terminal window, pasting in the following and pressing enter:
 
+---
+
+**Note**: (Dec 19) This script will install the text editor Atom, which has now been sunset - see [details](https://tidalcycles.org/docs/getting-started/editor/Atom). We are adopting use of the Pulsar text editor and are currently working to refactor this script with Pulsar, but it is not ready yet. If you use this install method it is recommended to follow the [Pulsar install](https://tidalcycles.org/docs/getting-started/editor/Pulsar) documentation in the "Get a Text Editor" section. It includes steps to install the tidalcycles package. You could also choose to use a different text editor.
+
+---
+
 ```bash
 curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-bootstrap.command -sSf | sh
 ```
