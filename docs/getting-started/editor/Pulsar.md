@@ -50,7 +50,12 @@ There are two ways to download:
     - https://github.com/pulsar-edit/package-frontend/blob/main/docs/download_links.md instructions on building your URL query string.
     - For example: https://web.pulsar-edit.dev/download?os=intel_mac&type=mac_dmg
 
-Before proceeding, **start Pulsar**. This will create a hidden folder in your home directory `~/.pulsar`.
+#### After install - fix file attributes (macOS)
+
+```bash
+> xattr -cr /Applications/Pulsar.app/
+```
+**Start Pulsar** This will create a hidden folder in your home directory `~/.pulsar`.
 
 ### Manual install of Tidal package
 There is a community package for Tidal to be manually installed: [atom-tidalcycles on github](https://github.com/tidalcycles/atom-tidalcycles)
