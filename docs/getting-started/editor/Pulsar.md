@@ -94,9 +94,9 @@ The recommended method to install npm is via the node version manager.
 ```
 
 #### Validate results
-- Restart the Pulsar app.
 - The node modules directory should now be present: `~/.pulsar/packages/tidalcycles/node_modules/`
 - There should be three sub-directories: `binpack` `directory-tree` `osc-min`
+- Restart the Pulsar app.
 - Create a Tidal file (file extension *.tidal) and run a command. See the [Start Tidal page](https://tidalcycles.org/docs/getting-started/tidal_start) for more instructions if you are new to Tidal.
 
 ### Configure Pulsar
