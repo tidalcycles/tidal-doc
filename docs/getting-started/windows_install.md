@@ -6,6 +6,12 @@ layout: wiki
 
 -----
 
+**Note**: (Dec 19) This script will install the text editor Atom, which has now been sunset - see [details](https://tidalcycles.org/docs/getting-started/editor/Atom). We are adopting the Pulsar text editor and are currently working to refactor this install with Pulsar, but it is not available yet. If you use this install method please review the [Pulsar install](https://tidalcycles.org/docs/getting-started/editor/Pulsar) documentation in the "Get a Text Editor" section. Currently, we do not have steps ready for a manual install of the tidalcycles package for Pulsar on Windows. The install via package manager method should resolve this and is expected to be available soon. Updates will be provided or you can check: \
+**TidalCycles Discord channel for Pulsar**: https://discord.com/channels/779427371270275082/1047429699346903132
+
+
+---
+
 ## Automatic installation
 
 There is an automatic installer for Tidal Cycles for Windows. It will install everything you need, including the required dependencies ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/ghcup/), [Atom Editor](https://atom.io/), [SuperCollider](http://supercollider.github.io/), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). The installer assumes that these components aren't installed already. If they are, you might be better off installing all the rest by hand!
