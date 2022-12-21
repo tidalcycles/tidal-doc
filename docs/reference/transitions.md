@@ -229,16 +229,37 @@ The transition will align with one of the next 2 bd onsets.
 
 ## Wait
 ### wait
+Wait functions are used to pause a running pattern for a given number of cycles. 
 
 ```haskell
 wait :: Show a => a -> Time -> ControlPattern -> IO ()
 ```
+With 2 patterns d1 d2:
+
+```haskell
+d1 $ s "[bd ~ [bd [ht lt]] ho]"
+d2 $ s "hh27:2*4 cp*3"
+wait 2 4 $ s "feel:4*4 cp*3"
+```
+
+Here `wait 2 4` pauses pattern "2" for "4" cycles then starts the new pattern.
+This is useful if you want to have one pattern on pause for a certain number of cycles while you make a change. 
 
 ### waitT
 
 ```haskell
 waitT :: Show a => a -> (Time -> [ControlPattern] -> ControlPattern) -> Time -> ControlPattern -> IO ()
 ```
+
+```haskell
+d1 $ s "[bd ~ [bd [ht lt]] ho]"
+waitT 2 (Sound.Tidal.Transition.xfadeIn 2) 4 $ s "hh*8"
+waitT 2 (Sound.Tidal.Transition.clutch) 2 $ s "hh*8"
+```
+
+`waitT` allows you to specify any of the transition functions: `xfadeIn, clutchIn, anticipate` etc.
+Note the arguments and you need to include any argument for the specified transition: \
+`waitT <patternID> (Sound.Tidal.Transition.<transitionName>  <transitionArg>) <cycles>`
 
 ## Wash
 ### wash
@@ -262,7 +283,6 @@ washIn :: (Pattern a -> Pattern a) -> Time -> Time -> [Pattern a] -> Pattern a
 ```haskell
 xfade :: Show a => a -> ControlPattern -> IO ()
 ```
-
 
 Start with a pattern on d1:
 ```haskell
