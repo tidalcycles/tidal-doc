@@ -234,7 +234,6 @@ Wait functions are used to pause a running pattern for a given number of cycles.
 ```haskell
 wait :: Show a => a -> Time -> ControlPattern -> IO ()
 ```
-With 2 patterns d1 d2:
 
 ```haskell
 d1 $ s "[bd ~ [bd [ht lt]] ho]"
