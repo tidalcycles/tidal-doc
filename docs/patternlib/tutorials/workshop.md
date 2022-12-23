@@ -220,6 +220,8 @@ Note the difference between this and `"bd*3 sn"`: in the first example there are
 
 ## Effects
 
+### Vowel
+
 Tidal has lots of effects we can use to change the way things sound. `vowel` is a filter which adds a vowel sound -- try `a, e, i, o` and `u`:
 
 ```haskell
@@ -251,6 +253,8 @@ The structure comes from the left - try swapping the parameters:
 d1 $ vowel "a o ~ i" # sound "drum"
 ```
 
+### Gain, pitch and panorama
+
 `gain` changes the volume of different sounds:
 ```haskell
 d1 $ sound "bd hh sn:1 hh sn:1 hh" # gain "1 0.7 0.5"
@@ -276,7 +280,9 @@ d1 $ up "0 ~ 12 24" # sound "jungbass:6"
 d1 $ sound "numbers:1 numbers:2 numbers:3 numbers:4" # pan "0 0.5 1"
 ```
 
-`shape` adds distortion (but be careful - it also makes the sound much louder):
+### Distortion, reverb, delay and filters
+
+`shape` is one of the several function you can use to add [distortion](/reference/effects.md/#distortion) (but be careful - it also makes the sound much louder):
 ```haskell
 d1 $ sound "kurt:4 kurt:4" # shape "0 0.78" # gain "0.7"
 ```
@@ -297,6 +303,22 @@ To add a [reverb](/reference/effects.md#reverb) effect use the functions `dry`, 
 ```haskell
 d1 $ sound "[~ sn]*2" # dry 0.4 # room 0.6 # size 0.8
 ```
+
+There are also several frequency [filters](/reference/effects.md/#filters) available: low pass, high pass, dj type filter, among others.
+
+Low pass filter:
+```haskell
+d1 $ sound "tabla*4" # n "0 1 2 3" # cutoff 400 # resonance 0.2
+```
+
+High pass filter:
+```haskell
+d1 $ sound "tabla*4" # n "0 1 2 3" # hcutoff 600 # hresonance 0.2
+```
+
+`cutoff` and `hcutoff` receive the frequency in hertz of the cutoff point. `resonance` and `hresonance` go from 0 to 1, but be aware that high resonance values can result in a very loud sound.
+
+`djf` is a more immediate filter: it receives a number between 0 and 1. With values lesser than 0.5 it is a low pass filter, and with values greater than 0.5 it is a high pass filter.
 
 You can take a look at the [Effects](/reference/effects.md) section to learn more about effects and to see the complete list of effects.
 
