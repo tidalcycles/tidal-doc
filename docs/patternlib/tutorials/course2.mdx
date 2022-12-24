@@ -193,7 +193,7 @@ d1 $ n "<g'maj b'maj c'maj c'min>" # s "supermandolin"
   # room 0.6 # sz 0.9
 
 -- and strum it a bit with struct:
-d1 $ qtrigger 1 $ jux ((|- n "12") . rev) $ struct "t(5,8,<0 4>)" $ n "<g'maj b'maj c'maj c'min>" # s "supermandolin"
+d1 $ qtrigger $ jux ((|- n "12") . rev) $ struct "t(5,8,<0 4>)" $ n "<g'maj b'maj c'maj c'min>" # s "supermandolin"
   # room 0.6 # sz 0.9
 
 -- You can get a list of all the chords like this:
@@ -293,10 +293,10 @@ SynthDef(\mess, { |out| Out.ar(out, GrayNoise.ar) }).add;
 ```
 and you could play it in **Tidal** with: `sound "mess"`. The synths are freed by the `dirt_gate` synth.
 
-But usually, you want a synth to have a particular amplitude envelope. Then you can define one in your `SynthDef`, see below [2]. Note that `sustain` means the duration of the whole synth (this is what it is called in `SuperCollider` in general), which is sent over from **Tidal** (for setting it directly, try `# sustain "0.1 0.3 0.5 1"`). Then you can have a `doneAction: 2` if you like (this will free the synth after the envelope is done), but you can also leave this `doneAction` out altogether, because the synth is freed externally anyhow. For example: 
+But usually, you want a synth to have a particular amplitude envelope. Then you can define one in your `SynthDef`, see below [2]. Note that `sustain` means the duration of the whole synth (this is what it is called in `SuperCollider` in general), which is sent over from **Tidal** (for setting it directly, try `# sustain "0.1 0.3 0.5 1"`). Then you can have a `doneAction: 2` if you like (this will free the synth after the envelope is done), but you can also leave this `doneAction` out altogether, because the synth is freed externally anyhow. For example:
 ```c
 SynthDef(\mess, {
-  | out, sustain = 0.2 | 
+  | out, sustain = 0.2 |
   Out.ar(out, GrayNoise.ar * XLine.kr(1, 0.001, sustain))
 }).add
 ```
@@ -304,12 +304,12 @@ SynthDef(\mess, {
 But sometimes, you may want to use the synth outside **SuperDirt**, and then it is polite that it cleans up after itself. Just make sure that you multiply your envelope with the audible signal, otherwise you'll hear clicks at the end of each synth.
 
 ```c
-SynthDef(\mess, 
-  { 
-    | out, sustain = 0.2 | 
+SynthDef(\mess,
+  {
+    | out, sustain = 0.2 |
     Out.ar(out,
        GrayNoise.ar * XLine.kr(1, 0.001, sustain, doneAction: 2)
-   ) 
+   )
   }
 ).add
 ```
@@ -718,7 +718,7 @@ d1 $ seqPLoop [(0, 2, florence),
 -- If you don't want the pattern sequence to loop, then use
 -- seqP. You'll need to use something like `qtrigger`, so it starts
 -- from cycle 0
-d1 $ qtrigger 1 $ seqP [(0, 2, fast "1 2 3 4" $ sound "lt mt ht ~"),
+d1 $ qtrigger $ seqP [(0, 2, fast "1 2 3 4" $ sound "lt mt ht ~"),
                         (1, 3, sound "clap:4(3,8)" # speed 2),
                         (5, 6, sound "[kick:5(5,8), snare:3(7,16,3)]")
                        ]
