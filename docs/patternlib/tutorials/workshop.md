@@ -582,9 +582,9 @@ See more ways to manipulate longer samples at the [Sampling reference section](/
 
 ## Superdirt synthesizers
 
-So far we have used only samples, but superdirt also comes with many supercollider [synthesizers](/reference/synthesizers.md) like `superpiano`, `supersaw` or `superfm`.
+So far we have used only samples, but SuperDirt also comes with many Supercollider [synthesizers](/reference/synthesizers.md) like `superpiano`, `supersaw` or `superfm`, also known as **synths** for short.
 
-Each of them have its own functions and parameters, but it general you can use them in a very similar way than samples:
+Each of them has it's own functions and parameters, but in general you can use them in a very similar way to samples:
 ```haskell
 d1 $ n "0 4 7" # sound "superpiano"
 ```
@@ -593,16 +593,20 @@ You can also control external synthesizers by [MIDI](/configuration/MIDIOSC/MIDI
 
 ### Difference between functions `n` and `note`
 
-When using synths, both functions are exactly the same: you may have noticed that the above example plays a C note, an E note (which is 4 semitones above C), and a G note (which is 7 semitones above C). This is exactly the same as `d1 $ note "0 4 7" # sound "superpiano"`.
+When using synths, both `n` and `note` functions are exactly the same: you may have noticed that the above example plays a C note, an E note (which is 4 semitones above C), and a G note (which is 7 semitones above C). This is exactly the same as:
 
-When using samples, `n` refers to sample number (which eventually can be a note, if you have sampled every single note of an instrument). However, `note` pitches the sample up or down (and the sample duration is affected accordingly).
+```haskell
+d1 $ note "0 4 7" # sound "superpiano"
+```
+
+When using samples, `n` refers to the file index in the sample folder, sorted alphabetically (ascending) and counted from 0 (zero). It is possible for each sample to correspond to a note, if you have sampled every single note of an instrument. However when using `note`, the sample is pitched up or down (and the sample duration is affected accordingly).
 
 So, for example:
 ```haskell
 d1 $ sound "bd*4" # n "<0 4>" # note "0 12 -7 -12"
 ```
 
-This will play the first `bd` sample on odd cycles and the fifth on even cycles. On each cycle, the sample will be played 4 times: one as is, one pitched an octave above (12 semitones), one a fifth below (7 semitones), and the last one an octave below.
+This will play the first sample in the `bd` folder on odd cycles and the fifth sample on even cycles. On each cycle, the sample will be played 4 times: one as is, one pitched an octave above (12 semitones), one a fifth below (7 semitones), and the last one an octave below.
 
 -----
 
@@ -610,16 +614,16 @@ This will play the first `bd` sample on odd cycles and the fifth on even cycles.
 
 Most of this tutorial is dedicated to rhythm, but **Tidal Cycles** also offers ways to play notes, scales, chords and arpeggios.
 
-You already know how to play notes: using the `note` function or, in case you have a sampled instrument, choosing notes with the `n` function.
+You already know how to play notes: using the `note` function or, in case you have a per-note sampled instrument, choosing notes with the `n` function.
 
-You can also write directly note names. For example, these two codes are equivalent:
+You can also write notes based on the Western Music Theory naming convention which uses the first 7 letters of the alphabet (A to G). For example, these two codes are equivalent:
 
 ```haskell
 d1 $ note "c a f e" # s "supermandolin"
 d1 $ note "0 9 5 4" # s "supermandolin"
 ```
 
-In fact, note names are translated to numbers, so it's the same to use one or the other.
+Note names are simply translated to numbers in tidal, so you can use either method, or both at the same time! 
 
 Note that you can follow any note name with `s` or `f` to indicate sharp and flat respectively. Also, note that `0` and `c` refer to the C note on the fifth octave. You can append the octave number following any note name:
 
