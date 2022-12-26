@@ -1,14 +1,10 @@
 ---
-title: Workshop (0.9.10)
+title: Workshop
 id: workshop
 ---
 
 ----
-:::caution
-This tutorial is based on Tidalcycles version 0.9.10. Some of the latest features (post 1.0.0) will not be presented. Major features and changes were added post 1.0. This tutorial should still work as an introduction to Tidal but might not present the most recent and *exciting* features.
-:::
-
-Welcome to this **Tidal Cycles** tutorial. This is designed to be used as a worksheet during hands-on beginner/mixed workshops, and is based on Tidalcycles version `0.9.10`. By Lucy Cheesman, adapted to wiki format by Alex McLean.
+Welcome to this **Tidal Cycles** tutorial. This is designed to be used as a worksheet during hands-on beginner/mixed workshops. By Lucy Cheesman, adapted to wiki format by Alex McLean.
 
 ----
 
