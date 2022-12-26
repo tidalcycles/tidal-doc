@@ -638,3 +638,13 @@ d1 $ note "c a f e" # s "superpiano" |- note 24
 ```
 
 To know more about how to play scales, chords and arpeggios, see the [Harmony](/reference/harmony_melody.md) or the how-tos [Build Arpeggios](/patternlib/howtos/buildarpeggios.md) and [Play Chords](/patternlib/howtos/playchords.md)
+
+-----
+
+## Where to go from here
+
+Some suggestions:
+
+- Play, try, investigate. Here you have plenty of information to get you started. Look up the reference pages to learn more as you need it.
+- Follow [Alex's video course](course1.mdx) for a longer and deeper tutorial, with plenty of examples and video support.
+- Join the [forum](https://club.tidalcycles.org/) and/or the [discord server](https://discord.com/invite/CqWhZEfNbq) to ask for help, help others, and learn about how other people is using **Tidal Cycles**.
