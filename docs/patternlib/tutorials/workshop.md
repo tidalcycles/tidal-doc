@@ -581,3 +581,60 @@ d1 $ rev $ loopAt 8 $ chop 128 $ sound "bev"
 ```
 
 See more ways to manipulate longer samples at the [Sampling reference section](/reference/sampling.md).
+
+-----
+
+## Superdirt synthesizers
+
+So far we have used only samples, but superdirt also comes with many supercollider [synthesizers](/reference/synthesizers.md) like `superpiano`, `supersaw` or `superfm`.
+
+Each of them have its own functions and parameters, but it general you can use them in a very similar way than samples:
+```haskell
+d1 $ n "0 4 7" # sound "superpiano"
+```
+
+You can also control external synthesizers by [MIDI](/configuration/MIDIOSC/MIDI.md) or [OSC](/configuration/MIDIOSC/OSC.md)
+
+### Difference between functions `n` and `note`
+
+When using synths, both functions are exactly the same: you may have noticed that the above example plays a C note, an E note (which is 4 semitones above C), and a G note (which is 7 semitones above C). This is exactly the same as `d1 $ note "0 4 7" # sound "superpiano"`.
+
+When using samples, `n` refers to sample number (which eventually can be a note, if you have sampled every single note of an instrument). However, `note` pitches the sample up or down (and the sample duration is affected accordingly).
+
+So, for example:
+```haskell
+d1 $ sound "bd*4" # n "<0 4>" # note "0 12 -7 -12"
+```
+
+This will play the first `bd` sample on odd cycles and the fifth on even cycles. On each cycle, the sample will be played 4 times: one as is, one pitched an octave above (12 semitones), one a fifth below (7 semitones), and the last one an octave below.
+
+-----
+
+## Playing notes
+
+Most of this tutorial is dedicated to rhythm, but **Tidal Cycles** also offers ways to play notes, scales, chords and arpeggios.
+
+You already know how to play notes: using the `note` function or, in case you have a sampled instrument, choosing notes with the `n` function.
+
+You can also write directly note names. For example, these two codes are equivalent:
+
+```haskell
+d1 $ note "c a f e" # s "supermandolin"
+d1 $ note "0 9 5 4" # s "supermandolin"
+```
+
+In fact, note names are translated to numbers, so it's the same to use one or the other.
+
+Note that you can follow any note name with `s` or `f` to indicate sharp and flat respectively. Also, note that `0` and `c` refer to the C note on the fifth octave. You can append the octave number following any note name:
+
+```haskell
+d1 $ note "c4 a3 f6 e5" # s "supermandolin"
+```
+
+It can also be useful to move the octave using `|+` or `|-`. This will play on the third octave:
+
+```haskell
+d1 $ note "c a f e" # s "superpiano" |- note 24
+```
+
+To know more about how to play scales, chords and arpeggios, see the [Harmony](/reference/harmony_melody.md) or the how-tos [Build Arpeggios](/patternlib/howtos/buildarpeggios.md) and [Play Chords](/patternlib/howtos/playchords.md)
