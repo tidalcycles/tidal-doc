@@ -93,11 +93,25 @@ d1  $ s "plaits" <| note "a [~ g] [c b] [g gs]"
 ## Effects (Global)
 
 ### verb
-Description: todo
+**Description:** miVerb is a gentle reverb implemented as a global effect with a large number of tweakable parameters
 
-- param
-- param
-- param
+Parameter | Range | Description
+----------|-------|------------
+`verb w t d h` | na | convenience function, combining `wet`, `time`, `damp`, and `hp` 
+`verbgain` | 0.0-1.0+ | gain level
+`verbwet` | 0.0-1.0 | dry/wet mix
+`verbtime` | 0.0-1.0+ | sustain time, be careful with feedback using values over 1 
+`verbdamp` | 0.0-1.0 | suppression on the sustain, higher values suppress more quickly
+`verbhp` | 0.0-1.0 | smaller values emulate larger chamber spaces
+`verbfreeze` | 0 \| 1 | enable with `1`, freezes the last reverb event allowing it to tail off completely
+`verbdiff` | 0.0-1.0 | new verb events interact with existing verb trails, lower values for a more pronounced effect
+
+**Example:**
+
+```haskell
+d1  $ s "[[bd sd], linnhats*8]"
+    # verb 0.9 0.9 0.1 0.2
+```
 
 ### clouds
 Description: todo
