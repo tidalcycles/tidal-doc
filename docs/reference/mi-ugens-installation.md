@@ -3,8 +3,6 @@ title: mi-UGens Installation
 id: mi-ugens-installation
 ---
 
-## mi-Ugens Installation
-
 ### Automatic
 
 For debian/ubuntu/mint systems, these ugens can be installed as part of the [ansible Tidal installer](https://github.com/cleary/ansible-tidalcycles#ugens-mutable-instruments)
