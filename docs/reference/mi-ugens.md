@@ -11,9 +11,9 @@ Significant further work to make mi-UGens functional in Tidal was done by a larg
 
 ## Contents
 
- - [Installation Method (opens a new page)](./mi-ugens-installation) for Windows, Mac and Linux
- - [Synthdefs Reference](./mi-ugens#synth-reference) for miOmi, miBraids and miPlaits
- - [Effects Reference](./mi-ugens#effects-global) for miVerb, miClouds, miRings, etc (todo)
+ - [Installation Method (opens a new page)](/reference/mi-ugens-installation.md) for Windows, Mac and Linux
+ - [Synthdefs Reference](/reference/mi-ugens.md#synthdefs-reference) for miOmi, miBraids and miPlaits
+ - [Effects Reference](/reference/mi-ugens.md#effects-global) for miVerb, miClouds, miRings, etc (todo)
 
 ## Synthdefs Reference
 
