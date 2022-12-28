@@ -81,7 +81,7 @@ jazz voodoo birds3 procshort blip drum jvbass psr wobble drumtraks koy
 rave bottle kurt latibro rm sax lighter lt arpy feel less stab ul
 ```
 
-You can see what other sounds there are in the [default library]("/configuration/Audio Samples/default_library.md") by looking in the `Dirt-Samples` folder. Find it via the `SuperCollider` menu: `'File > Open user support directory > downloaded-quarks > Dirt-Samples'`. Additionally, you can also add your own [custom samples]("/configuration/Audio%20Samples/samples.md").
+You can see what other sounds there are in the [default library](/configuration/AudioSamples/default_library.md) by looking in the `Dirt-Samples` folder. Find it via the `SuperCollider` menu: `'File > Open user support directory > downloaded-quarks > Dirt-Samples'`. Additionally, you can also add your own [custom samples](/configuration/AudioSamples/samples.md).
 
 Make a sequence:
 
@@ -623,7 +623,7 @@ d1 $ note "c a f e" # s "supermandolin"
 d1 $ note "0 9 5 4" # s "supermandolin"
 ```
 
-Note names are simply translated to numbers in tidal, so you can use either method, or both at the same time! 
+Note names are simply translated to numbers in tidal, so you can use either method, or both at the same time!
 
 Note that you can follow any note name with `s` or `f` to indicate sharp and flat respectively. Also, note that `0` and `c` refer to the C note on the fifth octave. You can append the octave number following any note name:
 
