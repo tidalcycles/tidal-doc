@@ -81,7 +81,7 @@ jazz voodoo birds3 procshort blip drum jvbass psr wobble drumtraks koy
 rave bottle kurt latibro rm sax lighter lt arpy feel less stab ul
 ```
 
-You can see what other sounds there are in the [default library]("/configuration/Audio Samples/default_library.md") by looking in the `Dirt-Samples` folder. Find it via the `SuperCollider` menu: `'File > Open user support directory > downloaded-quarks > Dirt-Samples'`. Additionally, you can also add your own [custom samples]("/configuration/Audio%20Samples/samples.md"). In the Pulsar editor, you can add a setting that will load a tab with all the Dirt-Samples. (see [Pulsar](/getting-started/editor/Pulsar))
+You can see what other sounds there are in the [default library](/configuration/AudioSamples/default_library.md) by looking in the `Dirt-Samples` folder. Find it via the `SuperCollider` menu: `'File > Open user support directory > downloaded-quarks > Dirt-Samples'`. Additionally, you can also add your own [custom samples](/configuration/AudioSamples/samples.md). In the Pulsar editor, you can add a setting that will load a tab with all the Dirt-Samples. (see [Pulsar](/getting-started/editor/Pulsar))
 
 Make a sequence:
 
