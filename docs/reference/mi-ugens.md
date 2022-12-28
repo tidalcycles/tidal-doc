@@ -7,7 +7,7 @@ id: mi-ugens
 
 [Mutable Instruments](https://mutable-instruments.net/) was a popular Eurorack module company from Normandy. The designer, engineer, and founder of Mutable Instruments, Émilie Gillet, has made all of her work [open source](https://github.com/pichenettes/eurorack). [Volker Böhm](https://vboehm.net/) has taken the time to [port](https://github.com/v7b1/mi-UGens) some of these modules to [SuperCollider](https://supercollider.github.io/) under the project title **mi-UGens** (no affiliation with Mutable Instruments).
 
-Significant further work to make mi-UGens functional in Tidal was done by a significant number of forum users, documented in [this thread](https://club.tidalcycles.org/t/mutable-instruments-ugens/2730) by [@chrislo](https://club.tidalcycles.org/u/chrislo/summary)
+Significant further work to make mi-UGens functional in Tidal was done by a large number of forum users, documented in [this thread](https://club.tidalcycles.org/t/mutable-instruments-ugens/2730) by [@chrislo](https://club.tidalcycles.org/u/chrislo/summary)
 
 ## Contents
 
