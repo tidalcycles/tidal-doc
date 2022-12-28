@@ -15,7 +15,7 @@ Significant further work to make mi-UGens functional in Tidal was done by a larg
  - [Synthdefs Reference](./mi-ugens#synth-reference) for miOmi, miBraids and miPlaits
  - [Effects Reference](./mi-ugens#effects-global) for miVerb, miClouds, miRings, etc (todo)
 
-## Synth Reference
+## Synthdefs Reference
 
 All mi-UGens Synth modules support the following common SynthDef parameters
 
@@ -31,7 +31,7 @@ Parameter | Default
 `speed` | 1
 `accelerate` | 0
 
-### omi
+### `omi`
 **Description:** miOmi or "Ominous Voice", an almost vibraphone-like synth, electric bass lows and tinkling highs. `omi` does not take any extra parameters. 
 
 **Example:**
@@ -42,7 +42,7 @@ d1  $ s "omi" <| note "a [~ g] [c b] [g gs]"
     # sustain "{1 2 1}%8"
 ```
 
-### braids
+### `braids`
 **Description:** miBraids is a voltage-controlled monophonic digital sound source. Each algorithm is controlled by two continuously variable parameters, `timbre` and `color`. [More information...](https://web.archive.org/web/20200508162718/https://mutable-instruments.net/modules/braids/manual/)
 
 Parameter (def) | Range | Description
@@ -62,7 +62,7 @@ d1  $ s "braids" <| note "a [~ g] [c b] [g gs]"
     # color (saw)
 ```
 
-### plaits
+### `plaits`
 **Description:** miPlaits is the spiritual successor of *miBraids*, with direct access to a large palette of easily tweakable raw sonic material, covering the whole gamut of synthesis techniques. [More information...](https://web.archive.org/web/20201111233906/https://mutable-instruments.net/modules/plaits/manual/)
 
 Parameter (def) | Range | Description
