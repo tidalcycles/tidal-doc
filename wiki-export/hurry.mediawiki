@@ -1,10 +1,1 @@
-{{DISPLAYTITLE:hurry}} 
-[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>hurry :: Pattern Time -> Pattern a -> Pattern a</syntaxhighlight>
-
-'''hurry''' is similiar to [[fast]], in that it speeds up a pattern, but it also increases the [[speed]] control by the same factor, so if you're triggering samples, the sound gets higher in pitch. For example:
-
-<source>
-d1 $ every 2 (hurry 2) $ sound "bd sn:2 ~ cp"
-</source>
-
-[[Category:Functions]] [[Category:Time Functions]]
+#REDIRECT [[hurry]]

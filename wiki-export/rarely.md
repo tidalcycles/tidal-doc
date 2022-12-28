@@ -1,12 +1,7 @@
 ---
-title: rarely
-permalink: wiki/rarely/
-layout: wiki
-tags:
- - Higher-order functions
+title: Rarely
+permalink: wiki/Rarely/
+redirect_to: /wiki/rarely/
 ---
 
-1.  REDIRECT [sometimes](sometimes "wikilink")
-
-[Category:Functions](/wiki/Category:Functions "wikilink") [Category:Randomness
-and chance](/wiki/Category:Randomness_and_chance "wikilink")
+You should automatically be redirected to [rarely](/wiki/rarely/)

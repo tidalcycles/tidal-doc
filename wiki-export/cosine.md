@@ -1,10 +1,7 @@
 ---
-title: cosine
-permalink: wiki/cosine/
-layout: wiki
-tags:
- - Functions
- - Elemental patterns
+title: Cosine
+permalink: wiki/Cosine/
+redirect_to: /wiki/Oscillators#cosine/
 ---
 
-1.  redirect [Oscillators\#cosine](/wiki/Oscillators#cosine "wikilink")
+You should automatically be redirected to [Oscillators#cosine](/wiki/Oscillators#cosine/)

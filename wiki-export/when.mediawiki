@@ -1,14 +1,1 @@
-{{DISPLAYTITLE:when}}
-[[Type signature|Type]]: <source inline>when :: (Int -> Bool) -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a</source>
-
-Only '''when''' the given test function returns <source inline>True</source> the given pattern transformation is applied. The test function will be called with the current cycle as a number.
-
-<source inline>
-d1 $ when ((elem '4').show)
-  (striate 4)
-  $ sound "hh hc"
-</source>
-
-The above will only apply striate 4 to the pattern if the current cycle number contains the number 4. So the fourth cycle will be striated and the fourteenth and so on. Expect lots of striates after cycle number 399.
-
-[[Category:Functions]]
+#REDIRECT [[when]]

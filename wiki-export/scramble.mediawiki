@@ -1,14 +1,1 @@
-{{DISPLAYTITLE:scramble}} 
-[[Type signature|Type]]: <source inline>scramble :: Int -> Pattern a -> Pattern a</source>
-
-'''scramble''' takes a number and a pattern as input, divides the pattern into the given number of parts, and returns a new pattern by randomly selecting from the parts. This could also be called "sampling with replacement". For example:
-
-<source>
-d1 $ sound $ scramble 3 "bd sn hh"
-</source>
-
-... will sometimes play <source inline>"sn bd hh"</source> or <source inline>"hh sn bd"</source>, but can also play <source inline>"bd sn bd"</source> or <source inline>"hh hh hh"</source>, because it can make any random combination of the three parts.
-
-''See also: [[shuffle]]''
-
-[[Category:Functions]] [[Category:Randomness and chance]]
+#REDIRECT [[scramble]]

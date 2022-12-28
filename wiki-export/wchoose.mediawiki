@@ -1,3 +1,1 @@
-#REDIRECT [[choose#wchoose]]
-
-[[Category:Functions]] [[Category:Randomness and chance]]
+#REDIRECT [[wchoose]]

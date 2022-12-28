@@ -1,13 +1,1 @@
-{{DISPLAYTITLE:bandf}} 
-[[Type signature|Type]]: <source inline>bandf :: Pattern Double -> ControlPattern</source>
-
-'''bandf''' turns a number pattern into a control pattern that sets the center frequency of a band pass filter.
-In SuperDirt, this is in Hz (try a range between 0 and 10000). In classic dirt, it is from 0 to 1.
-
-You can use [[bpf]] as a shortcut for '''bandf'''.
-
-<source>
-d1 $ s "drum*8" # bandf "100 1000 2000"
-</source>
-
-[[Category:Control Functions]]
+#REDIRECT [[bandf]]

@@ -1,10 +1,7 @@
 ---
-title: tri
-permalink: wiki/tri/
-layout: wiki
-tags:
- - Functions
- - Elemental patterns
+title: Tri
+permalink: wiki/Tri/
+redirect_to: /wiki/tri/
 ---
 
-1.  redirect [Oscillators\#tri](/wiki/Oscillators#tri "wikilink")
+You should automatically be redirected to [tri](/wiki/tri/)

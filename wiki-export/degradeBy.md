@@ -1,12 +1,7 @@
 ---
-title: degradeBy
-permalink: wiki/degradeBy/
-layout: wiki
-tags:
- - Functions
+title: DegradeBy
+permalink: wiki/DegradeBy/
+redirect_to: /wiki/degrade#degradeBy/
 ---
 
-1.  REDIRECT [degrade\#degradeBy](degrade#degradeBy "wikilink")
-
-[Category:Randomness and
-chance](/wiki/Category:Randomness_and_chance "wikilink")
+You should automatically be redirected to [degrade#degradeBy](/wiki/degrade#degradeBy/)

@@ -1,11 +1,7 @@
 ---
-title: juxBy
-permalink: wiki/juxBy/
-layout: wiki
-tags:
- - Higher-order functions
+title: JuxBy
+permalink: wiki/JuxBy/
+redirect_to: /wiki/juxBy/
 ---
 
-1.  REDIRECT [jux\#juxBy](jux#juxBy "wikilink")
-
-[Category:Functions](/wiki/Category:Functions "wikilink")
+You should automatically be redirected to [juxBy](/wiki/juxBy/)

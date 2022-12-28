@@ -1,1 +1,16 @@
-#REDIRECT [[someCycles]]
+{{DISPLAYTITLE:someCycles}} 
+''See also: [[sometimes]]''
+
+[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>someCycles :: (Pattern a -> Pattern a) -> Pattern a -> Pattern a</syntaxhighlight>
+
+'''someCycles''' is similar to [[sometimes]], but instead of applying the given function to random events, it applies it to random cycles. For example the following will either distort all of the events in a cycle, or none of them:
+
+<syntaxhighlight lang="haskell">
+d1 $ someCycles (# crush 2) $ n "0 1 [~ 2] 3" # sound "arpy"
+</syntaxhighlight>
+
+= someCyclesBy =
+
+As with <syntaxhighlight lang="haskell" inline>sometimesBy</syntaxHighlight>, if you want to be specific, you can use <syntaxhighlight lang="haskell" inline>someCyclesBy</syntaxHighlight> and a number. For example <syntaxhighlight lang="haskell">someCyclesBy 0.93 (# speed 2)</syntaxhighlight> will apply the <syntaxhighlight lang="haskell" inline>speed</syntaxhighlight> control on average 93 cycles out of a hundred.
+
+[[Category:Functions]] [[Category:Higher-order functions]] [[Category:Randomness and chance]] [[Category:Conditional Transformers]]

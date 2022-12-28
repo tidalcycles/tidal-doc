@@ -1,6 +1,6 @@
 ---
-title: sparsity
-permalink: wiki/sparsity/
+title: Sparsity
+permalink: wiki/Sparsity/
 redirect_to: /wiki/slow/
 ---
 

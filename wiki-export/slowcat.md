@@ -1,6 +1,6 @@
 ---
-title: slowcat
-permalink: wiki/slowcat/
+title: slowCat
+permalink: wiki/slowCat/
 redirect_to: /wiki/cat/
 ---
 

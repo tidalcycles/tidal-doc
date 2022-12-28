@@ -1,3 +1,1 @@
-#REDIRECT [[striate#striateBy]]
-
-[[Category:Functions]]
+#REDIRECT [[striateBy]]

@@ -1,13 +1,1 @@
-{{DISPLAYTITLE:delay}} 
-[[Type signature|Type]]: <source inline>delay :: Pattern Double -> ControlPattern</source>
-
-'''delay''' turns a number pattern into a control pattern that changes the level of the initial delay signal.
-A value of <code>1</code> means the first echo will be as loud as the original sound.
-
-<source>
-d1 $ s "[drum cp]*2 jvbass" # delay "[0 0.5]/2" # orbit 1
-</source>
-
-As delay is a global effect, you will want to use it in tandem with [[orbit]] (unless you're only running one pattern at a time).
-
-[[Category:Control Functions]]
+#REDIRECT [[delay]]
