@@ -3,7 +3,6 @@ id: TidalCycles
 title: Tidal Cycles
 sidebar_label: What is Tidal Cycles?
 slug: /
-description: Tidal Cycles is software for making patterns with code, whether live coding music at algoraves or composing in the studio. It includes a simple and flexible notation for rhythmic sequences, and an extensive library of patterning functions for combining and transforming them. This allows you to quickly create complex patterns from simple ingredients.
 ---
 
 ![nutshell](tidalnutshell.png)
