@@ -12,10 +12,10 @@ Significant further work to make mi-UGens functional in Tidal was done by a larg
 ## Contents
 
  - [Installation Method (opens a new page)](/reference/mi-ugens-installation.md) for Windows, Mac and Linux
- - [Synthdefs Reference](/reference/mi-ugens.md#synthdefs-reference) for miOmi, miBraids and miPlaits
- - [Effects Reference](/reference/mi-ugens.md#effects-global) for miVerb, miClouds, miRings, etc (todo)
+ - [Synth Reference](/reference/mi-ugens.md#synths) for miOmi, miBraids and miPlaits
+ - [Effects Reference](/reference/mi-ugens.md#effects) for miVerb, miClouds, miRings, etc (todo)
 
-## Synthdefs Reference
+## Synths
 
 All mi-UGens Synth modules support the following common SynthDef parameters
 
@@ -89,10 +89,33 @@ d1  $ s "plaits" <| note "a [~ g] [c b] [g gs]"
     # level (slow 8 sine)
 ```
 
+### `tides`
+**Description:** miTides is a tidal (not, Tidal) modulator based on the concept of **Flow** (a voltage goes up) and **Ebb** (a voltage goes back to it's initial level). [More information...](https://web.archive.org/web/20200918083807/https://mutable-instruments.net/modules/tides/manual/)
 
-## Effects (Global)
+Parameter | Range | Description
+----------|-------|------------
+`tidesshape` | shape of the ascending and descending segments
+`tidessmooth` (0.5) | 0.0-1.0 | waveshape transformation, 0.0-0.5 smooths edges, 0.5-1.0 adds kinks and bumps along the slope
+`slope` | 0.0-1.0 | ratio between the durations of the ascending and descending segments
+`shift` | 0.0-1.0 | mode specific control, adjusting amplitude and other parameters
+`mode` (2)| 0-3 | different output modes. For details see the [Manual](https://web.archive.org/web/20200918083807/https://mutable-instruments.net/modules/tides/manual/)
 
-### verb
+**Example:**
+
+```haskell
+d1  $ s "tides" <| note "a [~ g] [c b] [g gs]"
+    # octave "<3 4 5 6 7 8>"
+    # sustain "{1 2 1}%8"
+    # mode "<0 1 2 3>"
+    # shift (slow 5 sine)
+    # tidesshape (slow 7 sine)
+    # tidessmooth (range 0.2 1 $ slow 8 sine)
+    # slope (slow 3 sine)
+```
+
+## Effects
+
+### `verb` (global)
 **Description:** miVerb is a gentle reverb implemented as a global effect with a large number of tweakable parameters
 
 Parameter | Range | Description
@@ -113,11 +136,46 @@ d1  $ s "[[bd sd], linnhats*8]"
     # verb 0.9 0.9 0.1 0.2
 ```
 
-### clouds
-Description: todo
+### `clouds` (global)
+**Description:** miClouds is a granular audio processor. It creates textures and soundscapes by combining multiple overlapping, delayed, transposed and enveloped segments of sound taken from an audio recording buffer. [More information...](https://web.archive.org/web/20201028001939/https://mutable-instruments.net/modules/clouds/manual/)
 
-- param
-- param
-- param
+Parameter | Range | Description
+----------|-------|------------
+`clouds p s d t` | na | convenience function, combining `pos`, `size`, `dens` and `tex`
+`cloudsblend w s f r` | na | convenience function, combining `wet`, `spread`, `fb` and `rvb`
+`cloudspos` | 0.0-1.0 | selects from which part of the recording buffer the audio grains are played
+`cloudssize` | 0.0-1.0 | grain size
+`cloudspitch` | 0.0-1.0 | transposition
+`cloudsdens` | 0.0-1.0 | grain density
+`cloudstex` | 0.0-1.0 | grain texture, morphs through various shapes of grain envelopes
+`cloudsgain` | 0.0-1.0+ | gain level
+`cloudswet` | 0.0-1.0 | blend wet/dry mix
+`cloudsspread` | 0.0-1.0 | blend stereo spread
+`cloudsfb` | 0.0-1.0 | **WARNING** values over 0.3 get dangerous - blend feedback amount
+`cloudsrvb` | 0.0-1.0 | blend reverberation amount
+`cloudsfreeze` | 0 \| 1 | stops the recording of incoming audio, granularization is now performed on the last piece of audio
+`cloudsmode` | 0-3 | infamous alternate modes, 0 = normal operation, 3 = spectral processor
+`cloudslofi` | 0.0-1.0 | undocumented
 
-### etc
+```haskell
+d1  $ s "[[bd sd], [linnhats*8]]"
+    # clouds 0.1 0.5 0.05 0.1
+    # cloudsblend 1 0.2 0.33 0.8
+```
+
+### `elements`
+**Description:** todo
+
+### `mu`
+**Description:** todo
+
+### `rings`
+**Description:** todo
+
+### `ripples`
+**Description:** todo
+
+### `warps`
+**Description:** todo
+
+
