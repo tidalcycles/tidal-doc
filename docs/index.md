@@ -3,6 +3,7 @@ id: TidalCycles
 title: Tidal Cycles
 sidebar_label: What is Tidal Cycles?
 slug: /
+description: Tidal Cycles is software for making patterns with code, whether live coding music at algoraves or composing in the studio. It includes a simple and flexible notation for rhythmic sequences, and an extensive library of patterning functions for combining and transforming them. This allows you to quickly create complex patterns from simple ingredients.
 ---
 
 ![nutshell](tidalnutshell.png)
@@ -16,7 +17,7 @@ By default, sound is made with the featureful [SuperDirt](https://github.com/mus
 synth/sampler, but you can control other synths using Open Sound
 Control (**OSC**) or **MIDI**. Whether you're using **SuperDirt** or a synth, every
 filter and effect can be manipulated independently with **Tidal**
-patterns. Tidal is embedded in the **Haskell** language, although you don't have to learn **Haskell** to learn **Tidal**. 
+patterns. Tidal is embedded in the **Haskell** language, although you don't have to learn **Haskell** to learn **Tidal**.
 
 You can learn **Tidal** through experimentation and play - most **Tidal**
 coders have little or no experience in software engineering.
@@ -39,4 +40,4 @@ If you enjoy using **Tidal Cycles**, please consider contributing to the [Tidal 
 
 In 2021, Alex moved the project's public financial contribution support model from an individual/personal contribution type (via Ko-fi), to a an Organisational Model via the [OpenCollective platform](https://opencollective.com/tidalcycles), at the same time appointing an experienced admin team to handle the ongoing project accounting in a transparent and ethical manner.
 
-TidalCycles has been heavily inspired by the work of many others including Bernard Bel, Laurie Spiegel and Adrian Ward. 
+TidalCycles has been heavily inspired by the work of many others including Bernard Bel, Laurie Spiegel and Adrian Ward.
