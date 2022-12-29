@@ -157,6 +157,8 @@ Parameter | Range | Description
 `cloudsmode` | 0-3 | infamous alternate modes, 0 = normal operation, 3 = spectral processor
 `cloudslofi` | 0.0-1.0 | undocumented
 
+**Example:**
+
 ```haskell
 d1  $ s "[[bd sd], [linnhats*8]]"
     # clouds 0.1 0.5 0.05 0.1
@@ -167,10 +169,44 @@ d1  $ s "[[bd sd], [linnhats*8]]"
 **Description:** todo
 
 ### `mu`
-**Description:** todo
+**Description:** miMu is a low frequency distortion effect, works best on long release, low frequency sounds
+
+Parameter | Range | Description
+----------|-------|------------
+`mu` | 0-5+ | adjusts gain and applies a low frequency distortion
+
+**Example:**
+
+```haskell
+d1  $ s "bass1:1"
+    # mu 5
+    # gain 0.7
+```
 
 ### `rings`
-**Description:** todo
+**Description:** miRings is a resonator effect with three families of vibrating structures simulated. [More information...](https://web.archive.org/web/20201028000143/https://mutable-instruments.net/modules/rings/manual/)
+
+Parameter | Range | Description
+----------|-------|------------
+`rings f s b d p` | na | convenience function
+`ringsfreq` (440) | 0-1500+ | adjusts pitch, higher values are higher pitches, does not enjoy being patterned much
+`ringsstruct`| 0.0-1.0 | model specific control, see the [manual](https://web.archive.org/web/20201028000143/https://mutable-instruments.net/modules/rings/manual/)
+`ringsbright`| 0.0-1.0 | adjust level of higher harmonics in the signal
+`ringsdamp`| 0.0-1.0 | controls the decay time, smaller values for shorter decay
+`ringspos`| 0.0-1.0 | excitation position
+`ringsmodel`| 0 \| 1 | toggle between modal, and sympathetic string resonators
+`ringspoly`| 0 \| 1 | toggle polyphonic mode on
+`ringsinternal`| 0 \| 1 | undocumented
+`ringseasteregg`| 0 \| 1 | undocumented
+
+**Example:**
+```haskell
+d1  $ s "[[bd sd], linnhats*8]"
+    # rings 100 rand 0.7 (slow 3 sine) 0.9
+    # ringsmodel "[0|1]"
+    # ringspoly "[0|1|0]"
+    # ringsinternal "[1|0|1|1]"
+```
 
 ### `ripples`
 **Description:** todo
