@@ -200,6 +200,7 @@ Parameter | Range | Description
 `ringseasteregg`| 0 \| 1 | undocumented
 
 **Example:**
+
 ```haskell
 d1  $ s "[[bd sd], linnhats*8]"
     # rings 100 rand 0.7 (slow 3 sine) 0.9
@@ -209,7 +210,23 @@ d1  $ s "[[bd sd], linnhats*8]"
 ```
 
 ### `ripples`
-**Description:** todo
+**Description:** miRipples is an analog 4 pole filter, with 3 filter modes available. [More information...](https://web.archive.org/web/20200422174618/https://www.mutable-instruments.net/modules/ripples/manual/)
+
+Parameter | Range | Description
+----------|-------|------------
+`ripples c r d` | na | convenience function
+`ripplescf` | 0.0-1.0 | cutoff frequency, 20Hz to 20kHz
+`ripplesreson` | 0.0-1.0+ | resonance, self resonance occurs from ~0.75
+`ripplesdrive` | 0-5 | gain level
+
+**Example:**
+
+```haskell
+d1  $ s "[[bd sd], linnhats*8]"
+    # ripplescf 0.4
+    # ripplesreson (range 0.5 1 $ slow 7 sine)
+    # ripplesdrive "{1 3 5}%2"
+```
 
 ### `warps`
 **Description:** todo
