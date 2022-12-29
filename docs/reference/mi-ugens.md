@@ -94,7 +94,7 @@ d1  $ s "plaits" <| note "a [~ g] [c b] [g gs]"
 
 Parameter | Range | Description
 ----------|-------|------------
-`tidesshape` (0.5) | shape of the ascending and descending segments
+`tidesshape` (0.5) | 0.0-1.0 | shape of the ascending and descending segments
 `tidessmooth` (0.5) | 0.0-1.0 | waveshape transformation, 0.0-0.5 smooths edges, 0.5-1.0 adds kinks and bumps along the slope
 `slope` (0.5) | 0.0-1.0 | ratio between the durations of the ascending and descending segments
 `shift` (0.5) | 0.0-1.0 | mode specific control, adjusting amplitude and other parameters
