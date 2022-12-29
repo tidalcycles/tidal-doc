@@ -15,11 +15,11 @@ each time.
 
 1.  Launch **SuperDirt**
 
-   `SuperDirt` should be started automatically when you run the **SuperCollider IDE** application. If now, in the editor window of the **SuperCollider IDE**, type `'SuperDirt.start'` and run the code by holding down `Ctrl` and pressing `Enter` (while your cursor is on the same line as the code).
+   `SuperDirt` should be started automatically when you run the **SuperCollider IDE** application. If not, in the editor window of the **SuperCollider IDE**, type `'SuperDirt.start'` and run the code by holding down `Ctrl` and pressing `Enter` (while your cursor is on the same line as the code).
 
 2.  Launch **Tidal Cycles**
 
-   In Atom, start a new file and save it with a `.tidal` extension (e.g. `examples.tidal`). **Tidal** will be automatically launch when you type and execute your first command.
+   In your text editor (Pulsar, vim, VS Code, etc), start a new file and save it with a `.tidal` extension (e.g. `examples.tidal`). **Tidal** will be automatically launch when you type and execute your first command.
 
 ### Estuary
 
@@ -31,7 +31,7 @@ However, note that not all features in **Tidal** will work on **Estuary**, only 
 
 ### Notes in Haskell
 
-Haskell is using double dashes `--` at the beginning of a line to denotate a comment. A comment is a piece of code that will be ignored by the interpreter. You can use comments to take notes in your code. You can also use comments to ignore a specific line or pattern:
+Haskell uses double dashes `--` at the beginning of a line to denote a comment. A comment is code that will be ignored by the interpreter. You can use comments to add notes in your code. You can also use comments to ignore a specific line or pattern:
 
 ```haskell
 –- I'm a comment
@@ -58,7 +58,8 @@ You can stop making a sound using `silence`:
 ```haskell
 d1 $ silence
 ```
-There are two types of sounds you can use with `sound`: either they are synths definitions (like `superpiano`, see [Synthesizers](/reference/synthesizers.md)), or they are samples. In the latter case, you write the name of the folder that contain the sample set. By default, the first sample is used, but you can pick a different sample from the same set, with `:`:
+There are two types of sounds you can use with `sound`: either they are synths definitions (like `superpiano`, see [Synthesizers](/reference/synthesizers.md)), or they are samples. In the latter case, you write the name of the folder that contain the sample set. By default, the first sample is used, but you can pick a different sample from the same set, with `:`: and a number:
+
 ```haskell
 d1 $ sound "drum:1"
 ```
@@ -81,7 +82,7 @@ jazz voodoo birds3 procshort blip drum jvbass psr wobble drumtraks koy
 rave bottle kurt latibro rm sax lighter lt arpy feel less stab ul
 ```
 
-You can see what other sounds there are in the [default library](/configuration/AudioSamples/default_library.md) by looking in the `Dirt-Samples` folder. Find it via the `SuperCollider` menu: `'File > Open user support directory > downloaded-quarks > Dirt-Samples'`. Additionally, you can also add your own [custom samples](/configuration/AudioSamples/samples.md).
+You can see what other sounds there are in the [default library](/configuration/AudioSamples/default_library.md) by looking in the `Dirt-Samples` folder. Find it via the `SuperCollider` menu: `'File > Open user support directory > downloaded-quarks > Dirt-Samples'`. Additionally, you can also add your own [custom samples](/configuration/AudioSamples/samples.md). In the Pulsar editor, you can add a setting that will load a tab with all the Dirt-Samples (see [Pulsar](/getting-started/editor/Pulsar.md)). 
 
 Make a sequence:
 
@@ -120,7 +121,6 @@ setcps 0.6
 Or you can `solo` one channel:
 ```haskell
 d1 $ sound "arpy cp arpy:2"
-
 d2 $ sound "sn sn:2 bd sn"
 
 solo 2
@@ -140,7 +140,7 @@ unmute 2 -- (or unmuteAll)
 -- now both will be playing
 ```
 
-The Atom plugin adds some key shortcuts for this common operations, like `Ctrl+1` to toggle mute for the first pattern, or `Ctrl+0` to unmute all. You can see the complete list of keybindings inside Atom, by going to `Edit > Preferences > Packages`, selecting tidalcycles, and scrolling down to the `Keybindings` section.
+The Pulsar plugin adds some key shortcuts for this common operations, like `Ctrl+1` to toggle mute for the first pattern, or `Ctrl+0` to unmute all. You can see the complete list of keybindings inside Pulsar, by going to `Edit > Preferences > Packages`, selecting tidalcycles, and scrolling down to the `Keybindings` section.
 
 ### More variety
 
@@ -178,7 +178,6 @@ d1 $ sound "bd [sd cp]*2"
 Or you can do the opposite using */*:
 ```haskell
 d1 $ sound "bd sn/2"
-
 d1 $ sound "bd [sn cp]/2"
 ```
 `*` works by 'speeding up' a step to play it multiple times. `/` works by 'slowing it down'.
@@ -187,7 +186,6 @@ We can also schedule patterns across cycles using `<` and `>`:
 
 ```haskell
 d1 $ sound "bd <sd cp arpy>"
-
 d1 $ sound "<bd sn> <sd [cp cp]> <bd [cp cp]>"
 ```
 
@@ -198,7 +196,6 @@ Other common mini-notation symbols are `|` to choose a random option, `,` to pla
 Choose one of the two samples randomly:
 ```haskell
 d1 $ sound "[bd:0|bd:1]"
-
 d1 $ sound "[sn|cp]"
 ```
 
@@ -337,7 +334,6 @@ d1 $ slow 2 $ sound "arpy arpy:1 arpy:2 arpy:3"
 fast 0.5 is the same as slow 2!
 
 d1 $ fast 2 $ sound "arpy arpy:1 arpy:2 arpy:3"
-
 d1 $ fast 0.5 $ sound "arpy arpy:1 arpy:2 arpy:3"
 ```
 
