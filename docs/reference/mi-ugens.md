@@ -210,7 +210,7 @@ d1  $ s "[[bd sd], linnhats*8]"
 ```
 
 ### `ripples`
-**Description:** miRipples is an analog 4 pole filter, with 3 filter modes available. [More information...](https://web.archive.org/web/20200422174618/https://www.mutable-instruments.net/modules/ripples/manual/)
+**Description:** miRipples is an analog 4 pole filter. [More information...](https://web.archive.org/web/20200422174618/https://www.mutable-instruments.net/modules/ripples/manual/)
 
 Parameter | Range | Description
 ----------|-------|------------
@@ -229,6 +229,24 @@ d1  $ s "[[bd sd], linnhats*8]"
 ```
 
 ### `warps`
-**Description:** todo
+**Description:**  miWarps offers a variety of wave-shaping and cross-modulation effects. [More information...](https://web.archive.org/web/20200422211642/https://www.mutable-instruments.net/modules/warps/manual/)
 
+Parameter | Range | Description
+----------|-------|------------
+`warpsalgo` | 0-7 | modulation algorithm. See the [manual](https://web.archive.org/web/20200918070209/https://mutable-instruments.net/modules/warps/manual/)
+`warpstimb` | 0.0-1.0 | intensity of high harmonics, or algorithm tone control
+`warpsosc` | 0-3 | internal oscillator state and waveform
+`warpsfreq` | 0.0-1.0 | external carrier amplitude or internal oscillator frequency
+`warpsvgain` | 0.0-1.0 | non-functional?
+`warpseasteregg` | 0 \| 1 | undocumented
 
+**Example:**
+
+```haskell
+d1  $ s "[[bd sd], linnhats*8]"
+    # warpstimb (slow 5 sine)
+    # warpsosc "<0 1 2 3>"
+    # warpsalgo "<0 1 2 3 4 5 6 7 6>"
+    # warpsfreq (slow 3 saw)
+    # warpseasteregg 1
+```
