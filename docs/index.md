@@ -3,6 +3,7 @@ id: TidalCycles
 title: Tidal Cycles
 sidebar_label: What is Tidal Cycles?
 slug: /
+description: Live coding environment for making algorithmic patterns
 ---
 
 ![nutshell](tidalnutshell.png)
