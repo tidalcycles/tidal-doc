@@ -94,10 +94,10 @@ d1  $ s "plaits" <| note "a [~ g] [c b] [g gs]"
 
 Parameter | Range | Description
 ----------|-------|------------
-`tidesshape` | shape of the ascending and descending segments
+`tidesshape` (0.5) | shape of the ascending and descending segments
 `tidessmooth` (0.5) | 0.0-1.0 | waveshape transformation, 0.0-0.5 smooths edges, 0.5-1.0 adds kinks and bumps along the slope
-`slope` | 0.0-1.0 | ratio between the durations of the ascending and descending segments
-`shift` | 0.0-1.0 | mode specific control, adjusting amplitude and other parameters
+`slope` (0.5) | 0.0-1.0 | ratio between the durations of the ascending and descending segments
+`shift` (0.5) | 0.0-1.0 | mode specific control, adjusting amplitude and other parameters
 `mode` (2)| 0-3 | different output modes. For details see the [Manual](https://web.archive.org/web/20200918083807/https://mutable-instruments.net/modules/tides/manual/)
 
 **Example:**
@@ -166,7 +166,49 @@ d1  $ s "[[bd sd], [linnhats*8]]"
 ```
 
 ### `elements`
-**Description:** todo
+**Description:** miElements is a modal synthesis voice effect, generating raw sounds from a variety of sound creation techniques (bowing, blowing, or striking). [More information...](https://web.archive.org/web/20200422215323/https://www.mutable-instruments.net/modules/elements/manual/)
+
+Parameter | Range | Description
+----------|-------|------------
+`elementsstrength` | (-1.0)-1.0 | attenuates (negative) or amplifies (positive) the excitation signal
+`elementspitch` | 0.0-1.0 | fundamental frequency of the resonator
+`elementscontour` | 0.0-1.0 | envelope applied to the bow/blow exciters
+`elementsbowlevel` | 0.0-1.0 | amplitude of scratching/bowing resonator
+`elementsbowtimb` | 0.0-1.0 | smoothness of the bow material
+`elementsblowlevel` | 0.0-1.0 | amount of granular blowing noise sent to the resonator
+`elementsblowtimb` | 0.0-1.0 | pitch/granulation rate of the noise generator
+`elementsflow` | 0.0-1.0 | airflow of the blow generator
+`elementsstrikelevel` | 0.0-1.0 | amount of percussive noise sent to the resonator
+`elementsstriketimb` | 0.0-1.0 | brightness/speed of the percussive excitation
+`elementsmallet` | 0.0-1.0 | changes the type of percussive noise
+`elementsgeom` | 0.0-1.0 | geometry and stiffness of the resonating structure, from plates, to strings, to bars/tubes, to bells/bowls
+`elementsbright` | 0.0-1.0 | low values simulate wood/nylon, high values simulate glass or steel
+`elementsdamp` | 0.0-1.0 | how quickly energy dissipates through the material
+`elementspos` | 0.0-1.0 | simulate different string/surface excitation points
+`elementsspace` | 0.0-1.0 | stereo width and amount of reverb applied to sound
+`elementsmodel` | 0 \| 1 | undocumented
+`elementseasteregg` | 0 \| 1 | undocumented
+
+**Example:**
+```haskell
+d1  $ s "[[bd sd], linnhats*8]"
+    # elementsstrength "0.9"
+    # elementspitch (slow 3 sine)
+    # elementsblowlevel 0.6
+    # elementsblowtimb (slow 5 sine)
+    # elementsflow "{0.3 0.6 0.7}"
+    # elementsstrikelevel 1
+    # elementsstriketimb 0.1
+    # elementsmallet rand
+    # elementseasteregg "[1 | 0 | 0]"
+    # elementsmodel "[0 | 1]"
+    # elementscontour (slow 5 saw)
+    # elementsgeom 2
+    # elementsbright (slow 7 saw)
+    # elementsdamp 0
+    # elementspos 0.314
+    # elementsspace 0.9
+```
 
 ### `mu`
 **Description:** miMu is a low frequency distortion effect, works best on long release, low frequency sounds
