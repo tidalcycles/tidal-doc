@@ -229,9 +229,8 @@ Made by [Mads Kjeldgaard](https://madskjeldgaard.dk/). SuperCollider description
 > Applies the conformal mapping z → (z - a) / (1 - za*) to the phase vocoder bins z with a given by the real and imag inputs to the UGen. Makes a transformation of the complex plane so the output is full of phase vocoder artifacts but may be musically fun. Usually keep |a| < 1 but you can of course try bigger values to make it really noisy. a = 0 should give back the input mostly unperturbed.
 
 You can also check [this link](http://mathworld.wolfram.com/ConformalMapping.html).
-
-* `real`: ???
-* `img`: ???
+* `real`: ???
+* `imag`: ???
 
 #### Spectral enhance
 
