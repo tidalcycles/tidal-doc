@@ -1,6 +1,6 @@
 ---
 id: TidalCycles
-title: Tidal Cycles
+title: Documentation Reference | Tidal Cycles
 sidebar_label: What is Tidal Cycles?
 slug: /
 description: Live coding environment for making algorithmic patterns
