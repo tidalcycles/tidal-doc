@@ -13,14 +13,14 @@ Please view the GitHub [README](https://github.com/tidalcycles/tidal-bootstrap) 
 
 ---
 ### Install steps
-1. Prerequisite: Apple Xcode command line tools \
+1. Prerequisite: Apple Xcode command line tools  
 If this is installed, you can skip this step. If you are unsure, running the command below will exit if already installed. Installation will generate multiple dialog windows, including a license agreement from Apple. It can take 20 - 30+ mins to complete.
 
 ```bash
 /usr/bin/xcode-select --install
 ```
 
-2. tidal-bootstrap \
+2. tidal-bootstrap  
 This installs the following components and only installs what is missing. (*Tip:* tidal-bootstrap can be run again.) The Haskell install is the longest and most complex - you will see many messages about Haskell, ghcup, cabal, etc. This can take 20 - 30+ mins.
 
 - [Haskell](https://www.haskell.org/) Language ([Ghcup](https://www.haskell.org/ghcup/))
@@ -36,7 +36,7 @@ This installs the following components and only installs what is missing. (*Tip:
 curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-bootstrap.command -sSf | sh
 ```
 
-3. post installation
+3. post installation  
 - Review the output from the install script. Note any error messages or install failures. This will help with troubleshooting.
     - For Haskell problems, check `/tmp/ghcup-install.log`
 - If there are install failures, you can run tidal-bootstrap again. It will skip over any components successfully installed. Sometimes running it again will resolve problems.
@@ -51,7 +51,7 @@ ls ~/.pulsar/packages/tidalcycles/node_modules/osc-min
 ```
 - If the Pulsar tidalcycles plugin did not install properly, then manual installation may be needed. See the instructions for manual install in the [Pulsar page](/getting-started/editor/Pulsar.md) (Get a Text Editor section).
 
-4. Get started! \
+4. Get started!  
 [Start Tidal](/getting-started/tidal_start.md) Follow this guide to learn about how the components work together and how to get them running. Welcome to Tidal!
 
 ------
