@@ -7,31 +7,54 @@ layout: wiki
 
 ## Automatic installation (script)
 
+An install script can be used to automate installation for all components and dependencies needed by the TidalCycles system. This method is recommended if you are new to Tidal and don't already have other components like SuperCollider and SuperDirt. If you have some components already or if you are well versed in managing command line installations, then use the manual installation steps below.
 
-You can run the installation script by opening a terminal window, pasting in the following and pressing enter:
-
----
-
-**Note**: (Dec 19) This script will install the text editor Atom, which has now been sunset - see [details](https://tidalcycles.org/docs/getting-started/editor/Atom). We are adopting use of the Pulsar text editor and are currently working to refactor this script with Pulsar, but it is not ready yet. If you use this install method it is recommended to follow the [Pulsar install](https://tidalcycles.org/docs/getting-started/editor/Pulsar) documentation in the "Get a Text Editor" section. It includes steps to install the tidalcycles package. You could also choose to use a different text editor.
+**Note**: This script was recently refactored. It now supports Pulsar as the text editor and no longer supports linux installation. Please view the GitHub [README](https://github.com/tidalcycles/tidal-bootstrap) for details and information about supported OS versions.
 
 ---
+### Install steps
+1. Pre-requisite: Apple Xcode command line tools
+If this is installed, you can skip this step. If you are unsure, running the command will exit if already installed. Xcode tools are required by the Haskell install. Installation will generate multiple dialog windows, including a license agreement from Apple, which you will need to accept. It can take 20 - 40 mins to complete.
+
+```bash
+/usr/bin/xcode-select --install
+```
+
+2. tidal-bootstrap
+This includes all of the following components. The script checks to see what is installed and only installs what is missing. (*Tip:* this means that tidal-bootstrap can be run again.) The Haskell install is the longest and most complex - you will see many messages about the various install steps: Haskell, ghcup, cabal, etc. This step can take 30+ mins.
+
+- Xcode command line tools (with git)
+- [Haskell](https://www.haskell.org/) Language ([Ghcup](https://www.haskell.org/ghcup/))
+- [cabal](https://www.haskell.org/cabal/): package system for Haskell and Tidalcycles
+- The Tidal Pattern engine (Tidal Cycles itself), with the important BootTidal.hs file
+- [Pulsar](https://pulsar-edit.dev/): Text editor
+    - [tidalcycles plugin](https://github.com/tidalcycles/atom-tidalcycles) for Pulsar
+- [SuperCollider](https://supercollider.github.io/) for backend audio generation, and:
+    - [SuperDirt](https://github.com/musikinformatik/SuperDirt): sample library used by tidal
+    - [sc-3 plugins](https://github.com/supercollider/sc3-plugins): unit generator plugins
 
 ```bash
 curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-bootstrap.command -sSf | sh
 ```
 
-It will probably ask for your password. As you type, characters won't be echoed to the screen. A lot of confusing info will scroll past. Just let it run until the end. Tidal should thereafter be installed on your computer.
+3. post-installation
+- Review the output from the install script. Note any error messages, or install failures. This will help with troubleshooting.
+    - For Haskell problems, check `/tmp/ghcup-install.log`
+- If there are install failures, you can run tidal-bootstrap again. It will skip over any components successfully installed.
+- **Verify install**. You should be able to run the following commands. The first two will show info about your tidal install. If these fail, then Haskell or Tidal is not installed correctly. The `ls` command will reveal if the Pulsar tidalcycles plugin is installed correctly. You should see a list of files in the `osc-min` directory. The SuperCollider scsynth should show version info.
 
-### What is the script doing with my computer?
+```
+cabal list tidal
+cabal info tidal
+ls ~/.pulsar/packages/tidalcycles/node_modules/osc-min
+/Applications/SuperCollider.app/Contents/Resources/scsynth -v
+```
+- If the Pulsar tidalcycles plugin did not install properly, then manual installation may be needed. See the instructions for manual install in the [Pulsar page](/getting-started/editor/Pulsar.md) (get a text editor section). 
+-
+4. Get started!
+[Start Tidal](/getting-started/tidal_start.md) Follow this guide to learn about how the components work together and how to get them running.
 
-The script installs the tools mentioned in TidalCycles [manual installation guide](../getting-started/Linux_installation). In particular, the script
-checks if the following programs are installed on the system, and
-installs them if they are missing.
-
--   [SuperCollider](https://supercollider.github.io/) (and [SuperDirt](https://github.com/musikinformatik/SuperDirt))
--   [Atom](https://atom.io/) (and the [Tidal Cycles Plugin](https://atom.io/packages/tidalcycles))
--   [Haskell](https://www.haskell.org/) Language ([Ghcup](https://www.haskell.org/ghcup/))
--   The Tidal Pattern engine (Tidal Cycles itself)
+------
 
 ------
 
@@ -62,7 +85,7 @@ commands every time we want to update our TidalCycles library to the
 latest version.
 ```bash
 cabal update
-cabal install tidal --lib
+cabal v1-install tidal
 ```
 If you've never installed TidalCycles before, then the
 `cabal install tidal --lib` step may take some time. At the end of the
