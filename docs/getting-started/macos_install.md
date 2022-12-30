@@ -13,17 +13,15 @@ Please view the GitHub [README](https://github.com/tidalcycles/tidal-bootstrap) 
 
 ---
 ### Install steps
-1. Pre-requisite: Apple Xcode command line tools
-
-If this is installed, you can skip this step. If you are unsure, running the command below will exit if already installed. Xcode tools are required by the Haskell install. Installation will generate multiple dialog windows, including a license agreement from Apple, which you will need to accept. It can take 20 - 30+ mins to complete.
+1. Prerequisite: Apple Xcode command line tools \
+If this is installed, you can skip this step. If you are unsure, running the command below will exit if already installed. Installation will generate multiple dialog windows, including a license agreement from Apple. It can take 20 - 30+ mins to complete.
 
 ```bash
 /usr/bin/xcode-select --install
 ```
 
-2. tidal-bootstrap
-
-This installs the following components. The script checks to see what is installed and only installs what is missing. (*Tip:* tidal-bootstrap can be run again.) The Haskell install is the longest and most complex - you will see many messages about Haskell, ghcup, cabal, etc. This can take 20 - 30 mins.
+2. tidal-bootstrap \
+This installs the following components and only installs what is missing. (*Tip:* tidal-bootstrap can be run again.) The Haskell install is the longest and most complex - you will see many messages about Haskell, ghcup, cabal, etc. This can take 20 - 30+ mins.
 
 - [Haskell](https://www.haskell.org/) Language ([Ghcup](https://www.haskell.org/ghcup/))
 - [cabal](https://www.haskell.org/cabal/): package system for Haskell and Tidalcycles
@@ -38,12 +36,12 @@ This installs the following components. The script checks to see what is install
 curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-bootstrap.command -sSf | sh
 ```
 
-3. post-installation
+3. post installation
 - Review the output from the install script. Note any error messages or install failures. This will help with troubleshooting.
     - For Haskell problems, check `/tmp/ghcup-install.log`
-- If there are install failures, you can run tidal-bootstrap again. It will skip over any components successfully installed.
-- **Start a new shell** (exit from terminal). This should load the new PATH setting.
-- **Verify install**. You should be able to run the following commands. The first two will show info about your tidal install. If these fail, then Haskell or Tidal is not installed correctly. The `ls` command will reveal if the Pulsar tidalcycles plugin is installed correctly. You should see a list of files in the `osc-min` directory. The SuperCollider scsynth command will show version info.
+- If there are install failures, you can run tidal-bootstrap again. It will skip over any components successfully installed. Sometimes running it again will resolve problems.
+- **Start a new shell** (exit from terminal). This will load the new PATH setting.
+- **Verify install**. You should be able to run the following commands. The first two will show info about your tidal install. If these fail, then Haskell or Tidal is not installed correctly. The `ls` command will reveal if the Pulsar tidalcycles plugin is installed correctly. You should see a list of files in the `osc-min` directory. The SuperCollider `scsynth` command will show version info.
 
 ```
 cabal list tidal
@@ -53,8 +51,8 @@ ls ~/.pulsar/packages/tidalcycles/node_modules/osc-min
 ```
 - If the Pulsar tidalcycles plugin did not install properly, then manual installation may be needed. See the instructions for manual install in the [Pulsar page](/getting-started/editor/Pulsar.md) (Get a Text Editor section).
 
-4. Get started!
-[Start Tidal](/getting-started/tidal_start.md) Follow this guide to learn about how the components work together and how to get them running.
+4. Get started! \
+[Start Tidal](/getting-started/tidal_start.md) Follow this guide to learn about how the components work together and how to get them running. Welcome to Tidal!
 
 ------
 
@@ -90,9 +88,11 @@ cabal update
 cabal v1-install tidal
 ```
 If you've never installed TidalCycles before, then the
-`cabal install tidal --lib` step may take some time. At the end of the
+`cabal v1-install tidal` step may take some time. At the end of the
 command output, it should say `Installed tidal-x.x.x` (where x.x.x is
 the latest version number) without any errors.
+
+**Note:** see section "3. post installation" above for steps to verify your installations. 
 
 #### SuperDirt
 
