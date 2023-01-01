@@ -94,18 +94,18 @@ sudo pacman -Sy supercollider sc3-plugins
 ```
 ---
     
-### Superdirt Installation
+### SuperDirt Installation
     
-`SuperDirt` is a plugin or *"Quark"* for SuperCollider, and functions as the audio engine for TidalCycles as well as providing the default set of samples. 
+**SuperDirt** is a plugin or *"Quark"* for SuperCollider, and functions as the audio engine for TidalCycles as well as providing the default set of samples. 
 
-1. Get the latest version of Superdirt (you can also do this by checking the [github page](https://github.com/musikinformatik/SuperDirt/releases))
+1. Get the version number of the latest SuperDirt release (you can also do this by checking the [github page](https://github.com/musikinformatik/SuperDirt/releases))
 ---
 ***all***
 ```bash
 git ls-remote https://github.com/musikinformatik/SuperDirt.git | grep tags | tail -n1 | awk -F/ '{print $NF}'
 ```
 --- 
-2. Install Superdirt, update the version number if required, once complete press `Ctrl+c` to exit `sclang`
+2. Install SuperDirt, update the version number if required. Once complete press `Ctrl+c` to exit `sclang`
 ---
 ***all***
 
@@ -113,18 +113,16 @@ git ls-remote https://github.com/musikinformatik/SuperDirt.git | grep tags | tai
 echo "Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recompile()})" | sclang -
 ```
     
-*Note: You will need to exit the `sclang` shell once Superdirt has finished installing*
 ---
     
 ### Tidal Installation
-1. Install tidal - please note, ***Arch*** is the only distro to support Tidal via it's core package manager, other distros require using the haskell package/environment manager, `cabal (>=3.0.0.0)`
+1. Install tidal - please note, ***Arch*** is the only distro to support Tidal installation via it's core package manager, other distros require using the haskell package/environment manager, `cabal (>=3.0.0.0)`
 ---    
 ***Arch***
 ```bash
 sudo pacman -Sy haskell-tidal ghc ghc-libs haskell-{tidal,bifunctors,colour,hosc,mwc-random,network,primitive,random,vector,microspec}
 ```
             
-```
 ***all (except Arch)***
 ```bash
 cabal update; cabal install tidal --lib
@@ -136,10 +134,10 @@ cabal update; cabal install tidal --lib
     
 ### Choose a Text Editor
 TidalCycles is supported by a wide variety of text editors, you will need one to get started:
-    - [Pulsar](/getting-started/editor/Pulsar.md) (was Atom)
-    - [VS Code](/getting-started/editor/VS_Code.md)
-    - [vim/neovim](/getting-started/editor/Vim.md)
-    - [emacs](/getting-started/editor/Emacs.md)
+ - [Pulsar](/getting-started/editor/Pulsar.md) (was Atom)
+ - [VS Code](/getting-started/editor/VS_Code.md)
+ - [vim/neovim](/getting-started/editor/Vim.md)
+ - [emacs](/getting-started/editor/Emacs.md)
     
 ... and more.
         
