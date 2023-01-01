@@ -174,7 +174,7 @@ d1 $ n (arpg "'major7 [0,4,7,11]") # sound "superpiano"
 Type: arp :: Pattern String -> Pattern a -> Pattern a
 ```
 
-The arp function takes an additional pattern of arpeggiate modes. For example, using the `1.0` version of **Tidal**, chord name notation (root note / chord type / additional notes above the chord):
+The `arp` function takes an additional pattern of arpeggiate modes. For example, using the `1.0` version of **Tidal**, chord name notation (root note / chord type / additional notes above the chord):
 
 ```haskell
 d1 $ n (arp "<up down diverge>" "<a'm9'8 e'7sus4'8>") # sound "superpiano"
@@ -185,4 +185,28 @@ The different arpeggiate modes are:
 up down updown downup up&down down&up converge
 diverge disconverge pinkyup pinkyupdown
 thumbup thumbupdown
+```
+
+### rolled
+
+```haskell
+Type: rolled :: Pattern a -> Pattern a
+```
+
+The `rolled` function takes no arguments, and simulates a downward strum pattern on a guitar. Notes are played low to high, and are evenly distributed within (1/4) of the chord event length, as opposed to `arp`/`arpeggiate` that spread the notes over the whole event.
+
+```haskell
+d1 $ rolled $ n "<a'm9'8 e'7sus4'8>" # sound "superpiano"
+```
+
+### rolledBy
+
+```haskell
+Type: rolledBy :: Pattern (Ratio Integer) -> Pattern a -> Pattern a
+```
+
+The `rolledBy` function works the same as `rolled`, but allows you to specify the fraction of the event that the notes will be spread over, or the "length" of the roll.
+
+```haskell
+d1 $ rolledBy 0.45 $ n "<a'm9'8 e'7sus4'8>" # sound "superpiano"
 ```
