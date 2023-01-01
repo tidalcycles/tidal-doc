@@ -69,7 +69,7 @@ sudo apt update; sudo apt install git jackd2 qjackctl zlib1g-dev
 
 ***Arch***
 ```bash
-sudo pacman -Syu; pacman -Sy git
+sudo pacman -Syu; pacman -Sy git jack2 qjackctl
 ```
 ---
 2. Remove conflicts
