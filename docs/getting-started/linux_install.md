@@ -21,92 +21,128 @@ There are user-made tools to install the Tidalcycles stack. Be sure to check out
 
 ## Manual installation
 
-You need to install several components to get a complete Tidal Cycles system ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/platform/), [SuperCollider](https://supercollider.github.io/downloads) and [SuperDirt](https://github.com/musikinformatik/SuperDirt)). Hopefully, your Linux distribution makes the pre-requisites easily available to you via a package manager. You will also need a text editor. Check the sidebar to get a list of supported editors along with instructions for setting them up.
+There are several required components for a complete Tidal Cycles system 
+ - [Git](https://git-scm.com/)
+ - [Haskell](https://www.haskell.org/platform/)
+ - [SuperCollider](https://supercollider.github.io/downloads)
+ - [SuperDirt](https://github.com/musikinformatik/SuperDirt)
+ - a Text Editor (eg [Pulsar](/getting-started/editor/Pulsar.md), [VS Code](/getting-started/editor/VS_Code.md), [vim/neovim](/getting-started/editor/Vim.md), [emacs](/getting-started/editor/Emacs.md), and more)
+    
+Most modern distros will make all or most of these available for convenient install via their package managers.
 
+The following instructions provide commands specific to different distro families. They are labelled as:
+ - ***debian*** - the debian family of distros includes **debian**, **\*buntu**, **Mint**, **pop!_OS** and more
+ - ***Arch*** - the Arch family of distros includes **Arch Linux**, **Manjaro** and more
+ - ***all*** - this command should be run by everyone, regardless of distro
+    
+Choose the command that matches the distro you are running.
 
-If your distribution comes with the `apt` package manager (Debian family), you can install some of these dependencies using the following command:
+### Configure User
+
+1. Add your user as a member of the `audio` group
+---
+***all***
+```bash
+sudo usermod -a -G audio $USER
+```
+---
+    
+2. Logout and log back in for it to take effect. You can check it worked with
+---
+***all***
 
 ```bash
-sudo apt-get install build-essential cabal-install git jackd2
+groups | grep audio
+```
+--- 
+    
+### Package Preconfiguration
+    
+1. Install dependencies
+
+---
+    
+***debian***
+```bash
+sudo apt update; sudo apt install git jackd2 qjackctl zlib1g-dev
 ```
 
-Once you are done with this first installation phase, please follow the tutorial below :arrow_down:!
+***Arch***
+```bash
+sudo pacman -Syu; pacman -Sy git
+```
+---
+2. Remove conflicts
+---
+***Arch***
+```bash
+sudo pacman -R lib32-mesa-demos mesa-demos
+```
+---
+    
+### SuperCollider Installation
+1. Install SuperCollider and SC3-Plugins
+---
+***debian***
+```bash
+sudo apt install supercollider sc3-{plugins,plugins-language,plugins-server}
+```
+    
+***Arch***
+```bash
+sudo pacman -Sy supercollider sc3-plugins
+```
+---
+    
+### SuperDirt Installation
+    
+**SuperDirt** is a plugin or *"Quark"* for SuperCollider, and functions as the audio engine for TidalCycles as well as providing the default set of samples. 
 
-### SuperCollider
+1. Get the version number of the latest SuperDirt release (you can also do this by checking the [github page](https://github.com/musikinformatik/SuperDirt/releases))
+---
+***all***
+```bash
+git ls-remote https://github.com/musikinformatik/SuperDirt.git | grep tags | tail -n1 | awk -F/ '{print $NF}'
+```
+--- 
+2. Install SuperDirt, update the version number if required. Once complete press `Ctrl+c` to exit `sclang`
+---
+***all***
 
-**I - SuperCollider**
-
-- **Ubuntu** / **Mint** / **Debian** : compiling Tidal Cycles from source is recommended to get the last version running. Packages are generally too old. Alternatively, try these scripts: [build-supercollider](https://github.com/lvm/build-supercollider).
-- **Arch** / **Manjaro**: install via your [package manager](https://archlinux.org/packages/community/x86_64/supercollider/).
-
-**II - SuperDirt**
-
-`SuperDirt` is the audio engine for Tidal Cycles. Tidal will not be able to make any sound or to send MIDI/OSC without it! SuperDirt is also embedding the default audio samples used by Tidal. To install `SuperDirt`, open SuperCollider and paste the following line of code. Evaluate it by pressing Ctrl+Return:
 ```shell
-Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recompile()})
+echo "Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recompile()})" | sclang -
 ```
-
-It might take a while :smile:! You will know when the installation process is done by looking at the logs. You should see the following:
-
-
-```c
-Installing SuperDirt
-Installing Vowel
-Vowel installed
-Installing Dirt-Samples
-Dirt-Samples installed
-SuperDirt installed
-compiling class library...
-...
-(then some blah blah, and finally, something like:)
-...
-
-<!--T:41-->
-*** Welcome to SuperCollider 3.10.0. *** For help press Ctrl-D.
-```
-
-Optionally, you can also install SuperDirt without opening the SuperCollider IDE. If you are familiar with the command line, type `sclang` in a terminal to launch the SuperCollider interpreter and paste the line above. Everything will work the same! You can also install various plugins in your text editor to interact with SuperCollider without using the IDE ([Emacs](https://github.com/supercollider/scel), [Vim](https://github.com/supercollider/scvim) or [Atom](https://atom.io/packages/supercollider)).
-
-To start the interpreter just run `sclang` in a terminal, then just
-paste the command line from above and press Enter to run it. Once the
-installation is done, you can exit the interpreter by pressing Ctrl + C.
-
-
-**III - SC3 Plugins**
-
-:::caution
-
-If you installed SuperCollider using the [build-supercollider](https://github.com/lvm/build-supercollider) method, you won't need to install them. SC3Plugins is compiled and installed by the script.
-
-:::
-
-
-`SC3Plugins` is a community-made extension for SuperCollider. Installing it is **highly** recommended. You won't be able to use the default synthesizers provided with Tidal Cycles without it. Please be sure to read [these instructions](https://supercollider.github.io/sc3-plugins/) to get the extension.
-
-- **Ubuntu** / **Mint** / **Debian**: follow the instructions above.
-- **Arch** / **Manjaro**: there is an up-to-date package in the [Community repository](https://archlinux.org/packages/community/x86_64/sc3-plugins/).
-
-
-### Tidal Cycles
-
-Open a Terminal. If you’re unsure how to open a terminal window in
-Linux, it varies according to distribution, but generally you can find `Terminal`
-in the menus. Then type and run these two commands *(ignoring any
-complaints that cabal has of 'legacy v1 style of usage')*:
+    
+---
+    
+### Tidal Installation
+1. Install tidal - please note, ***Arch*** is the only distro to support Tidal installation via it's core package manager, other distros require using the haskell package/environment manager, `cabal (>=3.0.0.0)`
+---    
+***Arch***
 ```bash
-cabal update
-cabal install tidal --lib
+sudo pacman -Sy haskell-tidal ghc ghc-libs haskell-{tidal,bifunctors,colour,hosc,mwc-random,network,primitive,random,vector,microspec}
+```
+            
+***all (except Arch)***
+```bash
+cabal update; cabal install tidal --lib
 ```
 
-(Depending on your cabal version, you might have to leave off the `--lib` on the last command.)
+*Note: `cabal` can be notoriously fickle. If for some reason it fails, you can safely reset the environment by renaming your `~/.ghc` and `~/.cabal` folders, and re-running the above commands.*
 
-If you've never installed TidalCycles before, then the
-`cabal install tidal` step may take some time. At the end of the command
-output, it should say `Completed tidal-x.x.x` (where x.x.x is the latest
-version number) without any errors.
-
-## I've installed Tidal Cycles. What's next?
-
-Look at the sidebar. You will see a list of text editors you can install to interact with Tidal. Note that the Atom editor is now sunset. It is replaced with Pulsar. 
-
+---
+    
+### Choose a Text Editor
+TidalCycles is supported by a wide variety of text editors, you will need one to get started:
+ - [Pulsar](/getting-started/editor/Pulsar.md) (was Atom)
+ - [VS Code](/getting-started/editor/VS_Code.md)
+ - [vim/neovim](/getting-started/editor/Vim.md)
+ - [emacs](/getting-started/editor/Emacs.md)
+    
+... and more.
+        
+### Start Tidal
+    
+You're almost there! [Follow these instructions to get Tidal started](/getting-started/tidal_start.md)
+    
 </translate>
