@@ -1,6 +1,6 @@
 ---
 id: community
-title: Meet the community 
+title: Meet the community
 ---
 
 ## Getting Help
@@ -17,17 +17,9 @@ same problem or question as you before, or post a new topic (requires [free sign
 
 ## Discussion and sharing
 
-For live chat, you can find other TidalCyclists and live-coders on the following platforms:
+For live chat and troubleshooting, you can find other TidalCyclists and live-coders on [Discord](https://discord.com/invite/CqWhZEfNbq).
 
-[Discord](https://discord.com/invite/CqWhZEfNbq)             | [Rocket Chat](https://chat.toplap.org/channel/tidal) on the `#tidal` channel
-:-----------------------------------------------------------:|:-------------------------:
-![](discord.png)                                             |  ![](rocketchat.png)
-
-:::caution
-
-For troubleshooting, head for the Discord chat.
-
-:::
+[![Discord logo](discord.png)](https://discord.com/invite/CqWhZEfNbq)
 
 ## Development and reporting issues
 
@@ -40,7 +32,7 @@ repository]on github.
 
 ## Algorave and TOPLAP
 
-If you like **Tidal Cycles**, you will love to learn that there are more people like you around the world! 
+If you like **Tidal Cycles**, you will love to learn that there are more people like you around the world!
 
 ### TOPLAP
 ![toplap](toplap.png)
