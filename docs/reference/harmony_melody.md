@@ -189,28 +189,28 @@ thumbup thumbupdown
 
 ## Chord Modifiers/Voicings
 
-There are a variety of different chord modifiers available, designed to change the way a chord is "voiced" (note ordering, octave choices etc).A significant amount of discussion on what these should be and how they should work was covered in this [forum thread](https://club.tidalcycles.org/t/rfc-working-on-making-chord-naming-chordlist-more-consistent/2717/52), and (largely) implemented by [polymorphic.engine](https://github.com/tidalcycles/Tidal/pull/931)
+There are a variety of different chord modifiers available, designed to change the way a chord is "voiced" (note ordering, octave choices, etc). A significant amount of discussion on what these should be and how they should work was covered in this [forum thread](https://club.tidalcycles.org/t/rfc-working-on-making-chord-naming-chordlist-more-consistent/2717/52), and (largely) implemented by [polymorphic.engine](https://github.com/tidalcycles/Tidal/pull/931).
 
 All of the different modifiers can be patterned together.
 
 ### Number of Chord tones
 
-You can the number of chord tones in a chord. Extra tones are created by working through the existing list of tones and either duplicating them an octave higher, reducing tones subtracts items from the chord tone list starting from the highest notes. This can also be patterned.
+You can set the number of chord tones in a chord. Extra tones are created by working through the existing list of tones and either duplicating them an octave higher; reducing tones subtracts items from the chord tone list starting from the highest notes. This can also be patterned.
 
-By default, `c'min9` has 5 chord tones `[0,3,7,10,14]` - we can increase that to 8, ie `[0,3,7,10,14,12,15,19]`
+By default, `c'min9` has 5 chord tones `[0,3,7,10,14]` - we can increase that to 8, ie `[0,3,7,10,14,12,15,19]`:
 
 ```haskell
 d1 $ n "c'min9'8" # sound "superpiano"
 ```
 
-We can reduce it to 4 chord tones (ie take away the 9th), `[0,3,7,10]`
+We can reduce it to 4 chord tones (ie take away the 9th), `[0,3,7,10]`:
 ```haskell
 d1 $ n "c'min9'4" # sound "superpiano"
 ```
 
 ### Open voicing
 
-This emulates an "Open" Piano voicing, where the first and third note of a chord are dropped down an octave/12 semitones, spreading the range of the chord tones by an extra octave
+This emulates an "Open" Piano voicing, where the first and third note of a chord are dropped down an octave/12 semitones, spreading the range of the chord tones by an extra octave.
 
 ```haskell
 d1 $ n "c'min9'o" # sound "superpiano"
@@ -218,7 +218,7 @@ d1 $ n "c'min9'o" # sound "superpiano"
 
 ### Drop N voicings
 
-Drop voicings are similar to Open voicings, dropping the Nth highest note in the chord is dropped down by an octave/12 semitones. This is a "drop 3" voicing
+Drop voicings are similar to Open voicings, dropping the Nth highest note in the chord down by an octave/12 semitones. This is a "drop 3" voicing:
 
 ```haskell
 d1 $ n "c'min9'd3" # sound "superpiano"
@@ -226,7 +226,7 @@ d1 $ n "c'min9'd3" # sound "superpiano"
 
 ### Chord Inversions
 
-A chord is inverted by taking the lowest N notes in a chord, and raising them by an octave/12 semitones. This is the 2nd inversion for `c'min9``
+A chord is inverted by taking the lowest N notes in a chord, and raising them by an octave/12 semitones. This is the 2nd inversion for `c'min9`:
 
 ```haskell
 d1 $ n "c'min9'i2" # sound "superpiano"
