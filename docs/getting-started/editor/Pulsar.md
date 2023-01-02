@@ -53,7 +53,7 @@ If there is a requirement for manual installation, or if installation via Packag
 
 ```bash
 > cd ~/.pulsar/packages
-> git clone https://github.com/tidalcycles/atom-tidalcycles tidalcycles
+> git clone https://github.com/tidalcycles/pulsar-tidalcycles tidalcycles
 ```
 
 ### Install the node.js modules for tidalcycles
