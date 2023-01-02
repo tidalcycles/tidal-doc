@@ -8,72 +8,59 @@ id: Pulsar
 
 ![pulsaricon](pulsaricon.png)
 
-[Pulsar](https://pulsar-edit.dev/) is a new code editor that is open-source and community-led. It is based on Atom and was started after the announcement to [Sunset Atom](https://github.blog/2022-06-08-sunsetting-atom/). The [stated goal](https://pulsar-edit.dev/about.html) is to "modernize, update and improve the original Atom project into a contemporary, hackable and fully open editor." This includes support for the package repository which provides for community contributions, including our Tidal package.
+[Pulsar](https://pulsar-edit.dev/) is a code editor that is open-source and community-led. It is based on Atom and was started after the announcement to [Sunset Atom](https://github.blog/2022-06-08-sunsetting-atom/). Pulsar has a Package Manager which provides for community contributions, including our Tidalcycles package.
 
 ---
 
-**UPDATE - Dec 15,2022**: [Pulsar v1.100.0](https://github.com/pulsar-edit/pulsar/releases/tag/v1.100.0-beta) is released (first tagged beta). See the [ChangeLog](https://github.com/pulsar-edit/pulsar/blob/master/CHANGELOG.md) - including support for Apple Silicon. The new [Pulsar web site](https://pulsar-edit.dev/) is also a good source of information, including downloads and documentation.
+**UPDATE - Jan 1, 2023**: The Pulsar Package Manager now is fully operational with the Tidalcycles package. Once Pulsar is installed, installation and updates for tidalcycles can be managed within Pulsar. There is no longer a need for manual package install. 
+
+---
+
+## Install Pulsar and Tidalcycles package
+1. Download from the [Pulsar download page](https://pulsar-edit.dev/download.html).
+2. (MacOS): Set attributes on Pulsar.app   (see the Pulsar download page for details)
+
+```sh
+xattr -cr /Applications/Pulsar.app/
+```
+
+3. Start Pulsar application
+4. Load Package Manager: from Menu > Packages > Open Package Manager 
+    - Select Install tab
+    - search for "tidalcycles"
+    - select install 
 
 **Known issues**:
 - *macOS performance:* this may be resolved by disabling the `github` package
-- *macOS dmg install:* Current binaries are not signed. Launching Pulsar will produce an error "Pulsar cannot be opened because the developer cannot be verified". This can be fixed by running:
-`xattr -cr /Applications/Pulsar.app/`
+- *macOS dmg install:* Current binaries are not signed. Launching Pulsar will produce an error "Pulsar cannot be opened because the developer cannot be verified". Workaround: see above
 
 Other issues:
 - Auto-complete with default settings can be slower and more intrusive for livecoding. Possble workarounds:
     - *autocomplete-plus package:* increase "Delay Before Suggestions are Shown": to 100 or 1000.
     - disable the autocomplete-plus package
 
----
-**NOTE for Atom Users**: The timeline to have Pulsar ready with the Tidalcycles package automation is the end of 2022. Tidal users who have a working Atom editor configured with the Tidalcycles package can continue to use it. *However, the Atom package manager is no longer available to install or update the Tidal package and no further updates to Atom will be available.* Tidal users are encouraged to migrate to Pulsar.
-
----
-
 **Discord #pulsar channel**: https://discord.com/channels/779427371270275082/1047429699346903132
 
 ---
+---
 
-## Installation
-Installation of the Tidalcycles Pulsar package is not currently automated. This improvement is expected soon. Check here for updates. Proceed with manual install only if you are comfortable with package installs, using git, troubleshooting, etc.
+## Manul Installation of Tidalcycles package  
+In most circumstances manual installation of tidalcycles package in Pulsar should be avoided. Please use the Package Manager within Pulsar. 
+If there is a requirement for manual installation, or if installation via Package Manager repeatedly fails, below are manual steps that apply to MacOS and Linux. For more information, see [atom-tidalcycles on github](https://github.com/tidalcycles/atom-tidalcycles).
 
-- MacOS: see below
-- Linux: the manual instructions below should generally apply to Linux. Be sure to get the correct Pulsar download for your flavor.
-- Linux with automated install: the Ansible install for a complete Tidal environment now includes Pulsar.
-    - See [Installation of tidalcycles and editor(s) with ansible](https://github.com/cleary/ansible-tidalcycles)
-- Windows (documentation coming)
-
-### Download & start Pulsar
-There are two ways to download:
-1. Pulsar [download page](https://pulsar-edit.dev/download.html).
-2. Pulsar download link + add your specific query parameters:
-    - https://web.pulsar-edit.dev/download (need to add query string)
-    - https://github.com/pulsar-edit/package-frontend/blob/main/docs/download_links.md instructions on building your URL query string.
-    - For example: https://web.pulsar-edit.dev/download?os=intel_mac&type=mac_dmg
-
-#### After install - fix file attributes (macOS)
-
-```bash
-> xattr -cr /Applications/Pulsar.app/
-```
-**Start Pulsar** This will create a hidden folder in your home directory `~/.pulsar`.
-
-### Manual install of Tidal package
-There is a community package for Tidal to be manually installed: [atom-tidalcycles on github](https://github.com/tidalcycles/atom-tidalcycles)
-
-From a command line using `git`: (make sure you have launched the Pulsar application)
+- Start Pulsar: This will create a hidden folder in your home directory `~/.pulsar`.
+- From a command line using `git`: (make sure you have launched the Pulsar application). This will install the tidalcycles package into `~/.pulsar/packages/tidalcycles/`.
 
 ```bash
 > cd ~/.pulsar/packages
 > git clone https://github.com/tidalcycles/atom-tidalcycles tidalcycles
 ```
 
-This will install the tidalcycles package into a directory named `tidalcycles`.
-
-### Install the node.js modules
+### Install the node.js modules for tidalcycles
 Pre-requisite: npm (node package manager)
 
 #### Install nvm (node version manager - used to install and manage npm)
-If npm is installed, you can skip these steps and go to Install the tidalcycles node modules.
+If npm is already installed, you can skip these steps and go to: "Install the tidalcycles node modules."
 
 The recommended method to install npm is via the node version manager.
 - See [NPM Docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) for options and instructions.
@@ -87,6 +74,7 @@ The recommended method to install npm is via the node version manager.
 ```
 
 #### Install the tidalcycle node modules
+With `npm` you now run the npm install command. This will install the node modules needed by the tidalcycles plugin. 
 
 ```bash
 > cd ~/.pulsar/packages/tidalcycles
@@ -94,7 +82,7 @@ The recommended method to install npm is via the node version manager.
 ```
 
 #### Validate results
-- The node modules directory should now be present: `~/.pulsar/packages/tidalcycles/node_modules/`
+- The node modules directory should be present: `~/.pulsar/packages/tidalcycles/node_modules/`
 - There should be three sub-directories: `binpack` `directory-tree` `osc-min`
 - Restart the Pulsar app.
 - Create a Tidal file (file extension *.tidal) and run a command. See the [Start Tidal page](https://tidalcycles.org/docs/getting-started/tidal_start) for more instructions if you are new to Tidal.
@@ -109,13 +97,13 @@ Pulsar works just like Atom. To configure and change preferences:
 ### Troubleshooting
 Potential errors:
 - `Couldn't find module:  'Sound.Tidal.Context'`  This indicates that Pulsar could not load tidal properly.
-- `Variable not in scope: streamSetCycle`  Your "BootTidal.hs" file is not compatible. There is an easy fix by commenting out this line: `-- setCycle = streamSetCycle tidal`
+- `Variable not in scope: streamSetCycle`  Your "BootTidal.hs" file version is not compatible with the tidal version. There is an easy fix by commenting out this line: `-- setCycle = streamSetCycle tidal`. But it would be best to resolve the version compatibility issue. 
 
 ## More about the Tidalcycles Package
 
 ### Forum discussion
 
-The Tidal Package for Atom is developed by `ndr_brt` - who is also working on preparing this for use in the new Pulsar package manager. There is a [Tidal Club forum thread](https://club.tidalcycles.org/t/the-atom-plugin-thread/2244) with more information and history of the development.
+The Tidal Package for Atom is developed by `ndr_brt` - who completed made this available in the new Pulsar package manager. There is a [Tidal Club forum thread](https://club.tidalcycles.org/t/the-atom-plugin-thread/2244) with more information and history of the development.
 
 ### GitHub repository
 
