@@ -49,7 +49,7 @@ cabal info tidal
 ls ~/.pulsar/packages/tidalcycles/node_modules/osc-min
 /Applications/SuperCollider.app/Contents/Resources/scsynth -v
 ```
-- If the Pulsar tidalcycles plugin did not install properly, then manual installation may be needed. See the instructions for manual install in the [Pulsar page](/getting-started/editor/Pulsar.md) (Get a Text Editor section).
+- If the Pulsar tidalcycles plugin did not install properly, first try to install within Pulsar using the Package Manager. See instructions in the [Pulsar page](/getting-started/editor/Pulsar.md) If this fails, you can try manual installation of the plugin. Instructions are also in the Pulsar page.
 
 4. Get started!  
 [Start Tidal](/getting-started/tidal_start.md) Follow this guide to learn about how the components work together and how to get them running. Welcome to Tidal!
