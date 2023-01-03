@@ -77,6 +77,12 @@ d1 $ n "c4 d4 e5 g3" # s "midi"
 
 #### MIDI Channels
 
+Use the function `midichan` to set the MIDI channel.
+
+```haskell
+Type: midichan :: Pattern Double -> ControlPattern
+```
+
 The default MIDI channel is 1. SuperDirt MIDI channels are indexed starting at zero, so MIDI channel 1 is midichan 0:
 
 ```c
@@ -103,7 +109,10 @@ To send a CC param to your synth, the best way to do it in the new SuperDirt MID
 * **ccn**: the CC param number you want to control: ccn 30
 * **ccv**: the value to send to the CC param, ranging from 0 to 127: ccv 64
 
-
+```haskell
+Type: ccn :: Pattern Double -> ControlPattern
+Type: ccv :: Pattern Double -> ControlPattern
+```
 
 Here's a full example, sending a value of 64 to CC param 30:
 
@@ -136,12 +145,123 @@ d2 $ ccv "0 20 50 60" # ccn ringMod # s "midi"
 If you have many CC params you want to control at once, a stack works well:
 
 ```c
-d2 $ density 8 $ stack [
+d2 $ fast 8 $ stack [
   ccn 30 # ccv (range 0 127 $ slow 30 sine),
   ccn 31 # ccv "[0 70 30 110]/3",
   ccn 32 # ccv 10
   ] # s "midi"
 ```
+
+Each device has its own MIDI chart implementation, but there are a few CC numbers that are standard and should work the same in most devices:
+
+| CC number | Function |
+|:---------:| -------- |
+| 1         | Modulation wheel |
+| 2         | Breath controller |
+| 7         | Volume |
+| 10        | Pan |
+| 11        | Expression pedal |
+| 64        | Sustain pedal (<=63 Off, >=64 On)|
+
+#### Velocity
+
+MIDI velocity can be set using `amp` and `gain`. They work in a similar way to when used with samples, being `amp` linear and `gain` exponential.
+
+Default velocity is `50`, defalt `amp` is `0.4` and default `gain` is `1`.
+
+In the following tables you can see how distinct `amp` and `gain` values affect velocity:
+
+| Amp value | MIDI velocity value |
+|:---------:|:-------------------:|
+| 0         | 0                   |
+| 0.1       | 12                  |
+| 0.2       | 25                  |
+| 0.3       | 38                  |
+| 0.4       | 50                  |
+| 0.5       | 63                  |
+| 0.6       | 76                  |
+| 0.7       | 88                  |
+| 0.8       | 101                 |
+| 0.9       | 114                 |
+| 1         | 127                 |
+
+| Gain value | MIDI velocity value |
+|:----------:|:-------------------:|
+| <=0.3      | 0                   |
+| 0.4        | 1                   |
+| 0.5        | 3                   |
+| 0.6        | 6                   |
+| 0.7        | 12                  |
+| 0.8        | 20                  |
+| 0.9        | 33                  |
+| 1          | 50                  |
+| 1.1        | 74                  |
+| 1.2        | 105                 |
+| >=1.3      | 127                 |
+
+#### Pitch modulation
+
+Pitch modulation can be controlled using the `midibend` function.
+
+```haskell
+Type: midibend :: Pattern Double -> ControlPattern
+```
+
+Note that usually a pitch wheel sends a number between `-8192` and `8191`, but here all numbers are positive, so the range is from `0` to `16383`, being `8192` the neutral middle point.
+
+You can simulate the movement of the pitch wheel in various ways.
+
+Supposing your device is called `midi` and receives MIDI messages on channel 5, in this example the sound will start in a C note, and gradually increase pitch to the limit of the pitch bend modulation:
+
+```haskell
+d1 $ stack [
+  midibend (segment 128 $ range 8193 16383 $ saw),
+  note "c"
+  ] # s "midi" # midichan 4
+```
+
+Now, we start at the minimum of the pitch bend modulation, and move fast to the neutral point, where we will sustain the pitch for the remaining of the cycle:
+
+```haskell
+d1 $ stack [
+  midibend (smooth "0@2 8193@10 8193@0.1"),
+  note "c"
+  ] # s "midi" # midichan 4
+```
+
+#### Aftertouch
+
+Aftertouch is used to modify the character of a sound that is already playing, usually by applying more or less pressure on a MIDI controller keyboard keys.
+
+To pass aftertouch MIDI messages to a device, use the function `miditouch`.
+
+```haskell
+Type: miditouch :: Pattern Double -> ControlPattern
+```
+
+Aftertouch has a range from `0` to `127`, and default value is `0`.
+
+```haskell
+d1 $ stack [
+  miditouch (segment 128 $ fast 4 $ range 0 64 $ sine),
+  note "c"
+  ] # s "midi" # midichan 4
+```
+
+In this example, once a note is playing, we set aftertouch from 0 to 64 and backwards several times in a cycle, as if we were pressing the C key of a MIDI controller.
+
+#### Modulation wheel
+
+There isn't a specific function to send modulation wheel messages, but CC 1 is used for modulation wheel, so we can use that:
+
+```haskell
+d1 $ stack [
+  ccv (segment 128 $ range 0 128 $ sine) # ccn 1,
+  note "c"
+  ] # s "midi" # midichan 4
+```
+
+Here, we start the cycle with mod wheel set to 0, go up to maximum, then down to the minimum, and end the cycle at 0 again.
 
 ## Tidal-Midi
 
