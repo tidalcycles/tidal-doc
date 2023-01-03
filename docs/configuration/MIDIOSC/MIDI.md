@@ -211,7 +211,7 @@ Note that usually a pitch wheel sends a number between `-8192` and `8191`, but h
 
 You can simulate the movement of the pitch wheel in various ways.
 
-Supposing your device is called `midi` and receives MIDI messages on channel 5, in this example the sound will start in a C note, and gradually increase pitch to the limit of the pitch bend modulation:
+Supposing your device is called `midi` and receives MIDI messages on channel `5`, in this example the sound will start in a C note, and gradually increase pitch to the limit of the pitch bend modulation:
 
 ```haskell
 d1 $ stack [
@@ -248,11 +248,11 @@ d1 $ stack [
   ] # s "midi" # midichan 4
 ```
 
-In this example, once a note is playing, we set aftertouch from 0 to 64 and backwards several times in a cycle, as if we were pressing the C key of a MIDI controller.
+In this example, once a note is playing, we set aftertouch from `0` to `64` and backwards several times in a cycle, as if we were pressing the C key of a MIDI controller.
 
 #### Modulation wheel
 
-There isn't a specific function to send modulation wheel messages, but CC 1 is used for modulation wheel, so we can use that:
+There isn't a specific function to send modulation wheel messages, but CC `1` is used for modulation wheel, so we can use that:
 
 ```haskell
 d1 $ stack [
@@ -261,7 +261,21 @@ d1 $ stack [
   ] # s "midi" # midichan 4
 ```
 
-Here, we start the cycle with mod wheel set to 0, go up to maximum, then down to the minimum, and end the cycle at 0 again.
+Here, we start the cycle with mod wheel set to `0`, go up to maximum, then down to the minimum, and end the cycle at `0` again.
+
+#### Program change
+
+Program change messages can be sent with the `progNum` function.
+
+```haskell
+Type: progNum :: Pattern Double -> ControlPattern
+```
+
+If you called you device `midi`, and it's receiving program change messages through MIDI channel `14`, you can change it's program/pattern by issuing a command like this:
+
+```haskell
+once $ s "midi" # progNum 10 # midichan 13
+```
 
 ## Tidal-Midi
 
