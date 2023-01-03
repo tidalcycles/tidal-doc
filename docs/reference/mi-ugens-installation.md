@@ -1,6 +1,7 @@
 ---
 title: mi-UGens Installation
 id: mi-ugens-installation
+description: mi-UGens - installation manual for TidalCycles
 ---
 
 ### Automatic
