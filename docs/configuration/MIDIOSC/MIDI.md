@@ -276,31 +276,34 @@ If you called you device `midi`, and it's receiving program change messages thro
 ```haskell
 once $ s "midi" # progNum 10 # midichan 13
 ```
-
 ## Tidal-Midi
 
 The older `tidal-midi` Haskell module is not currently working (although it might return). Use the other existing solutions.
 
-### Synchronising MIDI clock
+## Synchronising MIDI clock
 
 It is often important to send MIDI clock events to synchronize tempo between devices.
 Tidal can't sync its tempo to MIDI clock events that it receives, but it can act as a MIDI clock source.
 The following sections show two alternatives for sending MIDI clock events that follow the tempo of Tidal.
 
-#### Synchronising MIDI clock using the Link protocol
+### Synchronising MIDI clock using the Link protocol
+
 Since version 1.9, Tidal uses the Link protocol for scheduling events.
 Link is a technology that synchronizes musical beat, tempo, and phase across multiple applications. It was originally developed by a company called Ableton, but is open source and now implemented in a wide range of music software.
 We can use Link to synchronize Tidal with a separate program that will act as the MIDI clock source.
+
 This is the preferred method for sending MIDI clock events as it is easy, performant, stable, and has fewer quirks than [Synchronising MIDI clock via Tidal](#synchronising-midi-clock-via-tidal).
 
-##### Ableton Live as the MIDI clock source
+#### Ableton Live as the MIDI clock source
+
 Ableton Live can synchronize with Tidal over Link and simultaneously send MIDI clock messages.
+
 To achieve this, follow both instructions:
 
 * Turn on Link sync in Ableton Live. See [Synchronizing via Link](https://www.ableton.com/en/manual/synchronizing-with-link-tempo-follower-and-midi/#32-1-synchronizing-via-link).
 * Turn the MIDI device on as a sync destination in Live’s Link/Tempo/MIDI Preferences. See [Synchronizing External MIDI Devices to Live](https://www.ableton.com/en/manual/synchronizing-with-link-tempo-follower-and-midi/#32-3-1-synchronizing-external-midi-devices-to-live).
 
-##### SuperCollider as the MIDI clock source
+#### SuperCollider as the MIDI clock source
 
 We can use Link to synchronize Tidal with SuperCollider and set up SuperCollider to send MIDI clock events. This method was inspired by [jamshark70's thread](https://scsynth.org/t/midi-clock-out-separate-process-for-better-stability/5089). This requires extending SuperCollider with a new class `LinkToMidiClock`.
 
@@ -382,7 +385,7 @@ Note: If SuperCollider and Tidal don't connect over Link, try starting Tidal bef
 
 For more details on Tidal's integration with Link, see [Multi-User Tidal](../multiuser-tidal#link-protocol-synchronization).
 
-#### Synchronising MIDI clock via Tidal
+### Synchronising MIDI clock via Tidal
 
 We can alternatively use Tidal and **SuperDirt MIDI** for sending MIDI clock events. The advantage is that it also works in older versions of Tidal, but the method is somewhat more complicated.
 
