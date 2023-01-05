@@ -276,6 +276,42 @@ If you called you device `midi`, and it's receiving program change messages thro
 ```haskell
 once $ s "midi" # progNum 10 # midichan 13
 ```
+
+#### NRPN parameters
+
+To send NRPN parameters, use functions `nrpnn` and `nrpnv`.
+
+```haskell
+Type: nrpnn :: Pattern Int -> ControlPattern
+Type: nrpnv :: Pattern Int -> ControlPattern
+```
+
+NRPN numbers are composed of two bytes: MSB (Most Significant Byte) and LSB (Less Significant Byte). When using `nrpnn`, you write those two bytes in a single number. To calculate the number you have to use, multiply the first byte (MSB) by `128`, and then add the second byte (LSB). For example, if your device manual says that reverb send is set by NRPN MSP 2 and NRPN LSB 6 (or 2:6), you need to give `nrpnn` a `2*128+6=262`.
+
+NRPN values also have two bytes, which allows for more precision than CC messages. The valid rang for `nrpnv` is from `0` to `16384`. However, note that many devices will just ignore this extra precision.
+
+```haskell
+d2 $ nrpnn (2*128+6) # nrpnv 14000 # s "midi" # midichan 12
+```
+
+`nrpnn` and `nrpnv` are patternable, but notice that their argument is of type `Pattern Int`, so you have to make sure to pass them `Int`s and not `Double`s:
+
+```haskell
+d2 $ nrpnv (segment 32 $ floor <$> range 0 16000 sine) # nrpnn (1*128+29) # s "midi" # midichan 4
+```
+
+`sine` is giving us `Double`s, so we need to convert them to `Int`s before feeding them to `nrpnv`. We do this by using `floor`, which is a Haskell function that rounds down a number, and `<$>` which applies a function (in this case `floor`) to all the elements in a collection.
+
+```haskell
+Type: nrpn :: Pattern String -> ControlPattern
+```
+
+There is also the function `nrpn`, which allows us to pass both the number and the value in a single string:
+
+```haskell
+d2 $ nrpn "262:14000" # s "midi" # midichan 12
+```
+
 ## Tidal-Midi
 
 The older `tidal-midi` Haskell module is not currently working (although it might return). Use the other existing solutions.
