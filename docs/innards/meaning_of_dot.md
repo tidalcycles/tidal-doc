@@ -3,7 +3,7 @@ title: The meaning of .
 id: meaning_of_dot
 ---
 
-The dot (`.`) is the **Haskell** operator for function composition. Function composition comes from mathematics but actually, it can be really useful to make music. Haskell was originally designed by mathematicians and computer magicians. Its syntax borrowed quite a lot from mathematical notation. In some cases, Haskell is sometimes more precise and strict than other languages. The syntax is also much more compact. 
+The dot (`.`) is the **Haskell** operator for function composition. Function composition comes from mathematics - therefore it is really useful in making music. Haskell was originally designed by mathematicians and computer magicians. Its syntax borrowed quite a lot from mathematical notation. In some cases, Haskell is sometimes more precise and strict than other languages. The syntax is also much more compact. 
 
 ## Introduction 
 
