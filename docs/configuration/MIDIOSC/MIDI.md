@@ -75,6 +75,20 @@ You can also use the note-name and octave notation:
 d1 $ n "c4 d4 e5 g3" # s "midi"
 ```
 
+Alternatively to using `n` or `note` to pass MIDI notes, you can use the `midinote` function:
+
+```haskell
+Type: midinote :: Pattern Note -> ControlPattern
+```
+
+The only difference is that with `midinote` notes are specified with numbers from 0 (C(-1)) to 127 (G9). In **Tidal Cycles**, note 0 is C5, and in MIDI, C5 is note 60, so it's easy to translate from one system to the other by adding or subtracting `60` to the note value.
+
+The last example could be rewritten as:
+
+```haskell
+d1 $ midinote "48 50 64 42" # s "midi"
+```
+
 #### MIDI Channels
 
 Use the function `midichan` to set the MIDI channel.
@@ -177,7 +191,7 @@ d2 $ cc "64:30" # s "midi" # midichan 4
 
 MIDI velocity can be set using `amp` and `gain`. They work in a similar way to when used with samples, being `amp` linear and `gain` exponential.
 
-Default velocity is `50`, defalt `amp` is `0.4` and default `gain` is `1`.
+Default velocity is `50`, default `amp` is `0.4` and default `gain` is `1`.
 
 In the following tables you can see how distinct `amp` and `gain` values affect velocity:
 
