@@ -163,6 +163,16 @@ Each device has its own MIDI chart implementation, but there are a few CC number
 | 11        | Expression pedal |
 | 64        | Sustain pedal (<=63 Off, >=64 On)|
 
+```haskell
+Type: cc :: Pattern String -> ControlPattern
+```
+
+There is also the function `cc`, which allows us to pass both the number and the value in a single string:
+
+```haskell
+d2 $ cc "64:30" # s "midi" # midichan 4
+```
+
 #### Velocity
 
 MIDI velocity can be set using `amp` and `gain`. They work in a similar way to when used with samples, being `amp` linear and `gain` exponential.
