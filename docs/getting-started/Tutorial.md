@@ -25,7 +25,7 @@ d1 to d16. Here’s a minimal example, that plays a kick drum every cycle:
 
      d1 $ sound "bd"
 
-Evaluate the above code in the Atom (or Emacs) editor by pressing
+Evaluate the above code in the Pulsar editor by pressing
 Ctrl+Enter. If you want to stop the sound again, look ahead to the
 section on silence.
 

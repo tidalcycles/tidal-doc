@@ -101,9 +101,9 @@ Alternatively, you can start `sclang` from the terminal to get an interactive pr
 
 ### Start Tidal Cycles
 
-We will assume that you are working with the [Atom](https://atom.io) editor for now. For specific instructions concerning the text editor of your choice, take a look at the `Get a Text Editor` submenu in the sidebar that will contain more detailled instruction.
+We will assume that you are working with the [Pulsar](/getting-started/editor/Pulsar.md) editor (previously, Atom) for now. For specific instructions concerning the text editor of your choice, take a look at the `Get a Text Editor` submenu in the sidebar that will contain more detailled instruction.
 
-1.  Start Atom
+1.  Start Pulsar
 2.  Create a new file and save it with a filename that ends in `.tidal`,
     (e.g. `test.tidal`).
 3.  open the Packages menu and select `TidalCycles -> Boot
@@ -120,6 +120,6 @@ If you hear sound, congratulations :thumbsup: ! If you get stuck, you are welcom
 
 
 As is common with free software, you have alternative choices for the
-different components that make up a Tidal Cycles system. **Atom** and
+different components that make up a Tidal Cycles system. **Pulsar** and
 **SuperDirt** might be all you ever need, but there are other editors and
 synths you can use. Take a look at the sidebar to see the alternatives.
