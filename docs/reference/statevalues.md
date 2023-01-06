@@ -61,17 +61,6 @@ d1 $ struct "t(7,12,3)" $
   # nCountTo "rachael" "<4 8>"
 ```
 
-## Syntax
-
-Note the state values syntax: `# nTake "name" [list]`. The name can be any string, and the list needs to have comma separated members in brackets without quotes - this is not pattern grouping in Mini-notation. 
-
-```haskell 
--- This will fail:
-d3 $ n "0 2 3" #s "bass" #speedTake "[1 2 3 4 5]"
--- This works:
-d3 $ n "0 2 3" #s "bass" #speedTake "sVal" [1, 2, 5, 4, 3, 4]
-```
-
 Likewise, `rev` won't reverse the counter:
 ```haskell
 -- notes go up
@@ -83,8 +72,20 @@ The structure is reversed, but the notes still go up:
 d1 $ rev $ sound "newnotes(5,8)" # nCount "harold"
 ```
 
-You should be able to add `Take` to any control, and `Count` / `CountTo` to any numerical control.
-Below are examples of state values used with other controls. Note how the control values repeat in their own sequence, independant from when the note cycle pattern. 
+## Syntax
+
+Note the state values syntax: `# nTake "name" [list]`. The name can be any string, and the list needs to have comma separated members in brackets without quotes - this is not pattern grouping in Mini-notation. 
+
+```haskell 
+-- This will fail:
+d3 $ n "0 2 3" #s "bass" #speedTake "[1 2 3 4 5]"
+-- This works:
+d3 $ n "0 2 3" #s "bass" #speedTake "sVal" [1, 2, 5, 4, 3, 4]
+```
+
+## State Values with other controls
+You can add `Take` to any control, and `Count` / `CountTo` to any numerical control.  
+Below are some examples of state values used with other controls. Note how the control values repeat in their own sequence, independant from when the note cycle pattern. 
 
 ```haskell
 d3 $ n "0 2 3" #s "bass" # speedTake "sVal" [1, 2, 3, 4, 5, 4, 2]
