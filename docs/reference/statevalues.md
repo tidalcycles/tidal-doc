@@ -12,6 +12,7 @@ What is the problem? It's tricky to get events to line up. Let's say that you wa
 d1 $ slow 2 $ sound "alphabet(5,8)" # n "0 .. 4"
 ```
 There are ways to fix this (e.g. with the `fix` function), but they are not too satisfying/easy. 
+Another aspect is when you want to apply a sequence of values to a parameter (like speed, freq, pan, amp, etc) but you don't want the sequence to be bound to the cycle. When you use the standard pattern syntax, Tidal may make adjustments to preserve the cycle structure. 
 
 ## Introduction to State Values
 
@@ -60,6 +61,17 @@ d1 $ struct "t(7,12,3)" $
   # nCountTo "rachael" "<4 8>"
 ```
 
+## Syntax
+
+Note the state values syntax: `# nTake "name" [list]`. The name can be any string, and the list needs to have comma separated members in brackets without quotes - this is not pattern grouping in Mini-notation. 
+
+```haskell 
+-- This will fail:
+d3 $ n "0 2 3" #s "bass" #speedTake "[1 2 3 4 5]"
+-- This works:
+d3 $ n "0 2 3" #s "bass" #speedTake "sVal" [1, 2, 5, 4, 3, 4]
+```
+
 Likewise, `rev` won't reverse the counter:
 ```haskell
 -- notes go up
@@ -72,7 +84,15 @@ d1 $ rev $ sound "newnotes(5,8)" # nCount "harold"
 ```
 
 You should be able to add `Take` to any control, and `Count` / `CountTo` to any numerical control.
+Below are examples of state values used with other controls. Note how the control values repeat in their own sequence, independant from when the note cycle pattern. 
+
+```haskell
+d3 $ n "0 2 3" #s "bass" # speedTake "sVal" [1, 2, 3, 4, 5, 4, 2]
+d3 $ n "0 2 3" #s "bass" # accelerateTake "sVal3" [1, 2, 0.2, -0.8, 1.2]
+d3 $ n "0 2 3" #s "bass" # freqTake "sVal4" [200, 400, 700, 300, 220]
+d3 $ n "0 2 3" #s "bass" # ampTake "sVal5" [0.1, 0.8, 0.1, 0.7, 0.01]
+```
 
 :::warning
-This feature is unstable, so these  names might change.
+This feature is unstable, so these names might change.
 :::
