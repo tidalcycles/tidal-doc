@@ -2,6 +2,8 @@
 title: Changelog
 id: changelog
 ---
+## Releases
+See [Tidal GitHub Releases](https://github.com/tidalcycles/Tidal/releases) for a full list of changes in each release. GitHub also provides additional valuable information, including contributors, links to merged pull requests, etc. 
 
 ## Tidal 1.0.0
 
