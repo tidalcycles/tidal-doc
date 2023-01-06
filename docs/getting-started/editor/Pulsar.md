@@ -46,7 +46,7 @@ Other issues:
 
 ## Manul Installation of Tidalcycles package  
 In most circumstances manual installation of tidalcycles package in Pulsar should be avoided. Please use the Package Manager within Pulsar. 
-If there is a requirement for manual installation, or if installation via Package Manager repeatedly fails, below are manual steps that apply to MacOS and Linux. For more information, see [atom-tidalcycles on github](https://github.com/tidalcycles/atom-tidalcycles).
+If there is a requirement for manual installation, or if installation via Package Manager repeatedly fails, below are manual steps that apply to MacOS and Linux. For more information, see [pulsar-tidalcycles on github](https://github.com/tidalcycles/pulsar-tidalcycles).
 
 - Start Pulsar: This will create a hidden folder in your home directory `~/.pulsar`.
 - From a command line using `git`: (make sure you have launched the Pulsar application). This will install the tidalcycles package into `~/.pulsar/packages/tidalcycles/`.
@@ -103,8 +103,8 @@ Potential errors:
 
 ### Forum discussion
 
-The Tidal Package for Atom is developed by `ndr_brt` - who completed made this available in the new Pulsar package manager. There is a [Tidal Club forum thread](https://club.tidalcycles.org/t/the-atom-plugin-thread/2244) with more information and history of the development.
+The Tidal Package for Pulsar is developed by `ndr_brt` - who completed made this available in the new Pulsar package manager. There is a [Tidal Club forum thread](https://club.tidalcycles.org/t/the-atom-plugin-thread/2244) with more information and history of the development.
 
 ### GitHub repository
 
-There is a [GitHub repository](https://github.com/tidalcycles/atom-tidalcycles) if you want to contribute, report an issue or follow the development.
+There is a [GitHub repository](https://github.com/tidalcycles/pulsar-tidalcycles) if you want to contribute, report an issue or follow the development.
