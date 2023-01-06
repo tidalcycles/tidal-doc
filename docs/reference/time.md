@@ -582,7 +582,7 @@ See also: [Effects/Delay](https://tidalcycles.org/docs/reference/audio_effects#d
 Type: echo :: Pattern Integer -> Pattern Rational -> Pattern Double -> ControlPattern -> ControlPattern
 ```
 
-`echo`applies a type of delay to a pattern. It has three parameters, which could be called `depth`, `time` and `feedback`. `depth` is and integer, and `time` and `feedback` are floating point numbers.
+`echo` applies a type of delay to a pattern. It has three parameters, which could be called `depth`, `time` and `feedback`. `depth` is and integer, and `time` and `feedback` are floating point numbers.
 
 This adds a bit of echo:
 
@@ -628,3 +628,64 @@ Type: stutWith :: Pattern Int -> Pattern Time -> (Pattern a -> Pattern a) -> Pat
 ```
 
 _Deprecated_: use [echoWith](https://tidalcycles.org/docs/reference/time#echowith) instead.
+
+## Time shorthands
+
+When dealing with time functions, many times we need to specify times shorter than a cycle by using fractions or decimal numbers.
+
+Alternately, we can use textual shorthands to refer to the most common durations.
+
+For example, we can swap `0.25` or `1/4` for the shorthand `q`, which stands for a *q*uarter of a cycle.
+
+These three examples are equivalent:
+
+```haskell
+d1 $ off 0.25 (|+ n 7) $ n "c e" # sound "supermandolin"
+d1 $ off (1/4) (|+ n 7) $ n "c e" # sound "supermandolin"
+d1 $ off "q" (|+ n 7) $ n "c e" # sound "supermandolin"
+```
+
+Here's the current list of shorthands available:
+
+```
+w = 1 (whole)
+h = 1/2 = 0.5 (half)
+t = 1/3 (third)
+q = 1/4 = 0.25 (quarter)
+f = 1/5 = 0.2 (fifth)
+x = 1/6 (siXth)
+e = 1/8 = 0.125 (eighth)
+s = 1/16 = 0.0624 (sixteenth)
+```
+
+We can prefix these shorthand with a number to have multiples. These two examples sound the same:
+
+```haskell
+d1 $ stack [
+s "[bd,co sd bd sd]",
+pressBy "<0 0.25 0.5 0.75>" $ s "cp"
+]
+
+d1 $ stack [
+s "[bd,co sd bd sd]",
+pressBy "<0 q h 3q>" $ s "cp"
+]
+```
+
+For a 32nd, you could do `0.5s`:
+
+```haskell
+d1 $ echo 4 "0.5s" 0.9 $ sound "hh"
+```
+
+You can only use these shorthands on any function that receives a `Pattern`. This will work:
+
+```hasell
+d1 $ s "bd" # delaytime "x" # delay 0.8 # delayfb 0.4
+```
+
+But this won't (as `compress` needs a `Time`, not a `Pattern Time`):
+
+```haskell
+d1 $ compress ("q", "3q") $ s "[bd sn]!" -- ERROR
+```
