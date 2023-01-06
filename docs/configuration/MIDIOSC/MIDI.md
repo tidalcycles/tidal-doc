@@ -44,10 +44,10 @@ Take note that these MIDI devices have two parts to their names. You will need b
 
 Above, we have stored a reference to the device in a variable named `~midiOut`.
 
-Finally, define the name of the "synth" in Tidal you will use to control this device. Below, we will call it "midi". Eval the following line:
+Finally, define the name of the "synth" in Tidal you will use to control this device. Below, we will call it `mydevice`. Eval the following line:
 
 ```c
-~dirt.soundLibrary.addMIDI(\midi, ~midiOut);
+~dirt.soundLibrary.addMIDI(\mydevice, ~midiOut);
 ```
 
 Optionally, you can define a latency value on your device:
@@ -56,23 +56,23 @@ Optionally, you can define a latency value on your device:
 ~midiOut.latency = 0.45;
 ```
 
-That's it for initialization. You should now have a MIDI device connected in SuperDirt, running as a synth named "midi".
+That's it for initialization. You should now have a MIDI device connected in SuperDirt, running as a synth named `mydevice`.
 
 ### Usage in Tidal
 
 #### Note Patterns
 
 Now we can start writing some Tidal patterns to control the MIDI device. Let's send it a trivial note pattern:
-```c
-d1 $ n "0 2 4 7" # s "midi"
+```haskell
+d1 $ n "0 2 4 7" # s "mydevice"
 ```
 
-That should play a simple four-note pattern. Notice we're just using the synth name "midi" to send notes to the MIDI device.
+That should play a simple four-note pattern. Notice we're just using the synth name `mydevice` to send notes to the MIDI device.
 
 You can also use the note-name and octave notation:
 
-```c
-d1 $ n "c4 d4 e5 g3" # s "midi"
+```haskell
+d1 $ n "c4 d4 e5 g3" # s "mydevice"
 ```
 
 Alternatively to using `n` or `note` to pass MIDI notes, you can use the `midinote` function:
@@ -86,7 +86,7 @@ The only difference is that with `midinote` notes are specified with numbers fro
 The last example could be rewritten as:
 
 ```haskell
-d1 $ midinote "48 50 64 42" # s "midi"
+d1 $ midinote "48 50 64 42" # s "mydevice"
 ```
 
 #### MIDI Channels
@@ -99,20 +99,20 @@ Type: midichan :: Pattern Double -> ControlPattern
 
 The default MIDI channel is 1. SuperDirt MIDI channels are indexed starting at zero, so MIDI channel 1 is midichan 0:
 
-```c
-d1 $ note "0 2 4 7" # s "midi" # midichan 0
+```haskell
+d1 $ note "0 2 4 7" # s "mydevice" # midichan 0
 ```
 
-If your synth is listening on a different channel, let's say, MIDI channel 5, you would use midichan 4:
+If your synth is listening on a different channel, let's say, MIDI channel 5, you would use `midichan 4`:
 
-```c
-d1 $ note "0 2 4 7" # s "midi" # midichan 4
+```haskell
+d1 $ note "0 2 4 7" # s "mydevice" # midichan 4
 ```
 
-Notice that midichan accepts a pattern of numbers, so you can use a pattern to play on different MIDI channels:
+Notice that `midichan` accepts a pattern of numbers, so you can use a pattern to play on different MIDI channels:
 
-```c
-d1 $ note "0 2 4 7" # s "midi" # midichan "0 4"
+```haskell
+d1 $ note "0 2 4 7" # s "mydevice" # midichan "0 4"
 ```
 The above pattern plays notes "0 2" on channel 1 and "4 7" on channel 5.
 
@@ -120,8 +120,8 @@ The above pattern plays notes "0 2" on channel 1 and "4 7" on channel 5.
 
 To send a CC param to your synth, the best way to do it in the new SuperDirt MIDI is with a different Tidal pattern. To create this pattern, you'll be using two new SuperDirt MIDI params:
 
-* **ccn**: the CC param number you want to control: ccn 30
-* **ccv**: the value to send to the CC param, ranging from 0 to 127: ccv 64
+* **ccn**: the CC param number you want to control: `ccn 30`
+* **ccv**: the value to send to the CC param, ranging from 0 to 127: `ccv 64`
 
 ```haskell
 Type: ccn :: Pattern Double -> ControlPattern
@@ -130,22 +130,22 @@ Type: ccv :: Pattern Double -> ControlPattern
 
 Here's a full example, sending a value of 64 to CC param 30:
 
-```c
-d2 $ ccv 64 # ccn 30 # s "midi"
+```haskell
+d2 $ ccv 64 # ccn 30 # s "mydevice"
 ```
 
-You can of course also specify the MIDI channel with midichan:
+You can of course also specify the MIDI channel with `midichan`:
 
-```c
-d2 $ ccv 64 # ccn 30 # s "midi" # midichan 4
+```haskell
+d2 $ ccv 64 # ccn 30 # s "mydevice" # midichan 4
 ```
 
 You can specify patterns of CC values:
 
-```c
-d2 $ ccv "20 40 60 80 100" # ccn 30 # s "midi"
+```haskell
+d2 $ ccv "20 40 60 80 100" # ccn 30 # s "mydevice"
 
-d2 $ ccn "30*4" # ccv (range 20 100 $ slow 30 sine) # s "midi"
+d2 $ ccn "30*4" # ccv (range 20 100 $ slow 30 sine) # s "mydevice"
 ```
 
 Note that the left-most pattern defines the rhythm in this case when using `#`.
@@ -154,7 +154,7 @@ If you have a specific feature on your device that listens on a specific CC numb
 
 ```c
 let ringMod = 30
-d2 $ ccv "0 20 50 60" # ccn ringMod # s "midi"
+d2 $ ccv "0 20 50 60" # ccn ringMod # s "mydevice"
 ```
 If you have many CC params you want to control at once, a stack works well:
 
@@ -163,7 +163,7 @@ d2 $ fast 8 $ stack [
   ccn 30 # ccv (range 0 127 $ slow 30 sine),
   ccn 31 # ccv "[0 70 30 110]/3",
   ccn 32 # ccv 10
-  ] # s "midi"
+  ] # s "mydevice"
 ```
 
 Each device has its own MIDI chart implementation, but there are a few CC numbers that are standard and should work the same in most devices:
@@ -184,7 +184,7 @@ Type: cc :: Pattern String -> ControlPattern
 There is also the function `cc`, which allows us to pass both the number and the value in a single string:
 
 ```haskell
-d2 $ cc "64:30" # s "midi" # midichan 4
+d2 $ cc "64:30" # s "mydevice" # midichan 4
 ```
 
 #### Velocity
@@ -235,13 +235,13 @@ Note that usually a pitch wheel sends a number between `-8192` and `8191`, but h
 
 You can simulate the movement of the pitch wheel in various ways.
 
-Supposing your device is called `midi` and receives MIDI messages on channel `5`, in this example the sound will start in a C note, and gradually increase pitch to the limit of the pitch bend modulation:
+Supposing your device is called `mydevice` and receives MIDI messages on channel `5`, in this example the sound will start in a C note, and gradually increase pitch to the limit of the pitch bend modulation:
 
 ```haskell
 d1 $ stack [
   midibend (segment 128 $ range 8193 16383 $ saw),
   note "c"
-  ] # s "midi" # midichan 4
+  ] # s "mydevice" # midichan 4
 ```
 
 Now, we start at the minimum of the pitch bend modulation, and move fast to the neutral point, where we will sustain the pitch for the remaining of the cycle:
@@ -250,7 +250,7 @@ Now, we start at the minimum of the pitch bend modulation, and move fast to the 
 d1 $ stack [
   midibend (smooth "0@2 8193@10 8193@0.1"),
   note "c"
-  ] # s "midi" # midichan 4
+  ] # s "mydevice" # midichan 4
 ```
 
 #### Aftertouch
@@ -269,7 +269,7 @@ Aftertouch has a range from `0` to `127`, and default value is `0`.
 d1 $ stack [
   miditouch (segment 128 $ fast 4 $ range 0 64 $ sine),
   note "c"
-  ] # s "midi" # midichan 4
+  ] # s "mydevice" # midichan 4
 ```
 
 In this example, once a note is playing, we set aftertouch from `0` to `64` and backwards several times in a cycle, as if we were pressing the C key of a MIDI controller.
@@ -282,7 +282,7 @@ There isn't a specific function to send modulation wheel messages, but CC `1` is
 d1 $ stack [
   ccv (segment 128 $ range 0 128 $ sine) # ccn 1,
   note "c"
-  ] # s "midi" # midichan 4
+  ] # s "mydevice" # midichan 4
 ```
 
 Here, we start the cycle with mod wheel set to `0`, go up to maximum, then down to the minimum, and end the cycle at `0` again.
@@ -295,10 +295,10 @@ Program change messages can be sent with the `progNum` function.
 Type: progNum :: Pattern Double -> ControlPattern
 ```
 
-If you called you device `midi`, and it's receiving program change messages through MIDI channel `14`, you can change it's program/pattern by issuing a command like this:
+If you called you device `mydevice`, and it's receiving program change messages through MIDI channel `14`, you can change it's program/pattern by issuing a command like this:
 
 ```haskell
-once $ s "midi" # progNum 10 # midichan 13
+once $ s "mydevice" # progNum 10 # midichan 13
 ```
 
 #### NRPN parameters
@@ -315,13 +315,13 @@ NRPN numbers are composed of two bytes: MSB (Most Significant Byte) and LSB (Les
 NRPN values also have two bytes, which allows for more precision than CC messages. The valid rang for `nrpnv` is from `0` to `16384`. However, note that many devices will just ignore this extra precision.
 
 ```haskell
-d2 $ nrpnn (2*128+6) # nrpnv 14000 # s "midi" # midichan 12
+d2 $ nrpnn (2*128+6) # nrpnv 14000 # s "mydevice" # midichan 12
 ```
 
 `nrpnn` and `nrpnv` are patternable, but notice that their argument is of type `Pattern Int`, so you have to make sure to pass them `Int`s and not `Double`s:
 
 ```haskell
-d2 $ nrpnv (segment 32 $ floor <$> range 0 16000 sine) # nrpnn (1*128+29) # s "midi" # midichan 4
+d2 $ nrpnv (segment 32 $ floor <$> range 0 16000 sine) # nrpnn (1*128+29) # s "mydevice" # midichan 4
 ```
 
 `sine` is giving us `Double`s, so we need to convert them to `Int`s before feeding them to `nrpnv`. We do this by using `floor`, which is a Haskell function that rounds down a number, and `<$>` which applies a function (in this case `floor`) to all the elements in a collection.
@@ -333,7 +333,7 @@ Type: nrpn :: Pattern String -> ControlPattern
 There is also the function `nrpn`, which allows us to pass both the number and the value in a single string:
 
 ```haskell
-d2 $ nrpn "262:14000" # s "midi" # midichan 12
+d2 $ nrpn "262:14000" # s "mydevice" # midichan 12
 ```
 
 ## Tidal-Midi
@@ -454,19 +454,19 @@ Set up **SuperDirt MIDI** by following the [initialization](#Initialization) gui
 When that is done, you can start sending MIDI clock messages, 48 per cycle, like this:
 
 ```c
-p "midiclock" $ midicmd "midiClock*48" # s "midi"
+p "midiclock" $ midicmd "midiClock*48" # s "mydevice"
 ```
 
 Your MIDI device should adjust its BPM to Tidal's cps. It's then a good idea to send a `stop` message like this:
 
 ```c
-once $ midicmd "stop" # s "midi"
+once $ midicmd "stop" # s "mydevice"
 ```
 
 and then finally a start message to start the MIDI clock at the right time. The following sends a start message every fourth cycle:
 
 ```c
-p "midictl" $ midicmd "start/4" # s "midi"
+p "midictl" $ midicmd "start/4" # s "mydevice"
 
 ```
 Once everything's started and in sync, it's probably best to stop sending the start messages to avoid glitching:
