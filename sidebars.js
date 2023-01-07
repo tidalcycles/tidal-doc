@@ -131,6 +131,11 @@ module.exports = {
       "reference/control_busses",
     ],
   },
+  library: {
+    Introduction: [
+      "library/introduction"
+    ]
+  },
   community: [
     "resource/Community",
     "resource/Friends_and_relations",

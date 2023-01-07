@@ -36,6 +36,12 @@ module.exports = {
           label: "Reference",
           position: "left",
         },
+        {
+          to: "docs/library",
+          activeBasePath: "docs/library",
+          label: "Library",
+          position: "left"
+        },
         { to: "blog", label: "Blog", position: "left" },
         {
           to: "docs/community",

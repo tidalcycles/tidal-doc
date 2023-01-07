@@ -1,0 +1,60 @@
+---
+name: Sound.Tidal.Tempo
+id: Sound.Tidal.Tempo
+---
+
+### type
+```
+type TransitionMapper = Time -> [ControlPattern] -> ControlPattern 
+```
+
+### data
+```
+data TempoAction 
+```
+
+### data
+```
+data State 
+```
+
+### data
+```
+data ActionHandler 
+```
+
+### data
+```
+data LinkOperations 
+```
+
+### setCycle
+```
+setCycle :: Time -> MVar [TempoAction] -> IO () 
+```
+
+### setNudge
+```
+setNudge :: MVar [TempoAction] -> Double -> IO () 
+```
+
+### timeToCycles'
+```
+timeToCycles' :: Config -> SessionState -> Micros -> IO Time 
+```
+
+### cyclesToTime
+```
+cyclesToTime :: Config -> SessionState -> Time -> IO Micros 
+```
+
+### addMicrosToOsc
+```
+addMicrosToOsc :: Micros -> Time -> Time 
+```
+
+### clocked
+```
+clocked :: Config -> MVar ValueMap -> MVar PlayMap -> MVar [TempoAction] -> ActionHandler -> AbletonLink -> IO [ThreadId] 
+```
+
