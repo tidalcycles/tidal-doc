@@ -4,10 +4,19 @@
         <title>Tidal Cycles Blog</title>
         <link>https://doc.tidalcycles.org/blog</link>
         <description>Tidal Cycles Blog</description>
-        <lastBuildDate>Thu, 30 May 2019 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 08 Jan 2023 07:12:10 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[blogArchive]]></title>
+            <link>https://doc.tidalcycles.org/blog/blogArchive</link>
+            <guid>/blogArchive</guid>
+            <pubDate>Sun, 08 Jan 2023 07:12:10 GMT</pubDate>
+            <description><![CDATA[Blog archive]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="blog-archive">Blog archive<a class="hash-link" href="#blog-archive" title="Direct link to heading">​</a></h2><p>The older site had a Blog feature with posts from 2017 - 2020.<br>
+<a href="https://blog.tidalcycles.org/index.html" target="_blank" rel="noopener noreferrer">TidalCycles Blog Archive</a></p><p>Content to explore:</p><ul><li><a href="https://blog.tidalcycles.org/category/interviews/index.html" target="_blank" rel="noopener noreferrer">Interviews</a> <ul><li>Malitzin Cortes aka CNDSD</li><li>Kindohm aka Mike Hodnick</li></ul></li><li><a href="https://blog.tidalcycles.org/category/interviews/index.html" target="_blank" rel="noopener noreferrer">Summer of Haskell Project</a></li><li><a href="https://blog.tidalcycles.org/index.html%3Fp=346.html" target="_blank" rel="noopener noreferrer">Six Months of Tidal</a></li></ul><p>Some of the posts are a bit dated, and refer to older versions of Tidal, but it is still interesting to reflect on how things have evolved.</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[New Documentation]]></title>
             <link>https://doc.tidalcycles.org/blog/2019/05/30/welcome</link>
