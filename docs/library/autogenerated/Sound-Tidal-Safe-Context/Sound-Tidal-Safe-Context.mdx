@@ -1,0 +1,180 @@
+---
+title: Sound.Tidal.Safe.Context
+slug: /library/modules/Sound.Tidal.Safe.Context
+---
+
+<!------------------------------------------------------------------------------
+THIS IS A DOC FILE AUTOMATICALLY GENERATED FROM:
+
+https://github.com/tidalcycles/Tidal/blob/main/src/Sound/Tidal/Safe/Context.hs
+
+It's based on the documentation comments in the Tidal code.
+Do not edit it directly--to update this documentation, please submit a
+change to the original file in the Tidal repository. Thanks!
+------------------------------------------------------------------------------->
+
+### data
+```
+data Op r 
+```
+
+### exec
+```
+exec :: Stream -> Op r -> IO r 
+```
+
+### streamReplace
+```
+streamReplace :: ID -> ControlPattern -> Op () 
+```
+
+### streamHush
+```
+streamHush :: Op () 
+```
+
+### streamList
+```
+streamList :: Op () 
+```
+
+### streamMute
+```
+streamMute :: ID -> Op () 
+```
+
+### streamUnmute
+```
+streamUnmute :: ID -> Op () 
+```
+
+### streamSolo
+```
+streamSolo :: ID -> Op () 
+```
+
+### streamUnsolo
+```
+streamUnsolo :: ID -> Op () 
+```
+
+### streamOnce
+```
+streamOnce :: ControlPattern -> Op () 
+```
+
+### streamFirst
+```
+streamFirst :: ControlPattern -> Op () 
+```
+
+### streamNudgeAll
+```
+streamNudgeAll :: Double -> Op () 
+```
+
+### streamAll
+```
+streamAll :: (ControlPattern -> ControlPattern) -> Op () 
+```
+
+### streamResetCycles
+```
+streamResetCycles :: Op () 
+```
+
+### streamSetI
+```
+streamSetI :: String -> Pattern Int -> Op () 
+```
+
+### streamSetF
+```
+streamSetF :: String -> Pattern Double -> Op () 
+```
+
+### streamSetS
+```
+streamSetS :: String -> Pattern String -> Op () 
+```
+
+### streamSetR
+```
+streamSetR :: String -> Pattern Rational -> Op () 
+```
+
+### streamSetB
+```
+streamSetB :: String -> Pattern Bool -> Op () 
+```
+
+### transition
+```
+transition :: Bool -> (Time -> [ControlPattern] -> ControlPattern) -> ID -> ControlPattern -> Op () 
+```
+
+### module 
+```
+module Sound.Tidal.Context
+```
+
+### module 
+```
+module Sound.Tidal.Version
+```
+
+### module 
+```
+module Sound.Tidal.UI
+```
+
+### module 
+```
+module Sound.Tidal.Simple
+```
+
+### module 
+```
+module Sound.Tidal.Scales
+```
+
+### module 
+```
+module Sound.Tidal.Pattern
+```
+
+### module 
+```
+module Sound.Tidal.ParseBP
+```
+
+### module 
+```
+module Sound.Tidal.Params
+```
+
+### module 
+```
+module Sound.Tidal.Core
+```
+
+### module 
+```
+module Sound.Tidal.Control
+```
+
+### module 
+```
+module Sound.Tidal.Config
+```
+
+### module 
+```
+module Data.Ratio
+```
+
+### data
+```
+data Target 
+```
+

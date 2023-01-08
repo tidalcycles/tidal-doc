@@ -1,0 +1,70 @@
+---
+title: Sound.Tidal.Tempo
+slug: /library/modules/Sound.Tidal.Tempo
+---
+
+<!------------------------------------------------------------------------------
+THIS IS A DOC FILE AUTOMATICALLY GENERATED FROM:
+
+https://github.com/tidalcycles/Tidal/blob/main/src/Sound/Tidal/Tempo.hs
+
+It's based on the documentation comments in the Tidal code.
+Do not edit it directly--to update this documentation, please submit a
+change to the original file in the Tidal repository. Thanks!
+------------------------------------------------------------------------------->
+
+### type
+```
+type TransitionMapper = Time -> [ControlPattern] -> ControlPattern 
+```
+
+### data
+```
+data TempoAction 
+```
+
+### data
+```
+data State 
+```
+
+### data
+```
+data ActionHandler 
+```
+
+### data
+```
+data LinkOperations 
+```
+
+### setCycle
+```
+setCycle :: Time -> MVar [TempoAction] -> IO () 
+```
+
+### setNudge
+```
+setNudge :: MVar [TempoAction] -> Double -> IO () 
+```
+
+### timeToCycles'
+```
+timeToCycles' :: Config -> SessionState -> Micros -> IO Time 
+```
+
+### cyclesToTime
+```
+cyclesToTime :: Config -> SessionState -> Time -> IO Micros 
+```
+
+### addMicrosToOsc
+```
+addMicrosToOsc :: Micros -> Time -> Time 
+```
+
+### clocked
+```
+clocked :: Config -> MVar ValueMap -> MVar PlayMap -> MVar [TempoAction] -> ActionHandler -> AbletonLink -> IO [ThreadId] 
+```
+
