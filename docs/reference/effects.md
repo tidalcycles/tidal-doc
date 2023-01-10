@@ -236,12 +236,3 @@ You can also check [this link](http://mathworld.wolfram.com/ConformalMapping.htm
 
 Made by [Mads Kjeldgaard](https://madskjeldgaard.dk/).
 * `enhance`: ???
-
-## MIDI
-
-Yes, MIDI is an effect :clap: . Whatever, here are the supported parameters:
-
-* `dur`: duration in ???
-* `modwheel`: modwheel modulation amount
-* `expression`: expression pedal amount
-* `sustainpedal`: sustain pedal amount
