@@ -33,6 +33,7 @@ Most modern distros will make all or most of these available for convenient inst
 The following instructions provide commands specific to different distro families. They are labelled as:
  - ***debian*** - the debian family of distros includes **debian**, **\*buntu**, **Mint**, **pop!_OS** and more
  - ***Arch*** - the Arch family of distros includes **Arch Linux**, **Manjaro** and more
+ - ***fedora*** - the fedora distro (tested), may also apply to other RPM based distros (eg RedHat, OpenSUSE, Rocky Linux etc)
  - ***all*** - this command should be run by everyone, regardless of distro
     
 Choose the command that matches the distro you are running.
@@ -64,13 +65,19 @@ groups | grep audio
     
 ***debian***
 ```bash
-sudo apt update; sudo apt install git jackd2 qjackctl zlib1g-dev
+sudo apt update; sudo apt install git jackd2 qjackctl zlib1g-dev gcc g++ cabal-install
 ```
 
 ***Arch***
 ```bash
 sudo pacman -Syu; pacman -Sy git jack2 qjackctl
 ```
+
+***fedora***
+```bash
+sudo dnf install git-core qjackctl gcc-c++ cabal-install
+```
+
 ---
 2. Remove conflicts
 ---
@@ -92,6 +99,16 @@ sudo apt install supercollider sc3-{plugins,plugins-language,plugins-server}
 ```bash
 sudo pacman -Sy supercollider sc3-plugins
 ```
+
+***fedora***
+```bash
+sudo dnf install supercollider
+```
+sc3-plugins for fedora is provided by a 3rd party repo (you may choose to leave it enabled)
+```bash
+sudo dnf copr enable ycollet/audinux; sudo dnf install supercollider-sc3-plugins; sudo dnf copr disable ycollet/audinux;
+```
+
 ---
     
 ### SuperDirt Installation
@@ -105,12 +122,17 @@ sudo pacman -Sy supercollider sc3-plugins
 git ls-remote https://github.com/musikinformatik/SuperDirt.git | grep tags | tail -n1 | awk -F/ '{print $NF}'
 ```
 --- 
-2. Install SuperDirt, update the version number if required. Once complete press `Ctrl+c` to exit `sclang`
+2. Install SuperDirt, update the version number if required. Once complete press `Ctrl+d` to exit `sclang`
 ---
 ***all***
 
 ```shell
-echo "Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recompile()})" | sclang -
+sclang
+```
+
+Once the `sclang` shell is available, paste this line and press Enter (and wait, it returns immediately but processes in the background)
+```shell
+Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recompile()})
 ```
     
 ---
