@@ -6,7 +6,7 @@ layout: wiki
 
 ## Automatic installation
 
-This method uses the package manager Chocolatey and will install everything you need, including required dependencies. Please note that this is a significant install process and takes time, but in the end all components will be ready for use. The installer assumes that these aren't installed already. If you do have some components already (SuperCollider, SuperDirt, etc) it is recommended to use Manual install steps for the remaining components.
+This method uses the package manager [Chocolatey](https://chocolatey.org/) and will install everything you need, including required dependencies. Please note that this is a significant install process and takes time, but in the end all components will be ready for use. The installer assumes that these aren't installed already. If you do have some components (SuperCollider, SuperDirt, etc) it is recommended to use Manual install steps for the remaining components (see below).
 
 Components installed via Chocolatey package manager:  
 - [git](https://git-scm.com/)
@@ -14,7 +14,7 @@ Components installed via Chocolatey package manager:
 - [sc3-plugins](http://supercollider.github.io/sc3-plugins/)
 - [msys2](https://www.msys2.org/) - (only needed for the choco install)
 - [Haskell - ghc](https://www.haskell.org/ghcup/) & [cabal](https://www.haskell.org/cabal/)
-- [SuperDirt](https://github.com/musikinformatik/SuperDirt)) with [sample library](https://github.com/musikinformatik/Dirt-Samples) and [Vowel quark](https://github.com/supercollider-quarks/Vowel)
+- [SuperDirt](https://github.com/musikinformatik/SuperDirt) with the [dirt sample library](https://github.com/musikinformatik/Dirt-Samples) and [Vowel quark](https://github.com/supercollider-quarks/Vowel)
 - [Pulsar-dev Editor](https://pulsar-edit.dev/) with TidalCycles plugin package
 
 ### Installation procedure
@@ -53,16 +53,22 @@ After the powershell script is finished, you should review the choco install log
 
 **IV - Potential problems and fixes**
 
-- SuperCollider quarks install failed for SuperDirt, Dirt Samples, and Vowel. These can be installed manually within the SuperCollider IDE. See the command to execute below.
-- Pulsar install failed. Download the installer manually from [Pulsar-dev](pulsar-edit.dev). Once installed, follow the step below to install the TidalCycles plugin package.
-- Pulsar install succeeded but didn't install the TidalCycles plugin package. This can done manually from within Pulsar. From the top menu, open the Package Manager, select Install search for TidalCycles, and select install.
-- Haskell install fails. You can try running the `choco install tidalcycles` command again or see the TidalCycles & Haskell steps below.
+- *SuperCollider quarks install failed for SuperDirt, Dirt Samples, and/or Vowel.*  
+These can be installed manually within the SuperCollider IDE. See the command to execute in the Manual installation section below.
+- *Pulsar install failed.*  
+Download the installer manually from [Pulsar-dev](pulsar-edit.dev). Once installed, follow the step below to install the TidalCycles plugin package.
+- *Pulsar install succeeded but didn't install the TidalCycles plugin package.*  
+This can done manually from within Pulsar. From the top menu, open the Package Manager, select Install search for TidalCycles, and select install.
+- *Haskell (ghc) or cabal install fails.*  
+You can try running the `choco install tidalcycles` command again or see the TidalCycles & Haskell steps below.
+
+-----
 
 -----
 
 ## Manual installation
 
-You might prefer to install the different components of Tidal Cycles by hand. This is the recommended way for users who already installed some of the components ([Git](https://git-scm.com/), [Haskell](https://www.haskell.org/ghcup/), [Atom Editor](https://atom.io/), [SuperCollider](https://supercollider.github.io/downloads), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). All these components are needed to install Tidal Cycles.
+This method is recommended for users who already have some of the components such as ([Haskell](https://www.haskell.org/ghcup/), [SuperCollider](https://supercollider.github.io/downloads), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). All these components are needed to install Tidal Cycles.
 
 ### SC3 Plugins
 
@@ -96,7 +102,7 @@ compiling class library...
 
 ### Tidal Cycles & Haskell
 
-You will need [Haskell](https://www.haskell.org/ghcup/) (Ghcup) to install Tidal Cycles. If you just installed it or already got it installed, open `PowerShell` in **administrator mode** (see above). Enter the following commands:
+You will need [Haskell](https://www.haskell.org/ghcup/) (Ghcup) to install Tidal Cycles. If you just installed it or already had it installed, open `PowerShell` in **administrator mode** (see above). Enter the following commands:
 
 ```shell
 cabal update
@@ -107,6 +113,18 @@ Make sure to use `v1-install`, as `v2-install tidal` *may not work*.
 The last command might take some time to complete. Be patient, and everything will be alright :smile:.
 
 -----
+
+## Getting Help
+
+If you are having trouble with installation, here are options:
+- Review this page carefully and make sure you are following all instructions.  
+- For individual component problems - such as SuperCollider and SuperDirt - check their ReadMe pages in GitHub.
+- [TidalCycles Discord - Installation Help Channel](https://discord.com/channels/779427371270275082/779487905822801930)
+    - Try searching this channel to see if your problem has been experienced by others
+    - Be sure to post details - what exact problem, error messages, what Windows version, etc.
+    - See the "how to ask" channel for more about getting help from our community
+- Don't get discouraged! Tidal has a complex stack, but these components are all proven, robust and stable. Once it is all working, it rarely needs to have any attention. 
+----
 
 ## Note for Windows 7 users
 
