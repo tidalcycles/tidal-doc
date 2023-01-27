@@ -70,7 +70,7 @@ let oscplay = OSC "/play" $ ArgList [("s", Nothing),
                                    ]
 ```
 
-As well as `sec` and `usec`, there are three other parameters that Tidal will always fill in if present; `cps` (cycles per second), `cycle` (the start of the event in cycles) and `delta` (the duration of the event in cycles). So add those too, if you want that information to be sent to the target:
+As well as `sec` and `usec`, there are three other parameters that Tidal will always fill in if present; `cps` (cycles per second), `cycle` (the start of the event in cycles) and `delta` (the duration of the event in seconds). So add those too, if you want that information to be sent to the target:
 
 ```c
 let oscplay = OSC "/play" $ ArgList [("s", Nothing),
