@@ -64,8 +64,6 @@ You can try running the `choco install tidalcycles` command again or see the Tid
 
 -----
 
------
-
 ## Manual installation
 
 This method is recommended for users who already have some of the components such as ([Haskell](https://www.haskell.org/ghcup/), [SuperCollider](https://supercollider.github.io/downloads), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). All these components are needed to install Tidal Cycles.

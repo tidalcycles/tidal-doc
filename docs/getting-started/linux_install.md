@@ -32,24 +32,25 @@ Most modern distros will make all or most of these available for convenient inst
 
 The following instructions provide commands specific to different distro families. They are labelled as:
  - ***debian*** - the debian family of distros includes **debian**, **\*buntu**, **Mint**, **pop!_OS** and more
- - ***Arch*** - the Arch family of distros includes **Arch Linux**, **Manjaro** and more
+ - ***arch*** - the Arch family of distros includes **Arch Linux**, **Manjaro** and more
  - ***fedora*** - the fedora distro (tested), may also apply to other RPM based distros (eg RedHat, OpenSUSE, Rocky Linux etc)
  - ***all*** - this command should be run by everyone, regardless of distro
     
 Choose the command that matches the distro you are running.
 
+---
+
 ### Configure User
 
-1. Add your user as a member of the `audio` group
----
+1\. Add your user as a member of the `audio` group
+
 ***all***
 ```bash
 sudo usermod -a -G audio $USER
 ```
----
     
-2. Logout and log back in for it to take effect. You can check it worked with
----
+2\. Logout and log back in for it to take effect. You can check it worked with
+
 ***all***
 
 ```bash
@@ -59,16 +60,14 @@ groups | grep audio
     
 ### Package Preconfiguration
     
-1. Install dependencies
+1\. Install dependencies
 
----
-    
 ***debian***
 ```bash
 sudo apt update; sudo apt install git jackd2 qjackctl zlib1g-dev gcc g++ cabal-install
 ```
 
-***Arch***
+***arch***
 ```bash
 sudo pacman -Syu; pacman -Sy git jack2 qjackctl
 ```
@@ -78,24 +77,23 @@ sudo pacman -Syu; pacman -Sy git jack2 qjackctl
 sudo dnf install git-core qjackctl gcc-c++ cabal-install
 ```
 
----
-2. Remove conflicts
----
-***Arch***
+2\. Remove conflicts
+
+***arch***
 ```bash
 sudo pacman -R lib32-mesa-demos mesa-demos
 ```
 ---
     
 ### SuperCollider Installation
-1. Install SuperCollider and SC3-Plugins
----
+1\. Install SuperCollider and SC3-Plugins
+
 ***debian***
 ```bash
 sudo apt install supercollider sc3-{plugins,plugins-language,plugins-server}
 ```
     
-***Arch***
+***arch***
 ```bash
 sudo pacman -Sy supercollider sc3-plugins
 ```
@@ -113,44 +111,50 @@ sudo dnf copr enable ycollet/audinux; sudo dnf install supercollider-sc3-plugins
     
 ### SuperDirt Installation
     
-**SuperDirt** is a plugin or *"Quark"* for SuperCollider, and functions as the audio engine for TidalCycles as well as providing the default set of samples. 
+> **SuperDirt** is a plugin or *"Quark"* for SuperCollider, and functions as the audio engine for TidalCycles as well as providing the default set of samples.
 
-1. Get the version number of the latest SuperDirt release (you can also do this by checking the [github page](https://github.com/musikinformatik/SuperDirt/releases))
----
+1\. Get the version number of the latest SuperDirt release (you can also do this by checking the [github page](https://github.com/musikinformatik/SuperDirt/releases))
+
 ***all***
 ```bash
 git ls-remote https://github.com/musikinformatik/SuperDirt.git | grep tags | tail -n1 | awk -F/ '{print $NF}'
 ```
---- 
-2. Install SuperDirt, update the version number if required. Once complete press `Ctrl+d` to exit `sclang`
----
+
+2\. Install SuperDirt, update the version number if required. Once complete press `Ctrl+d` to exit `sclang`
+
 ***all***
+
+2.a. Start the `sclang` shell
 
 ```shell
 sclang
 ```
 
-Once the `sclang` shell is available, paste this line and press Enter (and wait, it returns immediately but processes in the background)
-```shell
+2.b. Paste this line and press Enter (and wait, it returns immediately but processes in the background).
+
+```c
 Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recompile()})
 ```
     
 ---
     
 ### Tidal Installation
-1. Install tidal - please note, ***Arch*** is the only distro to support Tidal installation via it's core package manager, other distros require using the haskell package/environment manager, `cabal (>=3.0.0.0)`
----    
-***Arch***
+
+1\. Install tidal
+
+> ***arch*** is the only distro to support Tidal installation via it's core package manager, other distros require using the haskell package/environment manager, `cabal (>=3.0.0.0)` 
+
+***arch***
 ```bash
 sudo pacman -Sy haskell-tidal ghc ghc-libs haskell-{tidal,bifunctors,colour,hosc,mwc-random,network,primitive,random,vector,microspec}
 ```
             
-***all (except Arch)***
+***all others***
 ```bash
 cabal update; cabal install tidal --lib
 ```
 
-*Note: `cabal` can be notoriously fickle. If for some reason it fails, you can safely reset the environment by renaming your `~/.ghc` and `~/.cabal` folders, and re-running the above commands.*
+> *Note: `cabal` can be notoriously fickle. If for some reason it fails, you can safely reset the environment by renaming your `~/.ghc` and `~/.cabal` folders, and re-running the above commands.*
 
 ---
     
@@ -162,7 +166,9 @@ TidalCycles is supported by a wide variety of text editors, you will need one to
  - [emacs](/getting-started/editor/Emacs.md)
     
 ... and more.
-        
+
+---
+
 ### Start Tidal
     
 You're almost there! [Follow these instructions to get Tidal started](/getting-started/tidal_start.md)
