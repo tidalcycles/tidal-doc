@@ -124,13 +124,13 @@ git ls-remote https://github.com/musikinformatik/SuperDirt.git | grep tags | tai
 
 ***all***
 
-2.a. Start the `sclang` shell
+2\.a. Start the `sclang` shell
 
 ```shell
 sclang
 ```
 
-2.b. Paste this line and press Enter (and wait, it returns immediately but processes in the background).
+2\.b. Paste this line and press Enter (and wait, it returns immediately but processes in the background).
 
 ```c
 Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recompile()})
