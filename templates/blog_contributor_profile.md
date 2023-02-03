@@ -1,14 +1,14 @@
 ---
-title: Tidal Contributor Profile - name
-author: name
+title: Tidal Contributor Profile - (name)
+author: (name)
 ---
 
 *(Instructions: Edit the Detail column. Omit any rows that aren't relevant.)*
 
 | Topic     | Details    |
 | :--------: | ---------- |
-| User   | <name> |
-| aka    | <screenName> |
+| User   | (name) |
+| aka    | (screenName) |
 | Years with Tidal | _  yrs |
 | Contributor since |      |
 | Other LiveCoding env | Strudel, Estuary, SonicPi, Hydra, FoxDot, etc |
@@ -40,4 +40,4 @@ author: name
     - etc.
 
 ### Other
-<Anything additional you can share.>
+(Anything additional you can share.)
