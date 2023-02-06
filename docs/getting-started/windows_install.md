@@ -53,11 +53,20 @@ After the powershell script is finished, you should review the choco install log
 
 **IV - Potential problems and fixes**
 
-- *SuperCollider quarks install failed for SuperDirt, Dirt Samples, and/or Vowel.*  
+- *SuperCollider quarks install failed for SuperDirt, Dirt Samples, and/or Vowel*  
 These can be installed manually within the SuperCollider IDE. See the command to execute in the Manual installation section below.
-- *Pulsar install failed.*  
+- *Tidal package install failed*
+    - You can confirm the status of your tidal install with this command: `cabal info tidal`. If you get a message that "There is no package named tidal" then something went wrong and you need to run these commands (follow the steps in the Manual Install section):
+
+
+```shell
+cabal update
+cabal v1-install tidal
+```
+
+- *Pulsar install failed*  
 Download the installer manually from [Pulsar-dev](pulsar-edit.dev). Once installed, follow the step below to install the TidalCycles plugin package.
-- *Pulsar install succeeded but didn't install the TidalCycles plugin package.*  
+- *Pulsar install succeeded but didn't install the TidalCycles plugin package*  
 This can done manually from within Pulsar. From the top menu, open the Package Manager, select Install search for TidalCycles, and select install.
 - *Haskell (ghc) or cabal install fails.*  
 You can try running the `choco install tidalcycles` command again or see the TidalCycles & Haskell steps below.
@@ -116,7 +125,9 @@ The last command might take some time to complete. Be patient, and everything wi
 
 If you are having trouble with installation, here are options:
 - Review this page carefully and make sure you are following all instructions.  
-- For individual component problems - such as SuperCollider and SuperDirt - check their ReadMe pages in GitHub.
+- For individual component problems - such as SuperCollider and SuperDirt - check their ReadMe pages in GitHub:  
+    - [SuperCollider Readme](https://github.com/supercollider/supercollider)
+    - [SuperDirt Readme](https://github.com/musikinformatik/SuperDirt)
 - [TidalCycles Discord - Installation Help Channel](https://discord.com/channels/779427371270275082/779487905822801930)
     - Try searching this channel to see if your problem has been experienced by others
     - Be sure to post details - what exact problem, error messages, what Windows version, etc.
