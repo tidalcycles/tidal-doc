@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://doc.tidalcycles.org/blog</id>
     <title>Tidal Cycles Blog</title>
-    <updated>2023-02-06T04:29:23.000Z</updated>
+    <updated>2023-02-09T11:14:52.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://doc.tidalcycles.org/blog"/>
     <subtitle>Tidal Cycles Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[Blog Archive]]></title>
         <id>/blogArchive</id>
         <link href="https://doc.tidalcycles.org/blog/blogArchive"/>
-        <updated>2023-02-06T04:29:23.000Z</updated>
+        <updated>2023-02-09T11:14:52.000Z</updated>
         <summary type="html"><![CDATA[The older site had a Blog feature with posts from 2017 - 2020.]]></summary>
         <content type="html"><![CDATA[<p>The older site had a Blog feature with posts from 2017 - 2020.<br>
 <a href="https://blog.tidalcycles.org/index.html" target="_blank" rel="noopener noreferrer">TidalCycles Blog Archive</a></p><p>Content to explore:</p><ul><li><a href="https://blog.tidalcycles.org/category/interviews/index.html" target="_blank" rel="noopener noreferrer">Interviews</a> <ul><li>Malitzin Cortes aka CNDSD</li><li>Kindohm aka Mike Hodnick</li></ul></li><li><a href="https://blog.tidalcycles.org/category/interviews/index.html" target="_blank" rel="noopener noreferrer">Summer of Haskell Project</a></li><li><a href="https://blog.tidalcycles.org/index.html%3Fp=346.html" target="_blank" rel="noopener noreferrer">Six Months of Tidal</a></li></ul><p>Some of the posts may be dated, or refer to older versions of Tidal. But it is still interesting to reflect on how things have evolved.</p>]]></content>
