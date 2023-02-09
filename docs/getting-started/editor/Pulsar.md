@@ -44,7 +44,7 @@ Other issues:
 ---
 ---
 
-## Manul Installation of Tidalcycles package  
+## Manual Installation of Tidalcycles package  
 In most circumstances manual installation of tidalcycles package in Pulsar should be avoided. Please use the Package Manager within Pulsar. 
 If there is a requirement for manual installation, or if installation via Package Manager repeatedly fails, below are manual steps that apply to MacOS and Linux. For more information, see [pulsar-tidalcycles on github](https://github.com/tidalcycles/pulsar-tidalcycles).
 
