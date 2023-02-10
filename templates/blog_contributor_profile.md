@@ -16,7 +16,7 @@ author: (name)
 | Code online | GitHub |
 | Other music/audio sw | DAW, MaxMSP, Audacity, etc |
 
-*(Note: All questions/topics are optional. Leave any of these out, or add other relevant topics/questions.)*
+*(Note: All questions/topics are optional. In general, your profile should be brief, easily readable, and easy to write! Respond to 2 - 3 questions in each category below. Or add other relevant topics/questions.)*
 
 ### Tidal Contributions
 - How do you contribute to Tidal Cycles? What have you worked on?  
@@ -33,7 +33,7 @@ author: (name)
 - Tell us about your livecoding music. What musical genre(s) or style(s) describe it best?  
 - How has your music evolved since you have been livecoding?
 - What samples or instruments do you like to work with?
-- What projects are you currently working on?
+- What projects are you currently working on / planning? What's next?
 - Links to your music / recorded livecoding sessions:
     - Your Website
     - YouTube
