@@ -33,6 +33,7 @@ Heh. I think I've had a go at just about everything
 - I particularly enjoy the WeekendJams - I get to meet new people, share inspirations with all the different ideas all mashed together, learn, and just generally have a great time. I've made some great friends through jams.
 
 ## Livecoding
+![cleary in the groove](https://photos.smugmug.com/photos/i-7r8LGsw/0/O/i-7r8LGsw.jpg) (photo: Jason Richardson)
 **What do you like about livecoding in Tidal?**
 
 - It's concise, it's (fairly) self-explanatory, and it's very easy to be both creatively specific and random as required.
@@ -44,24 +45,24 @@ Heh. I think I've had a go at just about everything
 
 **What functions and coding approaches do you like to use?**
 
-- I tend to make a point to separate my rhythmic and harmonic elements for easy reuse (`struct` and `n`/`note`) - which is a hangover from the collaborative nature of the WeekendJam sessions. I keep the code for most sets I play on [Github](https://github.com/cleary/livecode/tree/main/sets).
+> I tend to make a point to separate my rhythmic and harmonic elements for easy reuse (`struct` and `n`/`note`) - which is a hangover from the collaborative nature of the WeekendJam sessions. I keep the code for most sets I play on [Github](https://github.com/cleary/livecode/tree/main/sets).
 
 **Do you use Tidal with other tools / environments?**
 
-- I've done some external software synth control (Vital/Yoshimi), I also have a Midi Fighter Twister controller which sometimes gets a run - I tend to keep it pretty vanilla though, particularly since doing the workshop tours last year. Also, [estuary](https://estuary.mcmaster.ca) of course.
+> I've done some external software synth control (Vital/Yoshimi), I also have a Midi Fighter Twister controller which sometimes gets a run. I tend to keep it pretty vanilla though, particularly since doing the workshop tours last year. Also, [estuary](https://estuary.mcmaster.ca) of course.
 
 ## Music
 **Tell us about your livecoding music. What musical genre(s) or style(s) describe it best?**
 
-- Varied? I don't really know much about genres - for more musical stuff, I tend to make use of western music theory. If I'm doing solely rhythmic stuff I tend to try and push myself [outside my common use 4/4 6/8 time signatures](https://youtu.be/to1_4id_oyc) - the few patterns I did for [#patternuary this year](https://youtube.com/playlist?list=PLt8O3WdGnQjdh9SJqIQeku8u9g1acI5Y5) probably highlight that variety fairly well.
+> Varied? I don't really know much about genres - for more musical stuff, I tend to make use of western music theory. If I'm doing solely rhythmic stuff I tend to try and push myself [outside my common use 4/4 6/8 time signatures](https://youtu.be/to1_4id_oyc) - the few patterns I did for [#patternuary this year](https://youtube.com/playlist?list=PLt8O3WdGnQjdh9SJqIQeku8u9g1acI5Y5) probably highlight that variety fairly well.
 
 **How has your music evolved since you have been livecoding?**
 
-- Yeah, _a lot_ - I played "traditional" instruments before I started. The biggest evolution has involved trying to break out of all the subconscious composer lockin that comes with that (fixed tempos, chords limited by number of fingers/how far they can stretch, increasing the number of simultaneous voices). It's moved from what I could do on a guitar/bass/piano with 10 fingers and a looper to beyond orchestral possibilities (and exposed my lack of compositional knowledge in that area!).
+> Yeah, _a lot_ - I played "traditional" instruments before I started. The biggest evolution has involved trying to break out of all the subconscious composer lockin that comes with that (fixed tempos, chords limited by number of fingers/how far they can stretch, increasing the number of simultaneous voices). It's moved from what I could do on a guitar/bass/piano with 10 fingers and a looper to beyond orchestral possibilities (and exposed my lack of compositional knowledge in that area!).
 
 **What samples or instruments do you like to work with?**
 
-- Anything :) I've been trying to get more comfortable [working with break samples](https://youtu.be/JsZPN3yqu2s) a bit lately.
+> Anything :) I've been trying to get more comfortable [working with break samples](https://youtu.be/JsZPN3yqu2s) a bit lately.
 
 **What projects are you currently working on / planning? What's next?**
 
@@ -79,3 +80,5 @@ Heh. I think I've had a go at just about everything
 ## Other
 
 Just a big thank you for all the people I've chatted to/jammed with/learned from over the years, you've all been a huge inspiration, and I'm very glad to have been able to share my livecoding journey with you.
+
+![cleary livecoding](https://photos.smugmug.com/photos/i-Tkwbk75/0/O/i-Tkwbk75.jpg) (photo: Jason Richardson)
