@@ -1,7 +1,5 @@
 ---
 title: Blog Archive
-author: HighHarmonics
-author_title: contributor
 ---
 
 The older site had a Blog feature with posts from 2017 - 2020.  
