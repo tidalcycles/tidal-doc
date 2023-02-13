@@ -46,6 +46,7 @@ author: (name)
 If you are to able/willing to work with a Pull Request in GitHub, you can follow the directions below. Alternatively, you can work with one of the Blog editors and provide your content in whatever way works for you (via Discord DM, email, saving a markdown file, etc.)
 
 - Create a fork of this tidal-doc repository.
+- Optional: Create a new branch.
 - Copy the top part of this file into a new file in the blog folder. Use the naming convention: contributor_profile_<yourName>.md
 - Remove the directions (italics). Remove any lines or questions you don't want to cover.
 - Add your content and tell your unique story. 
