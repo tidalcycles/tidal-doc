@@ -33,7 +33,7 @@ I think I've had a go at just about everything:
 - I particularly enjoy the WeekendJams - I get to meet new people, share inspirations with all the different ideas all mashed together, learn, and just generally have a great time. I've made some great friends through jams.
 
 ## Livecoding
-<img src="https://photos.smugmug.com/photos/i-7r8LGsw/0/O/i-7r8LGsw.jpg"  width="600" height="450">   
+<img src="https://photos.smugmug.com/photos/i-7r8LGsw/0/O/i-7r8LGsw.jpg"  width="600" height="450" />   
 (photo: Jason Richardson)
 
 **What do you like about livecoding in Tidal?**
@@ -83,5 +83,5 @@ Anything :) I've been trying to get more comfortable [working with break samples
 
 Just a big thank you for all the people I've chatted to/jammed with/learned from over the years, you've all been a huge inspiration, and I'm very glad to have been able to share my livecoding journey with you.  
 
-<img src="https://photos.smugmug.com/photos/i-Tkwbk75/0/O/i-Tkwbk75.jpg"  width="600" height="450" >     
+<img src="https://photos.smugmug.com/photos/i-Tkwbk75/0/O/i-Tkwbk75.jpg"  width="600" height="450" />     
 (photo: Jason Richardson)     
