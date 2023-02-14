@@ -33,7 +33,9 @@ Heh. I think I've had a go at just about everything
 - I particularly enjoy the WeekendJams - I get to meet new people, share inspirations with all the different ideas all mashed together, learn, and just generally have a great time. I've made some great friends through jams.
 
 ## Livecoding
-![cleary in the groove](https://photos.smugmug.com/photos/i-7r8LGsw/0/O/i-7r8LGsw.jpg) (photo: Jason Richardson)
+<img src="https://photos.smugmug.com/photos/i-7r8LGsw/0/O/i-7r8LGsw.jpg"  width="50%" height="50%" alt="cleary in the groove!">. 
+(photo: Jason Richardson)
+
 **What do you like about livecoding in Tidal?**
 
 - It's concise, it's (fairly) self-explanatory, and it's very easy to be both creatively specific and random as required.
@@ -62,7 +64,7 @@ Heh. I think I've had a go at just about everything
 
 **What samples or instruments do you like to work with?**
 
-> Anything :) I've been trying to get more comfortable [working with break samples](https://youtu.be/JsZPN3yqu2s) a bit lately.
+Anything :) I've been trying to get more comfortable [working with break samples](https://youtu.be/JsZPN3yqu2s) a bit lately.
 
 **What projects are you currently working on / planning? What's next?**
 
@@ -72,13 +74,16 @@ Heh. I think I've had a go at just about everything
 
 ## Links to your music / recorded livecoding sessions:
 
-    - YouTube: https://www.youtube.com/@clearyss
-    - Soundcloud: https://soundcloud.com/bergra
-    - Twitch: https://www.twitch.tv/clearyss
-    - Github (code): https://github.com/cleary/livecode
+- YouTube: https://www.youtube.com/@clearyss
+- Soundcloud: https://soundcloud.com/bergra
+- Twitch: https://www.twitch.tv/clearyss
+- Github (code): https://github.com/cleary/livecode
 
 ## Other
 
 Just a big thank you for all the people I've chatted to/jammed with/learned from over the years, you've all been a huge inspiration, and I'm very glad to have been able to share my livecoding journey with you.
 
-![cleary livecoding](https://photos.smugmug.com/photos/i-Tkwbk75/0/O/i-Tkwbk75.jpg) (photo: Jason Richardson)
+<img src="https://photos.smugmug.com/photos/i-Tkwbk75/0/O/i-Tkwbk75.jpg"  width="50%" height="50%" alt="cleary livecoding">.  
+(photo: Jason Richardson)
+
+#contributor_profiles 
