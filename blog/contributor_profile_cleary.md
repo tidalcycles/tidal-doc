@@ -3,6 +3,9 @@ title: Tidal Contributor Profile - cleary (Bernard Gray)
 author: Bernard Gray
 ---
 
+<img src="https://photos.smugmug.com/photos/i-Tkwbk75/0/O/i-Tkwbk75.jpg"  width="50%" height="50%" >    
+(photo: Jason Richardson)
+
 | Topic     | Details    |
 | :--------: | ---------- |
 |   | Bernard Gray |
@@ -17,11 +20,11 @@ author: Bernard Gray
 ## Tidal Contributions
 **How do you contribute to Tidal Cycles? What have you worked on?**
 
-Heh. I think I've had a go at just about everything
+I think I've had a go at just about everything:
 
 - I developed and maintain a [Linux installer](https://github.com/cleary/ansible-tidalcycles) in Ansible
 - I've added a few [simple patches to](https://github.com/tidalcycles/Tidal/commits?author=cleary)/nutted out ideas for tidal itself, particularly around the [chords module](https://club.tidalcycles.org/t/rfc-working-on-making-chord-naming-chordlist-more-consistent/2717)
-- I've written [bits of documentation](https://github.com/tidalcycles/tidal-doc/commits?author=cleary)
+- I've written [documentation](https://github.com/tidalcycles/tidal-doc/commits?author=cleary)
 - I often [play in](https://youtube.com/playlist?list=PLt8O3WdGnQjdg8PPpRgsw4w9bSmX5JY7b), and have helped organise some of the Solstice Marathon Livestreams
 - I am active and support others on the [forums](https://club.tidalcycles.org/u/cleary/summary) and the discord support channels
 - For the last 2 years I've been hosting a weekly collaborative (mostly tidal) livecoding session called [WeekendJam](https://youtube.com/playlist?list=PLt8O3WdGnQjfCNVBK2O0W0_nwiSgWIoFR) for anyone to come along and have a jam with me
@@ -33,8 +36,7 @@ Heh. I think I've had a go at just about everything
 - I particularly enjoy the WeekendJams - I get to meet new people, share inspirations with all the different ideas all mashed together, learn, and just generally have a great time. I've made some great friends through jams.
 
 ## Livecoding
-<img src="https://photos.smugmug.com/photos/i-7r8LGsw/0/O/i-7r8LGsw.jpg"  width="50%" height="50%" alt="cleary in the groove!">. 
-
+<img src="https://photos.smugmug.com/photos/i-7r8LGsw/0/O/i-7r8LGsw.jpg"  width="50%" height="50%">   
 (photo: Jason Richardson)
 
 **What do you like about livecoding in Tidal?**
@@ -83,9 +85,5 @@ Anything :) I've been trying to get more comfortable [working with break samples
 ## Other
 
 Just a big thank you for all the people I've chatted to/jammed with/learned from over the years, you've all been a huge inspiration, and I'm very glad to have been able to share my livecoding journey with you.  
-
-<img src="https://photos.smugmug.com/photos/i-Tkwbk75/0/O/i-Tkwbk75.jpg"  width="50%" height="50%" alt="cleary livecoding"> 
-
-(photo: Jason Richardson)
 
 #contributor_profiles 
