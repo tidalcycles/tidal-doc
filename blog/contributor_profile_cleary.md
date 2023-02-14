@@ -34,6 +34,7 @@ Heh. I think I've had a go at just about everything
 
 ## Livecoding
 <img src="https://photos.smugmug.com/photos/i-7r8LGsw/0/O/i-7r8LGsw.jpg"  width="50%" height="50%" alt="cleary in the groove!">. 
+
 (photo: Jason Richardson)
 
 **What do you like about livecoding in Tidal?**
@@ -81,9 +82,10 @@ Anything :) I've been trying to get more comfortable [working with break samples
 
 ## Other
 
-Just a big thank you for all the people I've chatted to/jammed with/learned from over the years, you've all been a huge inspiration, and I'm very glad to have been able to share my livecoding journey with you.
+Just a big thank you for all the people I've chatted to/jammed with/learned from over the years, you've all been a huge inspiration, and I'm very glad to have been able to share my livecoding journey with you.  
 
-<img src="https://photos.smugmug.com/photos/i-Tkwbk75/0/O/i-Tkwbk75.jpg"  width="50%" height="50%" alt="cleary livecoding">.  
+<img src="https://photos.smugmug.com/photos/i-Tkwbk75/0/O/i-Tkwbk75.jpg"  width="50%" height="50%" alt="cleary livecoding"> 
+
 (photo: Jason Richardson)
 
 #contributor_profiles 
