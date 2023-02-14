@@ -17,12 +17,14 @@ title: Tidal Contributor Profile - (name)
 *(Instructions: All questions/topics are optional. In general, your profile should be brief, easily readable, and easy to write! Respond to one or more questions in each category below. Or add other relevant topics/questions. You can also remove the questions and write a free-form response, telling us about your journey and experience with Tidal.)*
 
 ## Tidal Contributions
+
 **How do you contribute to Tidal Cycles? What have you worked on?**  
 - 
 **What motivates you to be a Tidal contributor?**   
 - 
 
 ## Livecoding
+
 **What do you like about livecoding in Tidal? What inspires you?**   
 -
 **How do you approach your livecoding sessions?**
@@ -33,6 +35,7 @@ title: Tidal Contributor Profile - (name)
 -
 
 ## Music
+
 **Tell us about your livecoding music.**
 - 
 **How has your music evolved since you have been livecoding?**
