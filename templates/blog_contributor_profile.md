@@ -1,13 +1,11 @@
 ---
 title: Tidal Contributor Profile - (name)
-author: (name)
 ---
 
-*(Instructions: Edit the Detail column. Delete any rows that aren't relevant. It is OK to only list your screen name.)*
+*(Instructions: Edit the Right column. Delete any rows that aren't relevant. It's OK to only list your screen name.)*
 
-| Topic     | Details    |
-| :--------: | ---------- |
-|    | (name) |
+| Contributor  | (name)    |
+| --------:    | :---------- |
 | aka    | (screenName) |
 | Years with Tidal | _  yrs |
 | Contributor since |      |
@@ -19,24 +17,35 @@ author: (name)
 *(Instructions: All questions/topics are optional. In general, your profile should be brief, easily readable, and easy to write! Respond to one or more questions in each category below. Or add other relevant topics/questions. You can also remove the questions and write a free-form response, telling us about your journey and experience with Tidal.)*
 
 ## Tidal Contributions
-- How do you contribute to Tidal Cycles? What have you worked on?  
-- What motivates you to be a Tidal contributor?
+**How do you contribute to Tidal Cycles? What have you worked on?**  
+- 
+**What motivates you to be a Tidal contributor?**   
+- 
 
 ## Livecoding
-- What do you like about livecoding in Tidal? What inspires you?
-- How do you approach your livecoding sessions? Do you use prepared code? Do you start with a blank slate?
-- What functions and coding approaches do you like to use?
-- Do you use Tidal with other tools / environments?
+**What do you like about livecoding in Tidal? What inspires you?**   
+-
+**How do you approach your livecoding sessions?**
+- 
+**What functions and coding approaches do you like to use?**
+- 
+**Do you use Tidal with other tools / environments?**
+-
 
 ## Music
-- Tell us about your livecoding music.  
-- How has your music evolved since you have been livecoding?
-- What samples or instruments do you like to work with?
-- What projects are you currently working on / planning? What's next?
-- Links to your music / recorded livecoding sessions:
-    - Your Website
-    - YouTube
-    - etc.
+**Tell us about your livecoding music.**
+- 
+**How has your music evolved since you have been livecoding?**
+- 
+**What samples or instruments do you like to work with?**
+-
+**What projects are you currently working on or planning? What's next?**
+- 
+
+### Links to your music / recorded livecoding sessions:
+- Your Website
+- YouTube
+- etc.
 
 ### Other
 *(Anything additional you can share, including an image.)*
