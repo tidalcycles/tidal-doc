@@ -110,9 +110,11 @@ sudo dnf copr enable ycollet/audinux; sudo dnf install supercollider-sc3-plugins
 ---
     
 ### SuperDirt Installation
-    
-> **SuperDirt** is a plugin or *"Quark"* for SuperCollider, and functions as the audio engine for TidalCycles as well as providing the default set of samples.
 
+:::tip
+**SuperDirt** is a plugin or *"Quark"* for SuperCollider, and functions as the audio engine for TidalCycles as well as providing the default set of samples.
+:::
+    
 1\. Get the version number of the latest SuperDirt release (you can also do this by checking the [github page](https://github.com/musikinformatik/SuperDirt/releases))
 
 ***all***
@@ -153,8 +155,10 @@ sudo pacman -Sy haskell-tidal ghc ghc-libs haskell-{tidal,bifunctors,colour,hosc
 ```bash
 cabal update; cabal install tidal --lib
 ```
-
-> *Note: `cabal` can be notoriously fickle. If for some reason it fails, you can safely reset the environment by renaming your `~/.ghc` and `~/.cabal` folders, and re-running the above commands.*
+    
+:::tip    
+`cabal` can be notoriously fickle. If for some reason it fails, you can safely reset the environment by renaming your `~/.ghc` and `~/.cabal` folders, and re-running the above commands.*
+:::
 
 ---
     
