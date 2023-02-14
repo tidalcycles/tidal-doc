@@ -85,6 +85,3 @@ Just a big thank you for all the people I've chatted to/jammed with/learned from
 
 <img src="https://photos.smugmug.com/photos/i-Tkwbk75/0/O/i-Tkwbk75.jpg"  width="50%" height="50%" >     
 (photo: Jason Richardson)     
-
-
-#contributor_profiles 
