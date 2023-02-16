@@ -7,6 +7,7 @@ title: Tidal Contributor Profile - (name)
 | Contributor  | (name)    |
 | --------:    | :---------- |
 | aka    | (screenName) |
+| Location | (city or country) | 
 | Years with Tidal | _  yrs |
 | Contributor since |      |
 | Other LiveCoding env | Strudel, Estuary, SonicPi, Hydra, FoxDot, etc |
@@ -51,6 +52,9 @@ title: Tidal Contributor Profile - (name)
 
 ### Other  
 *(Anything additional you can share, including an image.)*
+- Bio details
+- Algorave? 
+
 
 ---
 ## Posting Instructions
