@@ -9,7 +9,7 @@ Content to explore:
 - [Interviews](https://blog.tidalcycles.org/category/interviews/index.html) 
   - Malitzin Cortes aka CNDSD
   - Kindohm aka Mike Hodnick
-- [Summer of Haskell Project](https://blog.tidalcycles.org/index.html%3Fp=1280.html)
+- [Autonomous Live Coding: Summer of Haskell Project](https://blog.tidalcycles.org/index.html%3Fp=1280.html)
 - [Six Months of Tidal](https://blog.tidalcycles.org/index.html%3Fp=346.html)
 
 Some of the posts may be dated, or refer to older versions of Tidal. But it is still interesting to reflect on how things have evolved. 
