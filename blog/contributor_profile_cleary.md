@@ -1,8 +1,8 @@
 ---
-title: Tidal Contributor Profile - cleary (Bernard Gray)
+title: Tidal Profile - cleary (Bernard Gray)
 ---
 
-| Contributor  | Bernard Gray |
+| Tidal Cyclist  | Bernard Gray |
 | --------:    | :---------- |
 | aka    | cleary |
 | Time with Tidal | 3  yrs |
