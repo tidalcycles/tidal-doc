@@ -1,28 +1,20 @@
 ---
-title: Tidal Contributor Profile - (name)
+title: Tidal Profile - (name)
 ---
 
 *(Instructions: Edit the Right column. Delete any rows that aren't relevant. It's OK to only list your screen name.)*
 
-| Contributor  | (name)    |
+| Tidal Cyclist  | (name)    |
 | --------:    | :---------- |
 | aka    | (screenName) |
 | Location | (city or country) | 
 | Years with Tidal | _  yrs |
-| Contributor since |      |
 | Other LiveCoding env | Strudel, Estuary, SonicPi, Hydra, FoxDot, etc |
 | Music available online | YouTube, SoundCloud, BandCamp, FunkWhale |
 | Code online | GitHub |
 | Other music/audio sw | DAW, MaxMSP, Audacity, etc |
 
 *(Instructions: All questions/topics are optional. In general, your profile should be brief, easily readable, and easy to write! Respond to one or more questions in each category below. Or add other relevant topics/questions. You can also remove the questions and write a free-form response, telling us about your journey and experience with Tidal.)*
-
-## Tidal Contributions  
-
-**How do you contribute to Tidal Cycles? What have you worked on?**  
-
-**What motivates you to be a Tidal contributor?**   
-
 
 ## Livecoding  
 
@@ -33,6 +25,12 @@ title: Tidal Contributor Profile - (name)
 **What functions and coding approaches do you like to use?**  
 
 **Do you use Tidal with other tools / environments?**  
+
+## Tidal Contributions  
+
+**How do you contribute to Tidal Cycles? What have you worked on?**  
+
+**What motivates you to work on Tidal?**   
 
 ## Music  
 
@@ -52,8 +50,10 @@ title: Tidal Contributor Profile - (name)
 
 ### Other  
 *(Anything additional you can share, including an image.)*
-- Bio details
-- Algorave? 
+- Musical background
+- Bio details, education
+- Algorave participation
+- etc
 
 
 ---
