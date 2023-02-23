@@ -65,9 +65,9 @@ cabal v1-install tidal
 ```
 
 - *Pulsar install failed*  
-Download the installer manually from [Pulsar-dev](pulsar-edit.dev). Once installed, follow the step below to install the TidalCycles plugin package.
+Download the installer manually from [Pulsar-dev](https://pulsar-edit.dev/). Once installed, follow the step below to install the TidalCycles plugin package.
 - *Pulsar install succeeded but didn't install the TidalCycles plugin package*  
-This can done manually from within Pulsar. From the top menu, open the Package Manager, select Install search for TidalCycles, and select install.
+This can done manually from within Pulsar. From the top menu, open the Package Manager, select Install, then search for TidalCycles, and select install. This will install the TidalCycle package into Pulsar. For more details, see the Pulsar page in the "Get a Text Editor" section. 
 - *Haskell (ghc) or cabal install fails.*  
 You can try running the `choco install tidalcycles` command again or see the TidalCycles & Haskell steps below.
 
