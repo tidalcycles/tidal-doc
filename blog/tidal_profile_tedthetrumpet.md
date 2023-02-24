@@ -10,7 +10,11 @@ title: Tidal Profile - tedthetrumpet (J Simon van der Walt)
 | Music available online | [Bandcamp](https://tedthetrumpet.bandcamp.com/), [SoundCloud](https://soundcloud.com/tedthetrumpet), [YouTube](https://www.youtube.com/tedthetrumpet)  |
 | Other music/audio sw | Audacity, MuseScore, Logic |
 
-<img src="./jsvdw-birdhide.jpg"  width="600"/>
+<img
+  src={require('./jsvdw-birdhide.jpg').default}
+  alt="Example banner"
+  width="600"
+/>
 
 ## Livecoding
 
