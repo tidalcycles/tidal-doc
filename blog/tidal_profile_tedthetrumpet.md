@@ -12,7 +12,7 @@ title: Tidal Profile - tedthetrumpet (J Simon van der Walt)
 
 <img
   src={require('./jsvdw-birdhide.jpg').default}
-  alt="Example banner"
+  alt="ttt birding"
   width="600"
 />
 
@@ -65,7 +65,11 @@ title: Tidal Profile - tedthetrumpet (J Simon van der Walt)
 
 ## Other
 
-![photoWithBrother](jspcanscrop.png)
+<img
+  src={require('./jspcanscrop.png').default}
+  alt="youth photo with vintage synth"
+  width="600"
+/>
 
 - With my brother, late 1970s, homebrew [analog synth](http://pcbunn.cithep.caltech.edu/jjb/Synthesizers/Minisonic2/default.htm).
 - [jsimonvanderwalt.com](https://jsimonvanderwalt.com)
