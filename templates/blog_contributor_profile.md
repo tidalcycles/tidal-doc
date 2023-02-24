@@ -58,15 +58,24 @@ title: Tidal Profile - (name)
 
 ---
 ## Posting Instructions
-If you are to able/willing to work with a Pull Request in GitHub, you can follow the directions below. Alternatively, you can work with one of the Blog editors and provide your content in whatever way works for you (via Discord DM, email, saving a markdown file, etc.)
+If you are to able/willing to work with a Pull Request in GitHub, use that method. Alternatively, you can work with one of the Blog editors and provide your content in whatever way works for you. Another option is to post in your GitHub repository using the markdown format, but don't do a Pull Request. In that case, just let a blog editor know when you are ready. 
 
-- Create a fork of this tidal-doc repository.
-- Optional: Create a new branch.
-- Copy the top part of this file into a new file in the blog folder. Use the naming convention: contributor_profile_<yourName>.md
-- Remove the directions (italics). Remove any lines or questions you don't want to cover.
-- Add your content and tell your unique story. 
-- Submit a Pull Request to the main repo.
-- Let the blog editor know you are ready for review. 
+1. Via GitHub
+    - Create a fork of this tidal-doc repository.
+    - Optional: Create a new branch.
+    - Copy the top part of this file into a new file in the blog folder. Use the naming convention: tidal_profile_<yourName>.md
+    - Remove the directions (italics). Remove any lines or questions you don't want to cover.
+    - Add your content and tell your unique story. 
+    - Submit a Pull Request to the main repo.
+    - Let the blog editor know you are ready for review. 
+2. Via markdown file (tidal_profile_<yourName>.md
+    - Cut and past this template file
+    - make your edits, add your content
+    - reach out to a blog editor with a link to your file, or send it via email
+3. Text
+    - Take questions from above
+    - Add your content
+    - Send the result via email to a blog editor, OR post it in DM on ClubTidal or Discord
     
     
 That's it! Thanks for contributing. 
