@@ -56,6 +56,7 @@ title: Tidal Profile - tedthetrumpet (J Simon van der Walt)
 - Most of the things I've put out are actually in SuperCollider, but these are Tidal/MiniTidal –
     - Improvising 'gamelan' music in Estuary https://diode.zone/w/ppenMJ4p9W2b41pDe7ZNiA
     - Short Estuary piece 'brarnarnarnarnard' https://www.youtube.com/watch?v=tV4G1z55ePA
+    - Solstice Night Stream Dec 2022 - Livecoding with Audacity https://www.youtube.com/watch?v=0YpgHdJY-Kw&list=PLMBIpibV-wQIdS6D1vdijRZPfLBrRP9A_&index=6
     - Part of a longer jam I'd forgotten about, starts abstract and gets a bit more rave later  https://youtu.be/jDl_ALEq4Zs?t=575
 
 ## Other
