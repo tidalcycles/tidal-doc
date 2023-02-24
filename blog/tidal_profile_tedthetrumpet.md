@@ -10,7 +10,7 @@ title: Tidal Profile - tedthetrumpet (J Simon van der Walt)
 | Music available online | [Bandcamp](https://tedthetrumpet.bandcamp.com/), [SoundCloud](https://soundcloud.com/tedthetrumpet), [YouTube](https://www.youtube.com/tedthetrumpet)  |
 | Other music/audio sw | Audacity, MuseScore, Logic |
 
-<img src="jsvdw-birdhide.jpg"  width="600"/>
+<img src="./jsvdw-birdhide.jpg"  width="600"/>
 
 ## Livecoding
 
@@ -61,7 +61,7 @@ title: Tidal Profile - tedthetrumpet (J Simon van der Walt)
 
 ## Other
 
-<img src="jspcanscrop.png"  width="600" />
+![photoWithBrother](jspcanscrop.png)
 
 - With my brother, late 1970s, homebrew [analog synth](http://pcbunn.cithep.caltech.edu/jjb/Synthesizers/Minisonic2/default.htm).
 - [jsimonvanderwalt.com](https://jsimonvanderwalt.com)
