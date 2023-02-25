@@ -18,7 +18,9 @@ For debian/ubuntu/mint systems, these ugens can be installed as part of the [ans
  - Windows: `C:\Users\<youruser>\AppData\Local\SuperCollider\Extensions\mi-UGens`
  - OSX:     `/Users/<youruser>/Library/Application Support/SuperCollider/Extensions/mi-UGens`
 
-**Note:** The SuperCollider Extensions folder can be found by running `Platform.userExtensionDir` in SuperCollider. The path will be printed to the post window.
+:::tip
+The SuperCollider Extensions folder can be found by running `Platform.userExtensionDir` in SuperCollider. The path will be printed to the post window.
+:::
 
 3. Create a new synthdef file `mi-ugens.scd`, with [these synthdefs](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/master/files/mutable-instruments-synthdefs.scd)
 
@@ -41,7 +43,9 @@ For debian/ubuntu/mint systems, these ugens can be installed as part of the [ans
 
 6. Load the `mi-ugens.scd` synthdef in `startup.scd`. Use the full path from **3.**
 
-*NOTE FOR WINDOWS USERS: you must use double backslashes for the `load()` path in startup.scd, eg `load("C:\\Users\\<youruser>\...");`*
+:::tip
+**WINDOWS Users!** You **must** use double backslashes for the `load()` path in startup.scd, eg `load("C:\\Users\\<youruser>\...");`
+:::
 
 After:
 ```
@@ -87,4 +91,6 @@ After:
 
 10. Start/restart SuperCollider
 
-**OSX Users Note: you may see a security dialog disallowing the ugens to run. Please see [this post by @oscd](https://club.tidalcycles.org/t/mutable-instruments-ugens/2730/106) for workarounds/fixes**
+:::tip
+**OSX Users!*** You may see a security dialog disallowing the ugens to run. Please see [this post by @oscd](https://club.tidalcycles.org/t/mutable-instruments-ugens/2730/106) for workarounds/fixes**
+:::
