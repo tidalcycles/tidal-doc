@@ -73,4 +73,4 @@ title: Tidal Profile - tedthetrumpet (J Simon van der Walt)
 
 - With my brother, late 1970s, homebrew [analog synth](http://pcbunn.cithep.caltech.edu/jjb/Synthesizers/Minisonic2/default.htm).
 - [jsimonvanderwalt.com](https://jsimonvanderwalt.com)
-- t[edthetrumpet.hotglue.me](https://tedthetrumpet.hotglue.me/)
+- [tedthetrumpet.hotglue.me](https://tedthetrumpet.hotglue.me/)
