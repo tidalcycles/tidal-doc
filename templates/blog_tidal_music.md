@@ -14,9 +14,9 @@ author_title: (include if relevant)
 | Genre | (EDM, Glitch/Noise, Techno, Hybrid, Electronic, Experimental, etc. ) |
 | Available | (link to Bandcamp, SoundCloud, YouTube, etc) |
 | Release Date | (date) optional |
-| Collaborators| (other musicians/artists) |
+| Collaborators | (other musicians/artists) |
 
-## Summary 
+## Summary
 *(2 - 3 sentences that describe the project.)*  
 
 *Example: TidalTracks is a new collection of music made using Tidal Cycles and available now on Bandcamp. These tracks were prepared for livecoding sessions at Algoraves throughout Great Britain and private sessions over the past year.*
