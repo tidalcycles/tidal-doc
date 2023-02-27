@@ -4,6 +4,8 @@ author: (include if different from Musician/Artist)
 author_title: (include if relevant)
 ---
 
+*(Note: use this template to submit a blog post on a Tidal Music topic. This can be a new album or music project release, a review or post about a music project, or discussion / analysis of a specific music project that was made with Tidal.)*
+
 *(Instructions: Adapt or change the labels and sections to fit your unique project.)*
 
 | Tidal Musician | (name)    |
