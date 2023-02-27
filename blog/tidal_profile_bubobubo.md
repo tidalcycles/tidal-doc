@@ -10,7 +10,9 @@ title: Tidal Profile - BuboBubo (Raphaël Maurice Forment )
 | Other LiveCoding env | SuperCollider, ORCA, FoxDot |
 | Music available online | [Bandcamp](https://bubobubo.bandcamp.com/album/archive-grrrnd-zero) |
 | Code online | [GitHub](https://github.com/Bubobubobubobubo) |
-| Other music/audio sw | SuperCollider, MaxMSP, SunVox, VCVRack |
+| Other music/audio sw | SuperCollider, MaxMSP, SunVox, VCVRack |  
+
+<img src="https://cookie.paris/static/2691e91b9da74087ddb672eb917bec9e/04f58/8.webp"  width="600" height="450" />
 
 ## Livecoding  
 
