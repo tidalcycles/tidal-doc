@@ -25,7 +25,7 @@ s.options.numOutputBusChannels = 12;
 You assign the orbits to separate stereo channels by offsetting each
 one, like this:
 ```c
-~dirt.start(57120, \[0, 2, 4, 6, 8, 10\]);
+~dirt.start(57120, [0, 2, 4, 6, 8, 10]);
 ```
 You might also be tempted to change the number in this line:
 
