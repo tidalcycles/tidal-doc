@@ -30,7 +30,7 @@ d1
   $ sh 5 id
   $ sh "e" id
   $ sh 3 id
-  $ s "sin"
+  $ s "sine"
 ```
 
 this is a really simple example, and from here you can start and mixup all sort of other functions, I also love `chunk`, that moves things a lot:
@@ -40,7 +40,7 @@ d1
   $ sh 5 id
   $ sh "e" id
   $ sh 3 id
-  $ s "sin"
+  $ s "sine"
 ```
 
 The fun is that, if you replace `sin` with, for example, a percussive sample like `bd`, here you have a nice drum pattern.
@@ -53,7 +53,7 @@ d1
   $ sh 5 id
   $ sh "e" id
   $ sh 3 id
-  $ s "sin"
+  $ s "sine"
 
 -- or
 
@@ -63,7 +63,7 @@ d1
   $ sh 5 id
   $ sh "e" id
   $ sh 3 id
-  $ s "sin"
+  $ s "sine"
 ```
 
 I often try to escape from this mindset but at the end I fall into it most of the times.
