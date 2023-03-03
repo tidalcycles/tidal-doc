@@ -23,7 +23,52 @@ Nowadays I'm still able to find inspiration watching other people livecoding or 
 I always try to start from scratch, when I code alone I usually focus on a single function and try to get everything out of it, while I'm in front of an audience I just go with the flow.
 
 **What functions and coding approaches do you like to use?**
-I'm a huge fan of `superimpose` (used with the `si` shortand), especially mixed with `hurry`, in my "single sample runs" I create layers of the same sample playing at different speed/density to create rhythm and melodic patterns, I often try to escape from this mindset but at the end I fall into it most of the times.
+I'm a huge fan of `superimpose` (used with the `si` shortand), especially mixed with `hurry`, in my "single sample runs" I create layers of the same sample playing at different speed/density to create rhythm and melodic patterns.
+For example:
+```haskell
+let sh t f p = superimpose ((hurry t).f) p
+
+d1
+  $ sh 5 id
+  $ sh "e" id
+  $ sh 3 id
+  $ s "sin"
+```
+
+this is a really simple example, and from here you can start and mixup all sort of other functions, I also love `chunk`, that moves things a lot:
+```haskell
+d1
+  $ chunk 7 (|* speed 1.5)
+  $ sh 5 id
+  $ sh "e" id
+  $ sh 3 id
+  $ s "sin"
+```
+
+The fun is that, if you replace `sin` with, for example, a percussive sample like `bd`, here you have a nice drum pattern.
+
+Then to completely unhinge the structure, `chew` and `bite` are also good friends:
+```haskell
+d1
+  $ chew 4 (iter 3 "3 1 0")
+  $ chunk 7 (|* speed 1.5)
+  $ sh 5 id
+  $ sh "e" id
+  $ sh 3 id
+  $ s "sin"
+
+-- or
+
+d1
+  $ bite 4 (iter 5 "3 0 1")
+  $ chunk 7 (|* speed 1.5)
+  $ sh 5 id
+  $ sh "e" id
+  $ sh 3 id
+  $ s "sin"
+```
+
+ I often try to escape from this mindset but at the end I fall into it most of the times.
 
 **Do you use Tidal with other tools / environments?**
 I tried it to control some drum machines circuit bent by me but at the end I find the hardware overcomplicated and I prefer to play soft-synths, especially Supercollider: everything in a box and controllable with the keyboard.
