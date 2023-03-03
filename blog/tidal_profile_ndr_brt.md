@@ -75,9 +75,9 @@ I often try to escape from this mindset but at the end I fall into it most of th
 ## Tidal Contributions  
 
 **How do you contribute to Tidal Cycles? What have you worked on?**
-- I learned Haskell only to contribute to Tidal. I'm passionate about reading code and get the insights of the software, on the main codebase I solved some bugs and added some features mainly in the mini-notation section ([tidal commits](https://github.com/tidalcycles/Tidal/commits?author=ndr-brt). 
+- I learned Haskell only to contribute to Tidal. I'm passionate about reading code and get the insights of the software, on the main codebase I solved some bugs and added some features mainly in the mini-notation section ([tidal commits](https://github.com/tidalcycles/Tidal/commits?author=ndr-brt)). 
 - I took care of the migration from Travis CI to GitHub Actions.
-- Atom -> Pulsar: At a certain point I noticed that the Atom Plugin was practically unmaintained so I proposed to be its maintainer, and I brought it back on track. Now Atom has been disbanded but luckily the Pulsar community is vibrant and the Tidal plugin is already fully compatible with it. It was a pretty satisfying migration ([Pulsar-tidalcycles](https://github.com/tidalcycles/pulsar-tidalcycles).
+- Atom -> Pulsar: At a certain point I noticed that the Atom Plugin was practically unmaintained so I proposed to be its maintainer, and I brought it back on track. Now Atom has been disbanded but luckily the Pulsar community is vibrant and the Tidal plugin is already fully compatible with it. It was a pretty satisfying migration ([Pulsar-tidalcycles](https://github.com/tidalcycles/pulsar-tidalcycles)).
 
 **What motivates you to work on Tidal?**
 - Not to be selfish but most of the work I did had direct impact on the use I'm doing of Tidal, I guess because it's easy to contribute when you know why something needs to be improved/fixed.
@@ -89,13 +89,13 @@ I often try to escape from this mindset but at the end I fall into it most of th
 - Well, most of the time it is noisy, sometimes mellow, always not danceable.
 
 **How has your music evolved since you have been livecoding?**
-- For sure it changed, I'm not sure it "evolved", sometime I think I was more creative when I was learning how to use the instrument, now it's easier to get into the loop of being repetitive.
+- For sure it changed, I'm not sure it "evolved", sometimes I think I was more creative when I was learning how to use the instrument, now it's easier to get into the loop of being repetitive.
 
 **What samples or instruments do you like to work with?**
 - I try not to use the default samples nor the default synths, I sometimes write my own synths, sometimes I record my own samples or I get them from various sources.  
 
 **What projects are you currently working on or planning? What's next?**
-- I recently finished a record that was a collaboration with Naotodate, that's a non-livecoding noise friend from Italy ([on bandcamp](https://umanoudito.bandcamp.com/album/a-letter-is-a-number-a-feeling-is-a-code). 
+- I recently finished a record that was a collaboration with Naotodate, that's a non-livecoding noise friend from Italy ([on bandcamp](https://umanoudito.bandcamp.com/album/a-letter-is-a-number-a-feeling-is-a-code)). 
 - Now I'm working to another collaboration record, this time with ETOL, an amazing italian livecoder. To be fair the project it is still in an embryonic state.
 
 
