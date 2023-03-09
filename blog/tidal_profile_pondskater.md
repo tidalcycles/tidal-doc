@@ -38,16 +38,20 @@ d2 $ cat [s "kick(3,8)", "kick(2,8)", "kick(3,8)"]
 I also like to work with isorhythms, especially to get a tonal dynamic into a percussion pattern.
 
 ```haskell
-d1 $ struct
+d1 $ struct "7(7,8)" $ sound "tah" # nCountTo "list" "<7 7 7 7 7 8 9>"
+    # gain 0.9 # room 0.3 # size 0.5 # speed 0.5
+    # shape (slow 4 $ range 0.0 0.5 tri)
+    # pan (slow 2 $ range 0.1 0.9 saw)
 ```
 
 Recently I started to experiment with @jwaldmann's fantastic random-not-random ideas.
 https://club.tidalcycles.org/t/random-not-random/4522
 
-```haskell
-do
-  let scale =
-```
+<img
+  src={require('./aganz3.png').default}
+  alt="tidal code"
+  width="600"
+/>  
 
 In this context, perhaps this could also be interesting: [Elizabeth Margulis On Repeat: How Music Plays the Mind](http://www.elizabethmargulis.com/on-repeat)  
 
