@@ -60,7 +60,7 @@ Recently, I like to use very tiny grains of samples and process them with Tidal.
 
 **What projects are you currently working on or planning? What's next?**  
 
-* I would like to work on a bigger scale AV performance using Tidal, Hydra and Vimix altogether, to create something like a short film.
+* I would like to work on a bigger scale AV performance using Tidal, Hydra and Vimix together, to create something like a short film.
 * I'm also working on an interactive sound installation where I will probably use Tidal to generate the sound.
 * I'm working on a new acousmatic piece for a composition competition.
 
