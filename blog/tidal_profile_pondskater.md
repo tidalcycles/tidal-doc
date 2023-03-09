@@ -17,6 +17,7 @@ title: Tidal Profile - Pondskater (aka Axel Ganz)
   alt="pondskater with controller"
   width="600"
 />  
+
 (photo: Heike Kurth)
 
 ## Livecoding  
@@ -50,7 +51,7 @@ https://club.tidalcycles.org/t/random-not-random/4522
 <img
   src={require('./aganz3.png').default}
   alt="tidal code"
-  width="600"
+  width="800"
 />  
 
 In this context, perhaps this could also be interesting: [Elizabeth Margulis On Repeat: How Music Plays the Mind](http://www.elizabethmargulis.com/on-repeat)  
