@@ -48,11 +48,20 @@ d1 $ struct "7(7,8)" $ sound "tah" # nCountTo "list" "<7 7 7 7 7 8 9>"
 Recently I started to experiment with @jwaldmann's fantastic random-not-random ideas.
 https://club.tidalcycles.org/t/random-not-random/4522
 
-<img
-  src={require('./aganz3.png').default}
-  alt="tidal code"
-  width="800"
-/>  
+```haskell
+do
+let scale = getScale (scaleTable ++ [("wavemorphian", [3,7,8,10,11])])
+d1 $ s "r808(5,8)" # gain 0.9 # room 0.5 # size 0.9
+d2 $ jux rev $ stack [
+            n ( scale "wavemorphian" $ cat $ replicate 8 $ segment "<4>" $ irand 5) # s "sxt22" # gain 0.5
+           ,n ( scale "wavemorphian" $ cat $ replicate 8 $ segment "<4>" $ irand 5) # s "sxt31" # gain 0.5
+           ,n ( scale "wavemorphian" $ cat $ replicate 8 $ segment "<4>" $ irand 5) # s "sxt50" # gain 0.5 # legato 1.25
+           ,n ( scale "wavemorphian" $ cat $ replicate 8 $ segment "<2>" $ irand 5) # s "sxt31" # gain 0.6 # speed 2.0
+           ,n ( scale "wavemorphian" $ cat $ replicate 8 $ segment "<3>" $ irand 5) # s "sxt42" # gain 0.5 # speed 2.0
+           ,n ( scale "wavemorphian" $ cat $ replicate 8 $ segment "<1>" $ irand 5) # s "sxt60" # gain 0.7 # speed 2.0 # nudge 0.25
+           ,n ( scale "wavemorphian" $ cat $ replicate 4 $ segment "<1>" $ irand 5) # s "sxt69" # gain 0.7 # speed 2.0 # nudge 0.675
+           ] # room 0.5 # size 0.9
+```
 
 In this context, perhaps this could also be interesting: [Elizabeth Margulis On Repeat: How Music Plays the Mind](http://www.elizabethmargulis.com/on-repeat)  
 
