@@ -16,6 +16,10 @@ things livecoding](https://github.com/toplap/awesome-livecoding) list.)
     collaboration and learning through live coding, hosting a range of
     environments in a web-browser, including "minitidal", a parser for
     tidal
+-   [Strudel](https://strudel.tidalcycles.org/) is an advanced port of TidalCycles to Javascript that runs in a web browser
+-   [Kidal](https://gitlab.com/ndr_brt/kidal) is a port of Tidal to Kotlin
+-   [Tranquility](https://github.com/XiNNiW/tranquility/) is a port of Tidal to Lua
+-   [Vortex](https://github.com/tidalcycles/vortex/) is a port of Tidal to Python
 
 # Editors
 
