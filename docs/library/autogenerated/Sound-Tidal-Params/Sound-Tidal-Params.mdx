@@ -1,0 +1,6655 @@
+---
+title: Sound.Tidal.Params
+slug: /library/modules/Sound.Tidal.Params
+---
+
+<!------------------------------------------------------------------------------
+THIS IS A DOC FILE AUTOMATICALLY GENERATED FROM:
+
+https://github.com/tidalcycles/Tidal/blob/main/src/Sound/Tidal/Params.hs
+
+It's based on the documentation comments in the Tidal code.
+Do not edit it directly--to update this documentation, please submit a
+change to the original file in the Tidal repository. Thanks!
+------------------------------------------------------------------------------->
+
+### grp
+```
+grp :: [String -> ValueMap] -> Pattern String -> ControlPattern 
+```
+
+group multiple params into one
+
+### mF
+```
+mF :: String -> String -> ValueMap 
+```
+
+### mI
+```
+mI :: String -> String -> ValueMap 
+```
+
+### mS
+```
+mS :: String -> String -> ValueMap 
+```
+
+### pF
+```
+pF :: String -> Pattern Double -> ControlPattern 
+```
+
+Param makers
+
+### pI
+```
+pI :: String -> Pattern Int -> ControlPattern 
+```
+
+### pB
+```
+pB :: String -> Pattern Bool -> ControlPattern 
+```
+
+### pR
+```
+pR :: String -> Pattern Rational -> ControlPattern 
+```
+
+### pN
+```
+pN :: String -> Pattern Note -> ControlPattern 
+```
+
+### pS
+```
+pS :: String -> Pattern String -> ControlPattern 
+```
+
+### pX
+```
+pX :: String -> Pattern [Word8] -> ControlPattern 
+```
+
+### pStateF
+```
+pStateF 
+```
+
+### pStateList
+```
+pStateList 
+```
+
+### pStateListF
+```
+pStateListF :: String -> String -> [Double] -> ControlPattern 
+```
+
+A wrapper for `pStateList` that accepts a `[Double]`
+ rather than a `[Value]`.
+
+### pStateListS
+```
+pStateListS :: String -> String -> [String] -> ControlPattern 
+```
+
+A wrapper for `pStateList` that accepts a `[String]`
+ rather than a `[Value]`.
+
+### sound
+```
+sound :: Pattern String -> ControlPattern 
+```
+
+Grouped params
+
+### sTake
+```
+sTake :: String -> [String] -> ControlPattern 
+```
+
+### cc
+```
+cc :: Pattern String -> ControlPattern 
+```
+
+### nrpn
+```
+nrpn :: Pattern String -> ControlPattern 
+```
+
+### nrpnn
+```
+nrpnn :: Pattern Int -> ControlPattern 
+```
+
+### nrpnv
+```
+nrpnv :: Pattern Int -> ControlPattern 
+```
+
+### grain'
+```
+grain' :: Pattern String -> ControlPattern 
+```
+
+### midinote
+```
+midinote :: Pattern Note -> ControlPattern 
+```
+
+### drum
+```
+drum :: Pattern String -> ControlPattern 
+```
+
+### drumN
+```
+drumN :: Num a => String -> a 
+```
+
+### accelerate
+```
+accelerate :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers that speed up (or slow down) samples while they play.
+
+### accelerateTake
+```
+accelerateTake :: String -> [Double] -> ControlPattern 
+```
+
+### accelerateCount
+```
+accelerateCount :: String -> ControlPattern 
+```
+
+### accelerateCountTo
+```
+accelerateCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### acceleratebus
+```
+acceleratebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### amp
+```
+amp :: Pattern Double -> ControlPattern 
+```
+
+like `gain`, but linear.
+
+### ampTake
+```
+ampTake :: String -> [Double] -> ControlPattern 
+```
+
+### ampCount
+```
+ampCount :: String -> ControlPattern 
+```
+
+### ampCountTo
+```
+ampCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### ampbus
+```
+ampbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### amprecv
+```
+amprecv :: Pattern Int -> ControlPattern 
+```
+
+### array
+```
+array :: Pattern [Word8] -> ControlPattern 
+```
+
+### arrayTake
+```
+arrayTake :: String -> [Double] -> ControlPattern 
+```
+
+### arraybus
+```
+arraybus :: Pattern Int -> Pattern [Word8] -> ControlPattern 
+```
+
+### attack
+```
+attack :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers to specify the attack time (in seconds) of an envelope applied to each sample.
+
+### attackTake
+```
+attackTake :: String -> [Double] -> ControlPattern 
+```
+
+### attackCount
+```
+attackCount :: String -> ControlPattern 
+```
+
+### attackCountTo
+```
+attackCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### attackbus
+```
+attackbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### attackrecv
+```
+attackrecv :: Pattern Int -> ControlPattern 
+```
+
+### bandf
+```
+bandf :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers from 0 to 1. Sets the center frequency of the band-pass filter.
+
+### bandfTake
+```
+bandfTake :: String -> [Double] -> ControlPattern 
+```
+
+### bandfCount
+```
+bandfCount :: String -> ControlPattern 
+```
+
+### bandfCountTo
+```
+bandfCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### bandfbus
+```
+bandfbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### bandfrecv
+```
+bandfrecv :: Pattern Int -> ControlPattern 
+```
+
+### bandq
+```
+bandq :: Pattern Double -> ControlPattern 
+```
+
+a pattern of anumbers from 0 to 1. Sets the q-factor of the band-pass filter.
+
+### bandqTake
+```
+bandqTake :: String -> [Double] -> ControlPattern 
+```
+
+### bandqCount
+```
+bandqCount :: String -> ControlPattern 
+```
+
+### bandqCountTo
+```
+bandqCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### bandqbus
+```
+bandqbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### bandqrecv
+```
+bandqrecv :: Pattern Int -> ControlPattern 
+```
+
+### begin
+```
+begin :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers from 0 to 1. Skips the beginning of each sample, e.g. `0.25` to cut off the first quarter from each sample.
+
+### beginTake
+```
+beginTake :: String -> [Double] -> ControlPattern 
+```
+
+### beginCount
+```
+beginCount :: String -> ControlPattern 
+```
+
+### beginCountTo
+```
+beginCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### beginbus
+```
+beginbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### binshift
+```
+binshift :: Pattern Double -> ControlPattern 
+```
+
+Spectral binshift
+
+### binshiftTake
+```
+binshiftTake :: String -> [Double] -> ControlPattern 
+```
+
+### binshiftCount
+```
+binshiftCount :: String -> ControlPattern 
+```
+
+### binshiftCountTo
+```
+binshiftCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### binshiftbus
+```
+binshiftbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### binshiftrecv
+```
+binshiftrecv :: Pattern Int -> ControlPattern 
+```
+
+### button0
+```
+button0 :: Pattern Double -> ControlPattern 
+```
+
+### button0Take
+```
+button0Take :: String -> [Double] -> ControlPattern 
+```
+
+### button0Count
+```
+button0Count :: String -> ControlPattern 
+```
+
+### button0CountTo
+```
+button0CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button0bus
+```
+button0bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button0recv
+```
+button0recv :: Pattern Int -> ControlPattern 
+```
+
+### button1
+```
+button1 :: Pattern Double -> ControlPattern 
+```
+
+### button1Take
+```
+button1Take :: String -> [Double] -> ControlPattern 
+```
+
+### button1Count
+```
+button1Count :: String -> ControlPattern 
+```
+
+### button1CountTo
+```
+button1CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button1bus
+```
+button1bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button1recv
+```
+button1recv :: Pattern Int -> ControlPattern 
+```
+
+### button10
+```
+button10 :: Pattern Double -> ControlPattern 
+```
+
+### button10Take
+```
+button10Take :: String -> [Double] -> ControlPattern 
+```
+
+### button10Count
+```
+button10Count :: String -> ControlPattern 
+```
+
+### button10CountTo
+```
+button10CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button10bus
+```
+button10bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button10recv
+```
+button10recv :: Pattern Int -> ControlPattern 
+```
+
+### button11
+```
+button11 :: Pattern Double -> ControlPattern 
+```
+
+### button11Take
+```
+button11Take :: String -> [Double] -> ControlPattern 
+```
+
+### button11Count
+```
+button11Count :: String -> ControlPattern 
+```
+
+### button11CountTo
+```
+button11CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button11bus
+```
+button11bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button11recv
+```
+button11recv :: Pattern Int -> ControlPattern 
+```
+
+### button12
+```
+button12 :: Pattern Double -> ControlPattern 
+```
+
+### button12Take
+```
+button12Take :: String -> [Double] -> ControlPattern 
+```
+
+### button12Count
+```
+button12Count :: String -> ControlPattern 
+```
+
+### button12CountTo
+```
+button12CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button12bus
+```
+button12bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button12recv
+```
+button12recv :: Pattern Int -> ControlPattern 
+```
+
+### button13
+```
+button13 :: Pattern Double -> ControlPattern 
+```
+
+### button13Take
+```
+button13Take :: String -> [Double] -> ControlPattern 
+```
+
+### button13Count
+```
+button13Count :: String -> ControlPattern 
+```
+
+### button13CountTo
+```
+button13CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button13bus
+```
+button13bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button13recv
+```
+button13recv :: Pattern Int -> ControlPattern 
+```
+
+### button14
+```
+button14 :: Pattern Double -> ControlPattern 
+```
+
+### button14Take
+```
+button14Take :: String -> [Double] -> ControlPattern 
+```
+
+### button14Count
+```
+button14Count :: String -> ControlPattern 
+```
+
+### button14CountTo
+```
+button14CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button14bus
+```
+button14bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button14recv
+```
+button14recv :: Pattern Int -> ControlPattern 
+```
+
+### button15
+```
+button15 :: Pattern Double -> ControlPattern 
+```
+
+### button15Take
+```
+button15Take :: String -> [Double] -> ControlPattern 
+```
+
+### button15Count
+```
+button15Count :: String -> ControlPattern 
+```
+
+### button15CountTo
+```
+button15CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button15bus
+```
+button15bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button15recv
+```
+button15recv :: Pattern Int -> ControlPattern 
+```
+
+### button2
+```
+button2 :: Pattern Double -> ControlPattern 
+```
+
+### button2Take
+```
+button2Take :: String -> [Double] -> ControlPattern 
+```
+
+### button2Count
+```
+button2Count :: String -> ControlPattern 
+```
+
+### button2CountTo
+```
+button2CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button2bus
+```
+button2bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button2recv
+```
+button2recv :: Pattern Int -> ControlPattern 
+```
+
+### button3
+```
+button3 :: Pattern Double -> ControlPattern 
+```
+
+### button3Take
+```
+button3Take :: String -> [Double] -> ControlPattern 
+```
+
+### button3Count
+```
+button3Count :: String -> ControlPattern 
+```
+
+### button3CountTo
+```
+button3CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button3bus
+```
+button3bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button3recv
+```
+button3recv :: Pattern Int -> ControlPattern 
+```
+
+### button4
+```
+button4 :: Pattern Double -> ControlPattern 
+```
+
+### button4Take
+```
+button4Take :: String -> [Double] -> ControlPattern 
+```
+
+### button4Count
+```
+button4Count :: String -> ControlPattern 
+```
+
+### button4CountTo
+```
+button4CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button4bus
+```
+button4bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button4recv
+```
+button4recv :: Pattern Int -> ControlPattern 
+```
+
+### button5
+```
+button5 :: Pattern Double -> ControlPattern 
+```
+
+### button5Take
+```
+button5Take :: String -> [Double] -> ControlPattern 
+```
+
+### button5Count
+```
+button5Count :: String -> ControlPattern 
+```
+
+### button5CountTo
+```
+button5CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button5bus
+```
+button5bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button5recv
+```
+button5recv :: Pattern Int -> ControlPattern 
+```
+
+### button6
+```
+button6 :: Pattern Double -> ControlPattern 
+```
+
+### button6Take
+```
+button6Take :: String -> [Double] -> ControlPattern 
+```
+
+### button6Count
+```
+button6Count :: String -> ControlPattern 
+```
+
+### button6CountTo
+```
+button6CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button6bus
+```
+button6bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button6recv
+```
+button6recv :: Pattern Int -> ControlPattern 
+```
+
+### button7
+```
+button7 :: Pattern Double -> ControlPattern 
+```
+
+### button7Take
+```
+button7Take :: String -> [Double] -> ControlPattern 
+```
+
+### button7Count
+```
+button7Count :: String -> ControlPattern 
+```
+
+### button7CountTo
+```
+button7CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button7bus
+```
+button7bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button7recv
+```
+button7recv :: Pattern Int -> ControlPattern 
+```
+
+### button8
+```
+button8 :: Pattern Double -> ControlPattern 
+```
+
+### button8Take
+```
+button8Take :: String -> [Double] -> ControlPattern 
+```
+
+### button8Count
+```
+button8Count :: String -> ControlPattern 
+```
+
+### button8CountTo
+```
+button8CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button8bus
+```
+button8bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button8recv
+```
+button8recv :: Pattern Int -> ControlPattern 
+```
+
+### button9
+```
+button9 :: Pattern Double -> ControlPattern 
+```
+
+### button9Take
+```
+button9Take :: String -> [Double] -> ControlPattern 
+```
+
+### button9Count
+```
+button9Count :: String -> ControlPattern 
+```
+
+### button9CountTo
+```
+button9CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### button9bus
+```
+button9bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### button9recv
+```
+button9recv :: Pattern Int -> ControlPattern 
+```
+
+### ccn
+```
+ccn :: Pattern Double -> ControlPattern 
+```
+
+### ccnTake
+```
+ccnTake :: String -> [Double] -> ControlPattern 
+```
+
+### ccnCount
+```
+ccnCount :: String -> ControlPattern 
+```
+
+### ccnCountTo
+```
+ccnCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### ccnbus
+```
+ccnbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### ccv
+```
+ccv :: Pattern Double -> ControlPattern 
+```
+
+### ccvTake
+```
+ccvTake :: String -> [Double] -> ControlPattern 
+```
+
+### ccvCount
+```
+ccvCount :: String -> ControlPattern 
+```
+
+### ccvCountTo
+```
+ccvCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### ccvbus
+```
+ccvbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### channel
+```
+channel :: Pattern Int -> ControlPattern 
+```
+
+choose the channel the pattern is sent to in superdirt
+
+### channelTake
+```
+channelTake :: String -> [Double] -> ControlPattern 
+```
+
+### channelCount
+```
+channelCount :: String -> ControlPattern 
+```
+
+### channelCountTo
+```
+channelCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### channelbus
+```
+channelbus :: Pattern Int -> Pattern Int -> ControlPattern 
+```
+
+### clhatdecay
+```
+clhatdecay :: Pattern Double -> ControlPattern 
+```
+
+### clhatdecayTake
+```
+clhatdecayTake :: String -> [Double] -> ControlPattern 
+```
+
+### clhatdecayCount
+```
+clhatdecayCount :: String -> ControlPattern 
+```
+
+### clhatdecayCountTo
+```
+clhatdecayCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### clhatdecaybus
+```
+clhatdecaybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### clhatdecayrecv
+```
+clhatdecayrecv :: Pattern Int -> ControlPattern 
+```
+
+### coarse
+```
+coarse :: Pattern Double -> ControlPattern 
+```
+
+fake-resampling, a pattern of numbers for lowering the sample rate, i.e. 1 for original 2 for half, 3 for a third and so on.
+
+### coarseTake
+```
+coarseTake :: String -> [Double] -> ControlPattern 
+```
+
+### coarseCount
+```
+coarseCount :: String -> ControlPattern 
+```
+
+### coarseCountTo
+```
+coarseCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### coarsebus
+```
+coarsebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### coarserecv
+```
+coarserecv :: Pattern Int -> ControlPattern 
+```
+
+### comb
+```
+comb :: Pattern Double -> ControlPattern 
+```
+
+Spectral comb
+
+### combTake
+```
+combTake :: String -> [Double] -> ControlPattern 
+```
+
+### combCount
+```
+combCount :: String -> ControlPattern 
+```
+
+### combCountTo
+```
+combCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### combbus
+```
+combbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### combrecv
+```
+combrecv :: Pattern Int -> ControlPattern 
+```
+
+### control
+```
+control :: Pattern Double -> ControlPattern 
+```
+
+### controlTake
+```
+controlTake :: String -> [Double] -> ControlPattern 
+```
+
+### controlCount
+```
+controlCount :: String -> ControlPattern 
+```
+
+### controlCountTo
+```
+controlCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### controlbus
+```
+controlbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### cps
+```
+cps :: Pattern Double -> ControlPattern 
+```
+
+### cpsTake
+```
+cpsTake :: String -> [Double] -> ControlPattern 
+```
+
+### cpsCount
+```
+cpsCount :: String -> ControlPattern 
+```
+
+### cpsCountTo
+```
+cpsCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### cpsbus
+```
+cpsbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### cpsrecv
+```
+cpsrecv :: Pattern Int -> ControlPattern 
+```
+
+### crush
+```
+crush :: Pattern Double -> ControlPattern 
+```
+
+bit crushing, a pattern of numbers from 1 (for drastic reduction in bit-depth) to 16 (for barely no reduction).
+
+### crushTake
+```
+crushTake :: String -> [Double] -> ControlPattern 
+```
+
+### crushCount
+```
+crushCount :: String -> ControlPattern 
+```
+
+### crushCountTo
+```
+crushCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### crushbus
+```
+crushbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### crushrecv
+```
+crushrecv :: Pattern Int -> ControlPattern 
+```
+
+### ctlNum
+```
+ctlNum :: Pattern Double -> ControlPattern 
+```
+
+### ctlNumTake
+```
+ctlNumTake :: String -> [Double] -> ControlPattern 
+```
+
+### ctlNumCount
+```
+ctlNumCount :: String -> ControlPattern 
+```
+
+### ctlNumCountTo
+```
+ctlNumCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### ctlNumbus
+```
+ctlNumbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### ctranspose
+```
+ctranspose :: Pattern Double -> ControlPattern 
+```
+
+### ctransposeTake
+```
+ctransposeTake :: String -> [Double] -> ControlPattern 
+```
+
+### ctransposeCount
+```
+ctransposeCount :: String -> ControlPattern 
+```
+
+### ctransposeCountTo
+```
+ctransposeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### ctransposebus
+```
+ctransposebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### ctransposerecv
+```
+ctransposerecv :: Pattern Int -> ControlPattern 
+```
+
+### cut
+```
+cut :: Pattern Int -> ControlPattern 
+```
+
+In the style of classic drum-machines, `cut` will stop a playing sample as soon as another samples with in same cutgroup is to be played. An example would be an open hi-hat followed by a closed one, essentially muting the open.
+
+### cutTake
+```
+cutTake :: String -> [Double] -> ControlPattern 
+```
+
+### cutCount
+```
+cutCount :: String -> ControlPattern 
+```
+
+### cutCountTo
+```
+cutCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### cutbus
+```
+cutbus :: Pattern Int -> Pattern Int -> ControlPattern 
+```
+
+### cutrecv
+```
+cutrecv :: Pattern Int -> ControlPattern 
+```
+
+### cutoff
+```
+cutoff :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers from 0 to 1. Applies the cutoff frequency of the low-pass filter.
+
+### cutoffTake
+```
+cutoffTake :: String -> [Double] -> ControlPattern 
+```
+
+### cutoffCount
+```
+cutoffCount :: String -> ControlPattern 
+```
+
+### cutoffCountTo
+```
+cutoffCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### cutoffbus
+```
+cutoffbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### cutoffrecv
+```
+cutoffrecv :: Pattern Int -> ControlPattern 
+```
+
+### cutoffegint
+```
+cutoffegint :: Pattern Double -> ControlPattern 
+```
+
+### cutoffegintTake
+```
+cutoffegintTake :: String -> [Double] -> ControlPattern 
+```
+
+### cutoffegintCount
+```
+cutoffegintCount :: String -> ControlPattern 
+```
+
+### cutoffegintCountTo
+```
+cutoffegintCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### cutoffegintbus
+```
+cutoffegintbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### cutoffegintrecv
+```
+cutoffegintrecv :: Pattern Int -> ControlPattern 
+```
+
+### decay
+```
+decay :: Pattern Double -> ControlPattern 
+```
+
+### decayTake
+```
+decayTake :: String -> [Double] -> ControlPattern 
+```
+
+### decayCount
+```
+decayCount :: String -> ControlPattern 
+```
+
+### decayCountTo
+```
+decayCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### decaybus
+```
+decaybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### decayrecv
+```
+decayrecv :: Pattern Int -> ControlPattern 
+```
+
+### degree
+```
+degree :: Pattern Double -> ControlPattern 
+```
+
+### degreeTake
+```
+degreeTake :: String -> [Double] -> ControlPattern 
+```
+
+### degreeCount
+```
+degreeCount :: String -> ControlPattern 
+```
+
+### degreeCountTo
+```
+degreeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### degreebus
+```
+degreebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### degreerecv
+```
+degreerecv :: Pattern Int -> ControlPattern 
+```
+
+### delay
+```
+delay :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers from 0 to 1. Sets the level of the delay signal.
+
+### delayTake
+```
+delayTake :: String -> [Double] -> ControlPattern 
+```
+
+### delayCount
+```
+delayCount :: String -> ControlPattern 
+```
+
+### delayCountTo
+```
+delayCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### delaybus
+```
+delaybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### delayrecv
+```
+delayrecv :: Pattern Int -> ControlPattern 
+```
+
+### delayfeedback
+```
+delayfeedback :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers from 0 to 1. Sets the amount of delay feedback.
+
+### delayfeedbackTake
+```
+delayfeedbackTake :: String -> [Double] -> ControlPattern 
+```
+
+### delayfeedbackCount
+```
+delayfeedbackCount :: String -> ControlPattern 
+```
+
+### delayfeedbackCountTo
+```
+delayfeedbackCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### delayfeedbackbus
+```
+delayfeedbackbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### delayfeedbackrecv
+```
+delayfeedbackrecv :: Pattern Int -> ControlPattern 
+```
+
+### delaytime
+```
+delaytime :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers from 0 to 1. Sets the length of the delay.
+
+### delaytimeTake
+```
+delaytimeTake :: String -> [Double] -> ControlPattern 
+```
+
+### delaytimeCount
+```
+delaytimeCount :: String -> ControlPattern 
+```
+
+### delaytimeCountTo
+```
+delaytimeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### delaytimebus
+```
+delaytimebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### delaytimerecv
+```
+delaytimerecv :: Pattern Int -> ControlPattern 
+```
+
+### detune
+```
+detune :: Pattern Double -> ControlPattern 
+```
+
+### detuneTake
+```
+detuneTake :: String -> [Double] -> ControlPattern 
+```
+
+### detuneCount
+```
+detuneCount :: String -> ControlPattern 
+```
+
+### detuneCountTo
+```
+detuneCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### detunebus
+```
+detunebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### detunerecv
+```
+detunerecv :: Pattern Int -> ControlPattern 
+```
+
+### distort
+```
+distort :: Pattern Double -> ControlPattern 
+```
+
+noisy fuzzy distortion
+
+### distortTake
+```
+distortTake :: String -> [Double] -> ControlPattern 
+```
+
+### distortCount
+```
+distortCount :: String -> ControlPattern 
+```
+
+### distortCountTo
+```
+distortCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### distortbus
+```
+distortbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### distortrecv
+```
+distortrecv :: Pattern Int -> ControlPattern 
+```
+
+### djf
+```
+djf :: Pattern Double -> ControlPattern 
+```
+
+DJ filter, below 0.5 is low pass filter, above is high pass filter.
+
+### djfTake
+```
+djfTake :: String -> [Double] -> ControlPattern 
+```
+
+### djfCount
+```
+djfCount :: String -> ControlPattern 
+```
+
+### djfCountTo
+```
+djfCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### djfbus
+```
+djfbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### djfrecv
+```
+djfrecv :: Pattern Int -> ControlPattern 
+```
+
+### dry
+```
+dry :: Pattern Double -> ControlPattern 
+```
+
+when set to `1` will disable all reverb for this pattern. See `room` and `size` for more information about reverb.
+
+### dryTake
+```
+dryTake :: String -> [Double] -> ControlPattern 
+```
+
+### dryCount
+```
+dryCount :: String -> ControlPattern 
+```
+
+### dryCountTo
+```
+dryCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### drybus
+```
+drybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### dryrecv
+```
+dryrecv :: Pattern Int -> ControlPattern 
+```
+
+### dur
+```
+dur :: Pattern Double -> ControlPattern 
+```
+
+### durTake
+```
+durTake :: String -> [Double] -> ControlPattern 
+```
+
+### durCount
+```
+durCount :: String -> ControlPattern 
+```
+
+### durCountTo
+```
+durCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### durbus
+```
+durbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### durrecv
+```
+durrecv :: Pattern Int -> ControlPattern 
+```
+
+### end
+```
+end :: Pattern Double -> ControlPattern 
+```
+
+the same as `begin`, but cuts the end off samples, shortening them; e.g. `0.75` to cut off the last quarter of each sample.
+
+### endTake
+```
+endTake :: String -> [Double] -> ControlPattern 
+```
+
+### endCount
+```
+endCount :: String -> ControlPattern 
+```
+
+### endCountTo
+```
+endCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### endbus
+```
+endbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### enhance
+```
+enhance :: Pattern Double -> ControlPattern 
+```
+
+Spectral enhance
+
+### enhanceTake
+```
+enhanceTake :: String -> [Double] -> ControlPattern 
+```
+
+### enhanceCount
+```
+enhanceCount :: String -> ControlPattern 
+```
+
+### enhanceCountTo
+```
+enhanceCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### enhancebus
+```
+enhancebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### enhancerecv
+```
+enhancerecv :: Pattern Int -> ControlPattern 
+```
+
+### expression
+```
+expression :: Pattern Double -> ControlPattern 
+```
+
+### expressionTake
+```
+expressionTake :: String -> [Double] -> ControlPattern 
+```
+
+### expressionCount
+```
+expressionCount :: String -> ControlPattern 
+```
+
+### expressionCountTo
+```
+expressionCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### expressionbus
+```
+expressionbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### expressionrecv
+```
+expressionrecv :: Pattern Int -> ControlPattern 
+```
+
+### fadeInTime
+```
+fadeInTime :: Pattern Double -> ControlPattern 
+```
+
+As with fadeTime, but controls the fade in time of the grain envelope. Not used if the grain begins at position 0 in the sample.
+
+### fadeInTimeTake
+```
+fadeInTimeTake :: String -> [Double] -> ControlPattern 
+```
+
+### fadeInTimeCount
+```
+fadeInTimeCount :: String -> ControlPattern 
+```
+
+### fadeInTimeCountTo
+```
+fadeInTimeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### fadeInTimebus
+```
+fadeInTimebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### fadeTime
+```
+fadeTime :: Pattern Double -> ControlPattern 
+```
+
+Used when using beginend or chopstriate and friends, to change the fade out time of the `grain` envelope.
+
+### fadeTimeTake
+```
+fadeTimeTake :: String -> [Double] -> ControlPattern 
+```
+
+### fadeTimeCount
+```
+fadeTimeCount :: String -> ControlPattern 
+```
+
+### fadeTimeCountTo
+```
+fadeTimeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### fadeTimebus
+```
+fadeTimebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### frameRate
+```
+frameRate :: Pattern Double -> ControlPattern 
+```
+
+### frameRateTake
+```
+frameRateTake :: String -> [Double] -> ControlPattern 
+```
+
+### frameRateCount
+```
+frameRateCount :: String -> ControlPattern 
+```
+
+### frameRateCountTo
+```
+frameRateCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### frameRatebus
+```
+frameRatebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### frames
+```
+frames :: Pattern Double -> ControlPattern 
+```
+
+### framesTake
+```
+framesTake :: String -> [Double] -> ControlPattern 
+```
+
+### framesCount
+```
+framesCount :: String -> ControlPattern 
+```
+
+### framesCountTo
+```
+framesCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### framesbus
+```
+framesbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### freeze
+```
+freeze :: Pattern Double -> ControlPattern 
+```
+
+Spectral freeze
+
+### freezeTake
+```
+freezeTake :: String -> [Double] -> ControlPattern 
+```
+
+### freezeCount
+```
+freezeCount :: String -> ControlPattern 
+```
+
+### freezeCountTo
+```
+freezeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### freezebus
+```
+freezebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### freezerecv
+```
+freezerecv :: Pattern Int -> ControlPattern 
+```
+
+### freq
+```
+freq :: Pattern Double -> ControlPattern 
+```
+
+### freqTake
+```
+freqTake :: String -> [Double] -> ControlPattern 
+```
+
+### freqCount
+```
+freqCount :: String -> ControlPattern 
+```
+
+### freqCountTo
+```
+freqCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### freqbus
+```
+freqbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### freqrecv
+```
+freqrecv :: Pattern Int -> ControlPattern 
+```
+
+### from
+```
+from :: Pattern Double -> ControlPattern 
+```
+
+for internal sound routing
+
+### fromTake
+```
+fromTake :: String -> [Double] -> ControlPattern 
+```
+
+### fromCount
+```
+fromCount :: String -> ControlPattern 
+```
+
+### fromCountTo
+```
+fromCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### frombus
+```
+frombus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### fromrecv
+```
+fromrecv :: Pattern Int -> ControlPattern 
+```
+
+### fshift
+```
+fshift :: Pattern Double -> ControlPattern 
+```
+
+frequency shifter
+
+### fshiftTake
+```
+fshiftTake :: String -> [Double] -> ControlPattern 
+```
+
+### fshiftCount
+```
+fshiftCount :: String -> ControlPattern 
+```
+
+### fshiftCountTo
+```
+fshiftCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### fshiftbus
+```
+fshiftbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### fshiftrecv
+```
+fshiftrecv :: Pattern Int -> ControlPattern 
+```
+
+### fshiftnote
+```
+fshiftnote :: Pattern Double -> ControlPattern 
+```
+
+frequency shifter
+
+### fshiftnoteTake
+```
+fshiftnoteTake :: String -> [Double] -> ControlPattern 
+```
+
+### fshiftnoteCount
+```
+fshiftnoteCount :: String -> ControlPattern 
+```
+
+### fshiftnoteCountTo
+```
+fshiftnoteCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### fshiftnotebus
+```
+fshiftnotebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### fshiftnoterecv
+```
+fshiftnoterecv :: Pattern Int -> ControlPattern 
+```
+
+### fshiftphase
+```
+fshiftphase :: Pattern Double -> ControlPattern 
+```
+
+frequency shifter
+
+### fshiftphaseTake
+```
+fshiftphaseTake :: String -> [Double] -> ControlPattern 
+```
+
+### fshiftphaseCount
+```
+fshiftphaseCount :: String -> ControlPattern 
+```
+
+### fshiftphaseCountTo
+```
+fshiftphaseCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### fshiftphasebus
+```
+fshiftphasebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### fshiftphaserecv
+```
+fshiftphaserecv :: Pattern Int -> ControlPattern 
+```
+
+### gain
+```
+gain :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers that specify volume. Values less than 1 make the sound quieter. Values greater than 1 make the sound louder. For the linear equivalent, see `amp`.
+
+### gainTake
+```
+gainTake :: String -> [Double] -> ControlPattern 
+```
+
+### gainCount
+```
+gainCount :: String -> ControlPattern 
+```
+
+### gainCountTo
+```
+gainCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### gainbus
+```
+gainbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### gate
+```
+gate :: Pattern Double -> ControlPattern 
+```
+
+### gateTake
+```
+gateTake :: String -> [Double] -> ControlPattern 
+```
+
+### gateCount
+```
+gateCount :: String -> ControlPattern 
+```
+
+### gateCountTo
+```
+gateCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### gatebus
+```
+gatebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### gaterecv
+```
+gaterecv :: Pattern Int -> ControlPattern 
+```
+
+### harmonic
+```
+harmonic :: Pattern Double -> ControlPattern 
+```
+
+### harmonicTake
+```
+harmonicTake :: String -> [Double] -> ControlPattern 
+```
+
+### harmonicCount
+```
+harmonicCount :: String -> ControlPattern 
+```
+
+### harmonicCountTo
+```
+harmonicCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### harmonicbus
+```
+harmonicbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### harmonicrecv
+```
+harmonicrecv :: Pattern Int -> ControlPattern 
+```
+
+### hatgrain
+```
+hatgrain :: Pattern Double -> ControlPattern 
+```
+
+### hatgrainTake
+```
+hatgrainTake :: String -> [Double] -> ControlPattern 
+```
+
+### hatgrainCount
+```
+hatgrainCount :: String -> ControlPattern 
+```
+
+### hatgrainCountTo
+```
+hatgrainCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### hatgrainbus
+```
+hatgrainbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### hatgrainrecv
+```
+hatgrainrecv :: Pattern Int -> ControlPattern 
+```
+
+### hbrick
+```
+hbrick :: Pattern Double -> ControlPattern 
+```
+
+High pass sort of spectral filter
+
+### hbrickTake
+```
+hbrickTake :: String -> [Double] -> ControlPattern 
+```
+
+### hbrickCount
+```
+hbrickCount :: String -> ControlPattern 
+```
+
+### hbrickCountTo
+```
+hbrickCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### hbrickbus
+```
+hbrickbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### hbrickrecv
+```
+hbrickrecv :: Pattern Int -> ControlPattern 
+```
+
+### hcutoff
+```
+hcutoff :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers from 0 to 1. Applies the cutoff frequency of the high-pass filter. Also has alias `hpf`
+
+### hcutoffTake
+```
+hcutoffTake :: String -> [Double] -> ControlPattern 
+```
+
+### hcutoffCount
+```
+hcutoffCount :: String -> ControlPattern 
+```
+
+### hcutoffCountTo
+```
+hcutoffCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### hcutoffbus
+```
+hcutoffbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### hcutoffrecv
+```
+hcutoffrecv :: Pattern Int -> ControlPattern 
+```
+
+### hold
+```
+hold :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers to specify the hold time (in seconds) of an envelope applied to each sample. Only takes effect if `attack` and `release` are also specified.
+
+### holdTake
+```
+holdTake :: String -> [Double] -> ControlPattern 
+```
+
+### holdCount
+```
+holdCount :: String -> ControlPattern 
+```
+
+### holdCountTo
+```
+holdCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### holdbus
+```
+holdbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### holdrecv
+```
+holdrecv :: Pattern Int -> ControlPattern 
+```
+
+### hours
+```
+hours :: Pattern Double -> ControlPattern 
+```
+
+### hoursTake
+```
+hoursTake :: String -> [Double] -> ControlPattern 
+```
+
+### hoursCount
+```
+hoursCount :: String -> ControlPattern 
+```
+
+### hoursCountTo
+```
+hoursCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### hoursbus
+```
+hoursbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### hresonance
+```
+hresonance :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers from 0 to 1. Applies the resonance of the high-pass filter. Has alias `hpq`
+
+### hresonanceTake
+```
+hresonanceTake :: String -> [Double] -> ControlPattern 
+```
+
+### hresonanceCount
+```
+hresonanceCount :: String -> ControlPattern 
+```
+
+### hresonanceCountTo
+```
+hresonanceCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### hresonancebus
+```
+hresonancebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### hresonancerecv
+```
+hresonancerecv :: Pattern Int -> ControlPattern 
+```
+
+### imag
+```
+imag :: Pattern Double -> ControlPattern 
+```
+
+### imagTake
+```
+imagTake :: String -> [Double] -> ControlPattern 
+```
+
+### imagCount
+```
+imagCount :: String -> ControlPattern 
+```
+
+### imagCountTo
+```
+imagCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### imagbus
+```
+imagbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### imagrecv
+```
+imagrecv :: Pattern Int -> ControlPattern 
+```
+
+### kcutoff
+```
+kcutoff :: Pattern Double -> ControlPattern 
+```
+
+### kcutoffTake
+```
+kcutoffTake :: String -> [Double] -> ControlPattern 
+```
+
+### kcutoffCount
+```
+kcutoffCount :: String -> ControlPattern 
+```
+
+### kcutoffCountTo
+```
+kcutoffCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### kcutoffbus
+```
+kcutoffbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### kcutoffrecv
+```
+kcutoffrecv :: Pattern Int -> ControlPattern 
+```
+
+### krush
+```
+krush :: Pattern Double -> ControlPattern 
+```
+
+shape/bass enhancer
+
+### krushTake
+```
+krushTake :: String -> [Double] -> ControlPattern 
+```
+
+### krushCount
+```
+krushCount :: String -> ControlPattern 
+```
+
+### krushCountTo
+```
+krushCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### krushbus
+```
+krushbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### krushrecv
+```
+krushrecv :: Pattern Int -> ControlPattern 
+```
+
+### lagogo
+```
+lagogo :: Pattern Double -> ControlPattern 
+```
+
+### lagogoTake
+```
+lagogoTake :: String -> [Double] -> ControlPattern 
+```
+
+### lagogoCount
+```
+lagogoCount :: String -> ControlPattern 
+```
+
+### lagogoCountTo
+```
+lagogoCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lagogobus
+```
+lagogobus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lagogorecv
+```
+lagogorecv :: Pattern Int -> ControlPattern 
+```
+
+### lbrick
+```
+lbrick :: Pattern Double -> ControlPattern 
+```
+
+Low pass sort of spectral filter
+
+### lbrickTake
+```
+lbrickTake :: String -> [Double] -> ControlPattern 
+```
+
+### lbrickCount
+```
+lbrickCount :: String -> ControlPattern 
+```
+
+### lbrickCountTo
+```
+lbrickCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lbrickbus
+```
+lbrickbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lbrickrecv
+```
+lbrickrecv :: Pattern Int -> ControlPattern 
+```
+
+### lclap
+```
+lclap :: Pattern Double -> ControlPattern 
+```
+
+### lclapTake
+```
+lclapTake :: String -> [Double] -> ControlPattern 
+```
+
+### lclapCount
+```
+lclapCount :: String -> ControlPattern 
+```
+
+### lclapCountTo
+```
+lclapCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lclapbus
+```
+lclapbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lclaprecv
+```
+lclaprecv :: Pattern Int -> ControlPattern 
+```
+
+### lclaves
+```
+lclaves :: Pattern Double -> ControlPattern 
+```
+
+### lclavesTake
+```
+lclavesTake :: String -> [Double] -> ControlPattern 
+```
+
+### lclavesCount
+```
+lclavesCount :: String -> ControlPattern 
+```
+
+### lclavesCountTo
+```
+lclavesCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lclavesbus
+```
+lclavesbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lclavesrecv
+```
+lclavesrecv :: Pattern Int -> ControlPattern 
+```
+
+### lclhat
+```
+lclhat :: Pattern Double -> ControlPattern 
+```
+
+### lclhatTake
+```
+lclhatTake :: String -> [Double] -> ControlPattern 
+```
+
+### lclhatCount
+```
+lclhatCount :: String -> ControlPattern 
+```
+
+### lclhatCountTo
+```
+lclhatCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lclhatbus
+```
+lclhatbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lclhatrecv
+```
+lclhatrecv :: Pattern Int -> ControlPattern 
+```
+
+### lcrash
+```
+lcrash :: Pattern Double -> ControlPattern 
+```
+
+### lcrashTake
+```
+lcrashTake :: String -> [Double] -> ControlPattern 
+```
+
+### lcrashCount
+```
+lcrashCount :: String -> ControlPattern 
+```
+
+### lcrashCountTo
+```
+lcrashCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lcrashbus
+```
+lcrashbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lcrashrecv
+```
+lcrashrecv :: Pattern Int -> ControlPattern 
+```
+
+### legato
+```
+legato :: Pattern Double -> ControlPattern 
+```
+
+controls the amount of overlap between two adjacent sounds
+
+### legatoTake
+```
+legatoTake :: String -> [Double] -> ControlPattern 
+```
+
+### legatoCount
+```
+legatoCount :: String -> ControlPattern 
+```
+
+### legatoCountTo
+```
+legatoCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### legatobus
+```
+legatobus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### leslie
+```
+leslie :: Pattern Double -> ControlPattern 
+```
+
+### leslieTake
+```
+leslieTake :: String -> [Double] -> ControlPattern 
+```
+
+### leslieCount
+```
+leslieCount :: String -> ControlPattern 
+```
+
+### leslieCountTo
+```
+leslieCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lesliebus
+```
+lesliebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### leslierecv
+```
+leslierecv :: Pattern Int -> ControlPattern 
+```
+
+### lfo
+```
+lfo :: Pattern Double -> ControlPattern 
+```
+
+### lfoTake
+```
+lfoTake :: String -> [Double] -> ControlPattern 
+```
+
+### lfoCount
+```
+lfoCount :: String -> ControlPattern 
+```
+
+### lfoCountTo
+```
+lfoCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lfobus
+```
+lfobus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lforecv
+```
+lforecv :: Pattern Int -> ControlPattern 
+```
+
+### lfocutoffint
+```
+lfocutoffint :: Pattern Double -> ControlPattern 
+```
+
+### lfocutoffintTake
+```
+lfocutoffintTake :: String -> [Double] -> ControlPattern 
+```
+
+### lfocutoffintCount
+```
+lfocutoffintCount :: String -> ControlPattern 
+```
+
+### lfocutoffintCountTo
+```
+lfocutoffintCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lfocutoffintbus
+```
+lfocutoffintbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lfocutoffintrecv
+```
+lfocutoffintrecv :: Pattern Int -> ControlPattern 
+```
+
+### lfodelay
+```
+lfodelay :: Pattern Double -> ControlPattern 
+```
+
+### lfodelayTake
+```
+lfodelayTake :: String -> [Double] -> ControlPattern 
+```
+
+### lfodelayCount
+```
+lfodelayCount :: String -> ControlPattern 
+```
+
+### lfodelayCountTo
+```
+lfodelayCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lfodelaybus
+```
+lfodelaybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lfodelayrecv
+```
+lfodelayrecv :: Pattern Int -> ControlPattern 
+```
+
+### lfoint
+```
+lfoint :: Pattern Double -> ControlPattern 
+```
+
+### lfointTake
+```
+lfointTake :: String -> [Double] -> ControlPattern 
+```
+
+### lfointCount
+```
+lfointCount :: String -> ControlPattern 
+```
+
+### lfointCountTo
+```
+lfointCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lfointbus
+```
+lfointbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lfointrecv
+```
+lfointrecv :: Pattern Int -> ControlPattern 
+```
+
+### lfopitchint
+```
+lfopitchint :: Pattern Double -> ControlPattern 
+```
+
+### lfopitchintTake
+```
+lfopitchintTake :: String -> [Double] -> ControlPattern 
+```
+
+### lfopitchintCount
+```
+lfopitchintCount :: String -> ControlPattern 
+```
+
+### lfopitchintCountTo
+```
+lfopitchintCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lfopitchintbus
+```
+lfopitchintbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lfopitchintrecv
+```
+lfopitchintrecv :: Pattern Int -> ControlPattern 
+```
+
+### lfoshape
+```
+lfoshape :: Pattern Double -> ControlPattern 
+```
+
+### lfoshapeTake
+```
+lfoshapeTake :: String -> [Double] -> ControlPattern 
+```
+
+### lfoshapeCount
+```
+lfoshapeCount :: String -> ControlPattern 
+```
+
+### lfoshapeCountTo
+```
+lfoshapeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lfoshapebus
+```
+lfoshapebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lfoshaperecv
+```
+lfoshaperecv :: Pattern Int -> ControlPattern 
+```
+
+### lfosync
+```
+lfosync :: Pattern Double -> ControlPattern 
+```
+
+### lfosyncTake
+```
+lfosyncTake :: String -> [Double] -> ControlPattern 
+```
+
+### lfosyncCount
+```
+lfosyncCount :: String -> ControlPattern 
+```
+
+### lfosyncCountTo
+```
+lfosyncCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lfosyncbus
+```
+lfosyncbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lfosyncrecv
+```
+lfosyncrecv :: Pattern Int -> ControlPattern 
+```
+
+### lhitom
+```
+lhitom :: Pattern Double -> ControlPattern 
+```
+
+### lhitomTake
+```
+lhitomTake :: String -> [Double] -> ControlPattern 
+```
+
+### lhitomCount
+```
+lhitomCount :: String -> ControlPattern 
+```
+
+### lhitomCountTo
+```
+lhitomCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lhitombus
+```
+lhitombus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lhitomrecv
+```
+lhitomrecv :: Pattern Int -> ControlPattern 
+```
+
+### lkick
+```
+lkick :: Pattern Double -> ControlPattern 
+```
+
+### lkickTake
+```
+lkickTake :: String -> [Double] -> ControlPattern 
+```
+
+### lkickCount
+```
+lkickCount :: String -> ControlPattern 
+```
+
+### lkickCountTo
+```
+lkickCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lkickbus
+```
+lkickbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lkickrecv
+```
+lkickrecv :: Pattern Int -> ControlPattern 
+```
+
+### llotom
+```
+llotom :: Pattern Double -> ControlPattern 
+```
+
+### llotomTake
+```
+llotomTake :: String -> [Double] -> ControlPattern 
+```
+
+### llotomCount
+```
+llotomCount :: String -> ControlPattern 
+```
+
+### llotomCountTo
+```
+llotomCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### llotombus
+```
+llotombus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### llotomrecv
+```
+llotomrecv :: Pattern Int -> ControlPattern 
+```
+
+### lock
+```
+lock :: Pattern Double -> ControlPattern 
+```
+
+A pattern of numbers. Specifies whether delaytime is calculated relative to cps. When set to 1, delaytime is a direct multiple of a cycle.
+
+### lockTake
+```
+lockTake :: String -> [Double] -> ControlPattern 
+```
+
+### lockCount
+```
+lockCount :: String -> ControlPattern 
+```
+
+### lockCountTo
+```
+lockCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lockbus
+```
+lockbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lockrecv
+```
+lockrecv :: Pattern Int -> ControlPattern 
+```
+
+### loop
+```
+loop :: Pattern Double -> ControlPattern 
+```
+
+loops the sample (from `begin` to `end`) the specified number of times.
+
+### loopTake
+```
+loopTake :: String -> [Double] -> ControlPattern 
+```
+
+### loopCount
+```
+loopCount :: String -> ControlPattern 
+```
+
+### loopCountTo
+```
+loopCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### loopbus
+```
+loopbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lophat
+```
+lophat :: Pattern Double -> ControlPattern 
+```
+
+### lophatTake
+```
+lophatTake :: String -> [Double] -> ControlPattern 
+```
+
+### lophatCount
+```
+lophatCount :: String -> ControlPattern 
+```
+
+### lophatCountTo
+```
+lophatCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lophatbus
+```
+lophatbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lophatrecv
+```
+lophatrecv :: Pattern Int -> ControlPattern 
+```
+
+### lrate
+```
+lrate :: Pattern Double -> ControlPattern 
+```
+
+### lrateTake
+```
+lrateTake :: String -> [Double] -> ControlPattern 
+```
+
+### lrateCount
+```
+lrateCount :: String -> ControlPattern 
+```
+
+### lrateCountTo
+```
+lrateCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lratebus
+```
+lratebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lraterecv
+```
+lraterecv :: Pattern Int -> ControlPattern 
+```
+
+### lsize
+```
+lsize :: Pattern Double -> ControlPattern 
+```
+
+### lsizeTake
+```
+lsizeTake :: String -> [Double] -> ControlPattern 
+```
+
+### lsizeCount
+```
+lsizeCount :: String -> ControlPattern 
+```
+
+### lsizeCountTo
+```
+lsizeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lsizebus
+```
+lsizebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lsizerecv
+```
+lsizerecv :: Pattern Int -> ControlPattern 
+```
+
+### lsnare
+```
+lsnare :: Pattern Double -> ControlPattern 
+```
+
+### lsnareTake
+```
+lsnareTake :: String -> [Double] -> ControlPattern 
+```
+
+### lsnareCount
+```
+lsnareCount :: String -> ControlPattern 
+```
+
+### lsnareCountTo
+```
+lsnareCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### lsnarebus
+```
+lsnarebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lsnarerecv
+```
+lsnarerecv :: Pattern Int -> ControlPattern 
+```
+
+### midibend
+```
+midibend :: Pattern Double -> ControlPattern 
+```
+
+### midibendTake
+```
+midibendTake :: String -> [Double] -> ControlPattern 
+```
+
+### midibendCount
+```
+midibendCount :: String -> ControlPattern 
+```
+
+### midibendCountTo
+```
+midibendCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### midibendbus
+```
+midibendbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### midichan
+```
+midichan :: Pattern Double -> ControlPattern 
+```
+
+### midichanTake
+```
+midichanTake :: String -> [Double] -> ControlPattern 
+```
+
+### midichanCount
+```
+midichanCount :: String -> ControlPattern 
+```
+
+### midichanCountTo
+```
+midichanCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### midichanbus
+```
+midichanbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### midicmd
+```
+midicmd :: Pattern String -> ControlPattern 
+```
+
+### midicmdTake
+```
+midicmdTake :: String -> [Double] -> ControlPattern 
+```
+
+### midicmdbus
+```
+midicmdbus :: Pattern Int -> Pattern String -> ControlPattern 
+```
+
+### miditouch
+```
+miditouch :: Pattern Double -> ControlPattern 
+```
+
+### miditouchTake
+```
+miditouchTake :: String -> [Double] -> ControlPattern 
+```
+
+### miditouchCount
+```
+miditouchCount :: String -> ControlPattern 
+```
+
+### miditouchCountTo
+```
+miditouchCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### miditouchbus
+```
+miditouchbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### minutes
+```
+minutes :: Pattern Double -> ControlPattern 
+```
+
+### minutesTake
+```
+minutesTake :: String -> [Double] -> ControlPattern 
+```
+
+### minutesCount
+```
+minutesCount :: String -> ControlPattern 
+```
+
+### minutesCountTo
+```
+minutesCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### minutesbus
+```
+minutesbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### modwheel
+```
+modwheel :: Pattern Double -> ControlPattern 
+```
+
+### modwheelTake
+```
+modwheelTake :: String -> [Double] -> ControlPattern 
+```
+
+### modwheelCount
+```
+modwheelCount :: String -> ControlPattern 
+```
+
+### modwheelCountTo
+```
+modwheelCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### modwheelbus
+```
+modwheelbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### modwheelrecv
+```
+modwheelrecv :: Pattern Int -> ControlPattern 
+```
+
+### mtranspose
+```
+mtranspose :: Pattern Double -> ControlPattern 
+```
+
+### mtransposeTake
+```
+mtransposeTake :: String -> [Double] -> ControlPattern 
+```
+
+### mtransposeCount
+```
+mtransposeCount :: String -> ControlPattern 
+```
+
+### mtransposeCountTo
+```
+mtransposeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### mtransposebus
+```
+mtransposebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### mtransposerecv
+```
+mtransposerecv :: Pattern Int -> ControlPattern 
+```
+
+### n
+```
+n :: Pattern Note -> ControlPattern 
+```
+
+The note or sample number to choose for a synth or sampleset
+
+### nTake
+```
+nTake :: String -> [Double] -> ControlPattern 
+```
+
+### nCount
+```
+nCount :: String -> ControlPattern 
+```
+
+### nCountTo
+```
+nCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### nbus
+```
+nbus :: Pattern Int -> Pattern Note -> ControlPattern 
+```
+
+### note
+```
+note :: Pattern Note -> ControlPattern 
+```
+
+The note or pitch to play a sound or synth with
+
+### noteTake
+```
+noteTake :: String -> [Double] -> ControlPattern 
+```
+
+### noteCount
+```
+noteCount :: String -> ControlPattern 
+```
+
+### noteCountTo
+```
+noteCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### notebus
+```
+notebus :: Pattern Int -> Pattern Note -> ControlPattern 
+```
+
+### nudge
+```
+nudge :: Pattern Double -> ControlPattern 
+```
+
+Nudges events into the future by the specified number of seconds. Negative numbers work up to a point as well (due to internal latency)
+
+### nudgeTake
+```
+nudgeTake :: String -> [Double] -> ControlPattern 
+```
+
+### nudgeCount
+```
+nudgeCount :: String -> ControlPattern 
+```
+
+### nudgeCountTo
+```
+nudgeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### nudgebus
+```
+nudgebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### nudgerecv
+```
+nudgerecv :: Pattern Int -> ControlPattern 
+```
+
+### octave
+```
+octave :: Pattern Int -> ControlPattern 
+```
+
+### octaveTake
+```
+octaveTake :: String -> [Double] -> ControlPattern 
+```
+
+### octaveCount
+```
+octaveCount :: String -> ControlPattern 
+```
+
+### octaveCountTo
+```
+octaveCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### octavebus
+```
+octavebus :: Pattern Int -> Pattern Int -> ControlPattern 
+```
+
+### octaveR
+```
+octaveR :: Pattern Double -> ControlPattern 
+```
+
+### octaveRTake
+```
+octaveRTake :: String -> [Double] -> ControlPattern 
+```
+
+### octaveRCount
+```
+octaveRCount :: String -> ControlPattern 
+```
+
+### octaveRCountTo
+```
+octaveRCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### octaveRbus
+```
+octaveRbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### octaveRrecv
+```
+octaveRrecv :: Pattern Int -> ControlPattern 
+```
+
+### octer
+```
+octer :: Pattern Double -> ControlPattern 
+```
+
+octaver effect
+
+### octerTake
+```
+octerTake :: String -> [Double] -> ControlPattern 
+```
+
+### octerCount
+```
+octerCount :: String -> ControlPattern 
+```
+
+### octerCountTo
+```
+octerCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### octerbus
+```
+octerbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### octerrecv
+```
+octerrecv :: Pattern Int -> ControlPattern 
+```
+
+### octersub
+```
+octersub :: Pattern Double -> ControlPattern 
+```
+
+octaver effect
+
+### octersubTake
+```
+octersubTake :: String -> [Double] -> ControlPattern 
+```
+
+### octersubCount
+```
+octersubCount :: String -> ControlPattern 
+```
+
+### octersubCountTo
+```
+octersubCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### octersubbus
+```
+octersubbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### octersubrecv
+```
+octersubrecv :: Pattern Int -> ControlPattern 
+```
+
+### octersubsub
+```
+octersubsub :: Pattern Double -> ControlPattern 
+```
+
+octaver effect
+
+### octersubsubTake
+```
+octersubsubTake :: String -> [Double] -> ControlPattern 
+```
+
+### octersubsubCount
+```
+octersubsubCount :: String -> ControlPattern 
+```
+
+### octersubsubCountTo
+```
+octersubsubCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### octersubsubbus
+```
+octersubsubbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### octersubsubrecv
+```
+octersubsubrecv :: Pattern Int -> ControlPattern 
+```
+
+### offset
+```
+offset :: Pattern Double -> ControlPattern 
+```
+
+### offsetTake
+```
+offsetTake :: String -> [Double] -> ControlPattern 
+```
+
+### offsetCount
+```
+offsetCount :: String -> ControlPattern 
+```
+
+### offsetCountTo
+```
+offsetCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### offsetbus
+```
+offsetbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### ophatdecay
+```
+ophatdecay :: Pattern Double -> ControlPattern 
+```
+
+### ophatdecayTake
+```
+ophatdecayTake :: String -> [Double] -> ControlPattern 
+```
+
+### ophatdecayCount
+```
+ophatdecayCount :: String -> ControlPattern 
+```
+
+### ophatdecayCountTo
+```
+ophatdecayCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### ophatdecaybus
+```
+ophatdecaybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### ophatdecayrecv
+```
+ophatdecayrecv :: Pattern Int -> ControlPattern 
+```
+
+### orbit
+```
+orbit :: Pattern Int -> ControlPattern 
+```
+
+a pattern of numbers. An `orbit` is a global parameter context for patterns. Patterns with the same orbit will share hardware output bus offset and global effects, e.g. reverb and delay. The maximum number of orbits is specified in the superdirt startup, numbers higher than maximum will wrap around.
+
+### orbitTake
+```
+orbitTake :: String -> [Double] -> ControlPattern 
+```
+
+### orbitCount
+```
+orbitCount :: String -> ControlPattern 
+```
+
+### orbitCountTo
+```
+orbitCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### orbitbus
+```
+orbitbus :: Pattern Int -> Pattern Int -> ControlPattern 
+```
+
+### orbitrecv
+```
+orbitrecv :: Pattern Int -> ControlPattern 
+```
+
+### overgain
+```
+overgain :: Pattern Double -> ControlPattern 
+```
+
+### overgainTake
+```
+overgainTake :: String -> [Double] -> ControlPattern 
+```
+
+### overgainCount
+```
+overgainCount :: String -> ControlPattern 
+```
+
+### overgainCountTo
+```
+overgainCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### overgainbus
+```
+overgainbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### overshape
+```
+overshape :: Pattern Double -> ControlPattern 
+```
+
+### overshapeTake
+```
+overshapeTake :: String -> [Double] -> ControlPattern 
+```
+
+### overshapeCount
+```
+overshapeCount :: String -> ControlPattern 
+```
+
+### overshapeCountTo
+```
+overshapeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### overshapebus
+```
+overshapebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### overshaperecv
+```
+overshaperecv :: Pattern Int -> ControlPattern 
+```
+
+### pan
+```
+pan :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers between 0 and 1, from left to right (assuming stereo), once round a circle (assuming multichannel)
+
+### panTake
+```
+panTake :: String -> [Double] -> ControlPattern 
+```
+
+### panCount
+```
+panCount :: String -> ControlPattern 
+```
+
+### panCountTo
+```
+panCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### panbus
+```
+panbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### panrecv
+```
+panrecv :: Pattern Int -> ControlPattern 
+```
+
+### panorient
+```
+panorient :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers between -1.0 and 1.0, which controls the relative position of the centre pan in a pair of adjacent speakers (multichannel only)
+
+### panorientTake
+```
+panorientTake :: String -> [Double] -> ControlPattern 
+```
+
+### panorientCount
+```
+panorientCount :: String -> ControlPattern 
+```
+
+### panorientCountTo
+```
+panorientCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### panorientbus
+```
+panorientbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### panorientrecv
+```
+panorientrecv :: Pattern Int -> ControlPattern 
+```
+
+### panspan
+```
+panspan :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers between -inf and inf, which controls how much multichannel output is fanned out (negative is backwards ordering)
+
+### panspanTake
+```
+panspanTake :: String -> [Double] -> ControlPattern 
+```
+
+### panspanCount
+```
+panspanCount :: String -> ControlPattern 
+```
+
+### panspanCountTo
+```
+panspanCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### panspanbus
+```
+panspanbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### panspanrecv
+```
+panspanrecv :: Pattern Int -> ControlPattern 
+```
+
+### pansplay
+```
+pansplay :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers between 0.0 and 1.0, which controls the multichannel spread range (multichannel only)
+
+### pansplayTake
+```
+pansplayTake :: String -> [Double] -> ControlPattern 
+```
+
+### pansplayCount
+```
+pansplayCount :: String -> ControlPattern 
+```
+
+### pansplayCountTo
+```
+pansplayCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### pansplaybus
+```
+pansplaybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### pansplayrecv
+```
+pansplayrecv :: Pattern Int -> ControlPattern 
+```
+
+### panwidth
+```
+panwidth :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers between 0.0 and inf, which controls how much each channel is distributed over neighbours (multichannel only)
+
+### panwidthTake
+```
+panwidthTake :: String -> [Double] -> ControlPattern 
+```
+
+### panwidthCount
+```
+panwidthCount :: String -> ControlPattern 
+```
+
+### panwidthCountTo
+```
+panwidthCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### panwidthbus
+```
+panwidthbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### panwidthrecv
+```
+panwidthrecv :: Pattern Int -> ControlPattern 
+```
+
+### partials
+```
+partials :: Pattern Double -> ControlPattern 
+```
+
+### partialsTake
+```
+partialsTake :: String -> [Double] -> ControlPattern 
+```
+
+### partialsCount
+```
+partialsCount :: String -> ControlPattern 
+```
+
+### partialsCountTo
+```
+partialsCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### partialsbus
+```
+partialsbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### partialsrecv
+```
+partialsrecv :: Pattern Int -> ControlPattern 
+```
+
+### phaserdepth
+```
+phaserdepth :: Pattern Double -> ControlPattern 
+```
+
+Phaser Audio DSP effect | params are `phaserrate` and `phaserdepth`
+
+### phaserdepthTake
+```
+phaserdepthTake :: String -> [Double] -> ControlPattern 
+```
+
+### phaserdepthCount
+```
+phaserdepthCount :: String -> ControlPattern 
+```
+
+### phaserdepthCountTo
+```
+phaserdepthCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### phaserdepthbus
+```
+phaserdepthbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### phaserdepthrecv
+```
+phaserdepthrecv :: Pattern Int -> ControlPattern 
+```
+
+### phaserrate
+```
+phaserrate :: Pattern Double -> ControlPattern 
+```
+
+Phaser Audio DSP effect | params are `phaserrate` and `phaserdepth`
+
+### phaserrateTake
+```
+phaserrateTake :: String -> [Double] -> ControlPattern 
+```
+
+### phaserrateCount
+```
+phaserrateCount :: String -> ControlPattern 
+```
+
+### phaserrateCountTo
+```
+phaserrateCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### phaserratebus
+```
+phaserratebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### phaserraterecv
+```
+phaserraterecv :: Pattern Int -> ControlPattern 
+```
+
+### pitch1
+```
+pitch1 :: Pattern Double -> ControlPattern 
+```
+
+### pitch1Take
+```
+pitch1Take :: String -> [Double] -> ControlPattern 
+```
+
+### pitch1Count
+```
+pitch1Count :: String -> ControlPattern 
+```
+
+### pitch1CountTo
+```
+pitch1CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### pitch1bus
+```
+pitch1bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### pitch1recv
+```
+pitch1recv :: Pattern Int -> ControlPattern 
+```
+
+### pitch2
+```
+pitch2 :: Pattern Double -> ControlPattern 
+```
+
+### pitch2Take
+```
+pitch2Take :: String -> [Double] -> ControlPattern 
+```
+
+### pitch2Count
+```
+pitch2Count :: String -> ControlPattern 
+```
+
+### pitch2CountTo
+```
+pitch2CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### pitch2bus
+```
+pitch2bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### pitch2recv
+```
+pitch2recv :: Pattern Int -> ControlPattern 
+```
+
+### pitch3
+```
+pitch3 :: Pattern Double -> ControlPattern 
+```
+
+### pitch3Take
+```
+pitch3Take :: String -> [Double] -> ControlPattern 
+```
+
+### pitch3Count
+```
+pitch3Count :: String -> ControlPattern 
+```
+
+### pitch3CountTo
+```
+pitch3CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### pitch3bus
+```
+pitch3bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### pitch3recv
+```
+pitch3recv :: Pattern Int -> ControlPattern 
+```
+
+### polyTouch
+```
+polyTouch :: Pattern Double -> ControlPattern 
+```
+
+### polyTouchTake
+```
+polyTouchTake :: String -> [Double] -> ControlPattern 
+```
+
+### polyTouchCount
+```
+polyTouchCount :: String -> ControlPattern 
+```
+
+### polyTouchCountTo
+```
+polyTouchCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### polyTouchbus
+```
+polyTouchbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### portamento
+```
+portamento :: Pattern Double -> ControlPattern 
+```
+
+### portamentoTake
+```
+portamentoTake :: String -> [Double] -> ControlPattern 
+```
+
+### portamentoCount
+```
+portamentoCount :: String -> ControlPattern 
+```
+
+### portamentoCountTo
+```
+portamentoCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### portamentobus
+```
+portamentobus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### portamentorecv
+```
+portamentorecv :: Pattern Int -> ControlPattern 
+```
+
+### progNum
+```
+progNum :: Pattern Double -> ControlPattern 
+```
+
+### progNumTake
+```
+progNumTake :: String -> [Double] -> ControlPattern 
+```
+
+### progNumCount
+```
+progNumCount :: String -> ControlPattern 
+```
+
+### progNumCountTo
+```
+progNumCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### progNumbus
+```
+progNumbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### rate
+```
+rate :: Pattern Double -> ControlPattern 
+```
+
+used in SuperDirt softsynths as a control rate or `speed`
+
+### rateTake
+```
+rateTake :: String -> [Double] -> ControlPattern 
+```
+
+### rateCount
+```
+rateCount :: String -> ControlPattern 
+```
+
+### rateCountTo
+```
+rateCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### ratebus
+```
+ratebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### raterecv
+```
+raterecv :: Pattern Int -> ControlPattern 
+```
+
+### real
+```
+real :: Pattern Double -> ControlPattern 
+```
+
+Spectral conform
+
+### realTake
+```
+realTake :: String -> [Double] -> ControlPattern 
+```
+
+### realCount
+```
+realCount :: String -> ControlPattern 
+```
+
+### realCountTo
+```
+realCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### realbus
+```
+realbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### realrecv
+```
+realrecv :: Pattern Int -> ControlPattern 
+```
+
+### release
+```
+release :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers to specify the release time (in seconds) of an envelope applied to each sample.
+
+### releaseTake
+```
+releaseTake :: String -> [Double] -> ControlPattern 
+```
+
+### releaseCount
+```
+releaseCount :: String -> ControlPattern 
+```
+
+### releaseCountTo
+```
+releaseCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### releasebus
+```
+releasebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### releaserecv
+```
+releaserecv :: Pattern Int -> ControlPattern 
+```
+
+### resonance
+```
+resonance :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers from 0 to 1. Specifies the resonance of the low-pass filter.
+
+### resonanceTake
+```
+resonanceTake :: String -> [Double] -> ControlPattern 
+```
+
+### resonanceCount
+```
+resonanceCount :: String -> ControlPattern 
+```
+
+### resonanceCountTo
+```
+resonanceCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### resonancebus
+```
+resonancebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### resonancerecv
+```
+resonancerecv :: Pattern Int -> ControlPattern 
+```
+
+### ring
+```
+ring :: Pattern Double -> ControlPattern 
+```
+
+ring modulation
+
+### ringTake
+```
+ringTake :: String -> [Double] -> ControlPattern 
+```
+
+### ringCount
+```
+ringCount :: String -> ControlPattern 
+```
+
+### ringCountTo
+```
+ringCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### ringbus
+```
+ringbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### ringrecv
+```
+ringrecv :: Pattern Int -> ControlPattern 
+```
+
+### ringdf
+```
+ringdf :: Pattern Double -> ControlPattern 
+```
+
+ring modulation
+
+### ringdfTake
+```
+ringdfTake :: String -> [Double] -> ControlPattern 
+```
+
+### ringdfCount
+```
+ringdfCount :: String -> ControlPattern 
+```
+
+### ringdfCountTo
+```
+ringdfCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### ringdfbus
+```
+ringdfbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### ringdfrecv
+```
+ringdfrecv :: Pattern Int -> ControlPattern 
+```
+
+### ringf
+```
+ringf :: Pattern Double -> ControlPattern 
+```
+
+ring modulation
+
+### ringfTake
+```
+ringfTake :: String -> [Double] -> ControlPattern 
+```
+
+### ringfCount
+```
+ringfCount :: String -> ControlPattern 
+```
+
+### ringfCountTo
+```
+ringfCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### ringfbus
+```
+ringfbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### ringfrecv
+```
+ringfrecv :: Pattern Int -> ControlPattern 
+```
+
+### room
+```
+room :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers from 0 to 1. Sets the level of reverb.
+
+### roomTake
+```
+roomTake :: String -> [Double] -> ControlPattern 
+```
+
+### roomCount
+```
+roomCount :: String -> ControlPattern 
+```
+
+### roomCountTo
+```
+roomCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### roombus
+```
+roombus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### roomrecv
+```
+roomrecv :: Pattern Int -> ControlPattern 
+```
+
+### sagogo
+```
+sagogo :: Pattern Double -> ControlPattern 
+```
+
+### sagogoTake
+```
+sagogoTake :: String -> [Double] -> ControlPattern 
+```
+
+### sagogoCount
+```
+sagogoCount :: String -> ControlPattern 
+```
+
+### sagogoCountTo
+```
+sagogoCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### sagogobus
+```
+sagogobus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### sagogorecv
+```
+sagogorecv :: Pattern Int -> ControlPattern 
+```
+
+### sclap
+```
+sclap :: Pattern Double -> ControlPattern 
+```
+
+### sclapTake
+```
+sclapTake :: String -> [Double] -> ControlPattern 
+```
+
+### sclapCount
+```
+sclapCount :: String -> ControlPattern 
+```
+
+### sclapCountTo
+```
+sclapCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### sclapbus
+```
+sclapbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### sclaprecv
+```
+sclaprecv :: Pattern Int -> ControlPattern 
+```
+
+### sclaves
+```
+sclaves :: Pattern Double -> ControlPattern 
+```
+
+### sclavesTake
+```
+sclavesTake :: String -> [Double] -> ControlPattern 
+```
+
+### sclavesCount
+```
+sclavesCount :: String -> ControlPattern 
+```
+
+### sclavesCountTo
+```
+sclavesCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### sclavesbus
+```
+sclavesbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### sclavesrecv
+```
+sclavesrecv :: Pattern Int -> ControlPattern 
+```
+
+### scram
+```
+scram :: Pattern Double -> ControlPattern 
+```
+
+Spectral scramble
+
+### scramTake
+```
+scramTake :: String -> [Double] -> ControlPattern 
+```
+
+### scramCount
+```
+scramCount :: String -> ControlPattern 
+```
+
+### scramCountTo
+```
+scramCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### scrambus
+```
+scrambus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### scramrecv
+```
+scramrecv :: Pattern Int -> ControlPattern 
+```
+
+### scrash
+```
+scrash :: Pattern Double -> ControlPattern 
+```
+
+### scrashTake
+```
+scrashTake :: String -> [Double] -> ControlPattern 
+```
+
+### scrashCount
+```
+scrashCount :: String -> ControlPattern 
+```
+
+### scrashCountTo
+```
+scrashCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### scrashbus
+```
+scrashbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### scrashrecv
+```
+scrashrecv :: Pattern Int -> ControlPattern 
+```
+
+### seconds
+```
+seconds :: Pattern Double -> ControlPattern 
+```
+
+### secondsTake
+```
+secondsTake :: String -> [Double] -> ControlPattern 
+```
+
+### secondsCount
+```
+secondsCount :: String -> ControlPattern 
+```
+
+### secondsCountTo
+```
+secondsCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### secondsbus
+```
+secondsbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### semitone
+```
+semitone :: Pattern Double -> ControlPattern 
+```
+
+### semitoneTake
+```
+semitoneTake :: String -> [Double] -> ControlPattern 
+```
+
+### semitoneCount
+```
+semitoneCount :: String -> ControlPattern 
+```
+
+### semitoneCountTo
+```
+semitoneCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### semitonebus
+```
+semitonebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### semitonerecv
+```
+semitonerecv :: Pattern Int -> ControlPattern 
+```
+
+### shape
+```
+shape :: Pattern Double -> ControlPattern 
+```
+
+wave shaping distortion, a pattern of numbers from 0 for no distortion up to 1 for loads of distortion.
+
+### shapeTake
+```
+shapeTake :: String -> [Double] -> ControlPattern 
+```
+
+### shapeCount
+```
+shapeCount :: String -> ControlPattern 
+```
+
+### shapeCountTo
+```
+shapeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### shapebus
+```
+shapebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### shaperecv
+```
+shaperecv :: Pattern Int -> ControlPattern 
+```
+
+### size
+```
+size :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers from 0 to 1. Sets the perceptual size (reverb time) of the `room` to be used in reverb.
+
+### sizeTake
+```
+sizeTake :: String -> [Double] -> ControlPattern 
+```
+
+### sizeCount
+```
+sizeCount :: String -> ControlPattern 
+```
+
+### sizeCountTo
+```
+sizeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### sizebus
+```
+sizebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### sizerecv
+```
+sizerecv :: Pattern Int -> ControlPattern 
+```
+
+### slide
+```
+slide :: Pattern Double -> ControlPattern 
+```
+
+### slideTake
+```
+slideTake :: String -> [Double] -> ControlPattern 
+```
+
+### slideCount
+```
+slideCount :: String -> ControlPattern 
+```
+
+### slideCountTo
+```
+slideCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slidebus
+```
+slidebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### sliderecv
+```
+sliderecv :: Pattern Int -> ControlPattern 
+```
+
+### slider0
+```
+slider0 :: Pattern Double -> ControlPattern 
+```
+
+### slider0Take
+```
+slider0Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider0Count
+```
+slider0Count :: String -> ControlPattern 
+```
+
+### slider0CountTo
+```
+slider0CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider0bus
+```
+slider0bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider0recv
+```
+slider0recv :: Pattern Int -> ControlPattern 
+```
+
+### slider1
+```
+slider1 :: Pattern Double -> ControlPattern 
+```
+
+### slider1Take
+```
+slider1Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider1Count
+```
+slider1Count :: String -> ControlPattern 
+```
+
+### slider1CountTo
+```
+slider1CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider1bus
+```
+slider1bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider1recv
+```
+slider1recv :: Pattern Int -> ControlPattern 
+```
+
+### slider10
+```
+slider10 :: Pattern Double -> ControlPattern 
+```
+
+### slider10Take
+```
+slider10Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider10Count
+```
+slider10Count :: String -> ControlPattern 
+```
+
+### slider10CountTo
+```
+slider10CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider10bus
+```
+slider10bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider10recv
+```
+slider10recv :: Pattern Int -> ControlPattern 
+```
+
+### slider11
+```
+slider11 :: Pattern Double -> ControlPattern 
+```
+
+### slider11Take
+```
+slider11Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider11Count
+```
+slider11Count :: String -> ControlPattern 
+```
+
+### slider11CountTo
+```
+slider11CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider11bus
+```
+slider11bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider11recv
+```
+slider11recv :: Pattern Int -> ControlPattern 
+```
+
+### slider12
+```
+slider12 :: Pattern Double -> ControlPattern 
+```
+
+### slider12Take
+```
+slider12Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider12Count
+```
+slider12Count :: String -> ControlPattern 
+```
+
+### slider12CountTo
+```
+slider12CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider12bus
+```
+slider12bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider12recv
+```
+slider12recv :: Pattern Int -> ControlPattern 
+```
+
+### slider13
+```
+slider13 :: Pattern Double -> ControlPattern 
+```
+
+### slider13Take
+```
+slider13Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider13Count
+```
+slider13Count :: String -> ControlPattern 
+```
+
+### slider13CountTo
+```
+slider13CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider13bus
+```
+slider13bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider13recv
+```
+slider13recv :: Pattern Int -> ControlPattern 
+```
+
+### slider14
+```
+slider14 :: Pattern Double -> ControlPattern 
+```
+
+### slider14Take
+```
+slider14Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider14Count
+```
+slider14Count :: String -> ControlPattern 
+```
+
+### slider14CountTo
+```
+slider14CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider14bus
+```
+slider14bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider14recv
+```
+slider14recv :: Pattern Int -> ControlPattern 
+```
+
+### slider15
+```
+slider15 :: Pattern Double -> ControlPattern 
+```
+
+### slider15Take
+```
+slider15Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider15Count
+```
+slider15Count :: String -> ControlPattern 
+```
+
+### slider15CountTo
+```
+slider15CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider15bus
+```
+slider15bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider15recv
+```
+slider15recv :: Pattern Int -> ControlPattern 
+```
+
+### slider2
+```
+slider2 :: Pattern Double -> ControlPattern 
+```
+
+### slider2Take
+```
+slider2Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider2Count
+```
+slider2Count :: String -> ControlPattern 
+```
+
+### slider2CountTo
+```
+slider2CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider2bus
+```
+slider2bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider2recv
+```
+slider2recv :: Pattern Int -> ControlPattern 
+```
+
+### slider3
+```
+slider3 :: Pattern Double -> ControlPattern 
+```
+
+### slider3Take
+```
+slider3Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider3Count
+```
+slider3Count :: String -> ControlPattern 
+```
+
+### slider3CountTo
+```
+slider3CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider3bus
+```
+slider3bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider3recv
+```
+slider3recv :: Pattern Int -> ControlPattern 
+```
+
+### slider4
+```
+slider4 :: Pattern Double -> ControlPattern 
+```
+
+### slider4Take
+```
+slider4Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider4Count
+```
+slider4Count :: String -> ControlPattern 
+```
+
+### slider4CountTo
+```
+slider4CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider4bus
+```
+slider4bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider4recv
+```
+slider4recv :: Pattern Int -> ControlPattern 
+```
+
+### slider5
+```
+slider5 :: Pattern Double -> ControlPattern 
+```
+
+### slider5Take
+```
+slider5Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider5Count
+```
+slider5Count :: String -> ControlPattern 
+```
+
+### slider5CountTo
+```
+slider5CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider5bus
+```
+slider5bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider5recv
+```
+slider5recv :: Pattern Int -> ControlPattern 
+```
+
+### slider6
+```
+slider6 :: Pattern Double -> ControlPattern 
+```
+
+### slider6Take
+```
+slider6Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider6Count
+```
+slider6Count :: String -> ControlPattern 
+```
+
+### slider6CountTo
+```
+slider6CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider6bus
+```
+slider6bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider6recv
+```
+slider6recv :: Pattern Int -> ControlPattern 
+```
+
+### slider7
+```
+slider7 :: Pattern Double -> ControlPattern 
+```
+
+### slider7Take
+```
+slider7Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider7Count
+```
+slider7Count :: String -> ControlPattern 
+```
+
+### slider7CountTo
+```
+slider7CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider7bus
+```
+slider7bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider7recv
+```
+slider7recv :: Pattern Int -> ControlPattern 
+```
+
+### slider8
+```
+slider8 :: Pattern Double -> ControlPattern 
+```
+
+### slider8Take
+```
+slider8Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider8Count
+```
+slider8Count :: String -> ControlPattern 
+```
+
+### slider8CountTo
+```
+slider8CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider8bus
+```
+slider8bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider8recv
+```
+slider8recv :: Pattern Int -> ControlPattern 
+```
+
+### slider9
+```
+slider9 :: Pattern Double -> ControlPattern 
+```
+
+### slider9Take
+```
+slider9Take :: String -> [Double] -> ControlPattern 
+```
+
+### slider9Count
+```
+slider9Count :: String -> ControlPattern 
+```
+
+### slider9CountTo
+```
+slider9CountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### slider9bus
+```
+slider9bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### slider9recv
+```
+slider9recv :: Pattern Int -> ControlPattern 
+```
+
+### smear
+```
+smear :: Pattern Double -> ControlPattern 
+```
+
+Spectral smear
+
+### smearTake
+```
+smearTake :: String -> [Double] -> ControlPattern 
+```
+
+### smearCount
+```
+smearCount :: String -> ControlPattern 
+```
+
+### smearCountTo
+```
+smearCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### smearbus
+```
+smearbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### smearrecv
+```
+smearrecv :: Pattern Int -> ControlPattern 
+```
+
+### songPtr
+```
+songPtr :: Pattern Double -> ControlPattern 
+```
+
+### songPtrTake
+```
+songPtrTake :: String -> [Double] -> ControlPattern 
+```
+
+### songPtrCount
+```
+songPtrCount :: String -> ControlPattern 
+```
+
+### songPtrCountTo
+```
+songPtrCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### songPtrbus
+```
+songPtrbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### speed
+```
+speed :: Pattern Double -> ControlPattern 
+```
+
+a pattern of numbers which changes the speed of sample playback, i.e. a cheap way of changing pitch. Negative values will play the sample backwards!
+
+### speedTake
+```
+speedTake :: String -> [Double] -> ControlPattern 
+```
+
+### speedCount
+```
+speedCount :: String -> ControlPattern 
+```
+
+### speedCountTo
+```
+speedCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### speedbus
+```
+speedbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### squiz
+```
+squiz :: Pattern Double -> ControlPattern 
+```
+
+### squizTake
+```
+squizTake :: String -> [Double] -> ControlPattern 
+```
+
+### squizCount
+```
+squizCount :: String -> ControlPattern 
+```
+
+### squizCountTo
+```
+squizCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### squizbus
+```
+squizbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### squizrecv
+```
+squizrecv :: Pattern Int -> ControlPattern 
+```
+
+### stepsPerOctave
+```
+stepsPerOctave :: Pattern Double -> ControlPattern 
+```
+
+### stepsPerOctaveTake
+```
+stepsPerOctaveTake :: String -> [Double] -> ControlPattern 
+```
+
+### stepsPerOctaveCount
+```
+stepsPerOctaveCount :: String -> ControlPattern 
+```
+
+### stepsPerOctaveCountTo
+```
+stepsPerOctaveCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### stepsPerOctavebus
+```
+stepsPerOctavebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### stepsPerOctaverecv
+```
+stepsPerOctaverecv :: Pattern Int -> ControlPattern 
+```
+
+### stutterdepth
+```
+stutterdepth :: Pattern Double -> ControlPattern 
+```
+
+### stutterdepthTake
+```
+stutterdepthTake :: String -> [Double] -> ControlPattern 
+```
+
+### stutterdepthCount
+```
+stutterdepthCount :: String -> ControlPattern 
+```
+
+### stutterdepthCountTo
+```
+stutterdepthCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### stutterdepthbus
+```
+stutterdepthbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### stutterdepthrecv
+```
+stutterdepthrecv :: Pattern Int -> ControlPattern 
+```
+
+### stuttertime
+```
+stuttertime :: Pattern Double -> ControlPattern 
+```
+
+### stuttertimeTake
+```
+stuttertimeTake :: String -> [Double] -> ControlPattern 
+```
+
+### stuttertimeCount
+```
+stuttertimeCount :: String -> ControlPattern 
+```
+
+### stuttertimeCountTo
+```
+stuttertimeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### stuttertimebus
+```
+stuttertimebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### stuttertimerecv
+```
+stuttertimerecv :: Pattern Int -> ControlPattern 
+```
+
+### sustain
+```
+sustain :: Pattern Double -> ControlPattern 
+```
+
+### sustainTake
+```
+sustainTake :: String -> [Double] -> ControlPattern 
+```
+
+### sustainCount
+```
+sustainCount :: String -> ControlPattern 
+```
+
+### sustainCountTo
+```
+sustainCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### sustainbus
+```
+sustainbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### sustainpedal
+```
+sustainpedal :: Pattern Double -> ControlPattern 
+```
+
+### sustainpedalTake
+```
+sustainpedalTake :: String -> [Double] -> ControlPattern 
+```
+
+### sustainpedalCount
+```
+sustainpedalCount :: String -> ControlPattern 
+```
+
+### sustainpedalCountTo
+```
+sustainpedalCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### sustainpedalbus
+```
+sustainpedalbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### sustainpedalrecv
+```
+sustainpedalrecv :: Pattern Int -> ControlPattern 
+```
+
+### timescale
+```
+timescale :: Pattern Double -> ControlPattern 
+```
+
+time stretch amount
+
+### timescaleTake
+```
+timescaleTake :: String -> [Double] -> ControlPattern 
+```
+
+### timescaleCount
+```
+timescaleCount :: String -> ControlPattern 
+```
+
+### timescaleCountTo
+```
+timescaleCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### timescalebus
+```
+timescalebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### timescalewin
+```
+timescalewin :: Pattern Double -> ControlPattern 
+```
+
+time stretch window size
+
+### timescalewinTake
+```
+timescalewinTake :: String -> [Double] -> ControlPattern 
+```
+
+### timescalewinCount
+```
+timescalewinCount :: String -> ControlPattern 
+```
+
+### timescalewinCountTo
+```
+timescalewinCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### timescalewinbus
+```
+timescalewinbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### to
+```
+to :: Pattern Double -> ControlPattern 
+```
+
+for internal sound routing
+
+### toTake
+```
+toTake :: String -> [Double] -> ControlPattern 
+```
+
+### toCount
+```
+toCount :: String -> ControlPattern 
+```
+
+### toCountTo
+```
+toCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### tobus
+```
+tobus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### torecv
+```
+torecv :: Pattern Int -> ControlPattern 
+```
+
+### toArg
+```
+toArg :: Pattern String -> ControlPattern 
+```
+
+for internal sound routing
+
+### toArgTake
+```
+toArgTake :: String -> [Double] -> ControlPattern 
+```
+
+### toArgbus
+```
+toArgbus :: Pattern Int -> Pattern String -> ControlPattern 
+```
+
+### toArgrecv
+```
+toArgrecv :: Pattern Int -> ControlPattern 
+```
+
+### tomdecay
+```
+tomdecay :: Pattern Double -> ControlPattern 
+```
+
+### tomdecayTake
+```
+tomdecayTake :: String -> [Double] -> ControlPattern 
+```
+
+### tomdecayCount
+```
+tomdecayCount :: String -> ControlPattern 
+```
+
+### tomdecayCountTo
+```
+tomdecayCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### tomdecaybus
+```
+tomdecaybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### tomdecayrecv
+```
+tomdecayrecv :: Pattern Int -> ControlPattern 
+```
+
+### tremolodepth
+```
+tremolodepth :: Pattern Double -> ControlPattern 
+```
+
+Tremolo Audio DSP effect | params are `tremolorate` and `tremolodepth`
+
+### tremolodepthTake
+```
+tremolodepthTake :: String -> [Double] -> ControlPattern 
+```
+
+### tremolodepthCount
+```
+tremolodepthCount :: String -> ControlPattern 
+```
+
+### tremolodepthCountTo
+```
+tremolodepthCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### tremolodepthbus
+```
+tremolodepthbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### tremolodepthrecv
+```
+tremolodepthrecv :: Pattern Int -> ControlPattern 
+```
+
+### tremolorate
+```
+tremolorate :: Pattern Double -> ControlPattern 
+```
+
+Tremolo Audio DSP effect | params are `tremolorate` and `tremolodepth`
+
+### tremolorateTake
+```
+tremolorateTake :: String -> [Double] -> ControlPattern 
+```
+
+### tremolorateCount
+```
+tremolorateCount :: String -> ControlPattern 
+```
+
+### tremolorateCountTo
+```
+tremolorateCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### tremoloratebus
+```
+tremoloratebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### tremoloraterecv
+```
+tremoloraterecv :: Pattern Int -> ControlPattern 
+```
+
+### triode
+```
+triode :: Pattern Double -> ControlPattern 
+```
+
+tube distortion
+
+### triodeTake
+```
+triodeTake :: String -> [Double] -> ControlPattern 
+```
+
+### triodeCount
+```
+triodeCount :: String -> ControlPattern 
+```
+
+### triodeCountTo
+```
+triodeCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### triodebus
+```
+triodebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### trioderecv
+```
+trioderecv :: Pattern Int -> ControlPattern 
+```
+
+### tsdelay
+```
+tsdelay :: Pattern Double -> ControlPattern 
+```
+
+### tsdelayTake
+```
+tsdelayTake :: String -> [Double] -> ControlPattern 
+```
+
+### tsdelayCount
+```
+tsdelayCount :: String -> ControlPattern 
+```
+
+### tsdelayCountTo
+```
+tsdelayCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### tsdelaybus
+```
+tsdelaybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### tsdelayrecv
+```
+tsdelayrecv :: Pattern Int -> ControlPattern 
+```
+
+### uid
+```
+uid :: Pattern Double -> ControlPattern 
+```
+
+### uidTake
+```
+uidTake :: String -> [Double] -> ControlPattern 
+```
+
+### uidCount
+```
+uidCount :: String -> ControlPattern 
+```
+
+### uidCountTo
+```
+uidCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### uidbus
+```
+uidbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### unit
+```
+unit :: Pattern String -> ControlPattern 
+```
+
+used in conjunction with `speed`, accepts values of "r" (rate, default behavior), "c" (cycles), or "s" (seconds). Using `unit "c"` means `speed` will be interpreted in units of cycles, e.g. `speed "1"` means samples will be stretched to fill a cycle. Using `unit "s"` means the playback speed will be adjusted so that the duration is the number of seconds specified by `speed`.
+
+### unitTake
+```
+unitTake :: String -> [Double] -> ControlPattern 
+```
+
+### unitbus
+```
+unitbus :: Pattern Int -> Pattern String -> ControlPattern 
+```
+
+### val
+```
+val :: Pattern Double -> ControlPattern 
+```
+
+### valTake
+```
+valTake :: String -> [Double] -> ControlPattern 
+```
+
+### valCount
+```
+valCount :: String -> ControlPattern 
+```
+
+### valCountTo
+```
+valCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### valbus
+```
+valbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### vcfegint
+```
+vcfegint :: Pattern Double -> ControlPattern 
+```
+
+### vcfegintTake
+```
+vcfegintTake :: String -> [Double] -> ControlPattern 
+```
+
+### vcfegintCount
+```
+vcfegintCount :: String -> ControlPattern 
+```
+
+### vcfegintCountTo
+```
+vcfegintCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### vcfegintbus
+```
+vcfegintbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### vcfegintrecv
+```
+vcfegintrecv :: Pattern Int -> ControlPattern 
+```
+
+### vcoegint
+```
+vcoegint :: Pattern Double -> ControlPattern 
+```
+
+### vcoegintTake
+```
+vcoegintTake :: String -> [Double] -> ControlPattern 
+```
+
+### vcoegintCount
+```
+vcoegintCount :: String -> ControlPattern 
+```
+
+### vcoegintCountTo
+```
+vcoegintCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### vcoegintbus
+```
+vcoegintbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### vcoegintrecv
+```
+vcoegintrecv :: Pattern Int -> ControlPattern 
+```
+
+### velocity
+```
+velocity :: Pattern Double -> ControlPattern 
+```
+
+### velocityTake
+```
+velocityTake :: String -> [Double] -> ControlPattern 
+```
+
+### velocityCount
+```
+velocityCount :: String -> ControlPattern 
+```
+
+### velocityCountTo
+```
+velocityCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### velocitybus
+```
+velocitybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### velocityrecv
+```
+velocityrecv :: Pattern Int -> ControlPattern 
+```
+
+### voice
+```
+voice :: Pattern Double -> ControlPattern 
+```
+
+### voiceTake
+```
+voiceTake :: String -> [Double] -> ControlPattern 
+```
+
+### voiceCount
+```
+voiceCount :: String -> ControlPattern 
+```
+
+### voiceCountTo
+```
+voiceCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### voicebus
+```
+voicebus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### voicerecv
+```
+voicerecv :: Pattern Int -> ControlPattern 
+```
+
+### vowel
+```
+vowel :: Pattern String -> ControlPattern 
+```
+
+formant filter to make things sound like vowels, a pattern of either `a`, `e`, `i`, `o` or `u`. Use a rest (`~`) for no effect.
+
+### vowelTake
+```
+vowelTake :: String -> [Double] -> ControlPattern 
+```
+
+### vowelbus
+```
+vowelbus :: Pattern Int -> Pattern String -> ControlPattern 
+```
+
+### vowelrecv
+```
+vowelrecv :: Pattern Int -> ControlPattern 
+```
+
+### waveloss
+```
+waveloss :: Pattern Double -> ControlPattern 
+```
+
+### wavelossTake
+```
+wavelossTake :: String -> [Double] -> ControlPattern 
+```
+
+### wavelossCount
+```
+wavelossCount :: String -> ControlPattern 
+```
+
+### wavelossCountTo
+```
+wavelossCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### wavelossbus
+```
+wavelossbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### wavelossrecv
+```
+wavelossrecv :: Pattern Int -> ControlPattern 
+```
+
+### xsdelay
+```
+xsdelay :: Pattern Double -> ControlPattern 
+```
+
+### xsdelayTake
+```
+xsdelayTake :: String -> [Double] -> ControlPattern 
+```
+
+### xsdelayCount
+```
+xsdelayCount :: String -> ControlPattern 
+```
+
+### xsdelayCountTo
+```
+xsdelayCountTo :: String -> Pattern Double -> Pattern ValueMap 
+```
+
+### xsdelaybus
+```
+xsdelaybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### xsdelayrecv
+```
+xsdelayrecv :: Pattern Int -> ControlPattern 
+```
+
+### voi
+```
+voi :: Pattern Double -> ControlPattern 
+```
+
+### voibus
+```
+voibus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### voirecv
+```
+voirecv :: Pattern Int -> ControlPattern 
+```
+
+### vco
+```
+vco :: Pattern Double -> ControlPattern 
+```
+
+### vcobus
+```
+vcobus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### vcorecv
+```
+vcorecv :: Pattern Int -> ControlPattern 
+```
+
+### vcf
+```
+vcf :: Pattern Double -> ControlPattern 
+```
+
+### vcfbus
+```
+vcfbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### vcfrecv
+```
+vcfrecv :: Pattern Int -> ControlPattern 
+```
+
+### up
+```
+up :: Pattern Note -> ControlPattern 
+```
+
+### tremr
+```
+tremr :: Pattern Double -> ControlPattern 
+```
+
+### tremrbus
+```
+tremrbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### tremrrecv
+```
+tremrrecv :: Pattern Int -> ControlPattern 
+```
+
+### tremdp
+```
+tremdp :: Pattern Double -> ControlPattern 
+```
+
+### tremdpbus
+```
+tremdpbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### tremdprecv
+```
+tremdprecv :: Pattern Int -> ControlPattern 
+```
+
+### tdecay
+```
+tdecay :: Pattern Double -> ControlPattern 
+```
+
+### tdecaybus
+```
+tdecaybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### tdecayrecv
+```
+tdecayrecv :: Pattern Int -> ControlPattern 
+```
+
+### sz
+```
+sz :: Pattern Double -> ControlPattern 
+```
+
+### szbus
+```
+szbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### szrecv
+```
+szrecv :: Pattern Int -> ControlPattern 
+```
+
+### sus
+```
+sus :: Pattern Double -> ControlPattern 
+```
+
+### stt
+```
+stt :: Pattern Double -> ControlPattern 
+```
+
+### sttbus
+```
+sttbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### sttrecv
+```
+sttrecv :: Pattern Int -> ControlPattern 
+```
+
+### std
+```
+std :: Pattern Double -> ControlPattern 
+```
+
+### stdbus
+```
+stdbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### stdrecv
+```
+stdrecv :: Pattern Int -> ControlPattern 
+```
+
+### sld
+```
+sld :: Pattern Double -> ControlPattern 
+```
+
+### sldbus
+```
+sldbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### sldrecv
+```
+sldrecv :: Pattern Int -> ControlPattern 
+```
+
+### scr
+```
+scr :: Pattern Double -> ControlPattern 
+```
+
+### scrbus
+```
+scrbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### scrrecv
+```
+scrrecv :: Pattern Int -> ControlPattern 
+```
+
+### scp
+```
+scp :: Pattern Double -> ControlPattern 
+```
+
+### scpbus
+```
+scpbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### scprecv
+```
+scprecv :: Pattern Int -> ControlPattern 
+```
+
+### scl
+```
+scl :: Pattern Double -> ControlPattern 
+```
+
+### sclbus
+```
+sclbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### sclrecv
+```
+sclrecv :: Pattern Int -> ControlPattern 
+```
+
+### sag
+```
+sag :: Pattern Double -> ControlPattern 
+```
+
+### sagbus
+```
+sagbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### sagrecv
+```
+sagrecv :: Pattern Int -> ControlPattern 
+```
+
+### s
+```
+s :: Pattern String -> ControlPattern 
+```
+
+### rel
+```
+rel :: Pattern Double -> ControlPattern 
+```
+
+### relbus
+```
+relbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### relrecv
+```
+relrecv :: Pattern Int -> ControlPattern 
+```
+
+### por
+```
+por :: Pattern Double -> ControlPattern 
+```
+
+### porbus
+```
+porbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### porrecv
+```
+porrecv :: Pattern Int -> ControlPattern 
+```
+
+### pit3
+```
+pit3 :: Pattern Double -> ControlPattern 
+```
+
+### pit3bus
+```
+pit3bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### pit3recv
+```
+pit3recv :: Pattern Int -> ControlPattern 
+```
+
+### pit2
+```
+pit2 :: Pattern Double -> ControlPattern 
+```
+
+### pit2bus
+```
+pit2bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### pit2recv
+```
+pit2recv :: Pattern Int -> ControlPattern 
+```
+
+### pit1
+```
+pit1 :: Pattern Double -> ControlPattern 
+```
+
+### pit1bus
+```
+pit1bus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### pit1recv
+```
+pit1recv :: Pattern Int -> ControlPattern 
+```
+
+### phasr
+```
+phasr :: Pattern Double -> ControlPattern 
+```
+
+### phasrbus
+```
+phasrbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### phasrrecv
+```
+phasrrecv :: Pattern Int -> ControlPattern 
+```
+
+### phasdp
+```
+phasdp :: Pattern Double -> ControlPattern 
+```
+
+### phasdpbus
+```
+phasdpbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### phasdprecv
+```
+phasdprecv :: Pattern Int -> ControlPattern 
+```
+
+### ohdecay
+```
+ohdecay :: Pattern Double -> ControlPattern 
+```
+
+### ohdecaybus
+```
+ohdecaybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### ohdecayrecv
+```
+ohdecayrecv :: Pattern Int -> ControlPattern 
+```
+
+### number
+```
+number :: Pattern Note -> ControlPattern 
+```
+
+### lsn
+```
+lsn :: Pattern Double -> ControlPattern 
+```
+
+### lsnbus
+```
+lsnbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lsnrecv
+```
+lsnrecv :: Pattern Int -> ControlPattern 
+```
+
+### lpq
+```
+lpq :: Pattern Double -> ControlPattern 
+```
+
+### lpqbus
+```
+lpqbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lpqrecv
+```
+lpqrecv :: Pattern Int -> ControlPattern 
+```
+
+### lpf
+```
+lpf :: Pattern Double -> ControlPattern 
+```
+
+### lpfbus
+```
+lpfbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lpfrecv
+```
+lpfrecv :: Pattern Int -> ControlPattern 
+```
+
+### loh
+```
+loh :: Pattern Double -> ControlPattern 
+```
+
+### lohbus
+```
+lohbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lohrecv
+```
+lohrecv :: Pattern Int -> ControlPattern 
+```
+
+### llt
+```
+llt :: Pattern Double -> ControlPattern 
+```
+
+### lltbus
+```
+lltbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lltrecv
+```
+lltrecv :: Pattern Int -> ControlPattern 
+```
+
+### lht
+```
+lht :: Pattern Double -> ControlPattern 
+```
+
+### lhtbus
+```
+lhtbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lhtrecv
+```
+lhtrecv :: Pattern Int -> ControlPattern 
+```
+
+### lfop
+```
+lfop :: Pattern Double -> ControlPattern 
+```
+
+### lfopbus
+```
+lfopbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lfoprecv
+```
+lfoprecv :: Pattern Int -> ControlPattern 
+```
+
+### lfoi
+```
+lfoi :: Pattern Double -> ControlPattern 
+```
+
+### lfoibus
+```
+lfoibus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lfoirecv
+```
+lfoirecv :: Pattern Int -> ControlPattern 
+```
+
+### lfoc
+```
+lfoc :: Pattern Double -> ControlPattern 
+```
+
+### lfocbus
+```
+lfocbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lfocrecv
+```
+lfocrecv :: Pattern Int -> ControlPattern 
+```
+
+### lcr
+```
+lcr :: Pattern Double -> ControlPattern 
+```
+
+### lcrbus
+```
+lcrbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lcrrecv
+```
+lcrrecv :: Pattern Int -> ControlPattern 
+```
+
+### lcp
+```
+lcp :: Pattern Double -> ControlPattern 
+```
+
+### lcpbus
+```
+lcpbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lcprecv
+```
+lcprecv :: Pattern Int -> ControlPattern 
+```
+
+### lcl
+```
+lcl :: Pattern Double -> ControlPattern 
+```
+
+### lclbus
+```
+lclbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lclrecv
+```
+lclrecv :: Pattern Int -> ControlPattern 
+```
+
+### lch
+```
+lch :: Pattern Double -> ControlPattern 
+```
+
+### lchbus
+```
+lchbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lchrecv
+```
+lchrecv :: Pattern Int -> ControlPattern 
+```
+
+### lbd
+```
+lbd :: Pattern Double -> ControlPattern 
+```
+
+### lbdbus
+```
+lbdbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lbdrecv
+```
+lbdrecv :: Pattern Int -> ControlPattern 
+```
+
+### lag
+```
+lag :: Pattern Double -> ControlPattern 
+```
+
+### lagbus
+```
+lagbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### lagrecv
+```
+lagrecv :: Pattern Int -> ControlPattern 
+```
+
+### hpq
+```
+hpq :: Pattern Double -> ControlPattern 
+```
+
+### hpqbus
+```
+hpqbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### hpqrecv
+```
+hpqrecv :: Pattern Int -> ControlPattern 
+```
+
+### hpf
+```
+hpf :: Pattern Double -> ControlPattern 
+```
+
+### hpfbus
+```
+hpfbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### hpfrecv
+```
+hpfrecv :: Pattern Int -> ControlPattern 
+```
+
+### hg
+```
+hg :: Pattern Double -> ControlPattern 
+```
+
+### hgbus
+```
+hgbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### hgrecv
+```
+hgrecv :: Pattern Int -> ControlPattern 
+```
+
+### gat
+```
+gat :: Pattern Double -> ControlPattern 
+```
+
+### gatbus
+```
+gatbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### gatrecv
+```
+gatrecv :: Pattern Int -> ControlPattern 
+```
+
+### fadeOutTime
+```
+fadeOutTime :: Pattern Double -> ControlPattern 
+```
+
+### dt
+```
+dt :: Pattern Double -> ControlPattern 
+```
+
+### dtbus
+```
+dtbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### dtrecv
+```
+dtrecv :: Pattern Int -> ControlPattern 
+```
+
+### dfb
+```
+dfb :: Pattern Double -> ControlPattern 
+```
+
+### dfbbus
+```
+dfbbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### dfbrecv
+```
+dfbrecv :: Pattern Int -> ControlPattern 
+```
+
+### det
+```
+det :: Pattern Double -> ControlPattern 
+```
+
+### detbus
+```
+detbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### detrecv
+```
+detrecv :: Pattern Int -> ControlPattern 
+```
+
+### delayt
+```
+delayt :: Pattern Double -> ControlPattern 
+```
+
+### delaytbus
+```
+delaytbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### delaytrecv
+```
+delaytrecv :: Pattern Int -> ControlPattern 
+```
+
+### delayfb
+```
+delayfb :: Pattern Double -> ControlPattern 
+```
+
+### delayfbbus
+```
+delayfbbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### delayfbrecv
+```
+delayfbrecv :: Pattern Int -> ControlPattern 
+```
+
+### ctfg
+```
+ctfg :: Pattern Double -> ControlPattern 
+```
+
+### ctfgbus
+```
+ctfgbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### ctfgrecv
+```
+ctfgrecv :: Pattern Int -> ControlPattern 
+```
+
+### ctf
+```
+ctf :: Pattern Double -> ControlPattern 
+```
+
+### ctfbus
+```
+ctfbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### ctfrecv
+```
+ctfrecv :: Pattern Int -> ControlPattern 
+```
+
+### chdecay
+```
+chdecay :: Pattern Double -> ControlPattern 
+```
+
+### chdecaybus
+```
+chdecaybus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### chdecayrecv
+```
+chdecayrecv :: Pattern Int -> ControlPattern 
+```
+
+### bpq
+```
+bpq :: Pattern Double -> ControlPattern 
+```
+
+### bpqbus
+```
+bpqbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### bpqrecv
+```
+bpqrecv :: Pattern Int -> ControlPattern 
+```
+
+### bpf
+```
+bpf :: Pattern Double -> ControlPattern 
+```
+
+### bpfbus
+```
+bpfbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### bpfrecv
+```
+bpfrecv :: Pattern Int -> ControlPattern 
+```
+
+### att
+```
+att :: Pattern Double -> ControlPattern 
+```
+
+### attbus
+```
+attbus :: Pattern Int -> Pattern Double -> ControlPattern 
+```
+
+### attrecv
+```
+attrecv :: Pattern Int -> ControlPattern 
+```
+

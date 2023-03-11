@@ -1,0 +1,53 @@
+---
+title: Sound.Tidal.Show
+slug: /library/modules/Sound.Tidal.Show
+---
+
+<!------------------------------------------------------------------------------
+THIS IS A DOC FILE AUTOMATICALLY GENERATED FROM:
+
+https://github.com/tidalcycles/Tidal/blob/main/src/Sound/Tidal/Show.hs
+
+It's based on the documentation comments in the Tidal code.
+Do not edit it directly--to update this documentation, please submit a
+change to the original file in the Tidal repository. Thanks!
+------------------------------------------------------------------------------->
+
+### show
+```
+show :: Show a => a -> String 
+```
+
+A specialised variant of `showsPrec`, using precedence context
+ zero, and returning an ordinary `String`.
+
+### showAll
+```
+showAll :: Show a => Arc -> Pattern a -> String 
+```
+
+### draw
+```
+draw :: Pattern Char -> Render 
+```
+
+### drawLine
+```
+drawLine :: Pattern Char -> Render 
+```
+
+### drawLineSz
+```
+drawLineSz :: Int -> Pattern Char -> Render 
+```
+
+### stepcount
+```
+stepcount :: Pattern a -> Int 
+```
+
+### showStateful
+```
+showStateful :: ControlPattern -> String 
+```
+

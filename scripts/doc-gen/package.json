@@ -1,0 +1,14 @@
+{
+  "name": "tidal-doc-gen",
+  "version": "0.0.0",
+  "description": "Script for automatically parsing Haddock docs and generating Tidal API reference.",
+  "type": "module",
+  "license": "GPL3-or-later",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "parse5": "^7.1.2"
+  }
+}
