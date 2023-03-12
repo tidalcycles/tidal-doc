@@ -1,4 +1,4 @@
---- 
+---
 title: Contributing Tests
 id: contributing_test
 ---
@@ -6,7 +6,7 @@ id: contributing_test
 Unit tests are small bits of code that check that a function works as expected. You might want to contribute a test for one or more reasons:
 * To demonstrate a bug or other unexpected behaviour in a clear way
 * To explain how a new feature works
-* Because there's a feature you really like and you don't want it to break in the futrue
+* Because there's a feature you really like and you don't want it to break in the future
 * To generally help make Tidal more resilient
 
 ## Test modules
@@ -23,7 +23,7 @@ describe "euclidFull" $ do
       ("bd(3,8)" :: Pattern String)
 ```
 
-This tests that `euclidFull` works OK if its fourth parameter was silence. There was one a bug where it didn't, and the existence of this test means that if this bug comes back, we'll know about it.
+This tests that `euclidFull` works OK if its fourth parameter was silence. There was once a bug where it didn't, and the existence of this test means that if this bug comes back, we'll know about it.
 
 `compareP` is for comparing two patterns. It takes three parameters - an `Arc` with a start and stop time -- in this case `0` and `1`, which means that all the events in the first cycle (i.e, between time position `0` and `1`) are compared. Then come the two patterns that are to be compared.
 
@@ -42,7 +42,7 @@ cd Tidal
 
 ## Running tests
 
-Before you do anything else, it's a good idea run the tests to make sure everything completes OK. You can do that with the following command:
+Before you do anything else, it's a good idea to run the tests to make sure everything completes OK. You can do that with the following command:
 
 ```haskell
 cabal test
@@ -50,4 +50,4 @@ cabal test
 
 ## Writing and contributing your test
 
-It's now time to make a 'branch' for creating your test, and then send it to the **Tidal** maintainers as a `pull request`. This is general development stuff, so we'll defer to this handy guide. You can start with step 3 - `"create a branch"`. 
+It's now time to make a 'branch' for creating your test, and then send it to the **Tidal** maintainers as a `pull request`. This is general development stuff, so we'll defer to this [handy guide](https://codeburst.io/a-step-by-step-guide-to-making-your-first-github-contribution-5302260a2940). You can start with step 3 - `"create a branch"`.
