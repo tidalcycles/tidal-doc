@@ -55,10 +55,16 @@ d1 $ every 3 (mask "0 0 0 0") $ n "2 9 11 2" # s "hh27"
 ### foldEvery
 
 ```haskell
-Type: foldEvery' :: [Int] -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+Type: foldEvery :: [Int] -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 ```
 
 `foldEvery` is similar to chaining multiple `every` functions together. It transforms a pattern with a function, once per any of the given number of cycles. If a particular cycle is the start of more than one of the given cycle periods, then it it applied more than once.
+
+```haskell
+d1 $ foldEvery [5,3] (|+ n 1) $ s "moog" # legato 1
+```
+
+The first `moog` samples are tuned to C2, C3 and C4. Note how on cycles multiple of 3 or 5 the pitch is an octave higher, and on multiples of 15 the pitch is two octaves higher, as the transformation is applied twice.
 
 ### when
 
