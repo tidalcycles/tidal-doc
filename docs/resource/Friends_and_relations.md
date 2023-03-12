@@ -4,11 +4,9 @@ permalink: wiki/Friends_and_relations/
 layout: wiki
 ---
 
-Starting a list of projects connected with TidalCycles - ones that
-interface with/inspired/are inspired by tidal.
+Here follows is a list of projects connected with TidalCycles, whether they interface with, inspired, or are inspired by it.
 
-(For a long list of \_all\_ the live coding environments, see the [all
-things livecoding](https://github.com/toplap/awesome-livecoding) list.)
+(For a long list of \_all\_ the live coding environments, see the [all things livecoding](https://github.com/toplap/awesome-livecoding) list.)
 
 # Ports and parsers
 
