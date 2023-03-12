@@ -90,8 +90,8 @@ module.exports = {
           "innards/contributing_test",
         ],
         Concept: ["innards/what_is_a_pattern"],
-        "around_tidal/changelog",
       },
+      "around_tidal/changelog",
     ],
   },
   advanced: {
