@@ -4,6 +4,12 @@ module.exports = {
       "TidalCycles",
       "community",
       "showcase",
+      "resource/Friends_and_relations",
+      "resource/Academic_publications",
+      "around_tidal/toplap_manifesto",
+      "around_tidal/tidal_history",
+    ],
+    Installation: [
       {
         "Install Tidal": [
           "getting-started/linux_install",
@@ -67,6 +73,7 @@ module.exports = {
       "patternlib/howtos/buildrhythms",
       "patternlib/howtos/playchords",
       "patternlib/howtos/startpattern",
+      "around_tidal/typing_fast_and_well",
     ],
     Tutorials: [
       "patternlib/tutorials/workshop",
@@ -83,13 +90,8 @@ module.exports = {
           "innards/contributing_test",
         ],
         Concept: ["innards/what_is_a_pattern"],
+        "around_tidal/changelog",
       },
-    ],
-    "Around Tidal": [
-      "around_tidal/typing_fast_and_well",
-      "around_tidal/toplap_manifesto",
-      "around_tidal/tidal_history",
-      "around_tidal/changelog",
     ],
   },
   advanced: {
@@ -131,11 +133,4 @@ module.exports = {
       "reference/control_busses",
     ],
   },
-  community: [
-    "resource/Community",
-    "resource/Friends_and_relations",
-    "resource/Contributing_tests",
-    "resource/Academic_publications",
-    "resource/History_of_Tidal",
-  ],
 };
