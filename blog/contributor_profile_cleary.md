@@ -1,5 +1,6 @@
 ---
 title: Tidal Profile - cleary (Bernard Gray)
+date: 2023-02-16
 ---
 
 | Tidal Cyclist  | Bernard Gray |

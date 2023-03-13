@@ -1,5 +1,6 @@
 ---
 title: Tidal Profile - ndr_brt
+date: 2023-03-03
 ---
 
 | Tidal Cyclist  |  ndr_brt   |
@@ -75,7 +76,7 @@ I often try to escape from this mindset but at the end I fall into it most of th
 ## Tidal Contributions  
 
 **How do you contribute to Tidal Cycles? What have you worked on?**
-- I learned Haskell only to contribute to Tidal. I'm passionate about reading code and get the insights of the software, on the main codebase I solved some bugs and added some features mainly in the mini-notation section ([tidal commits](https://github.com/tidalcycles/Tidal/commits?author=ndr-brt)). 
+- I learned Haskell only to contribute to Tidal. I'm passionate about reading code and get the insights of the software, on the main codebase I solved some bugs and added some features mainly in the mini-notation section ([tidal commits](https://github.com/tidalcycles/Tidal/commits?author=ndr-brt)).
 - I took care of the migration from Travis CI to GitHub Actions.
 - Atom -> Pulsar: At a certain point I noticed that the Atom Plugin was practically unmaintained so I proposed to be its maintainer, and I brought it back on track. Now Atom has been disbanded but luckily the Pulsar community is vibrant and the Tidal plugin is already fully compatible with it. It was a pretty satisfying migration ([Pulsar-tidalcycles](https://github.com/tidalcycles/pulsar-tidalcycles)).
 
@@ -95,7 +96,7 @@ I often try to escape from this mindset but at the end I fall into it most of th
 - I try not to use the default samples nor the default synths, I sometimes write my own synths, sometimes I record my own samples or I get them from various sources.  
 
 **What projects are you currently working on or planning? What's next?**
-- I recently finished a record that was a collaboration with Naotodate, that's a non-livecoding noise friend from Italy ([on bandcamp](https://umanoudito.bandcamp.com/album/a-letter-is-a-number-a-feeling-is-a-code)). 
+- I recently finished a record that was a collaboration with Naotodate, that's a non-livecoding noise friend from Italy ([on bandcamp](https://umanoudito.bandcamp.com/album/a-letter-is-a-number-a-feeling-is-a-code)).
 - Now I'm working to another collaboration record, this time with ETOL, an amazing italian livecoder. To be fair the project it is still in an embryonic state.
 
 

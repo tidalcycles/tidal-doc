@@ -1,5 +1,6 @@
 ---
 title: Tidal Profile - BuboBubo (Raphaël Maurice Forment )
+date: 2023-02-28
 ---
 
 | Tidal Cyclist  | Raphaël Maurice Forment |

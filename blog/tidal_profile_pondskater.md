@@ -1,5 +1,6 @@
 ---
 title: Tidal Profile - Pondskater (aka Axel Ganz)
+date: 2023-03-10
 ---
 
 | Tidal Cyclist  |  Pondskater (aka Axel Ganz)   |

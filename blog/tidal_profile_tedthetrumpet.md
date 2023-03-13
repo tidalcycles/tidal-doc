@@ -1,5 +1,6 @@
 ---
 title: Tidal Profile - tedthetrumpet (J Simon van der Walt)
+date: 2023-02-25
 ---
 
 | Tidal Cyclist  | J Simon van der Walt |
