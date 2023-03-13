@@ -75,6 +75,7 @@ Still busy hacking on Strudel! I am not the type to plan too far ahead, but I am
 
 ### Links to your music / recorded livecoding sessions
 
+- [My Strudel Pattern Swatch](https://felixroos.github.io/strudel/swatch/)
 - [YouTube](https://www.youtube.com/channel/UCCzL14wczvJyJaVYjh4nfJQ)
 - [Algo10 Stream](https://www.youtube.com/watch?v=IcMSocdKwvw)
 - [Solstice Night 2022 Stream](https://www.youtube.com/watch?v=P1DDsOvcyco)
