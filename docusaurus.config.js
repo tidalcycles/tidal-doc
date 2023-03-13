@@ -124,13 +124,16 @@ module.exports = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl: "https://github.com/tidalcycles/tidal-doc/tree/main/",
-          showLastUpdateAuthor: true,
+          showLastUpdateAuthor: false,
           showLastUpdateTime: true,
         },
         blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
+          showReadingTime: false,
           editUrl: "https://github.com/tidalcycles/tidal-doc/tree/main/blog/",
+          blogTitle: 'Tidal Cycles Community Blog',
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
+          postsPerPage: '20',
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
