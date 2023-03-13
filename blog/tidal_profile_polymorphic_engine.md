@@ -1,5 +1,5 @@
 ---
-Tidal Profile - polymorphic_engine
+title: Tidal Profile - polymorphic_engine
 ---
 
 | Tidal Cyclist  | Martin Gius   |
@@ -27,7 +27,57 @@ I also like to use a traditional game controller and map the controls to conditi
 
 **What functions and coding approaches do you like to use?**  
 
-Probably my most used Tidal functions are `layer` and `while`. I also use the control bus feature a lot to manipulate the FX of longer sounds. I also really like how randomness in Tidal works and how easy it is no generate arbitrary, but repeating sequences or rhythms.
+Probably my most used Tidal functions are `layer` and `while`. I also use the control bus feature a lot to manipulate the FX of longer sounds. I really like how randomness in Tidal works and how easy it is no generate arbitrary, but repeating sequences or rhythms. 
+
+Here is an example of a jungle inspired, abstract dance track. To make a four cycle loop, evaluate the line 
+
+```haskell
+all $ timeLoop 4 . (rotL 4)
+```
+
+and change the number in rotL to shift the pattern. Try to play around with the parameters of the clouds effect aswell, but be carful, it might get loud! :)
+
+```haskell
+let 
+setbpm x = setcps (x/60/4)
+_add :: Time -> Pattern a -> Pattern a -> Pattern a
+_add t value pat = slow (pure $ 1+t) $ timeCat [(shift,pat),(1-shift, value)]
+				where shift = 1 / (t + 1)
+add :: Pattern Time -> Pattern a -> Pattern a -> Pattern a
+add pt x y = innerJoin $ fmap (\t -> _add t x y) pt
+
+setbpm 160
+
+all $ timeLoop 4 . (rotL 4)
+
+all $ id
+
+d1
+$ while "t(4,16)" (|+ krush 1)
+$ while "[0 | 1]*16" (superimpose (plyWith 4 (|* speed 1.25) . slow 2))
+$ layer [id
+		,\x -> degradeBy (segment 16 perlin) 
+        	$ slow 2 
+            $ x 
+            # speed 0.75 
+            # shape 0.1
+        ,\x -> add "[0.5 | 0.25]*4" (s "jungbass:1" # speed 0.8 # shape 0.2 # krush 2) 
+        	$ x # speed "[2 | -2]*8"
+		]
+$ s "[drum drum:1 [~ drum] drum:1, drum:3*[[8 | 16]*4]]"
+# krush 2
+# cloudswet 1
+# cloudsgain 1
+# cloudspitch (segment 16 $ smooth "[-1 | 1 | 0]*16")
+# cloudstex (segment 16 $ smooth "[0.3 | 0.1 | 0.9]*4")
+# cloudspos "[0 | 1]*8"
+# cloudssize 0
+# cloudsfb 0.3
+# cloudsspread 0
+# cloudsdens 0
+# cloudsrvb 0
+# cloudsfreeze 0
+```
 
 **Do you use Tidal with other tools / environments?**
 
@@ -52,7 +102,7 @@ Curiosity of the inner workings of Tidal and the great community!
 **Tell us about your livecoding music.**  
 
 * I often improvise together with people who play more traditional instruments. I find it very interesting to use microphones to get what the others are playing as an input that I can manipulate through coding. 
-* I'm also interested in multi-channel sound / acousmatic music and the possibilities of live-coding in this context.
+* I'm also interested in multi-channel sound / acousmatic music and the possibilities of live-coding in this context. I think live-coding could be a great tool to be able to precisely control an acousmonium (a speaker orchestra, where each speaker has it's seperate channel). This means to not just make the sounds that are being heard, but also to distribute them across the speakers in real-time (this is often called diffusion).
 
 **What samples or instruments do you like to work with?**  
 
