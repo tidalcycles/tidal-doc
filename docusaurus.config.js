@@ -133,7 +133,7 @@ module.exports = {
           blogTitle: 'Tidal Cycles Community Blog',
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
-          postsPerPage: '20',
+          postsPerPage: 20,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
