@@ -142,8 +142,10 @@ I am currently working on live coding of laser beams. I hope to show the results
 
 [![youtube](https://yoppa.org/wp-content/uploads/2023/03/hq720_2.webp)](https://www.youtube.com/shorts/ITRwjJPO2dY)
 
+https://www.youtube.com/shorts/ITRwjJPO2dY
 
 ### Links to your music / recorded livecoding sessions:
+
 - [Hyper Geek #5 (2023)](https://www.youtube.com/watch?v=cB_tm-NAYRk)
 - Show your mind on my screen (2022) - Audio Visual immersive dome live coding.
   - [excerpt](https://vimeo.com/manage/videos/779860395)
