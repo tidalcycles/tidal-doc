@@ -1,5 +1,6 @@
 ---
 title: Tidal Profile - froos
+date: 2023-03-14
 ---
 
 | Tidal Cyclist  | Felix    |
@@ -32,7 +33,24 @@ but rather try to find a loop that I like to listen to. I guess much of my appro
 **What functions and coding approaches do you like to use?**  
 
 I am really into chord voicings and "harmony hacking". While I also like music with simpler / less / no chords,
-I sometimes miss the rich harmonic colors of the past. Writing (and changing) chord progressions in a DAW can be tedious, which is probably one of the reasons why they faded in general. If you don't play the piano flutently, you cannot quickly jot it down.. In a live coding setting, chord progressions and voicings can be automated and simulated, which has great potential.
+I sometimes miss the rich harmonic colors of the past. Writing (and changing) chord progressions in a DAW can be tedious, which is probably one of the reasons why they faded in general. If you don't play the piano fluently, you cannot quickly jot it down.. In a live coding setting, chord progressions and voicings can be automated and simulated, which has great potential. This is especially fun with arpeggios, for example:
+
+```js
+"<C^7 Dbo7 Dm7 C7>"
+  .voicings('lefthand') // voice chords
+  .arp("0 3 <2 0> [1 3]".iter(4))
+  .add(perlin.range(0,.5))// pitch warble
+  .add("<0 12>/16,.1") // hippie chorus
+  .sometimes(add("12")) // vary octaves
+  .almostNever(ply("2")) // little rhythmic glitches
+  .note().s('sine')
+  .decay(.125).gain(.8)
+  .sustain(sine.range(0,.5).slow(32))
+  .jux(rev).room(.8).fast(3/4)
+```
+
+[Open in Strudel REPL](https://strudel.tidalcycles.org/?UPR-AlXfgSnh)
+
 A while back I wrote 2 posts about [voicing dictionaries](https://loophole-letters.vercel.app/rhythmical-chords) and [voicing permutation](https://loophole-letters.vercel.app/voicing-permutation), which now partly found their way into Strudel.
 
 **Do you use Tidal with other tools / environments?**  
