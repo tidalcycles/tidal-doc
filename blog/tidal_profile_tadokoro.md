@@ -123,7 +123,7 @@ The appeal of Tidal is its ability to generate very complex and diverse music an
 
 **Tell us about your livecoding music.**  
 
-As I mentioned in the Livecoding section, I am interested in audio-visual expression through livecoding. In addition, I am interested in the theme of creating natural music with slightly twisted rhythms, such as polyrhythms and irregular time signatures.
+As I mentioned in the Livecoding section, I am interested in audio-visual expression through livecoding. In addition to that, I am interested in rhythmic expressions that sound natural but are a little bit twisted. For example, I am interested in polyrhythms, polymeters, and asymmetrical rhythms.
 
 **How has your music evolved since you have been livecoding?**  
 
