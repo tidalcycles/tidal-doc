@@ -4,6 +4,10 @@ permalink: wiki/Windows_choco_install/
 layout: wiki
 ---
 
+**March 15 - STATUS**
+- The windows automated installer currently has a problem and should NOT be used until this is resolved.
+- Using the Chocolatey `choco` package manager should be avoided until this problem is resolved. 
+
 ## Automatic installation
 
 This method uses the package manager [Chocolatey](https://chocolatey.org/) and will install everything you need, including required dependencies. Please note that this is a significant install process and takes time, but in the end all components will be ready for use. The installer assumes that these aren't installed already. If you do have some components (SuperCollider, SuperDirt, etc) it is recommended to use Manual install steps for the remaining components (see below).
