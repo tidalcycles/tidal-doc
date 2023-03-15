@@ -5,8 +5,11 @@ layout: wiki
 ---
 
 **March 15 - STATUS**
-- The windows automated installer currently has a problem and should NOT be used until this is resolved.
+- **The windows automated installer currently has problems and should NOT be used until this is resolved.**
 - Using the Chocolatey `choco` package manager should be avoided until this problem is resolved. 
+- Use the Manual Installation instructions below.
+
+---
 
 ## Automatic installation
 
@@ -113,13 +116,18 @@ compiling class library...
 
 ### Tidal Cycles & Haskell
 
-You will need [Haskell](https://www.haskell.org/ghcup/) (Ghcup) to install Tidal Cycles. If you just installed it or already had it installed, open `PowerShell` in **administrator mode** (see above). Enter the following commands:
+- You will need Haskell and the [Haskell installer](https://www.haskell.org/ghcup/) (Ghcup) to install Tidal Cycles. 
+- Once you have ghcup, use it to install ghc (version 9.4.4 - see: https://www.haskell.org/ghc/)
+- Open `PowerShell` in **administrator mode** (see above). 
+- You can verify your install by typing: `ghci --version` and `cabal --version`
+- Enter the following commands:
 
 ```shell
 cabal update
-cabal v1-install tidal
+cabal v1-install tidal-1.9.3
 ```
-Make sure to use `v1-install`, as `v2-install tidal` *may not work*.
+Make sure to use `v1-install`, as `v2-install tidal` *may not work*. 
+The `cabal` command here is tied to tidal version 1.9.3. When a more current release is available, you can substitute that or just use `cabal v1-install tidal` to get the latest.
 
 The last command might take some time to complete. Be patient, and everything will be alright :smile:.
 
