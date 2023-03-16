@@ -1,5 +1,6 @@
 ---
 title: Tidal Profile - Atsushi Tadokoro
+date: 2023-03-15
 ---
 
 |          Tidal Cyclist | Atsushi Tadokoro                                             |
@@ -144,18 +145,16 @@ I am currently working on live coding of laser beams. I hope to show the results
 
 https://www.youtube.com/shorts/ITRwjJPO2dY
 
-### Links to your music / recorded livecoding sessions:
+### Links to your music / recorded livecoding sessions
 
 - [Hyper Geek #5 (2023)](https://www.youtube.com/watch?v=cB_tm-NAYRk)
 - Show your mind on my screen (2022) - Audio Visual immersive dome live coding.
   - [excerpt](https://vimeo.com/manage/videos/779860395)
   - [full](https://vimeo.com/manage/videos/779998862)
-
 - [Solstice Night Stream December (2022)](https://youtu.be/xPaJOdygJRA)
 - [Algorave 10th Birthday (2022)](https://www.youtube.com/watch?v=O4T-3wyfuOU)
 - Danceable Polymeter (2019)
   - [excerpt](https://vimeo.com/manage/videos/362105456)
   - [full](https://vimeo.com/manage/videos/362100002)
-
 - [Synesthesic Stream (2016)](https://vimeo.com/manage/videos/179527428)
 
