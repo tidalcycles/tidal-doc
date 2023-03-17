@@ -10,6 +10,9 @@ layout: wiki
 This install script can be used to automate installation for all components and dependencies needed by the TidalCycles system. This method is recommended if you are new to Tidal and don't already have SuperCollider and SuperDirt. If you have these or if you are well versed in managing command line installations, then use the manual installation steps below.
 
 Please view the GitHub [README](https://github.com/tidalcycles/tidal-bootstrap) for details and information about supported OS versions.
+- Silicon/M1: Not validated or tested
+- Tested on Big Sur, Monterey 
+For other environments, certain components may not install. Follow the post installation steps below. You may need to follow manual installation steps. 
 
 ---
 ### Install steps
@@ -48,6 +51,8 @@ cabal list tidal
 cabal info tidal
 ls ~/.pulsar/packages/tidalcycles/node_modules/osc-min
 /Applications/SuperCollider.app/Contents/Resources/scsynth -v
+
+## SuperDirt: Start SuperCollider. From the Language menu, select "Quarks." SuperDirt and Dirt-Samples should be listed and checked.
 ```
 - If the Pulsar tidalcycles plugin did not install properly, first try to install within Pulsar using the Package Manager. See instructions in the [Pulsar page](/getting-started/editor/Pulsar.md) If this fails, you can try manual installation of the plugin. Instructions are also in the Pulsar page.
 
