@@ -12,6 +12,7 @@ date: 2023-03-13
 | Music available online | [Bandcamp](https://flimmerhaar.bandcamp.com/album/cilia) |
 | Code online | [GitHub](https://github.com/polymorphicengine) |
 | Other music/audio sw | Reaper, PureData, Audacity|
+| Comments | [Club Tidal Forum Thread](https://club.tidalcycles.org/t/new-blog-profile-polymorphic-engine/4616) |
 
 
 ## Livecoding  
@@ -126,5 +127,6 @@ Recently, I like to use very tiny grains of samples and process them with Tidal.
 
 I'm currently working on a live-coding language that will extend the mini-notation to a full programming language. It is still in early development, but maybe somebody is interested in helping me out! I'm working on it [here](https://github.com/polymorphicengine/minilambda/tree/types).
 
-
 <img src={require('./polymorphic_engine_blog_picture.jpg').default} alt="youth photo with computer" width="600" />
+
+Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/t/new-blog-profile-polymorphic-engine/4616) 
