@@ -12,6 +12,7 @@ date: 2023-03-15
 | Music available online | [SoundCluod](https://soundcloud.com/tadokoro), [Vimeo](https://vimeo.com/tadokoro) |
 |            Code online | [GitHub](https://github.com/tado)                            |
 |   Other music/audio sw | Audacity, Pure Data, Ableton Live                            |
+|               Comments | [Club Tidal Forum Thread](https://club.tidalcycles.org/t/blog-profile-atsushi-tadokoro/4622) |
 
 ![](https://yoppa.org/wp-content/uploads/2023/03/hypergeek.jpg)
 
@@ -158,3 +159,4 @@ https://www.youtube.com/shorts/ITRwjJPO2dY
   - [full](https://vimeo.com/manage/videos/362100002)
 - [Synesthesic Stream (2016)](https://vimeo.com/manage/videos/179527428)
 
+Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/t/blog-profile-atsushi-tadokoro/4622)
