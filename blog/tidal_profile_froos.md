@@ -12,6 +12,7 @@ date: 2023-03-14
 | Music available online | [YouTube](https://www.youtube.com/channel/UCCzL14wczvJyJaVYjh4nfJQ)  |
 | Code online | [GitHub](github.com/felixroos/) |
 | Other music/audio sw/hw | Ableton, Trumpet, DIY Synth |
+| Comments | [Club Tidal Forum Thread](https://club.tidalcycles.org/t/tidal-cycles-blog-returns-profile-from-froos/4577/10?u=highharmonics) |
 
 ![srudel wac](https://i.imgur.com/5fClfIp.png)
 
@@ -113,4 +114,6 @@ Special thanks to Alex for building not only Tidal as a software but also as a c
 
 ![guy with fatty hair](https://i.imgur.com/QNLKOeC.jpg)
 
-Bye
+Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/t/tidal-cycles-blog-returns-profile-from-froos/4577/10?u=highharmonics) |
+
+
