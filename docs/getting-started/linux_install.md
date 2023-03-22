@@ -15,7 +15,6 @@ There are user-made tools to install the Tidalcycles stack. Be sure to check out
     - full featured solution including SuperCollider, Haskell, Tidal, SuperDirt, code editor, and package dependencies
     - has customization options, including adding additional sample sources and bus channel settings
     - for more information, see the [Tidal Club thread](https://club.tidalcycles.org/t/install-manage-upgrades-to-tidal-environment-with-a-single-command-on-ubuntu-debian-linux-mint-ansible-method/544)
-- [Yay](https://roosnaflak.com/tech-and-research/install-tidal-cycles-on-arch-linux/) : installation on Arch / Manjaro.
 
 -----
 
