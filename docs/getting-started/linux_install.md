@@ -148,7 +148,7 @@ Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recom
 
 ***arch***
 ```bash
-sudo pacman -Sy haskell-tidal ghc ghc-libs haskell-{tidal,bifunctors,colour,hosc,mwc-random,network,primitive,random,vector,microspec}
+sudo pacman -Sy ghc ghc-libs haskell-{tidal,bifunctors,colour,hosc,mwc-random,network,primitive,random,vector,microspec}
 ```
             
 ***all others***
