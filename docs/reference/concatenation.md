@@ -70,6 +70,30 @@ Type: randcat :: [Pattern a] -> Pattern a
 d1 $ randcat [sound "bd*2 sn", sound "jvbass*3", sound "drum*2", sound "ht mt"]
 ```
 
+Or the more compact, equivalent, version:
+
+```haskell
+d1 $ sound (randcat ["bd*2 sn", "jvbass*3", "drum*2", "ht mt"])
+```
+
+### wrandcat
+
+```haskell
+Type: wrandcat :: [(Pattern a, Double)] -> Pattern a
+```
+
+This is a variation of `randcat` where you can give each pattern in the list a relative probability:
+
+```haskell
+d1 $ sound (
+      wrandcat [
+        ("bd*2 sn", 5), ("jvbass*3", 2), ("drum*2", 2), ("ht mt", 1)
+      ]
+    )
+```
+
+Here, the first pattern is the most likely and will play about half the times, and the last pattern is the less likely, with only a `10%` probability.
+
 ## Append family
 
 ### append
