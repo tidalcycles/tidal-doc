@@ -66,10 +66,11 @@ Currently, I have a series of upcoming talks hosted by the University of Cape To
 
 ### Links to your music / recorded livecoding sessions:
 
-- YouTube Main Page - https://www.youtube.com/channel/UCh7EiGKEEnCSfZ8xzUJIsZw
-- SuperContinent collaborations: https://www.youtube.com/playlist?list=PLroSCmh5yBWAHsSjTMY3hXtNoVB1I8Snh
-- UPLOrc collaborations: https://www.youtube.com/playlist?list=PLroSCmh5yBWCwxQ6jnR4Ott_1Dxt2kB7l
-- WeekendJam collaborations: https://www.youtube.com/playlist?list=PLroSCmh5yBWDZk6zoW48jj-1WwP3HWhiA
-- Solo streams/performances: https://www.youtube.com/playlist?list=PLroSCmh5yBWCr-U3h-0-HhxQ3tuq2qbpx
+- [YouTube Main Page](https://www.youtube.com/channel/UCh7EiGKEEnCSfZ8xzUJIsZw)
+- [Solo streams/performances](https://www.youtube.com/playlist?list=PLroSCmh5yBWCr-U3h-0-HhxQ3tuq2qbpx)
+- [SuperContinent collaborations](https://www.youtube.com/playlist?list=PLroSCmh5yBWAHsSjTMY3hXtNoVB1I8Snh)
+- [UPLOrc collaborations](https://www.youtube.com/playlist?list=PLroSCmh5yBWCwxQ6jnR4Ott_1Dxt2kB7l)
+- [WeekendJam collaborations](https://www.youtube.com/playlist?list=PLroSCmh5yBWDZk6zoW48jj-1WwP3HWhiA)
+
 
 Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org)
