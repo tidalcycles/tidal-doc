@@ -11,7 +11,7 @@ date: 2023-03-25
 | Other LiveCoding env | Estuary, SuperCollider |
 | Music available online | [YouTube - djmelan3](https://www.youtube.com/@djmelan3) |
 | Other music/audio sw | Pure Data, Logic, ProTools and similar DAWs |
-| Comments | [Club Tidal Forum Thread]() |
+| Comments | [Club Tidal Forum Thread](https://club.tidalcycles.org) |
 
 ## Livecoding  
 
@@ -72,4 +72,4 @@ Currently, I have a series of upcoming talks hosted by the University of Cape To
 - WeekendJam collaborations: https://www.youtube.com/playlist?list=PLroSCmh5yBWDZk6zoW48jj-1WwP3HWhiA
 - Solo streams/performances: https://www.youtube.com/playlist?list=PLroSCmh5yBWCr-U3h-0-HhxQ3tuq2qbpx
 
-Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/t/blog-profile-atsushi-tadokoro/4622)
+Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org)
