@@ -9,14 +9,14 @@ layout: wiki
 - Using the Chocolatey `choco` package manager should be avoided until this problem is resolved. 
 - Use the Manual Installation instructions below.
 
-March 28 Update
+**March 28 Update**
 - We are still working to resolve the automated installer issues. 
 - Some users have reported success using Chocolatey `choco` commands to install individual packages. Packages that can be done this way include:
     - SuperCollider
     - Sc3plugins
     - ghc (need v9.4.4, later or earlier won't work)
     - cabal
- Once these are installed successfully, you can follow the manual instructions below to install Tidal packages, SuperDirt and Pulsar.
+- Once these are installed successfully, you can follow the manual instructions below to install Tidal packages, SuperDirt and Pulsar.
 ---
 
 ## Automatic installation
@@ -117,7 +117,7 @@ cabal --version -- 3.8.1.0
 
 ### SuperCollider
 - See [SuperCollider Downloads](https://supercollider.github.io/downloads)
-- [SuperCollider GitHub](https://github.com/supercollider/supercollider)
+- [SuperCollider Readme](https://github.com/supercollider/supercollider)
     - [Windows Readme](https://github.com/supercollider/supercollider/blob/develop/README_WINDOWS.md)
 
 ### SC3 Plugins
