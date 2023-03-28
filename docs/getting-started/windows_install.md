@@ -9,6 +9,14 @@ layout: wiki
 - Using the Chocolatey `choco` package manager should be avoided until this problem is resolved. 
 - Use the Manual Installation instructions below.
 
+March 28 Update
+- We are still working to resolve the automated installer issues. 
+- Some users have reported success using Chocolatey `choco` commands to install individual packages. Packages that can be done this way include:
+    - SuperCollider
+    - Sc3plugins
+    - ghc (need v9.4.4, later or earlier won't work)
+    - cabal
+ Once these are installed successfully, you can follow the manual instructions below to install Tidal packages, SuperDirt and Pulsar.
 ---
 
 ## Automatic installation
@@ -82,7 +90,35 @@ You can try running the `choco install tidalcycles` command again or see the Tid
 
 ## Manual installation
 
-This method is recommended for users who already have some of the components such as ([Haskell](https://www.haskell.org/ghcup/), [SuperCollider](https://supercollider.github.io/downloads), [SuperDirt](https://github.com/musikinformatik/SuperDirt)). All these components are needed to install Tidal Cycles.
+This method is recommended for users who already have some of the components installed. Until the Automated method is available again, please ensure that all components below are installed.
+
+### Haskel 
+- Install ghcup (Haskell package installer)
+    - see [Haskell ghcup](https://www.haskell.org/ghcup/)
+    - [YouTube - windows ghcup install](https://www.youtube.com/watch?v=bB4fmQiUYPw) 
+    - Run this command in Windows Powershell (as admin)
+```Powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; try { Invoke-Command -ScriptBlock ([ScriptBlock]::Create((Invoke-WebRequest https://www.haskell.org/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -ArgumentList $true } catch { Write-Error $_ }
+```
+- This should install ghci v9.25. But Tidal 1.9.3+ is only compatible with ghci 9.4.2 / 9.4.4. 
+- Run these commands from powershell (admin) to get the correct ghc and cabal versions:
+
+```Powershell
+ghcup install ghc 9.4.4
+ghcup install cabal 3.8.1.0
+ghcup set ghc 9.4.4
+ghcup set cabal 3.8.1.0
+
+-- Validate
+ghci --version  -- 9.4.4
+cabal --version -- 3.8.1.0
+```
+- Be sure to complete the validation steps noted. 
+
+### SuperCollider
+- See [SuperCollider Downloads](https://supercollider.github.io/downloads)
+- [SuperCollider GitHub](https://github.com/supercollider/supercollider)
+    - [Windows Readme](https://github.com/supercollider/supercollider/blob/develop/README_WINDOWS.md)
 
 ### SC3 Plugins
 
@@ -114,22 +150,23 @@ compiling class library...
 *** Welcome to SuperCollider 3.12.1. *** For help press Ctrl-D.
 ```
 
-### Tidal Cycles & Haskell
+### Tidal Cycles 
 
-- You will need Haskell and the [Haskell installer](https://www.haskell.org/ghcup/) (Ghcup) to install Tidal Cycles. 
-- Once you have ghcup, use it to install ghc (version 9.4.4 - see: https://www.haskell.org/ghc/)
+- Make sure your Haskell environment is correct (above) and that you have ghci v9.4.4. (v9.2.5 and 9.6.1 won't work with Tidal on Windows.)  
 - Open `PowerShell` in **administrator mode** (see above). 
-- You can verify your install by typing: `ghci --version` and `cabal --version`
 - Enter the following commands:
 
 ```shell
 cabal update
-cabal v1-install tidal-1.9.3
+cabal v1-install tidal 
 ```
 Make sure to use `v1-install`, as `v2-install tidal` *may not work*. 
-The `cabal` command here is tied to tidal version 1.9.3. When a more current release is available, you can substitute that or just use `cabal v1-install tidal` to get the latest.
+The last command might take some time to complete. Be patient :smile:.
 
-The last command might take some time to complete. Be patient, and everything will be alright :smile:.
+### Pulsar
+- See [Pulsar-edit Downloads](https://pulsar-edit.dev/download.html) to download and install. 
+- OR go to the Pulsar page under Installation > Get a Text Editor  section in the left navigation pane.
+- Once you have Pulsar, you need the TidalCycles plugin. Use the Pulsar Package Manager. See details on our Pulsar page. 
 
 -----
 
@@ -144,6 +181,7 @@ If you are having trouble with installation, here are options:
     - Try searching this channel to see if your problem has been experienced by others
     - Be sure to post details - what exact problem, error messages, what Windows version, etc.
     - See the "how to ask" channel for more about getting help from our community
+- [Forums - Tidal Club](https://club.tidalcycles.org/)  A lot of smart people hang out here. 
 - Don't get discouraged! Tidal has a complex stack, but these components are all proven, robust and stable. Once it is all working, it rarely needs to have any attention. 
 ----
 
