@@ -14,9 +14,26 @@ layout: wiki
 - Some users have reported success using Chocolatey `choco` commands to install individual packages. Packages that can be done this way include:
     - SuperCollider
     - Sc3plugins
-    - ghc (need v9.4.4, later or earlier won't work)
-    - cabal
-- Once these are installed successfully, you can follow the manual instructions below to install Tidal packages, SuperDirt and Pulsar.
+    - ghc (v9.4.4, later or earlier won't work)
+    - cabal (v3.8.1.0)
+
+```powershell
+choco install ghc --version=9.4.4
+choco install cabal --version=3.8.1.0
+
+# validate versions
+ghci --version 
+cabal --version 
+
+choco install SuperCollider
+choco install Sc3plugins
+
+# Tidal install
+cabal update
+cabal v1-install tidal 
+```
+
+- Once these are installed successfully, follow the manual instructions below for SuperDirt and Pulsar.
 ---
 
 ## Automatic installation
