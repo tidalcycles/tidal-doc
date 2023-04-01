@@ -3,7 +3,8 @@ title: Working with samples the Heavy Lifting way
 date: 2023-03-31
 ---
 
-_Thinking about approaches to `from-scratch` improvised live code performance_ - (as I write this it's sort of turning out to be everything I think about Tidal!)
+> _Thinking about approaches to `from-scratch` improvised live code performance_
+> (as I write this it's sort of turning out to be everything I think about Tidal!)
 
 ## Intro
 Hi, I'm Lucy, and I'm a live coder. In this blog post I'm going to be talking about some of my strategies for using samples and approaches to `from-scratch` or `blank-screen` live coded performance.
@@ -22,7 +23,7 @@ At any rate, when I started live coding, and in the context I was in (Sheffield,
 
 Lately it seems the blank-screeners have decreased in number and I see more and more pre-prepared performances. I'm often the only blank-screener at a gig.
 
-(**Disclaimer:** I'm not a die hard - I have used pre prepared code in performances, and particularly if I'm using MIDI I have a few snippets prepped. And I have pre-prepped code in supercollider, and I've done performances where all the code was written in advance, and I've recorded performances and edited them and played them live in Ableton *(shh, don't tell the live code gods).* )
+> **Disclaimer:** I'm not a die hard - I have used pre prepared code in performances, and particularly if I'm using MIDI I have a few snippets prepped. And I have pre-prepped code in supercollider, and I've done performances where all the code was written in advance, and I've recorded performances and edited them and played them live in Ableton *(shh, don't tell the live code gods).*
 
 I guess what I'm trying to say is it doesn't really matter anyway, it's just something I personally enjoy doing that I find exhilarating, and that I want other people to enjoy, while also recognising that it can be a bit scary.
 
@@ -222,4 +223,4 @@ Having said all the above - this approach does require a certain FU attitude!!!!
 
 And if anyone is still reading. . . If you want to check out more:
 - [heavy-lifting.org](https://heavy-lifting.org/)
-- from scratch [Video with Graham Dunning](https://youtu.be/ezSdPIKkp98)
+- [from scratch session with Graham Dunning](https://youtu.be/ezSdPIKkp98)
