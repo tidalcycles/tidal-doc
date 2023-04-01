@@ -3,7 +3,7 @@ title: Working with samples the Heavy Lifting way
 date: 2023-03-31
 ---
 
-> _Thinking about approaches to `from-scratch` improvised live code performance_
+> _Thinking about approaches to `from-scratch` improvised live code performance_   
 > (as I write this it's sort of turning out to be everything I think about Tidal!)
 
 ## Intro
