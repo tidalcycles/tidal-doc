@@ -1,12 +1,14 @@
+---
+title: Working with samples the Heavy Lifting way
+date: 2023-03-31
+---
 
-
-# Working with samples the Heavy Lifting way
-_Thinking about approaches to from-scratch improvised live code performance_
+_Thinking about approaches to "from-scratch" improvised live code performance_
 
 (actually as I write this it's sort of turning out to be everything I think about Tidal)
 
 ## Intro
-Hi, I'm Lucy, and I'm a live coder. In this blog post I'm going to be talking about some of my strategies for using samples and approaches to from-scratch or blank-screen live coded performance.
+Hi, I'm Lucy, and I'm a live coder. In this blog post I'm going to be talking about some of my strategies for using samples and approaches to `from-scratch` or `blank-screen` live coded performance.
 
 ## What is 'from-scratch' anyway?
 Some things to bear in mind:
@@ -22,26 +24,32 @@ At any rate, when I started live coding, and in the context I was in (Sheffield,
 
 Lately it seems the blank-screeners have decreased in number and I see more and more pre-prepared performances. I'm often the only blank-screener at a gig.
 
-(BTW - also, I'm not a die hard - I have used pre prepared code in performances, and particularly if I'm using MIDI I have a few snippets prepped. And I have pre-prepped code in supercollider, and I've done performances where all the code was written in advance, and I've recorded performances and edited them and played them live in Ableton (shh, don't tell the live code gods). And anyway, live coding languages are already an abstraction with a lot of underlying code. Maybe I should start going to gigs and making my own punch cards live on stage. IDK.)
+(BTW - also, I'm not a die hard - I have used pre prepared code in performances, and particularly if I'm using MIDI I have a few snippets prepped. And I have pre-prepped code in supercollider, and I've done performances where all the code was written in advance, and I've recorded performances and edited them and played them live in Ableton *(shh, don't tell the live code gods).* And anyway, live coding languages are already an abstraction with a lot of underlying code. Maybe I should start going to gigs and making my own punch cards live on stage. IDK.)
 
-I guess what I'm trying to say is it doesn't really matter anyway, it's just something I personally enjoy doing that I find exhilarating, and that I want other people to enjoy, while also recognising that it can be a bit scary.
+I guess what I'm trying to say is it doesn't really matter anyway, it's just something I personally enjoy doing that I find exhilarating, and that I want other people to enjoy, while also recognizing that it can be a bit scary.
 
-I think I said this before in my [newsletter](https://buttondown.email/heavy-lifting) (so apols to readers there for whom this is a repeat) - but here is an anecdote I like to remember when I'm thinking about this stuff - I mentioned in work that I needed to practice for a gig and my colleague said "if you make it all up, why do you need to practice?" which is such a great question! What I need to practice is _making it up_ - here's how I do it.
+I think I said this before in my [newsletter](https://buttondown.email/heavy-lifting) (so apols to readers there for whom this is a repeat) - but here is an anecdote I like to remember when I'm thinking about this stuff:
+
+> I mentioned in work that I needed to practice for a gig and my colleague said "if you make it all up, why do you need to practice?"
+
+-- which is such a great question! What I need to practice is _making it up_  and here's how I do it.
 
 ## 1. Choosing samples
 
 While I often use (usually hardware) synths in my set, what drew me to Tidal in the first place (and what forms the core of my performance) is the seemingly limitless opportunities for sample manipulation.
 
-Of course you have your drums, synths, loops, acapellas, whatever, but what I really like is incorporating non-musical sounds into my sets - my go-to resource for this is [freesound.org](https://freesound.org/)
+Of course you have your drums, synths, loops, acapellas, whatever, but what I really like is incorporating non-musical sounds into my sets. My go-to resource for this is [freesound.org](https://freesound.org/).
+
 ```
 \m/ blessed be the freesound contributors \m/
 ```
+
 I'll search for whatever I'm thinking about (bells, bats, woodwork, helicopters, notifications etc etc), have a listen and download a batch of sounds - anything that catches my interest. At this stage I don't know if they'll work or not, but that's ok.
 
 ### Some other favourite sources:
 - [Blood Sport sample pack](https://pickleddiscs.wordpress.com/2019/05/15/blood-sport-sample-pack/)
 - [Legowelt](http://legowelt.org/samples/)
-- Illegally obtained samples from youtube etc*
+- Illegally obtained samples from YouTube etc*
 - Plundering the sample libraries of collaborators (particularly [Graham Dunning's](https://grahamdunning.com/) - sorry Graham)
 - Recording sounds on your phone (or fancier equipment if you have it)
 - Plundering friends' recordings for remix material (usually a good idea to ask first)
@@ -50,14 +58,14 @@ __*Side note on my ethics for sampling:__ if the person is extremely rich I will
 
 ## 2. Editing
 
-I usually do a bit of sample editing in Ableton or Reaper next - trimming off silences, roughly normalising volume, checking for loop-ability. I don't spend too long on this, tbh I probably should and it would make things sound better.
+I usually do a bit of sample editing in Ableton or Reaper next - trimming off silences, roughly normalizing volume, checking for loop-ability. I don't spend too long on this - tbh I probably should and it would make things sound better.
 
 ## 3. Experimentation
 
-This is the bulk of how I prepare. I usually update/refresh my samples every few months, but I might reach back into the archives for some oldies too. I don't use many of the standard Tidal sounds (although I used to use them almost exclusively). I do a bunch of experimenting with my new sounds, combining them with old favourites and using my favourite functions to come up with some sketches that sound good to me. This is a semi-mystical process and obviously very personal, but I find this to be extremely enjoyable and almost hypnotic sometimes.
+This is the bulk of how I prepare. I usually update/refresh my samples every few months, but I might reach back into the archives for some oldies too. I don't use many of the standard Tidal/SuperDirt sounds (although I used to use them almost exclusively). I do a bunch of experimenting with my new sounds, combining them with old favourites and using my favourite functions to come up with some sketches that sound good to me. This is a semi-mystical process and obviously very personal, but I find this to be extremely enjoyable and almost hypnotic sometimes.
 
 ### My favourite functions
-Over time I've come up with my 'favourite functions' - actually these haven't really changed very much from the ones I used in my early sets, which I chose by basically going through the whole of the Tidal documentation and trying everything (you can do this too! It's a bit tedious at times, but for me it really helped me get my head round how Tidal thinks)
+Over time I've come up with my 'favourite functions' - actually these haven't really changed very much from the ones I used in my early sets, which I chose by going through the entire Tidal documentation and trying everything (you can do this too! It's a bit tedious at times, but for me it really helped me get my head round how Tidal thinks.)
 
 I pull the new samples into Tidal, and try a few of my typical function combos to see how they feel.
 
@@ -70,7 +78,6 @@ I'll use the mininotation and some simple functions to play with rhythms.
 
 #### Patterns
 I'll start playing around with putting some patterns/sequences together.
-
 - `iter`
 - `jux`
 - `sometimes`/`often`/`every`
@@ -89,17 +96,18 @@ I'll try some simple effects to manipulate the sounds
 - `vowel`/`hpf`/`lpf`
 - `shape`
 
-(and honestly those functions, plus a bit of randomness/continuous functions, make up 99% of what I do in performances. You can get so much complexity with just a very little bit of Tidal syntax! Having a limit on the functions and sounds I'm using, for me, really supports from-scratch improvisation!)
+And honestly, those functions, plus a bit of randomness/continuous functions, make up 99% of what I do in performances. You can get so much complexity with just a very little bit of Tidal syntax! Having a limit on the functions and sounds I'm using, for me, really supports `from-scratch` improvisation!
 
-([I actually wrote about this before on the forum too](https://club.Tidalcycles.org/t/lucys-favourite-functions-aka-Tidal-the-heavy-lifting-way/479))
+([I actually wrote about this before on the Tidal forum](https://club.Tidalcycles.org/t/lucys-favourite-functions-aka-Tidal-the-heavy-lifting-way/479)).
 
-While I'm experimenting I'm not worrying too much about what it sounds like, or the timings, but I'm more looking for a feel, and thinking about how something might work in a set (my criteria: do I like it?). Often at this stage I will discard individual samples or whole groups of samples. I might go back and edit them, or I might go hunting for similar or complementary sounds. I can spend a few hours doing this, and usually when I'm in the zone I will break into sections that would be more like what I do live (which is essentially the same as the experimentation outlined above, but with more consideration to structure and timing)
+While I'm experimenting I'm not worrying too much about what it sounds like, or the timings, but I'm more looking for a feel, and thinking about how something might work in a set *(my criteria: do I like it?).* Often at this stage I will discard individual samples or whole groups of samples. I might go back and edit them, or I might go hunting for similar or complementary sounds. I can spend a few hours doing this, and usually when I'm in the zone I will break into sections that would be more like what I do live (which is essentially the same as the experimentation outlined above, but with more consideration to structure and timing).
 
 ### Sketches
 
 So this way I come up with some little sketches which sort of act as the inspiration for my set. They won't be exactly what I play live (although I might refer to them if I have a panic), but they give me an idea of the approaches I might use with each sample or set of samples.
 
-(all samples referenced below available [here on google drive](https://drive.google.com/drive/folders/1Fkxwn8Fl8O53gv-7O0dwvGXxj8qKO5Ta?usp=share_link))
+> All samples referenced below available [here on google drive](https://drive.google.com/drive/folders/1Fkxwn8Fl8O53gv-7O0dwvGXxj8qKO5Ta?usp=share_link))
+
 
 #### Sketch 1
 ```
@@ -195,25 +203,23 @@ Usually I don't practice a full set before the gig, but from my experiments I wi
 - degrade/breakdown
 - etc
 
-One thing I struggle with is transitions. Tidal has some functionality with this but I've never got on with it. [digital selves](https://soundcloud.com/digitalselves) is amazing at this <3 I need to work on this.
+One thing I struggle with is transitions. Tidal has some functionality with this but I've never got on with it. [digital selves](https://soundcloud.com/digitalselves) is amazing at this <3 - I need to work on it.
 
 Anyway, despite all this preparation, on the day I might do something totally different anyway. While I have ideas, it never sounds the same as it did in practice (particularly given the particulars of an individual PA or venue environment), and if there's a sound or a texture that pops up in the live environment that I really like then I'll follow that idea and see where it goes. I also try to pitch things in line with the other performers on the night, or where I am on the bill. If it's a chill vibe then I tend not to go in hard with like 180bpm harsh noise (and vice versa).
 
-```
-EMERGENCY TIP: If in doubt stick a big fat 4:4 kick under everything and it will probs sound decent :)
-```
+> **EMERGENCY TIP: If in doubt stick a big fat 4:4 kick under everything and it will probs sound decent :)**
 
-It doesn't always go well! But I usually enjoy myself regardless. If I have a crash or like accidentally set the BPM to like 120000 then it always feels like a very authentic live coding set and I enjoy that. It can be hard sometimes if you're the only blank-screener and everyone else's set is super polished and yours is a bit of a shit show, but I have to remind myself that's part of the fun. I find from-scratch live coding performances to be genuinely exhilarating and one of the best things in my life! (phew...)
+It doesn't always go well! But I usually enjoy myself regardless. If I have a crash or like accidentally set the BPM to like 120000 then it always feels like a very authentic live coding set and I enjoy that. It can be hard sometimes if you're the only blank-screener and everyone else's set is super polished and yours is a bit of a shit show, but I have to remind myself that's part of the fun. I find `from-scratch` live coding performances to be genuinely exhilarating and one of the best things in my life! (phew...)
 
 ## 6. De-mystifying the blank screen
 
-What I'm trying to say with all this (and well done if you've made it this far) is that while the from-scratch approach might seem super cool and gonzo, there is a degree of prep that goes into it that I really feel is a process anyone can follow if they want to get into performing in this way. I actually find it super freeing to plug my laptop into the PA and just see where the sound goes, and I think given the nature of Tidal this can be a very relaxing way to play, rather than starting with strong preconceived ideas about what you want something to sound like or how you might like the structure to be. For me there are better tools than Tidal for performing in that way.
+What I'm trying to say with all this (and well done if you've made it this far) is that while the `from-scratch` approach might seem super cool and gonzo, there is a degree of prep that goes into it that I really feel is a process anyone can follow if they want to get into performing in this way. I actually find it super freeing to plug my laptop into the PA and just see where the sound goes, and I think given the nature of Tidal this can be a very relaxing way to play, rather than starting with strong preconceived ideas about what you want something to sound like or how you might like the structure to be. For me there are better tools than Tidal for performing in that way.
 
-I also find this approach to be a really beautiful way to develop my relationship with my computer - it's a wonderful tool that does so much for me, but it can also be a friend and musical collaborator - I learn so much from our performances together <3
+I also find this approach to be a really beautiful way to develop my relationship with my computer - it's a wonderful tool that does so much for me, but it can also be a friend and musical collaborator - I learn so much from our performances together <3.
 
-From scratch coding can also feel safer with a human collaborator - find a friend and use [Troop](https://github.com/Qirky/Troop), [Estuary](https://estuary.mcmaster.ca/) or [Flok](https://flok.cc/) to jam together. When you don't have to do everything yourself it can be easier to find the space and confidence to improvise.
+`From scratch` coding can also feel safer with a human collaborator - find a friend and use [Troop](https://github.com/Qirky/Troop), [Estuary](https://estuary.mcmaster.ca/) or [Flok](https://flok.cc/) to jam together. When you don't have to do everything yourself it can be easier to find the space and confidence to improvise.
 
-Have a go from the safety of your favourite spot and try to enjoy the process!
+Have a go from the safety of your favorite spot and try to enjoy the process!
 
 ## 7. Final warning
-Having said all the above - this approach does require a certain FU attitude!!!! I still can't believe that people actually want not only to watch me perform and to listen to my music but actually to write and talk and teach about it, when I'm doing all this for purely selfish and personal reasons! Of course it makes me so happy when people like my stuff, but honestly I would do it even if they didn't, and that's why I think the from-scratch approach works so well for me, it's pure expression and experimentation, with a good dose of on-stage adrenaline. I'm super grateful for all the friendships and experiences live coding has given me. TY!
+Having said all the above - this approach does require a certain FU attitude!!!! I still can't believe that people actually want not only to watch me perform and to listen to my music but actually to write and talk and teach about it, when I'm doing all this for purely selfish and personal reasons! Of course it makes me so happy when people like my stuff, but honestly I would do it even if they didn't, and that's why I think the `from-scratch` approach works so well for me, it's pure expression and experimentation, with a good dose of on-stage adrenaline. I'm super grateful for all the friendships and experiences live coding has given me. TY!
