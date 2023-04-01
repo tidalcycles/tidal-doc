@@ -48,7 +48,7 @@ I'll search for whatever I'm thinking about (bells, bats, woodwork, helicopters,
 ### Some other favourite sources:
 - [Blood Sport sample pack](https://pickleddiscs.wordpress.com/2019/05/15/blood-sport-sample-pack/)
 - [Legowelt](http://legowelt.org/samples/)
-- Illegally obtained samples from YouTube etc*
+- samples obtained from YouTube etc, legally or otherwise*
 - Plundering the sample libraries of collaborators (particularly [Graham Dunning's](https://grahamdunning.com/) - sorry Graham)
 - Recording sounds on your phone (or fancier equipment if you have it)
 - Plundering friends' recordings for remix material (usually a good idea to ask first)
