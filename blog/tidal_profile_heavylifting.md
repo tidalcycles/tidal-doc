@@ -64,7 +64,7 @@ I usually do a bit of sample editing in Ableton or Reaper next - trimming off si
 This is the bulk of how I prepare. I usually update/refresh my samples every few months, but I might reach back into the archives for some oldies too. I don't use many of the standard Tidal/SuperDirt sounds (although I used to use them almost exclusively). I do a bunch of experimenting with my new sounds, combining them with old favourites and using my favourite functions to come up with some sketches that sound good to me. This is a semi-mystical process and obviously very personal, but I find this to be extremely enjoyable and almost hypnotic sometimes.
 
 ### My favourite functions
-Over time I've come up with my 'favourite functions' - actually these haven't really changed very much from the ones I used in my early sets, which I chose by going through the entire Tidal documentation and trying everything - you can do this too! It's a bit tedious at times, but for me it really helped me get my head round how Tidal thinks.
+Over time I've come up with my 'favourite functions' - actually these haven't really changed very much from the ones I used in my early sets, which I chose by going through the entire [Tidal documentation](https://tidalcycles.org/docs/reference/cycles) and trying everything - you can do this too! It's a bit tedious at times, but for me it really helped me get my head round how Tidal thinks.
 
 I pull the new samples into Tidal, and try a few of my typical function combos to see how they feel.
 
@@ -224,3 +224,7 @@ Having said all the above - this approach does require a certain FU attitude!!!!
 And if anyone is still reading. . . If you want to check out more:
 - [heavy-lifting.org](https://heavy-lifting.org/)
 - [from scratch session with Graham Dunning](https://youtu.be/ezSdPIKkp98)
+
+#### Comments
+- What do you think? Does this `from-scratch` process resonate? Do you different ideas? 
+- Add your Comments in the [Club Tidal thread](https://club.tidalcycles.org/t/blog-post-working-with-samples-the-heavy-lifting-way/4643)
