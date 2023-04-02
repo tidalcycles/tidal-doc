@@ -3,8 +3,8 @@ title: Working with samples the Heavy Lifting way
 date: 2023-03-31
 ---
 
-> _Thinking about approaches to `from-scratch` improvised live code performance_   
-> (as I write this it's sort of turning out to be everything I think about Tidal!)
+> _Thinking about approaches to `from-scratch` improvised live code performance._   
+> (As I write this it's sort of turning out to be everything I think about Tidal!)
 
 ## Intro
 Hi, I'm Lucy, and I'm a live coder. In this blog post I'm going to be talking about some of my strategies for using samples and approaches to `from-scratch` or `blank-screen` live coded performance.
@@ -226,5 +226,5 @@ And if anyone is still reading. . . If you want to check out more:
 - [from scratch session with Graham Dunning](https://youtu.be/ezSdPIKkp98)
 
 #### Comments
-- What do you think? Does this `from-scratch` process resonate? Do you different ideas? 
-- Add your Comments in the [Club Tidal thread](https://club.tidalcycles.org/t/blog-post-working-with-samples-the-heavy-lifting-way/4643)
+- What do you think? Does this `from-scratch` process resonate? Do you have different ideas? 
+- Add your Comments in the [Club Tidal thread](https://club.tidalcycles.org/t/blog-post-working-with-samples-the-heavy-lifting-way/4643).
