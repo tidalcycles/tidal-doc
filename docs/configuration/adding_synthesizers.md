@@ -15,7 +15,7 @@ If you want to build new synthesizers for **Tidal Cycles**, you will need to lea
 When you play with **Tidal Cycles**, **SuperCollider** and **SuperDirt** are in charge of handling audio. Everything audio-related on **Tidal** will happen on the **SuperCollider** side. Even if you haven't planned to learn more about audio synthesis, it is important to keep this architectural distinction in mind.
 
 
-### SuperDirt template 
+### SuperDirt template
 
 Everything starts with this boilerplate `SynthDef` that you need to copy and paste in your **SuperCollider** interactive editor:
 ```c
@@ -32,20 +32,20 @@ We give our synthesizer a `\name`, here (`\test`). This way, `SuperCollider` wil
 
 
 :::tip
-A `SynthDef` can be overriden at any moment. You can play a pattern on the **Tidal** side and design/recompile your synth on-the-fly. This is a great way to test if your synth works well. 
+A `SynthDef` can be overriden at any moment. You can play a pattern on the **Tidal** side and design/recompile your synth on-the-fly. This is a great way to test if your synth works well.
 :::
 
-### Blip-blop state 
+### Blip-blop state
 
 So far so good. We have an *empty shell* kind of synth. Strictly speaking, our synth is an audio function, and it lives between the curly brackets `{}`. Some of you might like silence, but we want sound.
 
 #### What are UGens?
 
-We will compose our synth by chaining together `UGens`. What is a `UGen`? The **SuperCollider** help file tolds us:
+We will compose our synth by chaining together `UGens`. What is a `UGen`? The **SuperCollider** help file tells us:
 > UGens represent calculations with signals. They are the basic building blocks of synth definitions on the server, and are used to generate or process both audio and control signals
 
 Think about them as "audio bricks". They are tiny components, each one representing a function or a modification of an incoming signal. Some `UGens` are creating signals from scratch (oscillators, enveloppes), some are modifying the signals (filters, resonators), some are distributing it (stereo, ambisonics). `UGens` are ubiquitous in computer music, and you might have encountered them already in another language/another software/another form: Max `~objects`, modules in modular synthesis, etc... Since the dawn of computer music, there is a convention around the fact that `UGens` have different "rates" depending on their usage:
-- `audio rate`: `.ar` in **SuperCollider**. An audio rate `UGen` will run at your current audio sample rate, generally `44.1hz` per second. `.ar` signals are used for audible components (oscillators). 
+- `audio rate`: `.ar` in **SuperCollider**. An audio rate `UGen` will run at your current audio sample rate, generally `44.1hz` per second. `.ar` signals are used for audible components (oscillators).
 - `control rate`: `.kr` in **SuperCollider**. Control rates are used for signals when the sampling rate is not crucial (enveloppes and LFOs). They are generally running at `samplerate/some amount`.
 - `initial rate`: `.ir` in **SuperCollider**. A static non-modulable rate. It is more efficient on the CPU compared to a regular argument. But yeah, sounds like some sort of variable.
 
@@ -79,7 +79,7 @@ d1
 
 #### Free the synthesizer
 
-Our synth is currently working but something is wrong. The `synth` will never die, meaning that each note we will play will slowly increase the memory usage until audio glitches and other problems start to appear, apparently at random. **SuperCollider** can fix that by using `DoneAction`. Take a look at this updated version: 
+Our synth is currently working but something is wrong. The `synth` will never die, meaning that each note we will play will slowly increase the memory usage until audio glitches and other problems start to appear, apparently at random. **SuperCollider** can fix that by using `DoneAction`. Take a look at this updated version:
 ```c
 SynthDef(\test, {
     | out, sustain=1, freq=440, speed=1, begin=0, end=1, pan, accelerate, offset|
@@ -89,7 +89,7 @@ SynthDef(\test, {
     OffsetOut.ar(out, Pan2.ar(in: output, pos: pan));
 }).add;
 ```
-Using `doneAction` is **extremely important**. Our synth will now free whatever resource it was using while playing. 
+Using `doneAction` is **extremely important**. Our synth will now free whatever resource it was using while playing.
 
 ### Adapt your synth to SuperDirt
 
@@ -117,12 +117,12 @@ d1
 It sounds really nice! Your synth is now totally compatible with **SuperDirt**.
 
 Note that we changed a few things:
-* `output`: it's gone. We didn't needed it. We are now feeding the enveloppe to `DirtPan` 
-* `osc` is directly fed to `DirtPan` as well. 
+* `output`: it's gone. We didn't needed it. We are now feeding the enveloppe to `DirtPan`
+* `osc` is directly fed to `DirtPan` as well.
 
 #### Bonus: more complex synthesis
 
-This page taught you to create a synthesizer for **SuperDirt** but it is still pretty basic. If you learn a bit more about **SuperCollider**, you will be able to refine your ideas. Take a look at the following `SynthDef`. Keep the same pattern running, it sounds nice: 
+This page taught you to create a synthesizer for **SuperDirt** but it is still pretty basic. If you learn a bit more about **SuperCollider**, you will be able to refine your ideas. Take a look at the following `SynthDef`. Keep the same pattern running, it sounds nice:
 
 ```haskell
 SynthDef(\elegiac, {
