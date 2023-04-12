@@ -13,7 +13,8 @@ date: 2023-04-08
 |   Other music/audio sw | Audacity, Renoise Tracker DAW @_@                            |
 |               Comments | [Autonomous Computer Music Tidal Forum Thread](https://club.tidalcycles.org/t/autonomous-tidal-code-generation/1064/2) |
 
-![](https://www.flickr.com/photos/hellocatfood/49626800896/)
+
+<img src="https://www.flickr.com/photos/hellocatfood/49626800896/"  width="600" height="450" />  
 
 photo Credit: Antonio Roberts
 
