@@ -11,7 +11,7 @@ author_title: (include if relevant)
 | Tidal Musician | (name)    |
 | --------:    | :---------- |
 | aka    | (screenName) |
-| Location | (city and/or country) optional | 
+| Location | (city and/or country) optional |
 | Album/Release | (title) |
 | Genre | (EDM, Glitch/Noise, Techno, Hybrid, Electronic, Experimental, etc. ) |
 | Available | (link to Bandcamp, SoundCloud, YouTube, etc) |
@@ -27,7 +27,13 @@ author_title: (include if relevant)
 *(Provide details about the music - a list of tracks, details on sound sources, unique textures, etc. What makes this music stand out?)*  
 
 ### Use of Tidal & livecoding
-*(Provide information on how Tidal Cycles was used. This can a description, code samples, etc. Include any relevant info on instruments or samples, unique configurations, other software/hardware gear, etc.)*  
+*(Provide information on how Tidal Cycles was used. This can a description, code samples, etc. Include any relevant info on instruments or samples, unique configurations, other software/hardware gear, etc.)*
+
+
+```haskell
+-- include any tidal code samples
+d1 $ s "bd"
+```
 
 ### Other  
 *(Anything additional you can share, including images.)*
@@ -39,20 +45,22 @@ author_title: (include if relevant)
 ---
 
 ## Posting Instructions
-If you are to able/willing to work with a Pull Request in GitHub, use that method. Alternatively, you can work with one of the Blog editors and provide your content in whatever way works for you. Another option is to post in your GitHub repository using the markdown format, but don't do a Pull Request. In that case, just let a blog editor know when you are ready. 
+If you are to able/willing to work with a Pull Request in GitHub, use that method. Alternatively, you can work with one of the Blog editors and provide your content in whatever way works for you. Another option is to post in your GitHub repository using the markdown format, but don't do a Pull Request. In that case, just let a blog editor know when you are ready.
 
 1. Via GitHub
     - Create a fork of this tidal-doc repository.
     - Optional: Create a new branch.
     - Copy the top part of this file into a new file in the blog folder. Use the naming convention: tidal_profile_<yourName>.md
     - Remove the directions (italics). Remove any lines or questions you don't want to cover.
-    - Add your content and tell your unique story. 
+    - Add your content and tell your unique story.
     - Submit a Pull Request to the main repo.
-    - Let the blog editor know you are ready for review. 
-2. Via markdown file (tidal_profile_<yourName>.md
+    - Let the blog editor know you are ready for review.
+
+2. Via markdown file (tidal_music_<yourName>.md
     - Cut and past this template file
     - make your edits, add your content
     - reach out to a blog editor with a link to your file, or send it via email
+    
 3. Text
     - Take questions from above
     - Add your content
