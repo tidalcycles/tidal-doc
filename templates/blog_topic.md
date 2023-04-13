@@ -6,7 +6,7 @@ title: <your title or topic here>
 date: yyyy-mm-dd
 ---
 
-*(Instructions: Edit the Right column. Delete any rows that aren't relevant. It's OK to only list your screen name.)*
+*(Instructions: Edit the Right column. It's OK to only list your screen name.)*
 *(Comments will be linked into a Club Tidal thread after the post is published. If you don't want this, delete that row.)*
 
 | Tidal Cyclist  | (name)    |
