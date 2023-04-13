@@ -14,7 +14,11 @@ date: 2023-04-08
 |               Comments | [Autonomous Computer Music Tidal Forum Thread](https://club.tidalcycles.org/t/autonomous-tidal-code-generation/1064/2) |
 
 
-<img src="https://www.flickr.com/photos/hellocatfood/49626800896/"  width="600" height="450" />  
+<img
+  src={require('https://www.flickr.com/photos/hellocatfood/49626800896').default}
+  alt="digital selves"
+  width="600"
+/>  
 
 photo Credit: Antonio Roberts
 
