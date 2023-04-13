@@ -8,7 +8,7 @@ date: 2023-04-08
 |               Location | London, UK                                                   |
 |       Years with Tidal | 5ish yrs                                                     |
 |   Other LiveCoding env | Supercollider, p5.js, hydra, marching.js,Max (and/or) pd     |
-| Music available online | [SoundCloud](https://soundcloud.com/digitalselves), [Bandcamp] (https://digitalselves.bandcamp.com/) |
+| Music available online | [SoundCloud](https://soundcloud.com/digitalselves), [Bandcamp](https://digitalselves.bandcamp.com/) |
 |            Code online | [GitHub](https://github.com/lwlsn)                           |
 |   Other music/audio sw | Audacity, Renoise Tracker DAW @_@                            |
 |               Comments | [Autonomous Computer Music Tidal Forum Thread](https://club.tidalcycles.org/t/autonomous-tidal-code-generation/1064/2)
