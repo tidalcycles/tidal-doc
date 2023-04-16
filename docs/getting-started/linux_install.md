@@ -68,7 +68,7 @@ sudo apt update; sudo apt install git jackd2 qjackctl zlib1g-dev gcc g++ cabal-i
 
 ***arch***
 ```bash
-sudo pacman -Syu; pacman -Sy git jack2 qjackctl
+sudo pacman -Syu; sudo pacman -Sy git jack2 qjackctl
 ```
 
 ***fedora***
