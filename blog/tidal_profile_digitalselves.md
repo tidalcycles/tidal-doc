@@ -11,7 +11,7 @@ date: 2023-04-08
 | Music available online | [SoundCloud](https://soundcloud.com/digitalselves), [Bandcamp](https://digitalselves.bandcamp.com/) |
 |            Code online | [GitHub](https://github.com/lwlsn)                           |
 |   Other music/audio sw | Audacity, Renoise Tracker DAW @_@                            |
-|               Comments | [Autonomous Computer Music Tidal Forum Thread](https://club.tidalcycles.org/t/autonomous-tidal-code-generation/1064/2)
+|               Comments | [Autonomous Computer Music Tidal Forum Thread](https://club.tidalcycles.org/t/autonomous-tidal-code-generation/1064/2) [blog comments](https://club.tidalcycles.org/t/blog-profile-digital-selves/4667)|
 
 <img
   src={require('./digitalSelves-med.jpg').default}
@@ -139,3 +139,5 @@ I'm having a bit of an unplanned creative hiatus at the moment due to a lot of w
 - [Live On DataFruits Radio](https://soundcloud.com/datafruits/digital-selves-dxdf)
 - [FACT - Artist DIY](https://www.youtube.com/watch?v=t2KeNblKSFM&t=1s)
 - [FACT - Sonic Futures: How Technology is Guiding Electronic Music](https://www.youtube.com/watch?v=9iPRPIe_PbQ)
+
+Add your comments in the [Club Tidal thread](https://club.tidalcycles.org/t/blog-profile-digital-selves/4667)
