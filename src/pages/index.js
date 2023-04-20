@@ -35,8 +35,8 @@ const features = [
     description: (
       <>
         Tidal is used by a diverse and vibrant community of musicians for composition, improvisation and exploration of algorithmic music.
-        Check out the <a href="https://tidalcycles.org/blog/">Tidal Blog</a> or submit your own <a href="https://tidalcycles.org/blog/">blog post>/a>.
-        Learn about the <a href="https://tidalcycles.org/docs/community">Tidal community</a>.
+        Check out the <a href="https://tidalcycles.org/blog/">Tidal Blog</a> or submit your own <a href="https://tidalcycles.org/blog/about.md">blog post>/a>.
+        Learn about the <a href="https://tidalcycles.org/docs/community/">Tidal community</a>.
       </>
     ),
   },
