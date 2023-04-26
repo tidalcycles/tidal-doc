@@ -57,7 +57,9 @@ C:\Users\<yourUser>\AppData\Roaming\cabal\
 cabal update
 cabal v1-install tidal
 ```
+
 If tidal still doesn't install cleanly, see the [Troubleshooting on Windows](../troubleshoot/troubleshoot_windows) page.
+
 ---
 
 ## Automatic installation
