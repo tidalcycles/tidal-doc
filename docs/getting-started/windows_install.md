@@ -6,37 +6,63 @@ layout: wiki
 
 **March 15 - STATUS**
 - **The windows automated installer currently has problems and should NOT be used until this is resolved.**
-- Using the Chocolatey `choco` package manager should be avoided until this problem is resolved. 
+- Using the Chocolatey `choco` package manager should be avoided until this problem is resolved.
 - Use the Manual Installation instructions below.
 
-**March 28 Update**
-- We are still working to resolve the automated installer issues. 
+**April 26 Update**
+We are still working to resolve problems with the automated Chocolatey install. We are also seeing an increase in problems related to the Haskell components. Please follow directions carefully.
 - Some users have reported success using Chocolatey `choco` commands to install individual packages. Packages that can be done this way include:
     - SuperCollider
     - Sc3plugins
-    - ghc (v9.4.4, later or earlier won't work)
-    - cabal (v3.8.1.0)
-
+    - ghc (use version 9.4.4, later or earlier won't work)
+    - cabal (use version 3.8.1.0)
+    
 ```powershell
 choco install ghc --version=9.4.4
 choco install cabal --version=3.8.1.0
 
 # validate versions
-ghci --version 
-cabal --version 
+ghci --version
+cabal --version
 
 choco install SuperCollider
 choco install Sc3plugins
 
 # Tidal install
 cabal update
-cabal v1-install tidal 
+cabal v1-install tidal
 ```
 
 - Once these are installed successfully, follow the manual instructions below for SuperDirt and Pulsar.
+- If the cabal commands for Tidal produce any errors, you will need to resolve them. A common error is failure to install the network-3.1.2.8 package:
+
+> failed to install network-3.1.2.8  
+> package has a ./configure script. If on windows, this requires a unix compatibility
+toolchain such as MinGW+MSYS or Cygwin.
+
+Steps to resolve:
+- Add these values to your system PATH environment variable.
+```powershell
+C:\tools\ghc-9.4.4\mingw\bin
+C:\tools\msys64\usr\bin
+```
+- exit and restart powershell
+- remove the previous tidal package install attempt by deleting:
+```powershell
+C:\Users\<yourUser>\AppData\Roaming\ghc\
+C:\Users\<yourUser>\AppData\Roaming\cabal\
+```
+- run the tidal package install commands:
+```
+cabal update
+cabal v1-install tidal
+```
+If tidal still doesn't install cleanly, see the [Troubleshooting on Windows](../troubleshoot/troubleshoot_windows) page.
 ---
 
 ## Automatic installation
+
+**NOTE: see above.** *Using Chocolatey at this time will install a version of Haskell that is not compatible and you will get errors trying to run Tidal commands.*
 
 This method uses the package manager [Chocolatey](https://chocolatey.org/) and will install everything you need, including required dependencies. Please note that this is a significant install process and takes time, but in the end all components will be ready for use. The installer assumes that these aren't installed already. If you do have some components (SuperCollider, SuperDirt, etc) it is recommended to use Manual install steps for the remaining components (see below).
 
@@ -66,7 +92,6 @@ Installation has 3 steps. You may get security pop-up windows for you to accept.
 > The [Chocolatey](https://chocolatey.org/) package
 > manager is required. If you haven't installed it previously, you can
 > get it by running this command:
-
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
@@ -74,7 +99,6 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 **III - Installing TidalCycles**
 
 > Run the following command to install Tidal Cycles using Chocolatey:
-
 ```bash
 choco install tidalcycles
 ```
@@ -89,8 +113,6 @@ After the powershell script is finished, you should review the choco install log
 These can be installed manually within the SuperCollider IDE. See the command to execute in the Manual installation section below.
 - *Tidal package install failed*
     - You can confirm the status of your tidal install with this command: `cabal info tidal`. If you get a message that "There is no package named tidal" then something went wrong and you need to run these commands (follow the steps in the Manual Install section):
-
-
 ```shell
 cabal update
 cabal v1-install tidal
@@ -99,25 +121,30 @@ cabal v1-install tidal
 - *Pulsar install failed*  
 Download the installer manually from [Pulsar-dev](https://pulsar-edit.dev/). Once installed, follow the step below to install the TidalCycles plugin package.
 - *Pulsar install succeeded but didn't install the TidalCycles plugin package*  
-This can done manually from within Pulsar. From the top menu, open the Package Manager, select Install, then search for TidalCycles, and select install. This will install the TidalCycle package into Pulsar. For more details, see the Pulsar page in the "Get a Text Editor" section. 
+This can done manually from within Pulsar. From the top menu, open the Package Manager, select Install, then search for TidalCycles, and select install. This will install the TidalCycle package into Pulsar. For more details, see the Pulsar page in the "Get a Text Editor" section.
 - *Haskell (ghc) or cabal install fails.*  
-You can try running the `choco install tidalcycles` command again or see the TidalCycles & Haskell steps below.
+You can try running the `choco install tidalcycles` command again. Or you can try installing individual components with choco:
+```powershell
+choco install ghc --version=9.4.4
+choco install cabal --version=3.8.1.0
+```
 
+- For other problems, see the [Troubleshooting on Windows](../troubleshoot/troubleshoot_windows) page.
 -----
 
 ## Manual installation
 
 This method is recommended for users who already have some of the components installed. Until the Automated method is available again, please ensure that all components below are installed.
 
-### Haskel 
+### Haskel
 - Install ghcup (Haskell package installer)
     - see [Haskell ghcup](https://www.haskell.org/ghcup/)
-    - [YouTube - windows ghcup install](https://www.youtube.com/watch?v=bB4fmQiUYPw) 
+    - [YouTube - windows ghcup install](https://www.youtube.com/watch?v=bB4fmQiUYPw)
     - Run this command in Windows Powershell (as admin)
 ```Powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; try { Invoke-Command -ScriptBlock ([ScriptBlock]::Create((Invoke-WebRequest https://www.haskell.org/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -ArgumentList $true } catch { Write-Error $_ }
 ```
-- This should install ghci v9.25. But Tidal 1.9.3+ is only compatible with ghci 9.4.2 / 9.4.4. 
+- This should install ghci v9.25. But Tidal 1.9.3+ is only compatible with ghci 9.4.2 / 9.4.4.
 - Run these commands from powershell (admin) to get the correct ghc and cabal versions:
 
 ```Powershell
@@ -130,7 +157,7 @@ ghcup set cabal 3.8.1.0
 ghci --version  -- 9.4.4
 cabal --version -- 3.8.1.0
 ```
-- Be sure to complete the validation steps noted. 
+- Be sure to complete the validation steps noted.
 
 ### SuperCollider
 - See [SuperCollider Downloads](https://supercollider.github.io/downloads)
@@ -167,23 +194,23 @@ compiling class library...
 *** Welcome to SuperCollider 3.12.1. *** For help press Ctrl-D.
 ```
 
-### Tidal Cycles 
+### Tidal Cycles
 
 - Make sure your Haskell environment is correct (above) and that you have ghci v9.4.4. (v9.2.5 and 9.6.1 won't work with Tidal on Windows.)  
-- Open `PowerShell` in **administrator mode** (see above). 
+- Open `PowerShell` in **administrator mode** (see above).
 - Enter the following commands:
 
 ```shell
 cabal update
-cabal v1-install tidal 
+cabal v1-install tidal
 ```
-Make sure to use `v1-install`, as `v2-install tidal` *may not work*. 
+Make sure to use `v1-install`, as `v2-install tidal` *may not work*.
 The last command might take some time to complete. Be patient :smile:.
 
 ### Pulsar
-- See [Pulsar-edit Downloads](https://pulsar-edit.dev/download.html) to download and install. 
+- See [Pulsar-edit Downloads](https://pulsar-edit.dev/download.html) to download and install.
 - OR go to the Pulsar page under Installation > Get a Text Editor  section in the left navigation pane.
-- Once you have Pulsar, you need the TidalCycles plugin. Use the Pulsar Package Manager. See details on our Pulsar page. 
+- Once you have Pulsar, you need the TidalCycles plugin. Use the Pulsar Package Manager. See details on our Pulsar page.
 
 -----
 
@@ -198,8 +225,8 @@ If you are having trouble with installation, here are options:
     - Try searching this channel to see if your problem has been experienced by others
     - Be sure to post details - what exact problem, error messages, what Windows version, etc.
     - See the "how to ask" channel for more about getting help from our community
-- [Forums - Tidal Club](https://club.tidalcycles.org/)  A lot of smart people hang out here. 
-- Don't get discouraged! Tidal has a complex stack, but these components are all proven, robust and stable. Once it is all working, it rarely needs to have any attention. 
+- [Forums - Tidal Club](https://club.tidalcycles.org/)  A lot of smart people hang out here.
+- Don't get discouraged! Tidal has a complex stack, but these components are all proven, robust and stable. Once it is all working, it rarely needs to have any attention.
 ----
 
 ## Note for Windows 7 users
