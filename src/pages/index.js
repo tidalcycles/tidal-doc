@@ -34,9 +34,9 @@ const features = [
     imageUrl: "img/algorave.png",
     description: (
       <>
-        Tidal is used by a large community of musicians for composition,
-        improvisation and exploration of algorithmic music. Share, explore, join
-        an algorave, compose your next track, make music.
+        Tidal is used by a diverse and vibrant community of musicians for composition, improvisation and exploration of algorithmic music.
+        Check out the <a href="https://tidalcycles.org/blog/">Tidal Blog</a> or submit your own <a href="https://tidalcycles.org/blog/about">blog post</a>.
+        Learn about the <a href="https://tidalcycles.org/docs/community/">Tidal community</a>.
       </>
     ),
   },
