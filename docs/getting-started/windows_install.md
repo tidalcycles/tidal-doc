@@ -58,7 +58,7 @@ cabal update
 cabal v1-install tidal
 ```
 
-If tidal still doesn't install cleanly, see the [Troubleshooting on Windows](../troubleshoot/troubleshoot_windows) page.
+If tidal still doesn't install cleanly, see the [Troubleshooting on Windows](https://tidalcycles.org/docs/troubleshoot/troubleshoot_windows/) page.
 
 ---
 
