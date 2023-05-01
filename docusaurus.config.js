@@ -1,7 +1,7 @@
 module.exports = {
   title: "Tidal Cycles",
   tagline: "Live coding music with Algorithmic patterns ",
-  url: "https://doc.tidalcycles.org",
+  url: "https://tidalcycles.org",
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
