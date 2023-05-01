@@ -74,7 +74,7 @@ d1 $ every 2 (hurry 2) $ sound "bd sn:2 ~ cp"
 Type: slowSqueeze :: Pattern Time -> Pattern a -> Pattern a
 ```
 
-`fastSqueeze` slows down a pattern according to the given time pattern. It is the slow analogue to `fastSqueeze`. If the time pattern only has a single value in a cycle, `slowSqueeze` becomes equivalent to slow:
+`slowSqueeze` slows down a pattern according to the given time pattern. It is the slow analogue to `fastSqueeze`. If the time pattern only has a single value in a cycle, `slowSqueeze` becomes equivalent to slow:
 ```haskell
 d1 $ slow "<2 4>" $ s "bd*8"
 ```
