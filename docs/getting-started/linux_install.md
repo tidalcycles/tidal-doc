@@ -63,12 +63,12 @@ groups | grep audio
 
 ***debian***
 ```bash
-sudo apt update; sudo apt install git jackd2 qjackctl zlib1g-dev gcc g++ cabal-install
+sudo apt update; sudo apt install git jackd2 qjackctl zlib1g-dev gcc g++ ghc cabal-install
 ```
 
 ***arch***
 ```bash
-sudo pacman -Syu; pacman -Sy git jack2 qjackctl
+sudo pacman -Syu; sudo pacman -Sy git jack2 qjackctl
 ```
 
 ***fedora***
