@@ -76,6 +76,7 @@ Parameter (def) | Range | Description
 `lpgdecay` (0) | 0.0-1.0 | adjust the ringing time of the LPG and the decay time of the internal envelope
 `lpgcolour` (0) | 0.0-1.0 | adjust the response of the LPG, from VCFA to VCA
 `lpg d c` | see above | convenience function for simultaneous `lpgdecay` and `lpgcolour` control
+`mode` (0) | 0-1 | synthdef specific mode to control signal mixing, [more information](https://github.com/cleary/ansible-tidalcycles-synth-mi-ugens/pull/1)
 
 **Example:**
 
