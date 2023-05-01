@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Tidal Cycles Blog</title>
-        <link>https://doc.tidalcycles.org/blog</link>
+        <link>https://tidalcycles.org/blog</link>
         <description>Tidal Cycles Blog</description>
         <lastBuildDate>Sat, 08 Apr 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,7 +10,7 @@
         <language>en</language>
         <item>
             <title><![CDATA[Tidal Profile - digital selves]]></title>
-            <link>https://doc.tidalcycles.org/blog/tidal_profile_digitalselves</link>
+            <link>https://tidalcycles.org/blog/tidal_profile_digitalselves</link>
             <guid>/tidal_profile_digitalselves</guid>
             <pubDate>Sat, 08 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[|          Tidal Cyclist | digital selves                                               |]]></description>
@@ -18,7 +18,7 @@
         </item>
         <item>
             <title><![CDATA[Working with samples the Heavy Lifting way]]></title>
-            <link>https://doc.tidalcycles.org/blog/tidal_profile_heavylifting</link>
+            <link>https://tidalcycles.org/blog/tidal_profile_heavylifting</link>
             <guid>/tidal_profile_heavylifting</guid>
             <pubDate>Fri, 31 Mar 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Thinking about approaches to from-scratch improvised live code performance.]]></description>
@@ -27,7 +27,7 @@
         </item>
         <item>
             <title><![CDATA[Tidal Profile - djmelan3 (Mel Laubscher)]]></title>
-            <link>https://doc.tidalcycles.org/blog/tidal_profile_djmelan3</link>
+            <link>https://tidalcycles.org/blog/tidal_profile_djmelan3</link>
             <guid>/tidal_profile_djmelan3</guid>
             <pubDate>Sat, 25 Mar 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[| Tidal Cyclist  | Mel Laubscher    |]]></description>
@@ -35,7 +35,7 @@
         </item>
         <item>
             <title><![CDATA[Tidal Profile - Atsushi Tadokoro]]></title>
-            <link>https://doc.tidalcycles.org/blog/tidal_profile_tadokoro</link>
+            <link>https://tidalcycles.org/blog/tidal_profile_tadokoro</link>
             <guid>/tidal_profile_tadokoro</guid>
             <pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[|          Tidal Cyclist | Atsushi Tadokoro                                             |]]></description>
@@ -43,7 +43,7 @@
         </item>
         <item>
             <title><![CDATA[Tidal Profile - froos]]></title>
-            <link>https://doc.tidalcycles.org/blog/tidal_profile_froos</link>
+            <link>https://tidalcycles.org/blog/tidal_profile_froos</link>
             <guid>/tidal_profile_froos</guid>
             <pubDate>Tue, 14 Mar 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[| Tidal Cyclist  | Felix    |]]></description>
@@ -64,7 +64,7 @@ Special thanks to Alex for building not only Tidal as a software but also as a c
         </item>
         <item>
             <title><![CDATA[Tidal Profile - polymorphic_engine]]></title>
-            <link>https://doc.tidalcycles.org/blog/tidal_profile_polymorphic_engine</link>
+            <link>https://tidalcycles.org/blog/tidal_profile_polymorphic_engine</link>
             <guid>/tidal_profile_polymorphic_engine</guid>
             <pubDate>Mon, 13 Mar 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[| Tidal Cyclist  | Martin Gius   |]]></description>
@@ -72,7 +72,7 @@ Special thanks to Alex for building not only Tidal as a software but also as a c
         </item>
         <item>
             <title><![CDATA[Tidal Profile - Pondskater (aka Axel Ganz)]]></title>
-            <link>https://doc.tidalcycles.org/blog/tidal_profile_pondskater</link>
+            <link>https://tidalcycles.org/blog/tidal_profile_pondskater</link>
             <guid>/tidal_profile_pondskater</guid>
             <pubDate>Fri, 10 Mar 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[| Tidal Cyclist  |  Pondskater (aka Axel Ganz)   |]]></description>
@@ -81,7 +81,7 @@ Special thanks to Alex for building not only Tidal as a software but also as a c
         </item>
         <item>
             <title><![CDATA[Tidal Profile - ndr_brt]]></title>
-            <link>https://doc.tidalcycles.org/blog/tidal_profile_ndr_brt</link>
+            <link>https://tidalcycles.org/blog/tidal_profile_ndr_brt</link>
             <guid>/tidal_profile_ndr_brt</guid>
             <pubDate>Fri, 03 Mar 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[| Tidal Cyclist  |  ndr_brt   |]]></description>
@@ -91,7 +91,7 @@ For example:</li></ul><div class="language-haskell codeBlockContainer_Ckt0 theme
         </item>
         <item>
             <title><![CDATA[Tidal Profile - BuboBubo (Raphaël Maurice Forment )]]></title>
-            <link>https://doc.tidalcycles.org/blog/tidal_profile_bubobubo</link>
+            <link>https://tidalcycles.org/blog/tidal_profile_bubobubo</link>
             <guid>/tidal_profile_bubobubo</guid>
             <pubDate>Tue, 28 Feb 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[| Tidal Cyclist  | Raphaël Maurice Forment |]]></description>
@@ -99,7 +99,7 @@ For example:</li></ul><div class="language-haskell codeBlockContainer_Ckt0 theme
         </item>
         <item>
             <title><![CDATA[Tidal Profile - tedthetrumpet (J Simon van der Walt)]]></title>
-            <link>https://doc.tidalcycles.org/blog/tidal_profile_tedthetrumpet</link>
+            <link>https://tidalcycles.org/blog/tidal_profile_tedthetrumpet</link>
             <guid>/tidal_profile_tedthetrumpet</guid>
             <pubDate>Sat, 25 Feb 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[| Tidal Cyclist  | J Simon van der Walt |]]></description>
@@ -107,7 +107,7 @@ For example:</li></ul><div class="language-haskell codeBlockContainer_Ckt0 theme
         </item>
         <item>
             <title><![CDATA[Tidal Profile - cleary (Bernard Gray)]]></title>
-            <link>https://doc.tidalcycles.org/blog/contributor_profile_cleary</link>
+            <link>https://tidalcycles.org/blog/contributor_profile_cleary</link>
             <guid>/contributor_profile_cleary</guid>
             <pubDate>Thu, 16 Feb 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[| Tidal Cyclist  | Bernard Gray |]]></description>
@@ -115,7 +115,7 @@ For example:</li></ul><div class="language-haskell codeBlockContainer_Ckt0 theme
         </item>
         <item>
             <title><![CDATA[Tidal Blog Info]]></title>
-            <link>https://doc.tidalcycles.org/blog/about</link>
+            <link>https://tidalcycles.org/blog/about</link>
             <guid>/about</guid>
             <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Purpose]]></description>
@@ -124,7 +124,7 @@ Anyone engaged with Tidal Cycles is encouraged to submit a blog post. Topics can
         </item>
         <item>
             <title><![CDATA[Blog Archive]]></title>
-            <link>https://doc.tidalcycles.org/blog/blogArchive</link>
+            <link>https://tidalcycles.org/blog/blogArchive</link>
             <guid>/blogArchive</guid>
             <pubDate>Wed, 01 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[The older site had a Blog feature with posts from 2017 - 2020.]]></description>
@@ -133,7 +133,7 @@ Anyone engaged with Tidal Cycles is encouraged to submit a blog post. Topics can
         </item>
         <item>
             <title><![CDATA[New Documentation]]></title>
-            <link>https://doc.tidalcycles.org/blog/2019/05/30/welcome</link>
+            <link>https://tidalcycles.org/blog/2019/05/30/welcome</link>
             <guid>/2019/05/30/welcome</guid>
             <pubDate>Thu, 30 May 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[I've started working on a major overhaul / reorganization of the old Tidal Userbase website. I think that this new documentation is now pretty much on par with the old one. I hope that you will like it.]]></description>

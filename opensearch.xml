@@ -4,8 +4,8 @@
   <ShortName>Tidal Cycles</ShortName>
   <Description>Search Tidal Cycles</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://doc.tidalcycles.org/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://doc.tidalcycles.org/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://doc.tidalcycles.org/opensearch.xml" />
-  <moz:SearchForm>https://doc.tidalcycles.org/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://tidalcycles.org/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://tidalcycles.org/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://tidalcycles.org/opensearch.xml" />
+  <moz:SearchForm>https://tidalcycles.org/</moz:SearchForm>
 </OpenSearchDescription>
