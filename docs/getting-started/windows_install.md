@@ -10,55 +10,13 @@ layout: wiki
 - Use the Manual Installation instructions below.
 
 **April 26 Update**
-We are still working to resolve problems with the automated Chocolatey install. We are also seeing an increase in problems related to the Haskell components. Please follow directions carefully.
-- Some users have reported success using Chocolatey `choco` commands to install individual packages. Packages that can be done this way include:
-    - SuperCollider
-    - Sc3plugins
-    - ghc (use version 9.4.4, later or earlier won't work)
-    - cabal (use version 3.8.1.0)
-    
-```powershell
-choco install ghc --version=9.4.4
-choco install cabal --version=3.8.1.0
+We are still working to resolve problems with the automated Chocolatey install. We are also seeing an increase in problems related to the Haskell components.
 
-# validate versions
-ghci --version
-cabal --version
-
-choco install SuperCollider
-choco install Sc3plugins
-
-# Tidal install
-cabal update
-cabal v1-install tidal
-```
-
-- Once these are installed successfully, follow the manual instructions below for SuperDirt and Pulsar.
-- If the cabal commands for Tidal produce any errors, you will need to resolve them. A common error is failure to install the network-3.1.2.8 package:
-
-> failed to install network-3.1.2.8  
-> package has a ./configure script. If on windows, this requires a unix compatibility
-toolchain such as MinGW+MSYS or Cygwin.
-
-Steps to resolve:
-- Add these values to your system PATH environment variable.
-```powershell
-C:\tools\ghc-9.4.4\mingw\bin
-C:\tools\msys64\usr\bin
-```
-- exit and restart powershell
-- remove the previous tidal package install attempt by deleting:
-```powershell
-C:\Users\<yourUser>\AppData\Roaming\ghc\
-C:\Users\<yourUser>\AppData\Roaming\cabal\
-```
-- run the tidal package install commands:
-```
-cabal update
-cabal v1-install tidal
-```
-
-If tidal still doesn't install cleanly, see the [Troubleshooting on Windows](https://tidalcycles.org/docs/troubleshoot/troubleshoot_windows/) page.
+**May 4 Updates**
+- There is progress on getting a new Chocolatey package ready. We have the pieces in place and are waiting on Moderation approval.
+- The problem with ghc 9.6.1 on Windows has been identified by the Haskell team. They have a new version of the [network package](https://hackage.haskell.org/package/network) - `network-3.1.2.9`. This should also resolve network package errors that come up with the Tidal package install. [See details](https://gitlab.haskell.org/ghc/ghc/-/issues/23309).
+- The steps to install individual components via Chocolatey have been removed. This is not a recommended direction.
+- The [Troubleshooting on Windows](https://tidalcycles.org/docs/troubleshoot/troubleshoot_windows/) page has been updated. Use that page for help installing Haskell.
 
 ---
 
@@ -114,11 +72,21 @@ After the powershell script is finished, you should review the choco install log
 - *SuperCollider quarks install failed for SuperDirt, Dirt Samples, and/or Vowel*  
 These can be installed manually within the SuperCollider IDE. See the command to execute in the Manual installation section below.
 - *Tidal package install failed*
-    - You can confirm the status of your tidal install with this command: `cabal info tidal`. If you get a message that "There is no package named tidal" then something went wrong and you need to run these commands (follow the steps in the Manual Install section):
-```shell
-cabal update
-cabal v1-install tidal
-```
+    - You can confirm the status of your tidal install with this command: `cabal info tidal`. If you get a message that "There is no package named tidal" then something went wrong and you need to run these commands.
+
+    - Before installing/reinstalling the Tidal package it is recommended to **delete** your local ghc and cabal directories. These are usually in your user `\AppData\Roaming` directory but could also be in other directories under `\AppData\`.
+
+    ```powershell
+    C:\Users\<yourUser>\AppData\Roaming\ghc\
+    C:\Users\<yourUser>\AppData\Roaming\cabal\
+    C:\Users\<yourUser>\AppData\Local\ghc\
+    C:\Users\<yourUser>\AppData\Local\cabal\
+    ```
+    - Now install Tidal:
+    ```shell
+    cabal update
+    cabal v1-install tidal
+    ```
 
 - *Pulsar install failed*  
 Download the installer manually from [Pulsar-dev](https://pulsar-edit.dev/). Once installed, follow the step below to install the TidalCycles plugin package.
@@ -127,8 +95,11 @@ This can done manually from within Pulsar. From the top menu, open the Package M
 - *Haskell (ghc) or cabal install fails.*  
 You can try running the `choco install tidalcycles` command again. Or you can try installing individual components with choco:
 ```powershell
-choco install ghc --version=9.4.4
-choco install cabal --version=3.8.1.0
+choco install ghc
+choco install cabal
+## use these commands if you know the version numbers
+choco install ghc --version=9.6.1
+choco install cabal --version=3.10.1.0
 ```
 
 - For other problems, see the [Troubleshooting on Windows](../troubleshoot/troubleshoot_windows) page.
