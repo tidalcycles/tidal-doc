@@ -1,28 +1,24 @@
 ---
 title: Windows
-permalink: wiki/Windows_choco_install/
-layout: wiki
+id: windows_install
 ---
 
 **March 15 - STATUS**
-- **The windows automated installer currently has problems and should NOT be used until this is resolved.**
-- Using the Chocolatey `choco` package manager should be avoided until this problem is resolved.
-- Use the Manual Installation instructions below.
+- The windows automated installer currently has problems and should NOT be used until this is resolved. **RESOLVED**
 
-**April 26 Update**
-We are still working to resolve problems with the automated Chocolatey install. We are also seeing an increase in problems related to the Haskell components.
-
-**May 4 Updates**
-- There is progress on getting a new Chocolatey package ready. We have the pieces in place and are waiting on Moderation approval.
-- The problem with ghc 9.6.1 on Windows has been identified by the Haskell team. They have a new version of the [network package](https://hackage.haskell.org/package/network) - `network-3.1.2.9`. This should also resolve network package errors that come up with the Tidal package install. [See details](https://gitlab.haskell.org/ghc/ghc/-/issues/23309).
-- The steps to install individual components via Chocolatey have been removed. This is not a recommended direction.
+**May 5 Updates**
+- The automated install method with Chocolatey is working again!
+- There is also a new version of the Tidal Cycles package in Chocolatey coming soon.
+- The problem with ghc 9.6.1 on Windows was identified by the Haskell team. There is a new version of the [network package](https://hackage.haskell.org/package/network) - `network-3.1.2.9`. This should also resolve network package errors that come up with the Tidal package install. [See details](https://gitlab.haskell.org/ghc/ghc/-/issues/23309).
+- **ghc 9.6.1 and cabal 3.10.1.0** are now the recommended versions.
+- The steps to install individual components via Chocolatey have been removed. This is not a recommended direction unless you are familiar with choco commands, and how choco handles packages installs locally.
 - The [Troubleshooting on Windows](https://tidalcycles.org/docs/troubleshoot/troubleshoot_windows/) page has been updated. Use that page for help installing Haskell.
 
 ---
 
-## Automatic installation
+## Automatic installation - Chocolatey
 
-**NOTE: see above.** *Using Chocolatey at this time will install a version of Haskell that is not compatible and you will get errors trying to run Tidal commands.*
+**NOTE:** *Installation with Chocolatey works again.*
 
 This method uses the package manager [Chocolatey](https://chocolatey.org/) and will install everything you need, including required dependencies. Please note that this is a significant install process and takes time, but in the end all components will be ready for use. The installer assumes that these aren't installed already. If you do have some components (SuperCollider, SuperDirt, etc) it is recommended to use Manual install steps for the remaining components (see below).
 
@@ -62,7 +58,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 ```bash
 choco install tidalcycles
 ```
-**Note:** The full install will take 30 - 60 minutes. It is best to let it run to the end, but if it exits without completion or if you need to abort - you can try running this command again. Choco will skip over any package dependencies that are already complete.
+**Note:** The full install will take time (30+ minutes). It is best to let it run to the end, but if it exits without completion or if you need to abort - you can try running this command again. Choco will skip over any package dependencies that are already complete.
 
 After the powershell script is finished, you should review the choco install logs for any errors.  
 `C:\ProgramData\chocolatey\logs\chocolatey.log`
@@ -74,7 +70,7 @@ These can be installed manually within the SuperCollider IDE. See the command to
 - *Tidal package install failed*
     - You can confirm the status of your tidal install with this command: `cabal info tidal`. If you get a message that "There is no package named tidal" then something went wrong and you need to run these commands.
 
-    - Before installing/reinstalling the Tidal package it is recommended to **delete** your local ghc and cabal directories. These are usually in your user `\AppData\Roaming` directory but could also be in other directories under `\AppData\`.
+    - You can attempt the Tidal package install manually. But before installing/reinstalling the Tidal package it is recommended to **delete** (or rename) your local ghc and cabal directories. These are found in your user `\AppData\Roaming` directory but could also be in other directories under `\AppData\`.
 
     ```powershell
     C:\Users\<yourUser>\AppData\Roaming\ghc\
@@ -107,30 +103,30 @@ choco install cabal --version=3.10.1.0
 
 ## Manual installation
 
-This method is recommended for users who already have some of the components installed. Until the Automated method is available again, please ensure that all components below are installed.
+This method is recommended for users who already have some of the components installed. Ensure that all components below are installed.
 
 ### Haskel
 - Install ghcup (Haskell package installer)
-    - see [Haskell ghcup](https://www.haskell.org/ghcup/)
-    - [YouTube - windows ghcup install](https://www.youtube.com/watch?v=bB4fmQiUYPw)
-    - Run this command in Windows Powershell (as admin)
-```Powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; try { Invoke-Command -ScriptBlock ([ScriptBlock]::Create((Invoke-WebRequest https://www.haskell.org/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -ArgumentList $true } catch { Write-Error $_ }
-```
-- This should install ghci v9.25. But Tidal 1.9.3+ is only compatible with ghci 9.4.2 / 9.4.4.
+    - See [Haskell ghcup](https://www.haskell.org/ghcup/) for info.
+    - See [YouTube - windows ghcup install](https://www.youtube.com/watch?v=bB4fmQiUYPw) for assistance.
+    - Run this command in Windows Powershell (as admin):
+    ```Powershell
+    Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; try { Invoke-Command -ScriptBlock ([ScriptBlock]::Create((Invoke-WebRequest https://www.haskell.org/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -ArgumentList $true } catch { Write-Error $_ }
+    ```
+- This should install ghci v9.25. But Tidal 1.9.3+ is best with ghc 9.6.1 **and** cabal 3.10.1.0
 - Run these commands from powershell (admin) to get the correct ghc and cabal versions:
 
 ```Powershell
-ghcup install ghc 9.4.4
-ghcup install cabal 3.8.1.0
-ghcup set ghc 9.4.4
-ghcup set cabal 3.8.1.0
+ghcup install ghc 9.6.1
+ghcup install cabal 3.10.1.0
+ghcup set ghc 9.6.4
+ghcup set cabal 3.10.1.0
 
 -- Validate
-ghci --version  -- 9.4.4
-cabal --version -- 3.8.1.0
+ghci --version  
+cabal --version
 ```
-- Be sure to complete the validation steps noted.
+
 
 ### SuperCollider
 - See [SuperCollider Downloads](https://supercollider.github.io/downloads)
@@ -163,13 +159,12 @@ compiling class library...
 (then some blah blah, and finally, something like:)
 ...
 
-<!--T:28-->
 *** Welcome to SuperCollider 3.12.1. *** For help press Ctrl-D.
 ```
 
 ### Tidal Cycles
 
-- Make sure your Haskell environment is correct (above) and that you have ghci v9.4.4. (v9.2.5 and 9.6.1 won't work with Tidal on Windows.)  
+- Make sure your Haskell environment is correct (above) and that you have `ghci v9.6 1` and `cabal 3.10.1.0`
 - Open `PowerShell` in **administrator mode** (see above).
 - Enter the following commands:
 
@@ -215,3 +210,5 @@ If you are using Windows 7, some extra preparation is required before installing
 ## I've installed Tidal Cycles. What's next?
 
 Look at the sidebar. You will see a list of text editors you can install to interact with Tidal and start playing :smile:.
+
+Be sure to follow the instructions to start SuperDirt.

@@ -2,30 +2,34 @@
 title: TroubleShoot on Windows
 id: troubleshoot_windows
 ---
-**Note - Known Haskell version problems:** There are known issues installing Tidal on Windows related to  Haskell component versions. These generally come from how Chocolatey works and will be eventually resolved. If you are experiencing any of these, it is important to know what install method you used (choco vs ghcup). You also need to decide if you want to continue using choco to resolve install issues, or switch to ghcup, the native Haskell installer. If you switch to ghcup, you may want to consider removing components from choco (some or all).
+**Note - Haskill versions:**
+*The issue with ghc version 9.6.1 has been resolved.*
+A new network package is available (`network-3.1.2.9`). This will be automatically installed when you use the most current ghc/cabal versions.
+
+If you are experiencing Haskell problems, it is important to know what install method you used (choco vs ghcup). You also need to decide if you want to continue using choco to resolve install issues, or switch to ghcup, the native Haskell installer. If you switch to ghcup, you should consider removing components from choco, and starting from a clean system.
 
 ### Haskell ghci version issues
-Version 9.6.1 is incompatible with Tidal. On Windows, you need these versions:
-- ghci 9.4.4
-- cabal 3.8.1.0
+Version 9.6.1 is now compatible with Tidal. Cabal `3.10.1.0` is now **required** to get the correct current version of the network package `network-3.1.2.9`. On Windows, these are the recommended versions:
+- ghci 9.6.1
+- cabal 3.10.1.0
 
-To fix ghc version with choco, first uninstall ghc/cabal, then install with the exact version argument:
+To upgrade versions with choco, first uninstall ghc/cabal, then install with the exact version argument:
 
 ```powershell
 choco uninstall ghc
 choco uninstall cabal
-choco install ghc --version=9.4.4
-choco install cabal --version=3.8.1.0
+choco install ghc --version=9.6.1
+choco install cabal --version=3.10.1.0
 
 ```
 To change versions with ghcup:  
 (If you don't have ghcup, see [Haskell ghcup install](https://www.haskell.org/ghcup/install/).)
 
 ```powershell
-ghcup install ghc 9.4.4
-ghcup install cabal 3.8.1.0
-ghcup set ghc 9.4.4
-ghcup set cabal 3.8.1.0
+ghcup install ghc 9.6.1
+ghcup install cabal 3.10.1.0
+ghcup set ghc 9.6.1
+ghcup set cabal 3.10.1.0
 
 ```
 - Before installing/reinstalling the Tidal package it is recommended to **delete** your local ghc and cabal directories. These are usually in your user `\AppData\Roaming` directory but could also be in other directories under `\AppData\`.
@@ -54,10 +58,15 @@ The steps to delete your local ghc/cabal directories and then run Tidal cabal co
 toolchain such as MinGW+MSYS or Cygwin.
 
 :::tip
+This error shows that you don't have the current version of the network package.
 Install of Cygwin is not needed. Haskell installs from either choco or ghcup will install msys2 which provides the unix shell. What is missing is that cabal can't find it, so you need to fix your PATH.
 :::
 
 Steps to resolve:
+- FIRST - follow the steps above to make sure you have the correct versions of ghc and cabal. Note that cabal 3.8.1.0 will install the wrong version of the network package and won't resolve this error.
+- Remove your local ghc and cabal directories (see above).
+- Install tidal package again (see above).
+- If you continue to have problems, you may have problems with your PATH environment v
 - **Choco:** Add these values to your system PATH environment variable:
 ```powershell
 C:\tools\ghc-9.4.4\mingw\bin
@@ -81,7 +90,7 @@ If your errors don't include the network-3.1.2.8 error, the first path to resolu
 
 Other things to check:
 - Be sure to clean out all ghc/cabal directories in your local \AppData\. (See above)
-- If you have Haskell components installed by both choco and ghcup, this could cause problems. 
+- If you have Haskell components installed by both choco and ghcup, this could cause problems.
 - Check your environment variables, restart PowerShell (as admin). Reboot.
 
 
