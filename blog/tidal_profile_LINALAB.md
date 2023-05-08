@@ -12,7 +12,7 @@ date: 2023-05-08
 | Code online          | GitHub                                                   |
 | Other music/audio sw | MaxMSP, VCVRack, ...                                     |
 | Hardware             | Analog Four, Modular synths                              |
-| Comments             | [Club Tidal Forum Thread](https://club.tidalcycles.org/) |
+| Comments             | [Club Tidal Forum Thread]([https://club.tidalcycles.org](https://club.tidalcycles.org/t/blog-profile-linalab/4695) |
 
 ## 
 
@@ -89,4 +89,4 @@ I’m not sure yet, but I have been working with new material lately and spendin
 
 
 
-Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/)
+Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/t/blog-profile-linalab/4695)
