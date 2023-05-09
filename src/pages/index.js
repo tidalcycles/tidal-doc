@@ -83,9 +83,9 @@ function Home() {
             </div>
           </div>
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
- <iframe width="720" height="420" src="https://www.youtube.com/embed/DNRZ6u2ksRI"> </iframe>
+ <iframe width="720" height="420" src="https://www.youtube.com/embed/DNRZ6u2ksRI?start=65"> </iframe>
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
- <iframe width="720" height="420" src="https://www.youtube.com/embed/xAo66V2rTUk"> </iframe>
+ <iframe width="720" height="420" src="https://www.youtube.com/embed/t2KeNblKSFM?start=35"> </iframe>
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
  <iframe width="720" height="420" src="https://www.youtube.com/embed/ca3J1cztnrc"> </iframe>
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
