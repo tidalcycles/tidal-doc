@@ -68,7 +68,7 @@ Docusaurus will also support embedded media content via iFrames. Here are exampl
 
 <iframe width="720" height="420" src="https://www.youtube.com/embed/DNRZ6u2ksRI?start=65"> </iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/t2KeNblKSFM" title="Digital Selves: DIY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 :::info
 
