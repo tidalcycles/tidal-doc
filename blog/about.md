@@ -29,4 +29,49 @@ Detailed posting instructions are included in the template files. Options:
 
 Do what works for you!
 
-Adding your content in markdown format is preferred, but it is not required. If you aren't familiar with markdown, no problem. Write your content and we'll take care of the rest.
+## Markdown
+Submitting you content in markdown format is preferred, but it is not required. If you aren't familiar with markdown, no problem. Write your content and we'll take care of the rest.
+
+**Docusaurus, MDX and markdown enhancements**
+
+The Tidal blog is rendered in [Docusaurus](https://docusaurus.io/) which uses [MDX](https://mdxjs.com/) as the parsing engine. It supports more layout features including React components. To see the full list of options, check out the [Docusaurus Markdown Features](https://docusaurus.io/docs/markdown-features) page. Here are some examples. There are many more!
+
+### Admonitions - triple colon syntax
+
+:::tip
+
+This is a tip and is called by the triple colon syntax `:::tip`. You can also customize admonitions.
+
+:::
+
+:::caution
+
+When using admonitions - be sure to add empty lines before and after your text lines.
+
+:::
+
+### Details element
+
+<details>
+  <summary>Toggle to see more</summary>
+  <div>
+    <div>This is the detail revealed. This is useful for a long code block, allowing users flexibility in how they read through your post. </div>
+    <br/>
+  </div>
+</details>
+
+### Embedded content
+Docusaurus will also support embedded media content via iFrames. Here are examples:
+
+<iframe style="border: 0; width: 50%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2497832033/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track=1186964921/transparent=true/" seamless><a href="https://ghostchamb3r.bandcamp.com/album/necronom">NECRONOM by GhostChamb3r</a></iframe>  
+
+
+<iframe width="720" height="420" src="https://www.youtube.com/embed/DNRZ6u2ksRI?start=65"> </iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t2KeNblKSFM" title="Digital Selves: DIY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+:::info
+
+Here is the raw markdown for this file: https://raw.githubusercontent.com/tidalcycles/tidal-doc/main/blog/about.md
+
+:::
