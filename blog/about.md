@@ -60,16 +60,6 @@ When using admonitions - be sure to add empty lines before and after your text l
   </div>
 </details>
 
-### Embedded content
-Docusaurus will also support embedded media content via iFrames. Here are examples:
-
-<iframe style="border: 0; width: 50%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2497832033/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track=1186964921/transparent=true/" seamless><a href="https://ghostchamb3r.bandcamp.com/album/necronom">NECRONOM by GhostChamb3r</a></iframe>  
-
-
-<iframe width="720" height="420" src="https://www.youtube.com/embed/DNRZ6u2ksRI?start=65"> </iframe>
-
-
-
 :::info
 
 Here is the raw markdown for this file: https://raw.githubusercontent.com/tidalcycles/tidal-doc/main/blog/about.md
