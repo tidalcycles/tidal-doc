@@ -2,12 +2,12 @@
 title: TroubleShoot on Windows
 id: troubleshoot_windows
 ---
-:::Note
 
-Haskell:
-- The issue with ghc version 9.6.1 has been resolved.
-- A new network package is available (`network-3.1.2.9`). This will be automatically installed when you use the most current ghc/cabal versions.
-A new troubleshooting step is available for SuperDirt install hangs during chocolatey install.
+:::note
+
+- Haskell: the issue with ghc version 9.6.1 has been resolved.
+- Haskell: A new network package is available (`network-3.1.2.9`). This will be automatically installed when you use the most current ghc/cabal versions.
+- A new troubleshooting step is available for SuperDirt install hangs during chocolatey install.
 
 :::
 
