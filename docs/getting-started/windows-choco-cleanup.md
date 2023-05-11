@@ -80,12 +80,12 @@ choco uninstall all -x -y
     - C:\Users\yourUser\AppData\Roaming\ghc
     - C:\Users\yourUser\AppData\Roaming\cabal
     - C:\Users\yourUser\AppData\Local\ghc
-    - C:\Users\yourUser\AppData\Local\cabal
+    - C:\Users\yourUser \AppData\Local\cabal
 
 - Environment variables
     - User variables:
         - delete: ChocolateyLastPathUpdate, ChocolateyToolsLocation
-        - from Path, remove: C:\tools\ghc-\<version>\bin
+        - from Path, remove: C:\tools\ghc-yourVersionNumber\bin
     - System variables:
         - delete variables: ChocolateyInstall
         - from Path, remove: C:\ProgramData\chocolatey\bin
