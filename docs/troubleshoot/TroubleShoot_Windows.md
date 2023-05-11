@@ -2,14 +2,26 @@
 title: TroubleShoot on Windows
 id: troubleshoot_windows
 ---
-**Note - Haskill versions:**
-*The issue with ghc version 9.6.1 has been resolved.*
-A new network package is available (`network-3.1.2.9`). This will be automatically installed when you use the most current ghc/cabal versions.
+:::Note
 
-If you are experiencing Haskell problems, it is important to know what install method you used (choco vs ghcup). You also need to decide if you want to continue using choco to resolve install issues, or switch to ghcup, the native Haskell installer. If you switch to ghcup, you should consider removing components from choco, and starting from a clean system.
+Haskell:
+- The issue with ghc version 9.6.1 has been resolved.
+- A new network package is available (`network-3.1.2.9`). This will be automatically installed when you use the most current ghc/cabal versions.
+A new troubleshooting step is available for SuperDirt install hangs during chocolatey install.
+
+:::
 
 ### Haskell ghci version issues
-Version 9.6.1 is now compatible with Tidal. Cabal `3.10.1.0` is now **required** to get the correct current version of the network package `network-3.1.2.9`. On Windows, these are the recommended versions:
+
+<details>
+  <summary>Haskell install method - choco vs ghcup</summary>
+  <div>
+    <div>If you are experiencing Haskell problems, it is important to know what install method you used (choco vs ghcup). You also need to decide if you want to continue using choco to resolve install issues, or switch to ghcup, the native Haskell installer. If you switch to ghcup, you should consider removing components from choco, and starting from a clean system.</div>
+    <br/>
+  </div>
+</details>
+
+Version 9.6.1 is now compatible with Tidal. Cabal `3.10.1.0` is now **required** to get the correct current version of the network package `network-3.1.2.9`. On Windows, these are the **recommended versions:**
 - ghci 9.6.1
 - cabal 3.10.1.0
 
@@ -48,8 +60,32 @@ cabal v1-install tidal
 ```
 
 :::tip
+
 The steps to delete your local ghc/cabal directories and then run Tidal cabal commands are standard practice for any issue where your Tidal install fails.
+
 :::
+### SuperDirt install hangs during choco install
+SuperDirt is installed using a command that runs in SuperCollider. Sometimes the install process doesn't complete properly and the choco installer won't continue. This is most likely due to an orphaned process in SuperCollider. You can resolve this by killing the process in Windows Task Manager.
+
+If you see the install process with this message and no further activity for a long time (> 5+ mins), it is likely stuck:
+```shell
+...
+SuperDirt installed
+** Downloading samples ** - please be patient, this may take a while.
+Installing Dirt-Samples
+Dirt-Samples installed
+SuperDirt installation complete!
+Booting server 'localhost' on address 127.0.0.1:57110.
+cleaning up OSC
+```
+Steps to resolve:  
+- Start the Windows Task Manager
+- Identify the orphaned SuperCollider process (sclang or scide.exe)
+- Highlight the task and select the "End task" button
+    - To be more exact, use "More details" to view all running processes.
+    - Find an orphaned process connected to SuperCollider and select "End task"
+- This should let the choco install process continue
+
 
 ### network-3.1.2.8 error during Tidal package install
 
@@ -58,8 +94,10 @@ The steps to delete your local ghc/cabal directories and then run Tidal cabal co
 toolchain such as MinGW+MSYS or Cygwin.
 
 :::tip
+
 This error shows that you don't have the current version of the network package.
 Install of Cygwin is not needed. Haskell installs from either choco or ghcup will install msys2 which provides the unix shell. What is missing is that cabal can't find it, so you need to fix your PATH.
+
 :::
 
 Steps to resolve:
