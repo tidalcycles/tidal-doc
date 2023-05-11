@@ -49,10 +49,14 @@ choco uninstall cabal
 #### Tidal install options  
 
 After you cleanup Haskell, you have two options:
-1. Run the full automated installer again. This will skip over any installed packages like SuperCollider or Pulsar and it will do a fresh install of Haskell and the Tidal packages.
+1. Run the full automated installer again.
+```powershell
+choco install tidalcycles
+```
+
 \- OR -
 
-2. Install just Haskell and Tidal
+2. Install just Haskell via chocolatey and manually install Tidal
 ```powershell
 choco install ghc
 cabal update
