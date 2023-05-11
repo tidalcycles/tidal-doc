@@ -8,6 +8,7 @@ id: troubleshoot_windows
 - Haskell: the issue with ghc version 9.6.1 has been resolved.
 - Haskell: A new network package is available (`network-3.1.2.9`). This will be automatically installed when you use the most current ghc/cabal versions.
 - A new troubleshooting step is available for SuperDirt install hangs during chocolatey install.
+- See [Windows Chocolatey cleanup](https://tidalcycles.org/docs/getting-started/windows-choco-cleanup) for instructions to cleanup after choco install problems.
 
 :::
 
@@ -101,19 +102,21 @@ Install of Cygwin is not needed. Haskell installs from either choco or ghcup wil
 :::
 
 Steps to resolve:
-- FIRST - follow the steps above to make sure you have the correct versions of ghc and cabal. Note that cabal 3.8.1.0 will install the wrong version of the network package and won't resolve this error.
+- FIRST - follow the steps above to make sure you have the correct versions of ghc and cabal. Note that cabal 3.8.1.0 will install the wrong version of the network package and won't resolve this error. You need cabal 3.10.1.0
 - Remove your local ghc and cabal directories (see above).
 - Install tidal package again (see above).
-- If you continue to have problems, you may have problems with your PATH environment v
-- **Choco:** Add these values to your system PATH environment variable:
+- If you continue to have problems, you may have problems with your PATH environment variable.
+- **Choco:** Add these values to your system PATH environment variable, using your version of ghc:
 ```powershell
-C:\tools\ghc-9.4.4\mingw\bin
+C:\tools\ghc-\<version>\mingw\bin
+# example: C:\tools\ghc-9.4.4\mingw\bin
 C:\tools\msys64\usr\bin
 ```
 
 - **ghcup:** Add these values to your system PATH environment variable:
 ```powershell
-C:\ghcup\ghc\9.4.4\mingw\bin
+C:\ghcup\ghc\\<version>\mingw\bin
+# example: C:\ghcup\ghc\9.4.4\mingw\bin
 C:\ghcup\msys64\usr\bin
 ```
 - exit and restart powershell (as admin)  
