@@ -42,12 +42,13 @@ Double-check or triple-check the `rm -rf` command. This is a powerful tool that 
 :::
 
 ## Windows
+For chocolatey installs, see the instructions for [Windows Chocolatey Cleanup](https://tidalcycles.org/docs/getting-started/windows-choco-cleanup). 
 
 ## MacOS
 
 ### Using uninstall-hs
 
-Open a terminal window and type `uninstall-hs`. This command will delete many things **Haskell** related from your computer. 
+Open a terminal window and type `uninstall-hs`. This command will delete many things **Haskell** related from your computer.
 
 ### Uninstalling ghcup
 
@@ -67,4 +68,3 @@ rm ~/.cabal ~/.ghc
 :::warning
 Double-check or triple-check the `rm -rf` command. This is a powerful tool that will delete things definitively. Use it with caution as it can be quite dangerous if you mess with it.
 :::
-
