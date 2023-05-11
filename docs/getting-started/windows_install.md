@@ -3,22 +3,30 @@ title: Windows
 id: windows_install
 ---
 
-**March 15 - STATUS**
-- The windows automated installer currently has problems and should NOT be used until this is resolved. **RESOLVED**
-
 **May 5 Updates**
-- The automated install method with Chocolatey is working again!
+- The automated install method with Chocolatey is working.
 - There is also a new version of the Tidal Cycles package in Chocolatey coming soon.
 - The problem with ghc 9.6.1 on Windows was identified by the Haskell team. There is a new version of the [network package](https://hackage.haskell.org/package/network) - `network-3.1.2.9`. This should also resolve network package errors that come up with the Tidal package install. [See details](https://gitlab.haskell.org/ghc/ghc/-/issues/23309).
-- **ghc 9.6.1 and cabal 3.10.1.0** are now the recommended versions.
-- The steps to install individual components via Chocolatey have been removed. This is not a recommended direction unless you are familiar with choco commands, and how choco handles packages installs locally.
-- The [Troubleshooting on Windows](https://tidalcycles.org/docs/troubleshoot/troubleshoot_windows/) page has been updated. Use that page for help installing Haskell.
+- **ghc 9.6.1 and cabal 3.10.1.0** are now the recommended versions for Windows.
+- The steps to install individual components via Chocolatey have been removed. This is not a recommended direction unless you are familiar with choco commands and how choco handles packages installs locally.
+- The [Troubleshooting on Windows](https://tidalcycles.org/docs/troubleshoot/troubleshoot_windows) page has been updated. Use that page for help installing Haskell.
+
+**May 11 Updates**
+- There is a known issue with the Chocolatey automated install of SuperDirt. Sometimes during the step to install SuperDirt into SuperCollier, the installation hangs after SuperDirt is installed. The cause is likely an orphaned process which can be terminated. See the [Troubleshooting on Windows](https://tidalcycles.org/docs/troubleshoot/troubleshoot_windows) for instructions.
+- Instructions are available to clean up from chocolatey installs. See [Windows Chocolatey Cleanup](https://tidalcycles.org/docs/getting-started/windows-choco-cleanup).
 
 ---
 
 ## Automatic installation - Chocolatey
 
-**NOTE:** *Installation with Chocolatey works again.*
+**note:** *Installation with Chocolatey works again.*
+
+:::caution
+
+If you have a prior install from chocolatey with an older version of Haskell, you may experience problems running Tidal after a completed new install. This can be caused by multiple versions of Haskell. For example, if you have `C:\tools\ghc-8.10.7` and `C:\tools\ghc-9.6.1`. To fix this, you need to remove the older Haskell version(s) and reinstall the Tidal package. Detailed steps are provided in [Windows Chocolatey cleanup](https://tidalcycles.org/docs/getting-started/windows-choco-cleanup).
+
+:::
+
 
 This method uses the package manager [Chocolatey](https://chocolatey.org/) and will install everything you need, including required dependencies. Please note that this is a significant install process and takes time, but in the end all components will be ready for use. The installer assumes that these aren't installed already. If you do have some components (SuperCollider, SuperDirt, etc) it is recommended to use Manual install steps for the remaining components (see below).
 
@@ -85,11 +93,12 @@ These can be installed manually within the SuperCollider IDE. See the command to
     ```
 
 - *Pulsar install failed*  
-Download the installer manually from [Pulsar-dev](https://pulsar-edit.dev/). Once installed, follow the step below to install the TidalCycles plugin package.
+    - Download the installer manually from [Pulsar-dev](https://pulsar-edit.dev/). Once installed, follow the step below to install the TidalCycles plugin package.
+    - You can also try to install just Pulsar from choco: `choco install pulsar`
 - *Pulsar install succeeded but didn't install the TidalCycles plugin package*  
 This can done manually from within Pulsar. From the top menu, open the Package Manager, select Install, then search for TidalCycles, and select install. This will install the TidalCycle package into Pulsar. For more details, see the Pulsar page in the "Get a Text Editor" section.
 - *Haskell (ghc) or cabal install fails.*  
-You can try running the `choco install tidalcycles` command again. Or you can try installing individual components with choco:
+You can try running the `choco install tidalcycles` command again. Or you can try installing Haskell components with choco:
 ```powershell
 choco install ghc
 choco install cabal
@@ -97,6 +106,7 @@ choco install cabal
 choco install ghc --version=9.6.1
 choco install cabal --version=3.10.1.0
 ```
+- The installer hangs after SuperDirt completes. You may be able to resolve this by killing an orphaned process. See the Troubleshooting on Windows guide.
 
 - For other problems, see the [Troubleshooting on Windows](../troubleshoot/troubleshoot_windows) page.
 -----
@@ -119,7 +129,7 @@ This method is recommended for users who already have some of the components ins
 ```Powershell
 ghcup install ghc 9.6.1
 ghcup install cabal 3.10.1.0
-ghcup set ghc 9.6.4
+ghcup set ghc 9.6.1
 ghcup set cabal 3.10.1.0
 
 -- Validate
