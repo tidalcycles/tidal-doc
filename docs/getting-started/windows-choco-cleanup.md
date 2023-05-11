@@ -37,10 +37,10 @@ choco uninstall cabal
 ```
 
 - Remove local packages - delete these directories:
-    - C:\Users\<yourUser>\AppData\Roaming\ghc
-    - C:\Users\<yourUser>\AppData\Roaming\cabal
-    - C:\Users\<yourUser>\AppData\Local\ghc
-    - C:\Users\<yourUser>\AppData\Local\cabal
+    - C:\Users\yourUser\AppData\Roaming\ghc
+    - C:\Users\yourUser\AppData\Roaming\cabal
+    - C:\Users\yourUser\AppData\Local\ghc
+    - C:\Users\yourUser\AppData\Local\cabal
 
 - Remove any leftover ghc / cabal directories:
     - C:\tools\ghc-\<version\>  for example: - C:\tools\ghc-8.10.0
@@ -77,10 +77,10 @@ choco uninstall all -x -y
     - C:\ProgramData\chocolatey
 
 - Remove local packages - delete these directories:
-    - C:\Users\<yourUser>\AppData\Roaming\ghc
-    - C:\Users\<yourUser>\AppData\Roaming\cabal
-    - C:\Users\<yourUser>\AppData\Local\ghc
-    - C:\Users\<yourUser>\AppData\Local\cabal
+    - C:\Users\yourUser\AppData\Roaming\ghc
+    - C:\Users\yourUser\AppData\Roaming\cabal
+    - C:\Users\yourUser\AppData\Local\ghc
+    - C:\Users\yourUser\AppData\Local\cabal
 
 - Environment variables
     - User variables:
