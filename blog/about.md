@@ -60,6 +60,31 @@ When using admonitions - be sure to add empty lines before and after your text l
   </div>
 </details>
 
+<details>
+  <summary>Toggle for code block</summary>
+  <div>
+    <div>
+```
+h1 $ s "sound"
+h2
+h3
+```
+    </div>
+    <br/>
+  </div>
+</details>
+
+<details>
+  <summary>Toggle for code block - (no xtra div)</summary>
+  <div>
+```
+h1 $ s "sound"
+h2
+h3
+```
+  </div>
+</details>
+
 :::info
 
 Here is the raw markdown for this file: https://raw.githubusercontent.com/tidalcycles/tidal-doc/main/blog/about.md
