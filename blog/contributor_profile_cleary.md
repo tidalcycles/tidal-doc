@@ -46,7 +46,14 @@ I think I've had a go at just about everything:
 
 **What functions and coding approaches do you like to use?**
 
-- I tend to make a point to separate my rhythmic and harmonic elements for easy reuse (`struct` and `n`/`note`) - which is a hangover from the collaborative nature of the WeekendJam sessions. I keep the code for most sets I play on [Github](https://github.com/cleary/livecode/tree/main/sets).
+- I tend to make a point to separate my rhythmic and harmonic elements for easy reuse (`struct` and `n`/`note`) - which is a hangover from the collaborative nature of the WeekendJam sessions. I keep the code for most sets I play on [Github](https://github.com/cleary/livecode/tree/main/sets). An example of this is from one of my patternuary pieces ([full code](https://github.com/cleary/livecode/blob/main/sets/patternuary_2023/patternuary_20230101.tidal), [video](https://www.youtube.com/watch?v=lRTkcB02l0g)):
+```
+  $ struct "t(6,8,<0 1>)"
+  $ n "<a3!2 f4!2 e3!2>"
+  # s "braids"
+```
+Doing it in this way makes it very easy to take the rhythmic structure and apply it for percussion (for example), or take the notes and use them as a foundation for a chord arpeggio sequence in another orbit. If you are collaborating, it's very easy and obvious for others to borrow and build off too.
+
 
 **Do you use Tidal with other tools / environments?**
 
