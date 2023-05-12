@@ -64,25 +64,27 @@ When using admonitions - be sure to add empty lines before and after your text l
   <summary>Toggle for code block</summary>
   <div>
     <div>
+      
 ```
 h1 $ s "sound"
 h2
 h3
 ```
+      
     </div>
     <br/>
   </div>
 </details>
 
 <details>
-  <summary>Toggle for code block - (no xtra div)</summary>
-  <div>
-```
-h1 $ s "sound"
-h2
-h3
-```
-  </div>
+  <summary>Toggle for code block - (no div)</summary>
+  
+  ```
+  h1 $ s "sound"
+  h2
+  h3
+  ```
+  
 </details>
 
 :::info
