@@ -141,8 +141,6 @@ that, once the track enters its second A section, suddenly changes to feel more 
 
 <details>
   <summary>Birth Machine: full code I start with for performance</summary>
-  <div>
-    <div>
     setcps (144/60/4)
 
     d1 $ s "BMDrums:1" # gain 1.1
@@ -210,9 +208,7 @@ that, once the track enters its second A section, suddenly changes to feel more 
     d3 silence
     d4 silence
     d5 silence
-    </div>
-    <br/>
-  </div>
+
 </details>
 
 
@@ -231,8 +227,7 @@ I did something similar with a piece commissioned by the Minnesote Opera, titled
 
 <details>
   <summary>Sapphica code: vanilla version of Act 2</summary>
-  <div>
-    <div>
+
 setcps (120/60/4)
 
 d1 $ slow 5 $ s "Sapph2intro"
@@ -286,15 +281,12 @@ d6 silence
 d7 silence
 d8 silence
 hush
-    </div>
-    <br/>
-  </div>
+
 </details>
 
 <details>
   <summary>Sapphica code: slightly modded version</summary>
-  <div>
-    <div>
+
 setcps (120/60/4)
 
 d1 $ slow 5 $ s "Sapph2intro"
@@ -350,9 +342,7 @@ do
   d7 $ slow 4 $ striateBy 16 (1/4) $ s "Sapph2out:2"
 
 hush
-    </div>
-    <br/>
-  </div>
+
 </details>
 
 With the code that already has some variations:
@@ -371,9 +361,7 @@ I also keep a template for all my SuperCollider code. It contains all the code I
 
 <details>
   <summary>SuperCollider setup and customizations</summary>
-  <div>
-    <div>
-SuperCollider
+
 //To check what audio devices you have available.
 ServerOptions.devices
 
@@ -486,9 +474,7 @@ Ndef(\x).clear;
 ~busses.do { |x| x.free };
 ~dirt.orbits.do { |x| x.outBus = 0 };
 );
-    </div>
-    <br/>
-  </div>
+
 </details>
 
 ## Closing
