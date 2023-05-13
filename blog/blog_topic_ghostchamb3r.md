@@ -15,7 +15,7 @@ I produce in Ableton Live and I perform in Tidal Cycles.
 I spent a considerable amount of time deciding on how I was going to go about performing my music. At the end of the day turntables were not for me. I love Tidal Cycles and what it lets you do with samples. I love how portable it makes performing electronic music. All of my sets are just a laptop, an audio interface, and two 1/4 inch jack outputs to the house system. It doesn't get any more complicated than that and it makes the sound techs lives easier. Getting a projector set up to share my
 screen is probably the only troublesome thing I encounter but a lot of times the house has a projector and it's not a huge issue. I looked into other live coding environments as well and tried Sonic Pi for a short while. Ultimately I just like Tidal better than the others and that's purely my preference.
 
-I work with **prepared code** for my live sets and I do so for a number of reasons.
+I work with prepared code for my live sets and I do so for a number of reasons.
 Ultimately I'm not someone who uses live code to realize my ideas, or rather I don't use live code out of the gate as a compositional tool.
 
 I'm comfortable with a certain set of tools (probably too comfortable) and how they support my creative process. My process starts in Ableton. I consider the slick, polished studio version of a piece and it's live code counterpart as two different entities. One exists as a fine-tuned, finessed experience intended for listening as a fixed-media representation of a musical idea. The other is a live interpretation of that with room for improvisation and deviation, so that each live performance is a unique experience. Maybe that approach riles some feathers, I can't say for sure, but it's fun for me and doesn't hurt anyone and that's all I care about.
@@ -27,7 +27,7 @@ For me, that means having the skeleton of a piece prepared in advance so that I 
 
 ### Skeleton
 
-Here's a track I made, titled *Birth Machine,* in Ableton.
+Here's a track I made, titled Birth Machine, in Ableton.
 
 <img
   src={require('./ghostchamb3r-daw.jpeg').default}
@@ -126,7 +126,7 @@ and then to radically transform by simply adding:
 
 I also like to use additional FX onto my drum sections in Ableton. If you slap a reverb from Tidal onto your drum channel then you'll get what you'd expect, a drum section with some reverb. But if you render a sample of a drum section that already has a reverb baked into it or maybe some reverb and additional FX and then do something like:
 
-        d1 $ splice 8 " 1 3 4 2 8 7 7 6" $ s "BMDrums:1" # gain 1.1
+    d1 $ splice 8 " 1 3 4 2 8 7 7 6" $ s "BMDrums:1" # gain 1.1
 
 Then you're suddenly going to get not only the drum samples themselves chopped and rearranged around but also the pre-rendered reverb, delay, or distortion you baked into the sample and sometimes it can sound really cool, depending on the pattern of the chop you programmed into Tidal.
 
@@ -228,120 +228,120 @@ I did something similar with a piece commissioned by the Minnesote Opera, titled
 <details>
   <summary>Sapphica code: vanilla version of Act 2</summary>
 
-setcps (120/60/4)
+    setcps (120/60/4)
 
-d1 $ slow 5 $ s "Sapph2intro"
-do
-  d1 $ sound "wolfkick [BehemothSnare, BehemothKick] wolfkick [BehemothSnare, BehemothKick, BehemothClap]"
-  d2 $ sound "[BehemothOpen BehemothClosed BehemothOpen BehemothClosed]*4"
-  d3 $ sound "[~] [BehemothMini BehemothMini ~ ~] [~] [BehemothMini BehemothMini ~ ~]"
-  d4 $ slow 3 $ sound "Sapph2Bass1:1" # gain 1.1
+    d1 $ slow 5 $ s "Sapph2intro"
+    do
+      d1 $ sound "wolfkick [BehemothSnare, BehemothKick] wolfkick [BehemothSnare, BehemothKick, BehemothClap]"
+      d2 $ sound "[BehemothOpen BehemothClosed BehemothOpen BehemothClosed]*4"
+      d3 $ sound "[~] [BehemothMini BehemothMini ~ ~] [~] [BehemothMini BehemothMini ~ ~]"
+      d4 $ slow 3 $ sound "Sapph2Bass1:1" # gain 1.1
 
-do
-  d4 $ slow 2 $ s "Sapph2Bass1:2" # gain 1.1
-  d5 $ slow 3 $ s "Sapph2rythym:1"
-  d6 $ slow 3 $ s "Sapph2rythym:2"
+    do
+      d4 $ slow 2 $ s "Sapph2Bass1:2" # gain 1.1
+      d5 $ slow 3 $ s "Sapph2rythym:1"
+      d6 $ slow 3 $ s "Sapph2rythym:2"
 
-do
-  d4 $ slow 3 $ s "Sapph2inter:1"
-  d5 $ slow 3 $ s "Sapph2inter:2"
-  d6 $ slow 3 $ s "Sapph2vocalchop:1"
-  d7 $ slow 3 $ s "Sapph2vocalchop:2"
+    do
+      d4 $ slow 3 $ s "Sapph2inter:1"
+      d5 $ slow 3 $ s "Sapph2inter:2"
+      d6 $ slow 3 $ s "Sapph2vocalchop:1"
+      d7 $ slow 3 $ s "Sapph2vocalchop:2"
 
-d7 silence
+    d7 silence
 
-do
-  d1 silence
-  d2 silence
-  d3 silence
-  d4 $ slow 4 $ s "Sapph2trans"
-  d5 $ slow 4 $ s "Sapph2out:3"
-  d6 silence
-  d7 silence
-  d8 silence
-  d9 silence
+    do
+      d1 silence
+      d2 silence
+      d3 silence
+      d4 $ slow 4 $ s "Sapph2trans"
+      d5 $ slow 4 $ s "Sapph2out:3"
+      d6 silence
+      d7 silence
+      d8 silence
+      d9 silence
 
-d4 silence
+    d4 silence
 
-do
-  d1 $ sound "wolfkick [BehemothSnare, BehemothKick] wolfkick [BehemothSnare, BehemothKick, BehemothClap]"
-  d2 $ sound "[BehemothOpen BehemothClosed BehemothOpen BehemothClosed]*4"
-  d3 $ sound "[~] [BehemothMini BehemothMini ~ ~] [~] [BehemothMini BehemothMini ~ ~]"
-  d4 silence
-  d5 silence
-  d6 $ slow 4 $ s "Sapph2out:1"
-  d7 $ slow 4 $ s "Sapph2out:2"
+    do
+      d1 $ sound "wolfkick [BehemothSnare, BehemothKick] wolfkick [BehemothSnare, BehemothKick, BehemothClap]"
+      d2 $ sound "[BehemothOpen BehemothClosed BehemothOpen BehemothClosed]*4"
+      d3 $ sound "[~] [BehemothMini BehemothMini ~ ~] [~] [BehemothMini BehemothMini ~ ~]"
+      d4 silence
+      d5 silence
+      d6 $ slow 4 $ s "Sapph2out:1"
+      d7 $ slow 4 $ s "Sapph2out:2"
 
-d1 silence
-d2 silence
-d3 silence
-d4 silence
-d5 silence
-d6 silence
-d7 silence
-d8 silence
-hush
+    d1 silence
+    d2 silence
+    d3 silence
+    d4 silence
+    d5 silence
+    d6 silence
+    d7 silence
+    d8 silence
+    hush
 
 </details>
 
 <details>
   <summary>Sapphica code: slightly modded version</summary>
 
-setcps (120/60/4)
+    setcps (120/60/4)
 
-d1 $ slow 5 $ s "Sapph2intro"
+    d1 $ slow 5 $ s "Sapph2intro"
 
-do
-  d1 $ sound "wolfkick [BehemothSnare, BehemothKick] wolfkick [BehemothSnare, BehemothKick, BehemothClap]"
-  d2 $ sound "[BehemothOpen BehemothClosed BehemothOpen BehemothClosed]*4"
-  d3 $ sound "[~] [BehemothMini BehemothMini ~ ~] [~] [BehemothMini BehemothMini ~ ~]"
-  d4 $ slow 3 $ sound "Sapph2Bass1:1" # gain 1.1
+    do
+      d1 $ sound "wolfkick [BehemothSnare, BehemothKick] wolfkick [BehemothSnare, BehemothKick, BehemothClap]"
+      d2 $ sound "[BehemothOpen BehemothClosed BehemothOpen BehemothClosed]*4"
+      d3 $ sound "[~] [BehemothMini BehemothMini ~ ~] [~] [BehemothMini BehemothMini ~ ~]"
+      d4 $ slow 3 $ sound "Sapph2Bass1:1" # gain 1.1
 
-d4 $ slow 3 $ striateBy 16 (1/4) $ rev $ s "Sapph2Bass1:1" # gain 1.1
+    d4 $ slow 3 $ striateBy 16 (1/4) $ rev $ s "Sapph2Bass1:1" # gain 1.1
 
-do
-  d4 $ slow 2 $ s "Sapph2Bass1:2" # gain 1.1
-  d5 $ slow 3 $ s "Sapph2rythym:1"
-  d6 $ slow 3 $ s "Sapph2rythym:2"
+    do
+      d4 $ slow 2 $ s "Sapph2Bass1:2" # gain 1.1
+      d5 $ slow 3 $ s "Sapph2rythym:1"
+      d6 $ slow 3 $ s "Sapph2rythym:2"
 
-do
-  d4 $ slow 3 $ s "Sapph2inter:1"
-  d5 $ slow 3 $ s "Sapph2inter:2"
-  d6 $ slow 3 $ s "Sapph2vocalchop:1"
-  d7 $ slow 3 $ s "Sapph2vocalchop:2"
+    do
+      d4 $ slow 3 $ s "Sapph2inter:1"
+      d5 $ slow 3 $ s "Sapph2inter:2"
+      d6 $ slow 3 $ s "Sapph2vocalchop:1"
+      d7 $ slow 3 $ s "Sapph2vocalchop:2"
 
-do
-   d6 $ slow 3 $ rev $ striateBy 12 (1/4) $ s "Sapph2vocalchop:1"
-   d7 $ slow 3 $ striateBy 12 (1/2) $ s "Sapph2vocalchop:2"
+    do
+       d6 $ slow 3 $ rev $ striateBy 12 (1/4) $ s "Sapph2vocalchop:1"
+       d7 $ slow 3 $ striateBy 12 (1/2) $ s "Sapph2vocalchop:2"
 
-d7 $ slow 3 $ rev $ slice 12 "12 11 10 9 4 5 6 7 1 2 3 8" $ s "Sapph2vocalchop:2"
-d7 silence
+    d7 $ slow 3 $ rev $ slice 12 "12 11 10 9 4 5 6 7 1 2 3 8" $ s "Sapph2vocalchop:2"
+    d7 silence
 
-do
-  d1 silence
-  d2 silence
-  d3 silence
-  d4 $ slow 4 $ s "Sapph2trans"
-  d5 $ slow 4 $ s "Sapph2out:3"
-  d6 silence
-  d7 silence
-  d8 silence
-  d9 silence
+    do
+      d1 silence
+      d2 silence
+      d3 silence
+      d4 $ slow 4 $ s "Sapph2trans"
+      d5 $ slow 4 $ s "Sapph2out:3"
+      d6 silence
+      d7 silence
+      d8 silence
+      d9 silence
 
-do
-   d4 silence
-   d5 $ slow 4 $ striateBy 16 (1/4) $ s "Sapph2out:3"
+    do
+       d4 silence
+       d5 $ slow 4 $ striateBy 16 (1/4) $ s "Sapph2out:3"
 
-do
-  d1 $ sound "wolfkick [BehemothSnare, BehemothKick] wolfkick [BehemothSnare, BehemothKick, BehemothClap]"
-  d2 $ sound "[BehemothOpen BehemothClosed BehemothOpen BehemothClosed]*4"
-  d3 $ sound "[~] [BehemothMini BehemothMini ~ ~] [~] [BehemothMini BehemothMini ~ ~]"
-  d4 silence
-  d5 silence
-  d6 $ slow 4 $ s "Sapph2out:1"
-  d7 $ slow 4 $ striateBy 16 (1/4) $ s "Sapph2out:2"
+    do
+      d1 $ sound "wolfkick [BehemothSnare, BehemothKick] wolfkick [BehemothSnare, BehemothKick, BehemothClap]"
+      d2 $ sound "[BehemothOpen BehemothClosed BehemothOpen BehemothClosed]*4"
+      d3 $ sound "[~] [BehemothMini BehemothMini ~ ~] [~] [BehemothMini BehemothMini ~ ~]"
+      d4 silence
+      d5 silence
+      d6 $ slow 4 $ s "Sapph2out:1"
+      d7 $ slow 4 $ striateBy 16 (1/4) $ s "Sapph2out:2"
 
-hush
+    hush
 
 </details>
 
@@ -362,118 +362,118 @@ I also keep a template for all my SuperCollider code. It contains all the code I
 <details>
   <summary>SuperCollider setup and customizations</summary>
 
-//To check what audio devices you have available.
-ServerOptions.devices
+    //To check what audio devices you have available.
+    ServerOptions.devices
 
-//To boot the server on your ASIO device. You'll want to replace the Focusrite with your own device as it's referred to in the string array shown after running the code on line 10.
-s.options.inDevice_("Focusrite USB ASIO").outDevice_("Focusrite U SB ASIO"); s.boot;
+    //To boot the server on your ASIO device. You'll want to replace the Focusrite with your own device as it's referred to in the string array shown after running the code on line 10.
+    s.options.inDevice_("Focusrite USB ASIO").outDevice_("Focusrite U SB ASIO"); s.boot;
 
-//Set the sample rate
-s.options.sampleRate = 44100;
+    //Set the sample rate
+    s.options.sampleRate = 44100;
 
-//Create 20 channels for 10 stereo channels
-s.options.numOutputBusChannels = 20;
+    //Create 20 channels for 10 stereo channels
+    s.options.numOutputBusChannels = 20;
 
-//Start superdirt and specify the numer of orbits or stereo channels
-~dirt.start(57120, \[0, 2, 4, 6, 8, 10, 12, 14, 16, 18\]);
+    //Start superdirt and specify the numer of orbits or stereo channels
+    ~dirt.start(57120, \[0, 2, 4, 6, 8, 10, 12, 14, 16, 18\]);
 
-//Blocksize, change depending on your hardware and latency
-s.options.blockSize = 128;
-s.options.hardwareBufferSize = 128;
+    //Blocksize, change depending on your hardware and latency
+    s.options.blockSize = 128;
+    s.options.hardwareBufferSize = 128;
 
-//Start superdirt
-SuperDirt.start;
+    //Start superdirt
+    SuperDirt.start;
 
-// In case you need to increase the memory allocated to supercollider
-s.options.memSize = 3145728;
-s.options.memSize = 8192*32;
+    // In case you need to increase the memory allocated to supercollider
+    s.options.memSize = 3145728;
+    s.options.memSize = 8192*32;
 
-//Kills the server and cuts all audio from supercollider
-Server.killAll
+    //Kills the server and cuts all audio from supercollider
+    Server.killAll
 
-//If you get latency issues you can set it here
-s.latency = 0.05;
+    //If you get latency issues you can set it here
+    s.latency = 0.05;
 
-//To record your session
-s.record;
-s.stopRecording
+    //To record your session
+    s.record;
+    s.stopRecording
 
-//Set the orbits up for Tidal
+    //Set the orbits up for Tidal
 
-~dirt.orbits[1].set(\fadeTime, 4);
-~dirt.orbits[2].set(\fadeTime, 4);
-~dirt.orbits[3].set(\fadeTime, 4);
-~dirt.orbits[4].set(\fadeTime, 4);
-~dirt.orbits[5].set(\fadeTime, 4);
-~dirt.orbits[6].set(\fadeTime, 4);
-~dirt.orbits[7].set(\fadeTime, 4);
-~dirt.orbits[8].set(\fadeTime, 4);
-~dirt.orbits[9].set(\fadeTime, 4);
-~dirt.orbits[10].set(\fadeTime, 4);
+    ~dirt.orbits[1].set(\fadeTime, 4);
+    ~dirt.orbits[2].set(\fadeTime, 4);
+    ~dirt.orbits[3].set(\fadeTime, 4);
+    ~dirt.orbits[4].set(\fadeTime, 4);
+    ~dirt.orbits[5].set(\fadeTime, 4);
+    ~dirt.orbits[6].set(\fadeTime, 4);
+    ~dirt.orbits[7].set(\fadeTime, 4);
+    ~dirt.orbits[8].set(\fadeTime, 4);
+    ~dirt.orbits[9].set(\fadeTime, 4);
+    ~dirt.orbits[10].set(\fadeTime, 4);
 
-//Below is code for setting up a Sidechain compressor taken from https://github.com/musikinformatik/SuperDirt/blob/develop/hacks/filtering-dirt-output.scd
-~bus = Bus.audio(s, numChannels:2); // assuming stereo, expand if needed
+    //code for Sidechain compressor taken from https://github.com/musikinformatik/SuperDirt/blob/develop/hacks/filtering-dirt-output.scd
+    ~bus = Bus.audio(s, numChannels:2); // assuming stereo, expand if needed
 
-~dirt.orbits[0].outBus = ~bus; // play into that bus.
+    ~dirt.orbits[0].outBus = ~bus; // play into that bus.
 
-// make a side chain controlled by second orbit, affecting the first
-(
-Ndef(\x, {
-	var control = InBus.ar(~dirt.orbits[1].dryBus, 2).sum;
-	var dirt = InBus.ar(~bus, 2);
-	Compander.ar(dirt, control, thresh:0.006, slopeBelow:1, slopeAbove: 0.1, clampTime:0.05, relaxTime:0.1)
-	//dirt * (1 - (Amplitude.kr(control) > 0.007).poll.lag(0.01));
-}).play;
-)
+    // make a side chain controlled by second orbit, affecting the first
+    (
+    Ndef(\x, {
+    	var control = InBus.ar(~dirt.orbits[1].dryBus, 2).sum;
+    	var dirt = InBus.ar(~bus, 2);
+    	Compander.ar(dirt, control, thresh:0.006, slopeBelow:1, slopeAbove: 0.1, clampTime:0.05, relaxTime:0.1)
+    	//dirt * (1 - (Amplitude.kr(control) > 0.007).poll.lag(0.01));
+    }).play;
+    )
 
-/*
-cleaning up when you're done (run the code below to release the sidechain):
-*/
-(
-Ndef(\x).clear;
-~busses.do { |x| x.free };
-~dirt.orbits.do { |x| x.outBus = 0 };
-);
+    /*
+    cleaning up when you're done (run the code below to release the sidechain):
+    */
+    (
+    Ndef(\x).clear;
+    ~busses.do { |x| x.free };
+    ~dirt.orbits.do { |x| x.outBus = 0 };
+    );
 
-// algorave mastering, roughly according to
-// https://mccormick.cx/news/entries/heuristic-for-algorave-mastering
-(
-~busses = ~dirt.orbits.collect { |each|
-	var bus = Bus.audio(~dirt.server, ~dirt.numChannels);
-	each.outBus = bus;
-	bus
-}
-);
+    // algorave mastering, roughly according to
+    // https://mccormick.cx/news/entries/heuristic-for-algorave-mastering
+    (
+    ~busses = ~dirt.orbits.collect { |each|
+    	var bus = Bus.audio(~dirt.server, ~dirt.numChannels);
+    	each.outBus = bus;
+    	bus
+    }
+    );
 
-(
-Ndef(\x, {
-	var level = 1;
-	var distortion = 3;
-	var reverbFeedback = 0.1;
-	var all = ~busses.collect { |each| InBus.ar(each, each.numChannels) };
-	var mix = all.sum { |x|
-		var d = { 0.01.rand } ! x.size;
-		DelayN.ar(x, d, d)
-	};
-	var loop = LocalIn.ar(~dirt.numChannels);
-	5.do { loop = AllpassL.ar(loop, 0.15, { ExpRand(0.03, 0.15) } ! 2, 3) };
-	mix = loop * reverbFeedback + mix;
-	mix = LeakDC.ar(mix);
-	LocalOut.ar(mix);
-	mix = Compander.ar(mix, mix, 0.3, slopeBelow:1, slopeAbove:0.5, clampTime:0.01, relaxTime:0.01);
-	mix = (mix * distortion).tanh * (level / distortion.max(1));
-	mix
-}).play;
-);
+    (
+    Ndef(\x, {
+    	var level = 1;
+    	var distortion = 3;
+    	var reverbFeedback = 0.1;
+    	var all = ~busses.collect { |each| InBus.ar(each, each.numChannels) };
+    	var mix = all.sum { |x|
+    		var d = { 0.01.rand } ! x.size;
+    		DelayN.ar(x, d, d)
+    	};
+    	var loop = LocalIn.ar(~dirt.numChannels);
+    	5.do { loop = AllpassL.ar(loop, 0.15, { ExpRand(0.03, 0.15) } ! 2, 3) };
+    	mix = loop * reverbFeedback + mix;
+    	mix = LeakDC.ar(mix);
+    	LocalOut.ar(mix);
+    	mix = Compander.ar(mix, mix, 0.3, slopeBelow:1, slopeAbove:0.5, clampTime:0.01, relaxTime:0.01);
+    	mix = (mix * distortion).tanh * (level / distortion.max(1));
+    	mix
+    }).play;
+    );
 
-/*
-cleaning up when you're done:
-*/
-(
-Ndef(\x).clear;
-~busses.do { |x| x.free };
-~dirt.orbits.do { |x| x.outBus = 0 };
-);
+    /*
+    cleaning up when you're done:
+    */
+    (
+    Ndef(\x).clear;
+    ~busses.do { |x| x.free };
+    ~dirt.orbits.do { |x| x.outBus = 0 };
+    );
 
 </details>
 
