@@ -1,6 +1,6 @@
 ---
 title: Prepared Code with ghostchamb3r
-date: 2023-01-12
+date: 2023-05-14
 ---
 
 ## Keeping it on the rails
@@ -485,3 +485,6 @@ This article also came about after some forum thread posts I made in response to
 The [discussion thread from her article](https://club.tidalcycles.org/t/blog-post-working-with-samples-the-heavy-lifting-way/4643/1) is really interesting and I was inspired to respond with my own approach.
 
 I think each coder's approach is going to be unique in some capacity and they're all valid. People change too and that's especially true with musicians, producers, and composers. The approach I take now might not be the one I take seven years from now or even between one performance to the next and I think there's room to move between approaches fluidly if it sparks your creativity and brings you joy. I would hope that we are all doing this to have fun, and ultimately we should do what is fun for us.
+
+---
+**Comments:** Share your thoughts and keep the discussion going via this [Club Tidal forum thread](https://club.tidalcycles.org/t/blog-topic-prepared-code-by-ghostchamb3r/4705). 
