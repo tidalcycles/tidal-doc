@@ -10,7 +10,7 @@ For debian/ubuntu/mint systems, these ugens can be installed as part of the [ans
 
 ### Manual
 
-1. Unpack the [latest release](https://github.com/v7b1/mi-UGens/releases/latest/) from [mi-UGens](https://github.com/v7b1/mi-UGens) appropriate to your Operating System
+1. Unpack the [latest release](https://github.com/v7b1/mi-UGens/releases/latest/) from [mi-UGens](https://github.com/v7b1/mi-UGens) appropriate to your Operating System (**Note:** Windows is missing from 0.0.4, try [0.0.3](https://github.com/v7b1/mi-UGens/releases/tag/v0.0.3)
 
 2. Move the top level directory of the archive (`mi-UGens/`) into the SuperCollider Extensions folder (create it if it doesn't exist):
 
