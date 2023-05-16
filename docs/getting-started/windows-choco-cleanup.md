@@ -1,5 +1,5 @@
 ---
-title: Windows Chocolatey Cleanup
+title: Windows Cleanup - Chocolatey
 id: windows-choco-cleanup
 ---
 *(Thanks to @il_mix for creating and testing the chocolatey cleanup steps.)*
@@ -37,14 +37,18 @@ choco uninstall cabal
 ```
 
 - Remove local packages - delete these directories:
-    - C:\Users\yourUser\AppData\Roaming\ghc
-    - C:\Users\yourUser\AppData\Roaming\cabal
-    - C:\Users\yourUser\AppData\Local\ghc
-    - C:\Users\yourUser\AppData\Local\cabal
+```powershell
+C:\Users\yourUser\AppData\Roaming\ghc
+C:\Users\yourUser\AppData\Roaming\cabal
+C:\Users\yourUser\AppData\Local\ghc
+C:\Users\yourUser\AppData\Local\cabal
+```
 
 - Remove any leftover ghc / cabal directories:
-    - C:\tools\ghc-\<version\>  for example: - C:\tools\ghc-8.10.0
-    - C:\ProgramData\chocolatey\bin\cabal.exe
+```powershell
+C:\tools\ghc-\<version\>  for example: - C:\tools\ghc-8.10.0
+C:\ProgramData\chocolatey\bin\cabal.exe
+```
 
 #### Tidal install options  
 
@@ -70,21 +74,25 @@ This will remove everything installed by Chocolatey, then remove the choco insta
 - you want to switch to manual install
 - you have significant install problems and want to "start fresh"
 
-Steps
+**Steps**
 
 - Uninstall chocolatey installed components
 ```powershell
 choco uninstall all -x -y
 ```
 - Remove applications - delete these directories
-    - C:\tools
-    - C:\ProgramData\chocolatey
+```
+C:\tools
+C:\ProgramData\chocolatey
+```
 
 - Remove local packages - delete these directories:
-    - C:\Users\yourUser\AppData\Roaming\ghc
-    - C:\Users\yourUser\AppData\Roaming\cabal
-    - C:\Users\yourUser\AppData\Local\ghc
-    - C:\Users\yourUser \AppData\Local\cabal
+```
+C:\Users\yourUser\AppData\Roaming\ghc
+C:\Users\yourUser\AppData\Roaming\cabal
+C:\Users\yourUser\AppData\Local\ghc
+C:\Users\yourUser \AppData\Local\cabal
+```
 
 - Environment variables
     - User variables:
@@ -94,7 +102,7 @@ choco uninstall all -x -y
         - delete variables: ChocolateyInstall
         - from Path, remove: C:\ProgramData\chocolatey\bin
 
-- Reboot system
+- **Reboot system**
 
 Now you can proceed with the Manual install steps, or start over from scratch with the Automated installer steps.
 
