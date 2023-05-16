@@ -16,6 +16,7 @@ module.exports = {
           "getting-started/macos_install",
           "getting-started/windows_install",
           "getting-started/tidal_start",
+          "getting-started/windows-choco-cleanup",
         ],
         "Upgrade & Downgrade": [
           "getting-started/upgrading",
