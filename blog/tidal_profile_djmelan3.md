@@ -11,7 +11,7 @@ date: 2023-03-25
 | Other LiveCoding env | Estuary, SuperCollider |
 | Music available online | [YouTube - djmelan3](https://www.youtube.com/@djmelan3) |
 | Other music/audio sw | Pure Data, Logic, ProTools and similar DAWs |
-| Comments | [Club Tidal Forum Thread]([https://club.tidalcycles.org](https://club.tidalcycles.org/t/blog-profile-djmelan3/4635)) |
+| Comments | [Club Tidal Forum Thread](https://club.tidalcycles.org/t/blog-profile-djmelan3/4635) |
 
 ## Livecoding  
 
