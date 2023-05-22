@@ -10,7 +10,7 @@ Make sure you've started **SuperCollider** and that **SuperDirt** is currently r
 :::
 
 
-We want to add a new global effect on each `orbit`. A global effect is definitely not the same thing as an "effect". Global effects will always be there on the signal chain, waiting for you to tweak their parameters. Effects, on the contrary, can be used and called specifically for a pattern only. They are instanciated on demand.
+We want to add a new global effect on each `orbit`. A global effect is definitely not the same thing as an "effect". Global effects will always be there on the signal chain, waiting for you to tweak their parameters. Effects, on the contrary, can be used and called specifically for a pattern only. They are instantiated on demand.
 
 We can take a look at all the global effects declared on each orbit using this command in **SuperCollider**: 
 
