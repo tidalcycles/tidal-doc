@@ -17,7 +17,7 @@ date: 2023-01-01
 <img
   src={require('./eloi_logo.png').default}
   alt="Eloi logo"
-  width="200" align="center"
+  width="200"
 />  
 ## Livecoding  
 
@@ -34,7 +34,7 @@ I am currently presenting a series of short pieces, the "Rumble machines", which
 <img
   src={require('./eloi_2.jpg').default}
   alt="Eloi with logo"
-  width="600" align="center"
+  width="600"
 />
 
 **What functions and coding approaches do you like to use?**  
@@ -120,5 +120,5 @@ Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/)
 <img
   src={require('./eloi_9.jpg').default}
   alt="Eloi with logo"
-  width="600" align="center"
+  width="600"
 />
