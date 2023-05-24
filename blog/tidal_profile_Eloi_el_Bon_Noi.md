@@ -101,7 +101,7 @@ Working with other musicians has always been conflicting for me for several reas
 **What projects are you currently working on or planning? What's next?**   
 - My live coding practice is mainly focused on the creation of new material to be published at the end of the year and to be able to do many concerts in 2024. Although Tidal is a tool that saves you a lot of time, I'm quite slow in composing and very demanding on myself. The preparation of the live shows takes me a lot of time.
 - I collaborate with Eloy Fernández Porta, a very interesting writer and thinker with whom we do spoken word sessions. Curiously we are both named Eloi, an unusual name.
-- I also have a project **Noi$** with **White Pèrill** in which we make improvised electronic music. In our shows I use the screen to tell the biography of a composer with humor interspersed with code and writing.
+- **Noi$**: This project is with **White Pèrill** in which we make improvised electronic music together. In our shows I use the screen to tell the biography of a composer with humor interspersed with code and writing.
 
     - [Noi$: Toplap Barcelona - Viu Multichannel Expansion](https://www.youtube.com/watch?v=jwX3TpOaodo&list=PLPpU9K6Wgm8tmhWsAwBRPr2rIy3xtKKeN&index=6&ab_channel=TOPLAP_BARCELONA)
 
@@ -117,7 +117,8 @@ Working with other musicians has always been conflicting for me for several reas
 - https://linktr.ee/eloielbonnoi
 
 
-Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/)
+Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/)  
+
 <img
   src={require('./eloi_9.jpg').default}
   alt="Eloi with logo"
