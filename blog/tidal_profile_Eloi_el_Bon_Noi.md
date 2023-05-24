@@ -106,8 +106,5 @@ Working with other musicians has always been conflicting for me for several reas
 
 Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/)  
 
-<img
-  src={require('./eloi_9.jpg').default}
-  alt="Eloi with logo"
-  width="600"
-/>
+![Eloi with logo](./eloi_9.png)
+
