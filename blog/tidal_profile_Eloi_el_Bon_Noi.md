@@ -1,5 +1,5 @@
 ---
-title: Tidal Profile: Eloi el Bon Noi (Eloi the good guy)
+title: Tidal Profile - Eloi el Bon Noi (Eloi the good guy)
 date: 2023-01-01
 ---
 
