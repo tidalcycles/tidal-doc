@@ -1,5 +1,5 @@
 ---
-title: Eloi el Bon Noi (Eloi the good guy)
+title: Tidal Profile: Eloi el Bon Noi (Eloi the good guy)
 date: 2023-01-01
 ---
 
@@ -105,3 +105,9 @@ Working with other musicians has always been conflicting for me for several reas
 - https://linktr.ee/eloielbonnoi
 
 Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/)  
+
+<img
+  src={require('./eloi_9.jpg').default}
+  alt="Eloi with logo"
+  width="600"
+/>
