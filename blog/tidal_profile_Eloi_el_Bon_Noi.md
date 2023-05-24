@@ -26,7 +26,7 @@ For me tidal cycles is a compositional tool because it allows me to make the com
 I'm particularly interested in the ability to create complex iterative structures and the flexibility it gives you to manipulate the sound. Sometimes, when I finish writing one of my endless scripts, I'll run it and spend some time listening to what Tidal comes up with. *I'm fascinated by the code's ability to generate unexpected structures all the time.*
 
 **What inspires you?**   
-I am often inspired by the work of other composers and live coders. I'm always looking for sessions on YouTube of artists I'm interested in. I don't have a programming background so I often design my processes starting from those of other colleagues. In terms of genres, I spent a few years listening to a lot of 20th and 21st century contemporary music, but now I'm quite interested in the experimental electronic music scene. Lately I've been listening to a lot of glitch music that I discovered on Bandcamp. I love browsing Bandcamp.
+I am often inspired by the work of other composers and live coders. I'm always looking for sessions on YouTube of artists I'm interested in. I don't have a programming background so I often design my processes starting from those of other colleagues. In terms of genres, I spent a few years listening to a lot of 20th and 21st century contemporary music, but now I'm quite interested in the experimental electronic music scene. Lately I've been listening to a lot of glitch music that I discover on Bandcamp. I love browsing Bandcamp.
 
 **How do you approach your livecoding sessions?**  
 I am currently presenting a series of short pieces, the "Rumble machines", which is basically a catalogue of algorithmic processes for generating sound and modeling it on the fly. It's a show designed to be listened to in good conditions, but it is not oriented to the dance floor. I'm working on the possibilities of a script that allows me to mix pieces from other artists and manipulate them with the typical Tidal Cycles processes because I want to be able to offer a rave show.
@@ -38,7 +38,7 @@ I am currently presenting a series of short pieces, the "Rumble machines", which
 />
 
 **What functions and coding approaches do you like to use?**  
-I'm super fan of `slice` function. It works well with quantized loops. I use to modify the inner pattern on the fly. Starting here...
+I'm super fan of the `slice` function. It works well with quantized loops. I use to modify the inner pattern on the fly. Starting here...
 
 ```haskell
 d1
@@ -55,7 +55,7 @@ d1
 
 ```
 
-Thanks to live coders as [Hiroki Matsui](https://www.youtube.com/@hirokimtplc/videos) I've rediscovered the spread($) function. I learned a lot from his stuff.
+Thanks to live coders as [Hiroki Matsui](https://www.youtube.com/@hirokimtplc/videos) I've rediscovered the `spread`($) function. I learned a lot from his stuff.
 
 ```haskell
 do
@@ -101,7 +101,7 @@ Working with other musicians has always been conflicting for me for several reas
 **What projects are you currently working on or planning? What's next?**   
 - My live coding practice is mainly focused on the creation of new material to be published at the end of the year and to be able to do many concerts in 2024. Although Tidal is a tool that saves you a lot of time, I'm quite slow in composing and very demanding on myself. The preparation of the live shows takes me a lot of time.
 - I collaborate with Eloy Fernández Porta, a very interesting writer and thinker with whom we do spoken word sessions. Curiously we are both named Eloi, an unusual name.
-- **Noi$**: This project is with **White Pèrill** in which we make improvised electronic music together. In our shows I use the screen to tell the biography of a composer with humor interspersed with code and writing.
+- I also have a project **Noi$** with [White Pèrill](https://whiteperill.bandcamp.com/) in which we make improvised electronic music from scratch. In our shows I use the screen to tell the biography of a composer with humor interspersed with code and writing.
 
     - [Noi$: Toplap Barcelona - Viu Multichannel Expansion](https://www.youtube.com/watch?v=jwX3TpOaodo&list=PLPpU9K6Wgm8tmhWsAwBRPr2rIy3xtKKeN&index=6&ab_channel=TOPLAP_BARCELONA)
 
@@ -109,13 +109,11 @@ Working with other musicians has always been conflicting for me for several reas
 
 - In 2024 I will collaborate with a very interesting poetess and a flamenco singer. I will keep you posted. I am very excited!
 
-
 ### Music / recorded livecoding sessions:
 - https://eloielbonnoi.com/
 - https://www.youtube.com/user/ieloi/playlists
 - https://eloielbonnoi.bandcamp.com/album/siroll-sofisticat
 - https://linktr.ee/eloielbonnoi
-
 
 Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/)  
 
