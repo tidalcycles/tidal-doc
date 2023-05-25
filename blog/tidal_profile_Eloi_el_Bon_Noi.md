@@ -15,9 +15,9 @@ date: 2023-01-01
 | Comments | [Club Tidal Forum Thread](https://club.tidalcycles.org/)|
 
 <img
-  src={require('./eloi_logo.png').default}
-  alt="Eloi logo"
-  height="200"
+  src={require('./eloi_09.jpg').default}
+  alt="Eloi with logo"
+  width="600"
 />
 
 ## Livecoding  
@@ -31,12 +31,6 @@ I am often inspired by the work of other composers and live coders. I'm always l
 
 **How do you approach your livecoding sessions?**  
 I am currently presenting a series of short pieces, the "Rumble machines", which is basically a catalogue of algorithmic processes for generating sound and modeling it on the fly. It's a show designed to be listened to in good conditions, but it is not oriented to the dance floor. I'm working on the possibilities of a script that allows me to mix pieces from other artists and manipulate them with the typical Tidal Cycles processes because I want to be able to offer a rave show.
-
-<img
-  src={require('./eloi_02.jpg').default}
-  alt="Eloi w"
-  width="600"
-/>
 
 **What functions and coding approaches do you like to use?**  
 I'm super fan of the `slice` function. It works well with quantized loops. I use to modify the inner pattern on the fly. Starting here...
@@ -56,7 +50,7 @@ d1
 
 ```
 
-Thanks to live coders as [Hiroki Matsui](https://www.youtube.com/@hirokimtplc/videos) I've rediscovered the `spread`($) function. I learned a lot from his stuff.
+Thanks to live coders like [Hiroki Matsui](https://www.youtube.com/@hirokimtplc/videos) I've rediscovered the `spread`($) function. I learned a lot from his work.
 
 ```haskell
 do
@@ -84,6 +78,12 @@ do
                     # room (range 0.4 0.9 $ slow 17 sine) # size(range 0.3 0.6 $ slow 17 sine)
 
 ````
+
+<img
+  src={require('./eloi_02a.jpg').default}
+  alt="Eloi w"
+  width="600"
+/>
 
 **How do you contribute to Tidal Cycles? What have you worked on?**  
 I try to stay connected with the activities scheduled by the TopLap Barcelona community - attending our monthly *from scratch* sessions, being part of the festivals we program and giving Tidal workshops whenever I can. I'm very fortunate to belong to this community and I feel very close to them. I'm recently creating a live coding community in one of the universities in Barcelona. It is still an early project, but I hope that next year many students will join us.
@@ -117,6 +117,3 @@ Working with other musicians has always been conflicting for me for several reas
 - https://linktr.ee/eloielbonnoi
 
 Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/)  
-
-![Eloi with logo](./eloi_09.jpg)
-
