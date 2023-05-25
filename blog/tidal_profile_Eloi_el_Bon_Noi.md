@@ -14,6 +14,12 @@ date: 2023-01-01
 | Other music/audio sw | Ableton Live, Audacity |
 | Comments | [Club Tidal Forum Thread](https://club.tidalcycles.org/)|
 
+<img
+  src={require('./eloi_logo.png').default}
+  alt="Eloi logo"
+  height="200"
+/>
+
 ## Livecoding  
 
 **What do you like about livecoding in Tidal?**  
@@ -25,6 +31,12 @@ I am often inspired by the work of other composers and live coders. I'm always l
 
 **How do you approach your livecoding sessions?**  
 I am currently presenting a series of short pieces, the "Rumble machines", which is basically a catalogue of algorithmic processes for generating sound and modeling it on the fly. It's a show designed to be listened to in good conditions, but it is not oriented to the dance floor. I'm working on the possibilities of a script that allows me to mix pieces from other artists and manipulate them with the typical Tidal Cycles processes because I want to be able to offer a rave show.
+
+<img
+  src={require('./eloi_02.jpg').default}
+  alt="Eloi w"
+  width="600"
+/>
 
 **What functions and coding approaches do you like to use?**  
 I'm super fan of the `slice` function. It works well with quantized loops. I use to modify the inner pattern on the fly. Starting here...
@@ -106,5 +118,5 @@ Working with other musicians has always been conflicting for me for several reas
 
 Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/)  
 
-![Eloi with logo](./eloi_9.png)
+![Eloi with logo](./eloi_09.jpg)
 
