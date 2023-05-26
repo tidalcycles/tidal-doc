@@ -1,6 +1,6 @@
 ---
 title: Tidal Profile - Eloi el Bon Noi (Eloi the good guy)
-date: 2023-01-01
+date: 2023-05-26
 ---
 
 | Tidal Cyclist  | Eloi Isern |
@@ -12,7 +12,7 @@ date: 2023-01-01
 | Music available online | [YouTube](https://www.youtube.com/user/ieloi/playlists), [BandCamp](https://eloielbonnoi.bandcamp.com/music) |
 | Code online  | https://github.com/eloielbonnoi |
 | Other music/audio sw | Ableton Live, Audacity |
-| Comments | [Club Tidal Forum Thread](https://club.tidalcycles.org/)|
+| Comments | [Club Tidal Forum Thread](https://club.tidalcycles.org/t/blog-profile-eloi-el-bon-noi/4716)|
 
 <img
   src={require('./eloi_09.jpg').default}
@@ -116,4 +116,4 @@ Working with other musicians has always been conflicting for me for several reas
 - https://eloielbonnoi.bandcamp.com/album/siroll-sofisticat
 - https://linktr.ee/eloielbonnoi
 
-Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/)  
+Comments: [Club Tidal Forum Thread](https://club.tidalcycles.org/t/blog-profile-eloi-el-bon-noi/4716)  
