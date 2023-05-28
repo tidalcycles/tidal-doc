@@ -116,7 +116,7 @@ histpan 1 4 $ sound "bd sn"
 ### interpolate
 
 ```haskell
-Type: interpolate :: Time -> [ControlPattern] -> ControlPattern
+Type: interpolate :: Show a => a -> [ControlPattern] -> ControlPattern
 ```
 Morph control values between patterns in four cycles. The argument supplied to `interpolate` is the ID of the new pattern that is created.
 ```haskell
