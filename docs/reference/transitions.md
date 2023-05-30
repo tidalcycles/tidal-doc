@@ -64,7 +64,7 @@ anticipateIn :: Show a => a -> Time -> ControlPattern -> IO ()
 
 Start playing a pattern after a specified number of cycles and assign it an ID.
 
-The first argument is the ID of the newly created patttern, and the second argument is the number of cycles after which the pattern will begin playing.
+The first argument is the ID of the newly created pattern, and the second argument is the number of cycles after which the pattern will begin playing.
 
 ```haskell
 d1 $ fast 2 $ sound "hh*4"
