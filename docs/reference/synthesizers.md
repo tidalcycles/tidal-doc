@@ -244,7 +244,7 @@ The syntax for operator arguments is `<argumentName + opIndex>[modulatorIndex | 
 
 :::info
 
-Higher env generator (egrate) values go FASTER!
+Higher env generator (egrate) values go faster!
 
 :::
 
