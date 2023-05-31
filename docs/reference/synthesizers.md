@@ -7,7 +7,7 @@ id: synthesizers
 
 ## Basic instruments
 
-Default values are in **parentheses**.  In all synths, `sustain` (default 1) affects the overall envelope timescale. The parameters `pan` and `freq` can also be set in all synths. The default value for freq is usually 440 – in synths where it’s not, `freq` and its default value for that synth are mentioned in its parameter list below. 
+Default values are in **parentheses**.  In all synths, `sustain` (default 1) affects the overall envelope timescale. The parameters `pan` and `freq` can also be set in all synths. The default value for freq is usually 440 – in synths where it’s not, `freq` and its default value for that synth are mentioned in its parameter list below.
 
 :::caution
 Some undocumented parameters are included without descriptions.
@@ -17,17 +17,17 @@ Some undocumented parameters are included without descriptions.
 ### Additive synthesis
 #### Supergong
 
-An example of additive synthesis, building up a gong-like noise from a sum of sine-wave harmonics. Notice how the envelope timescale and amplitude can be scaled as a function of the harmonic frequency. 
+An example of additive synthesis, building up a gong-like noise from a sum of sine-wave harmonics. Notice how the envelope timescale and amplitude can be scaled as a function of the harmonic frequency.
 
 * `voice` (0): provides something like a tone knob
 * `decay` (1): adjusts how the harmonics decay
 * `accelerate` (0): for pitch glide
 
 ```c
-d1 $ n (slow 2 $ fmap (*7) $ run 8) 
-  # s "supergong" 
-  # decay "[1 0.2]/4" 
-  # voice "[0.5 0]/8" 
+d1 $ n (slow 2 $ fmap (*7) $ run 8)
+  # s "supergong"
+  # decay "[1 0.2]/4"
+  # voice "[0.5 0]/8"
 ```
 
 ### Substractive synthesis
@@ -107,9 +107,9 @@ Feedback PWM:
 * `detune` (0): detune amount
 
 ```c
-d1 $ s "supertron" 
-  # octave 3 
-  # accelerate "0.2" 
+d1 $ s "supertron"
+  # octave 3
+  # accelerate "0.2"
 ```
 
 #### Superreese
@@ -150,7 +150,7 @@ Impulse noise with a fadein/fadeout.
 Physical modeling of a vibrating string, using a delay line (`CombL`) excited by an intial pulse (`Impulse`). To make it a bit richer, I’ve combined two slightly detuned delay lines:
 
 * `sustain` (1): changes the envelope timescale
-* `accelerate` (0): pitch-glide 
+* `accelerate` (0): pitch-glide
 * `detune` (0.2): detune amount
 
 #### Superpiano
@@ -204,33 +204,144 @@ Vibraphone simulation, adapted with some help from Kevin Larke’s thesis Real T
 ### FM synthesis
 #### Superfm
 
-6-op FM synth (**DX7**-like). Works a bit different from the original **DX7**. Instead of algorithms, you set the amount of modulation every operator receives from other operators and itself (feedback), virtually providing an endless number of possible combinations (algorithms). The synth's author [did an online workshop](https://www.youtube.com/watch?v=REgE33Esy2Q) explaining in depth how everything works:
+6 operator FM synth (**DX7**-like). Works a bit different from the original **DX7**. Instead of algorithms, you set the amount of modulation every operator receives from other operators and itself (feedback), virtually providing an endless number of possible combinations (algorithms).
 
+Addition reference sources:  
+- [superfm super-tutorial](https://www.youtube.com/watch?v=REgE33Esy2Q) by Loopier (aka Roger Pibernat) who created superfm.
+- [Club Tidal superfm thread](https://club.tidalcycles.org/t/superfm/1761): discussion on various ways to load and use the parameter variables.
+- [GitHub source of superfm variables for Tidal](https://gist.github.com/loopier/2535109e5d64cc43f56475d902cda905)
+
+:::tip
+
+To use superfm, you need to initialize all of the parameter variables you will use. Get the full list from the GitHub source (above) and execute this in your editor or add it to your `BootTidal.hs`. If you get "Variable not in scope" error messages, then you haven't loaded the variable definitions properly.
+
+:::
+
+General parameters:  
 * `voice`: preset number: 0 is user-defined; 1-5 are randomly generated presets
 * `lfofreq`: overall pitch modulation frequency
 * `lfodepth`: overall pitch modulation amplitude
 
-Each operator responds to:
+Each operator (of 6) responds to:
 
-* `amp`: operator volume - becomes carrier
-* `ratio`: frequency ratio
+* `amp`: operator volume - makes the operator a carrier
+* `ratio`: frequency ratio - multiple of the base frequency (default: 440)
+    * use whole numbers for harmonic, decimal values for inharmonic frequencies
 * `detune`: in Hz
-* `eglevel`: 1-4, 4 envelope generator levels
-* `egrate` 1-4, 4 envelope generator rates
+* `eglevel`: 1-4 (env stage), envelope generator levels (env generators have 4 stages ADSR)
+* `egrate` : 1-4 (env stage), envelope generator rates
 
 The syntax for operator arguments is `<argumentName + opIndex>[modulatorIndex | egIndex]`. For example:
 
-* `amp1` 1: op1 as carrier with full volume
-* `ratio2` 2.3: op2 frequency ratio
-* `mod11` 0.5: op1 feedback
-* `mod12` 0.78: op1 modulation amount by op2
-* `detune1` 0.2: op1 detune
-* `eglevel12` 0.1: op1 EG level2
-* `egrate11` 0.01: op1 EG rate1
+* `# amp1 1` : op1 as carrier with full volume
+* `# ratio2 2.3` : op2 frequency ratio of 2.3
+* `# mod12 0.78` : op1 modulation amount by op2
+* `# mod11 0.5 # feedback 1` : op1 feedback (self modulate), need to specify feedback level
+* `# detune1 0.2` : op1 detune
+* `# egrate11 0.01` : op1 EG stage 1 rate (stage 1 is the attack)
+* `# eglevel11 1` : op1 EG stage 1 level
+* `# egrate12 5` : op1 EG stage 2 rate (stage )
 
-:::warning
-Higher values go FASTER!
+:::info
+
+Higher env generator (egrate) values go FASTER!
+
 :::
+
+superfm examples   
+```
+d1 $ s "superfm" # n 0 #octave "<4 5 6>"
+  #amp1 1 #amp3 1
+  #mod11 1 #feedback 2
+  #mod12 "0 1 2"
+  #ratio2 3
+  #eglevel22 0.1
+
+-- env generator values for 4 stages on one operator
+d1 $ n "[0 11]/8" # "superfm" #octave 4
+  # amp1 1
+  # ratio2 2.5
+  # mod12 4
+  # egrate11 0.3 # eglevel11 1 -- slow attack
+  # egrate12 1  # eglevel12 0.1 -- fast decay to 1/2 amp
+  # egrate13 0.5 # eglevel13 0.8 -- 2nd amp swell
+  # egrate14 0.4 # eglevel14 0 -- decay of mod to 0
+
+d1 $ freq "<200 300> <400 800>" #s "superfm"
+  # amp1 1 # amp3 1
+  # mod12 2 # ratio2 "<8 4> 0.5 0.9 1.4 2.5"
+  # mod34 1 # ratio3 4
+```
+
+<details>
+  <summary>superfm code examples (longer)</summary>
+
+      d1 $ s "superfm/2"
+        # octave 4
+        -- # n "<0 5 11>"
+        # n (irand 40 -10)
+        # amp1 1
+        # amp2 1
+        # amp3 0.8
+        # amp4 0
+        # amp5 0.8
+        # amp6 1
+        # ratio2 2
+        # ratio3 8
+        # ratio4 5
+        # ratio5 5
+        # ratio6 6.5
+        # detune5 1
+        # feedback 0.8
+        # mod11 1
+        # mod16 2.5
+        # mod23 3.5
+        # mod34 4.8
+        # mod45 3.5
+        # mod65 2
+        # egrate11 0.01
+        # egrate21 0.01
+        # egrate31 0.5
+        # egrate61 0.1
+        # egrate62 0.5
+        # egrate63 1
+        # eglevel62 0.13
+        # eglevel63 1.5
+        # lfofreq 0.2
+        # lfodepth 0.01
+        # room 0.8 # size 0.8 # dry 0.2
+
+        --- from Club Tidal
+        d1 $ s "superfm"
+        # octave 4
+        # n 0
+        # amp1 1
+        # amp2 1
+        # amp3 0
+        # amp4 0
+        # amp5 0
+        # amp6 1
+        # ratio2 2
+        # ratio3 3
+        # ratio4 4
+        # ratio5 0.5
+        # ratio6 0.25
+        # feedback 1
+        # mod11 1
+        # mod16 1
+        # mod23 1
+        # mod34 1
+        # mod45 1
+        # mod66 1
+        # egrate61 1
+        # egrate62 10
+        # egrate63 1
+        # eglevel62 0.13
+        # eglevel63 1.5
+        # room 0.5
+
+</details>
+
 
 ### Drum synthesis
 #### Superhex
@@ -313,11 +424,11 @@ Kick drum synth. Increase `pitch1` and `voice` for interesting electronic percus
 `resonance` (0.1): resonance of bandpass and resonz filters (min: 0, max: 1)
 `freq` (405): frequency
 
-### Audio Input 
+### Audio Input
 #### in
 
 Live audio input:
-* `in`: audio input 
+* `in`: audio input
 
 #### inr
 
@@ -326,7 +437,7 @@ Pitch shifted live audio input:
 * `inr`: audio input
 * `accelerate` (0): pitch-glide
 
-### Other synths and goodies 
+### Other synths and goodies
 
 #### imp
 
@@ -336,7 +447,7 @@ Modulated band limited impulse:
 #### psin
 
 Modulated phase mod sines:
-* `accelerate` (0): pitch-glide amount 
+* `accelerate` (0): pitch-glide amount
 
 #### gabor
 
