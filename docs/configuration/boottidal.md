@@ -101,7 +101,7 @@ tidal <- startTidal (superdirtTarget {oLatency = 0.05}) (defaultConfig {cFrameTi
 If you're running **SuperDirt** in another host (perhaps, in a multi-user setup), you need to define this in a similar fashion as with the latency, except in this case the keyname is `oAddress`:
 
 ```haskell
-tidal <- startTidal (superdirtTarget {oAddress = "192.168.0.23", oPort = 57120}) defaultConfig
+tidal <- startTidal (superdirtTarget {oAddress = "192.168.0.23", oPort = 57120}) (defaultConfig {cCtrlAddr = "0.0.0.0"})
 ```
 
 In case you need to alter multiple settings for `superdirtTarget`, just separate them by a comma:
