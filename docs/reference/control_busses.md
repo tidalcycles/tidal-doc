@@ -22,7 +22,7 @@ This won't work. As the structure is defined by `sound "sax"` there is only one 
 There are some workarounds we can try:
 
 ```haskell
-d1 $ sound "sax" # legato 1 |> squiz "1 2 5 1.5"
+d1 $ sound "sax" # legato 1 >| squiz "1 2 5 1.5"
 ```
 
 Now the structure is taken from the right part, so there will be `4` events per cycle, each one with a different `squiz` value. But the sample will be triggered `4` times from the beginning. We'd like to modify `squiz` as the sample is playing, not by retriggering it.
