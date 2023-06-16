@@ -1,6 +1,6 @@
 ---
 title: Tidal Profile - Helen Papaioannou
-date: 2023-01-15
+date: 2023-06-16
 ---
 
 | Tidal Cyclist  | Helen Papaioannou    |
@@ -87,5 +87,5 @@ I work with a mixture of approaches and tools in my music, sometimes improvising
 <img
   src={require('./papaioannou_unicorn.jpg').default}
   alt="Helen with Unicorn"
-  width="600"
+  width="400"
 />
