@@ -97,42 +97,41 @@ toolchain such as MinGW+MSYS or Cygwin.
 :::tip
 
 This error shows that you don't have the current version of the network package.
-Install of Cygwin is not needed. Haskell installs from either choco or ghcup will install msys2 which provides the unix shell. What is missing is that cabal can't find it, so you need to fix your PATH.
+A Cygwin installation is not necessary, installing Haskell from either `choco` or `ghcup` will install `msys2`, which provides a Unix shell. What is missing is that `cabal` can't find it, so you need to fix your `$PATH`.
 
 :::
 
 Steps to resolve:
-- FIRST - follow the steps above to make sure you have the correct versions of ghc and cabal. Note that cabal 3.8.1.0 will install the wrong version of the network package and won't resolve this error. You need cabal 3.10.1.0
-- Remove your local ghc and cabal directories (see above).
-- Install tidal package again (see above).
-- If you continue to have problems, you may have problems with your PATH environment variable.
-- **Choco:** Add these values to your system PATH environment variable, using your version of ghc:
+- **FIRST**: follow the steps above to make sure you have the correct versions of ghc and cabal. Note that `cabal 3.8.1.0` will install the wrong version of the network package and won't resolve this error. You need `cabal 3.10.1.0`
+- Remove your local `ghc` and `cabal` directories (see above).
+- Install the `tidal` package again (see above).
+- If problems continue, you may have problems with your `$PATH` environment variable.
+- **choco**: Add these values to your system PATH environment variable, using your version of `ghc`:
 ```powershell
 C:\tools\ghc-\<version>\mingw\bin
 # example: C:\tools\ghc-9.4.4\mingw\bin
 C:\tools\msys64\usr\bin
 ```
 
-- **ghcup:** Add these values to your system PATH environment variable:
+- **ghcup**: Add these values to your system PATH environment variable:
 ```powershell
 C:\ghcup\ghc\\<version>\mingw\bin
 # example: C:\ghcup\ghc\9.4.4\mingw\bin
 C:\ghcup\msys64\usr\bin
 ```
 - exit and restart powershell (as admin)  
-Don't skip this - it will ensure your new PATH settings are applied.
+Don't skip this—it will ensure your new `$PATH` settings are applied.
 
-- Follow the steps outlined above to delete your local ghc and cabal directories, and then run the Tidal package install commands again.
+- Follow the steps outlined above to delete your local `ghc` and `cabal` directories, and then run the commands to install Tidal again.
 
 ### other package errors from Tidal package install
-Sometimes the Tidal package install (from cabal) will fail with multiple errors. Sometimes you even see a long string of errors. Often these are related to the `network-3.1.2.8` error and will be resolved by following those steps.
-
-If your errors don't include the network-3.1.2.8 error, the first path to resolution is to clean out your package install, and run the cabal commands again (above).
+Sometimes the Tidal package install from `cabal` will fail with multiple errors. If these are related to the `network-*` package, you can likely resolve them by checking the items below. If your errors don't involve the `network-*` package, the first thing to try is cleaning out your installed packages and running the installation commands again (see above).
 
 Other things to check:
-- Be sure to clean out all ghc/cabal directories in your local \AppData\. (See above)
-- If you have Haskell components installed by both choco and ghcup, this could cause problems.
-- Check your environment variables, restart PowerShell (as admin). Reboot.
+- Be sure to clean out all ghc/cabal directories in your local `%APPDATA%`. (see above)
+- If you have Haskell components installed by both `choco` and `ghcup`, this could cause problems.
+- Check your environment variables, restart PowerShell as administrator (or your terminal emulator of choice), and then reboot.
+- If you have a pre-existing Cygwin installation or other POSIX compatibility layer, you may have to temporarily remove it from your $PATH for `cabal` to succesfully configure `network-*` during install.
 
 
 ### Is Haskell installed?
