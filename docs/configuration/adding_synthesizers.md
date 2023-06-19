@@ -120,7 +120,7 @@ Note that we changed a few things:
 * `output`: it's gone. We didn't needed it. We are now feeding the enveloppe to `DirtPan`
 * `osc` is directly fed to `DirtPan` as well.
 
-#### Bonus: more complex synthesis
+## More complex synthesis
 
 This page taught you to create a synthesizer for **SuperDirt** but it is still pretty basic. If you learn a bit more about **SuperCollider**, you will be able to refine your ideas. Take a look at the following `SynthDef`. Keep the same pattern running, it sounds nice:
 
@@ -131,6 +131,18 @@ SynthDef(\elegiac, {
 	var osc    = RLPF.ar(in: SawDPW.ar([freq, freq/2]), freq: SinOsc.ar(pan).range(200,2000));
     OffsetOut.ar(out,DirtPan.ar(osc, ~dirt.numChannels, pan, env))
 }).add;
+```
+
+### Using custom parameters
+
+If you want to create any custom parameter for your `SynthDef`, it also has to be referenced in **Tidal**.
+To do this, you have to create a parameter in **Tidal** with the same name the argument has in **SuperCollider**.
+For example, if the arguments in **SuperCollider** were `| harm, pit, model |`, you should add this to your [Tidal Boot File](https://tidalcycles.org/docs/configuration/boot-tidal/):
+
+```haskell
+let harm = pF "harm"
+let pit = pF "pit"
+let model = pI "model" 
 ```
 
 
