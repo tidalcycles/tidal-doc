@@ -10,7 +10,7 @@ For debian/ubuntu/mint systems, these ugens can be installed as part of the [ans
 
 ### Manual
 
-1. Unpack the [latest release](https://github.com/v7b1/mi-UGens/releases/latest/) from [mi-UGens](https://github.com/v7b1/mi-UGens) appropriate to your Operating System (**Note:** Windows is missing from 0.0.4, try [0.0.3](https://github.com/v7b1/mi-UGens/releases/tag/v0.0.3)
+1. Unpack the [latest release](https://github.com/v7b1/mi-UGens/releases/latest/) from [mi-UGens](https://github.com/v7b1/mi-UGens) appropriate to your Operating System (**Note:** Windows is missing from 0.0.4, try [0.0.3](https://github.com/v7b1/mi-UGens/releases/tag/v0.0.3) which has everything except mi-Braids)
 
 2. Move the top level directory of the archive (`mi-UGens/`) into the SuperCollider Extensions folder (create it if it doesn't exist):
 
@@ -81,12 +81,24 @@ After:
 
 8. Save your `startup.scd` and exit
 
-9. You can choose to import the `mi-ugens-params.hs` parameter definitions manually in your tidal session, or add the following line to the `BootTidal.hs` file associated with your editor of choice (locating the correct `BootTidal.hs` is beyond the scope of this reference)
+9. You can choose to import the `mi-ugens-params.hs` parameter definitions manually in your tidal session, or add the following `:script` directive to the `BootTidal.hs` file associated with your editor of choice (locating the correct `BootTidal.hs` is beyond the scope of this reference)
+
+After:
 ```
-        ...
-        :script "FULL_PATH_TO_mi-ugens-params.hs"
-        :set prompt (.*$)
-        ...
+...
+    setR = streamSetR tidal
+    setB = streamSetB tidal    
+:}
+```
+Add:
+```        
+:script FULL_PATH_TO_mi-ugens-params.hs
+```
+Which should now be followed by
+```
+:set prompt "tidal>"
+:set prompt-cont ""
+...
 ```
 
 10. Start/restart SuperCollider
