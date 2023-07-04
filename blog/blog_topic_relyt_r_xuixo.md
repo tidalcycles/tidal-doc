@@ -43,7 +43,7 @@ On this track I controlled Ableton Live with TidalCycles via MIDI and recorded t
 The way I played and composed the arpeggio in TidalCycles is with several custom functions I wrote (and [one by from polymorphic.engine](https://club.tidalcycles.org/t/pattern-to-list/2982)). They are constructed from base TidalCycles functions `nTake`, `toScale'` (for non-12-tone scales), and `segment`.
 Essentially, I use a custom function `takeArp`' to map a math function to a microtonal scale and create an isorhythm out of it. 
 
-A little more detail before I share the code:  I start with a a mathematical trigonometric function, quantize it to a certain number of samples with `segment`, map their values to an ordered set of pitches in a scale (embedded in a 33-note chromatic scale) with `tScale'`, and use [state memory](https://tidalcycles.org/docs/reference/state_values/) (with `nT` derived from `nTake`) so that everytime a rhythmic onset is encountered, the next note is taken from the list (creating an isorhythm).    
+A little more detail before I share the code:  I start with a a mathematical trigonometric function of time `y(t)`, quantize it to a certain number of samples `{t}` with `segment`, map their values `{y(t)}` to an ordered cycle of pitches in a scale (embedded in a 33-note chromatic scale) with `tScale'`, and use [state memory](https://tidalcycles.org/docs/reference/state_values/) (with `nT` derived from `nTake`) so that everytime a rhythmic onset is encountered and scheduled, the next note is taken from the cycle of pitches (creating an isorhythm).    
 
 Here is the code to make `takeArp'`:
 
@@ -59,8 +59,8 @@ let
   -- requires a name for the state counter.
   nT name amt p = nTake name (take amt (cycle (patternToList p)))
   -- the 6-argument function that combines everything above.
-  takeArp' name amt edo scalePat segAmt func =
-      nT name amt $ tScale' edo scalePat
+  takeArp' name amt zEDO scalePat segAmt func =
+      nT name amt $ tScale' zEDO scalePat
       $ fromIntegral <$> round <$> segment segAmt (func)
 ```
 
@@ -72,7 +72,7 @@ d1 $ struct "t(13,16)" $ takeArp' "nondegenerate" 9 33
      s "midi" # midichan 1
 ```
 
-This function lets you dramatically change the melody by changing either the trig function, its range, its segmentation, the scale itself, the number of values taken, and the rhythmic onsets (specified here using `struct`). 
+This `takeArp'` function lets you dramatically change the melody by changing either the trig function, its numeric range, its frequency, its segmentation, the scale itself, the number of values taken, and the rhythmic onsets (specified here using `struct`). 
 
 This is not the exact code I used for the melody (I lost the code with `:q!`) but it is close.
 
@@ -88,10 +88,11 @@ The bass pattern is simple, with a steady stream of 16th notes except there are 
 To compose the melodic contour in this bass ostinato, I used theory from Lerdahl and Jackendoff's 'generative theory of tonal music', namely the `4 1 2 1 3 1 2 1` pattern found in music and linguistics (refer to G. Toussaint's 'Geometry of Musical Rhythm' for an accessible intro). TidalCycles mininotation makes this almost effortless:
 
 ```haskell
+-- bass melody
 n "~ 0 0 <<7 5 > 3>"
 ```
 
-Regarding the microtones in the bass, the notes divide 2.5 semitones (seven 33-EDO steps) into four pitches so it's quite microtonal yet it's still perceived as four distinct pitches.  For an interesting timbral effect, I layered two bass oscillators, with the second pitched 15 33-EDO steps apart (545.5 cents, an approximation of the 11th harmonic). This harmonization really makes the bass shine and sound cool on trashy speakers.  The harmonic series is a useful reference when sound designing percussion and bass.
+Regarding the microtones in the bass, the notes divide 2.5 semitones (seven 33-EDO steps) into four pitches so it's quite microtonal yet it's still perceived as four distinct pitches.  For an interesting timbral effect, I layered two bass oscillators, with the second pitched 15 33-EDO steps apart (545.5 cents, an approximation of the 11th harmonic). This harmonization really makes the bass shine and sound cool on trashy speakers. It's almost like additive synthesis with extra 11th harmonic. The harmonic series is an indispensible reference when sound designing percussion and bass.
 
 For mixing and production, I used drum bus limiting, multiband sidechaining, mid-side EQ, a mastering chain with the stock Ableton limiter, Rift by Minimal Audio for distortion on the chords and hi-hats, and Output Portal for delay effects. For sub and bass compatibility, I followed Slynk's recipe for [making sub bass sound good on any sound system](https://www.youtube.com/watch?v=ecKbeDfJxtQ). 
 
@@ -99,23 +100,25 @@ For mixing and production, I used drum bus limiting, multiband sidechaining, mid
 
 The experimental club track "Three" was my first production after I coded a machine learning tool in Python I named [WAV Clustering Workflow](https://github.com/TylerMclaughlin/wav_clustering_workflow) (WCW) for clustering drum samples by acoustic similarity. 
  I used WCW to cluster [18000 vintage drum machine samples from kb6](https://samples.kb6.de/) and browsed the generated file folders corresponding to clusters (see WCW readme for more info). 
- One of the cluster folders in particular was full of insane laser sound effects, so I simply played through them, in order more or less (hierarchical clustering means within a cluster, sounds are further sorted by subclusters). To play sounds I drag 128 samples at a time in an Ableton drum rack then play them in order with 
+ One of the cluster folders in particular was full of insane laser sound effects, so I simply played through them, in order more or less (hierarchical clustering means within a cluster, sounds are further sorted by subclusters). I found a similar folder with short closed hi-hats. To play sounds I drag 128 samples at a time in an Ableton drum rack then play them in order with 
 
 ```haskell
 fast 16 $ slow 128 $ n "0 .. 127" # s "midi" # midichan 1
 ```
 
+In Ableton's drum racks you can assign 'choke groups', allowing you to mute samples when another sample from the assigned group triggers.  This prevent samples from bleeding into each other, and is just like using `cut` in TidalCycles for audio samples (a trick I learned from Kindohm).
+
 For the stereo-panned stream of ultra-compressed bass notes at around the 1:20 timestamp, I actually play all 128 sounds in order, and kept all the samples that came out of WCW.  It's the sound of a sweep through neighboring notes in a cluster of kick drums in acoustic latent space--very satisfying and wild sounding.  I added OTT (Ableton Live Multiband dynamics) at 100% (haha) then I added binaural panning using the Envelop max4live device on this and other instrument tracks, with LFOs controlling the X and Y coordinates.
 
-I also used a NEJI tuning (near equal just intonation, a concept I learned from Zhea Erose in the Xenharmonic Alliance discord) using my [NEJI calculator](https://github.com/TylerMclaughlin/neji_calculator) to export a scala file for the wobbly vocal-like chord that's played in bursts of 7 (starting at 0:03 timestamp).
+I also used a NEJI tuning (near equal just intonation, a concept I learned from [Zhea Erose](https://www.youtube.com/@ZheannaErose/videos) in the Xenharmonic Alliance discord) using my [NEJI calculator](https://github.com/TylerMclaughlin/neji_calculator) to export a scala file for the wobbly vocal-like chord that's played in bursts of 7 (starting at 0:03 timestamp).
 
-In a slower track like this, groove is really helpful (via `nudge` TidalCycles functions or Roger Linn's MPC 16 grooves in Ableton).  The composition isn't that crazy, but it's the machine-learning for sound selection and overall contrast that makes it interesting.  
+In a slower track like this, groove is really helpful (via `nudge` TidalCycles functions or Roger Linn's MPC 16th note grooves in Ableton).  The composition isn't that crazy, but it's the machine-learning for sound selection and overall contrast that makes it interesting.  
 
 #### "10 Megakelvin" (21 EDO)
 
 This track was fully live-coded in TidalCycles with minimal or zero tweaks after recording. I used a 21-EDO `.scl` file from Sevish's scale workshop and microtuned several instances of Arturia Pigments, similar to how I set up synths for "Nondegenerate" above and for other tracks on the album.  I decided to use an 18-beat rhythm because it's close to 16, and it's still an even number, so it's still amenable to head-nodding and/or dancing. 
 
- Saying 'no to twelve notes' and 'no to 16 beats' resulted in something incredibly bizarre. When I began this production, I was inspired by the sound design of the late producer Qebrus. But what I arrived at was something completely different.
+ Saying 'no to twelve notes' and 'no to 16 beats' resulted in something incredibly bizarre. When I began this production, I was inspired by the sound design of the late producer [Qebrus](https://exophobiaorgqebrus.bandcamp.com/). But what I arrived at was something completely different.
 
 
 The TidalCycles code for this track is about 100 lines. It makes ample use of the non-default TidalCycles function `ncat` written by pulu on the TC discord. 
@@ -185,7 +188,7 @@ On the hi-hats I use a free max4live device called 'Granular Mirror Maze', which
 
 ### About Relyt R
 
-Relyt R is my new alias, the alter ego of Silicon Valley algorave artist and [AV Club SF](https://avclubsf.com) performer [R Tyler](https://instagram.com/1000instamilligrams). While R Tyler is influenced by jazz, prog, house, classical, and videogame music, Relyt R is a compartmentalized alias for xenharmonic techno at higher BPMs, alien and futuristic sounds, and brutalist sound design via machine learning.
+Relyt R is my new alias, the alter ego of Silicon Valley algorave artist and [AV Club SF](https://avclubsf.com) performer [R Tyler](https://instagram.com/1000instamilligrams). While R Tyler is influenced by jazz, prog, house, IDM, classical, and videogame music, Relyt R is a compartmentalized alias for xenharmonic techno at higher BPMs, alien and futuristic sounds, and brutalist sound design via machine learning.
  
 Xuixo is my first release under this new alias, and I am fortunate to have had it released on [Sevish's xenharmonic label split-notes](http://split-notes.com). 
 I have been producing xenharmonic dance music since 2017 and live-coding music in TidalCycles since 2018. 
