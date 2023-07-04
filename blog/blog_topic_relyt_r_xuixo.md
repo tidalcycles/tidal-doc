@@ -29,7 +29,7 @@ My motivation for incorporating live-coding, machine learning, techno,  and xenh
 
 ### Track Highlights
 
-I'm going to highlight code and methodology behind three tracks, starting with the opener "Nondegenerate", then "Three", and then "10 Megakelvin".  "Nondegenerate" will be the longest description as I'd like to explain the microtonal setup used for throughout my album.
+I'm going to highlight code and methodology behind three tracks, starting with the opener "Nondegenerate", then "Three", and then "10 Megakelvin".  "Nondegenerate" will be the longest description as I'd like to explain the microtonal setup used throughout my album.
 
 #### "Nondegenerate" (33 EDO)
 
@@ -113,7 +113,7 @@ In a slower track like this, groove is really helpful (via `nudge` TidalCycles f
 
 #### "10 Megakelvin" (21 EDO)
 
-This track was fully live-coded in TidalCycles with minimal or zero tweaks after recording. I used a 21-EDO .scl file from Sevish's scale workshop and microtuned several instances of Arturia Pigments, similar to how I set up synths for "Nondegenerate" above and for other tracks on the album.  I decided to use an 18-beat rhythm because it's close to 16, and it's still an even number, so it's still amenable to head-nodding and/or dancing. 
+This track was fully live-coded in TidalCycles with minimal or zero tweaks after recording. I used a 21-EDO `.scl` file from Sevish's scale workshop and microtuned several instances of Arturia Pigments, similar to how I set up synths for "Nondegenerate" above and for other tracks on the album.  I decided to use an 18-beat rhythm because it's close to 16, and it's still an even number, so it's still amenable to head-nodding and/or dancing. 
 
  Saying 'no to twelve notes' and 'no to 16 beats' resulted in something incredibly bizarre. When I began this production, I was inspired by the sound design of the late producer Qebrus. But what I arrived at was something completely different.
 
@@ -181,11 +181,11 @@ I'll conclude this section with some notes on my production workflow.
  I tend to mix, compress, and limit as I'm composing and coding. I use a technique called 'Brauerizing' where I group different instruments (drums, basses, melodies, harmonies) and compress and limit them each individually. Then I compress and limit on the master bus.  This glues the sounds together hierarchically and makes all the elements interact dynamically.  I almost consider it part of the composition because you need to consider: how much do you want your independent signals to overlap, where do you want negative space, etc. 
 
 This track "10 Megakelvin" is unusual because I didn't use any distortion, just heavy amounts of compression and a little Valhalla Reverb. For ear candy, I put an unsynced LFO on the cutoff frequency of a low-pass filter on the acoustic drum break--this really makes loops sound less repetitive and makes the track sort of wash and swell. 
-On the hi-hats I use a free max4live device called 'Granular Mirror Maze' that I heard about from a reddit AMA with Max Cooper.  It gives these drums a really unique metallic sound that's distinct from normal stereo delay with feedback.
+On the hi-hats I use a free max4live device called 'Granular Mirror Maze', which I heard about from a reddit AMA with Max Cooper.  It gives these drums a really unique metallic sound that's distinct from normal stereo delay with feedback.
 
 ### About Relyt R
 
-Relyt R is my new alias, the alter ego of Silicon Valley algorave artist and [AV Club SF](https://avclubsf.com) performer [R Tyler](https://instagram.com/1000instamilligrams). While R Tyler is influenced by jazz, prog, house, classical, and videogame music, Relyt R is a compartmentalized alias for techno at higher BPMs, alien and futuristic sounds, brutalist sound design via machine learning, and xenharmonic composition. 
+Relyt R is my new alias, the alter ego of Silicon Valley algorave artist and [AV Club SF](https://avclubsf.com) performer [R Tyler](https://instagram.com/1000instamilligrams). While R Tyler is influenced by jazz, prog, house, classical, and videogame music, Relyt R is a compartmentalized alias for xenharmonic techno at higher BPMs, alien and futuristic sounds, and brutalist sound design via machine learning.
  
 Xuixo is my first release under this new alias, and I am fortunate to have had it released on [Sevish's xenharmonic label split-notes](http://split-notes.com). 
 I have been producing xenharmonic dance music since 2017 and live-coding music in TidalCycles since 2018. 
