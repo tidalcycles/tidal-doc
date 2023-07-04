@@ -33,13 +33,13 @@ I'm going to highlight code and methodology behind three tracks, starting with t
 
 #### "Nondegenerate" (33 EDO)
 
-Channeling a dystopian sci-fi rave, the sub-heavy techno track 'Nondegenerate' in 33 notes per octave (EDO = equal divisions per octave) opens the album at 170 BPM.
+Channeling a dystopian sci-fi rave, the sub-heavy techno track 'Nondegenerate' opens the album at 170 BPM and 33 notes per octave (EDO = equal divisions per octave). 
 
-The microtunable VST Arturia Pigments is used for all synth sounds, including the arp, chords, and sub bass.  This [list of microtunable VST synths on the xenharmonic wiki](https://en.xen.wiki/w/List_of_microtonal_software_plugins) is how I first heard of Pigments.  To microtune Pigments I used [Sevish's scale workshop](https://sevish.com/scaleworkshop/?version=2.1.0) and exported a `.scl` file for 33-EDO. To create this tuning file, the steps are:   
+The microtunable VST Arturia Pigments is used for all synth sounds, including the arp, chords, and sub bass.  This [list of microtunable VST synths on the xenharmonic wiki](https://en.xen.wiki/w/List_of_microtonal_software_plugins) is how I first heard about Pigments.  To microtune Pigments I used [Sevish's scale workshop](https://sevish.com/scaleworkshop/?version=2.1.0) and exported a `.scl` file for 33-EDO. To create this tuning file, the steps are:   
 
 `New Scale -> Equal Temperament -> "Number of Divisions" = 33, "Interval to divide" = 2/1 -> Export Scala scale (.scl)`
 
-On this track I controlled Ableton Live with TidalCycles via MIDI and recorded the results. This track was not recorded live--clips from TidalCycles were pieced together over a DJ-friendly arrangement structure.  The rigidity of 8- and 16-bar arrangement structure seems to be foundational or omnipresent in (Western) dance music so I wanted to enforce that structure for this piece.
+On this track I controlled Ableton Live with TidalCycles via MIDI and recorded the results. This track was not performed and recorded live--clips from TidalCycles were pieced together over a DJ-friendly arrangement structure.  The rigidity of 8- and 16-bar arrangement structure seems to be foundational or omnipresent in (Western) dance music so I wanted to enforce that structure for this piece.
 
 The way I played and composed the arpeggio in TidalCycles is with several custom functions I wrote (and [one by from polymorphic.engine](https://club.tidalcycles.org/t/pattern-to-list/2982)). They are constructed from base TidalCycles functions `nTake`, `toScale'` (for non-12-tone scales), and `segment`.
 Essentially, I use a custom function `takeArp`' to map a math function to a microtonal scale and construct an isorhythm out of it. 
@@ -73,9 +73,9 @@ d1 $ struct "t(13,16)" $ takeArp' "nondegenerate" 9 33
      s "midi" # midichan 1
 ```
 
-This `takeArp'` function lets you dramatically change the melody by changing either the trig function, its numeric range, its frequency (with `slow` or `fast`), its segmentation, the scale itself, the number of values taken, and the rhythmic onsets (specified here using `struct`). 
+This `takeArp'` function lets you dramatically change the melody by changing either the trig function, its numeric range, its frequency (with `slow` or `fast`), its segmentation, the scale itself, the number of values stored in the `nTake` counter, and the rhythmic onsets (specified here using `struct`). 
 
-This is not the exact code I used for the melody (I lost the code with `:q!` in vim) but it is close.
+This is not the exact code I used for the melody (I lost the code with `:q!` in vim) but it is very close.
 
 I'll briefly go over chords, bass, and production before highlighting the next two tracks. This section goes into a bit of microtonal theory, then plug-ins and techniques used for production.
 
