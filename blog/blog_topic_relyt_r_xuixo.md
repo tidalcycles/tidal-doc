@@ -22,7 +22,7 @@ We've been listening to music with the same 12 notes (C, C#, D, Eb, etc.) for hu
 
 A small but active contingent of artists recognizes and challenges this status quo and creates microtonal music using notes without analogs in 12-tone equal temperament. The name given for music composed with alien, non-12-tone harmonies is 'xenharmonic'.
 
-Xuixo, an EP released on the xenharmonic label [split-notes](http://split-notes.com/) is the first studio EP by Relyt R, the alias I created for microtonal algorave. Relyt R is a focused split from my other algorave work as [R Tyler](https://instagram.com/1000instamilligrams).  The Xuixo EP features algorithmic and machine learning enabled techno and dance music using non-Western tunings.
+Xuixo, a 6-track EP released on the xenharmonic label [split-notes](http://split-notes.com/) is the first studio EP by Relyt R, the alias I created for microtonal algorave. Relyt R is a focused split from my other algorave work as [R Tyler](https://instagram.com/1000instamilligrams).  The Xuixo EP features algorithmic and machine learning enabled techno and dance music using non-Western tunings.
   19-, 21-, and 33-tone equal temperaments were chosen to synthesize alien harmonies and melodies with notes exterior to the common 12.
 
 My motivation for incorporating live-coding, machine learning, techno,  and xenharmonic scales is to imagine how music in the future may exist--with a radically different sonic palette. The intention behind Xuixo EP was to use this set of digital tools and custom code bases to evoke wonder about an algorithmic future.  Perhaps the future will be alien and dystopian. If so, a fast, brutal, and bizarre xenharmonic techno soundtrack would be fitting.
@@ -33,8 +33,9 @@ I'm going to highlight code and methodology behind three tracks, starting with t
 
 #### "Nondegenerate" (33 EDO)
 
-Opening at 170 BPM, the sub-heavy techno track 'Nondegenerate' in 33 notes per octave (EDO = equal divisions per octave) channels a dystopian sci-fi rave.  The microtunable VST Arturia Pigments is used for all synth sounds, including the arp, chords, and sub bass.  This [list of microtunable VST synths on the xenharmonic wiki](https://en.xen.wiki/w/List_of_microtonal_software_plugins) is how I first heard of Pigments.   
-To microtune Pigments I used [Sevish's scale workshop](https://sevish.com/scaleworkshop/?version=2.1.0) and exported a `.scl` file for 33-EDO. To create this tuning file, the steps are:   
+Channeling a dystopian sci-fi rave, the sub-heavy techno track 'Nondegenerate' in 33 notes per octave (EDO = equal divisions per octave) opens the album at 170 BPM.
+
+The microtunable VST Arturia Pigments is used for all synth sounds, including the arp, chords, and sub bass.  This [list of microtunable VST synths on the xenharmonic wiki](https://en.xen.wiki/w/List_of_microtonal_software_plugins) is how I first heard of Pigments.  To microtune Pigments I used [Sevish's scale workshop](https://sevish.com/scaleworkshop/?version=2.1.0) and exported a `.scl` file for 33-EDO. To create this tuning file, the steps are:   
 
 `New Scale -> Equal Temperament -> "Number of Divisions" = 33, "Interval to divide" = 2/1 -> Export Scala scale (.scl)`
 
@@ -76,7 +77,7 @@ This `takeArp'` function lets you dramatically change the melody by changing eit
 
 This is not the exact code I used for the melody (I lost the code with `:q!`) but it is close.
 
-I'll briefly go over chords, bass, and production before next track. This section goes into a bit of microtonal theory, then plug-ins and techniques used for production.
+I'll briefly go over chords, bass, and production before highlighting the next two tracks. This section goes into a bit of microtonal theory, then plug-ins and techniques used for production.
 
 The chords stabs have the pitches `[0, 4, 9, 14, 22]` in 33-tone, so root, neutral second, Just minor 3rd, perfect 4th, minor 6th.  It's a kind of a second-inversion minor 7 with a neutral sixth.  I find the [EDJI ruler](http://micro.soonlabel.com/Scott_Thompson/edjiruler.html) to be very helpful for learning a new temperament.
  I also use some [custom Python tuning tools](https://github.com/TylerMclaughlin/tuning_tools) I made to [convert 12-EDO pitch classes to non-12-EDO approximations](https://github.com/TylerMclaughlin/tuning_tools/blob/master/twelve_to_edo_alternatives.py).
@@ -92,7 +93,7 @@ To compose the melodic contour in this bass ostinato, I used theory from Lerdahl
 n "~ 0 0 <<7 5 > 3>"
 ```
 
-Regarding the microtones in the bass, the notes divide 2.5 semitones (seven 33-EDO steps) into four pitches so it's quite microtonal yet it's still perceived as four distinct pitches.  For an interesting timbral effect, I layered two bass oscillators, with the second pitched 15 33-EDO steps apart (545.5 cents, an approximation of the 11th harmonic). This harmonization really makes the bass shine and sound cool on trashy speakers. It's almost like additive synthesis with extra 11th harmonic. The harmonic series is an indispensible reference when sound designing percussion and bass.
+Regarding the microtones in the bass melody, the notes divide 2.5 semitones (seven 33-EDO steps) into four pitches so the melody is quite microtonal yet still perceived as four distinct pitches.  To add an interesting timbral effect, I layered two bass oscillators, with the second pitched 15 33-EDO steps apart (545.5 cents, an approximation of the 11th harmonic). This harmonization really makes the bass shine and sound cool on trashy speakers. It's almost like additive synthesis with an extra 11th harmonic. I fnd the harmonic series to be an indispensible reference when sound designing percussion and bass.
 
 For mixing and production, I used drum bus limiting, multiband sidechaining, mid-side EQ, a mastering chain with the stock Ableton limiter, Rift by Minimal Audio for distortion on the chords and hi-hats, and Output Portal for delay effects. For sub and bass compatibility, I followed Slynk's recipe for [making sub bass sound good on any sound system](https://www.youtube.com/watch?v=ecKbeDfJxtQ). 
 
@@ -121,7 +122,7 @@ This track was fully live-coded in TidalCycles with minimal or zero tweaks after
  Saying 'no to twelve notes' and 'no to 16 beats' resulted in something incredibly bizarre. When I began this production, I was inspired by the sound design of the late producer [Qebrus](https://exophobiaorgqebrus.bandcamp.com/). But what I arrived at was something completely different.
 
 
-The TidalCycles code for this track is about 100 lines. It makes ample use of the non-default TidalCycles function `ncat` written by pulu on the TC discord. 
+The TidalCycles code for this track is about 100 lines. It makes ample use of the non-default TidalCycles function `ncat` written by pulu on the TidalCycles discord. 
 
 ```haskell
 let ncat = seqPLoop . go 0                                                        
