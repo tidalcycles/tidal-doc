@@ -25,11 +25,11 @@ A small but active contingent of artists recognizes and challenges this status q
 Xuixo, a 6-track EP released on the xenharmonic label [split-notes](http://split-notes.com/) is the first studio EP by Relyt R, the alias I created for microtonal algorave. Relyt R is a focused split from my other algorave work as [R Tyler](https://instagram.com/1000instamilligrams).  The Xuixo EP features algorithmic and machine learning enabled techno and dance music using non-Western tunings.
   19-, 21-, and 33-tone equal temperaments were chosen to synthesize alien harmonies and melodies with notes exterior to the common 12.
 
-My motivation for incorporating live-coding, machine learning, techno,  and xenharmonic scales is to imagine how music in the future may exist--with a radically different sonic palette. The intention behind Xuixo EP was to use this set of digital tools and custom code bases to evoke wonder about an algorithmic future.  Perhaps the future will be alien and dystopian. If so, a fast, brutal, and bizarre xenharmonic techno soundtrack would be fitting.
+My motivation for incorporating live-coding, machine learning, techno, and xenharmonic scales is to imagine how music in the future may exist--with a radically different sonic palette. The intention behind Xuixo EP was to use this set of digital tools and custom code bases to evoke wonder about an algorithmic future.  Perhaps our future will be alien and dystopian. If so, a fast, brutal, and bizarre xenharmonic techno soundtrack would be fitting.
 
 ### Track Highlights
 
-I'm going to highlight code and methodology behind three tracks, starting with the opener "Nondegenerate", then "Three", and then "10 Megakelvin".  "Nondegenerate" will be the longest description as I'd like to explain the microtonal setup used throughout my album.
+I'm going to highlight code and methodology behind three tracks, starting with the opener "Nondegenerate", then "Three", and then "10 Megakelvin".  "Nondegenerate" will be the longest description as I'd like to explain the microtonal setup used throughout the album.
 
 #### "Nondegenerate" (33 EDO)
 
@@ -42,9 +42,9 @@ The microtunable VST Arturia Pigments is used for all synth sounds, including th
 On this track I controlled Ableton Live with TidalCycles via MIDI and recorded the results. This track was not recorded live--clips from TidalCycles were pieced together over a DJ-friendly arrangement structure.  The rigidity of 8- and 16-bar arrangement structure seems to be foundational or omnipresent in (Western) dance music so I wanted to enforce that structure for this piece.
 
 The way I played and composed the arpeggio in TidalCycles is with several custom functions I wrote (and [one by from polymorphic.engine](https://club.tidalcycles.org/t/pattern-to-list/2982)). They are constructed from base TidalCycles functions `nTake`, `toScale'` (for non-12-tone scales), and `segment`.
-Essentially, I use a custom function `takeArp`' to map a math function to a microtonal scale and create an isorhythm out of it. 
+Essentially, I use a custom function `takeArp`' to map a math function to a microtonal scale and construct an isorhythm out of it. 
 
-A little more detail before I share the code:  I start with a a mathematical trigonometric function of time `y(t)`, quantize it to a certain number of samples `{t}` with `segment`, map their values `{y(t)}` to an ordered cycle of pitches in a scale (embedded in a 33-note chromatic scale) with `tScale'`, and use [state memory](https://tidalcycles.org/docs/reference/state_values/) (with `nT` derived from `nTake`) so that everytime a rhythmic onset is encountered and scheduled, the next note is taken from the cycle of pitches (creating an isorhythm).    
+A little more detail before I share the code:  I start with a a mathematical trigonometric function of time `y(t)`, quantize it to a certain number of samples `{t}` with `segment`, map their values `{y(t)}` to an ordered cycle of pitches in a scale (embedded in a 33-note chromatic scale) with `tScale'`, and use [state memory](https://tidalcycles.org/docs/reference/state_values/) (with `nT` derived from `nTake`) so that everytime a rhythmic onset is encountered and scheduled, the next note is taken from the cycle of pitches, creating an isorhythm.    
 
 Here is the code to make `takeArp'`:
 
@@ -73,14 +73,14 @@ d1 $ struct "t(13,16)" $ takeArp' "nondegenerate" 9 33
      s "midi" # midichan 1
 ```
 
-This `takeArp'` function lets you dramatically change the melody by changing either the trig function, its numeric range, its frequency, its segmentation, the scale itself, the number of values taken, and the rhythmic onsets (specified here using `struct`). 
+This `takeArp'` function lets you dramatically change the melody by changing either the trig function, its numeric range, its frequency (with `slow` or `fast`), its segmentation, the scale itself, the number of values taken, and the rhythmic onsets (specified here using `struct`). 
 
-This is not the exact code I used for the melody (I lost the code with `:q!`) but it is close.
+This is not the exact code I used for the melody (I lost the code with `:q!` in vim) but it is close.
 
 I'll briefly go over chords, bass, and production before highlighting the next two tracks. This section goes into a bit of microtonal theory, then plug-ins and techniques used for production.
 
 The chords stabs have the pitches `[0, 4, 9, 14, 22]` in 33-tone, so root, neutral second, Just minor 3rd, perfect 4th, minor 6th.  It's a kind of a second-inversion minor 7 with a neutral sixth.  I find the [EDJI ruler](http://micro.soonlabel.com/Scott_Thompson/edjiruler.html) to be very helpful for learning a new temperament.
- I also use some [custom Python tuning tools](https://github.com/TylerMclaughlin/tuning_tools) I made to [convert 12-EDO pitch classes to non-12-EDO approximations](https://github.com/TylerMclaughlin/tuning_tools/blob/master/twelve_to_edo_alternatives.py).
+ I also use some [custom Python tuning tools](https://github.com/TylerMclaughlin/tuning_tools) I made to [convert 12-EDO pitch classes to non-12-EDO approximations](https://github.com/TylerMclaughlin/tuning_tools/blob/master/twelve_to_edo_alternatives.py), but because of the neutral sixth, this chord is unlike any found in 12-EDO.
 
 The bass pattern is simple, with a steady stream of 16th notes except there are no 16th notes on the quarter note onsets where the kick drum plays.  This makes the kick and bass sound more like a single instrument and helps with mixing.  Here's the pattern visualized on a piano roll: 
 
@@ -99,27 +99,27 @@ For mixing and production, I used drum bus limiting, multiband sidechaining, mid
 
 #### "Three"
 
-The experimental club track "Three" was my first production after I coded a machine learning tool in Python I named [WAV Clustering Workflow](https://github.com/TylerMclaughlin/wav_clustering_workflow) (WCW) for clustering drum samples by acoustic similarity. 
- I used WCW to cluster [18000 vintage drum machine samples from kb6](https://samples.kb6.de/) and browsed the generated file folders corresponding to clusters (see WCW readme for more info). 
- One of the cluster folders in particular was full of insane laser sound effects, so I simply played through them, in order more or less (hierarchical clustering means within a cluster, sounds are further sorted by subclusters). I found a similar folder with short closed hi-hats. To play sounds I drag 128 samples at a time in an Ableton drum rack then play them in order with 
+The experimental club track "Three" was my first production after I coded a machine learning tool in Python. I named it [WAV Clustering Workflow](https://github.com/TylerMclaughlin/wav_clustering_workflow) (WCW) and I use it for clustering drum samples by acoustic similarity. 
+ I used WCW to cluster [18000 vintage drum machine samples from kb6](https://samples.kb6.de/) and browsed the generated file folders corresponding to clusters (see the WCW `readme.md` for more info). 
+ One of the cluster folders in particular was full of insane laser sound effects, so I simply played through them, in order more or less (hierarchical clustering means within a cluster, sounds are further sorted by subclusters). I found a similar folder with short closed hi-hats. To play the sounds I drag 128 samples at a time in an Ableton drum rack then play them in order with 
 
 ```haskell
 fast 16 $ slow 128 $ n "0 .. 127" # s "midi" # midichan 1
 ```
 
-In Ableton's drum racks you can assign 'choke groups', allowing you to mute samples when another sample from the assigned group triggers.  This prevent samples from bleeding into each other, and is just like using `cut` in TidalCycles for audio samples (a trick I learned from Kindohm).
+In Ableton's drum racks you can assign 'choke groups'. This allows you to mute samples when another sample from the assigned group triggers.  This prevent samples from bleeding into each other, and is just like using `cut` in TidalCycles for audio samples in SuperCollider (a trick I learned from [Kindohm](https://www.youtube.com/watch?v=smQOiFt8e4Q)).
 
-For the stereo-panned stream of ultra-compressed bass notes at around the 1:20 timestamp, I actually play all 128 sounds in order, and kept all the samples that came out of WCW.  It's the sound of a sweep through neighboring notes in a cluster of kick drums in acoustic latent space--very satisfying and wild sounding.  I added OTT (Ableton Live Multiband dynamics) at 100% (haha) then I added binaural panning using the Envelop max4live device on this and other instrument tracks, with LFOs controlling the X and Y coordinates.
+For the dynamically stereo-panned stream of ultra-compressed bass notes at around the 1:20 timestamp, I actually play all 128 sounds in order, and kept all the samples that came out of WCW.  It's the sound of a sweep through neighboring notes in a cluster of kick drums in acoustic latent space--very satisfying and wild sounding.  I added OTT (Ableton Live Multiband dynamics) at 100% (haha) then I added binaural panning using the [Envelop max4live devices](https://envelop.us/page/software) on this and other instrument tracks, with LFOs controlling the X and Y coordinates.
 
 I also used a NEJI tuning (near equal just intonation, a concept I learned from [Zhea Erose](https://www.youtube.com/@ZheannaErose/videos) in the Xenharmonic Alliance discord) using my [NEJI calculator](https://github.com/TylerMclaughlin/neji_calculator) to export a scala file for the wobbly vocal-like chord that's played in bursts of 7 (starting at 0:03 timestamp).
 
-In a slower track like this, groove is really helpful (via `nudge` TidalCycles functions or Roger Linn's MPC 16th note grooves in Ableton).  The composition isn't that crazy, but it's the machine-learning for sound selection and overall contrast that makes it interesting.  
+In a slower track like this, using groove or swing is really helpful. I do this by patterning `nudge` in TidalCycles or by using Roger Linn's MPC 16th note grooves in Ableton).  The overall composition isn't that crazy, but it's the machine-learning for sound selection and overall contrast that makes it interesting.
 
 #### "10 Megakelvin" (21 EDO)
 
 This track was fully live-coded in TidalCycles with minimal or zero tweaks after recording. I used a 21-EDO `.scl` file from Sevish's scale workshop and microtuned several instances of Arturia Pigments, similar to how I set up synths for "Nondegenerate" above and for other tracks on the album.  I decided to use an 18-beat rhythm because it's close to 16, and it's still an even number, so it's still amenable to head-nodding and/or dancing. 
 
- Saying 'no to twelve notes' and 'no to 16 beats' resulted in something incredibly bizarre. When I began this production, I was inspired by the sound design of the late producer [Qebrus](https://exophobiaorgqebrus.bandcamp.com/). But what I arrived at was something completely different.
+ Saying 'no to twelve notes' and 'no to 16 beats' resulted in something incredibly bizarre. When I began this production, I was inspired by the sound design of the late producer [Qebrus](https://exophobiaorgqebrus.bandcamp.com/). But what I arrived at was completely different.
 
 
 The TidalCycles code for this track is about 100 lines. It makes ample use of the non-default TidalCycles function `ncat` written by pulu on the TidalCycles discord. 
@@ -184,8 +184,8 @@ I'll conclude this section with some notes on my production workflow.
 
  I tend to mix, compress, and limit as I'm composing and coding. I use a technique called 'Brauerizing' where I group different instruments (drums, basses, melodies, harmonies) and compress and limit them each individually. Then I compress and limit on the master bus.  This glues the sounds together hierarchically and makes all the elements interact dynamically.  I almost consider it part of the composition because you need to consider: how much do you want your independent signals to overlap, where do you want negative space, etc. 
 
-This track "10 Megakelvin" is unusual because I didn't use any distortion, just heavy amounts of compression and a little Valhalla Reverb. For ear candy, I put an unsynced LFO on the cutoff frequency of a low-pass filter on the acoustic drum break--this really makes loops sound less repetitive and makes the track sort of wash and swell. 
-On the hi-hats I use a free max4live device called 'Granular Mirror Maze', which I heard about from a reddit AMA with Max Cooper.  It gives these drums a really unique metallic sound that's distinct from normal stereo delay with feedback.
+This track "10 Megakelvin" is unusual because I didn't use any distortion, just heavy amounts of compression and a little Valhalla Reverb. For ear candy, I put an unsynced LFO on the cutoff frequency of a low-pass filter on the acoustic drum break--this technique helps make loops sound less repetitive and makes the whole track sort of wash and swell. 
+On the hi-hats I use a free max4live device called 'Granular Mirror Maze', which I heard about from a reddit AMA with Max Cooper.  It adds to these drums a really unique metallic sound that's distinct from normal stereo delay with feedback.
 
 ### About Relyt R
 
@@ -193,5 +193,5 @@ Relyt R is my new alias, the alter ego of Silicon Valley algorave artist and [AV
  
 Xuixo is my first release under this new alias, and I am fortunate to have had it released on [Sevish's xenharmonic label split-notes](http://split-notes.com). 
 I have been producing xenharmonic dance music since 2017 and live-coding music in TidalCycles since 2018. 
- Beyond the topics in this blog post, I am captivated by sea creatures, 3D art, and molecular biology.  I'd like to thank the friends who have helped me along the way to this release. And especially those who acquiesced to offering an initial vibe-check and listened to my EP when it was still a demo.
+ Beyond the topics in this blog post, I am captivated by 3D art, molecular biology, and sea creatures. I'd like to thank the friends who have helped me along the way to this release, especially those who acquiesced to offering an initial vibe-check and listened to my EP when it was still a demo.
 
