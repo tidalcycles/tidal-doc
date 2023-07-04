@@ -14,7 +14,9 @@ author: Relyt R aka R Tyler
 | Available | [bandcamp](https://relytr.bandcamp.com/album/xuixo), Spotify, Youtube |
 | Release Date | June 28th, 2023 |
 
-## Summary
+![xuixo album art](xuixo_art.png)
+
+## Introduction 
 
 We've been listening to music with the same 12 notes (C, C#, D, Eb, etc.) for hundreds of years, thanks to 18th century Europeans. Times have certainly changed. Why does our music not reflect that?
 
