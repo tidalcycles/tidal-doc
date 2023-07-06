@@ -48,7 +48,11 @@ On this track I controlled Ableton Live with TidalCycles via MIDI and recorded t
 
 The way I played and composed the arpeggio in TidalCycles is with several custom functions I wrote (and [one from polymorphic.engine](https://club.tidalcycles.org/t/pattern-to-list/2982)). They are constructed from base TidalCycles functions `nTake`, `toScale'` (for non-12-tone scales), and `segment`. Essentially, I use a custom function `takeArp'` to map a math function to a microtonal scale and construct an isorhythm out of it. 
 
-A little more detail before I share the code:  I start with a mathematical trigonometric function of time `y(t)`, quantize it to a certain number of samples `{t}` with `segment`, map their values `{y(t)}` to an ordered cycle of pitches in a scale (embedded in a 33-note chromatic scale) with `tScale'`, and use [state memory](https://tidalcycles.org/docs/reference/state_values/) (with `nT` derived from `nTake`) so that everytime a rhythmic onset is encountered and scheduled, the next note is taken from the cycle of pitches, creating an isorhythm.    
+A little more detail before I share the code:  
+- I start with a mathematical trigonometric function of time `y(t)`
+- quantize it to a certain number of samples `{t}` with `segment`
+- map the values `{y(t)}` to an ordered cycle of pitches in a scale (embedded in a 33-note chromatic scale) with `tScale'`
+- use [state memory](https://tidalcycles.org/docs/reference/state_values/) (with `nT` derived from `nTake`) so that everytime a rhythmic onset is encountered and scheduled, the next note is taken from the cycle of pitches, creating an isorhythm.    
 
 Here is the code to make `takeArp'`:
 
@@ -77,33 +81,39 @@ d1 $ struct "t(13,16)" $ takeArp' "nondegenerate" 9 33
      s "midi" # midichan 1
 ```
 
-This `takeArp'` function lets you dramatically change the melody by changing either the trig function, its numeric range, its frequency (with `slow` or `fast`), its segmentation, the scale itself, the number of values stored in the `nTake` counter, and the rhythmic onsets (specified here using `struct`). 
+This `takeArp'` function lets you dramatically change the melody by changing:
+- the trig function
+- its numeric range
+- its frequency (with `slow` or `fast`)
+- its segmentation
+- the scale itself
+- the number of values stored in the `nTake` counter
+- the rhythmic onsets (specified here using `struct`)
 
-This is not the exact code I used for the melody (I lost the code with `:q!` in vim) but it is very close.
+> This is not the exact code I used for the melody (I lost the code with `:q!` in vim) but it is very close.
 
+#### Microtonal structure and production 
 I'll briefly go over chords, bass, and production before highlighting the next two tracks. This section goes into a bit of microtonal theory, then plug-ins and techniques used for production.
 
-> The chords stabs have the pitches `[0, 4, 9, 14, 22]` in 33-tone, so root, neutral second, Just minor 3rd, perfect 4th, minor 6th.  It's a kind of a second-inversion minor 7 with a neutral sixth.  I find the [EDJI ruler](http://micro.soonlabel.com/Scott_Thompson/edjiruler.html) to be very helpful for learning a new temperament. I also use some [custom Python tuning tools](https://github.com/TylerMclaughlin/tuning_tools) I made to [convert 12-EDO pitch classes to non-12-EDO approximations](https://github.com/TylerMclaughlin/tuning_tools/blob/master/twelve_to_edo_alternatives.py), but because of the neutral sixth, this chord is unlike any found in 12-EDO.
+- The chords stabs have the pitches `[0, 4, 9, 14, 22]` in 33-tone, so root, neutral second, Just minor 3rd, perfect 4th, minor 6th.  It's a kind of a second-inversion minor 7 with a neutral sixth.  I find the [EDJI ruler](http://micro.soonlabel.com/Scott_Thompson/edjiruler.html) to be very helpful for learning a new temperament. I also use some [custom Python tuning tools](https://github.com/TylerMclaughlin/tuning_tools) I made to [convert 12-EDO pitch classes to non-12-EDO approximations](https://github.com/TylerMclaughlin/tuning_tools/blob/master/twelve_to_edo_alternatives.py), but because of the neutral sixth, this chord is unlike any found in 12-EDO.
+- The bass pattern is simple, with a steady stream of 16th notes except there are no 16th notes on the quarter note onsets where the kick drum plays.  This makes the kick and bass sound more like a single instrument and helps with mixing.  Here's the pattern visualized on a piano roll: 
 
-> The bass pattern is simple, with a steady stream of 16th notes except there are no 16th notes on the quarter note onsets where the kick drum plays.  This makes the kick and bass sound more like a single instrument and helps with mixing.  Here's the pattern visualized on a piano roll: 
-
-![bass notes](xuixo_nondegenerate_bass.png). 
 <img
   src={require('./xuixo_nondegenerate_bass.png').default}
   alt="piano roll bass"
-  width="400"
+  width="600"
 />
 
-To compose the melodic contour in this bass ostinato, I used theory from Lerdahl and Jackendoff's [Generative theory of tonal music](https://en.wikipedia.org/wiki/Generative_theory_of_tonal_music), namely the `4 1 2 1 3 1 2 1` pattern found in music and linguistics (refer to G. Toussaint's 'Geometry of Musical Rhythm' for an accessible intro). TidalCycles mininotation makes this almost effortless:
+- The melodic contour in this bass ostinato uses theory from Lerdahl and Jackendoff's [Generative theory of tonal music](https://en.wikipedia.org/wiki/Generative_theory_of_tonal_music), namely the `4 1 2 1 3 1 2 1` pattern found in music and linguistics (refer to G. Toussaint's 'Geometry of Musical Rhythm' for an accessible intro). TidalCycles mininotation makes this almost effortless:
 
 ```haskell
 -- bass melody
 n "~ 0 0 <<7 5 > 3>"
 ```
 
-> Regarding the microtones in the bass melody, the notes divide 2.5 semitones (seven 33-EDO steps) into four pitches so the melody is quite microtonal yet still perceived as four distinct pitches.  To add an interesting timbral effect, I layered two bass oscillators, with the second pitched 15 33-EDO steps apart (545.5 cents, an approximation of the 11th harmonic). This harmonization really makes the bass shine and sound cool on trashy speakers. It's almost like additive synthesis with an extra 11th harmonic. I fnd the harmonic series to be an indispensible reference when sound designing percussion and bass.
+- Regarding the microtones in the bass melody, the notes divide 2.5 semitones (seven 33-EDO steps) into four pitches so the melody is quite microtonal yet still perceived as four distinct pitches.  To add an interesting timbral effect, I layered two bass oscillators, with the second pitched 15 33-EDO steps apart (545.5 cents, an approximation of the 11th harmonic). This harmonization really makes the bass shine and sound cool on trashy speakers. It's almost like additive synthesis with an extra 11th harmonic. I fnd the harmonic series to be an indispensible reference when sound designing percussion and bass.
 
-> For mixing and production, I used drum bus limiting, multiband sidechaining, mid-side EQ, a mastering chain with the stock Ableton limiter, Rift by Minimal Audio for distortion on the chords and hi-hats, and Output Portal for delay effects. For sub and bass compatibility, I followed Slynk's recipe for [making sub bass sound good on any sound system](https://www.youtube.com/watch?v=ecKbeDfJxtQ). 
+- For mixing and production, I used drum bus limiting, multiband sidechaining, mid-side EQ, a mastering chain with the stock Ableton limiter, Rift by Minimal Audio for distortion on the chords and hi-hats, and Output Portal for delay effects. For sub and bass compatibility, I followed Slynk's recipe for [making sub bass sound good on any sound system](https://www.youtube.com/watch?v=ecKbeDfJxtQ). 
 
 #### "Three"
 
@@ -125,7 +135,7 @@ In Ableton's drum racks you can assign 'choke groups'. This allows you to mute s
 
 This track was fully live-coded in TidalCycles with minimal or zero tweaks after recording. I used a 21-EDO `.scl` file from Sevish's scale workshop and microtuned several instances of Arturia Pigments, similar to how I set up synths for "Nondegenerate" above and for other tracks on the album.  I decided to use an 18-beat rhythm because it's close to 16, and it's still an even number, so it's still amenable to head-nodding and/or dancing. 
 
-Saying 'no to twelve notes' and 'no to 16 beats' resulted in something incredibly bizarre. When I began this production, I was inspired by the sound design of the late producer [Qebrus](https://exophobiaorgqebrus.bandcamp.com/). But what I arrived at was completely different. The TidalCycles code for this track is about 100 lines. It makes ample use of the non-default TidalCycles function `ncat` written by pulu on the TidalCycles discord. 
+Saying **no to twelve notes** and **no to 16 beats** resulted in something incredibly bizarre. When I began this production, I was inspired by the sound design of the late producer [Qebrus](https://exophobiaorgqebrus.bandcamp.com/). But what I arrived at was completely different. The TidalCycles code for this track is about 100 lines. It makes ample use of the non-default TidalCycles function `ncat` written by pulu on the TidalCycles discord. 
 
 ```haskell
 let ncat = seqPLoop . go 0                                                        
@@ -136,7 +146,7 @@ let ncat = seqPLoop . go 0
             t' = t_acc + t
 ```
 
-> It's basically `cat` but you specify how long the subpatterns last (see code below for usage). `ncat` allows me to spread a bunch of wild and contrasting sounds over a long cycle, and it's fun for improvising because you can change how long any one of the subpatterns lasts, and doing so shifts all the other patterns. In "10 Megakelvin" I use `ncat` to interweave drum samples from from the Modular Drums from Mars collection together with extremely sci-fi microtonal chords.  I've found the main utility for this kind of horizontal sequencing and concatenation is it makes things more monophonic and musical (one idea at a time).  I find regular `cat` to be maybe too predictable or constant.  Here is most of the code I used for "10 Megakelvin":
+It's basically `cat` but you specify how long the subpatterns last (see code below for usage). `ncat` allows me to spread a bunch of wild and contrasting sounds over a long cycle, and it's fun for improvising because you can change how long any one of the subpatterns lasts, and doing so shifts all the other patterns. In "10 Megakelvin" I use `ncat` to interweave drum samples from from the Modular Drums from Mars collection together with extremely sci-fi microtonal chords.  I've found the main utility for this kind of horizontal sequencing and concatenation is it makes things more monophonic and musical (one idea at a time).  I find regular `cat` to be maybe too predictable or constant.  Here is most of the code I used for "10 Megakelvin":
 
 ```haskell
 setcps(70/120)
@@ -184,7 +194,7 @@ d9 $ drumz $ every 5 (|+ n 12) $ (|+ n 2) $ n "0 .. 17" # m 9
 ### Production Workflow
 I'll conclude this section with some notes on my production workflow.
 
-I tend to mix, compress, and limit as I'm composing and coding. I use a technique called 'Brauerizing' where I group different instruments (drums, basses, melodies, harmonies) and compress and limit them each individually. Then I compress and limit on the master bus.  This glues the sounds together hierarchically and makes all the elements interact dynamically.  I almost consider it part of the composition because you need to consider: how much do you want your independent signals to overlap, where do you want negative space, etc. 
+I tend to mix, compress, and limit as I'm composing and coding. I use a technique called [Brauerizing](https://brauerizing.wordpress.com/2014/03/19/brauerizing-a-how-to-guide/) where I group different instruments (drums, basses, melodies, harmonies) and compress and limit them each individually. Then I compress and limit on the master bus.  This glues the sounds together hierarchically and makes all the elements interact dynamically.  I almost consider it part of the composition because you need to consider: how much do you want your independent signals to overlap, where do you want negative space, etc. 
 
 - This track *10 Megakelvin* is unusual because I didn't use any distortion, just heavy amounts of compression and a little Valhalla Reverb. For ear candy, I put an unsynced LFO on the cutoff frequency of a low-pass filter on the acoustic drum break--this technique helps make loops sound less repetitive and makes the whole track sort of wash and swell.
 - On the hi-hats I use a free max4live device called 'Granular Mirror Maze', which I heard about from a reddit AMA with Max Cooper.  It adds to these drums a really unique metallic sound that's distinct from normal stereo delay with feedback.
