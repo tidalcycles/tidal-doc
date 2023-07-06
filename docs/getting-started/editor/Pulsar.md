@@ -13,26 +13,20 @@ id: Pulsar
 ---
 
 **UPDATE - Jan 1, 2023**: The Pulsar Package Manager now is fully operational with the Tidalcycles package. Once Pulsar is installed, installation and updates for tidalcycles can be managed within Pulsar. There is no longer a need for manual package install. 
+**UPDATE - Jul 7, 2023**: Pulsar on macOS is now signed, no need for the `xattr` command
 
 ---
 
 ## Install Pulsar and Tidalcycles package
 1. Download from the [Pulsar download page](https://pulsar-edit.dev/download.html).
-2. (MacOS): Set attributes on Pulsar.app   (see the Pulsar download page for details)
-
-```sh
-xattr -cr /Applications/Pulsar.app/
-```
-
-3. Start Pulsar application
-4. Load Package Manager: from Menu > Packages > Open Package Manager 
+2. Start Pulsar application
+3. Load Package Manager: from Menu > Packages > Open Package Manager 
     - Select Install tab
     - search for "tidalcycles"
     - select install 
 
 **Known issues**:
 - *macOS performance:* this may be resolved by disabling the `github` package
-- *macOS dmg install:* Current binaries are not signed. Launching Pulsar will produce an error "Pulsar cannot be opened because the developer cannot be verified". Workaround: see above
 
 Other issues:
 - Auto-complete with default settings can be slower and more intrusive for livecoding. Possble workarounds:
