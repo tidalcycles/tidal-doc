@@ -40,7 +40,7 @@ I'm going to highlight code and methodology behind three tracks:
 
 Channeling a dystopian sci-fi rave, the sub-heavy techno track *Nondegenerate* opens the album at 170 BPM and 33 notes per octave (EDO = equal divisions per octave). 
 
-The microtunable VST [Arturia Pigments](https://www.arturia.com/products/software-instruments/pigments/overview) is used for all synth sounds, including the arp, chords, and sub bass.  This [list of microtunable VST synths on the xenharmonic wiki](https://en.xen.wiki/w/List_of_microtonal_software_plugins) is how I first heard about Pigments.  To microtune Pigments I used [Sevish's scale workshop](https://sevish.com/scaleworkshop/?version=2.1.0) and exported a `.scl` file for 33-EDO. To create this tuning file, the steps are:   
+The microtunable VST [Arturia Pigments](https://www.arturia.com/products/software-instruments/pigments/overview) is used for all synth sounds, including the arp, chords, and sub bass.  This [list of microtunable VST synths on the xenharmonic wiki](https://en.xen.wiki/w/List_of_microtonal_software_plugins) is how I first heard about Pigments.  To microtune Pigments I used [Sevish's scale workshop](https://sevish.com/scaleworkshop/?version=2.1.0), exported a `.scl` file for 33-EDO, and loaded it into Pigments. To create this tuning file, the steps are:   
 
 `New Scale -> Equal Temperament -> "Number of Divisions" = 33, "Interval to divide" = 2/1 -> Export Scala scale (.scl)`
 
@@ -81,7 +81,7 @@ d1 $ struct "t(13,16)" $ takeArp' "nondegenerate" 9 33
      s "midi" # midichan 1
 ```
 
-This `takeArp'` function lets you dramatically change the melody by changing:
+This `takeArp'` function lets you dramatically alter the melody by changing:
 - the trig function
 - its numeric range
 - its frequency (with `slow` or `fast`)
@@ -111,7 +111,7 @@ I'll briefly go over chords, bass, and production before highlighting the next t
 n "~ 0 0 <<7 5 > 3>"
 ```
 
-- Regarding the microtones in the bass melody, the notes divide 2.5 semitones (seven 33-EDO steps) into four pitches so the melody is quite microtonal yet still perceived as four distinct pitches.  To add an interesting timbral effect, I layered two bass oscillators, with the second pitched 15 33-EDO steps apart (545.5 cents, an approximation of the 11th harmonic). This harmonization really makes the bass shine and sound cool on trashy speakers. It's almost like additive synthesis with an extra 11th harmonic. I fnd the harmonic series to be an indispensible reference when sound designing percussion and bass.
+- Regarding the microtones in the bass melody, the notes divide 2.5 semitones (seven 33-EDO steps) into four pitches so the melody is quite microtonal yet still perceived as four distinct pitches.  To add an interesting timbral effect, I layered two bass oscillators, with the second pitched 15 33-EDO steps apart (545.5 cents, an approximation of the 11th harmonic). This harmonization really makes the bass shine and sound cool even on trashy speakers. It's almost like additive synthesis with an extra 11th harmonic. I fnd the harmonic series to be an indispensible reference when sound designing percussion and bass.
 
 - For mixing and production, I used drum bus limiting, multiband sidechaining, mid-side EQ, a mastering chain with the stock Ableton limiter, Rift by Minimal Audio for distortion on the chords and hi-hats, and Output Portal for delay effects. For sub and bass compatibility, I followed Slynk's recipe for [making sub bass sound good on any sound system](https://www.youtube.com/watch?v=ecKbeDfJxtQ). 
 
@@ -125,7 +125,7 @@ fast 16 $ slow 128 $ n "0 .. 127" # s "midi" # midichan 1
 
 In Ableton's drum racks you can assign 'choke groups'. This allows you to mute samples when another sample from the assigned group triggers.  This prevent samples from bleeding into each other, and is just like using `cut` in TidalCycles for audio samples in SuperCollider (a trick I learned from [Kindohm](https://www.youtube.com/watch?v=smQOiFt8e4Q)).
 
-- For the dynamically stereo-panned stream of ultra-compressed bass notes at around the 1:20 timestamp, I actually play all 128 sounds in order, and kept all the samples that came out of WCW.  It's the sound of a sweep through neighboring notes in a cluster of kick drums in acoustic latent space--very satisfying and wild sounding.  I added OTT (Ableton Live Multiband dynamics) at 100% (haha) then I added binaural panning using the [Envelop max4live devices](https://envelop.us/page/software) on this and other instrument tracks, with LFOs controlling the X and Y coordinates.
+- For the dynamically stereo-panned stream of ultra-compressed bass notes at around the 1:20 timestamp, I actually play all 128 sounds in order, and kept all the samples that came out of WCW.  **It's the sound of a sweep through neighboring notes in a cluster of kick drums in acoustic latent space**--very satisfying and wild sounding.  I added OTT (Ableton Live Multiband dynamics) at 100% (haha) then I added binaural panning using the [Envelop max4live devices](https://envelop.us/page/software) on this and other instrument tracks, with LFOs controlling the X and Y coordinates.
 
 - I also used a NEJI tuning (near equal just intonation, a concept I learned from [Zhea Erose](https://www.youtube.com/@ZheannaErose/videos) in the Xenharmonic Alliance discord) using my [NEJI calculator](https://github.com/TylerMclaughlin/neji_calculator) to export a scala file for the wobbly vocal-like chord that's played in bursts of 7 (starting at 0:03 timestamp).
 
@@ -135,7 +135,7 @@ In Ableton's drum racks you can assign 'choke groups'. This allows you to mute s
 
 This track was fully live-coded in TidalCycles with minimal or zero tweaks after recording. I used a 21-EDO `.scl` file from Sevish's scale workshop and microtuned several instances of Arturia Pigments, similar to how I set up synths for "Nondegenerate" above and for other tracks on the album.  I decided to use an 18-beat rhythm because it's close to 16, and it's still an even number, so it's still amenable to head-nodding and/or dancing. 
 
-Saying **no to twelve notes** and **no to 16 beats** resulted in something incredibly bizarre. When I began this production, I was inspired by the sound design of the late producer [Qebrus](https://exophobiaorgqebrus.bandcamp.com/). But what I arrived at was completely different. The TidalCycles code for this track is about 100 lines. It makes ample use of the non-default TidalCycles function `ncat` written by pulu on the TidalCycles discord. 
+Saying **no to twelve notes** and **no to 16 beats** resulted in something incredibly bizarre. When I began this production, I was inspired by the sound design of the late producer [Qebrus](https://exophobiaorgqebrus.bandcamp.com/). But what I arrived at was completely different. The TidalCycles code for this track is about 100 lines. It makes ample use of the non-default TidalCycles function `ncat` written by pulu on the TidalCycles discord: 
 
 ```haskell
 let ncat = seqPLoop . go 0                                                        
@@ -194,7 +194,7 @@ d9 $ drumz $ every 5 (|+ n 12) $ (|+ n 2) $ n "0 .. 17" # m 9
 ### Production Workflow
 I'll conclude this section with some notes on my production workflow.
 
-I tend to mix, compress, and limit as I'm composing and coding. I use a technique called [Brauerizing](https://brauerizing.wordpress.com/2014/03/19/brauerizing-a-how-to-guide/) where I group different instruments (drums, basses, melodies, harmonies) and compress and limit them each individually. Then I compress and limit on the master bus.  This glues the sounds together hierarchically and makes all the elements interact dynamically.  I almost consider it part of the composition because you need to consider: how much do you want your independent signals to overlap, where do you want negative space, etc. 
+I tend to mix, compress, and limit as I'm composing and coding. I use a technique called [Brauerizing](https://brauerizing.wordpress.com/2014/03/19/brauerizing-a-how-to-guide/) where I group different instruments (drums, basses, melodies, harmonies) and compress and limit each group individually. Then I compress and limit on the master bus.  This glues the sounds together hierarchically and makes all the elements interact dynamically.  I almost consider it part of the composition because you need to consider: how much do you want your independent signals to overlap, where do you want negative space, etc. 
 
 - This track *10 Megakelvin* is unusual because I didn't use any distortion, just heavy amounts of compression and a little Valhalla Reverb. For ear candy, I put an unsynced LFO on the cutoff frequency of a low-pass filter on the acoustic drum break--this technique helps make loops sound less repetitive and makes the whole track sort of wash and swell.
 - On the hi-hats I use a free max4live device called 'Granular Mirror Maze', which I heard about from a reddit AMA with Max Cooper.  It adds to these drums a really unique metallic sound that's distinct from normal stereo delay with feedback.
