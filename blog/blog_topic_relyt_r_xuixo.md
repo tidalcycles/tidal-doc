@@ -11,6 +11,7 @@ date: 2023-07-07
 | Genre | Xenharmonic, Techno, Algorave, Microtonal |
 | Available | [bandcamp](https://relytr.bandcamp.com/album/xuixo), Spotify, Youtube |
 | Release Date | June 28th, 2023 |
+| Comments | [Club Tidal Forum Post](https://club.tidalcycles.org/t/blog-topic-tidal-music-xuixo-ep-by-relyt-r/4780) |
 
 <img
   src={require('./xuixo_art.png').default}
