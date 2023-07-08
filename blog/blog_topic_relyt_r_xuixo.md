@@ -1,7 +1,6 @@
 ---
 title: Tidal Music - Xuixo EP by Relyt R 
-author: Relyt R aka R Tyler
-date: 2023-01-01
+date: 2023-07-07
 ---
 
 | Tidal Musician | Relyt R    |
