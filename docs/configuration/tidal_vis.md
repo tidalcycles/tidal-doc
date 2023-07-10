@@ -47,3 +47,9 @@ id: tidal-vis
 
 To learn more about *tidal-vis*, head to the [GitHub
 repository](https://github.com/tidalcycles/tidal-vis) of the project.
+
+:::info  
+
+For a different approach to visualizing Tidal patterns, see the [Didactic Pattern Visualizer](https://github.com/ivan-abreu/didacticpatternvisualizer/tree/main) by Iván Abreu. Also see the blog post on it (by hh) with examples and code: [Tidal Visualization with Didactic Pattern Visualizer](https://tidalcycles.org/blog/blog_topic_visualizer).
+
+:::
