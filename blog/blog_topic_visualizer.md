@@ -1,15 +1,16 @@
 ---
 title: Tidal Visualization with Didactic Pattern Visualizer
-date: 2023-01-20
+date: 2023-07-01
 ---
 
 | Developer | [Iván Abreu](https://ivanabreu.net/) |
 | ---------------------: | :-------------- |
 | Source code | [GitHub](https://github.com/ivan-abreu/didacticpatternvisualizer/tree/main) |
 | Visualizing Application | [Processing](https://processing.org/) |
+| Blog post | hh |
 
 ## Introduction
-Didactic Pattern Visualizer (DPV) is an easy way to visualize sound patterns from Tidal Cycles. It was created by the artist and creative technologist Iván Abreu "...to study the potential and complexity of the syntax of the pattern system for sequencing Tidal Cycles sounds." It utilizes the open source visualization program *Processing* to provide a scrolling grid where colored shapes appear in rhythm reflecting the flow of Tidal events (notes). The GitHub materials also includes Tidal Cycles examples using DPV by the musician and digital Artist [CNDSD](http://www.malitzincortes.net/).
+Didactic Pattern Visualizer (DPV) is an easy way to visualize sound patterns from Tidal Cycles. It was created by the artist and creative technologist Iván Abreu "...to study the potential and complexity of the syntax of the pattern system for sequencing Tidal Cycles sounds." It utilizes the open source visualization program *[Processing](https://processing.org/)* to provide a scrolling grid where colored shapes appear in rhythm reflecting the flow of Tidal events (notes). The GitHub materials also includes Tidal Cycles examples using DPV by the musician and digital Artist [CNDSD](http://www.malitzincortes.net/).
 
 To use DPV (summary):
 - Install and configure the Processing application to receive OSC messages from Tidal
@@ -32,9 +33,9 @@ In the ReadMe, Iván notes that there are multiple ways to use DPV:
 - During live performance, to help unfold the musical structure and then emphasize and direct attention to rhythmic interactions of multiple sound layers.
 
 ## Creative Example - composed live code with visualization
-The example below shows how I used DPV to support crafting prepared code with some non-traditional rhythmical patterns that use cross-rhythms, polymeter, and irregular beat patterns. I found it to be really helpful to see exactly what is happening within the cycles and observing how the note placements change as I make micro adjustments to pattern values.
+The example below shows how I used DPV to support composing prepared code with rhythmic patterns that use cross-rhythms, polymeter, and irregular beat patterns. I found it to be really helpful to see exactly what is happening within the cycles and observing how the note placements change as I make small adjustments to pattern values.
 
-- Screen recording of the full session: [Contrasting Rhythms with visualization](https://www.youtube.com/watch?v=dwrwnNVT-Po)
+- Screen recording of the full session: [Erratic Rhythms with visualization](https://www.youtube.com/watch?v=dwrwnNVT-Po)
 - Tidal code: [GitHub - Erratic Rhythms](https://github.com/HighHarmonics2/livecoding/tree/main/tidal/erraticRhythms)
 
 ### Description
@@ -93,7 +94,7 @@ d4 $ freq "~ 400 ~ 800 [~ <1300 1600> ~ ~]" # s "soskick"
 />
 
 - d2: 9 note pattern with polymetric subdivision of 16
-- d3: 17 note pattern with alternating polymetric subdivisions %<1 1.4 0.8>
+- d3: 17 note pattern with alternating polymetric subdivisions `%<1 1.4 0.8>`
 
 ```haskell
 d2 $ freq "{1100 200 400 800 900 1100 1300 1500 1600}%16"  # sound "psin"
@@ -121,3 +122,10 @@ d3 $ jux (rev) $ sound "[supergong!17]/<0.6 1>" # nudge 0.3
 d4 $ fast 0.5 $ every 2 (degradeBy "<0.2 0.5 0.8>") $ freq ("~ 400 ~ 800 [~ <1300 1600> ~!2]" |* 0.5) # s "soskick"
     # connectionN 1 # sizeMin 12 # sizeMax 80 # figure "circle" # color "f58711"
 ```
+So that's it! 
+- Full performance: [Erratic Rhythms - with visualization](https://www.youtube.com/watch?v=dwrwnNVT-Po)
+- Tidal code: [GitHub - Erratic Rhythms](https://github.com/HighHarmonics2/livecoding/tree/main/tidal/erraticRhythms)
+
+Check out Iván's [Didactic Pattern Visualizer](https://github.com/ivan-abreu/didacticpatternvisualizer/tree/main)
+
+hh
