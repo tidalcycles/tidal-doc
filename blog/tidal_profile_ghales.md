@@ -3,14 +3,14 @@ title: Tidal Profile - Ghales
 date: 2023-07-31
 ---
 
-|          Tidal Cyclist | Ghales                                                                                                                                                        |
-| ---------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|               Location | Nomad                                                                                                                                                         |
-|       Years with Tidal | 5 yrs                                                                                                                                                         |
-|   Other LiveCoding env | p5.js, hydra, foxdot                                                                                                                                          |
-| Music available online | [Spotify](https://open.spotify.com/artist/0vkFKjAM0AXFZ9a28wSMqL), [SoundCloud](https://soundcloud.com/ghalestrilo), [Bandcamp](https://ghales.bandcamp.com/) |
-|            Code online | [GitHub](https://github.com/ghalestrilo)                                                                                                                      |
-|   Other music/audio sw | Reaper, Ableton, BitWig, Open Stage Control                                                                                                                   |
+|          Tidal Cyclist | Ghales                                                                                                                                                         |
+| ---------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|               Location | Nomad                                                                                                                                                          |
+|       Years with Tidal | 5 yrs                                                                                                                                                          |
+|   Other LiveCoding env | p5.js, hydra, foxdot                                                                                                                                           |
+| Music available online | [Spotify](https://open.spotify.com/artist/0vkFKjAM0AXFZ9a28wSMqL), [SoundCloud](https://soundcloud.com/ghalesdobeat), [Bandcamp](https://ghales.bandcamp.com/) |
+|            Code online | [GitHub](https://github.com/ghalestrilo)                                                                                                                       |
+|   Other music/audio sw | Reaper, Ableton, BitWig, Open Stage Control                                                                                                                    |
 
 <img
 src={require('./ghales.jpg').default}
@@ -22,7 +22,9 @@ width="600"
 
 **What do you like about livecoding in Tidal? What inspires you?**
 
-Mini-notation, even at its current experimental state, makes a lot more sense to me than sheet for my current work. Mini-notation is fairly easy to write, plus it's easy (and fun) to combine functions for some very sophisticated manipulation. In particular I love the ability of using algorithms to shape music - as a composer it felt (since the very first time) like finding a missing piece to a decade old puzzle.
+First, the community. From the moment I watched [Kindohm](https://soundcloud.com/kindohm) play with code I knew I'd have to try that as well at some point. I started actually getting into live-coding by getting in touch with [CLiC](https://colectivo-de-livecoders.gitlab.io/) and by the UnB Media Lab. I've made friends in these communities and played a number of times with them.
+
+Also, mini-notation, even at its current experimental state, makes a lot more sense to me than sheet for my current work. Mini-notation is fairly easy to write, plus it's easy (and fun) to combine functions for some very sophisticated manipulation. In particular I love the ability of using algorithms to shape music - as a composer it felt (since the very first time) like finding a missing piece to a decade old puzzle.
 
 **How do you approach your livecoding sessions?**
 
@@ -98,7 +100,7 @@ When playing with hardware synths I eventually came up with mappings which I sha
 
 **What motivates you to work on Tidal?**
 
-Tidal strikes me as the best approach out there for generating music with code. It's terse, compact, effective, plus it has a very good community behind it. There's a number of things I wish worked differently, and the underlying haskell makes it particularly difficult to change/update, but all in all it's a great tool and I like to help improve it whenever I have the time.
+Tidal strikes me as the best approach out there for generating music with code. It's extensible, compact, effective, plus it has a very good community behind it. There's a number of things I wish worked differently, and the underlying haskell makes it particularly difficult to change/update, but all in all it's a great tool and I like to help improve it whenever I have the time.
 
 ## Music
 
@@ -133,42 +135,46 @@ The next release - [Memento](https://ghales.com/music/memento/) - was really big
 
 [Sino](https://open.spotify.com/track/36qsHSD3US85HRJX3PYG4o?si=b322459540234428) was a song that really changed a lot the direction of my music. It threw me back to the drum grooves I used to love but stopped listening to years ago. I realised that's something I wanted to do a lot more.
 
-For live settings, I try to reinterpret my own music into something that fits the audience. I played a techno set in Buenos Aires through [NBTR](https://soundcloud.com/no-breakfast-records) with my friends [Persik](https://www.instagram.com/persik.nbtr/), [Fakin](https://www.instagram.com/fakin.techno/) and [Alther](https://www.instagram.com/hernan_alt/). For that set, I sliced together songs from Memento and Isohedra and threw drums on top - it worked. Months later, I started playing hip-hop gigs with [Kaleb](https://www.instagram.com/kalebmesmo/), a talented pianist and singer friend.
+For live settings, I try to reinterpret my own music into something that fits the audience. I played a techno set in Buenos Aires through [NBTR](https://soundcloud.com/no-breakfast-records) with my friends [Persik](https://www.instagram.com/persik.nbtr/), [Fakin](https://www.instagram.com/fakin.techno/) and [Alther](https://www.instagram.com/hernan_alt/). For that set, I sliced together songs from [Memento](https://ghales.com/music/memento/) and [Isohedra](https://ghales.com/music/isohedra/) and threw drums on top - it worked. Months later, I started playing hip-hop gigs with [Kaleb](https://www.instagram.com/kalebmesmo/), a talented pianist and singer friend.
 
 **What samples or instruments do you like to work with?**
 
 I've used a number of different synths and softwares over the years. Today, it's a combination of TidalCycles, Reaper, [U-He Diva](https://u-he.com/products/diva/) and Sitala, plus a midi controller on the side (midi fighter twister). No SuperDirt samples or synths at all. I use organic drum samples cause it good 👍🏼
 
+I've bought and downloaded a few sample packs from Pocket Operators, the Model Cycles, etc. In particular, [Wavparty](https://wavparty.com/) has been an amazing resource for that!! But in the end I resorted back the a comfortable combination of recorded drums and softsynths. It works best for me.
+
 **What projects are you currently working on or planning? What's next?**
 
 [Prece](https://ghales.com/music/prece/) is my latest work - it's being released as I write this doc 😁
 
-It's another instrumental album, but with much more polished sound. I used all the synths I owned on this: a Yamaha Reface CP, an Audiothingies MicroMonsta plus the Model:Cycles. It also features recorded guitars and sampled drums. It's been produced by [Jota Dale](https://instagram.com/jotadale) and released via [Torto Disco](https://tortodisco.com/).
+Prece is another instrumental album, but with much more polished sound. I used all the synths I owned on this: a Yamaha Reface CP, an Audiothingies MicroMonsta plus the Model:Cycles. It also features recorded guitars and sampled drums. It's been produced by [Jota Dale](https://instagram.com/jotadale) and released via [Torto Disco](https://tortodisco.com/). It's my longest release - One hour, 10 tracks long - and features the best production quality I've had yed.
 
-Later in the year, Inlude will be released, a video series of live performances featuring six musicians I really admire from Brasilia.
+Later this year I'll be releasing [Include](https://ghales.com/music/include/), a video series of live performances featuring six musicians I really admire from Brasilia - picture Live-Coding "Sofar Sounds". It's been in the works for two years with a large production team and we're very excited about the result.
 
-After that frankly I'm just taking a break. I have some stuff in the cooler for later, but at this point I'm focusing a lot on my career as a software engineer. Music making takes way too much time and effort.
+After that frankly I'm just taking a break. I've left some songs saved for whenever I want to make music again, but at this point I'm focusing a lot on my career as a software engineer. Music making takes a lot of time and effort, and I really need to pick my battles at this point, especially considering I make music for free and it doesn't pay my bills.
 
 ### Links to your music / recorded livecoding sessions
 
-My music is released through Torto Disco and can be found on [their website](https://tortodisco.com/). It can also be heard on your favorite platform with the links below:
+My music is released through Torto Disco and can be found on [their website](https://tortodisco.com/). A full and up-to-date list of releases can also be found on my [homepage](https://ghales.com/music). You can also hear me on your favorite platform via the links below:
 
 #### Spotify
 
-<!-- - [Prece]() -->
-
-- [Memento](https://open.spotify.com/album/6aUF91uGLVwpfrKbkcOlko)
-- [Isohedra](https://open.spotify.com/album/4AQukgo5BCAsUE55WQ0daX?si=Y6P_8B0URlyYh1G2OWMGCA)
-- [Pragma](https://open.spotify.com/album/47Il3SA4T7JIQeXdRiLFer)
+- [Spotify: Prece](https://open.spotify.com/album/7tfJ85Qt7KoGd3rPVDxMqX)
+- [Spotify: Memento](https://open.spotify.com/album/6aUF91uGLVwpfrKbkcOlko)
+- [Spotify: Isohedra](https://open.spotify.com/album/4AQukgo5BCAsUE55WQ0daX)
+- [Spotify: Pragma](https://open.spotify.com/album/47Il3SA4T7JIQeXdRiLFer)
 
 #### Soundcloud
 
-<!-- - [Prece]() -->
+- [SoundCloud: Prece](https://soundcloud.com/ghalesdobeat/sets/prece)
+- [SoundCloud: Memento](https://soundcloud.com/ghalesdobeat/sets/memento)
+- [SoundCloud: Isohedra](https://soundcloud.com/ghalesdobeat/sets/isohedra)
 
-- [Memento](https://soundcloud.com/ghalesdobeat/sets/memento)
-- [Isohedra](https://soundcloud.com/ghalesdobeat/sets/isohedra)
+#### Bandcamp
 
-#### Sessions
+Find me on bandcamp [here](https://ghales.bandcamp.com/)
+
+#### Live Sessions
 
 - [Solstice](https://www.youtube.com/watch?v=6B3A41214Mo)
 - Microjams: [#1](https://www.youtube.com/watch?v=QRvv1RRSuSc), [#2](https://www.youtube.com/watch?v=DHLgy0tf5MY), [#3](https://www.youtube.com/watch?v=LgIppM7lHOM), [#4](https://www.youtube.com/watch?v=QRvv1RRSuSc), [#5](https://www.youtube.com/watch?v=JVAPtQDfW_M)
