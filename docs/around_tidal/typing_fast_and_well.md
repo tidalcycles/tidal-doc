@@ -7,7 +7,7 @@ id: typing_fast_and_well
 
 **Live coding** is all about ... coding on a keyboard. It is not the usual coding experience though. You need to be fast, reactive, and you need to type well and avoid mistakes. When live coding, especially on stage, you might want to avoid stagnation or typing errors. Actually, the code editor will feel like an instrument after a bit of practice. Danger is everywhere, especially at your fingertips. Typing fast and well when you live code is important, because it will help you to stay in the flow of the improvisation and it will prevent you from many of the dangers that you might encounter otherwise. Of course, nobody is perfect and errors are part of the show too.
 
-The coding activity is also about manipulating source code, and involves a fair amount of copy/cut/paste like operations. You may also want to learn how to quickly jum from a word to another or how to switch efficiently between multiple text files. The code editor can do a lot of things for you: inserting snippets, completing your code, suggesting a statement, etc...
+The coding activity is also about manipulating source code, and involves a fair amount of copy/cut/paste like operations. You may also want to learn how to quickly jump from a word to another or how to switch efficiently between multiple text files. The code editor can do a lot of things for you: inserting snippets, completing your code, suggesting a statement, etc...
 
 This page will give you a list of advices for typing better on the computer keyboard. The page will be broken into multiple sections, each one dealing with one aspect of text input or text manipulation.
 
