@@ -3,14 +3,15 @@ title: Tidal Profile - Ghales
 date: 2023-07-31
 ---
 
-|          Tidal Cyclist | Ghales                                                                                                                                                         |
-| ---------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|               Location | Nomad                                                                                                                                                          |
-|       Years with Tidal | 5 yrs                                                                                                                                                          |
-|   Other LiveCoding env | p5.js, hydra, foxdot                                                                                                                                           |
+|          Tidal Cyclist | Ghales                      |
+| ---------------------: | :-------------------------- |
+|               Location | Nomad                       |
+|       Years with Tidal | 5 yrs                       |
+|   Other LiveCoding env | p5.js, hydra, foxdot        |
 | Music available online | [Spotify](https://open.spotify.com/artist/0vkFKjAM0AXFZ9a28wSMqL), [SoundCloud](https://soundcloud.com/ghalesdobeat), [Bandcamp](https://ghales.bandcamp.com/) |
-|            Code online | [GitHub](https://github.com/ghalestrilo)                                                                                                                       |
-|   Other music/audio sw | Reaper, Ableton, BitWig, Open Stage Control                                                                                                                    |
+|            Code online | [GitHub](https://github.com/ghalestrilo)     |
+|   Other music/audio sw | Reaper, Ableton, BitWig, Open Stage Control  |
+|           Comments | [Club Tidal Forum Thread](https://club.tidalcycles.org/t/blog-profile-ghales/4824) |
 
 <img
 src={require('./ghales.jpg').default}
