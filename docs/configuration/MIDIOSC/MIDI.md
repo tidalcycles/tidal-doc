@@ -14,7 +14,7 @@ Tidal can send and receive MIDI messages. You can talk with external synthesizer
 
 The prerequisites require recent versions of **Tidal** and **SuperDirt**:
 * Upgrade to the latest Tidal (this post assumes version 0.9.10 or greater)
-* Make sure you have the latest **SuperDirt quark**. Uninstalling and reinstalling the SuperDirt quark might be easiest. See [this page](github.com/supercollider-quarks/quarks) for details on how to update Quarks.
+* Make sure you have the latest **SuperDirt quark**. Uninstalling and reinstalling the SuperDirt quark might be easiest. See [this page](http://github.com/supercollider-quarks/quarks) for details on how to update Quarks.
 
 ### Initialization
 
