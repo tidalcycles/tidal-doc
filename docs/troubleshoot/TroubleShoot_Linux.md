@@ -122,6 +122,8 @@ groups -username-
 
 You may need to log out and log back in for this to take effect.
 
+If you are on Arch and the issue still persist, you can try [this](https://jackaudio.org/faq/linux_rt_config.html) as suggested [here](https://github.com/tidalcycles/Tidal/issues/707).
+
 ## Compilation errors
 
 You might encounter problems when installing the **Tidal** Haskell Library. If you encounter errors, the problem might come from the Tidal Haskell library itself. Run the following command to ensure that it is correctly installed:
