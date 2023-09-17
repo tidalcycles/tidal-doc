@@ -18,7 +18,7 @@ Templates are maintained in GitHub in the [tidalcycles/tidal-doc](https://github
 
 - [Blog Topic](https://github.com/tidalcycles/tidal-doc/blob/templates/templates/blog_topic.md) Open topic. Use this for a more free-form approach. One option is to present your own approach to Tidal and live coding (see [Working with Samples the Heavy Lifting way](https://tidalcycles.org/blog/tidal_profile_heavylifting)). Other topics could be discussion of a new release and the coding behind it, or discussion of other environments like Strudel, Vortex, Sardine, etc.
 
-- [Playlist](https://github.com/tidalcycles/tidal-doc/blob/templates/templates/blog_playlist.md)
+- [Playlist](https://github.com/tidalcycles/tidal-doc/blob/templates/templates/blog_playlist.md) Use this to create a new playlist. See the [Tidal Eclectic Playlist](https://tidalcycles.org/blog/tidal_playlist-eclectic) for an example. 
 
 We encourage posts to include:
 - code sections with Tidal examples
