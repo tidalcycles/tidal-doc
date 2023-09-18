@@ -115,7 +115,7 @@ choco install cabal --version=3.10.1.0
 
 This method is recommended for users who already have some of the components installed. Ensure that all components below are installed.
 
-### Haskel
+### Haskell
 - Install ghcup (Haskell package installer)
     - See [Haskell ghcup](https://www.haskell.org/ghcup/) for info.
     - See [YouTube - windows ghcup install](https://www.youtube.com/watch?v=bB4fmQiUYPw) for assistance.
