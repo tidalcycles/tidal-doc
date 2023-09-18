@@ -12,7 +12,7 @@ Here is a playlist of recordings made with Tidal. This is a collection of perfor
 |  | This is one of my favorite Yaxu performances. It is fun, builds intensity and shows how to exploit just a few samples - gabba + cpu. He also live codes a small dancing robot. Cool! |
 | Eloi el Bon Noi | [i la sessió maleïda (The cursed session)](https://www.youtube.com/watch?v=rKmHFpXU63k) |
 |  | Eloi (the good guy) performed this on the Solstice Stream (Dec, 2022) and it burned up the chat with raves. It starts with a radical remix/cutup of the Led Zepplin classic, Kashmir. |
-| Polymorphic Engine (Martin Guis) | [Codified Waves](https://www.youtube.com/watch?v=ieQ7fA7ah3s&t=59s) |
+| Polymorphic Engine (Martin Gius) | [Codified Waves](https://www.youtube.com/watch?v=ieQ7fA7ah3s&t=59s) |
 |  | Evocative and mesmerizing acousmatic music based on field recordings of electromagnetic waves manipulated in Tidal. |
 | Linalab | [Solstice Night Stream](https://www.youtube.com/watch?v=DNRZ6u2ksRI&t=65s) |
 |  | I really love the vibe here - how it starts in a drone like mode and slowly builds intensity. Nice! |
