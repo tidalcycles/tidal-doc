@@ -70,6 +70,18 @@ d1 $ sound "drum" # n 1
 
 Note that `s` is a synonym of `sound`, so `d1 $ s "drum" # n 1` is the same pattern.
 
+## Multiple instructions
+
+NB: Seperate instructions have to be separated by a blank line like so:
+```haskell
+d1 $ sound "bd hh sn hh"
+
+setcps 0.6
+
+d2 $ sound "sn bd sn:2 bd bd sn"
+```
+(See below for what these examples mean).
+
 ### Default sample library
 
 Some of the samples which come with **Tidal** are listed below. Try some out!
