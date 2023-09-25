@@ -1,1 +1,3 @@
-#REDIRECT [[irand]]
+#REDIRECT [[rand]]
+
+[[Category:Functions]] [[Category:Randomness and chance]] [[Category:Elemental patterns]]

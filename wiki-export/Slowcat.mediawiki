@@ -1,1 +1,3 @@
-#REDIRECT [[slowcat]]
+#REDIRECT [[cat]]
+
+[[Category:Functions]]

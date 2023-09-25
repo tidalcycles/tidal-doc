@@ -1,7 +1,11 @@
 ---
-title: Scan
-permalink: wiki/Scan/
-redirect_to: /wiki/scan/
+title: scan
+permalink: wiki/scan/
+layout: wiki
+tags:
+ - Functions
 ---
 
-You should automatically be redirected to [scan](/wiki/scan/)
+1.  REDIRECT [run\#scan](run#scan "wikilink")
+
+[Category:Utility Functions](/wiki/Category:Utility_Functions "wikilink")

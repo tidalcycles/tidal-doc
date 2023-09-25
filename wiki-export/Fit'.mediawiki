@@ -1,1 +1,3 @@
-#REDIRECT [[fit']]
+#REDIRECT [[fit#fit']]
+
+[[Category:Functions]]

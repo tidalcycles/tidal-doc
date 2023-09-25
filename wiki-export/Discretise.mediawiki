@@ -1,1 +1,3 @@
-#REDIRECT [[segment]]
+#REDIRECT [[segment#discretise]]
+
+[[Category:Functions]]

@@ -1,6 +1,6 @@
 ---
-title: SomeCycles
-permalink: wiki/SomeCycles/
+title: somecycles
+permalink: wiki/somecycles/
 redirect_to: /wiki/someCycles/
 ---
 

@@ -1,7 +1,10 @@
 ---
-title: Isaw
-permalink: wiki/Isaw/
-redirect_to: /wiki/isaw/
+title: isaw
+permalink: wiki/isaw/
+layout: wiki
+tags:
+ - Functions
+ - Elemental patterns
 ---
 
-You should automatically be redirected to [isaw](/wiki/isaw/)
+1.  redirect [Oscillators\#isaw](/wiki/Oscillators#isaw "wikilink")

@@ -1,7 +1,7 @@
 ---
-title: FastCat
-permalink: wiki/FastCat/
-redirect_to: /wiki/fastcat/
+title: fastcat
+permalink: wiki/fastcat/
+redirect_to: /wiki/cat#fastcat/
 ---
 
-You should automatically be redirected to [fastcat](/wiki/fastcat/)
+You should automatically be redirected to [cat#fastcat](/wiki/cat#fastcat/)

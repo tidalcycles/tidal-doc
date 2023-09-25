@@ -1,6 +1,6 @@
 ---
-title: SlowAppend
-permalink: wiki/SlowAppend/
+title: slowAppend
+permalink: wiki/slowAppend/
 redirect_to: /wiki/append/
 ---
 

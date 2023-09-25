@@ -1,7 +1,7 @@
 ---
-title: Fit'
-permalink: wiki/Fit'/
-redirect_to: /wiki/fit'/
+title: fit'
+permalink: wiki/fit'/
+redirect_to: /wiki/fit#fit'/
 ---
 
-You should automatically be redirected to [fit'](/wiki/fit'/)
+You should automatically be redirected to [fit#fit'](/wiki/fit#fit'/)

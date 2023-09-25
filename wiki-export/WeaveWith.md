@@ -1,7 +1,7 @@
 ---
-title: WeaveWith
-permalink: wiki/WeaveWith/
-redirect_to: /wiki/weaveWith/
+title: weaveWith
+permalink: wiki/weaveWith/
+redirect_to: /wiki/weave#weaveWith/
 ---
 
-You should automatically be redirected to [weaveWith](/wiki/weaveWith/)
+You should automatically be redirected to [weave#weaveWith](/wiki/weave#weaveWith/)

@@ -1,7 +1,10 @@
 ---
-title: Square
-permalink: wiki/Square/
-redirect_to: /wiki/square/
+title: square
+permalink: wiki/square/
+layout: wiki
+tags:
+ - Functions
+ - Elemental patterns
 ---
 
-You should automatically be redirected to [square](/wiki/square/)
+1.  redirect [Oscillators\#square](/wiki/Oscillators#square "wikilink")

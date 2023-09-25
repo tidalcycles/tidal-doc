@@ -1,7 +1,7 @@
 ---
-title: SeqPLoop
-permalink: wiki/SeqPLoop/
-redirect_to: /wiki/seqPLoop/
+title: seqPLoop
+permalink: wiki/seqPLoop/
+redirect_to: /wiki/seqP#seqPLoop/
 ---
 
-You should automatically be redirected to [seqPLoop](/wiki/seqPLoop/)
+You should automatically be redirected to [seqP#seqPLoop](/wiki/seqP#seqPLoop/)

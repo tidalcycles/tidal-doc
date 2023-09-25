@@ -1,1 +1,1 @@
-#REDIRECT [[someCyclesBy]]
+#REDIRECT [[someCycles#someCyclesBy]]

@@ -1,1 +1,3 @@
-#REDIRECT [[sine]]
+#redirect [[Oscillators#sine]]
+[[Category:Functions]]
+[[Category:Elemental patterns]]
