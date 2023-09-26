@@ -1,7 +1,7 @@
 ---
-title: slowcat
-permalink: wiki/slowcat/
-redirect_to: /wiki/cat/
+title: SlowCat
+permalink: wiki/SlowCat/
+redirect_to: /wiki/slowcat/
 ---
 
-You should automatically be redirected to [cat](/wiki/cat/)
+You should automatically be redirected to [slowcat](/wiki/slowcat/)

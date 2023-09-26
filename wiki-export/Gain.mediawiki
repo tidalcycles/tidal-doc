@@ -1,12 +1,1 @@
-{{DISPLAYTITLE:gain}} 
-[[Type signature|Type]]: <source inline>gain :: Pattern Double -> ControlPattern</source>
-
-'''gain''' turns a number pattern into a control pattern that specifies volume. Values less than 1 make the sound quieter. Values greater than 1 make the sound louder.
-
-<source>
-d1 $ gain "1 0.5 1.25" # sound "feel"
-
-d1 $ sound "bd*16" # gain (slow 3 $ sine)
-</source>
-
-[[Category:Control Functions]]
+#REDIRECT [[gain]]

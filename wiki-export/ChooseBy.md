@@ -1,6 +1,6 @@
 ---
-title: chooseBy
-permalink: wiki/chooseBy/
+title: ChooseBy
+permalink: wiki/ChooseBy/
 redirect_to: /wiki/choose/
 ---
 

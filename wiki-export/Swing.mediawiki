@@ -1,4 +1,1 @@
-#REDIRECT [[swingBy]]
-
-[[Category:Functions]]
-[[Category:Time Functions]]
+#REDIRECT [[swing]]

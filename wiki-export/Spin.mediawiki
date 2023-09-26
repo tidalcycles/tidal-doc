@@ -1,10 +1,1 @@
-{{DISPLAYTITLE:spin}} 
-[[Type signature|Type]]: <source inline>spin :: Pattern Int -> ControlPattern -> ControlPattern</source>
-
-'''spin''' will play the given number of copies of the given control pattern at once. For <source inline>n</source> copies, each successive copy will be offset in time by an additional <source inline>1/n</source> of a cycle, and also panned in space by an additional <source inline>n</source>1/n</source>. This function works particularly well on multichannel systems.
-
-<source>
-d1 $ slow 3 $ spin 4 $ sound "drum*3 tabla:4 [arpy:2 ~ arpy] [can:2 can:3]"
-</source>
-
-[[Category:Functions]]
+#REDIRECT [[spin]]

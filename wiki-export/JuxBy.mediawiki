@@ -1,3 +1,1 @@
-#REDIRECT [[jux#juxBy]]
-
-[[Category:Higher-order functions]] [[Category:Functions]]
+#REDIRECT [[juxBy]]

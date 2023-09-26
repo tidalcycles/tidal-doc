@@ -1,13 +1,1 @@
-{{DISPLAYTITLE:lpf}} 
-[[Type signature|Type]]: <source inline>lpf :: Pattern Double -> ControlPattern</source>
-
-'''lpf''' turns a number pattern into a control pattern that sets the cutoff frequency of a low pass filter.
-In SuperDirt, this is in Hz (try a range between 0 and 10000). In classic dirt, it is from 0 to 1.
-
-'''lpf''' is a shortcut for [[cutoff]].
-
-<source>
-d1 $ s "drum*8" # lpf "100 1000 2000"
-</source>
-
-[[Category:Control Functions]]
+#REDIRECT [[lpf]]

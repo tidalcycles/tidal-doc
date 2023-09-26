@@ -1,2 +1,1 @@
-#REDIRECT [[seqP#seqPLoop]]
-[[Category:Functions]]
+#REDIRECT [[seqPLoop]]

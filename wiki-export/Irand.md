@@ -1,13 +1,7 @@
 ---
-title: irand
-permalink: wiki/irand/
-layout: wiki
-tags:
- - Functions
+title: Irand
+permalink: wiki/Irand/
+redirect_to: /wiki/irand/
 ---
 
-1.  REDIRECT [rand](rand "wikilink")
-
-[Category:Randomness and
-chance](/wiki/Category:Randomness_and_chance "wikilink") [Category:Elemental
-patterns](/wiki/Category:Elemental_patterns "wikilink")
+You should automatically be redirected to [irand](/wiki/irand/)

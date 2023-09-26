@@ -1,12 +1,7 @@
 ---
-title: almostAlways
-permalink: wiki/almostAlways/
-layout: wiki
-tags:
- - Higher-order functions
+title: AlmostAlways
+permalink: wiki/AlmostAlways/
+redirect_to: /wiki/sometimes#almostAlways/
 ---
 
-1.  REDIRECT [sometimes](sometimes "wikilink")
-
-[Category:Functions](/wiki/Category:Functions "wikilink") [Category:Randomness
-and chance](/wiki/Category:Randomness_and_chance "wikilink")
+You should automatically be redirected to [sometimes#almostAlways](/wiki/sometimes#almostAlways/)

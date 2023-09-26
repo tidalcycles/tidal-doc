@@ -1,14 +1,1 @@
-[[Type]]: <source inline>silence :: Pattern a</source>
-
-'''silence''' is the empty pattern, it contains nothing, nada. It's still useful, though!
-
-<source>
-d1 $ sound "bd(3,8)" -- make a sound
-
-d1 $ silence -- stop it again
-
-d1 $ cat [sound "bd(3,8)", silence] -- silence every other pattern
-</source>
-
-[[Category:Functions]]
-[[Category:Elemental patterns]]
+#REDIRECT [[silence]]

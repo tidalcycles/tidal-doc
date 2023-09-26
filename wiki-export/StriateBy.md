@@ -1,7 +1,7 @@
 ---
-title: striateBy
-permalink: wiki/striateBy/
-redirect_to: /wiki/striate#striateBy/
+title: StriateBy
+permalink: wiki/StriateBy/
+redirect_to: /wiki/striateBy/
 ---
 
-You should automatically be redirected to [striate#striateBy](/wiki/striate#striateBy/)
+You should automatically be redirected to [striateBy](/wiki/striateBy/)

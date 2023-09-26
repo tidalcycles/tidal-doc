@@ -1,7 +1,7 @@
 ---
-title: swing
-permalink: wiki/swing/
-redirect_to: /wiki/swingBy/
+title: Swing
+permalink: wiki/Swing/
+redirect_to: /wiki/swing/
 ---
 
-You should automatically be redirected to [swingBy](/wiki/swingBy/)
+You should automatically be redirected to [swing](/wiki/swing/)

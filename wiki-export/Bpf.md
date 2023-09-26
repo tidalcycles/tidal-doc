@@ -1,11 +1,7 @@
 ---
-title: bpf
-permalink: wiki/bpf/
-layout: wiki
-tags:
- - Control Functions
+title: Bpf
+permalink: wiki/Bpf/
+redirect_to: /wiki/bpf/
 ---
 
-**bpf** is a shortcut for [bandf](bandf "wikilink").
-
-    d1 $ s "drum*8" # bpf "100 1000 2000"
+You should automatically be redirected to [bpf](/wiki/bpf/)

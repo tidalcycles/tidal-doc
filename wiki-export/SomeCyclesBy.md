@@ -1,7 +1,7 @@
 ---
-title: somecyclesBy
-permalink: wiki/somecyclesBy/
-redirect_to: /wiki/someCycles#someCyclesBy/
+title: SomeCyclesBy
+permalink: wiki/SomeCyclesBy/
+redirect_to: /wiki/someCyclesBy/
 ---
 
-You should automatically be redirected to [someCycles#someCyclesBy](/wiki/someCycles#someCyclesBy/)
+You should automatically be redirected to [someCyclesBy](/wiki/someCyclesBy/)

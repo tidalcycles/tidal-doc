@@ -1,9 +1,7 @@
 ---
-title: overlay
-permalink: wiki/overlay/
-layout: wiki
-tags:
- - Functions
+title: Overlay
+permalink: wiki/Overlay/
+redirect_to: /wiki/overlay/
 ---
 
-1.  redirect [stack\#overlay](stack#overlay "wikilink")
+You should automatically be redirected to [overlay](/wiki/overlay/)

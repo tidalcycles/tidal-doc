@@ -1,13 +1,1 @@
-{{DISPLAYTITLE:bandq}} 
-[[Type signature|Type]]: <source inline>bandq :: Pattern Double -> ControlPattern</source>
-
-'''bandq''' turns a number pattern into a control pattern that sets the q-factor of the band-pass filter. 
-Higher values (larger than 1) narrow the band-pass. Has the shorthand <code>bpq</code>.
-
-You can use [[bpq]] as a shortcut for '''bandq'''.
-
-<source>
-d1 $ s "[drum cp]*2 [drum:1 hh*2]" # bandf "100 1000 2000" # bandq "<0.5 1 2>"
-</source>
-
-[[Category:Control Functions]]
+#REDIRECT [[bandq]]
