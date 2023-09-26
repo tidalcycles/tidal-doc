@@ -1,13 +1,1 @@
-{{DISPLAYTITLE:delayfeedback}} 
-[[Type signature|Type]]: <source inline>delayfeedback :: Pattern Double -> ControlPattern</source>
-
-'''delayfeedback''' turns a number pattern into a control pattern that changes the feedback level of the delay effect.
-The [[delay]] function is required in order for the <code>delayfeedback</code> function to have any effect.
-
-You can use [[delayfb]] as a shortcut for '''delayfeedback'''.
-
-<source>
-d1 $ s "drum jvbass [cp arpy] jvbass:1" # delayfeedback "[0.1 0.5 0.9]/6" # delay "0.5"
-</source>
-
-[[Category:Control Functions]]
+#REDIRECT [[delayfeedback]]

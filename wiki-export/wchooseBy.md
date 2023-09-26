@@ -1,7 +1,7 @@
 ---
-title: wchooseBy
-permalink: wiki/wchooseBy/
-redirect_to: /wiki/choose/
+title: WchooseBy
+permalink: wiki/WchooseBy/
+redirect_to: /wiki/wchooseBy/
 ---
 
-You should automatically be redirected to [choose](/wiki/choose/)
+You should automatically be redirected to [wchooseBy](/wiki/wchooseBy/)

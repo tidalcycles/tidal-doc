@@ -1,7 +1,7 @@
 ---
-title: discretise
-permalink: wiki/discretise/
-redirect_to: /wiki/segment#discretise/
+title: Discretise
+permalink: wiki/Discretise/
+redirect_to: /wiki/segment/
 ---
 
-You should automatically be redirected to [segment#discretise](/wiki/segment#discretise/)
+You should automatically be redirected to [segment](/wiki/segment/)

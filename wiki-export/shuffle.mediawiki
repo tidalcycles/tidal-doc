@@ -1,14 +1,1 @@
-{{DISPLAYTITLE:shuffle}} 
-[[Type signature|Type]]: <source inline>shuffle :: Int -> Pattern a -> Pattern a</source>
-
-'''shuffle''' takes a number and a pattern as input, divides the pattern into the given number of parts, and returns a new pattern as a random permutation of the parts, picking one of each per cycle. This could also be called "sampling without replacement". For example:
-
-<source>
-d1 $ sound $ shuffle 3 "bd sn hh"
-</source>
-
-... will sometimes play <source inline>"sn bd hh"</source> or <source inline>"hh sn bd"</source>, but will never play <source inline>"bd sn bd"</source> or <source inline>"hh hh hh"</source>, because that isn't a permutation of the three parts.
-
-''See also: [[scramble]]''
-
-[[Category:Functions]] [[Category:Randomness and chance]]
+#REDIRECT [[shuffle]]

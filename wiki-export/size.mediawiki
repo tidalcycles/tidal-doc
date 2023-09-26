@@ -1,12 +1,1 @@
-{{DISPLAYTITLE:size}} 
-[[Type signature|Type]]: <source inline>size :: Pattern Double -> ControlPattern</source>
-
-'''size''' controls reverb room decay time. It turns a number pattern (ranging from 0 to 1) into a control pattern that controls the room decay time of the reverb effect.
-
-<source>
-d1 $ sound "bd" # room "0.5" # size "<0.1 0.5 0.9>"
-</source>
-
-The [[room]] function controls the reverb effect amount.
-
-[[Category:Control Functions]]
+#REDIRECT [[size]]

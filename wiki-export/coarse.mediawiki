@@ -1,11 +1,1 @@
-{{DISPLAYTITLE:coarse}} 
-[[Type signature|Type]]: <source inline>coarse :: Pattern Int -> ControlPattern</source>
-
-'''coarse''' turns a number pattern into a control pattern that lowers the sample rate of a sample.
-i.e. 1 for original 2 for half, 3 for a third and so on.
-
-<source>
-d1 $ s "bd*2 arpy*2 cp hh*3" # coarse "<4 8 16 24>"
-</source>
-
-[[Category:Control Functions]]
+#REDIRECT [[coarse]]

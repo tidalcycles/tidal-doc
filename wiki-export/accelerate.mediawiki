@@ -1,17 +1,1 @@
-<languages/>
-<translate>
-<!--T:1-->
-{{DISPLAYTITLE:accelerate}} 
-[[Type signature|Type]]: <source inline>accelerate :: Pattern Double -> ControlPattern</source>
-
-<!--T:2-->
-'''accelerate''' turns a number pattern into a control pattern that speeds up (or slows down) samples while they play.
-
-<!--T:3-->
-<source>
-d1 $ sound "jvbass*4" # accelerate "<0 1 -1 0.25 -0.5 2.1 -3>" 
-</source>
-
-<!--T:4-->
-[[Category:Control Functions]]
-</translate>
+#REDIRECT [[accelerate]]

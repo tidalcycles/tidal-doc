@@ -1,11 +1,1 @@
-{{DISPLAYTITLE:randcat}} 
-[[Type signature|Type]]: <source inline>randcat :: [Pattern a] -> Pattern a</source>
-
-'''randcat''' is similar to [[cat]], but rather than playing the given patterns in order, it picks them at random. For example:
-
-<source>
-d1 $ randcat [sound "bd*2 sn", sound "jvbass*3", sound "drum*2", sound "ht mt"]
-</source>
-
-[[Category:Functions]]
-[[Category:Randomness and chance]]
+#REDIRECT [[randcat]]

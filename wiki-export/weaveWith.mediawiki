@@ -1,4 +1,1 @@
-#REDIRECT [[weave#weaveWith]]
-
-[[Category:Functions]]
-[[Category:Higher-order functions]]
+#REDIRECT [[weaveWith]]

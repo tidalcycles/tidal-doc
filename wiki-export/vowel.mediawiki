@@ -1,13 +1,1 @@
-{{DISPLAYTITLE:vowel}} 
-[[Type signature|Type]]: <source inline>vowel :: Pattern String -> ControlPattern</source>
-
-'''vowel''' turns a string pattern into a control pattern that creates a formant filter to produce vowel sounds on samples.
-
-Use values <code>a</code>, <code>e</code>, <code>i</code>, <code>o</code>, and <code>u</code> to add the effect.
-The rest <code>~</code> character creates no effect:
-
-<source>
-d1 $ s "jvbass*4" # vowel "[a e ~ i o u]/8"
-</source>
-
-[[Category:Control Functions]]
+#REDIRECT [[vowel]]

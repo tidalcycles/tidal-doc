@@ -1,7 +1,7 @@
 ---
-title: stutWith
-permalink: wiki/stutWith/
-redirect_to: /wiki/stut#stutWith/
+title: StutWith
+permalink: wiki/StutWith/
+redirect_to: /wiki/stutWith/
 ---
 
-You should automatically be redirected to [stut#stutWith](/wiki/stut#stutWith/)
+You should automatically be redirected to [stutWith](/wiki/stutWith/)

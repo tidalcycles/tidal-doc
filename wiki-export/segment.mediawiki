@@ -1,16 +1,1 @@
-{{DISPLAYTITLE:segment}} 
-[[Type signature|Type]]: <source inline>segment :: Pattern Time -> Pattern a -> Pattern a</source>
-
-'''segment''' 'samples' the pattern at a rate of n events per cycle.  Useful for turning a continuous pattern into a discrete one.
-
-In this example, the pattern originates from the shape of a sine wave, a continuous pattern.  Without <source inline>segment</source> the samples will get triggered at an undefined frequency which may be very high.
-
-<source>
-d1 $ n (slow 2 $ segment 16 $ range 0 32 $ sine) # sound "amencutup"
-</source>
-
-= discretise =
-
-<source inline>segment</source> used to be known as <source inline>discretise</source>. The old name remains as an alias and will still work, but may be removed or repurposed in a future version of tidal.
-
-[[Category:Functions]]
+#REDIRECT [[segment]]

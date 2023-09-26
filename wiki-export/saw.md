@@ -1,10 +1,7 @@
 ---
-title: saw
-permalink: wiki/saw/
-layout: wiki
-tags:
- - Functions
- - Elemental patterns
+title: Saw
+permalink: wiki/Saw/
+redirect_to: /wiki/saw/
 ---
 
-1.  redirect [Oscillators\#saw](/wiki/Oscillators#saw "wikilink")
+You should automatically be redirected to [saw](/wiki/saw/)

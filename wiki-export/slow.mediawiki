@@ -1,13 +1,1 @@
-{{DISPLAYTITLE:slow}} 
-[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>slow :: Pattern Time -> Pattern a -> Pattern a</syntaxhighlight>
-
-'''slow''' slows down a pattern. For example, the following will play the sound pattern "bd sn kurt" twice as slow (i.e. so it repeats once every two cycles), and the vowel pattern three times as slow:
-
-<source>
-d1 $ sound (slow 2 "bd sn kurt")
-   # slow 3 (vowel "a e o")
-</source>
-
-''See also: [[fast]].''
-
-[[Category:Functions]] [[Category:Time Functions]]
+#REDIRECT [[slow]]

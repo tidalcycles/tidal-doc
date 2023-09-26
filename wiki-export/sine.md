@@ -1,10 +1,7 @@
 ---
-title: sine
-permalink: wiki/sine/
-layout: wiki
-tags:
- - Functions
- - Elemental patterns
+title: Sine
+permalink: wiki/Sine/
+redirect_to: /wiki/sine/
 ---
 
-1.  redirect [Oscillators\#sine](/wiki/Oscillators#sine "wikilink")
+You should automatically be redirected to [sine](/wiki/sine/)

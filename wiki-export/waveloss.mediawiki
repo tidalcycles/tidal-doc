@@ -1,11 +1,1 @@
-{{DISPLAYTITLE:waveloss}} 
-[[Type signature|Type]]: <source inline>waveloss :: Pattern Double -> ControlPattern</source>
-
-'''waveloss''' divides an audio stream into tiny segments, using the signal's zero-crossings as segment boundaries, and discards a defined fraction of them.
-Values range from 0 to 100.
-
-<source>
-d1 $ s "drum*8" # waveloss "20 66.6 80 10"
-</source>
-
-[[Category:Control Functions]]
+#REDIRECT [[waveloss]]

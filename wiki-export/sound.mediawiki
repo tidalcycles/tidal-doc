@@ -1,16 +1,1 @@
-{{DISPLAYTITLE:sound}} 
-[[Type signature|Type]]: <source inline>sound :: Pattern String -> ControlPattern</source>
-
-'''sound''' turns a pattern of strings into a control pattern representing sounds - either sample sets or synth names. This function is ''required'' when using SuperDirt.
-
-<source>
-d1 $ sound "feel bd hh peri"
-</source>
-
-This function also has a shorthand alias called <code>s</code>:
-
-<source>
-d1 $ s "feel bd hh peri"
-</source>
-
-[[Category:Control Functions]]
+#REDIRECT [[sound]]

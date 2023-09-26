@@ -1,12 +1,7 @@
 ---
-title: wchoose
-permalink: wiki/wchoose/
-layout: wiki
-tags:
- - Functions
+title: Wchoose
+permalink: wiki/Wchoose/
+redirect_to: /wiki/wchoose/
 ---
 
-1.  REDIRECT [choose\#wchoose](choose#wchoose "wikilink")
-
-[Category:Randomness and
-chance](/wiki/Category:Randomness_and_chance "wikilink")
+You should automatically be redirected to [wchoose](/wiki/wchoose/)

@@ -1,11 +1,7 @@
 ---
-title: chunk'
-permalink: wiki/chunk'/
-layout: wiki
-tags:
- - Functions
+title: Chunk'
+permalink: wiki/Chunk'/
+redirect_to: /wiki/chunk#chunk'/
 ---
 
-1.  REDIRECT [chunk\#chunk'](chunk#chunk' "wikilink")
-
-[Category:Time Functions](/wiki/Category:Time_Functions "wikilink")
+You should automatically be redirected to [chunk#chunk'](/wiki/chunk#chunk'/)

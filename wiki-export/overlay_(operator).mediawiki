@@ -1,3 +1,1 @@
-#redirect [[stack#<>]]
-
-[[Category:Functions]]
+#REDIRECT [[overlay (operator)]]

@@ -1,13 +1,1 @@
-{{DISPLAYTITLE:pan}} 
-[[Type signature|Type]]: <source inline>pan :: Pattern Double -> ControlPattern</source>
-
-'''pan''' turns a number pattern (ranging from 0 to 1) into a control pattern that specifies the audio channel. In a 2-channel setup, a value of <code>0</code> pans the audio hard left and a value of <code>1</code> pans
-the audio hard right. The default value is <code>0.5</code>, which produces full volume on both channels.
-
-<source>
-d1 $ sound "bd feel odx drum" # pan "0 1 0.25 0.75"
-
-d1 $ sound "bd*16" # pan (slow 3 $ sine)
-</source>
-
-[[Category:Control Functions]]
+#REDIRECT [[pan]]

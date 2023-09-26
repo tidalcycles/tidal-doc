@@ -1,13 +1,1 @@
-{{DISPLAYTITLE:whenmod}}
-{{Type|<source inline>whenmod :: Int -> Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a</source>}}
-
-'''whenmod''' has a similar form and behavior to [[every]], but requires an additional number. It applies the function to the pattern, when the remainder of the current loop number divided by the first parameter, is greater or equal than the second parameter.
-
-For example the following makes every other block of four loops twice as fast:
-
-<source>
-d1 $ whenmod 8 4 (fast 2) (sound "bd sn kurt")
-</source>
-
-[[Category:Functions]]
-[[Category:Higher-order functions]]
+#REDIRECT [[whenmod]]

@@ -1,8 +1,1 @@
-{{DISPLAYTITLE:mono}} 
-[[Type signature|Type]]: <source inline>mono :: Pattern a -> Pattern a</source>
-
-'''mono''' makes the given pattern 'monophonic', so only one event happens at a time.
-
-For example, <source inline>mono "[1 ~, 2]"</source> is the same as <source inline>"1 2"</source>', because the start of <source inline>2</source> is cut off by the <source inline>1</source>.
-
-[[Category:Functions]]
+#REDIRECT [[mono]]

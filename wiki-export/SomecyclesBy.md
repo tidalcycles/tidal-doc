@@ -1,7 +1,16 @@
 ---
-title: SomecyclesBy
-permalink: wiki/SomecyclesBy/
-redirect_to: /wiki/someCyclesBy/
+title: someCyclesBy
+permalink: wiki/someCyclesBy/
+layout: wiki
+tags:
+ - Functions
 ---
 
-You should automatically be redirected to [someCyclesBy](/wiki/someCyclesBy/)
+1.  redirect
+    [someCycles\#someCyclesBy](someCycles#someCyclesBy "wikilink")
+
+[Category:Higher-order
+functions](/wiki/Category:Higher-order_functions "wikilink")
+[Category:Randomness and
+chance](/wiki/Category:Randomness_and_chance "wikilink") [Category:Conditional
+Transformers](/wiki/Category:Conditional_Transformers "wikilink")

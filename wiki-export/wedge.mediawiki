@@ -1,10 +1,1 @@
-{{DISPLAYTITLE:wedge}}
-{{Type|<source inline>wedge :: Time -> Pattern a -> Pattern a -> Pattern a</source>}}
-
-'''wedge''' combines two patterns by squashing them into a single cycle. It takes a ratio as the first argument. The ratio determines what percentage of the pattern cycle is taken up by the first pattern. The second pattern fills in the remainder of the pattern cycle. For example:
-
-<source>
-d1 $ wedge (1/4) (sound "bd*2 arpy*3 cp sn*2") (sound "odx [feel future]*2 hh hh")
-</source>
-
-[[Category:Functions]]
+#REDIRECT [[wedge]]

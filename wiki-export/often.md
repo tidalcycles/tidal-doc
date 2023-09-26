@@ -1,12 +1,7 @@
 ---
-title: often
-permalink: wiki/often/
-layout: wiki
-tags:
- - Higher-order functions
+title: Often
+permalink: wiki/Often/
+redirect_to: /wiki/often/
 ---
 
-1.  REDIRECT [sometimes](sometimes "wikilink")
-
-[Category:Functions](/wiki/Category:Functions "wikilink") [Category:Randomness
-and chance](/wiki/Category:Randomness_and_chance "wikilink")
+You should automatically be redirected to [often](/wiki/often/)
