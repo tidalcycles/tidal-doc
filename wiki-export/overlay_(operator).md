@@ -1,7 +1,9 @@
 ---
-title: Overlay (operator)
-permalink: wiki/Overlay_(operator)/
-redirect_to: /wiki/overlay_(operator)/
+title: overlay (operator)
+permalink: wiki/overlay_(operator)/
+layout: wiki
+tags:
+ - Functions
 ---
 
-You should automatically be redirected to [overlay (operator)](/wiki/overlay_(operator)/)
+1.  redirect [stack\#\<\>](stack#<> "wikilink")

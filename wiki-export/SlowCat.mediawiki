@@ -1,1 +1,1 @@
-#REDIRECT [[cat]]
+#REDIRECT [[slowcat]]

@@ -1,1 +1,3 @@
 #REDIRECT [[choose]]
+[[Category:Functions]]
+[[Category:Randomness and chance]]

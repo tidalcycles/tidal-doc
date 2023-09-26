@@ -1,1 +1,3 @@
-#REDIRECT [[square]]
+#redirect [[Oscillators#square]]
+[[Category:Functions]]
+[[Category:Elemental patterns]]

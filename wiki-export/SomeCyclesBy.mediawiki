@@ -1,2 +1,1 @@
-#redirect [[someCycles#someCyclesBy]]
-[[Category:Functions]] [[Category:Higher-order functions]] [[Category:Randomness and chance]] [[Category:Conditional Transformers]]
+#REDIRECT [[someCyclesBy]]

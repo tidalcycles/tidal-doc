@@ -1,6 +1,6 @@
 ---
-title: Arpg
-permalink: wiki/Arpg/
+title: arpg
+permalink: wiki/arpg/
 redirect_to: /wiki/arpeggiate/
 ---
 

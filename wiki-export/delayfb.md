@@ -1,6 +1,6 @@
 ---
-title: Delayfb
-permalink: wiki/Delayfb/
+title: delayfb
+permalink: wiki/delayfb/
 redirect_to: /wiki/delayfeedback/
 ---
 

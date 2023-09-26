@@ -1,7 +1,11 @@
 ---
-title: Iter'
-permalink: wiki/Iter'/
-redirect_to: /wiki/iter'/
+title: iter'
+permalink: wiki/iter'/
+layout: wiki
+tags:
+ - Functions
 ---
 
-You should automatically be redirected to [iter'](/wiki/iter'/)
+1.  REDIRECT [iter\#iter'](iter#iter' "wikilink")
+
+[Category:Time Functions](/wiki/Category:Time_Functions "wikilink")

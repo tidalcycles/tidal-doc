@@ -1,6 +1,6 @@
 ---
-title: Density
-permalink: wiki/Density/
+title: density
+permalink: wiki/density/
 redirect_to: /wiki/fast/
 ---
 

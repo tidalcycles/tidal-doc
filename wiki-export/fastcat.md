@@ -1,6 +1,6 @@
 ---
-title: fastCat
-permalink: wiki/fastCat/
+title: fastcat
+permalink: wiki/fastcat/
 redirect_to: /wiki/cat#fastcat/
 ---
 

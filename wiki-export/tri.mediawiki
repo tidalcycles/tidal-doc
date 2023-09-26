@@ -1,1 +1,3 @@
-#REDIRECT [[tri]]
+#redirect [[Oscillators#tri]]
+[[Category:Functions]]
+[[Category:Elemental patterns]]

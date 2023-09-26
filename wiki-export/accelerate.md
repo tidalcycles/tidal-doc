@@ -1,7 +1,18 @@
 ---
-title: Accelerate
-permalink: wiki/Accelerate/
-redirect_to: /wiki/accelerate/
+title: accelerate
+permalink: wiki/accelerate/
+layout: wiki
+tags:
+ - Control Functions
 ---
 
-You should automatically be redirected to [accelerate](/wiki/accelerate/)
+<languages/> <translate> [Type](/wiki/Type_signature "wikilink"):
+
+    accelerate :: Pattern Double -> ControlPattern
+
+**accelerate** turns a number pattern into a control pattern that speeds
+up (or slows down) samples while they play.
+
+    d1 $ sound "jvbass*4" # accelerate "<0 1 -1 0.25 -0.5 2.1 -3>" 
+
+</translate>

@@ -1,1 +1,3 @@
-#REDIRECT [[fastAppend]]
+#REDIRECT [[append#fastAppend]]
+
+[[Category:Functions]]

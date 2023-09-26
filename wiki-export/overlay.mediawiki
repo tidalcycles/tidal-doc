@@ -1,1 +1,3 @@
-#REDIRECT [[overlay]]
+#redirect [[stack#overlay]]
+
+[[Category:Functions]]

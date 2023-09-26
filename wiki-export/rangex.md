@@ -1,7 +1,7 @@
 ---
-title: Rangex
-permalink: wiki/Rangex/
-redirect_to: /wiki/rangex/
+title: rangex
+permalink: wiki/rangex/
+redirect_to: /wiki/range#rangex/
 ---
 
-You should automatically be redirected to [rangex](/wiki/rangex/)
+You should automatically be redirected to [range#rangex](/wiki/range#rangex/)
