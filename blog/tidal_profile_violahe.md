@@ -6,9 +6,10 @@ date: 2023-09-25
 | Tidal Cyclist  | Viola He |
 | --------:    | :---------- |
 | aka    | [v10101a](https://www.instagram.com/v10101a/), [sandpills](https://www.instagram.com/sandpills/) |
+| Location | New York / Shanghai |
 | Time with Tidal | 1.2 yrs I'm tidal baby |
 | Other LiveCoding env | SonicPi, FoxDot, Touchdesigner(?) |
-| Music available online | [SoundCloud](https://soundcloud.com/v10101a) [Vimeo](https://vimeo.com/user83351589) |
+| Music available online | [SoundCloud](https://soundcloud.com/v10101a), [Vimeo](https://vimeo.com/user83351589) |
 | Other music/audio sw |  Ableton, Max/MSP |
 
 <img
@@ -33,7 +34,7 @@ I like to describe my livecoding approach as "structured improv". Creative freed
 **What functions and coding approaches do you like to use?**
 
 - I like `superimpose` a bit too much. Detuning just a little bit. The danger. The drama!
-- Adding sine waves to modulate panning and filtering, like `# cutoff (range 200 2000 $ sine)` (honestl I'd modulate anything and everything).
+- Adding sine waves to modulate panning and filtering, like `# cutoff (range 200 2000 $ sine)` (honestly I'd modulate anything and everything).
 - Using `mask` to create simple composition structures.
 
 ```haskell
@@ -52,7 +53,7 @@ Lately I've been outputing everything from Ableton to simplify the mixing proces
 
 **Tell us about your livecoding music.**
 
-Grounded by film and theatre practices, and inspired by many genres of rock, jazz, pop, and electronic music, I'm always attempting to use livecoding as an narrative opportunity to build worlds through dynamic sonic ventures. I make joyful dnb and techno music that I'd like friends to dance to; and I also make textural blip blops, droney soundscapes, glitchy vocal mixes that might not be categorized as one type of sound. These two parts of me simultaneously exist, and I try to merge them as fit.
+Grounded by film and theatre practices, and inspired by many genres of rock, jazz, pop, and electronic music, I'm always attempting to use livecoding as a narrative opportunity to build worlds through dynamic sonic ventures. I make joyful dnb and techno music that I'd like friends to dance to; and I also make textural blip blops, droney soundscapes, glitchy vocal mixes that might not be categorized as one type of sound. These two parts of me simultaneously exist, and I try to merge them as fit.
 
 There was a period of my youth when I was _obsessed_ with rock operas and concept albums. Listening through an entire album attentively, in order, for a curated experience presented new grounds for me, and is somehow, strangely, comparable to certain "algorave" experiences. Building my livecoding sets almost feels familiar, like making... computer opera? The events we organize in New York City usually feature 25-40 minute livecoded sets, and it's the perfect length for these conceptual experiments - more than a few tracks, less than a whole show, embracing the chaos of improvisation but never actually going out of control. 
 
