@@ -44,7 +44,7 @@ Two sine-wave oscillators modulating each other’s phase.
 | morph     | feedback, in the form of operator 2 modulating its own phase (past 0.5, rough!) or operator 1’s phase (before 0.5, chaotic!) |
 | mode 1    | sub-oscillator |
 
-**Note:** Set `morph` to  to get the same range of sounds as Braids’ WTFM. Turn MORPH fully CW to recreate the same sounds as Braids’ FBFM. A gentler palette equivalent to Braids’ FM is found with `morph` at 0.5.
+**Note:** Set `morph` to 0 to get the same range of sounds as Braids’ WTFM. Set it to 1 to recreate the same sounds as Braids’ FBFM. A gentler palette equivalent to Braids’ FM is found with `morph` at 0.5.
 
 
 ## 3: Granular formant oscillator
