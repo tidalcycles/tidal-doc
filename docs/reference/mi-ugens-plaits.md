@@ -179,37 +179,37 @@ Note that Plaits uses a less powerful processor than Rings, and is thus limited 
 
 ## 13: Analog bass drum model
 
-No fancy acronyms or patented technology here… Just behavioral simulation of circuits from classic drum machines! The drum machine employs a bridged T-network excited by a nicely shaped pulse. As for the signal synthesized with `mode 1`, it uses a frequency-modulated triangle VCO, turned into a sine with a pair of diodes, and shaped by a dirty VCA.
+No fancy acronyms or patented technology here… Just behavioral simulation of circuits from classic drum machines! The drum machine employs a bridged T-network excited by a nicely shaped pulse.
 
 | parameter | effect |
 |-----------|--------|
 | harm      | attack sharpness and amount of overdrive |
 | timbre    | brightness |
 | morph     | decay time |
-| mode 1    | see above |
+| mode 1    | frequency-modulated triangle VCO, turned into a sine with a pair of diodes, and shaped by a dirty VCA |
 
 Without any signal patched to the TRIG input, a continuous tone is produced. Not particularly useful, but its amplitude can still be modulated by `morph` and CV input (FIXME: equivalent to CV input in Tidal?).
 
 
 ## 14: Analog snare drum model
 
-The drum machine emulated on OUT employs a bunch of bridged T-networks, one for each mode of the shell, excited by a nicely shaped pulse; plus some band-pass filtered noise. As for the signal synthesized with `mode 1`, it is based on a pair of frequency-modulated sine VCO, mixed with high-pass filtered noise.
+The generator employs a bunch of bridged T-networks, one for each mode of the shell, excited by a nicely shaped pulse; plus some band-pass filtered noise. 
 
 | parameter | effect |
 |-----------|--------|
 | harm      | balance of the harmonic and noisy components |
 | timbre    | balance between the different modes of the drum |
 | morph     | decay time |
-| mode 1    | see above |
+| mode 1    | a pair of frequency-modulated sine VCO, mixed with high-pass filtered noise |
 
 
 ## 15: Analog hi-hat model
 
-The recipe is similar for both `mode 0` and `mode 1`: a bunch of square oscillators generate a harsh, metallic tone. The resulting signal is mixed with clocked noise, sent to a HPF, then to a VCA. While `mode 0` (default) uses 6 square oscillators and a dirty transistor VCA, `mode 1` uses three pairs of square oscillators ring-modulating each other, and a clean, linear VCA.
+A bunch of square oscillators generate a harsh, metallic tone. The resulting signal is mixed with clocked noise, sent to a HPF, then to a VCA. It uses 6 square oscillators and a dirty transistor VCA.
 
 | parameter | effect |
 |-----------|--------|
 | harm      | balance of the metallic and filtered noise |
 | timbre    | high-pass filter cutoff |
 | morph     | decay time |
-| mode 1    | see above |
+| mode 1    | three pairs of square oscillators ring-modulating each other, and a clean, linear VCA |
