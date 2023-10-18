@@ -68,7 +68,7 @@ d1  $ s "braids" <| note "a [~ g] [c b] [g gs]"
 
 Parameter (def) | Range | Description
 ----------------|-------|------------
-`engine` (0) | 0-15 | 16 available engine selections, the later numbers focus on noisy and percussive sounds. For details, see this [manual](https://web.archive.org/web/20201111233906/https://mutable-instruments.net/modules/plaits/manual/)
+`engine` (0) | 0-15 | 16 available engine selections, the later numbers focus on noisy and percussive sounds. All engines are detailed in the [Plaits engine page](/reference/mi-ugens-plaits.md)
 `timbre` (0.5) | 0.0-1.0 | engine specific tone control - sweeps the spectral content from dark/sparse to bright/dense
 `harm` (0.5) | 0.0-1.0 | engine specific tone control - **harmonics** controls the frequency spread or the balance between the various constituents of the tone
 `morph` (0.5) | 0.0-1.0 | engine specific tone control - explores lateral timbral variations
