@@ -8,7 +8,7 @@ Everytime you start Tidal, the software is reading from a configuration file usu
 Some users went really far into customizing their setup: [Jarmlib](https://github.com/jarmitage/jarmlib). You can take a look at their work to see how to extend your configuration file.
 
 As an example, here is the *vanilla* `BootTidal.hs` file used by the [Pulsar Package for Tidal](https://raw.githubusercontent.com/tidalcycles/pulsar-tidalcycles/master/lib/BootTidal.hs):
-```c
+```haskell
 :set -XOverloadedStrings
 :set prompt ""
 
