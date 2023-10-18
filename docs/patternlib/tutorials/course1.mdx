@@ -589,7 +589,7 @@ d1 $ n "0 1 2 3" # sound "numbers" +| n "4 5"
 -- adds up to:
 d1 $ n "4 7" # sound "numbers"
 
--- This is because the rhythm comes from the left, from the "4 5", and
+-- This is because the rhythm comes from the right, from the "4 5", and
 -- so we start from that. The start of 4 matches with 0, and the start
 -- of 5 matches with 2, and adding them up, we end up with 4+0=4, and
 -- 5+2 = 7.
