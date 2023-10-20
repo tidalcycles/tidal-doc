@@ -107,7 +107,21 @@ Four-note chords, played by virtual analogue or wavetable oscillators. The virtu
 | morph     | waveform; values until 0.5 go through a selection of string-machine like raw waveforms (different combinations of the organ and string “drawbars”), and above 0.5 it scans a small wavetable containing 16 waveforms |
 | mode 1    | root note of the chord |
 
-Chord type order is oct, 5, sus4, m, m7, m9, m11, 69, M9, M7, M (TODO: map these to actual values)
+The proper values for `harm` (chord type) are
+
+|value|chord|
+|-----|-----|
+|0.00 - 0.08| octave |
+|0.09 - 0.17| 5 |
+|0.18 - 0.26| sus4 |
+|0.27 - 0.36 | m |
+|0.37 - 0.46 | m7 |
+|0.47 - 0.56 | m9 |
+|0.57 - 0.66 | m11 |
+|0.67 - 0.75 | M 6/9 |
+|0.76 - 0.85 | M9 |
+|0.86 - 0.95 | M7 |
+|0.96 - 1 | M |
 
 
 ## 7: Vowel and speech synthesis
