@@ -40,9 +40,9 @@ Performances, performances and performances! That's my goal right now. Since I u
 
 #### Links to recorded livecoding sessions:
 
-- [LIVE @ FESTIVAE](https://www.youtube.com/watch?v=Ej27Hsj7TsI)
-- [LIVE @ ALGORAVE OTRA HISTORIA](https://www.youtube.com/watch?v=oiiqG9zOAfw)
-- [Snippets @ Instagram](https://www.instagram.com/geikha_/reels/)
+* [LIVE @ FESTIVAE](https://www.youtube.com/watch?v=Ej27Hsj7TsI)
+* [LIVE @ ALGORAVE OTRA HISTORIA](https://www.youtube.com/watch?v=oiiqG9zOAfw)
+* [Snippets @ Instagram](https://www.instagram.com/geikha_/reels/)
 
 ### What samples or instruments do you like to work with?
 
