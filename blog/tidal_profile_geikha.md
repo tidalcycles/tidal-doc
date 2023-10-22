@@ -1,6 +1,6 @@
 ---
 title: Tidal Profile - GEIKHA
-date: 2023-10-20
+date: 2023-10-20
 ---
 
 |          Tidal Cyclist | GEIKHA                                                     |
