@@ -24,6 +24,7 @@ My young age allowed to put lots of time into livecoding and the community. Sinc
 ## Music
 
 I call what I do a hybrid of [Footwork](https://www.youtube.com/watch?v=iUdkuHw_Jus) & [RKT (Argentinian Reggaeton)](https://www.youtube.com/watch?v=WUaD9OC-ZiA). I've livecoded many styles throughout the years but I feel I've finally found a style unique to myself which I want to develop more and more. I'm inspired by:
+
 - [Juke Music](https://www.youtube.com/watch?v=28iybYt0QpY)
 - [Jersey Club](https://www.youtube.com/watch?v=xnDCWX7bUEU)
 - [UK Garage](https://www.youtube.com/watch?v=5Pz3X5dcn6M)
@@ -38,6 +39,7 @@ I call what I do a hybrid of [Footwork](https://www.youtube.com/watch?v=iUdkuHw_
 Performances, performances and performances! That's my goal right now. Since I use samples of both local and international Reggaetón, I feel my music has a lot of potential on the local dance floors. I post snippets as Reels on my Instagram. However I'm considering doing a mixtape with some of the "songs" I've been coding these last 2 years! Ain't no footwork if I don't share those trax.
 
 #### Links to recorded livecoding sessions:
+
 - [LIVE @ FESTIVAE](https://www.youtube.com/watch?v=Ej27Hsj7TsI)
 - [LIVE @ ALGORAVE OTRA HISTORIA](https://www.youtube.com/watch?v=oiiqG9zOAfw)
 - [Snippets @ Instagram](https://www.instagram.com/geikha_/reels/)
