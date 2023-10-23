@@ -31,8 +31,8 @@ I call what I do a hybrid of [Footwork](https://www.youtube.com/watch?v=iUdkuHw_
 - [House](https://www.youtube.com/watch?v=Ex6JtLJVXzc)
 - [Reggaetón](https://www.youtube.com/watch?v=k8nxe6UE1gY&pp=ygUMcGxhbiBiIGNhbmR5)
 - [Dream Pop](https://www.youtube.com/watch?v=6KnYw4EwYGc)
-- [Flamenco](https://www.youtube.com/watch?v=m0K05cQG8oM)
-- Fusión, and others
+- [Flamenco](https://www.youtube.com/watch?v=m0K05cQG8oM) Fusión
+- and others
 
 ### What projects are you currently working on or planning? What's next?
 
