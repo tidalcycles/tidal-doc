@@ -95,7 +95,7 @@ This probably means you have stray **SuperCollider** processes running, blocking
 
 ## Is the Jack Audio Server ok?
 
-Supercollider run on a Jack audio server in order to deliver sound to
+Supercollider runs on a Jack audio server in order to deliver sound to
 your speakers. If you see the following error in SuperCollider's post window: 
 
 ```
