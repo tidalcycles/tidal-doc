@@ -9,7 +9,7 @@ date: 2023-10-20
 |               Location | Buenos Aires City                                          |
 |       Years with Tidal | 4 years                                                    |
 |   Other LiveCoding env | Hydra, SuperCollider, Estuary                              |
-| Music available online | [Snippets on Instagram](https://www.instagram.com/geikha_) |
+| Music available online | [Live sets on YouTube](https://www.youtube.com/@geikha), [Snippets on Instagram](https://www.instagram.com/geikha_) |
 |            Code online | [GitHub](https://github.com/geikha/)                       |
 |   Other music/audio sw | FL Studio, iZotope RX, Reaper                              |
 
