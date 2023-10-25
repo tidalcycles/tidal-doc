@@ -90,7 +90,7 @@ do
       ,"1*16" # "808hh"
       ]
   d2 $ kb # note' "<0 -2>" # "bass"
-  d4 $ chop 8 # "somemelodicsample" |+ trans
+  d4 $ chop 8 "somemelodicsample" |+ trans
 ```
 
 Using `hush` at the beginning of the do-block means I can simply comment out a pattern to silence it. However, this also means that if I have a runtime error in the middle of my do-block, everything after it will be silenced. Again: risky, but fun.
