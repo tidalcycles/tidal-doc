@@ -28,3 +28,6 @@ This command generates static content into the `build` directory and can be serv
 
 There is a github action which automatically deploys changes to the main branch.
 
+## Archives
+
+This site was migrated from the legacy wiki-based user documentation site. Access to these archives is available on the [wiki-export branch](https://github.com/tidalcycles/Tidal-doc/tree/wiki-export)
