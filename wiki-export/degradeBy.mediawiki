@@ -1,3 +1,0 @@
-#REDIRECT [[degrade#degradeBy]]
-
-[[Category:Functions]] [[Category:Randomness and chance]]

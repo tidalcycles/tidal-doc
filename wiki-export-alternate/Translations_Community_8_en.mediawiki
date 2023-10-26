@@ -1,1 +1,0 @@
-For tidal development, see the [https://github.com/tidalcycles/tidal tidal repository] on github.

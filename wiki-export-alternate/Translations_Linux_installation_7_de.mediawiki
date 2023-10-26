@@ -1,1 +1,0 @@
-Füge einfach die Anweisungen unter "How to?" nacheinander in die Kommadozeile ein.(Die Anmerkung über den 'Debian way' kannst du ignorieren).

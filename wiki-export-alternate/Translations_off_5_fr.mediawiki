@@ -1,1 +1,0 @@
-L'exemple suivant joue des arpèges en transposant un pattern originel :

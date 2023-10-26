@@ -1,1 +1,0 @@
-Now you are ready to [[Start tidalcycles and superdirt for the first time|Start TidalCycles and SuperDirt for the first time]].

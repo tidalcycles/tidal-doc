@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>striate</syntaxhighlight> は <syntaxhighlight lang="Haskell" inline>chop</syntaxhighlight> に似ていますが、再生を違った方法でコントロールします。

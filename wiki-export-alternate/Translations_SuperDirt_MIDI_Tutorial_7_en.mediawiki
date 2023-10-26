@@ -1,9 +1,0 @@
-<source>
-MIDI Sources:
-	MIDIEndPoint("LoopBe Internal MIDI", "LoopBe Internal MIDI")
-	MIDIEndPoint("Focusrite USB MIDI", "Focusrite USB MIDI")
-MIDI Destinations:
-	MIDIEndPoint("Microsoft GS Wavetable Synth", "Microsoft GS Wavetable Synth")
-	MIDIEndPoint("LoopBe Internal MIDI", "LoopBe Internal MIDI")
-	MIDIEndPoint("Focusrite USB MIDI", "Focusrite USB MIDI")
-</source>

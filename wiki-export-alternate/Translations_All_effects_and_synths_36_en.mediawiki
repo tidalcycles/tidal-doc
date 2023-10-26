@@ -1,3 +1,0 @@
-== Squiz ==
-(parameters: #squiz)<br>
-(Calum Gunn)

@@ -1,2 +1,0 @@
-== Superfork ==
-(#supefork parameters: #sustain, #accelerate)

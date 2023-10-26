@@ -1,1 +1,0 @@
-Pour démarrer SuperDirt, copiez et collez le code suivant dans l'éditeur de texte de l'IDE :

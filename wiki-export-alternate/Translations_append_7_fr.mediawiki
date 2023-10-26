@@ -1,3 +1,0 @@
-<source>
-d1 $ fastAppend (sound "bd*2 sn") (sound "arpy jvbass*2")
-</source>

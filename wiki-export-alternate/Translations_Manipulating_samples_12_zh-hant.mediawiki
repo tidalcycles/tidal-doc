@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>striate</syntaxhighlight> 是一個與<syntaxhighlight lang="Haskell" inline>chop</syntaxhighlight>相似的函數，但是在回放的方式上有所不同。

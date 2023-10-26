@@ -1,1 +1,0 @@
-Dans les versions antérieures, il était possible d'utiliser <code>d1</code>, <code>d2</code>, etc, pour lancer plusieurs patterns :

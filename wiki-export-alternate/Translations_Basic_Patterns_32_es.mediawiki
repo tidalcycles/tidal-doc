@@ -1,1 +1,0 @@
-Esto te permite tener métricas de tiempo flexibles:

@@ -1,1 +1,0 @@
-Optionally, you can define a latency value on your device:

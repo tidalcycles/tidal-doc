@@ -1,1 +1,0 @@
-= Comparing <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight> and <syntaxhighlight lang="Haskell" inline>#</syntaxhighlight> =

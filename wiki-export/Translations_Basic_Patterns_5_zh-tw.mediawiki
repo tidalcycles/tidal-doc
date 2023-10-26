@@ -1,1 +1,0 @@
-用<syntaxhighlight lang="Haskell" inline>:</syntaxhighlight>來選擇資料夾裡其他的音檔

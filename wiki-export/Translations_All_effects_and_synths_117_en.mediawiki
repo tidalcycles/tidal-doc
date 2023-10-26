@@ -1,1 +1,0 @@
-MembraneCircle and MembraneHexagon are rather similar, being triangular waveguide meshes of a drum-like membrane. You input some excitation, such as a pulse of noise, and can adjust the tension and loss while it plays.

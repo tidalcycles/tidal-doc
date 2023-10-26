@@ -1,1 +1,0 @@
-The translation wouldn't save with the https:// at the beginning of the link for some reason.

@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> は、再生の速度を変えます。例. 2 は1オクターブ上がります

@@ -1,1 +1,0 @@
-you'll need to setup Jack with the command <source inline> sudo dpkg-reconfigure jackd2 </source> and add your username to the audio group with <source inline> sudo addgroup -username- audio </source>.

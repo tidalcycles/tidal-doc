@@ -1,1 +1,0 @@
-我們也可以<syntaxhighlight lang="Haskell" inline>chop</syntaxhighlight> 一個音源，製造"顆粒合成(granular synthesis)" 的效果。

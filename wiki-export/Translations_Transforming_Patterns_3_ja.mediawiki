@@ -1,1 +1,0 @@
-<syntaxhighlight lang="haskell" inline>slow</syntaxhighlight> は、パターンを複数のサイクル間にまたがるように、引きのばせます。

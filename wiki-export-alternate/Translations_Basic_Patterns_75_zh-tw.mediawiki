@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>shape</syntaxhighlight> 產生破音(distortion)失真的效果，音量會變大請留意。

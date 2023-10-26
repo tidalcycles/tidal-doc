@@ -1,1 +1,0 @@
-s.options.numOutputBusChannels = 12;

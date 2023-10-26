@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>vowel</syntaxhighlight> is a filter which adds a vowel sound -- try a, e, i, o and u

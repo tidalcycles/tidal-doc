@@ -1,3 +1,0 @@
-Wenn Dir nichts Vergleichbares angezeigt wird, musst du wahrscheinlich Haskell installieren. 
-Keine Sorge, Dir kann durchaus eine 
-andere Versionsnummer angezeigt werden. Aktuell wird TidalCycles bis zurück zur Version 7.10.3 getestet.

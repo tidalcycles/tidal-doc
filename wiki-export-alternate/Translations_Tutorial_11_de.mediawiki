@@ -1,1 +1,0 @@
-Es ist auch möglich die Sample-Nummer separat anzugeben:

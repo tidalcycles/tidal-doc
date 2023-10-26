@@ -1,5 +1,0 @@
-* [[Basic Patterns|Patrones básicos]]
-* [[Transforming Patterns|Transformando patrones]]
-* [[Different Kinds of Pattern|Diferentes tipos de patrones]]
-* [[Randomness|Aleatoriedad]]
-* [[Manipulating samples|Manipulando muestras]]

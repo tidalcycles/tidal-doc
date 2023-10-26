@@ -1,3 +1,0 @@
-== Bin shifting ==
-(parameters: #binshift)<br>
-(Mads Kjeldgaard)

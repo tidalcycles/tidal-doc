@@ -1,1 +1,0 @@
-The '''chooseBy''' function is like [[choose]] but instead of selecting elements of the list randomly, it uses the given pattern to select elements.

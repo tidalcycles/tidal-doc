@@ -1,3 +1,0 @@
-<source>
-d1 $ sound "drum ~ drum drum" # n (choose [0,2,3])
-</source>

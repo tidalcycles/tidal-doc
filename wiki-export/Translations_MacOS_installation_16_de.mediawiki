@@ -1,6 +1,0 @@
-<source>
- . "$HOME/.ghcup/env"
- echo '. $HOME/.ghcup/env' >> "$HOME/.bashrc"
- cabal update
- cabal install tidal --lib
-</source>

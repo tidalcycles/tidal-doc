@@ -1,7 +1,0 @@
-* [[:Category:Elemental patterns| Patterns élémentaires ]] - [[Oscillators | Oscillateurs]] et autres patterns.
-* [[:Category:Functions|Fonctions]] - pour transformer et combiner les patterns 
-* [[:Category:Control Functions| Fonctions de contrôle]] - Pour créer des patterns d'effets !
-* [[All the functions | Toutes les fonctions]] - La (longue) liste de toutes les fonctions, documentées et non documentées
-* [[:Category:Transitions|Transitions]] - Pour créer des transitions souples entre les patterns
-* [[All effects and synths | Tout les effets et synthétiseurs ]] - Une liste des effets internes et des synthétiseurs
-* [[Sequence parser syntax | Syntaxe du système de patterns]]

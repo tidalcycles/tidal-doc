@@ -1,1 +1,0 @@
-* [https://web.archive.org/web/20190427222710/http://ericfairbanks.org/music/tidal/code/2017/05/31/an-introduction-to-tidal.html Une introduction à Tidal (via Haskell)]

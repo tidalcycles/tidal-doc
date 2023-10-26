@@ -1,3 +1,0 @@
-#REDIRECT [[binary#binaryN]]
-
-[[Category:Functions]]

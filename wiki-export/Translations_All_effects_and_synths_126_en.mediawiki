@@ -1,2 +1,0 @@
-== Superclap ==
-(#superclap parameters:#n, #delay, #speed, #pitch1, #sustain)

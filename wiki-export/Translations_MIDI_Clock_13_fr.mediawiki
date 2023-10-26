@@ -1,3 +1,0 @@
-<source>
-~midiOut.latency = 0;
-</source>

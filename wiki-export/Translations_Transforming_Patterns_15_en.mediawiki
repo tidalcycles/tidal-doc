@@ -1,1 +1,0 @@
-You can reverse a pattern with ‘rev’

@@ -1,1 +1,0 @@
-You can also add a third parameter, which ‘rotates’ the pattern so it starts on a different step:

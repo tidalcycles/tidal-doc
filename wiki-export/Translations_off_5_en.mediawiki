@@ -1,1 +1,0 @@
-The following makes arpeggios by adding offset patterns that are shifted up the scale:

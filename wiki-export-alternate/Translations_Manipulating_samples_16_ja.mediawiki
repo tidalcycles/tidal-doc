@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>loopAt</syntaxhighlight>を使うと、サンプルを、設定したサイクル数に合わせ調整します:

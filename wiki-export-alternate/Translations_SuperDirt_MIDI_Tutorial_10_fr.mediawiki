@@ -1,1 +1,0 @@
-Nous avons stocké une référence à la sortie MIDI souhaitée dans la variable : <code>~midiOut</code>.

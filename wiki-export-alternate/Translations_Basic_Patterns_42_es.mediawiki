@@ -1,1 +1,0 @@
-O puedes hacer lo contrario usando <syntaxhighlight lang="Haskell" inline>/</syntaxhighlight>:

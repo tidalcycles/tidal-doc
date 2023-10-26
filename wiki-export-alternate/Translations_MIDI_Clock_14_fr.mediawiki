@@ -1,1 +1,0 @@
-Assurez-vous que la latence de votre machine est également à 0, puis ajustez le système progressivement, jusqu'à alignement. Si tout reste synchronisé lorsque vous changez le <code>cps</code>, tout est bon !

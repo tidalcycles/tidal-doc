@@ -1,1 +1,0 @@
-If some cabal packages fail to compile for no clear reason, this can help:

@@ -1,1 +1,0 @@
-'''cat''', (also known as <source inline>slowcat</source>, to match with <source inline>fastcat</source> defined below) concatenates a list of patterns into a new pattern; each pattern in the list will maintain its original duration. For example:

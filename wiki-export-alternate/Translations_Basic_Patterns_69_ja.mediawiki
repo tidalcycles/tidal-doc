@@ -1,1 +1,0 @@
-またはパターンを <syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> パラメータから受け取ることもできます

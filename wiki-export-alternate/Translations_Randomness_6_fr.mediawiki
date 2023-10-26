@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>irand</syntaxhighlight> génère un nombre intégral aléatoire, dans l'intervalle précisé :

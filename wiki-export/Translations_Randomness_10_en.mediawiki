@@ -1,1 +1,0 @@
-You can use <syntaxhighlight lang="Haskell" inline>degradeBy</syntaxhighlight> to remove random elements.  The number indicates how likely a sample is to play

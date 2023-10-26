@@ -1,1 +1,0 @@
-Désormais, vous pouvez également utiliser <code>p</code> suivi d'un <code>"nom"</code> entre guillemets :

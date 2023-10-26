@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> y <syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> se utilizan para cambiar el tono de las muestras.

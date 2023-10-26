@@ -1,1 +1,0 @@
-Vous pouvez lancer SuperDirt en utilisant [githubusercontent.com/musikinformatik/SuperDirt/develop/superdirt_startup.scd ce script de lancement], simplement en tapant <code>sclang superdirt_startup.scd</code> depuis votre terminal.

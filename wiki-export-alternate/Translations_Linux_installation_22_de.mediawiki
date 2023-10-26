@@ -1,1 +1,0 @@
-==Den SuperCollider Interpreter im Terminal nutzen==

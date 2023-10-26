@@ -1,4 +1,0 @@
-<source lang="c">
-(
-s.waitForBoot {
-	~dirt = SuperDirt(2, s); // two output channels

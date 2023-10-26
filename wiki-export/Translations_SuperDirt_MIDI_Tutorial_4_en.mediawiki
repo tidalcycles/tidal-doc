@@ -1,2 +1,0 @@
-= Usage =
-To begin, you'll start in SuperCollider. Start up SuperDirt as you normally would. Then, in SuperCollider eval the following code:

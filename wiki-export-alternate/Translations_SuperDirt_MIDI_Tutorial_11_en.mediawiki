@@ -1,1 +1,0 @@
-Finally, define the name of the "synth" in Tidal you will use to control this device. Below, we will call it "midi". Eval the following line:

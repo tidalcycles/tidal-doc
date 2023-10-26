@@ -1,3 +1,0 @@
-<syntaxhighlight lang="Haskell">
-rev $ "1 2 3"
-</syntaxhighlight>

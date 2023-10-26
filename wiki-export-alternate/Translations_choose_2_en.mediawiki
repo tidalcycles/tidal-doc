@@ -1,1 +1,0 @@
-The '''choose''' function emits a stream of randomly choosen values from the given list, as a [[Oscillators|continuous]] pattern.

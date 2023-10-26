@@ -1,3 +1,0 @@
-# 打開 Atom
-# 創建並儲存一個後綴為.tidal的新檔案，例如：test.tidal
-# 打開 Packages 選單並選擇 TidalCycles -> Boot TidalCycles，編輯視窗底下會出現一個小窗，顯示訊息告訴你 GHCi （Haskell直譯器）正在運行中

@@ -1,2 +1,0 @@
-== Supersiren ==
-(#supersiren parameters: #sustain)

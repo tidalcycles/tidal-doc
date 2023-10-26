@@ -1,1 +1,0 @@
-Here finally we arrive at the <syntaxhighlight lang="Haskell" inline>Pattern</syntaxhighlight> datatype, which simply consists of an either digital or analogue nature, plus a query for calculating events for a particular timespan.

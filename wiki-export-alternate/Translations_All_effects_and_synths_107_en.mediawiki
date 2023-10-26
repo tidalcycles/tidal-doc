@@ -1,2 +1,0 @@
-== Supergong ==
-(#supergong parameters: #voice, #accelerate)

@@ -1,1 +1,0 @@
-Vous verrez également les gens écrire <syntaxhighlight lang="haskell" inline>density</syntaxhighlight>. C'est tout à fait équivalent !

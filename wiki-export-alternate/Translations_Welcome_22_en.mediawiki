@@ -1,1 +1,0 @@
-TidalCycles and SuperDirt have been developed with contributions from a wide range of people - [https://github.com/tidalcycles/Tidal/graphs/contributors Tidal contributors] / [https://github.com/musikinformatik/SuperDirt/graphs/contributors SuperDirt contributors].

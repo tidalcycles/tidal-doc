@@ -1,1 +1,0 @@
-Nous pouvons aussi utiliser <syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> pour définir le pattern :

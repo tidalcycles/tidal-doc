@@ -1,1 +1,0 @@
-Once that’s all installed and configured, restart atom.

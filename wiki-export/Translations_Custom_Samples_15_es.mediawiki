@@ -1,1 +1,0 @@
-Dada la estructura de carpetas de arriba, ahora podrías utilizar los sonidos <code>myBass</code>, <code>hits</code>, and <code>field</code> en tus patrones de Tidal.

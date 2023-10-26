@@ -1,1 +1,0 @@
-Für eine einfache und automatisierte Installation vschau Dir [[Windows choco install]] an.

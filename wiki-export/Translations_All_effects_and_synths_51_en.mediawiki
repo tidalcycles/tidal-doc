@@ -1,3 +1,0 @@
-== Ring modulator ==
-(parameters: #ring, #ringf, #ringdf)<br>
-(Ben Gold)

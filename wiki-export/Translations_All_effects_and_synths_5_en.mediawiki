@@ -1,2 +1,0 @@
-== Leslie ==
-(parameters: #leslie, #lrate, #lsize)

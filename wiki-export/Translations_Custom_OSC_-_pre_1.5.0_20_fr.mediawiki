@@ -1,1 +1,0 @@
-== Exemples avec FAUST ==

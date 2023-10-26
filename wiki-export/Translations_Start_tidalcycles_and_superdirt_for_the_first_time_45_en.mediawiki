@@ -1,1 +1,0 @@
-As is common with free software, you have alternative choices for the different components that make up a TidalCycles system. Atom and SuperDirt might be all you ever need, but there are other editors and synths you can use.

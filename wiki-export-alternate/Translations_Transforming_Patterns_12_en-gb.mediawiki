@@ -1,2 +1,0 @@
-<syntaxhighlight lang="haskell">
-d1 $ sound "arpy arpy arpy:1 arpy:2"

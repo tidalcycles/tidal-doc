@@ -1,2 +1,0 @@
-== Supertron ==
-(#supertron parameters: #accelerate, #detune, #voice)

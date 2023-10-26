@@ -1,1 +1,0 @@
-Regardons la [https://github.com/musikinformatik/SuperDirt documentation de SuperDirt], et en particulier l'exemple suivant : [https://github.com/musikinformatik/SuperDirt/blob/develop/superdirt_startup.scd superdirt_startup.scd]. Collez le code dans votre éditeur, ou sauvegardez-le comme <code>startup file</code> si vous souhaitez l'utiliser à chaque ouverture de SuperCollider.

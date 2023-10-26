@@ -1,1 +1,0 @@
-[[Type signature|Type]]: <source inline>brak :: Pattern a -> Pattern a</source>

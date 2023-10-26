@@ -1,5 +1,0 @@
-// load samples from multiple folders:
-	~dirt.loadSoundFiles("/Users/myUserName/Dirt/samples/*"); 
-	~dirt.loadSoundFiles("/Users/myUserName/sounds/*"); 
-	~dirt.loadSoundFiles("/Users/myUserName/recordings/chaska-sessions/*");
-	~dirt.loadSoundFiles("/Users/myUserName/recordings/super-duper-experiments/*");

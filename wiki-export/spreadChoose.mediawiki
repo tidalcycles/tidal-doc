@@ -1,3 +1,0 @@
-#REDIRECT [[spread#spreadChoose]]
-
-[[Category:Functions]]

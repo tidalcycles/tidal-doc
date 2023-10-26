@@ -1,2 +1,0 @@
-Klicke auf den Code, um den Cursor in dieser Zeile zu platzieren.
-Dann kannst du ihn ausführen, indem du die Umschalttaste gedrückt hältst und dann zusätzlich die Eingabetaste drückst.

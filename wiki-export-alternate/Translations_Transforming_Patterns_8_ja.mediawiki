@@ -1,1 +1,0 @@
-<syntaxhighlight lang="haskell" inline>fast 0.5</syntaxhighlight> は <syntaxhighlight lang="haskell" inline>slow 2</syntaxhighlight> と同じ意味です!

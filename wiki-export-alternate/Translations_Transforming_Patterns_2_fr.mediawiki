@@ -1,1 +1,0 @@
-Nous pouvons utiliser des fonctions comme <syntaxhighlight lang="haskell" inline>slow</syntaxhighlight> pour altérer le cycle.

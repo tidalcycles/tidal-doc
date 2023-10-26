@@ -1,1 +1,0 @@
-Elije un sonido diferente del mismo conjunto, con `:`

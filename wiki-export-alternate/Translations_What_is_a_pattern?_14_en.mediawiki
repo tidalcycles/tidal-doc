@@ -1,4 +1,0 @@
-<syntaxhighlight lang="Haskell">
--- | A time arc (start and end)
-type Arc = (Time, Time)
-</syntaxhighlight>

@@ -1,2 +1,0 @@
-<syntaxhighlight lang="Haskell">
-p 100323523 $ sound "bd sd"

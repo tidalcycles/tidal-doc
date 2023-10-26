@@ -1,3 +1,0 @@
-<syntaxhighlight lang="haskell">
-d1 $ iter 4 $ sound "arpy arpy:1 arpy:2 arpy:3"
-</syntaxhighlight>

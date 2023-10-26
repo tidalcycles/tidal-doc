@@ -1,3 +1,0 @@
-<source>
-d1 $ superimpose (fast 2) $ sound "bd sn [cp ht] hh"
-</source>

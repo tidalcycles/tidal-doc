@@ -1,2 +1,0 @@
-== Superstatic ==
-(#superstatic parameters: #sustain)

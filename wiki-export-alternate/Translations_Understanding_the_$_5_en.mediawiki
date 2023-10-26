@@ -1,1 +1,0 @@
-... the dollar takes <syntaxhighlight lang="Haskell" inline>"1 2 3"</syntaxhighlight> and passes it to the function <syntaxhighlight lang="Haskell" inline>rev</syntaxhighlight>. So actually the above is the same as this:

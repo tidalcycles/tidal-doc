@@ -1,1 +1,0 @@
-There are two ways to start SuperDirt; you can either run it through the SuperCollider IDE or using SuperCollider's interpreter <code>sclang</code> in a terminal. New users are recommended to use the IDE.

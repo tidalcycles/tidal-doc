@@ -1,2 +1,0 @@
-In the above example, we have imported a folder at the path <code>/Users/myUserName/Dirt/samples</code>. In order for SuperDirt to recognize the sound names that Tidal sends, the
-<code>/Users/myUserName/Dirt/samples</code> folder will need to have sub-folders for each sound name, and each sound name folder will need to have sample files:

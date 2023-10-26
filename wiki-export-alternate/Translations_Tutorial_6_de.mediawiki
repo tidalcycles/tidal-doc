@@ -1,4 +1,0 @@
-Schauen wir uns den Code genauer an:
-Mit <source inline>sound</source> erstellen wir ein Pattern aus Sound-Samples und mit <source inline>"bd"</source> definieren welcher Sound gespielt wird. In diesem Fall wird pro Cycle ein Bassdrum-Sample gespielt.
-
-Bei der Installation von SuperDirt werden auch eine ganze Reihe von Samples mitgeliefert, die du im Dirt-Samples-Ordner finden kannst. Jeder Unterordner hier korrespondiert mit dem Namen eines Samples (wie bd).

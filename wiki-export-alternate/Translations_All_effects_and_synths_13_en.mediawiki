@@ -1,2 +1,0 @@
-== Tremolo ==
-(parameters: #tremolodepth/#tremdp, #tremolorate/#tremr)

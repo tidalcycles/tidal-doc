@@ -1,3 +1,0 @@
-#REDIRECT [[cat]]
-
-[[Category:Functions]]

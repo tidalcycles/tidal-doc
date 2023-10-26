@@ -1,2 +1,0 @@
-== Supersnare ==
-(#supersnare parameters: #n, #decay, #sustain, #accelerate)

@@ -1,1 +1,0 @@
-<syntaxhighlight lang="haskell" inline>iter</syntaxhighlight> starts the pattern at a different point each cycle, shifting it the given number of times until it gets back to where it started

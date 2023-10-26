@@ -1,1 +1,0 @@
-To control Tidal from an external MIDI device, look at the [[Controller Input]] page.

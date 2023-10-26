@@ -1,8 +1,0 @@
----
-title: Translations:Manipulating samples/1/en-gb
-permalink: wiki/Translations:Manipulating_samples/1/en-gb/
-layout: wiki
----
-
-So far we've just used short samples. Longer samples can cause us some
-problems if we’re not careful. Let’s see what happens with a long sample

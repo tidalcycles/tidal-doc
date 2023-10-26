@@ -1,3 +1,0 @@
-type ControlMap = Map.Map String Value
-type ControlPattern = Pattern ControlMap
-</syntaxhighlight>

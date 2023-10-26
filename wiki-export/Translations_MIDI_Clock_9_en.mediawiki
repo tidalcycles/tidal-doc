@@ -1,3 +1,0 @@
-<source>
-p "midictl" $ silence
-</source>

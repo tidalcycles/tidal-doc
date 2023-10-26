@@ -1,1 +1,0 @@
-To start the interpreter just run <code>sclang</code> in a terminal, then just paste the command line from above and press Enter to run it. Once the installation is done, you can exit the interpreter by pressing Ctrl + C.

@@ -1,1 +1,0 @@
-Notez que pour Emacs (et très certainement pour d'autres éditeurs), vous aurez besoin d'une 'escape sequence'.

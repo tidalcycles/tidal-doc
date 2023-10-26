@@ -1,6 +1,0 @@
-~stopMidiToOsc = {
-	on.free;
-	off.free;
-	cc.free;
-};
-)

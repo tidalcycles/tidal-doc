@@ -1,1 +1,0 @@
-Pour contrôler Tidal à l'aide d'un contrôleur externe, visitez cette [[Controller Input | page]].

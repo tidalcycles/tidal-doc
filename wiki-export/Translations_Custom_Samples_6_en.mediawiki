@@ -1,1 +1,0 @@
-The above code will boot the SuperCollider server, then start up SuperDirt with some samples located at <code>/Users/myUserName/Dirt/samples</code>.

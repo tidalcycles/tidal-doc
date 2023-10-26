@@ -1,1 +1,0 @@
-<syntaxhighlight lang="haskell" inline>slow</syntaxhighlight> permet d'étendre le pattern sur un plus grand nombre de cycles.

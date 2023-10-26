@@ -1,1 +1,0 @@
-A vaguely 808-ish kick drum. "n" controls the chirp frequency, "sustain" the overall timescale, "speed" the filter sweep speed, and "voice" the sinewave feedback

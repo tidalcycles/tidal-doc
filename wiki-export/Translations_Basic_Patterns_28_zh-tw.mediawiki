@@ -1,1 +1,0 @@
-用<syntaxhighlight lang="Haskell" inline>~</syntaxhighlight> 增加一些安靜的片刻/休止

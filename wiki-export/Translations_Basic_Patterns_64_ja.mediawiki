@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>gain</syntaxhighlight> は、それぞれの音のボリュームを変えます

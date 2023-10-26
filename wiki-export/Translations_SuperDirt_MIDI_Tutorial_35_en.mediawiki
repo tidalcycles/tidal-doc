@@ -1,3 +1,0 @@
-<source>
-d2 $ ccv 64 # ccn 30 # s "midi"
-</source>

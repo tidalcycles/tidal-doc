@@ -1,1 +1,0 @@
-Tidal is highly composable in that pattern transformations can be easily combined together, allowing you to quickly create complex patterns from simple ingredients.

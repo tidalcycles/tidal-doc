@@ -1,2 +1,0 @@
-{{DISPLAYTITLE:jux}} 
-[[Type signature|Type]]: <source inline>jux :: (ControlPattern -> ControlPattern) -> ControlPattern -> ControlPattern</source>

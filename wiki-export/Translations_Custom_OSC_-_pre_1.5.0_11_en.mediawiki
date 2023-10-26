@@ -1,1 +1,0 @@
-Once you've defined your target, you can use it like this:

@@ -1,1 +1,0 @@
-或著你可以用<syntaxhighlight lang="Haskell" inline>?</syntaxhighlight>去除聲音單元或結構，同樣也是一半機率。

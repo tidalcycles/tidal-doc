@@ -1,1 +1,0 @@
-還記得可以使用 <syntaxhighlight lang="Haskell" inline> < > </syntaxhighlight> 次序地改變每個cycle的內容嗎

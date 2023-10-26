@@ -1,1 +1,0 @@
-= Extra effects + SuperCollider help file description =

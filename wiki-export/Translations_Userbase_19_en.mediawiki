@@ -1,4 +1,0 @@
-* [[Contributing tests]]
-* [[History of Tidal]]
-* [[Changes in Tidal 1.0.0]]
-* [[Friends and relations]]

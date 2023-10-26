@@ -1,2 +1,0 @@
-The fourth and final event comes from the intersection of <syntaxhighlight lang="Haskell" inline>3</syntaxhighlight> and <syntaxhighlight lang="Haskell" inline>6</syntaxhighlight>,
-giving a value of <syntaxhighlight lang="Haskell" inline>9</syntaxhighlight>.

@@ -1,1 +1,0 @@
-There are two steps to starting up TidalCycles each time:

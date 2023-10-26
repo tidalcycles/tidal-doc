@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>*</syntaxhighlight> accélère un pas, ce qui revient à le jouer x fois.  <syntaxhighlight lang="Haskell" inline>/</syntaxhighlight> ralentit un pas, ce qui revient à le jouer x fois moins.

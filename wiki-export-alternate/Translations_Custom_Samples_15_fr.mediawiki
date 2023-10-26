@@ -1,1 +1,0 @@
-Imaginons que vous utilisez les sons mentionnés ci-dessus. Vous pouvez utiliser les sons <code>mybass</code> et <code>field</code> :

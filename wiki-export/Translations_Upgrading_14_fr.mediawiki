@@ -1,1 +1,0 @@
-Pour mettre à jour SuperDirt, ouvrez SuperCollider, collez la commande suivante et évaluez-là (Shift + Entrée) :

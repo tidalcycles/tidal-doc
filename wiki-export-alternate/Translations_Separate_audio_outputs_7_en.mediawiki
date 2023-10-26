@@ -1,1 +1,0 @@
-You assign the orbits to separate stereo channels by offsetting each one, like this:

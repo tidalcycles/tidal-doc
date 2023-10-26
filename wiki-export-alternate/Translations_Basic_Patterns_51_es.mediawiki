@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>vowel</syntaxhighlight> es un filtro que agrega un sonido de vocal. Prueba a, e, i, o y u

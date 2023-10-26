@@ -1,1 +1,0 @@
-You should now see a list of the system MIDI devices in SuperCollider's post window. The output will look something like this:

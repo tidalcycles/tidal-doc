@@ -1,1 +1,0 @@
-または、 <syntaxhighlight lang="Haskell" inline>?</syntaxhighlight> を使い、50%の確率で要素を再生しないことができます。

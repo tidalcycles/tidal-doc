@@ -1,1 +1,0 @@
-Pour envoyer un paramètre CC à votre synthétiseur, vous utiliserez un autre pattern TIdal. Pour créer ce type de patterns, vous utiliserez deux nouveaux paramètres SuperDirt MIDI :

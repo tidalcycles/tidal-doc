@@ -1,3 +1,0 @@
-Let's make the [https://faust.grame.fr/doc/manual/index.html#simple-example Simple Example] noise generator from the FAUST manual work with TidalCycles. (Please be careful, loud noise can destroy your speakers or hearing.)
-Compile it as explained so it will listen for OSC messages on port 5510.
-The matching TidalCycles <code>OSCTarget</code> is this:

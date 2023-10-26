@@ -1,1 +1,0 @@
-This extension provides a major mode for <code>*.tidal</code> files. Once the package is installed, you can just open a Tidal script and press <code>C-c C-s</code> to start Tidal in Emacs, then <code>C-return</code> to run the statement under your cursor.

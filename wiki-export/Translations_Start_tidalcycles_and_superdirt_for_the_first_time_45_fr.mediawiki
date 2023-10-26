@@ -1,1 +1,0 @@
-Comme il est de coutume pour les logiciels libres, vous trouverez plusieurs éditeurs alternatifs qui composeront votre système Tidal Cycles. Atom et SuperDirt vous serviront peut-être toujours, mais n'hésitez pas à essayer un autre éditeur de code.

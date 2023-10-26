@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> et <syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> sont utilisées pour modifier la hauteur des samples (le pitch).

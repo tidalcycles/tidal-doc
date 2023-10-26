@@ -1,1 +1,0 @@
-Now we can start writing some Tidal patterns to control the MIDI device. Let's send it a trivial note pattern:

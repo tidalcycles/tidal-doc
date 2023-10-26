@@ -1,1 +1,0 @@
-Si l'installation ne fonctionne pas, assurez-vous de posséder la commande <code>git</code>. Pour ce faire, tapez <code>git --version</code> dans un terminal. Si la commande n'est pas disponible, installez Git. Une fois que c'est fait, vous devriez pouvoir tenter à nouveau l'installation.

@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>sine</syntaxhighlight>は連続パターンです。sin波にしたがって、0から1に変化し、また0へ戻ります。

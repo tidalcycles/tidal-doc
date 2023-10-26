@@ -1,7 +1,0 @@
-* [[:Category:Elemental patterns|基礎圖式]] - [[Oscillators|振盪器]] 和其他圖式
-* [[:Category:Functions|函數]] - 變化和組合圖式
-* [[:Category:Control Functions|控制器函數]] - 控制效果器圖式等
-* [[All the functions|所有函數]] - 包含內置和未建立文檔的函數清單
-* [[:Category:Transitions|轉場]] - 如何在圖式之間轉換
-* [[All effects and synths|所有效果及合成器]] - 內置效果器和合成器清單
-* [[Sequence parser syntax|序列分析器語法]]

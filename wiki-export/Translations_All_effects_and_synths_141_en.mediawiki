@@ -1,2 +1,0 @@
-== Superchip ==
-(#superchip parameters: #slide, #speed, #accelerate, #pitch2, #pitch3, #voice)

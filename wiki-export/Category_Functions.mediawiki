@@ -1,5 +1,0 @@
-The functions (and other keywords) that have dedicated pages on this wiki.
-
-''Note that the control functions for creating superdirt parameters ([[sound]], [[pan]], [[gain]], etc) aren't shown below but are listed on their [[Control Functions|own page]] as well as having [[:Category:Control Functions|their own category page]].''
-
-[[Category:Reference]]

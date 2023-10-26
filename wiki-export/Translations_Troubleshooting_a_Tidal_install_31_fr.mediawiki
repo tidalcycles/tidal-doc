@@ -1,1 +1,0 @@
-Redémarrer SuperCollider fonctionne parfois pour les utilisateurs qui viennent tout juste de l'installer.

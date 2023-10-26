@@ -1,1 +1,0 @@
-Once everything's started and in sync, it's probably best to stop sending the start messages to avoid glitching:

@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>Run</syntaxhighlight> est une manière abrégée d'écrire ce type de patterns.

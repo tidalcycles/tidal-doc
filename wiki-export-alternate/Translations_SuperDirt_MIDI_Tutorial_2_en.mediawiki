@@ -1,1 +1,0 @@
-The prerequisites require recent versions of Tidal and SuperDirt:

@@ -1,1 +1,0 @@
-Öffne eine Eingabeaufforderung (oder PowerShell), gib dann diese beiden Befehle ein und führe sie aus:

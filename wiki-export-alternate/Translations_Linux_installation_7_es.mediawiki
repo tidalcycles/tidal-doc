@@ -1,1 +1,0 @@
-Simplemente copiá las cuatro líneas de comandos debajo de "How to?" (ignorá la parte "the debian way")

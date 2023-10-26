@@ -1,1 +1,0 @@
-The range of functions for interaction set up by default can be seen in the [https://github.com/tidalcycles/Tidal/blob/master/BootTidal.hs bootup code].

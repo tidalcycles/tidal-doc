@@ -1,1 +1,0 @@
-Si ya tenés instalado Tidal, podes actualizarlo con los siguientes comandos en una ventana de terminal:

@@ -1,3 +1,0 @@
-#REDIRECT [[iter#iter']]
-
-[[Category:Functions]] [[Category:Time Functions]]

@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>often</syntaxhighlight> は<syntaxhighlight lang="Haskell" inline>sometimes</syntaxhighlight> と似ていますが、より頻繁に発動します!

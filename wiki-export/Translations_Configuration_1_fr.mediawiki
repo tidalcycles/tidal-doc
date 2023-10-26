@@ -1,1 +1,0 @@
-Pour configurer Tidal, vous aurez besoin d'éditer le code de la séquence de lancement dans votre éditeur favori.

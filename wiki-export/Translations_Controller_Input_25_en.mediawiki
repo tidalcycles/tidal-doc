@@ -1,3 +1,0 @@
-<source>
-d1 $ sound "bd" # speed (cF 1 "12")
-</source>

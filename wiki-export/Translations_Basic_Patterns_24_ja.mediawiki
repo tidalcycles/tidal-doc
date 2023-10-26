@@ -1,3 +1,0 @@
-<syntaxhighlight lang="Haskell">
-cps 0.6
-</syntaxhighlight>

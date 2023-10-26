@@ -1,1 +1,0 @@
-You're now free to route the audio to a DAW for e.g. effects processing or recording, or record all the channels straight from supercollider into a single multichannel file. Have a look around the [https://github.com/musikinformatik/SuperDirt/tree/master/hacks SuperDirt hacks folder] for more fun with orbits.

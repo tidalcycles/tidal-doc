@@ -1,1 +1,0 @@
-Podés chequear si tu nombre de usuarix ya está en el grupo de audio escribiendo el comando <source inline>groups -username-. </source>.

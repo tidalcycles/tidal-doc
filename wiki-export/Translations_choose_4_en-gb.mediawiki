@@ -1,1 +1,0 @@
-As with all [[continuous patterns]], you have to be careful to give them structure; in this case '''chooose''' gives you an infinitely detailed stream of random choices.

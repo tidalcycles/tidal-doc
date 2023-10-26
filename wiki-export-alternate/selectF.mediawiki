@@ -1,7 +1,0 @@
-<source>selectF :: Pattern Double -> [Pattern a -> Pattern a] -> Pattern a -> Pattern a</source>
-
-chooses between a list of functions, using a pattern of floats (from 0-1)
-
-see also: [[select]], [[pickF]], [[squeeze]]
-
-[[Category:Functions]]

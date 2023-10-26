@@ -1,2 +1,0 @@
-== Supercomparator ==
-(#supercomparator parameters: #voice + see above)

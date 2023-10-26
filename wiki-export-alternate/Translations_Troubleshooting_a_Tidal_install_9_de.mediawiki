@@ -1,1 +1,0 @@
-Lass das ghci-Fenster geöffnet und tippe (oder füge ein):

@@ -1,1 +1,0 @@
-If you want to control MIDI synths, then use SuperDirt MIDI. The older 'tidal-midi' Haskell module is not currently working (although may return!). Try out the new [[SuperDirt MIDI Tutorial]].

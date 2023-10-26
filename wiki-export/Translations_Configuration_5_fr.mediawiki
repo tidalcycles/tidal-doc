@@ -1,5 +1,0 @@
-Il existe deux options permettant de configurer la latence :
-# <code>frame timespan</code> 
-# <code>latency</code>
-
-Pour connaître la latence maximale, additionnez ces deux valeurs. Voici un exemple de configuration :

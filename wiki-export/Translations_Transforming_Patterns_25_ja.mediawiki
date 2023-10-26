@@ -1,1 +1,0 @@
-<syntaxhighlight lang="haskell" inline>jux</syntaxhighlight> ('juxtapose'の略) は、変形やエフェクトを取り込み、変形やエフェクト後のパターンを一方のスピーカー、元パターンを一方のスピーカーで再生します。

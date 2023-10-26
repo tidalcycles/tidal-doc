@@ -1,3 +1,0 @@
-<syntaxhighlight lang="Haskell" >
-d1 $ sound "bev ~ bev ~" # legato 1
-</syntaxhighlight>

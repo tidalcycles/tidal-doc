@@ -1,2 +1,0 @@
-<syntaxhighlight lang="Haskell">
-d1 $ sound "arpy cp arpy:2"

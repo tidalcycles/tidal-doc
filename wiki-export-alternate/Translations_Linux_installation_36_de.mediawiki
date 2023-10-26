@@ -1,1 +1,0 @@
-SuperCollider läuft auf einem Jack-Audioserver, um Sound an die Lautsprecher zu liefern. Wenn du im Post-Fenster von SuperCollider diesen Fehler siehst

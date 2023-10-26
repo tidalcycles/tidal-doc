@@ -1,5 +1,0 @@
-<syntaxhighlight lang="Haskell" >
-d1 $ sound "bev"
---稍微等它播一段時間...然後
-hush
-</syntaxhighlight>

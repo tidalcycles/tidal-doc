@@ -1,1 +1,0 @@
-Number of teeth and width of the comb are all controlled using one floating point number

@@ -1,1 +1,0 @@
-Donnez à <code>setcps</code> le nombre de cycles par seconde que vous désirez. Si votre cycle vaut 1, il sera équivalent à 120 BPM.

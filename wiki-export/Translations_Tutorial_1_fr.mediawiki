@@ -1,1 +1,0 @@
-Vous venez d'installer Tidal et SuperDirt. Vous avez réussi à jouer quelques sons mais vous souhaitez maintenant apprendre réellement la syntaxe. Ce guide vous permettra de commencer simplement, puis d'étudier des patterns plus complexes. Si vous souhaitez une version abrégée de la syntaxe, consultez [[Sequence parser syntax | ce lien]].

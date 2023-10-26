@@ -1,1 +1,0 @@
-Votre plugin est parfois désigné comme une "extension", parfois comme un "package".

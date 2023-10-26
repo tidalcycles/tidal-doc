@@ -1,4 +1,0 @@
-#REDIRECT [[swingBy]]
-
-[[Category:Functions]]
-[[Category:Time Functions]]

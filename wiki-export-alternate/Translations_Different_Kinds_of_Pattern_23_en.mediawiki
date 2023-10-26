@@ -1,3 +1,0 @@
-<syntaxhighlight lang="Haskell">
-d1 $ sound "bd(5,8,2)"
-</syntaxhighlight>

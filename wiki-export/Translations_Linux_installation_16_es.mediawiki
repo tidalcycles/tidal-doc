@@ -1,1 +1,0 @@
-TidalCycles está pensado para que corra sobre SuperDirt, así que deberías correrlo primero para poder hacer sonido. Aquí está cómo instalarlo:

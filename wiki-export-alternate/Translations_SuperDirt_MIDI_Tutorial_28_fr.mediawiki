@@ -1,1 +1,0 @@
-Notez que <code>midichan</code> accepte également des patterns de nombres. Vous pouvez utiliser cela pour répartir vos notes sur différents canaux :

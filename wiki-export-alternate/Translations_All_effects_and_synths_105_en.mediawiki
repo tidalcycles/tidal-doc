@@ -1,2 +1,0 @@
-== Supermandolin ==
-(#supermandolin parameters: #sustain, #accelerate)

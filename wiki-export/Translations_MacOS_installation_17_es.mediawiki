@@ -1,1 +1,0 @@
-Si nunca instalaste TidalCycles antes, <code>cabal install tidal</code> puede llegar a tardar bastante tiempo. Al terminar debería decír <code>"Installed tidal-x.x.x"</code> (siendo x.x.x el numero de la última versión) sin ningún error.

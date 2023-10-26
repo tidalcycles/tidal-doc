@@ -1,1 +1,0 @@
-<syntaxhighlight lang="haskell" inline>fast</syntaxhighlight> は、パターンを1サイクル未満の長さに圧縮します。

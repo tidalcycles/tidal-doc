@@ -1,1 +1,0 @@
-With version 1.0.0 [[Installation|installed]] and [[Configuration|configured]], then by default Tidal will automatically listen for external control messages over the OSC (Open Sound Control) network protocol, on localhost (127.0.0.1), port 6010.

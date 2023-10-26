@@ -1,3 +1,0 @@
-<syntaxhighlight lang="Haskell">
-fast 2 $ rev "1 2 3"
-</syntaxhighlight>

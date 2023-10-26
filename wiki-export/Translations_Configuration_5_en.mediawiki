@@ -1,1 +1,0 @@
-There are two configuration values which control overall latency, 'frame timespan' and 'latency'. To find the maximum total latency, add them together. Here's an example configuration:

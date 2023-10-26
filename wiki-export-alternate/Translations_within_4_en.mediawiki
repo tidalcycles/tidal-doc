@@ -1,3 +1,0 @@
-<source>
-d1 $ within (0, 0.5) (fast 2) $ sound "bd*2 sn lt mt hh hh hh hh"
-</source>

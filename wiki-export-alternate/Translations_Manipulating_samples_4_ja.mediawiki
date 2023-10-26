@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>cut</syntaxhighlight> を使うと、次のサンプルの再生が発動したら、再生中のサンプルを切り捨てることができます。

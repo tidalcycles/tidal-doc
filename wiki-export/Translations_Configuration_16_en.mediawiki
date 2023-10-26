@@ -1,1 +1,0 @@
-Note that in emacs (and possibly other editor) configuration files, you'll need to escape the quotation marks.

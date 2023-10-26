@@ -1,1 +1,0 @@
-Notez que le premier exemple n'utilise pas un <code>oShape</code>. Cela signifie que Tidal enverra n'importe quel paramètre spécifié dans un pattern. Tidal enverra n'importe quel paramètre nommé dans votre code ; le paramètre sera précédé de son nom, représenté par une <code>string</code>.

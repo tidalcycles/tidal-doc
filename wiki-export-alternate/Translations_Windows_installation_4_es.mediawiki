@@ -1,4 +1,0 @@
-* Haskell Platform - '''se recomienda la versión completa''', podés [https://www.haskell.org/platform/download/8.4.3/HaskellPlatform-8.4.3-full-x86_64-setup.exe descargar la versión 8.3.4] de haskell aquí (la plataforma completa parece no estar disponible para la ultima versión de haskell, pero podés [https://www.haskell.org/platform/windows.html encontrarla aquí]).
-* [https://atom.io/ Editor Atom] (si no te gusta el editor de atom por algún motivo aquí hay una [[List of tidal editors|lista de alternativas]])
-* [http://supercollider.github.io/download SuperCollider] (la ultima versión)
-* [https://git-scm.com/ Git]

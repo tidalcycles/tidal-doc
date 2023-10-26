@@ -1,1 +1,0 @@
-Si vous souhaitez contrôler un synthétiseur MIDI, utilisez SuperDirt MIDI. Le vieux package "tidal-midi" n'est plus en développement actif. Nous espérons le voir revenir un jour ! Essayez le nouveau [[SuperDirt MIDI Tutorial | guide pour SuperDirtMidi]].

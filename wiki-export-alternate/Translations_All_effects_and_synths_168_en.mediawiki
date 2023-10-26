@@ -1,1 +1,0 @@
-Vaguely Reese-like synth. Can use "accelerate" "voice" and "detune" parameters

@@ -1,1 +1,0 @@
-Tidal 1.0.0 now has support for external input, using the OSC protocol. Here's a quick guide to getting it going, including using a simple 'bridge' for getting MIDI input working.

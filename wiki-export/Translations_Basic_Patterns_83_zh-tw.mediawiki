@@ -1,2 +1,0 @@
-你也可以試試看 <syntaxhighlight lang="Haskell" inline>tri</syntaxhighlight>, <syntaxhighlight lang="Haskell" inline>saw</syntaxhighlight> and <syntaxhighlight lang="Haskell" inline>rand</syntaxhighlight>這幾種不同的波形。
-tri = 三角波、saw = 鋸齒波、rand = 隨機數值(noise)。

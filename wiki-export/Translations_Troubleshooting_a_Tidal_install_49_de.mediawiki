@@ -1,1 +1,0 @@
-Wenn die TidalCycles-Haskell-Bibliothek nach der Installation via cabal hartnäckige Probleme hat, besonders wenn sie Fehler im Zusammenhang mit der 'Network'-Library aufzeigt, dann hilft die Installation via 'Stack' bei der Lösung dieses Problems.

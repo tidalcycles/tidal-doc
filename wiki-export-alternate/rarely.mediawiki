@@ -1,3 +1,0 @@
-#REDIRECT [[sometimes]]
-
-[[Category:Higher-order functions]] [[Category:Functions]] [[Category:Randomness and chance]]

@@ -1,1 +1,0 @@
-will result in the pattern '''"a b c"'''

@@ -1,1 +1,0 @@
-'''TidalCycles''' (o simplemente 'tidal') es un software libre, que te permite crear patrones con código, sea para la programar música en vivo o para componer dentro del estudio.

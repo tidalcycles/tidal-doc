@@ -1,2 +1,0 @@
-= Utilisation =
-Pour commencer, vous aurez besoin de Supercollider. Lancez SuperDirt comme d'habitude, puis évaluez la ligne suivante :

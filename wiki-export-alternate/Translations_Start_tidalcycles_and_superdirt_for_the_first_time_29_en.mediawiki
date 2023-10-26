@@ -1,1 +1,0 @@
-Once everything's loaded, you should be able to find the following statement in the output:

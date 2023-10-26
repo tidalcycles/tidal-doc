@@ -1,1 +1,0 @@
-You will probably find that the downbeats for superdirt and your MIDI devices don't align. As a starting point, set MIDI latency in supercollider to 0:

@@ -1,3 +1,0 @@
-<syntaxhighlight lang="Haskell">
-d1 $ sound "bd sn:2? bd sn?"
-</syntaxhighlight>

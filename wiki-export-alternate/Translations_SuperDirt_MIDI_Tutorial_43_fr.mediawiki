@@ -1,4 +1,0 @@
-<source>
-let ringMod = 30
-d2 $ ccv "0 20 50 60" # ccn ringMod # s "midi"
-</source>

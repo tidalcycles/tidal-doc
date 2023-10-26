@@ -1,1 +1,0 @@
-En passant une fonction à une fonction, il est possible d'enchaîner plusieurs transformations ( à l'aide de <code>.</code>). L'exemple suivant renverse le pattern et le ralentit :

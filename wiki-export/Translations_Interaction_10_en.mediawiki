@@ -1,1 +1,0 @@
-Theoretically, you can have any number of patterns running at once.

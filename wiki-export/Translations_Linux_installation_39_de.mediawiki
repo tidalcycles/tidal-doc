@@ -1,1 +1,0 @@
-Du kannst überprüfen, ob dein Benutzername bereits in der Audio Gruppe enthalten ist, indem du den Befehl <source inline>groups -username-</source> eingibst.  Eventuell musst du dich aus- und wieder einloggen, damit es wirksam wird.

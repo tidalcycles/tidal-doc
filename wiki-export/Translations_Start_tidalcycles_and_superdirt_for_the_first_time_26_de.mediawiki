@@ -1,3 +1,0 @@
-Wenn SuperDirt automatisch beim Start von SuperCollider aufgerufen werden soll, füge die Zeile <code>SuperDirt.start</code>  in die startup-Datei von SuperCollider ein.
-Die Startup-Datei kannst du in SuperCollider selbst verändern. Rufe sie dafür über File -> Open Startup File auf.
-Wenn du eine erweiterte Startup-Datei mit weiteren Optionen nutzen möchtest, schau Dir [https://github.com/musikinformatik/SuperDirt/blob/master/superdirt_startup.scd dieses Beispiel] an.

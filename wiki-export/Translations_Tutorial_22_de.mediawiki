@@ -1,1 +1,0 @@
-Und wenn du Pattern lieber mit einem Namen anstelle einer Nummer referenzieren möchtest, geht das mit dem <source inline>p</source>, also zum Beispiel:

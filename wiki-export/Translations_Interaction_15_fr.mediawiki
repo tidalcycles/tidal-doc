@@ -1,1 +1,0 @@
-Si vous souhaitez réaliser une transition, vous pouvez utiliser les patterns nommés :

@@ -1,1 +1,0 @@
-Si vous souhaitez utiliser le MIDI pour créer un pattern, vous aurez besoin de [[segment | le segmenter]], puisque les valeurs entrantes sont généralement en très haute résolution. Cet exemple ne sélectionne qu'une valeur par cycle, et l'applique à l'aide de la fonction <code>range</code> :

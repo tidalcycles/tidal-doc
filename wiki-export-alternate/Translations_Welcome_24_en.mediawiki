@@ -1,1 +1,0 @@
-TidalCycles has been heavily inspired by the work of many others including Bernard Bel, Laurie Spiegel and Adrian Ward.

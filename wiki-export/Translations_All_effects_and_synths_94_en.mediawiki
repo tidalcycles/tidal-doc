@@ -1,2 +1,0 @@
-== Pmsin ==
-(#pmsin parameters: #sustain, #accelerate)

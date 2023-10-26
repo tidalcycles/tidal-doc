@@ -1,5 +1,0 @@
-* [[Basic Patterns/ja|基本パターン]]
-* [[Transforming Patterns/ja|パターンの変形]]
-* [[Different Kinds of Pattern/ja|さまざまなパターン]]
-* [[Randomness/ja|ランダム性の導入]]
-* [[Manipulating samples/ja|サンプルの操作]]

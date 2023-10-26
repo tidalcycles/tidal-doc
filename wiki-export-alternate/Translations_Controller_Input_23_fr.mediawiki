@@ -1,3 +1,0 @@
-// Evaluez cette ligne pour tout arrêter.
-~stopMidiToOsc.value;
-</source>

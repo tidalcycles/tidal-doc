@@ -1,7 +1,0 @@
-* [[:Category:Elemental patterns|Elemental patterns]] - [[Oscillators]] and other patterns
-* [[:Category:Functions|Functions]] - for transforming and combining patterns
-* [[:Category:Control Functions|Control functions]] - For making patterns of effects, etc.
-* [[All the functions]] - The long list, including internal and undocumented functions
-* [[:Category:Transitions|Transitions]] - For smooth transition between patterns
-* [[All effects and synths]] - A list of internal effects and synthesizers
-* [[Sequence parser syntax]]

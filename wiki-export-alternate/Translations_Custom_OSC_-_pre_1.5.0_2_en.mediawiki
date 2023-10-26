@@ -1,1 +1,0 @@
-It's possible to define your own Open Sound Control messages, to target software other than SuperDirt or Dirt. Here's some examples:

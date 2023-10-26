@@ -1,2 +1,0 @@
-== Cyclo ==
-(#cyclo parameters: #sustain, #accelerate)

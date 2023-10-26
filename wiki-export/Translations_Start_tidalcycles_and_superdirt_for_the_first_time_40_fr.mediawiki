@@ -1,3 +1,0 @@
-# Démarrez Atom
-# Enregistrer un nouveau fichier au format <code>.tidal</code>.
-# Ouvrez le menu des packages et sélectionnez TidalCycles -> Boot Tidal Cycles. Une petite fenêtre s'ouvrira sous le code.

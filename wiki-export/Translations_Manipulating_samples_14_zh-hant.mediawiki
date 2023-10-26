@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>randslice</syntaxhighlight> 將一個音源等分成許多部份，每一個循環隨機撥放一段。

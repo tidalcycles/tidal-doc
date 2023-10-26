@@ -1,7 +1,0 @@
-''Note: the documentation here recommends the Atom editor for typing Tidal code. If you wish to use a different editor, take a look at the [[List of tidal editors]].
-
-Choose your operating system:
-
-* [[Linux_installation|Linux]]
-* [[MacOS_installation|macOS]]
-* [[Windows_installation|Windows]]

@@ -1,1 +1,0 @@
-In the above, the two versions of the pattern would be panned at 0.25 and 0.75, rather than 0 and 1.

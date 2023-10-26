@@ -1,1 +1,0 @@
-Si vous souhaitez utiliser un paramètre spécial de votre synthétiseur, qui écoute sur un numéro CC particulier, vous pouvez le nommer pour le reconnaître plus facilement :
