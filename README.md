@@ -1,3 +1,9 @@
+# wiki-export branch
+
+This branch exists for archival access to the old userbase wiki documentation, without cluttering up the main branch
+
+---
+
 # tidal-doc
 
 This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
