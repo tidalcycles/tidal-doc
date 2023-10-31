@@ -7,24 +7,29 @@ Everytime you start Tidal, the software is reading from a configuration file usu
 
 Some users went really far into customizing their setup: [Jarmlib](https://github.com/jarmitage/jarmlib). You can take a look at their work to see how to extend your configuration file.
 
-As an example, here is the *vanilla* `BootTidal.hs` file used by the [Pulsar Package for Tidal](https://raw.githubusercontent.com/tidalcycles/pulsar-tidalcycles/master/lib/BootTidal.hs):
-```c
+As an example, here is the *vanilla* `BootTidal.hs` file used by the [upstream Tidal Package](https://github.com/tidalcycles/Tidal/blob/1.9-dev/BootTidal.hs):
+```haskell
 :set -XOverloadedStrings
 :set prompt ""
 
 import Sound.Tidal.Context
+
 import System.IO (hSetEncoding, stdout, utf8)
 hSetEncoding stdout utf8
 
--- total latency = oLatency + cFrameTimespan
-tidal <- startTidal (superdirtTarget {oLatency = 0.1, oAddress = "127.0.0.1", oPort = 57120}) (defaultConfig {cFrameTimespan = 1/20})
+tidal <- startTidal (superdirtTarget {oLatency = 0.05, oAddress = "127.0.0.1", oPort = 57120}) (defaultConfig {cVerbose = True, cFrameTimespan = 1/20})
 
 :{
-let p = streamReplace tidal
+let only = (hush >>)
+    p = streamReplace tidal
     hush = streamHush tidal
+    panic = do hush
+               once $ sound "superpanic"
     list = streamList tidal
     mute = streamMute tidal
     unmute = streamUnmute tidal
+    unmuteAll = streamUnmuteAll tidal
+    unsoloAll = streamUnsoloAll tidal
     solo = streamSolo tidal
     unsolo = streamUnsolo tidal
     once = streamOnce tidal
@@ -33,7 +38,10 @@ let p = streamReplace tidal
     nudgeAll = streamNudgeAll tidal
     all = streamAll tidal
     resetCycles = streamResetCycles tidal
+    setCycle = streamSetCycle tidal
     setcps = asap . cps
+    getcps = streamGetcps tidal
+    getnow = streamGetnow tidal
     xfade i = transition tidal True (Sound.Tidal.Transition.xfadeIn 4) i
     xfadeIn i t = transition tidal True (Sound.Tidal.Transition.xfadeIn t) i
     histpan i t = transition tidal True (Sound.Tidal.Transition.histpan t) i
@@ -43,6 +51,7 @@ let p = streamReplace tidal
     jumpIn i t = transition tidal True (Sound.Tidal.Transition.jumpIn t) i
     jumpIn' i t = transition tidal True (Sound.Tidal.Transition.jumpIn' t) i
     jumpMod i t = transition tidal True (Sound.Tidal.Transition.jumpMod t) i
+    jumpMod' i t p = transition tidal True (Sound.Tidal.Transition.jumpMod' t p) i
     mortal i lifespan release = transition tidal True (Sound.Tidal.Transition.mortal lifespan release) i
     interpolate i = transition tidal True (Sound.Tidal.Transition.interpolate) i
     interpolateIn i t = transition tidal True (Sound.Tidal.Transition.interpolateIn t) i
@@ -70,7 +79,8 @@ let p = streamReplace tidal
 :}
 
 :{
-let setI = streamSetI tidal
+let getState = streamGet tidal
+    setI = streamSetI tidal
     setF = streamSetF tidal
     setS = streamSetS tidal
     setR = streamSetR tidal
@@ -80,6 +90,7 @@ let setI = streamSetI tidal
 :set prompt "tidal> "
 :set prompt-cont ""
 
+default (Pattern String, Integer, Double)
 ```
 
 ## Controlling Latency
