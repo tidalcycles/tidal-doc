@@ -122,7 +122,7 @@ If you hear sound, congratulations :thumbsup: !
 
 ## Getting Help!
 
-If you get stuck, you are welcome to ask questions and share problems on the [forums](club.tidalcycles.org), or the [Discord](https://discord.com/invite/CqWhZEfNbq) group. Something must be misconfigured or missing from your Tidal system!
+If you get stuck, you are welcome to ask questions and share problems on the [forums](https://club.tidalcycles.org), or the [Discord](https://discord.com/invite/CqWhZEfNbq) group. Something must be misconfigured or missing from your Tidal system!
 
 -----
 
