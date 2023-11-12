@@ -8,6 +8,9 @@ date: 2023-10-29
 |           aka | SaachiKaup                                               |
 |      Comments | [Club Tidal Forum Thread](https://club.tidalcycles.org/) |
 
+This year, I made a project involving Tidal Cycles and Mandalas for Summer of Haskell. TidalCycles (or Tidal for short) is a software for making patterns with code. It is used to create patterns of many kinds, from music and visualisations to dance moves for robots. Tidal uses a paradigm called Functional Reactive Programming([FRP](https://wiki.haskell.org/Functional_Reactive_Programming)) under the hood. This is useful for acts involving continuous time, including composing [music](https://www.cs.yale.edu/homes/hudak/Papers/HSoM.pdf) and [animations](http://conal.net/papers/icfp97/icfp97.pdf). 
+
+## Mandalas
 
 [Mandalas](https://en.wikipedia.org/wiki/Mandala) are geometric designs, created with circles and repeated simple shapes. Weaved squares, concentric circles, intricate triangles and squiggly lines form the piece. They are common in south east asian art, showing up in temples and sand paintings alike. Today they are widely used, to the extent that you find them on shirts and household items.
 
