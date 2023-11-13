@@ -22,7 +22,7 @@ All the Tidal visualizations I saw were linear. Notes playing forward with time.
 ## Background 
 From all that I found out about mandalas, they are general patterns. They are not really particular to India or any other country. Native American art has some mandalas, so does Tibetan sand art.
 
-![](images/mandalas/11695295665168.png)
+![](images/mandalas/sand.png)
 
 _Tibetan monks take days to painstakingly make these sand paintings. After a while, they let the tides wash over them_
 
