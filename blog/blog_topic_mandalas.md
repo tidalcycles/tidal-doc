@@ -39,6 +39,7 @@ about mandalas -
 
 ![](images/mandalas/11695295665168.png)
 
+
 _Mandalas and Fractals: Visual similarity is obvious._
 
 ### Languages 
