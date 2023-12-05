@@ -145,8 +145,21 @@ let pit = pF "pit"
 let model = pI "model" 
 ```
 
-
-
+### Listing Tidal paramenters
+From SuperCollider, you can generate a Tidal parameter list for any SuperDirt SynthDef:
+```
+SuperDirt.postTidalParameters([\imp, \default]);
+SuperDirt.postTidalParameters([\supersaw, \default])
+```
+This will generate the exact parameters registered with Tidal for the "imp" or "supersaw" synths. 
+```
+-- | parameters for the SynthDefs: imp, default
+let (begin, begin_p) = pF "begin" (Nothing)
+    (end, end_p) = pF "end" (Nothing)
+    (freq, freq_p) = pF "freq" (Nothing)
+    (span, span_p) = pF "span" (Nothing)
+    (speed, speed_p) = pF "speed" (Nothing)
+```
 
 ## Troubleshooting
 
