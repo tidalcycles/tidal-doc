@@ -65,7 +65,7 @@ ls ~/.pulsar/packages/tidalcycles/node_modules/osc-min
 
 ## Manual installation
 
-Before installing Tidal, make sure to install [Haskell](https://www.haskell.org/ghcup/) (via [Ghcup](https://www.haskell.org/ghcup/)), [SuperCollider](https://supercollider.github.io/downloadss) with  [SC3 Plugins](https://supercollider.github.io/sc3-plugins/),   [Git](https://git-scm.com/). You also need to choose and install a text editor for interacting with Tidal Cycles (see the sidebar).
+Before installing Tidal, make sure to install [Haskell](https://www.haskell.org/ghcup/) (via [Ghcup](https://www.haskell.org/ghcup/)), [SuperCollider](https://supercollider.github.io/downloads) with  [SC3 Plugins](https://supercollider.github.io/sc3-plugins/),   [Git](https://git-scm.com/). You also need to choose and install a text editor for interacting with Tidal Cycles (see the sidebar).
 
 ### Installation process
 
