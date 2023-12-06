@@ -37,6 +37,8 @@ do
 * Cycle count affects all patterns, so if there are any active, all of them will immediately jump to the beginning, which can create a strange jump in the sound (but can be used purposely, too).
 * `resetCycles` is also useful in [Multi-user Tidal](https://tidalcycles.org/docs/configuration/multiuser-tidal/#tidal-instances-dont-automatically-have-the-same-cycle).
 
+:::
+
 ### setcps
 
 ```haskell
