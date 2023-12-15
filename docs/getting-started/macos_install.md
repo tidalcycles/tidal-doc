@@ -10,9 +10,9 @@ layout: wiki
 This install script can be used to automate installation for all components and dependencies needed by the TidalCycles system. This method is recommended if you are new to Tidal and don't already have SuperCollider and SuperDirt. If you have these or if you are well versed in managing command line installations, then use the manual installation steps below.
 
 Please view the GitHub [README](https://github.com/tidalcycles/tidal-bootstrap) for details and information about supported OS versions.
-- Silicon/M1: Validated on OSX Ventura
-- Tested on Intel Big Sur, Monterey 
-For other environments, certain components may not install. Follow the post installation steps below. You may need to follow manual installation steps. 
+- Silicon/M1: Validated on OSX Ventura (note: currently [Link](../../configuration/multiuser-tidal#link-protocol-synchronization) doesn't seem to work on versions newer than Monterey)
+- Tested on Intel Big Sur, Monterey
+For other environments, certain components may not install. Follow the post installation steps below. You may need to follow manual installation steps.
 
 ---
 ### Install steps
@@ -97,7 +97,7 @@ If you've never installed TidalCycles before, then the
 command output, it should say `Installed tidal-x.x.x` (where x.x.x is
 the latest version number) without any errors.
 
-**Note:** see section "3. post installation" above for steps to verify your installations. 
+**Note:** see section "3. post installation" above for steps to verify your installations.
 
 #### SuperDirt
 

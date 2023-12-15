@@ -1,6 +1,6 @@
 ---
 title: Multi-User Tidal
-id: multiuser-tidal 
+id: multiuser-tidal
 ---
 -----
 
@@ -15,7 +15,7 @@ There are different ways to use Tidal with your friends.
 [Troop](https://github.com/Qirky/Troop) is described by it author, Ryan Kirkbride (`Qirky`), as *"a real-time collaborative tool that enables group live coding within the same document across multiple computers."* Troop is a preconfigured text editor for collaborative live-coding on a network. Troop is written in [Python 3](https://www.python.org/). You will need to install Python and `tkinter` for your specific OS/distribution. Linux users might need to install a few more dependencies, but it should be straightforward.
 
 :::caution
-Note that you will also need to install **SuperCollider** and **Tidal Cycles** to use **Troop** on your computer. 
+Note that you will also need to install **SuperCollider** and **Tidal Cycles** to use **Troop** on your computer.
 :::
 
 For the installation / configuration process, please report to the README on the [GitHub repository](https://github.com/Qirky/Troop).
@@ -42,15 +42,15 @@ There is a [server](https://estuary.mcmaster.ca) running 24/7 on the McMaster Un
 
 ## Network tempo sharing
 
-Network tempo sharing is one way of synchronizing Tidal to other instances running on different computers. This approach is more complex and "hands-on" than the ones described above. They might be better suited to more advanced / technically skilled users. 
+Network tempo sharing is one way of synchronizing Tidal to other instances running on different computers. This approach is more complex and "hands-on" than the ones described above. They might be better suited to more advanced / technically skilled users.
 
 Note: This method does not work as of Tidal 1.9. Consider using [Native Link Protocol Synchronization](#native-link-protocol-synchronization) instead.
 
 ### 1) Sync computer clocks
 
-Ensure that the system clocks of all the computers are already in sync. This can be done by making sure the computers are *syncing with a network clock via system settings*, but this isn't ideal. Under the hood that uses `ntpd`, which is designed for slowly bringing computers into synchrony over the internet, not for quickly getting computers in sync locally. 
+Ensure that the system clocks of all the computers are already in sync. This can be done by making sure the computers are *syncing with a network clock via system settings*, but this isn't ideal. Under the hood that uses `ntpd`, which is designed for slowly bringing computers into synchrony over the internet, not for quickly getting computers in sync locally.
 
-Instead, using [ptpd](https://github.com/ptpd/ptpd) is recommended. 
+Instead, using [ptpd](https://github.com/ptpd/ptpd) is recommended.
 
 :::caution
 [ptpd](https://github.com/ptpd/ptpd) is available for Linux and MacOS only.
@@ -58,11 +58,11 @@ Instead, using [ptpd](https://github.com/ptpd/ptpd) is recommended.
 
 ### 2) Start Tidal on your computer
 
-Nominate **one** computer as the `clock server` and start Tidal there. You will need to know the network address of this computer on the local network. You should be able to find this in your system settings. 
+Nominate **one** computer as the `clock server` and start Tidal there. You will need to know the network address of this computer on the local network. You should be able to find this in your system settings.
 
 ### 3) Sync the other computers to the clock server
 
-Change your Tidal Boot configuration on the other computers to set the `cTempoAddr` option to the IP address of the clock server. For example, if the clock server had the IP address `'192.168.0.10'`, your `startTidal` line would look something like this: 
+Change your Tidal Boot configuration on the other computers to set the `cTempoAddr` option to the IP address of the clock server. For example, if the clock server had the IP address `'192.168.0.10'`, your `startTidal` line would look something like this:
 
 ```haskell
 tidal <- startTidal (superdirtTarget {oLatency = 0.02}) (defaultConfig {cFrameTimespan = 1/20, cTempoAddr = "192.168.0.10"})
@@ -70,7 +70,7 @@ tidal <- startTidal (superdirtTarget {oLatency = 0.02}) (defaultConfig {cFrameTi
 
 ### 4) Setting CPS
 
-Use `setcps` on one of the computers to get all the computers in sync (g.g. `setcps 1.1`). 
+Use `setcps` on one of the computers to get all the computers in sync (g.g. `setcps 1.1`).
 
 ### 5) adjust latency
 
@@ -78,7 +78,7 @@ You will probably find that your computers are still 'out of phase': running at 
 
 Once you know the right offset you can make it permanent by adding it to the `oLatency` value in your configuration. As long as you use the same audio device and so on, you shouldn't have to adjust it again.
 
-If you find you have to nudge backwards (e.g. `d1 $ s "cp" # nudge (-0.05)`) this will only work up to a certain point. It's better to add latency to the clock server in that case. 
+If you find you have to nudge backwards (e.g. `d1 $ s "cp" # nudge (-0.05)`) this will only work up to a certain point. It's better to add latency to the clock server in that case.
 
 ## Link Protocol Synchronization
 
@@ -96,6 +96,8 @@ Tidal version 1.9 directly integrates with Ableton Link.  Link
 Synchronization is enabled by default and Tidal will automatically
 connect with other link-compatible applications on the same local
 network, including other Tidal instances.
+
+*Note: On Apple Silicon Macs, Link is currently not working on OSX versions newer than Monterey*
 
 ### Adjusting Quantum and Cycles per Beat
 
@@ -155,7 +157,7 @@ This is equivalent to increasing oLatency. When nudging backwards a lot, or when
 
 Tidal can be configured to not synchronize with other Link session.
 
-Change your Tidal Boot configuration to set the `cEnableLink` option to False. As an example, your `startTidal` line would look something like this: 
+Change your Tidal Boot configuration to set the `cEnableLink` option to False. As an example, your `startTidal` line would look something like this:
 
 ```haskell
 tidal <- startTidal superdirtTarget (defaultConfig {cEnableLink = False})
@@ -175,7 +177,7 @@ To synchronise with the Link protocol, follow the following steps:
 
 1. Download and run Carabiner, which acts as a bridge between the Link protocol and software like Tidal.
 If you are on a Mac OS X, Windows x64, Linux x64, or Raspberry Pi system, you can download the executable from the Carabiner [releases](https://github.com/brunchboy/carabiner/releases) page. Other users can find instructions for compiling [here](https://github.com/Deep-Symmetry/carabiner#building).
-2. Have another link-compatible application to hand that you want to sync to. 
+2. Have another link-compatible application to hand that you want to sync to.
 3. Start Tidal in your editor, and run the following to connect to carabiner:
 
 ```haskell
@@ -198,9 +200,9 @@ Note: The ESPGrid integration was removed in Tidal 1.9 when Tidal started using 
 
 Detailled instructions for installing, starting and configuring EspGrid/espgridd are available at the link mentionned above.
 
-### 2) Start Tidal and SuperDirt 
+### 2) Start Tidal and SuperDirt
 
-Start Tidal the usual way. 
+Start Tidal the usual way.
 
 ### 3) Sync with EspGrid
 
@@ -208,7 +210,7 @@ Just evaluate `espgrid tidal` in your editor session.
 
 ### 4) Change the tempo
 
-You can change the tempo for everyone synced to EspGrid with `cpsEsp 0.5`, `cpsEsp 0.75`, etc. If others change the tempo (including via the OSX GUI **EspGrid** app, SuperCollider quarks, etc) your tempo should change as well. 
+You can change the tempo for everyone synced to EspGrid with `cpsEsp 0.5`, `cpsEsp 0.75`, etc. If others change the tempo (including via the OSX GUI **EspGrid** app, SuperCollider quarks, etc) your tempo should change as well.
 
 ### CPS and BPM
 
@@ -233,7 +235,7 @@ sock <- carabiner tidal 4 (-0.14)
 * `-0.14`: latency time adjustment to get Tidal in phase. You might need to tweak it, to get it bang on.
 
 :::caution
-You have to restart Tidal everytime you adjust these numbers. You can do that by restarting your text editor. This will be more easily configured in the future. 
+You have to restart Tidal everytime you adjust these numbers. You can do that by restarting your text editor. This will be more easily configured in the future.
 :::
 
 Report your good or bad experiences [here]( https://toplap.lurk.org/t/link-support-preview/418).
