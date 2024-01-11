@@ -208,6 +208,23 @@ The Euclidean Algorithm Generates Traditional Musical Rhythms by Toussaint
 
 ```
 
+#### Euclidian sequence offset
+
+You can also specify a third number for the sequence. This provides an offset, moving the pattern left by the number of steps. For example, `(3,8,1)` will shift the sequence left by one of the 8 specified steps. 
+
+```c
+x ~ ~ x ~ ~ x ~ (3,8)
+~ ~ x ~ ~ x ~ x (3,8,1)
+~ x ~ ~ x ~ x ~ (3,8,2)
+x ~ ~ x ~ x ~ ~ (3,8,3)
+```
+
+Here is how you can have a euclidian sequence spread across different samples:
+
+```c
+d1 $ s "east(4,7)" # n "2 3 0 5"
+d1 $ s "east(4,7)" # n (irand 8)
+```
 
 ### Polymetric Sequences
 
