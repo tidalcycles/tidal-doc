@@ -7,7 +7,7 @@ layout: wiki
 -----
 ![vscodeicon](vscodeicon.png)
 
-VSCode is a general purpose text/code editor published by Microsoft, with some open-source components. Tidal Cycles code can be written in the **VS Code** editor through an extension. VSCode is currently the most popular code editor on the market based on some metrics. It is highly configurable, and can run on every major OS. It is highly configurable, with thousands of plugins to support new programming languages, frameworks, edition modes, etc...
+VSCode is a general purpose text/code editor published by Microsoft, with some open-source components. Tidal Cycles code can be written in the **VS Code** editor through an extension. VSCode is currently the most popular code editor on the market based on some metrics. It is highly configurable, and can run on every major OS. There are also thousands of plugins to support new programming languages, frameworks, edition modes, etc...
 
 
 ## Install VSCode
