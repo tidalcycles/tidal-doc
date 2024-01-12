@@ -62,32 +62,15 @@ When using admonitions - be sure to add empty lines before and after your text l
 
 <details>
   <summary>Toggle to see more</summary>
-  <div>
     <div>This is the detail revealed. This is useful for a long code block, allowing users flexibility in how they read through your post. </div>
-    <br/>
-  </div>
 </details>
 
-<details>
-  <summary>Toggle for code block</summary>
-  <div>
-    <div>
-
-```
-h1 $ s "sound"
-h2
-h3
-```
-
-    </div>
-    <br/>
-  </div>
-</details>
+Another "details" segment, with code:
 
 <details>
   <summary>Toggle for code block - (no div)</summary>
 
-  ```
+  ```haskell
   h1 $ s "sound"
   h2
   h3
