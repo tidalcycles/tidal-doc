@@ -141,15 +141,15 @@ d1 $ n "<d6'm9 g6'dom7'ii>" # s "superhoover" # djfbus 1 (cF 0.5 "21")
 In the above example, CC number `21` is mapped to `djf`. `cF` indicates that the MIDI CC value is to be treated as a float, and the `0-127` value from the MIDI signal is automatically converted to a `0-1` range. `0.5` is the default starting value.
 
 ```haskell
-d1 $ n "<d6'm9 g6'dom7'ii>" # s "superhoover" # roombus 3 ("^23")
+d1 $ n "<d6'm9 g6'dom7'ii>" # s "superhoover" # roombus 3 ("23")
 ```
 
-In this example, `roombus 3 ("^23")` maps CC number `23` to the `room` parameter, without specifying any initial value.
+In this example, `roombus 3 ("23")` maps CC number `23` to the `room` parameter, without specifying any initial value.
 
 In some cases, you'll need to adapt the default CC values range:
 
 ```haskell
-d1 $ n "<d6'm9 g6'dom7'ii>" # s "superhoover" # squizbus 2 (7 * "^22" + 1)
+d1 $ n "<d6'm9 g6'dom7'ii>" # s "superhoover" # squizbus 2 (7 * "22" + 1)
 ```
 
 `squiz` amount doesn't have a 0-1 range for its values. We need values greater or equal than `1` for this.
