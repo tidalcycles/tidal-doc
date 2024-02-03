@@ -87,7 +87,7 @@ function Home() {
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
  <iframe width="720" height="420" src="https://www.youtube.com/embed/uwuPjYF-XwA?si=QYJs2cSR26QM3PJl&amp;start=100" title="Pondskater" allowfullscreen="1"> </iframe>
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
- <iframe width="720" height="420" src="https://www.youtube.com/embed/t2KeNblKSFM?start=35" title="Digital Selves" allowfullscreen="1"> </iframe>
+ <iframe width="720" height="420" src="https://www.youtube.com/embed/nBpCJcduMso?si=0kSf1h-yd04-LTPp&start=184" title="yaxu tutorial" allowfullscreen="1"> </iframe>
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
         </header>
         <main>
