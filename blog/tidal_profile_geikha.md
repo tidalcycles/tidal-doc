@@ -5,7 +5,6 @@ date: 2023-10-20
 
 |          Tidal Cyclist | GEIKHA                                                     |
 | ----------------------:|:---------------------------------------------------------- |
-|                    fka | r i t c h s e                                              |
 |               Location | Buenos Aires City                                          |
 |       Years with Tidal | 4 years                                                    |
 |   Other LiveCoding env | Hydra, SuperCollider, Estuary                              |
