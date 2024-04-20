@@ -12,52 +12,6 @@ Each function will be presented following the same model:
 * **Description**: verbal description of the function.
 * **Examples**: a small list of examples that you can copy/paste in your editor.
 
-## Amplitude manipulation
-
-These functions are used to control the amplitude (volume) of the sounds.
-
-### amp
-
-```haskell
-Type: amp :: Pattern Double -> ControlPattern
-```
-
-`amp` controls the amplitude of the sound using a linear function. Its default value is `0.4`. For the power function equivalent, see `gain`.
-
-```haskell
-d1 $ s "arpy" # amp 0.6
-```
-
-This will play the first `arpy` sample at a volume slightly louder than the default.
-
-```haskell
-d1 $ s "arpy" # amp "<0.4 0.8 0.2>"
-```
-
-In the above example, the volume changes at each cycle.
-
-### gain
-
-```haskell
-Type: gain :: Pattern Double -> ControlPattern
-```
-
-`gain` controls the amplitude of the sound using a power function. Its default value is `1`. Smaller values make the sound quieter, and greater values make the sound louder.
-
-As `gain` uses a power function, the volume change around `1` is subtle, but it gets more noticable as it increases or decreases. Typical values for `gain` are between `0` and `1.5`. For the linear equivalent, see `amp`.
-
-```haskell
-d1 $ s "arpy" # gain 0.8
-```
-
-This plays the first `arpy` sample at a quieter level than the default.
-
-```haskell
-d1 $ s "ab*16" # gain (range 0.8 1.3 $ sine)
-```
-
-This plays a hihat sound, `16` times per cycle, with a `gain` moving from `0.8` to `1.3` following a sine wave.
-
 ## Speed-related effects
 
 This section presents effects that change both the speed and the pitch of the samples.
