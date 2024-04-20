@@ -1,20 +1,18 @@
 ---
-title: Samplers
-id: samplers
+title: Sample speed
+id: sample_speed
 ---
 
-This page presents many functions related to the use of samples inside TidalCycles.
-
-For specific information about functions used to slice and loop samples see [Sampling](https://tidalcycles.org/docs/reference/sampling).
+This page presents many functions that allow to change the speed at which samples play.
 
 Each function will be presented following the same model:
 * **Type signature**: how the function is declared on the **Haskell** side.
 * **Description**: verbal description of the function.
 * **Examples**: a small list of examples that you can copy/paste in your editor.
 
-## Speed-related effects
+## Playback-rate effects
 
-This section presents effects that change both the speed and the pitch of the samples.
+This section presents effects that change both the speed and the pitch of the samples. As frequencies are scaled at the same ratio of the speed, a 2x playback rate will correspond to half the duration and the pitch sounding an octave higher, and a 0.5x playback rate will correspond to double the duration and the pitch sounding an octave lower.
 
 ### accelerate
 
