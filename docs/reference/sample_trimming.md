@@ -10,7 +10,9 @@ Each function will be presented following the same model:
 * **Description**: verbal description of the function.
 * **Examples**: a small list of examples that you can copy/paste in your editor.
 
-## Absolute: indicating sample duration in seconds
+## Absolute
+
+This function allows us to indicate the sample duration in seconds.
 
 ### sustain
 
