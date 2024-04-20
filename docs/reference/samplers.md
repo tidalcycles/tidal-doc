@@ -12,7 +12,9 @@ Each function will be presented following the same model:
 * **Description**: verbal description of the function.
 * **Examples**: a small list of examples that you can copy/paste in your editor.
 
-## Basic sample manipulation
+## Amplitude manipulation
+
+These functions are used to control the amplitude (volume) of the sounds.
 
 ### amp
 
@@ -20,8 +22,7 @@ Each function will be presented following the same model:
 Type: amp :: Pattern Double -> ControlPattern
 ```
 
-`amp` is used to control the amplitude (volume) of the sound. It's very similar
-to `gain`, but it uses a linear function. Its default value is `0.4`.
+`amp` controls the amplitude of the sound using a linear function. Its default value is `0.4`. For the power function equivalent, see `gain`.
 
 ```haskell
 d1 $ s "arpy" # amp 0.6
@@ -35,55 +36,15 @@ d1 $ s "arpy" # amp "<0.4 0.8 0.2>"
 
 In the above example, the volume changes at each cycle.
 
-### begin
-
-```haskell
-Type: begin :: Pattern Double -> ControlPattern
-```
-
-`begin` receives a pattern of numbers from 0 to 1. It skips the beginning of each sample. The numbers indicate the proportion of the samples that needs to be skipped (`0` would play the sample from the start, `1` would skip the whole sample, `0.25` would cut off the first quarter from each sample). For example:
-
-```haskell
-d1 $ s "bev" # begin 0.5 # legato 1
-```
-
-In the above example, the sample is started from the half of its total length.
-
-```haskell
-d1 $ n "0 1 2" # s "ade" # begin "<0 0.25 0.5 0.75>" # legato 1
-```
-
-In this other example, the first `3` `ade` samples are playied on every cycle, but the start point from which they are playied changes on each cycle.
-
-### end
-
-```haskell
-Type: end :: Pattern Double -> ControlPattern
-```
-
-The same as `begin`, but cuts off the end of samples, shortening them. For example, `0.75` will cut off the last quarter of each sample.
-
-```haskell
-d1 $ s "bev" # begin 0.5 # end 0.65
-```
-
-This will play only a small part of the sample: from `50%` its length to `65%` its length.
-
-```haskell
-d1 $ s "bev" >| begin 0.5 >| end "[0.65 0.55]"
-```
-
-The example above will play the sample two times for cycle, but the second time will play a shorter segment than the first time, creating some kind of canon effect.
-
 ### gain
 
 ```haskell
 Type: gain :: Pattern Double -> ControlPattern
 ```
 
-`gain` is used to control the amplitude (volume) of the sound. Values less than `1` make the sound quieter. Values greater than `1` make the sound louder.
+`gain` controls the amplitude of the sound using a power function. Its default value is `1`. Smaller values make the sound quieter, and greater values make the sound louder.
 
-`gain` uses a power function, so the volume change around `1` is subtle, but it gets more noticable as it increases or decreases. Typical values for `gain` are between `0` and `1.5`. For the linear equivalent, see `amp`.
+As `gain` uses a power function, the volume change around `1` is subtle, but it gets more noticable as it increases or decreases. Typical values for `gain` are between `0` and `1.5`. For the linear equivalent, see `amp`.
 
 ```haskell
 d1 $ s "arpy" # gain 0.8
@@ -96,6 +57,49 @@ d1 $ s "ab*16" # gain (range 0.8 1.3 $ sine)
 ```
 
 This plays a hihat sound, `16` times per cycle, with a `gain` moving from `0.8` to `1.3` following a sine wave.
+
+
+## Sample trimming, relative to their length
+
+### begin
+
+```haskell
+Type: begin :: Pattern Double -> ControlPattern
+```
+
+`begin` receives a pattern of numbers from 0 to 1. It cuts off the beginning of each sample. The numbers indicate how much of each sample will be skipped, relative to its length (`0` would play the sample from the start, `1` would skip the whole sample, `0.25` would cut off the first quarter from each sample). For example:
+
+```haskell
+d1 $ s "bev" # begin 0.5 # legato 1
+```
+
+In the above example, the sample is started from the half of its total length.
+
+```haskell
+d1 $ n "0 1 2" # s "ade" # begin "<0 0.25 0.5 0.75>" # legato 1
+```
+
+In this other example, the first `3` `ade` samples are played on every cycle, but the start point from which they are played changes on each cycle.
+
+### end
+
+```haskell
+Type: end :: Pattern Double -> ControlPattern
+```
+
+The same as `begin`, but cuts off the end of samples. For example, `0.75` will cut off the last quarter of each sample.
+
+```haskell
+d1 $ s "bev" # begin 0.5 # end 0.65
+```
+
+This will play only a small part of the sample: from `50%` its length to `65%` its length.
+
+```haskell
+d1 $ s "bev" >| begin 0.5 >| end "[0.65 0.55]"
+```
+
+The example above will play the sample two times for cycle, but the second time will play a shorter segment than the first time, creating some kind of canon effect.
 
 ### grain
 
@@ -135,7 +139,87 @@ This example is equivalent to:
 d1 $ slow 2 $ s "bev" # begin 0.2 # end 0.3 # legato 1
  ```
 
-## Sample effects
+
+## Sample trimming, relative to the next events: dealing with overlaps
+
+By default, samples play from start to end when triggered. We can override this behavior so that they are cut off by the next event of the pattern.
+
+### cut
+
+```haskell
+Type: cut :: Pattern Int -> ControlPattern
+```
+
+In the style of classic drum-machines, `cut` will stop a playing sample as soon as another sample with in same cutgroup is to be played. For example,
+
+```haskell
+d1 $ fast 2 $ sound "ho:4 hc ho:4 hc" # cut 1
+```
+
+makes the pattern sound more realistic, by "choking" the open hi-hat when the closed one plays. 
+
+
+### legato
+
+```haskell
+Type: legato :: Pattern Double -> ControlPattern
+```
+
+`legato` modifies the note length relative to the event length. When its value is 1, is equivalent to stopping the sample when the next event (whether it is a sample or a silence), is triggered. Notice the difference between
+
+```haskell
+d1 $ sound "sax ~ ~ sax ~ ~ sax ~" # legato 1
+```
+
+and
+
+```haskell
+d1 $ sound "sax ~ ~ sax ~ ~ sax ~" # cut 1
+```
+
+Also, notice how these two lines are equivalent:
+```haskell
+d1 $ sound "sax ~" # legato 1
+d1 $ sound "sax" # legato 0.5
+```
+
+:::caution
+Not to be confused with `sustain`, which gives playback of a sample a duration in seconds.
+:::
+
+:::tip
+If you come from a classical music background, these two terms will probably sound conterintuitive, as there *legato* indicates that notes are to be played smoothly and connected, without silences, and that's what `cut` does in Tidal. You could think about the number after `legato` as the quantity of *tenuto* or each sample has. However, if it **really** bothers you, you can change your [Boot File](https://tidalcycles.org/docs/configuration/boot-tidal/) by appending the lines `tenuto = pF "legato"` and `legato = pI "cut"` in one of the `:{:}` blocks.
+:::
+
+## Sample trimming, in seconds
+### sustain
+
+```haskell
+Type: sustain :: Pattern Double -> ControlPattern
+```
+
+A pattern of numbers that indicates the total duration of sample playback in seconds.
+
+:::caution
+This `sustain` refers to the whole playback duration, and is not to be confused with the sustain level of a typical ADSR envelope.
+It's also not to be confused with `legato`, which modifies the playback duration relative to the event duration.
+:::
+
+```haskell
+d1 $ fast 2 $ s "breaks125:1" # cps (120/60/4) # sustain 1
+```
+
+At 120 BPM, a cycle lasts for two seconds. In the above example, we cut the sample so it plays just for one second, and repeat this part two times, so we fill the whole cycle. Note that sample pitch isn't modified.
+
+```haskell
+d1 $ s "breaks125:2!3" # cps (120/60/4) # sustain "0.4 0.2 0.4" # begin "0 0 0.4"
+```
+
+Here, we take advantage that `sustain` receives a pattern to build a different break from the original sample.
+
+## Speed-related effects
+
+These section presents effects change  that both the speed and the pitch of the samples.
 
 ### accelerate
 
@@ -177,29 +261,6 @@ d1 $ fast 2 $ s "breaks125:1" # cps (125/60/4) # speed (-2)
 
 In the above example, the break (which lasts for exactly one bar at 125 BPM), will be played backwards, and at double speed (so, we use `fast 2` to fill the whole cycle).
 
-### sustain
-
-```haskell
-Type: sustain :: Pattern Double -> ControlPattern
-```
-
-A pattern of numbers that indicates the total duration of sample playback in seconds.
-
-:::caution
-This `sustain` refers to the whole playback duration, and is not to be confused with the sustain level of a typical ADSR envelope.
-:::
-
-```haskell
-d1 $ fast 2 $ s "breaks125:1" # cps (120/60/4) # sustain 1
-```
-
-At 120 BPM, a cycle lasts for two seconds. In the above example, we cut the sample so it plays just for one second, and repeat this part two times, so we fill the whole cycle. Note that sample pitch isn't modified.
-
-```haskell
-d1 $ s "breaks125:2!3" # cps (120/60/4) # sustain "0.4 0.2 0.4" # begin "0 0 0.4"
-```
-
-Here, we take advantage that `sustain` receives a pattern to build a different break from the original sample.
 
 ### unit
 
