@@ -1,6 +1,6 @@
 ---
-title: Sampling
-id: sampling
+title: Sample slicing
+id: sample_slicing
 ---
 
 
