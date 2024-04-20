@@ -33,6 +33,7 @@ At 120 BPM, a cycle lasts for two seconds. In the above example, we cut the samp
 
 ```haskell
 d1 $ s "breaks125:2!3" # cps (120/60/4) # sustain "0.4 0.2 0.4" # begin "0 0 0.4"
+```
 
 ## Event-relative
 
@@ -164,7 +165,6 @@ This example is equivalent to:
 
 ```haskell
 d1 $ slow 2 $ s "bev" # begin 0.2 # end 0.3 # legato 1
- ```
 ```
 
 Here, we take advantage that `sustain` receives a pattern to build a different break from the original sample.
