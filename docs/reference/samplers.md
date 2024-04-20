@@ -60,7 +60,7 @@ This plays a hihat sound, `16` times per cycle, with a `gain` moving from `0.8` 
 
 ## Speed-related effects
 
-These section presents effects change  that both the speed and the pitch of the samples.
+This section presents effects that change both the speed and the pitch of the samples.
 
 ### accelerate
 
