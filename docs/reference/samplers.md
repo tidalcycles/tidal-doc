@@ -12,7 +12,9 @@ Each function will be presented following the same model:
 * **Description**: verbal description of the function.
 * **Examples**: a small list of examples that you can copy/paste in your editor.
 
-## Basic sample manipulation
+## Amplitude manipulation
+
+These functions are used to control the amplitude (volume) of the sounds.
 
 ### amp
 
@@ -20,8 +22,7 @@ Each function will be presented following the same model:
 Type: amp :: Pattern Double -> ControlPattern
 ```
 
-`amp` is used to control the amplitude (volume) of the sound. It's very similar
-to `gain`, but it uses a linear function. Its default value is `0.4`.
+`amp` controls the amplitude of the sound using a linear function. Its default value is `0.4`. For the power function equivalent, see `gain`.
 
 ```haskell
 d1 $ s "arpy" # amp 0.6
@@ -35,55 +36,15 @@ d1 $ s "arpy" # amp "<0.4 0.8 0.2>"
 
 In the above example, the volume changes at each cycle.
 
-### begin
-
-```haskell
-Type: begin :: Pattern Double -> ControlPattern
-```
-
-`begin` receives a pattern of numbers from 0 to 1. It skips the beginning of each sample. The numbers indicate the proportion of the samples that needs to be skipped (`0` would play the sample from the start, `1` would skip the whole sample, `0.25` would cut off the first quarter from each sample). For example:
-
-```haskell
-d1 $ s "bev" # begin 0.5 # legato 1
-```
-
-In the above example, the sample is started from the half of its total length.
-
-```haskell
-d1 $ n "0 1 2" # s "ade" # begin "<0 0.25 0.5 0.75>" # legato 1
-```
-
-In this other example, the first `3` `ade` samples are playied on every cycle, but the start point from which they are playied changes on each cycle.
-
-### end
-
-```haskell
-Type: end :: Pattern Double -> ControlPattern
-```
-
-The same as `begin`, but cuts off the end of samples, shortening them. For example, `0.75` will cut off the last quarter of each sample.
-
-```haskell
-d1 $ s "bev" # begin 0.5 # end 0.65
-```
-
-This will play only a small part of the sample: from `50%` its length to `65%` its length.
-
-```haskell
-d1 $ s "bev" >| begin 0.5 >| end "[0.65 0.55]"
-```
-
-The example above will play the sample two times for cycle, but the second time will play a shorter segment than the first time, creating some kind of canon effect.
-
 ### gain
 
 ```haskell
 Type: gain :: Pattern Double -> ControlPattern
 ```
 
-`gain` is used to control the amplitude (volume) of the sound. Values less than `1` make the sound quieter. Values greater than `1` make the sound louder.
+`gain` controls the amplitude of the sound using a power function. Its default value is `1`. Smaller values make the sound quieter, and greater values make the sound louder.
 
-`gain` uses a power function, so the volume change around `1` is subtle, but it gets more noticable as it increases or decreases. Typical values for `gain` are between `0` and `1.5`. For the linear equivalent, see `amp`.
+As `gain` uses a power function, the volume change around `1` is subtle, but it gets more noticable as it increases or decreases. Typical values for `gain` are between `0` and `1.5`. For the linear equivalent, see `amp`.
 
 ```haskell
 d1 $ s "arpy" # gain 0.8
@@ -97,45 +58,9 @@ d1 $ s "ab*16" # gain (range 0.8 1.3 $ sine)
 
 This plays a hihat sound, `16` times per cycle, with a `gain` moving from `0.8` to `1.3` following a sine wave.
 
-### grain
+## Speed-related effects
 
-```haskell
-Type: grain :: Pattern Double -> Pattern Double -> ControlPattern
-```
-
-`grain` is another way to specify what part of samples we want to play. Instead of specifying the `begin` and `end`, here we write the `begin` and the `length`.
-
-For example:
-
-```haskell
-d1 $ slow 2 $ s "bev" # grain 0.2 0.1 # legato 1
-```
-
-is equivalent to:
-
-```haskell
-d1 $ slow 2 $ s "bev" # begin 0.2 # end 0.3 # legato 1
-```
-
-### grain'
-
-```haskell
-Type: grain' :: Pattern String -> ControlPattern
-```
-
-`grain'` is simply a fast shortcut to join a `begin` and an `end`.
-
-```haskell
-d1 $ slow 2 $ s "bev" # grain' "0.2:0.3" # legato 1
-```
-
-This example is equivalent to:
-
-```haskell
-d1 $ slow 2 $ s "bev" # begin 0.2 # end 0.3 # legato 1
- ```
-
-## Sample effects
+This section presents effects that change both the speed and the pitch of the samples.
 
 ### accelerate
 
@@ -177,29 +102,6 @@ d1 $ fast 2 $ s "breaks125:1" # cps (125/60/4) # speed (-2)
 
 In the above example, the break (which lasts for exactly one bar at 125 BPM), will be played backwards, and at double speed (so, we use `fast 2` to fill the whole cycle).
 
-### sustain
-
-```haskell
-Type: sustain :: Pattern Double -> ControlPattern
-```
-
-A pattern of numbers that indicates the total duration of sample playback in seconds.
-
-:::caution
-This `sustain` refers to the whole playback duration, and is not to be confused with the sustain level of a typical ADSR envelope.
-:::
-
-```haskell
-d1 $ fast 2 $ s "breaks125:1" # cps (120/60/4) # sustain 1
-```
-
-At 120 BPM, a cycle lasts for two seconds. In the above example, we cut the sample so it plays just for one second, and repeat this part two times, so we fill the whole cycle. Note that sample pitch isn't modified.
-
-```haskell
-d1 $ s "breaks125:2!3" # cps (120/60/4) # sustain "0.4 0.2 0.4" # begin "0 0 0.4"
-```
-
-Here, we take advantage that `sustain` receives a pattern to build a different break from the original sample.
 
 ### unit
 
