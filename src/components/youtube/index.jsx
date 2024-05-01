@@ -1,6 +1,6 @@
 import React from "react";
 
-import { video } from "./styles.module.css";
+import styles from "./styles.module.css";
 
 /**
  * Component for embedding YouTube videos
@@ -12,7 +12,7 @@ import { video } from "./styles.module.css";
  */
 export function YouTube({ id, aspect = 16 / 9 }) {
   return (
-    <figure className={video} style={{ paddingBottom: `${100/aspect}%` }}>
+    <figure className={styles.video} style={{ paddingBottom: `${100/aspect}%` }}>
       <iframe
         src={`https://www.youtube.com/embed/${id}`}
         frameBorder="0"
