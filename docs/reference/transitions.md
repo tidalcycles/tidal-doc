@@ -319,3 +319,35 @@ Same thing as `xfade`, but you can specify the number of cycles that the transit
 ```haskell
 xfadeIn 1 8 $ s "arpy*8" # n (run 8)
 ```
+
+### fadeIn
+
+```haskell
+fadeIn :: Time -> Pattern a -> Pattern a
+```
+
+’Undegrades’ a pattern over the given time.
+
+### fadeInFrom
+
+```haskell
+fadeInFrom :: Time -> Time -> Pattern a -> Pattern a
+```
+
+Alternate version to `fadeIn` where you can provide the time from which the fade in starts.
+
+### fadeOut
+
+```haskell
+fadeOut :: Time -> Pattern a -> Pattern a
+```
+
+Degrades a pattern over the given time.
+
+### fadeOutFrom
+
+```haskell
+fadeOutFrom :: Time -> Time -> Pattern a -> Pattern a
+```
+
+Alternate version to `fadeOut` where you can provide the time from which the fade out starts.
