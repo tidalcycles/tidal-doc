@@ -1,1 +1,0 @@
-A crunchy distortion with a lot of high harmonics, the only parameter is `distort

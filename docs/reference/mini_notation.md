@@ -172,7 +172,7 @@ Euclidian rhythms are rhythms obtained using the greatest common divisor of two 
 * the number of beats
 * the number of steps/silences to fill
 
-An euclidian rhythm will distribute the first number of beats to the second numbers of steps to be filled. With Tidal, you can create euclidian rhythms by adding an event followed by the `(x,y)` indicator, `x` and `y` corresponding to the numbers described above:
+A euclidian rhythm will distribute the first number of beats to the second numbers of steps to be filled. With Tidal, you can create euclidian rhythms by adding an event followed by the `(x,y)` indicator, `x` and `y` corresponding to the numbers described above:
 ```c
 d1 $ s "[bd(3,8), cp(2,8), hh(7,8), bass:1(7,16)]"
 
@@ -208,6 +208,43 @@ The Euclidean Algorithm Generates Traditional Musical Rhythms by Toussaint
 
 ```
 
+#### Euclidian sequence offset
+
+You can also specify a third number for the sequence. This provides an offset, moving the pattern left by the number of steps. For example, `(3,8,1)` will shift the sequence left by one of the 8 specified steps.
+
+```c
+x ~ ~ x ~ ~ x ~ (3,8)
+~ ~ x ~ ~ x ~ x (3,8,1)
+~ x ~ ~ x ~ x ~ (3,8,2)
+x ~ ~ x ~ x ~ ~ (3,8,3)
+```
+
+Here is how you can have a euclidian sequence spread across different samples:
+
+```c
+d1 $ s "east(4,7)" # n "2 3 0 5"
+d1 $ s "east(4,7)" # n (irand 8)
+```
+
+#### Euclidian variation: distrib
+
+The `distrib` function provides an easy way to get rhythmic variation with euclidian patterns. With 2 inputs, `distrib` will be the same as the Euclid sequence. So `distrib [9,16]` is the same as euclid `e(9,16)`. Distrib adds an additional input to specify the number of Euclidian beats to play. You put that number **either** first or last.
+
+* When it is first -- `distrib [5, 9,16]` --  Tidal will distribute and play **5** of the 9/16 Euclid beats. This creates a new euclid pattern variant.
+
+* When it is last -- `distrib [9,16, 5]` -- Tidal will play the first **5** beats of the 9/16 Euclid beats. This reinforces the first part of the Euclid pattern.
+
+```haskell
+-- these two are the same
+d1 $ distrib [9,16] $ sound "east:2"
+d2 $ "e(9,16)" # sound "east:2"
+
+-- distributes across 5 of the euclid 9/16 beats
+d1 $ distrib [5, 9,16] $ sound "east:2"
+
+-- plays only the first 5 of the euclid 9,16 pattern
+d1 $ distrib [9,16, 5] $ sound "east:2"
+```
 
 ### Polymetric Sequences
 

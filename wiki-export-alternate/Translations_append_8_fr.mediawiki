@@ -1,1 +1,0 @@
-'''Voir aussi : [[cat]], [[cat#fastcat|fastcat]]'''

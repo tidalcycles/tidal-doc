@@ -1,1 +1,0 @@
-Nota: la documentación recomienda el editor Atom para escribir código de Tidal. Si querés usar otro editor, mirá la lista de editores para Tidal [[List of tidal editors]].

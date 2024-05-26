@@ -1,1 +1,0 @@
-[[Type signature|Type]]: <source inline>juxBy :: Pattern Double -> (ControlPattern -> ControlPattern) -> ControlPattern -> ControlPattern</source>

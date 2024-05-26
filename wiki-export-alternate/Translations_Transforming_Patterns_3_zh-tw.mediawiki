@@ -1,1 +1,0 @@
-<syntaxhighlight lang="haskell" inline>slow</syntaxhighlight>延展了pattern，跨及更多個cycle。

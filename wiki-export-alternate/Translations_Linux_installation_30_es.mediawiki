@@ -1,1 +1,0 @@
-== Instrucciones: Extensión Emacs ==

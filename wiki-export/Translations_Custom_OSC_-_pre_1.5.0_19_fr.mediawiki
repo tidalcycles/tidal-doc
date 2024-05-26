@@ -1,1 +1,0 @@
-Consultez la page [https://github.com/tidalcycles/Tidal/blob/master/BootTidal.hs BootTidal.hs] pour observer comment sont structurées les fonctions pour interargir avec Tidal.

@@ -1,1 +1,0 @@
-Si vous recevez beaucoup de <code>late messages</code> dans SuperCollider, vous pouvez augmenter la latence (la valeur par défaut est de 0.02).

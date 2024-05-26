@@ -1,3 +1,0 @@
-<source>
-~dirt.soundLibrary.addMIDI(\midi, ~midiOut);
-</source>

@@ -1,1 +1,0 @@
-Esta extensión provee un método para archivos <code>*.tidal</code>. Una vez que el paquete está instalado, simplemente abrí un archivo Tidal y presioná <code>C-c C-s</code> para iniciar Tidal en Emacs, después <code>C-return</code> para correr la línea de código donde se encuentre el cursor de tu computadora.

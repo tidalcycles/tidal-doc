@@ -1,1 +1,0 @@
-Voici comment renverser un pattern tout les trois cycles :

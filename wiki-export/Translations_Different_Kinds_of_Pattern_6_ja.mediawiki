@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>Run</syntaxhighlight> で、連続パターンを短く書くことができます。

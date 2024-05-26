@@ -1,3 +1,0 @@
-<syntaxhighlight lang="Haskell" >
-d1 $ loopAt 8 $ sound "bev"
-</syntaxhighlight>

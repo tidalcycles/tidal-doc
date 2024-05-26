@@ -1,1 +1,0 @@
-You can check if your username is already in the audio group by typing the command <source inline>groups -username-</source>

@@ -1,1 +1,0 @@
-That should play a simple four-note pattern. Notice we're just using the synth name "midi" to send notes to the MIDI device.

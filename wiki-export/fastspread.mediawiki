@@ -1,3 +1,0 @@
-#REDIRECT [[spread#fastspread]]
-
-[[Category:Functions]]

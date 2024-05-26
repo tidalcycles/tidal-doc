@@ -1,1 +1,0 @@
-Imaginons que vous souhaitiez réaliser un enregistrement multi-piste, avec plusieurs patterns simultanés, chacun enregistré sur une piste différente. Imaginons que vous souhaitez router l'audio de vos patterns dans plusieurs processeurs d'effets externes. Comment faire ?

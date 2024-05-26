@@ -1,1 +1,0 @@
-Lorsque vous démarrez SuperCollider, au lieu du <code>SuperDirt.start</code> traditionnel, vous aurez besoin d'utiliser un script plus long qui indiquera à SuperDirt où trouver vos samples. Le script ressemble à cela :

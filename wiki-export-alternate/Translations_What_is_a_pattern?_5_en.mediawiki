@@ -1,3 +1,0 @@
-<syntaxhighlight lang="Haskell">
-"1 2 3" :: Pattern String
-</syntaxhighlight>

@@ -1,1 +1,0 @@
-Vous n'aurez besoin de changer que deux éléments. Si vous souhaitez six sorties stéréo, vous aurez besoin de 12 canaux au total. Changez le nombre de sorties audio :

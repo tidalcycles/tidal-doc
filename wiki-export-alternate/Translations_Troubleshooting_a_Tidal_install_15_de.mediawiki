@@ -1,1 +1,0 @@
-Das bedeutet, dass die TidalCycles-Bibliothek nicht installiert ist. Um sie zu installieren, öffne ein neues Terminal-Fenster und gebe Folgendes ein:

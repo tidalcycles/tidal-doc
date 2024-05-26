@@ -1,1 +1,0 @@
-Le script de démarrage est extrêmement simple. Il vous permet d'utiliser deux orbits (pistes d'effets) et charge les samples par défaut. Vous souhaiterez certainement le configurer un peu plus, et ajouter quelques orbits : [[Custom Samples | Samples personnalisées]].

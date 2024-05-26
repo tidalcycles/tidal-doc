@@ -1,1 +1,0 @@
-But now as an alternative you can also use <syntaxhighlight lang="haskell" inline>p</syntaxhighlight> and specify ''any'' number, like this:

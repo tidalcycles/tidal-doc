@@ -1,1 +1,0 @@
-Luego de que se completó, vas a tener que reiniciar SuperCollider (o recompilando la librería de clases a través del menu "Languaje").

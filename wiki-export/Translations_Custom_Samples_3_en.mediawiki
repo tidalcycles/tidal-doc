@@ -1,1 +1,0 @@
-When you open SuperCollider, instead of the normal <code>SuperDirt.start</code> code, you will need to write a longer script that tells SuperDirt where to find your samples. The startup script will look like this:

@@ -1,1 +1,0 @@
-A controllable synth siren, defaults to 1 second, draw it out with "sustain".

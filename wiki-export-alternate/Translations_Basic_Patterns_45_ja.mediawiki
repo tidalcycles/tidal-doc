@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>*</syntaxhighlight> は 'スピードアップ' し、掛け合わせた回数だけステップを再生します。逆に、 <syntaxhighlight lang="Haskell" inline>/</syntaxhighlight> は遅く再生する様はたらきます。

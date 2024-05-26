@@ -1,1 +1,0 @@
-= Instalar la extensión de Atom. =

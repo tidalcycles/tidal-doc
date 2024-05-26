@@ -1,1 +1,0 @@
-你可以用<syntaxhighlight lang="Haskell" inline>*</syntaxhighlight>重複某個單元:

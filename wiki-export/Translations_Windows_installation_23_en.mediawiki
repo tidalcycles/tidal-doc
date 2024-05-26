@@ -1,1 +1,0 @@
-For an easy, automated install experience, see the [[Windows choco install]].

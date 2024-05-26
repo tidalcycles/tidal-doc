@@ -1,1 +1,0 @@
-From synthdef.art, #wavemechanics. Responds to accelerate (for pitch glide). detune (for pitch randomization). voice (to color/whiten the noise). resonance (affects reverberation)

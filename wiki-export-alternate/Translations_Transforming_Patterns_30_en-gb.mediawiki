@@ -1,1 +1,0 @@
-More than one transformation is possible! You can chain them together using <syntaxhighlight lang="haskell" inline>.</syntaxhighlight>

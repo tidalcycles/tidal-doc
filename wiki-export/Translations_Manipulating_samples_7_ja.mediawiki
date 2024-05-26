@@ -1,4 +1,0 @@
-<syntaxhighlight lang="Haskell" >
-d1 $ sound "bev ~" # cut 1
-d2 $ slow 4 $ sound "pebbles ~" # cut 1
-</syntaxhighlight>

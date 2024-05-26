@@ -1,1 +1,0 @@
-To uninstall a version, you can do, for example:

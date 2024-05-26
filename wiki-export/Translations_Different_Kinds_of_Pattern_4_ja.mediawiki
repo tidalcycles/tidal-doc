@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>n</syntaxhighlight> を使い、フォルダからサンプルを選べます。パターンをそこに適用することもできます!

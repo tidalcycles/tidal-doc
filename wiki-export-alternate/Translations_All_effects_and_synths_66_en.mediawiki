@@ -1,1 +1,0 @@
-Accepts floats to control the width and placement of the scrambling in the spectrum

@@ -1,1 +1,0 @@
-Si la dernière version de Tidal est installée (> 1.0.0), Tidal écoute automatiquement les messages reçus par OSC (Open Sound Control), sur le <code>localhost</code> (127.0.0.1), port 6010.

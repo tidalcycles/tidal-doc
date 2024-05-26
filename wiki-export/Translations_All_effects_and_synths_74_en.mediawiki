@@ -1,1 +1,0 @@
-Both the stretching and shifting of bins are controlled by supplying this parameter with floats.

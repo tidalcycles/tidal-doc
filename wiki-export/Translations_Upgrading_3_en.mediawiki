@@ -1,1 +1,0 @@
-Upgrade tidal with the following from a terminal window:

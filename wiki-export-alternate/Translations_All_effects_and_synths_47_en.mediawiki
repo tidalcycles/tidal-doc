@@ -1,3 +1,0 @@
-== Krush ==
-(parameters: #krush, #kcutoff)<br>
-(Ben Gold)

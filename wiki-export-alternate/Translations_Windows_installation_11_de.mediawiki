@@ -1,1 +1,0 @@
-Wenn du noch nie TidalCycles installierst hast, kann der Schritt <code>cabal install tidal</code> einige Zeit in Anspruch nehmen.

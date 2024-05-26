@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> pitches the sample up in semitones, e.g. 12 = up an octave

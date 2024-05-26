@@ -1,1 +1,0 @@
-You should see messages about lots of sample banks being loaded and eventually:

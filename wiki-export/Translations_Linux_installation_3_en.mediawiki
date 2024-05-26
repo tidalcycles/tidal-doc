@@ -1,4 +1,0 @@
-* [https://git-scm.com/ Git]
-* [https://www.haskell.org/platform/ Haskell]
-* [http://supercollider.github.io/download SuperCollider]
-* [https://atom.io/ Atom Editor]  (if you don't like the atom editor for some reason, please check out the [[List of tidal editors|list of alternatives]])

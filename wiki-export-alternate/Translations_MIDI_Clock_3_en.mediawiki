@@ -1,3 +1,0 @@
-<source>
-p "midiclock" $ midicmd "midiClock*48" # s "midi"
-</source>

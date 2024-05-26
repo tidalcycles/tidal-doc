@@ -1,1 +1,0 @@
-* The word "and" is always placed between the final two entries.

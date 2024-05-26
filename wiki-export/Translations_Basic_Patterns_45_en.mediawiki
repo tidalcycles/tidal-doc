@@ -1,2 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>*</syntaxhighlight> works by 'speeding up' a step to play it multiple times. <syntaxhighlight lang="Haskell" inline>/</syntaxhighlight> works
-by 'slowing it down'.

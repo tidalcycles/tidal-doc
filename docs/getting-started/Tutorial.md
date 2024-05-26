@@ -47,7 +47,7 @@ select the File &gt; Open User Support Directory menu item. From there,
 open downloaded-quarks and finally Dirt-Samples in there. You should
 find a lot of folders, each one is a sample bank containing standard wav
 files. Feel free to make new folders and add your own sounds to it, see
-the [Custom Samples](/wiki/Custom_Samples "wikilink") userbase page for more
+the [Custom Samples](/docs/configuration/AudioSamples/audiosamples/) userbase page for more
 info.
 
 We can pick a different sample in the bd folder by adding a colon (:)

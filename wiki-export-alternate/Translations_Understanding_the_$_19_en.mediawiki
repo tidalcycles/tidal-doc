@@ -1,2 +1,0 @@
-So, <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight> is used to join a parameter (on the right) with a function (on the left). <syntaxhighlight lang="Haskell" inline>#</syntaxhighlight> (and all its friends <syntaxhighlight lang="Haskell" inline>|+|</syntaxhighlight>, <syntaxhighlight lang="Haskell" inline>|*|</syntaxhighlight>, etc) are used to combine a pattern on the right with a pattern on the left.
-[[Category:Reference|$]]

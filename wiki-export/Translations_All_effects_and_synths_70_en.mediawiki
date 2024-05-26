@@ -1,1 +1,0 @@
-Accepts floats to determine the amount of smearing.

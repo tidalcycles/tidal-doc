@@ -1,3 +1,0 @@
-<syntaxhighlight lang="haskell" inline>every</syntaxhighlight> は、変形やエフェクトを、サイクルを指定してスケジューリングできます。
-
-例 4サイクルごとに、2倍の速さで再生:

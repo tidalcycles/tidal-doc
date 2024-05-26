@@ -1,1 +1,0 @@
-Après avoir configuré [[SuperDirt_MIDI_Tutorial | SuperDirt MIDI]], il sera très simple d'émettre une horloge MIDI. Cette fonctionnalité est toujours en développement, et sera simplifiée dans les prochaines versions.

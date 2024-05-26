@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>:</syntaxhighlight> で、同じセットから他の音を使います

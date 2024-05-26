@@ -1,1 +1,0 @@
-Average a bin's magnitude with its neighbors.)</small>

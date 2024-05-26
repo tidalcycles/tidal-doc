@@ -1,1 +1,0 @@
-It has the alias <source inline>slowAppend</source>, in sympathy with [[append#fastAppend|fastAppend]], described below.

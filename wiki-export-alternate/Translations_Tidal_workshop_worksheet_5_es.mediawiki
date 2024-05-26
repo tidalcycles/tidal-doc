@@ -1,2 +1,0 @@
-# Levanta SuperDirt - En SuperCollider, tipear 'SuperDirt.start' y ejecuta el código manteniendo presionando 'Ctrl' y presionando 'Enter' (mientras tu cursor está en la misma línea que el código).
-# Levanta TidalCycles - En Atom, crea un nuevo archivo y guárdalo con una extensión <syntaxhighlight lang="Haskell" inline>.tidal</syntaxhighlight> (ej. `ejemplos.tidal`).

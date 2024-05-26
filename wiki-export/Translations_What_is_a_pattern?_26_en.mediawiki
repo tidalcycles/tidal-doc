@@ -1,5 +1,0 @@
-<syntaxhighlight lang="Haskell">
--- | Also known as Continuous vs Discrete/Amorphous vs Pulsating etc.
-data Nature = Analog | Digital
-            deriving Eq
-</syntaxhighlight>

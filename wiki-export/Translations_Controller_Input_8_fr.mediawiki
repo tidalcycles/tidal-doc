@@ -1,4 +1,0 @@
-
-<syntaxhighlight lang="haskell">
-tidal <- startTidal superdirtTarget (defaultConfig {cCtrlListen = False})
-</syntaxhighlight>

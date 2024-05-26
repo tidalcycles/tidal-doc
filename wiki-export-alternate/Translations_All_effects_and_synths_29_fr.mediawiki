@@ -1,6 +1,0 @@
-== Paramètres spécifiques au MIDI ==
-Paramètres :
-# dur : durée d'une note.
-# modwheel : molette de pitchwheel.
-# expression : pédale d'expression.
-# sustainpedal : pédale forte (soutiens le son).

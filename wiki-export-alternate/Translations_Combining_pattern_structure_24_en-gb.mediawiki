@@ -1,3 +1,0 @@
-The last two are interesting, they let you only take values from one
-side. So for example you could take structure from the left, but
-values from the right with <syntaxhighlight lang="Haskell" inline>|></syntaxhighlight>, for example:

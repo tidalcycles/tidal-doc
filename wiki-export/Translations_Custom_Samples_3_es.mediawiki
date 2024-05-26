@@ -1,1 +1,0 @@
-Cuando abres SuperCollider, en vez del típico código <code>SuperDirt.start</code>, vas a necesitar escribir una serie de comandos para decirle a SuperDirt donde encontrar tus samples. El código de arranque se verá algo así:

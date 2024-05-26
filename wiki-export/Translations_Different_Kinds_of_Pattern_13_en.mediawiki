@@ -1,1 +1,0 @@
-Play two subsequences at once by using square brackets (sort of like one big subsequence!) separating with a comma:

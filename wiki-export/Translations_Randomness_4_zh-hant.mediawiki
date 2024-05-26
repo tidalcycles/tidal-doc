@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>often</syntaxhighlight> 的作用也與<syntaxhighlight lang="Haskell" inline>sometimes</syntaxhighlight> 相同，但發生的機率更高!

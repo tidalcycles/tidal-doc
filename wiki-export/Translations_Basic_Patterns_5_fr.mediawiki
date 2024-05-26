@@ -1,1 +1,0 @@
-Choisissez un son différent au sein d'un même jeu de samples (dossier) à l'aide de `:`

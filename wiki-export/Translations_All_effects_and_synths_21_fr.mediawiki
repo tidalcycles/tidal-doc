@@ -1,3 +1,0 @@
-== Filtre passe-bas ==
-# cutoff/lpf : la fréquence de coupure.
-# resonance/lpq : la résonance du filtre.

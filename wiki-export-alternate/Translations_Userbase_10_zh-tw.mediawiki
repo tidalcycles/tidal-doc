@@ -1,3 +1,0 @@
-* [[What is a pattern?|什麼是"圖式"？]]
-* [[Type signatures|類型特徵]]
-* [[Haskell resources|Haskell參考]]

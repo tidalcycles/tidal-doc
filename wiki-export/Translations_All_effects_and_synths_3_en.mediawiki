@@ -1,2 +1,0 @@
-== Delay ==
-(parameters: #delay, #delaytime/#delayt, #delayfeedback/#delayfb)

@@ -1,3 +1,0 @@
-#REDIRECT [[run#scan]]
-
-[[Category:Functions]] [[Category:Utility Functions]]

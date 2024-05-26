@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>sometimes</syntaxhighlight>  は <syntaxhighlight lang="Haskell" inline>every</syntaxhighlight> と似ていますが、セットの区切りで発動する代わりに、ランダムな確率で現れます。

@@ -1,3 +1,0 @@
-<syntaxhighlight lang="Haskell">
-d1 $ often (# speed "2") $ sound "drum*8"
-</syntaxhighlight>

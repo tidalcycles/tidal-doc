@@ -1,1 +1,0 @@
-If you want to do a transition, you put it in place of the <syntaxhighlight lang="haskell" inline>p</syntaxhighlight>, e.g.:

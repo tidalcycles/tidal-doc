@@ -1,1 +1,0 @@
-Rappelez-vous qu'il est possible d'utiliser "<>" pour planifier à travers le pattern.

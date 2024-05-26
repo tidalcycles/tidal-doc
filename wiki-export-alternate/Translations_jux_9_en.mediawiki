@@ -1,3 +1,0 @@
-<source>
-d1 $ juxBy 0.5 (fast 2) $ sound "bd sn:1"
-</source>

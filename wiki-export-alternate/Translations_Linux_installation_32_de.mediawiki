@@ -1,1 +1,0 @@
-Diese Erweiterung bietet einen Major Mode für <code>*.tidal</code> Dateien. Sobald das Paket installiert ist, kannst du einfach ein Tidal-Skript öffnen und <code>C-c C-s</code> eingeben, um Tidal in Emacs zu starten. Und dann <code>C-return</code>, um die Anweisung in der Zeile mit dem Cursor auszuführen.

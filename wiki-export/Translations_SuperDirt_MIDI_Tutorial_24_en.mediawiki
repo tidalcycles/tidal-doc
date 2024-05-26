@@ -1,1 +1,0 @@
-The default MIDI channel is 1. SuperDirt MIDI channels are indexed starting at zero, so MIDI channel 1 is <code>midichan 0</code>:

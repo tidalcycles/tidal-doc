@@ -1,1 +1,0 @@
-Tidal intègre un grand nombre d'effets que nous pouvons utiliser pour modifier le rendu d'un pattern ou d'une séquence :

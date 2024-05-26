@@ -10,13 +10,14 @@ This page will present you all the functions that will be useful during the perf
 * **Examples**: a small list of examples that you can copy/paste in your editor.
 
 ## Tempo
-### resetCycles
+### resetCycles / setCycle
 
 ```haskell
 Type: resetCycles :: IO ()
 ```
 
-`resetCycles` is a global function that resets the cycle count back to 0.
+`resetCycles` is a global function that resets the cycle count back to 0. 
+`setCycle` will start at a given cycle number.
 
 This is useful to make sure a pattern or set of patterns start from the beginning:
 
@@ -25,9 +26,19 @@ do
   resetCycles
   d1 $ s "bd hh hh hh"
   d2 $ s "ade" # cut 1
+
+do
+  setCycle 5
+  d1 $ n "6 2 0 8" # s "east" 
 ```
 
-Note that the cycle count affects all patterns, so if there are any active, all of them will immediately jump to the beginning, which can create a strange jump in the sound (but can be used purposely, too).
+:::tip
+
+* Cycle count affects all patterns, so if there are any active, all of them will immediately jump to the beginning, which can create a strange jump in the sound (but can be used purposely, too).
+* `resetCycles` is also useful in [Multi-user Tidal](https://tidalcycles.org/docs/configuration/multiuser-tidal/#tidal-instances-dont-automatically-have-the-same-cycle).
+* `getnow` will show the current cycle number position. 
+
+:::
 
 ### setcps
 

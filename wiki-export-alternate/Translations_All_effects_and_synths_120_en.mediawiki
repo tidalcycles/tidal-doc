@@ -1,2 +1,0 @@
-== Super808 ==
-(#super808 parameters: #n, #sustain, #speed, #voice)

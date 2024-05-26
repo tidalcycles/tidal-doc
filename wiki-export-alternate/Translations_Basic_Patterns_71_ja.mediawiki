@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>note</syntaxhighlight> は、音高を半音ずつ変えます。例. 12 で1オクターブ上がります

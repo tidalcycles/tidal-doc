@@ -1,2 +1,0 @@
-Please note: There are several reports that tidal-bootstrap currently only works if you install the 8.2.1 version of the haskell platform first. You can 
-[https://www.haskell.org/platform/download/8.2.1/Haskell%20Platform%208.2.1%20Full%2064bit-signed.pkg download that here].

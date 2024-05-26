@@ -1,1 +1,0 @@
-我們將開始使用轉換(transformation)做出更複雜的pattern。

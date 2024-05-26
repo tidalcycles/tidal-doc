@@ -1,1 +1,0 @@
-Une fois que tout est synchronisé, il est préférable de stopper l'envoi des messages <code>start</code> pour éviter les bugs et les glitchs :

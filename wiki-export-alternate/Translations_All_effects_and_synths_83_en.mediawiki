@@ -1,3 +1,0 @@
-== Spectral conformer ==
-(parameters: #real, #imag)<br>
-(Mads Kjeldgaard)

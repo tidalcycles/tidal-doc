@@ -1,2 +1,0 @@
-# 啟動SuperCollider 內的SuperDirt 
-# 啟動Atom內的TidalCycles

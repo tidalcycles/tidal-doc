@@ -1,3 +1,0 @@
-You can see the structure comes from the <syntaxhighlight lang="Haskell" inline>2</syntaxhighlight> and <syntaxhighlight lang="Haskell" inline>3</syntaxhighlight>. <syntaxhighlight lang="Haskell" inline>2</syntaxhighlight> lines up
-with <syntaxhighlight lang="Haskell" inline>4</syntaxhighlight>, and the start of <syntaxhighlight lang="Haskell" inline>3</syntaxhighlight> is in <syntaxhighlight lang="Haskell" inline>5</syntaxhighlight>, so you end up with <syntaxhighlight lang="Haskell" inline>2+4=6</syntaxhighlight>
-and <syntaxhighlight lang="Haskell" inline>3+5=8</syntaxhighlight>. The result is the equivalent of <syntaxhighlight lang="Haskell" inline>"6 8"</syntaxhighlight>

@@ -1,1 +1,0 @@
-或是像鐘擺一樣前後來回<syntaxhighlight lang="haskell" inline>palindrome</syntaxhighlight>

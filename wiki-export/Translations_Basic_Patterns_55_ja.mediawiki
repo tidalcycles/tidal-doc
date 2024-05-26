@@ -1,1 +1,0 @@
-サイクル間でスケジューリングするため、<syntaxhighlight lang="Haskell" inline><></syntaxhighlight>を使っているのを覚えておきましょう。

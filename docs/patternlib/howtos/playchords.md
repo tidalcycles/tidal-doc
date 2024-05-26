@@ -32,7 +32,7 @@ Samples tuned to concert C can also be used:
 d1 $ note "c'maj e'min" # s "gtr"
 ```
 
-Chord inversions can be achieved by appending the `'` to a chord, along with one or more `i` characters. A single `i` is the first inversion (same as default with no i). A second inversion looks like this:
+Chord inversions can be achieved by appending the `'` to a chord, along with one or more `i` characters. The default state, without any `i`, is root position. A single `i` is the first inversion. A second inversion looks like this:
 
 ```haskell
 d1 $ n "c'major7'ii" # s "supermandolin"

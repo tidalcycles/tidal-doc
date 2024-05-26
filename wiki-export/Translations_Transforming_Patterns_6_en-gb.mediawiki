@@ -1,1 +1,0 @@
-<syntaxhighlight lang="haskell" inline>fast</syntaxhighlight> squashes the pattern into less than one cycle

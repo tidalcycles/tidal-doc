@@ -1,1 +1,0 @@
-Démarrez SuperCollider et tapez la commande suivante :

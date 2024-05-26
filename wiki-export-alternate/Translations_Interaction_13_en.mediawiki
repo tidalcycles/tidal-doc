@@ -1,3 +1,0 @@
-p "jimmy" $ silence
-p "susan" $ silence
-</syntaxhighlight>

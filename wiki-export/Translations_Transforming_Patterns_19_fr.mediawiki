@@ -1,1 +1,0 @@
-<syntaxhighlight lang="haskell" inline>iter</syntaxhighlight> démarre le pattern sur un élément différent à chaque fois, changeant de point de départ à chaque itération, jusqu'à revenir à son point de départ (le pattern normal).

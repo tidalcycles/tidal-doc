@@ -1,2 +1,0 @@
-Wenn du eine Fehlermeldung siehst (ignoriere dabei Warnungen über Befehle im 'Legacy v1-Style'), dann stelle  sicher, dass du die vollständige (full) Haskell-Plattform  installiert hast und versuche es noch einmal. 
-Wenn es immer noch nicht funktioniert, schreib die Fehlermeldung bitte an unsere [[Community]] und bitte dort um Hilfe.

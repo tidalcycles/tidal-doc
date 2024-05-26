@@ -1,1 +1,0 @@
-If you want to be specific, you can use <syntaxhighlight lang="haskell" inline>sometimesBy</syntaxHighlight> and a number, for example <syntaxhighlight lang="haskell">sometimesBy 0.93 (# speed 2)</syntaxhighlight> to apply the <syntaxhighlight lang="haskell" inline>speed</syntaxhighlight> control on average 93 times out of a hundred.

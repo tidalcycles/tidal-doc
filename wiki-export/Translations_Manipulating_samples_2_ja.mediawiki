@@ -1,5 +1,0 @@
-<syntaxhighlight lang="Haskell" >
-d1 $ sound "bev"
--- wait a bit, then..
-hush
-</syntaxhighlight>

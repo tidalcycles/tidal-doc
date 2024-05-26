@@ -1,7 +1,0 @@
-<source>squeeze :: Pattern Int -> [Pattern a] -> Pattern a</source>
-
-chooses between a list of patterns, using a pattern of integers
-
-see also: [[pickF]], [[select]], [[selectF]]
-
-[[Category:Functions]]

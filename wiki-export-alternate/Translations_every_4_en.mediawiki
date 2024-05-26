@@ -1,3 +1,0 @@
-<syntaxhighlight lang="haskell">
-d1 $ every 3 rev $ n "0 1 [~ 2] 3" # sound "arpy"
-</syntaxhighlight>

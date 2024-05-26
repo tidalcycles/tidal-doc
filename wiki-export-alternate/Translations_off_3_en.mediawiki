@@ -1,1 +1,0 @@
-The following plays a pattern on top of itself, but offset by an eighth of a cycle, with a distorting bitcrush effect applied.

@@ -1,1 +1,0 @@
-sometimes has a number of variants, which apply the function with different likelihood.

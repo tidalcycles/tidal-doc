@@ -1,1 +1,0 @@
-Puedes usar d1, d2, d3 ... d9 para reproducir múltiples secuencias al mismo tiempo.

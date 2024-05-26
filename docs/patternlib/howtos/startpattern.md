@@ -34,7 +34,7 @@ d2 $ trigger $ sound "bd hh hh hh"
 
 ## resetCycles
 
-Use `resetCycles` to... reset the cycle count:
+Use `resetCycles` to... reset the cycle count. This will reset the cycle count as soon as you run it, not at the end of the current cycle:
 
 ```haskell
 do

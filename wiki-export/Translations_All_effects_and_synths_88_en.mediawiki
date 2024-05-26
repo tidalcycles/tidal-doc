@@ -1,3 +1,0 @@
-== DJ Filter ==
-(parameters: #djf)<br>
-(Alex McLean)

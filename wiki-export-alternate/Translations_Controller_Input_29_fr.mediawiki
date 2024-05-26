@@ -1,1 +1,0 @@
-Les instructions pour SuperCollider sont utiles si vous utilisez SuperDirt, mais Pure Data fonctionne tout aussi bien pour convertir du MIDI en OSC. Vous pouvez télécharger Pure Data [[https://puredata.info/ à cette adresse]]. Nous recommandons la version 'vanilla'.

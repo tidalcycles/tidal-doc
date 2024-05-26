@@ -1,2 +1,0 @@
-== Inr ==
-(#inr parameters: #accelerate)

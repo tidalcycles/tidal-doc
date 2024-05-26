@@ -1,1 +1,0 @@
-<syntaxhighlight lang="haskell" inline>jux</syntaxhighlight> (contraction de  'juxtapose') joue une version transformée d'un pattern dans une des enceintes et conserve le pattern original dans l'autre enceinte.

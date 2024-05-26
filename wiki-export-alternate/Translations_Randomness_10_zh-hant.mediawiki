@@ -1,1 +1,0 @@
-你可以用<syntaxhighlight lang="Haskell" inline>degradeBy</syntaxhighlight> 隨機地移除一些聲音。輸入0~1之間的數值，越小則音源被刪去的機率越小。

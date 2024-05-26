@@ -1,1 +1,0 @@
-For users who have just installed SuperCollider restarting it prior to running include("SuperDirt") could also resolve the error.

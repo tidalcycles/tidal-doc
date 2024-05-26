@@ -1,1 +1,0 @@
-Par exemple, voici comment ajouter de la distortion 50% du temps :

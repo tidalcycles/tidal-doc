@@ -1,1 +1,0 @@
-Cela signifie que la bibliothèque Tidal n'est pas installée. Pour l'installer, ouvrez un nouveau terminal et tapez :

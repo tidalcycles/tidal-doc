@@ -1,1 +1,0 @@
-Error: [[$1|Template must be given at least one article name]]

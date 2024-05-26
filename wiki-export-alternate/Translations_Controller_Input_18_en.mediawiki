@@ -1,3 +1,0 @@
-on = MIDIFunc.noteOn({ |val, num, chan, src|
-	osc.sendMsg("/ctrl", num.asString, val/127);
-});

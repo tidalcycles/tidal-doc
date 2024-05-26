@@ -1,1 +1,0 @@
-You will also need to upgrade your editor plugin/extension. In atom, you can do this via preferences > updates.

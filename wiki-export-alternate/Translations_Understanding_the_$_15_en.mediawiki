@@ -1,1 +1,0 @@
-So, both <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight> and parenthesis can be used to control which code is calculated first. The <syntaxhighlight lang="Haskell" inline>$</syntaxhighlight> is often used to avoid having to match opening and closing brackets, but sometimes parenthesis makes more sense.

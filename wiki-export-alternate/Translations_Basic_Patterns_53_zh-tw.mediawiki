@@ -1,1 +1,0 @@
-創造聲音效果的pattern與創造聲音pattern方法大同小異，我們稱這些patterns "control patterns"。

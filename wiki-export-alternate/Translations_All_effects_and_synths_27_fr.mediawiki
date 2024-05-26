@@ -1,4 +1,0 @@
-== Enveloppe ASR == 
-# attack : attaque.
-# hold : ???
-# release/rel : temps d'extinction.

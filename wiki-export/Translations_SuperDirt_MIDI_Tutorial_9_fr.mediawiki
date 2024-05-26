@@ -1,3 +1,0 @@
-<source>
-~midiOut = MIDIOut.newByName("Focusrite USB MIDI", "Focusrite USB MIDI"); // votre sortie MIDI
-</source>

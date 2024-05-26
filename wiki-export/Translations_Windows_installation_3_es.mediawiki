@@ -1,1 +1,0 @@
-Antes de instalar Tidal, asegurate que los siguientes estén instalados.

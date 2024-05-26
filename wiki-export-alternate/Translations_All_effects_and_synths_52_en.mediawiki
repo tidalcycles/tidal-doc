@@ -1,1 +1,0 @@
-Ring modulation with `ring` (modulation amount), `ringf` (modulation frequency), and `ringdf` (slide in modulation frequency)

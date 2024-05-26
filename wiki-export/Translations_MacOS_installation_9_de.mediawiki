@@ -1,2 +1,0 @@
-Bevor du TidalCycles installierst, stelle 
-sicher, dass du die folgenden Komponenten installiert hast:

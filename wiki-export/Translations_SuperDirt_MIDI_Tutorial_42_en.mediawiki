@@ -1,1 +1,0 @@
-If you have a specific feature on your device that listens on a specific CC number, you can give it a friendly name if you wish:

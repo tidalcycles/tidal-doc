@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>vowel</syntaxhighlight> は母音の音を加えるフィルターです。 a, e, i, o, uを試してみましょう。

@@ -1,6 +1,0 @@
-<syntaxhighlight lang="Haskell">
--- this doesn't work either!
-4 * $ 2 + 3
--- but this does
-4 * (2 + 3)
-</syntaxhighlight>

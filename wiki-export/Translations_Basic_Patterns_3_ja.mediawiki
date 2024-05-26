@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>silence</syntaxhighlight> で、音を止めます:

@@ -1,3 +1,0 @@
-== Waveloss ==
-Paramètres :
-# waveloss : division.

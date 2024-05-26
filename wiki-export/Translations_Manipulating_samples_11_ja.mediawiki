@@ -1,3 +1,0 @@
-<syntaxhighlight lang="Haskell" >
-d1 $ chop 32 $ sound "bev"
-</syntaxhighlight>

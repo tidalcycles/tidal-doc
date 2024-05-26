@@ -1,1 +1,0 @@
-Nous allons maintenant écrire quelques patterns pour contrôler notre synthétiseur. Envoyons une suite de notes :

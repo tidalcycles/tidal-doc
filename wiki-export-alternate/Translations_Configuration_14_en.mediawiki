@@ -1,3 +1,0 @@
-<syntaxhighlight lang="Haskell">
-tidal <- startTidal (superdirtTarget {oAddress = "192.168.0.23", oPort = 57120}) defaultConfig
-</syntaxhighlight>

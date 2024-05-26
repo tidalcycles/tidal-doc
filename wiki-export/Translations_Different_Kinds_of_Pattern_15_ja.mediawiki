@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>[ ]</syntaxhighlight>の代わりに <syntaxhighlight lang="Haskell" inline>{ }</syntaxhighlight>を使うと、別の効果が得られます。<syntaxhighlight lang="Haskell" inline>[ ]</syntaxhighlight>は、シーケンスの両半分がサイクルにフィットします(ポリリズム)。<syntaxhighlight lang="Haskell" inline>{ }</syntaxhighlight>は、パルスは左側のパターンで設定されます。右手のパターンは上から(または下に)重なります(ポリメーター)。

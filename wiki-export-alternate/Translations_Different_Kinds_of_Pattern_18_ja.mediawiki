@@ -1,1 +1,0 @@
-パターン内の要素の後ろに<syntaxhighlight lang="Haskell" inline>( )</syntaxhighlight>で2つの数字を付けると、Tidalは2つ目の数のステップにわたり、1つめの数の音を均等に分配しようとします。

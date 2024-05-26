@@ -1,1 +1,0 @@
-Then click on the code, hold down shift and press enter. The post window should show the SuperDirt startup progress, and at the end you should see:

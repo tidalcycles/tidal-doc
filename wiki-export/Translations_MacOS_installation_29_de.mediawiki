@@ -1,1 +1,0 @@
-Für eine einfache und unkomplizierte Installation versuche es mit [https://github.com/tidalcycles/tidal-bootstrap/blob/master/README.md tidal-bootstrap] anstelle der folgenden Anweisungen für eine manuelle Installation.

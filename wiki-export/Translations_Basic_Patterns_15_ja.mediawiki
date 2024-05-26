@@ -1,1 +1,0 @@
-サイクルの長さを <syntaxhighlight lang="Haskell" inline>cps</syntaxhighlight> (1サイクルの秒数)を使って変えられます - BPM(分あたりの拍数)と似ていますね。

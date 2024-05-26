@@ -1,3 +1,0 @@
-== Triode ==
-(parameters: #triode)<br>
-(Ben Gold)

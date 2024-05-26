@@ -1,3 +1,0 @@
-Also see that the event with value <syntaxhighlight lang="Haskell" inline>5</syntaxhighlight> is cut in half, to create two,
-shorter events. Half matches with the <syntaxhighlight lang="Haskell" inline>2</syntaxhighlight> event and the other half
-matches with the <syntaxhighlight lang="Haskell" inline>3</syntaxhighlight> event.

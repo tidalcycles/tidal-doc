@@ -1,1 +1,0 @@
-* [https://supercollider.github.io/sc3-plugins/ SC3 Plugins] - vous aurez besoin des plugins sc3 de SuperCollider si vous voulez utiliser les synthétiseurs inclus dans SuperDirt. La plupart des exemples dans la documentation vont fonctionner, donc vous pouvez passer cette étape et revenir plus tard.

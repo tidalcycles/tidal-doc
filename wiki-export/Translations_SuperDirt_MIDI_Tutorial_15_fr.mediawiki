@@ -1,1 +1,0 @@
-C'est tout ! Vous devriez avoir un synthétiseur MIDI connecté à Tidal dans SuperDirt, nommé <code>midi</code>.

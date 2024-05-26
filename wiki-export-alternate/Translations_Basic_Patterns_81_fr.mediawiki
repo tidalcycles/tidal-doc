@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>sine</syntaxhighlight> est un pattern continu qui suit les valeurs d'une oscillation sinusoïdale de 0 à 1, et de 1 à 0, etc..

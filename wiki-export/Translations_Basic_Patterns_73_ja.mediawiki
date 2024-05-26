@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>Pan</syntaxhighlight> はステレオ効果を作れます - 0 = 左, 0.5 = 中心, 1 = 右

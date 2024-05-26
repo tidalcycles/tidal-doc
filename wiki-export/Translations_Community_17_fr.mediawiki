@@ -1,5 +1,0 @@
-* [https://tidalcycles.org/index.php/Special:RecentChanges Ajouts récents au Wiki] | [https://tidalcycles.org/api.php?hidebots=1&translations=filter&urlversion=1&days=7&limit=50&action=feedrecentchanges&feedformat=atom feed]
-* [http://blog.tidalcycles.org/ Blog de Tidal Cycles] | [http://blog.tidalcycles.org/feed/ feed]
-* [https://www.youtube.com/tidalcycles/ youtube channel] | [https://www.youtube.com/tidalcycles/ feed]
-* [https://www.reddit.com/r/TidalCycles/ Reddit]
-* [https://www.facebook.com/groups/tidalcycles/ Facebook Group]

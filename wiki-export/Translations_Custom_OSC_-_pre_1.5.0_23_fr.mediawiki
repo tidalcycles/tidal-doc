@@ -1,1 +1,0 @@
-Pour utiliser le paramètre <code>level</code>, définissez : <source>let level = pF "level"</source>

@@ -1,1 +1,0 @@
-Puedes pausar todo cambiando la duración del ciclo a un número negativo (recuerda poner números negativos entre paréntesis).

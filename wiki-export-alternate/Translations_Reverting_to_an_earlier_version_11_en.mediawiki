@@ -1,3 +1,0 @@
-<source lang="bash">
-apm install tidalcycles@0.12.1
-</source>

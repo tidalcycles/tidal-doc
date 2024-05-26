@@ -1,1 +1,0 @@
-'''fastAppend''' fonctionne comme [[append]], à une différence près. La combinaison des deux patterns s'effectue au cours d'un seul et unique cycle (accélération) :

@@ -1,1 +1,0 @@
-TidalCycles 和 SuperDirt 由不同領域的人們開發貢獻 - [https://github.com/tidalcycles/Tidal/graphs/contributors Tidal 貢獻者] / [https://github.com/musikinformatik/SuperDirt/graphs/contributors SuperDirt 貢獻者]。

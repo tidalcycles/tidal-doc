@@ -1,2 +1,0 @@
-== Supernoise ==
-(#supernoise parameters: #n, #voice, #accelerate, #speed, #pitch1, #slide, #resonance)

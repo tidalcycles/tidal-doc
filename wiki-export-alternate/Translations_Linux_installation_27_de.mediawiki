@@ -1,4 +1,0 @@
-
-* [https://github.com/supercollider/scel Emacs extension]
-* [https://github.com/supercollider/scvim Vim extension]
-* [https://github.com/crucialfelix/atom-supercollider Atom extension]

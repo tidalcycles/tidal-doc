@@ -1,1 +1,0 @@
-Il s'agit de la fenêtre de calcul de Tidal exprimée en secondes. Le paramètre par défaut est 0.05, soit 20 frames par seconde.

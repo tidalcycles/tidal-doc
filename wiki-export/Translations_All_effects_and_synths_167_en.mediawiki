@@ -1,2 +1,0 @@
-== Superreese ==
-(#parameters: #accelerate, #voice, #detune)

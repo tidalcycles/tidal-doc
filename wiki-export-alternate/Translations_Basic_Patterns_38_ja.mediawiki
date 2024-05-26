@@ -1,1 +1,0 @@
-ステップを <syntaxhighlight lang="Haskell" inline>*</syntaxhighlight> で繰り返せます:

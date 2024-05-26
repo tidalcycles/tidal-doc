@@ -1,4 +1,0 @@
-* [[Installation]]
-* [[Upgrading | Mise à jour]]
-* [[Start tidalcycles and superdirt for the first time | Démarrer Tidal Cycles et SuperDirt pour la première fois]]
-* [[Tutorial]]

@@ -1,1 +1,0 @@
-You can stop all the running patterns with <syntaxhighlight lang="Haskell" inline>hush</syntaxhighlight>.

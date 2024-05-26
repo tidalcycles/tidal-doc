@@ -1,7 +1,0 @@
-* [[Tutorial|教程]]
-* [[Interaction|互動]]
-* [[Controller Input|控制器輸入]]
-* [[Understanding the $|了解"$"符號]]
-* [[Combining pattern structure|組合圖式結構]]
-* [[Tidal workshop worksheet|Tidal工作坊教學]] - 為了工作坊設計，即便沒有參加也十分實用！
-* [[Building up patterns|建立圖式]] - 包含步驟範例

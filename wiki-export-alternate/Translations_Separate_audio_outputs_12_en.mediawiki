@@ -1,1 +1,0 @@
-If your editor plugin (and therefore BootTidal.hs), then <source inline>d1</source> will automatically be sent to orbit 0, d2 to orbit 1, and so on. Or you can be explicit by using the orbit control, e.g. <source inline>d1 $ sound "bd" # orbit 3</source>

@@ -1,4 +1,0 @@
-* [https://www.haskell.org/platform/ Haskell Platform] - '''se recomienda la versión completa'''.
-* [https://atom.io/ Atom Editor]  (si no te gusta el editor de atom por alguna razón, por favor revisá la  [[List of tidal editors|lista de alternativas]])
-* [http://supercollider.github.io/download SuperCollider] (la última versión)
-* [https://git-scm.com/ Git]

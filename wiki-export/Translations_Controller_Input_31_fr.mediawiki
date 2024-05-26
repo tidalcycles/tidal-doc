@@ -1,1 +1,0 @@
-Démarrez Tidal et lancez le fichier que vous venez de télécharger. Configurez votre MIDI dans Pure Data et tout devrait fonctionner.

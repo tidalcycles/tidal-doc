@@ -1,1 +1,0 @@
-You could then use this control in a pattern like so:

@@ -1,1 +1,0 @@
-If you just want to get MIDI input into tidal, you can skip to the [[Controller Input#MIDI|next section]].

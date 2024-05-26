@@ -1,1 +1,0 @@
-'''fastcat''' fonctionne comme <code>cat</code> mais réduit la durée de chaque pattern pour que l'ensemble ne dure qu'un cycle. Par exemple :

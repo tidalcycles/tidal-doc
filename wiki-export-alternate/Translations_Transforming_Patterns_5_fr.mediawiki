@@ -1,2 +1,0 @@
-d1 $ slow 2 $ sound "arpy arpy:1 arpy:2 arpy:3"
-</syntaxhighlight>

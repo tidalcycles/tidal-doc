@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>degradeBy</syntaxhighlight> でランダムに要素を外すことができます。数字は、サンプルが再生される確率を指定します。

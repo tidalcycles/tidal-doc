@@ -1,3 +1,0 @@
-== Legato ==
-Paramètres :
-# legato : legato.

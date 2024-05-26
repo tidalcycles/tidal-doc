@@ -1,7 +1,0 @@
-* [https://talk.lurk.org/channel/tidal #tidal] - general channel, anything tidal-related goes
-* [https://talk.lurk.org/channel/tidal-install #tidal-install] - in-depth help with installing tidal takes place here
-* [https://talk.lurk.org/channel/tidal-snippets #tidal-snippets] - where you can share interesting/weird tidal patterns
-* [https://talk.lurk.org/channel/tidal-innards #tidal-innards] - we don't like separating end-user live coders from tidal developers too much, but discussion around the tidal 'innards' goes on here
-* [https://talk.lurk.org/channel/tidal-doc #tidal-doc] - coordination around the tidal documentation effort
-* [https://talk.lurk.org/channel/algorave #algorave], [https://talk.lurk.org/channel/algorave #livecode] etc - meet people using other live coding environments
-* There's a lot more!

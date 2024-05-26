@@ -1,1 +1,0 @@
-We can also <syntaxhighlight lang="Haskell" inline>chop</syntaxhighlight> samples for a ‘granular synthesis' effect

@@ -1,1 +1,0 @@
-* [[Troubleshooting a Tidal install|Troubleshooting]] bei der Installation von Tidal

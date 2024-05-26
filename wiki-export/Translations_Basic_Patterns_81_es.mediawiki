@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>sine</syntaxhighlight> es un patrón continuo que sigue una curva sinusoidal de 0 a 1 y de regreso.

@@ -1,4 +1,0 @@
-<syntaxhighlight lang="Haskell">
--- | A function that represents events taking place over time
-type Query a = (State -> [Event a])
-</syntaxhighlight>

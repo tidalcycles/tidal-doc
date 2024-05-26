@@ -1,1 +1,0 @@
-Impulse noise with a fadein/out.  "sustain" affects the overall envelope rate

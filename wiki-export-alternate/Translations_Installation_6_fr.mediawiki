@@ -1,1 +1,0 @@
-''Note : la documentation recommande l'éditeur Atom pour programmer avec Tidal. Si vous souhaitez utiliser un éditeur différent, jetez un œil à [[List of tidal editors| la liste des éditeurs supportant Tidal]].

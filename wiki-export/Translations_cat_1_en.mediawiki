@@ -1,2 +1,0 @@
-{{DISPLAYTITLE:cat}}
-[[Type signature|Type]]: <source inline>cat :: [Pattern a] -> Pattern a</source>

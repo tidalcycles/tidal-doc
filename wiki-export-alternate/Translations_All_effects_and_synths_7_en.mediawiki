@@ -1,2 +1,0 @@
-== Reverb ==
-(parameters: #room, #size, #dry)

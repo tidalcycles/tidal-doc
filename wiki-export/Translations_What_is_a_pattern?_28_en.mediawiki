@@ -1,5 +1,0 @@
-<syntaxhighlight lang="Haskell">
--- | A datatype that's basically a query, plus a hint about whether its events
--- are Analogue or Digital by nature
-data Pattern a = Pattern {nature :: Nature, query :: Query a}
-</syntaxhighlight>

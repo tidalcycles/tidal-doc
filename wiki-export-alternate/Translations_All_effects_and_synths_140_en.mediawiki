@@ -1,3 +1,0 @@
-"voice" scales the comparator frequencies, higher values will sound "breathier".
-<br>
-_______

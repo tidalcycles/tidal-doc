@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>vowel</syntaxhighlight> est un filtre formant qui permet d'obtenir le son d'une voyelle. Essayez : a, e, i, o et u.

@@ -1,1 +1,0 @@
-Note that the left-most pattern defines the rhythm in this case when using <code>#</code>.

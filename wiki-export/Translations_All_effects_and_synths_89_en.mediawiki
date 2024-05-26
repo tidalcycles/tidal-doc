@@ -1,3 +1,0 @@
-DJ filter, a low pass filter for the first half of the range, and a high pass for the rest.
- 
-= Basic SuperDirt synths =

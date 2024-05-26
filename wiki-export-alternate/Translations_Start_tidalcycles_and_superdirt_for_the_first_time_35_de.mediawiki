@@ -1,1 +1,0 @@
-Jetzt kannst du einfach <code>C-return</code> drücken, um den Code in der aktuell mit dem Cursor markierten Zeile auszuführen. Du kannst das mit diesem einfachen Beispiel ausprobieren:

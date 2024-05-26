@@ -1,1 +1,0 @@
-Cette fonction possède un alias : <code>slowAppend</code>, pour la différencier de <code>fastAppend</code>.

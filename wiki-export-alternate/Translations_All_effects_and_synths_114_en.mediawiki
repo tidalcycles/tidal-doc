@@ -1,2 +1,0 @@
-== Superhex ==
-(#superhex parameters: #sustain, #accelerate)

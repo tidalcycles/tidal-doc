@@ -1,1 +1,0 @@
-== Synchronising MIDI clock ==

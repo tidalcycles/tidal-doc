@@ -1,3 +1,0 @@
-== Octer ==
-(parameters: #octer, #octersub, #octersubsub)<br>
-(Ben Gold)

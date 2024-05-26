@@ -1,7 +1,0 @@
-* [[Tutorial | Guide]]
-* [[Interaction | Interaction]]
-* [[Controller Input | Contrôles]]
-* [[Understanding the $ | Comprendre le $ ]]
-* [[Combining pattern structure | Combiner des patterns ]]
-* [[Tidal workshop worksheet | Feuille pour apprendre Tidal]] - pensée pour des ateliers, mais utile pour apprendre seul !
-* [[Building up patterns | Construire des patterns]] - exemples pas à pas.

@@ -1,9 +1,0 @@
-sustain - scales overall duration<br>
-decay(0) - amount of decay after initial attack<br>
-accelerate(0) - pitch glide<br>
-semitone(12) - how far off in pitch the secondary oscillator is (need not be integer)<br>
-pitch1(1) - filter frequency scaling multiplier, the frequency itself follows the pitch set by "n"<br>
-speed(1)- LFO rate<br>
-lfo(1) - how much the LFO affects the filter frequency<br>
-resonance(0.2) - filter resonance<br>
-voice(0.5) - depends on the individual synth<br>

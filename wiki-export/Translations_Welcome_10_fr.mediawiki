@@ -1,1 +1,0 @@
-La documentation couvre la version actuelle de Tidal (1.0.x). Pour accéder à la documentation des versions antérieures, rendez-vous sur le [http://pages.tidalcycles.org/ vieux site internet].

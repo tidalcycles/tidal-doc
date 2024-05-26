@@ -1,4 +1,0 @@
-<syntaxhighlight lang="Haskell">
--- | Time is rational
-type Time = Rational
-</syntaxhighlight>

@@ -1,4 +1,0 @@
-* [https://www.haskell.org/ghcup/ Haskell] (via ghcup) 
-* [https://atom.io/ Atom-Editor]  (wenn du den Atom-Editor nicht magst, wirf einen Blick auf die [[List of tidal editors|Liste alternativer Editoren]])
-* [http://supercollider.github.io/download SuperCollider] (verwende die aktuellste Version)
-* [https://git-scm.com/ Git]

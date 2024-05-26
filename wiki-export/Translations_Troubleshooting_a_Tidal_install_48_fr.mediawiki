@@ -1,1 +1,0 @@
-= Installation à partir de 'stack' =

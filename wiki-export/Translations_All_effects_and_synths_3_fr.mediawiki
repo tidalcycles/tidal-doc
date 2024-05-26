@@ -1,5 +1,0 @@
-== Delay ==
-Paramètres :
-# delay : l'intensité de l'effet sur le signal d'origine.
-# delaytime/delayt : le temps du délai
-# delayfeedback/delayfb : le feedback du délai.

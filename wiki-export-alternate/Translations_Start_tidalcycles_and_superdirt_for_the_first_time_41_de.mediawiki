@@ -1,1 +1,0 @@
-Lass einen simplen Pattern laufen. Gebe dafür folgenden Code ein und führe ihn aus, indem du 'Shift' hältst und dann 'Enter' drückst. ('Control/Enter' ist auch möglich, dann werden allerdings mehrer Codezeilen auf einmal ausgeführt).

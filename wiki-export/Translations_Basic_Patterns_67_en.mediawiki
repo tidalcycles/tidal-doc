@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight> affects the speed of playback, e.g. 2 = up an octave

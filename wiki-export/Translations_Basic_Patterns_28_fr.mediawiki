@@ -1,1 +1,0 @@
-Ajouter un silence, une pause ou un soupir avec <syntaxhighlight lang="Haskell" inline>~</syntaxhighlight> :

@@ -1,1 +1,0 @@
-or we can use <syntaxhighlight lang="Haskell" inline>..</syntaxhighlight>

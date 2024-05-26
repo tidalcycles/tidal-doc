@@ -1,3 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>delay</syntaxhighlight> / <syntaxhighlight lang="Haskell" inline>delaytime</syntaxhighlight> / <syntaxhighlight lang="Haskell" inline>delayfeedback</syntaxhighlight> /
-<syntaxhighlight lang="Haskell" inline>cutoff</syntaxhighlight> / <syntaxhighlight lang="Haskell" inline>resonance</syntaxhighlight> /
-<syntaxhighlight lang="Haskell" inline>room</syntaxhighlight> / <syntaxhighlight lang="Haskell" inline>size</syntaxhighlight>

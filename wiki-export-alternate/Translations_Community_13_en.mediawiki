@@ -1,1 +1,0 @@
-Subscribable via RSS/atom feed reader, such as:

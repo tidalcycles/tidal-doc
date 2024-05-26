@@ -1,2 +1,0 @@
-== Imp ==
-(#imp parameters: #sustain, #accelerate)

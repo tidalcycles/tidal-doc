@@ -1,1 +1,0 @@
-Installer vos propres samples est un procédé relativement facile. Vous ne pouvez pas ajouter vos samples depuis Tidal Cycles, mais vous pouvez le faire depuis SuperCollider et SuperDirt. Pour ce faire, vous devez modifier votre <code>startup file</code> :

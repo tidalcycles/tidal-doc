@@ -1,1 +1,0 @@
-Voici la ligne de code la plus élémentaire pour produire du son avec Tidal Cycles :

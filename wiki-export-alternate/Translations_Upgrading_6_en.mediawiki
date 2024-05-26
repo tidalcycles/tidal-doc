@@ -1,1 +1,0 @@
-<source>ghc-pkg list tidal</source>

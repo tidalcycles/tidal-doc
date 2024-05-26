@@ -1,1 +1,0 @@
-adding newline characters will break article links

@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>striate</syntaxhighlight> is similar to <syntaxhighlight lang="Haskell" inline>chop</syntaxhighlight> but organises the playback in a different way

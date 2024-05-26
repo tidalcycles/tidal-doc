@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>*</syntaxhighlight> 加速了某段序列或單元，反覆播放。 <syntaxhighlight lang="Haskell" inline>/</syntaxhighlight> 產生減速的效果

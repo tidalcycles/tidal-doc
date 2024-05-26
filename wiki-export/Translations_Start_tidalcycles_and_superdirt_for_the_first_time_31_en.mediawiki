@@ -1,1 +1,0 @@
-The default startup script is pretty simple, it provides two orbits and loads the default samples but you might want to edit it to configure [[Custom Samples]] (and add orbits as well).

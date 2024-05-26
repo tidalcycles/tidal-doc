@@ -1,1 +1,0 @@
-<syntaxhighlight lang="Haskell" inline>rand</syntaxhighlight> は、0から1の間の小数を生成します。

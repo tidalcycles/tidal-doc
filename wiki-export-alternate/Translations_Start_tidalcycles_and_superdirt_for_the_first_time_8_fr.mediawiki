@@ -1,2 +1,0 @@
-==== Démarrage automatique de SuperDirt ====
-Si vous souhaitez que SuperCollider démarre SuperDirt automatiquement, ajoutez la ligne <code>SuperDirt.start</code> dans votre fichier de démarrage SuperCollider. Vous pouvez l'éditer sous File -> Open Startup File dans le menu du haut. Si vous souhaitez utiliser un fichier de démarrage avec plus d'options, [https://github.com/musikinformatik/SuperDirt/blob/master/superdirt_startup.scd réferrez vous à cet exemple].

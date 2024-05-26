@@ -1,1 +1,0 @@
-Creamos patrones de efectos de la misma manera que creamos patrones de sonidos. A estos patrones de efectos y sonidos los llamamos 'patrones de control'. Asi que

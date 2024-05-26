@@ -1,1 +1,0 @@
-我們也可以使用<syntaxhighlight lang="Haskell" inline>loopAt</syntaxhighlight> 將音源長度調整至與一或多個循環等長的狀態，但是音高會改變。

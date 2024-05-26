@@ -1,1 +1,0 @@
-Often, installing the ''full'' (rather than core) version of the Haskell platform will clear up your problems. Get it from here: https://www.haskell.org/platform/

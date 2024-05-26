@@ -83,11 +83,11 @@ function Home() {
             </div>
           </div>
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
- <iframe width="720" height="420" src="https://www.youtube.com/embed/DNRZ6u2ksRI?start=65"> </iframe>
+ <iframe width="720" height="420" src="https://www.youtube.com/embed/wgPf24_OQZY?si=x8NI-E566hDjnIAc&amp;start=130" title="Atsushi Tadokoro" allowfullscreen="1"> </iframe>
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
- <iframe width="720" height="420" src="https://www.youtube.com/embed/t2KeNblKSFM?start=35"> </iframe>
+ <iframe width="720" height="420" src="https://www.youtube.com/embed/uwuPjYF-XwA?si=QYJs2cSR26QM3PJl&amp;start=100" title="Pondskater" allowfullscreen="1"> </iframe>
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
- <iframe width="720" height="420" src="https://www.youtube.com/embed/rKmHFpXU63k"> </iframe>
+ <iframe width="720" height="420" src="https://www.youtube.com/embed/nBpCJcduMso?si=0kSf1h-yd04-LTPp&start=184" title="yaxu tutorial" allowfullscreen="1"> </iframe>
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
         </header>
         <main>

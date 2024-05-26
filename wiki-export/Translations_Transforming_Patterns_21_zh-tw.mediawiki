@@ -1,2 +1,0 @@
-<syntaxhighlight lang="haskell" inline>every</syntaxhighlight> 可以讓我們在循環之中安排不同的轉換和效果。
-例如:每四個循環出現一個以雙倍速度撥放的循環。

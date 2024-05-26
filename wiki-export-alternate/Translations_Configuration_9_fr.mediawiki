@@ -1,1 +1,0 @@
-Si vous trouvez que Tidal utilise trop de CPU, augmenter cette valeur vous sera utile.

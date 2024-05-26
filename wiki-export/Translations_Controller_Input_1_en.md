@@ -1,9 +1,0 @@
----
-title: Translations:Controller Input/1/en
-permalink: wiki/Translations:Controller_Input/1/en/
-layout: wiki
----
-
-Tidal 1.0.0 now has support for external input, using the OSC protocol.
-Here's a quick guide to getting it going, including using a simple
-'bridge' for getting MIDI input working.

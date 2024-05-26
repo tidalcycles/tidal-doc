@@ -1,1 +1,0 @@
-(Les vieilles méthodes <code>t1</code> et <code>t2</code> ne fonctionnent plus.)

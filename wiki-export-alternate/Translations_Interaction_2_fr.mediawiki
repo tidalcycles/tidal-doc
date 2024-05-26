@@ -1,1 +1,0 @@
-Il est possible de consulter toutes les fonctions pensées pour l'interaction avec les patterns en consultant le fichier suivant : [https://github.com/tidalcycles/Tidal/blob/master/BootTidal.hs bootup code].

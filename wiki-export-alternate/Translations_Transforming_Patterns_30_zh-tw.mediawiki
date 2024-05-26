@@ -1,2 +1,0 @@
-可以一次進行多個轉換!
-用<syntaxhighlight lang="haskell" inline>.</syntaxhighlight>將它們連結。

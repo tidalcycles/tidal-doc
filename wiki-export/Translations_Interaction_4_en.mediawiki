@@ -1,1 +1,0 @@
-As before you can use <syntaxhighlight lang="haskell" inline>d1</syntaxhighlight>, <syntaxhighlight lang="haskell" inline>d2</syntaxhighlight> etc to start different patterns, e.g:

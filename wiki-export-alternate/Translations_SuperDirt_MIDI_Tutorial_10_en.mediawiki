@@ -1,1 +1,0 @@
-Above, we have stored a reference to the device in a variable named <code>~midiOut</code>.

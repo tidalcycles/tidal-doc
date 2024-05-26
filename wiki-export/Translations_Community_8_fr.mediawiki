@@ -1,1 +1,0 @@
-Pour tout ce qui concerne le développement de Tidal, visitez le [https://github.com/tidalcycles/tidal Tidal repository] sur GitHub.

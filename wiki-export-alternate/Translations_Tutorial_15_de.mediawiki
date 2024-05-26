@@ -1,3 +1,0 @@
-<source>
-d1 $ sound "bd sd:1"
-</source>

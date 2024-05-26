@@ -1,3 +1,0 @@
-<syntaxhighlight lang="haskell" inline>fast 0.5</syntaxhighlight> produira le même effet 
-que : 
-<syntaxhighlight lang="haskell" inline>slow 2</syntaxhighlight>!

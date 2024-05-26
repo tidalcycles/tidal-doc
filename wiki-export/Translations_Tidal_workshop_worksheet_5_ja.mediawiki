@@ -1,2 +1,0 @@
-# SuperDirtを起動する - Supercolliderで、 'SuperDirt.start' と入力し、'Ctrl' を押しながらら 'Enter' を押すことで、コードを実行します (入力したのと同じ行にカーソルを置きながらですよ).
-# TidalCyclesを起動する - Atomでは、<syntaxhighlight lang="Haskell" inline>.tidal</syntaxhighlight> 拡張子 (例 <syntaxhighlight lang="Haskell" inline>examples.tidal</syntaxhighlight>) の新しいファイルを作成し、保存します。

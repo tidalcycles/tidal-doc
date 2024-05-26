@@ -1,3 +1,0 @@
-Puedes encontrar un ejemplo más largo de un código de arranque dentro del repositorio de SuperDirt:
-
-github.com/musikinformatik/SuperDirt/blob/develop/superdirt_startup.scd

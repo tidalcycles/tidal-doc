@@ -1,4 +1,0 @@
-'''every''' est une fonction qui appliquer une autre fonction de manière conditionnelle. <code>every</code> requiert trois arguments : 
-# une fréquence (3 pour appliquer la fonction tout les trois cycles)
-# une fonction
-# un pattern

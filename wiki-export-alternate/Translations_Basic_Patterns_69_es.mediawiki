@@ -1,1 +1,0 @@
-O podemos tomar el patrón del parámetro <syntaxhighlight lang="Haskell" inline>speed</syntaxhighlight>

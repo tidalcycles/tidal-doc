@@ -1,1 +1,0 @@
-If you have many CC params you want to control at once, a <code>stack</code> works well:

@@ -1,3 +1,0 @@
-* [[What is a pattern? | Qu'est-ce qu'un pattern ? ]]
-* [[Type signatures | Type de données ]]
-* [[Haskell resources | Ressources pour Haskell]]

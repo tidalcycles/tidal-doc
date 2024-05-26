@@ -1,2 +1,0 @@
-== Superpwm ==
-(#superpwm parameters: #voice + see above)

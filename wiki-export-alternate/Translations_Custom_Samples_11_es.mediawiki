@@ -1,1 +1,0 @@
-= Estructura de las carpetas de samples =

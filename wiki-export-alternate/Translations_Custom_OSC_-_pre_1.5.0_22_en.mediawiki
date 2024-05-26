@@ -1,6 +1,0 @@
-<source>
-OSCTarget {oName = "Noise", oAddress = "127.0.0.1", oPort = 5510,
-  oPath = "/noise/level", oShape = Just [("level", Just $ VF 0)],
-  oLatency = 0.02, oPreamble = [], oTimestamp = MessageStamp}
-</source>
-In the second line the OSC message is defined.

@@ -1,2 +1,0 @@
-{{DISPLAYTITLE:every}} 
-[[Type signature|Type]]: <syntaxhighlight lang="haskell" inline>every :: Pattern Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a</syntaxhighlight>

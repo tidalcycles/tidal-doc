@@ -1,1 +1,0 @@
-Comme dans tout logiciel libre, vous avez des choix alternatifs pour chaque composant qui constitue une configuration TidalCycles. Atom et SuperDirt peuvent être ce dont vous avez besoin, mais il y d'autres éditeurs et synthétiseurs que vous pouvez utiliser.

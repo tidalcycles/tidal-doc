@@ -1,2 +1,0 @@
-= fastcat=
-[[Type signature|Type]]: <source inline>fastcat :: [Pattern a] -> Pattern a</source>

@@ -1,1 +1,0 @@
-Si vous voyez un message d'erreur (ignorons les messages à propos de 'legacy v1 style'), assurez-vous d'avoir bien installé l'intégralité de la plateforme Haskell et réessayez. Si cela ne fonctionne toujours pas, venez détailler votre message d'erreur et demander de l'aide à la [[Community | communauté]].

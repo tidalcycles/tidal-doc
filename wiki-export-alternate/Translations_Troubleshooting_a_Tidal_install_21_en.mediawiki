@@ -1,1 +1,0 @@
-With your cursor on the same line, run it with shift-enter.

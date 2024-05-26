@@ -1,3 +1,0 @@
-<source>
-tidal <- startTidal (superdirtTarget {oLatency = 0.02}) (defaultConfig {cFrameTimespan = 1/20})
-</source>

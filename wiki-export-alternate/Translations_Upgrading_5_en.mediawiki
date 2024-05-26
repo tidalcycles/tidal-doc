@@ -1,1 +1,0 @@
-You can verify that the latest version of tidal has installed with this command in a terminal window:

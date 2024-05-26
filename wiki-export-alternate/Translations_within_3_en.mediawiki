@@ -1,1 +1,0 @@
-For example, to apply <source inline>fast 2</source> to only the first half of a pattern:

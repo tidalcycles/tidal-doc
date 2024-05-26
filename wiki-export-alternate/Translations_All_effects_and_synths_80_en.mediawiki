@@ -1,3 +1,0 @@
-== Spectral low pass filter ==
-(parameters: #lbrick)<br>
-(Mads Kjeldgaard)

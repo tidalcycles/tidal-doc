@@ -1,1 +1,0 @@
-Head over to the [[Linux installation]] to install the Emacs plugin if you haven't done it already. Once the Tidal plugin is installed, all you need to do is to open a <code>*.tidal</code> file and press <code>C-c C-s</code> to start Tidal in Emacs. If everything went fine you should see Tidal's output showing up in a separate window.

@@ -116,10 +116,16 @@ Let's try it! Type the following pattern in the text editor and press `Shift+Ent
 d1 $ sound "bd sn"
 ```
 
-If you hear sound, congratulations :thumbsup: ! If you get stuck, you are welcome to ask questions and share problems on the forum, the [RocketChat](https://chat.toplap.org/channel/tidal) or the [Discord](https://discord.com/invite/CqWhZEfNbq) group. Something must be misconfigured or missing from your Tidal system!
+If you hear sound, congratulations :thumbsup: ! 
 
+-----
 
-As is common with free software, you have alternative choices for the
-different components that make up a Tidal Cycles system. **Pulsar** and
-**SuperDirt** might be all you ever need, but there are other editors and
-synths you can use. Take a look at the sidebar to see the alternatives.
+## Getting Help!
+
+If you get stuck, you are welcome to ask questions and share problems on the [forums](https://club.tidalcycles.org), or the [Discord](https://discord.com/invite/CqWhZEfNbq) group. Something must be misconfigured or missing from your Tidal system!
+
+-----
+
+## Exploring Further
+
+As is common with free software, you have alternative choices for the different components that make up a Tidal Cycles system. **Pulsar** and **SuperDirt** might be all you ever need, but there are other editors and synths you can use. Take a look at the sidebar to see the alternatives.

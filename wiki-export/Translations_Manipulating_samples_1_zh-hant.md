@@ -1,7 +1,0 @@
----
-title: Translations:Manipulating samples/1/zh-hant
-permalink: wiki/Translations:Manipulating_samples/1/zh-hant/
-layout: wiki
----
-
-到目前為止我們只使用了較短的音源(samples)。時長較長的音源在使用時如果沒有留意可能會讓我們遇到一些麻煩。一起來看看當使用較長音源時會發生甚麼問題。

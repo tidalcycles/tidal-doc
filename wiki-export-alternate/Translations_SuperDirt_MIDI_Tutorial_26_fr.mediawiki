@@ -1,1 +1,0 @@
-Si votre synthétiseur écoute un canal différent, le canal 5 par exemple, vous utiliseriez la commande <code>midichan 4</code>.

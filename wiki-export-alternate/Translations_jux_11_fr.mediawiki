@@ -1,3 +1,0 @@
-Voir aussi :
-# [[superimpose]] qui permet de superposer deux patterns.
-# [[off]] qui permet de superposer deux patterns et de les décaler dans le temps.

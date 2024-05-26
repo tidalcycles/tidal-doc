@@ -124,9 +124,14 @@ Be gentle with the resonance amount
 
 #### Vowel
 
-Formant filter to make things sound like vowels. You can use `a e i o u`. Use a rest (`~`) to override the effect:
+Formant filter to make things sound like vowels. You can use `a e i o u`. Use a rest `~` or consonant `p` to override the effect:
 
 - `vowel`: choose a vowel or a pattern of vowels
+
+```haskel
+d1 $ s "gtr*5" #vowel "a e i o u"
+d1 $ s "gtr*7" #vowel "p p a e i o ~"
+```
 
 #### Spectral comb filter
 

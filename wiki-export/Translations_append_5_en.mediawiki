@@ -1,2 +1,0 @@
-= fastAppend =
-[[Type signature|Type]]: <source inline>fastAppend :: Pattern a -> Pattern a -> Pattern a</source>

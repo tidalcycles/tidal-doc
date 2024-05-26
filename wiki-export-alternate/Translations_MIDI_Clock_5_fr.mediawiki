@@ -1,3 +1,0 @@
-<source>
-once $ midicmd "stop" # s "midi" 
-</source>

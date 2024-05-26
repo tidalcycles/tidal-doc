@@ -1,1 +1,0 @@
-If you have samples located in many folders, you can import them all:

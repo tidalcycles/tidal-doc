@@ -1,2 +1,0 @@
-# Start SuperCollider and start SuperDirt within SuperCollider.
-# Start TidalCycles inside your editor

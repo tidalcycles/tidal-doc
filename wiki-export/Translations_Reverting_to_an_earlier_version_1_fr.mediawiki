@@ -1,1 +1,0 @@
-Pour revenir à une version antérieure de Tidal, utilisez la commande <source inline lang="bash">ghc-pkg</source>. Par exemple :

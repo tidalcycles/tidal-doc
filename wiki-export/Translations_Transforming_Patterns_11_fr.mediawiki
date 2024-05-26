@@ -1,1 +1,0 @@
-<syntaxhighlight lang="haskell" inline>hurry</syntaxhighlight> est identique à "fast", mais applique aussi une seconde transformation, celle de la vitesse de lecture de la sample.

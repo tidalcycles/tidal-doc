@@ -1,1 +1,0 @@
-= Développement, reporter un bug, etc =

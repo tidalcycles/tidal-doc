@@ -1,1 +1,0 @@
-From that we can see the first event <syntaxhighlight lang="Haskell" inline>1</syntaxhighlight> is active for the first third of the cycle, and so on.
