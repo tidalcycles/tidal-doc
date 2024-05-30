@@ -27,7 +27,8 @@ Learning the mini-notation is **essential** for learning how to make music with 
 | `:`    | Selecting samples                       | `d1 $ s "bd:3"`                    | `d1 $ s "bd" # n 3`                                            |
 | `( )`  | Euclidean sequences                     | `d1 $ s "bd(3,8)"`                 | `d1 $ euclid 3 8 $ s "bd"`                                     |
 | `{ }`  | Polymetric sequences                    | `d1 $ s "{bd bd bd bd, cp cp hh}"` | 2nd pattern wraps:  `d1 $ stack [ s "bd*4", s "cp cp hh cp" ]` |
-| `{ }%` | Polymetric sequence subdivision         | `d1 $ s "{bd cp hh}%8"`            | Pattern wraps:  `d1 $ s "bd cp hh bd cp hh bd cp"`             |
+| `%`    | Indicates a numerical ratio             | `d1 $ s "bd*4%2"`                  | `d1 $ s "bd*2"` or `d1 $ s "[bd*4]/2"` |
+| `{ }%` | Polymetric sequence subdivision         | `d1 $ s "{bd cp hh}%8"`            | Pattern wraps:  `d1 $ s "bd cp hh bd cp hh bd cp"`             |           |
 
 ## The mini-notation in depth
 
@@ -254,6 +255,22 @@ Creating polymetric sequences is a fairly advanced thing you can do using the **
 d1 $ s "{bd sd stab, cp arpy cr arpy}"
 d1 $ s "{bd*2, hh*4, bd hh 808:4}"
 ```
+
+### Ratio Shorthand
+
+You can use % to write floating point values in patterns. The symbol divides two numbers - `6%3` would be 2.  
+
+:::caution
+It is not the same as the `/` symbol for step division. `/` manipulates time and slows down a pattern using division. `%` is only used numerically to denote ratios or float values.
+
+```c
+-- Here / slows down the entire pattern by 2. A pattern originally playing the bd sample 4 times will slow it down to play it only 2 times:
+d1 $ s "[bd*4]/2"
+-- Below % is only used to divide 4 and 2. It doesn't influence the entire pattern itself. So 4%2 will return 2,  which is the same as d1 $ s "bd*2"
+d2 $ s "[bd*4%2]"
+-- d2 $ s "[bd*4]%2" is invalid since % does not handle whole patterns. 
+```
+:::
 
 ### Polymetric Sequences with Subdivision
 
