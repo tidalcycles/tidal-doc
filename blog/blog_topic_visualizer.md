@@ -7,7 +7,6 @@ date: 2023-07-01
 | ---------------------: | :-------------- |
 | Source code | [GitHub](https://github.com/ivan-abreu/didacticpatternvisualizer/tree/main) |
 | Visualizing Application | [Processing](https://processing.org/) |
-| Blog post | HighHarmonics |
 
 ## Introduction
 Didactic Pattern Visualizer (DPV) is an easy way to visualize sound patterns from Tidal Cycles. It was created by the artist and creative technologist Iván Abreu "...to study the potential and complexity of the syntax of the pattern system for sequencing Tidal Cycles sounds." It utilizes the open source visualization program *[Processing](https://processing.org/)* to provide a scrolling grid where colored shapes appear in rhythm reflecting the flow of Tidal events (notes). The GitHub materials also includes Tidal Cycles examples using DPV by the musician and digital Artist [CNDSD](http://www.malitzincortes.net/).
@@ -35,7 +34,7 @@ In the ReadMe, Iván notes that there are multiple ways to use DPV:
 ## Creative Example - composed live code with visualization
 The example below shows how I used DPV to support composing prepared code with rhythmic patterns that use cross-rhythms, polymeter, and irregular beat patterns. I found it to be really helpful to see exactly what is happening within the cycles and observing how the note placements change as I make small adjustments to pattern values.
 
-- Screen recording of the full session: [Erratic Rhythms with visualization](https://www.youtube.com/watch?v=dwrwnNVT-Po)
+- Screen recording of the full session: [Erratic Rhythms with visualization](https://youtu.be/QgCi6n5ZPRI)
 - Tidal code: [GitHub - Erratic Rhythms](https://github.com/HighHarmonics2/livecoding/tree/main/tidal/erraticRhythms)
 
 ### Description
@@ -44,7 +43,7 @@ The example below shows how I used DPV to support composing prepared code with r
 The organizing idea is to have fully independent parts - each with a distinctive character - that still work well together. To ensure part independence, I keep the rhythmic values of each part sounding in different parts of the beat. That is where the visualization and DPV really helped. During the stage of code preparation, I would experiment with different pattern values and closely watch the visualizations to see where the rhythms land, and then make adjustments to find the right values. During a performance session, I improvise on the prepared code options and use the visualization to give me a sense of how everything fits together and what I should do next.
 
 ## Examples - Erratic Rhythms
-1 [play](https://www.youtube.com/watch?v=dwrwnNVT-Po&t=65s)  
+1 [play](https://youtu.be/QgCi6n5ZPRI&t=65s) 
 
 <img
   src={require('./hh-visualizer1.jpg').default}
@@ -63,7 +62,7 @@ d2 $ freq "{100 200 400 800 900 1100 1300 1500 1600}%<5.2>" # sound "psin"  #nud
   # connectionN 3 # sizeMin 12 # sizeMax 60 # color "8905f5"
 ```
 
-2 [play](https://www.youtube.com/watch?v=dwrwnNVT-Po&t=172s)  
+2 [play](https://youtu.be/QgCi6n5ZPRI&t=172s)  
 <img
   src={require('./hh-visualizer2.jpg').default}
   alt="Erratic rhythms - visualize ex 2"
@@ -85,7 +84,7 @@ d4 $ freq "~ 400 ~ 800 [~ <1300 1600> ~ ~]" # s "soskick"
   # connectionN 1 # sizeMin 12 # sizeMax 80 # figure "circle" # color "f58711"
 ```
 
-3 [play](https://www.youtube.com/watch?v=dwrwnNVT-Po&t=194s)  
+3 [play](https://youtu.be/QgCi6n5ZPRI&t=194s)  
 
 <img
   src={require('./hh-visualizer3.jpg').default}
@@ -103,7 +102,7 @@ d3 $ mask ("1 1 1 0 1") $ sound "[supergong!17]/<1 1.4 0.8>" #nudge 0.2
    #connectionN 2 #sizeMin 10 #sizeMax 20 #figure "circle" #color "2df505"
 ```
 
-4 [play](https://www.youtube.com/watch?v=dwrwnNVT-Po&t=265s)  
+4 [play](https://youtu.be/QgCi6n5ZPRI&t=265s)  
 
 <img
   src={require('./hh-visualizer3.jpg').default}
@@ -123,7 +122,7 @@ d4 $ fast 0.5 $ every 2 (degradeBy "<0.2 0.5 0.8>") $ freq ("~ 400 ~ 800 [~ <130
     # connectionN 1 # sizeMin 12 # sizeMax 80 # figure "circle" # color "f58711"
 ```
 So that's it! 
-- Full performance: [Erratic Rhythms - with visualization](https://www.youtube.com/watch?v=dwrwnNVT-Po)
+- Full performance: [Erratic Rhythms - with visualization](https://youtu.be/QgCi6n5ZPRI)
 - Tidal code: [GitHub - Erratic Rhythms](https://github.com/HighHarmonics2/livecoding/tree/main/tidal/erraticRhythms)
 
 Check out Iván's [Didactic Pattern Visualizer](https://github.com/ivan-abreu/didacticpatternvisualizer/tree/main)
