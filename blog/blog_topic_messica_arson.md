@@ -11,7 +11,3 @@ The post includes a lot of Tidal code samples as well as details on how to insta
 
 
 [Messica Arson on Bandcamp](https://messicaarson.bandcamp.com)
-
-
--
--
