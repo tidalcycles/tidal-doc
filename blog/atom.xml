@@ -2,11 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tidalcycles.org/blog</id>
     <title>Tidal Cycles Blog</title>
-    <updated>2023-10-29T00:00:00.000Z</updated>
+    <updated>2024-06-11T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://tidalcycles.org/blog"/>
     <subtitle>Tidal Cycles Blog</subtitle>
     <icon>https://tidalcycles.org/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Blog Post by Messica Arson]]></title>
+        <id>/blog_topic_messica_arson</id>
+        <link href="https://tidalcycles.org/blog/blog_topic_messica_arson"/>
+        <updated>2024-06-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Check out this great blog post by Messica Arson. It includes details on how to use Tidal Looper (thgrund) with TidalCycles. It also provides insights into Messica's unique creative process of sampling and looping screams.]]></summary>
+        <content type="html"><![CDATA[<p>Check out this great blog post by Messica Arson. It includes details on how to use <a href="https://github.com/thgrund/tidal-looper" target="_blank" rel="noopener noreferrer">Tidal Looper</a> (thgrund) with TidalCycles. It also provides insights into Messica's unique creative process of sampling and looping screams.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="harnessing-screams-with-tidal-looper"><a href="https://dev.to/jessicagarson/harnessing-screams-with-tidal-looper-5hhp" target="_blank" rel="noopener noreferrer">Harnessing Screams with Tidal Looper</a><a class="hash-link" href="#harnessing-screams-with-tidal-looper" title="Direct link to heading">​</a></h2><p>The post includes a lot of Tidal code samples as well as details on how to install and work with Tidal Looper.</p><p><a href="https://messicaarson.bandcamp.com" target="_blank" rel="noopener noreferrer">Messica Arson on Bandcamp</a></p><ul><li></li><li></li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Mandalas and Tidal Cycles]]></title>
         <id>/blog_topic_mandalas</id>
