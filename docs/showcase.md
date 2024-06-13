@@ -65,6 +65,7 @@ Some **TidalCyclists**:
 * [munshkr + x/q](http://ikag.github.io/) (Buenos Aires, AR)
 * [Nullish](http://nullish.org/) (Sheffield, UK)
 * [Polinski](http://www.paulwolinski.co.uk/) (Manchester, UK)
+* [Rachel Devorah](https://racheldevorah.studio/) (Boston, US)
 * [Spednar](https://soundcloud.com/spednar) (Pittsburgh, US)
 * [u-mano u-dito](https://umanoudito.bandcamp.com) (Trento, IT)
 * [voodoochild](http://voodoochild.bandcamp.com/) (Valdivia, Chile)
