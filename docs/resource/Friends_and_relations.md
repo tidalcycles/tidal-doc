@@ -17,6 +17,7 @@ Here follows is a list of projects connected with TidalCycles, whether they inte
 -   [Strudel](https://strudel.tidalcycles.org/) is an advanced port of TidalCycles to Javascript that runs in a web browser
 -   [Kidal](https://gitlab.com/ndr_brt/kidal) is a port of Tidal to Kotlin
 -   [Tranquility](https://github.com/XiNNiW/tranquility/) is a port of Tidal to Lua
+-   [Modal](https://github.com/noearc/modal) is another port of Tidal to Lua, focused on extending the mini-notation and running in embedded environments.
 -   [Vortex](https://github.com/tidalcycles/vortex/) is a port of Tidal to Python
 
 # Editors
