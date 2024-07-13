@@ -15,10 +15,10 @@ You should see something like this:
 
 ```bash
 GHCi, version 8.6.3: http://www.haskell.org/ghc/  :? for help
-Prelude> 
+Prelude>
 ```
 
-If you don't see something like the above, you probably need to install [Haskell](https://www.haskell.org/). You might well see a different version number, don't worry. At the time of writing, Tidal is tested against versions right back to 7.10.3. 
+If you don't see something like the above, you probably need to install [Haskell](https://www.haskell.org/). You might well see a different version number, don't worry. At the time of writing, Tidal is tested against versions right back to 7.10.3.
 
 ## Is the Tidal Library installed?
 
@@ -33,7 +33,7 @@ You should now see something like:
 ```haskell
 GHCi, version 8.6.3: http://www.haskell.org/ghc/  :? for help
 Prelude> import Sound.Tidal.Context
-Prelude Sound.Tidal.Context> 
+Prelude Sound.Tidal.Context>
 ```
 
 If you instead see an error message like:
@@ -60,9 +60,9 @@ cabal v1-install tidal
 You can ignore warnings about *'legacy v1 style'*.
 :::
 
-If you still see an error message, then make sure you have installed the **Full** Haskell Platform and try again. If it still doesn't work, ask help on the Forum or on the Discord or RocketChat. 
+If you still see an error message, then make sure you have installed the **Full** Haskell Platform and try again. If it still doesn't work, ask help on the Forum or on the Discord or RocketChat.
 
-## Is SuperDirt alright? 
+## Is SuperDirt alright?
 
 ### CLASS Not Found
 
@@ -80,7 +80,7 @@ This means **SuperDirt** isn't installed. Install it by running:
 
 If it fails to install, make sure you have the `git` command installed. You can do this by running `git --version` from a command prompt. If the command isn't found, then check the install page for how to install **Git**. Once it's installed, you'll need to restart **SuperCollider** before trying again.
 
-For users who have just installed SuperCollider, restarting it prior to running `include("SuperDirt")` could also resolve the error. 
+For users who have just installed SuperCollider, restarting it prior to running `include("SuperDirt")` could also resolve the error.
 
 ### Could not bind to requested port
 
@@ -91,12 +91,12 @@ Could not bind to requested port. This may mean it is in use already by another 
 ERROR: Could not open UDP port 57120
 ```
 
-This probably means you have stray **SuperCollider** processes running, blocking network ports. Shut down **SuperCollider**, and force quit `sclang` and `scserver` in your task manager. Failing that, a reboot will clear them. 
+This probably means you have stray **SuperCollider** processes running, blocking network ports. Shut down **SuperCollider**, and force quit `sclang` and `scserver` in your task manager. Failing that, a reboot will clear them.
 
 ## Is the Jack Audio Server ok?
 
 Supercollider runs on a Jack audio server in order to deliver sound to
-your speakers. If you see the following error in SuperCollider's post window: 
+your speakers. If you see the following error in SuperCollider's post window:
 
 ```
 Couldn't set realtime scheduling priority 1: Operation not permitted
@@ -111,13 +111,13 @@ sudo dpkg-reconfigure jackd2
 and add your username to the audio group with (replace USERNAME):
 
 ```bash
-sudo addgroup USERNAME audio
+sudo adduser USERNAME audio
 ```
 
 You can check if your username is already in the *audio group* by typing the command:
 
 ```bash
-groups -username-
+groups USERNAME
 ```
 
 You may need to log out and log back in for this to take effect.
@@ -133,7 +133,7 @@ cabal update
 cabal new-install tidal --lib
 ```
 
-Sometimes, the installation process can fail without any clear reason. This command can help to fix the problem: 
+Sometimes, the installation process can fail without any clear reason. This command can help to fix the problem:
 
 ```bash
 sudo ghc-pkg recache
@@ -177,7 +177,7 @@ stack install tidal
 ```
 
 Once that's done, you just have to tell your editor plugin to use the Tidal
-installed with `stack`. In **Atom**, find the settings for the Tidal Cycles 
+installed with `stack`. In **Atom**, find the settings for the Tidal Cycles
 package, and set the `ghci path` setting to:
 
 ``` bash
