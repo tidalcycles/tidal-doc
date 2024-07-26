@@ -263,7 +263,7 @@ Or we can take the pattern from the speed parameter:
 d1 $ speed "1 2 4" # sound "jungbass:6"
 ```
 
-`note` pitches the sample up in semitones (e.g. 12 = up an octave):
+`up` pitches the sample up in semitones (e.g. 12 = up an octave):
 ```haskell
 d1 $ up "0 ~ 12 24" # sound "jungbass:6"
 ```
@@ -404,7 +404,7 @@ d1 $ sound "jvbass [jvbass jvbass] jvbass ~" # iter 3 (note "1 [3 5] 7")
 You can create an LFO on any parameter by using `fast` or `slow`, `range`,  and an oscillator such as `sine` or `saw`:
 
 ```haskell
-d1 $ d1 $ s "bd*8" # pan (slow 4 $ sine)
+d1 $ s "bd*8" # pan (slow 4 $ sine)
 d1 $ s "moog*16" # n "<0 1 2>" # legato 1 # cutoff (range 200 2400 $ saw) # resonance 0.2
 ```
 
