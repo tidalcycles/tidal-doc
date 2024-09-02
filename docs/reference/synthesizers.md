@@ -15,7 +15,7 @@ Some undocumented parameters are included without descriptions.
 
 
 ### Additive synthesis
-#### Supergong
+#### supergong
 
 An example of additive synthesis, building up a gong-like noise from a sum of sine-wave harmonics. Notice how the envelope timescale and amplitude can be scaled as a function of the harmonic frequency.
 
@@ -31,7 +31,7 @@ d1 $ n (slow 2 $ fmap (*7) $ run 8)
 ```
 
 ### Substractive synthesis
-#### Supersquare
+#### supersquare
 
 A moog-inspired square-wave synth; variable-width pulses with filter frequency modulated by an LFO:
 
@@ -44,7 +44,7 @@ A moog-inspired square-wave synth; variable-width pulses with filter frequency m
 * `rate` (1): LFO rate
 * `pitch1` (1): filter frequency scaling multiplier, the frequency itself follows the pitch set by “n”
 
-#### Supersaw
+#### supersaw
 
 A moog-inspired sawtooth synth; slightly detuned saws with triangle harmonics, filter frequency modulated by LFO:
 
@@ -57,7 +57,7 @@ A moog-inspired sawtooth synth; slightly detuned saws with triangle harmonics, f
 * `rate` (1): LFO rate
 * `pitch1` (1): filter frequency scaling multiplier, the frequency itself follows the pitch set by “n”
 
-#### Superpwm
+#### superpwm
 
 A moog-inspired PWM synth; pulses multiplied by phase-shifted pulses, double filtering with an envelope on the second
 
@@ -70,7 +70,7 @@ A moog-inspired PWM synth; pulses multiplied by phase-shifted pulses, double fil
 * `rate` (1): LFO rate
 * `pitch1` (1): filter frequency scaling multiplier, the frequency itself follows the pitch set by “n”
 
-#### Superchip
+#### superchip
 
 Uses the Atari ST emulation *UGen* with 3 oscillators:
 
@@ -81,7 +81,7 @@ Uses the Atari ST emulation *UGen* with 3 oscillators:
 * `pitch3` (3): control the ratio of harmonics
 * `voice` (0): causes variations in the levels of the 3 oscillators
 
-#### Superhoover
+#### superhoover
 
 Hoover, adapted from [Wouter Snoei](http://superdupercollider.blogspot.com/2009/06/more-dominator-deconstruction.html)’s implementation:
 
@@ -89,7 +89,7 @@ Hoover, adapted from [Wouter Snoei](http://superdupercollider.blogspot.com/2009/
 * `decay` (0): for a different envelope shape
 * `accelerate` (0): for constant pitch glide
 
-#### Superzow
+#### superzow
 
 Phased saws:
 
@@ -98,7 +98,7 @@ Phased saws:
 * `slide` (1): how fast it moves through the phase
 * `detune` (1): for oscillator detuning
 
-#### Supertron
+#### supertron
 
 Feedback PWM:
 
@@ -112,7 +112,7 @@ d1 $ s "supertron"
   # accelerate "0.2"
 ```
 
-#### Superreese
+#### superreese
 
 Vaguely Reese-like synth:
 
@@ -120,11 +120,11 @@ Vaguely Reese-like synth:
 * `voice` (0): number of voices
 * `detune` (0): detune amount
 
-#### Supernoise
+#### supernoise
 
 Digital noise in several flavors with a bandpass filter:
 
-### Superstatic
+#### superstatic
 
 Impulse noise with a fadein/fadeout.
 
@@ -134,7 +134,7 @@ Impulse noise with a fadein/fadeout.
 * `slide`: works like accelerate on the bandpass
 * `resonance`: is the filter resonance
 
-#### Supercomparator
+#### supercomparator
 
 * `voice` (0.5): scales the comparator frequencies, higher values will sound “breathier”
 * `decay` (0)
@@ -145,7 +145,7 @@ Impulse noise with a fadein/fadeout.
 * `pitch1` (1): filter frequency scaling multiplier, the frequency itself follows the pitch set by “n”
 
 ### Physical modelling
-#### Supermandolin
+#### supermandolin
 
 Physical modeling of a vibrating string, using a delay line (`CombL`) excited by an intial pulse (`Impulse`). To make it a bit richer, I’ve combined two slightly detuned delay lines:
 
@@ -153,7 +153,7 @@ Physical modeling of a vibrating string, using a delay line (`CombL`) excited by
 * `accelerate` (0): pitch-glide
 * `detune` (0.2): detune amount
 
-#### Superpiano
+#### superpiano
 
 Hooking into a nice synth piano already in **SuperCollider**:
 
@@ -163,13 +163,13 @@ Hooking into a nice synth piano already in **SuperCollider**:
 * `muffle` (1)
 *  `stereo` (0.2): stereo amount.
 
-#### Superfork
+#### superfork
 
 Tuning fork from Ben Gold’s experimentation and from “On the acoustics of tuning forks”, Rossing Russell and Brown:
 
 * `accelerate` (0): pitch-glide amount.
 
-#### Superhammond
+#### superhammond
 
 Hammond B3 sim. Frequency adjustments courtesy of [Tom Wiltshire](https://electricdruid.net/):
 
@@ -190,7 +190,7 @@ Voices are drawbar presets:
 * **9.** Jazz 2
 
 
-#### Supervibe
+#### supervibe
 
 Vibraphone simulation, adapted with some help from Kevin Larke’s thesis Real Time Vibraphone Pitch and Timbre Classification:
 
@@ -202,7 +202,7 @@ Vibraphone simulation, adapted with some help from Kevin Larke’s thesis Real T
 * `detune` (0): adjusts a high harmonic to give the sound a different character
 
 ### FM synthesis
-#### Superfm
+#### superfm
 
 6 operator FM synth (**DX7**-like). Works a bit different from the original **DX7**. Instead of algorithms, you set the amount of modulation every operator receives from other operators and itself (feedback), virtually providing an endless number of possible combinations (algorithms).
 
@@ -344,14 +344,14 @@ d1 $ freq "<200 300> <400 800>" #s "superfm"
 
 
 ### Drum synthesis
-#### Superhex
+#### superhex
 
 Waveguide mesh, hexagonal drum-like membrane:
 
 * `rate` (1): ??
 * `accelerate` (0): pitch-glide amount
 
-#### Superkick
+#### superkick
 
 Kick Drum using [Rumble-San](http://blog.rumblesan.com/post/53271713518/drum-sounds-in-supercollider-part-1)’s implementation as a starting point:
 
@@ -360,7 +360,7 @@ Kick Drum using [Rumble-San](http://blog.rumblesan.com/post/53271713518/drum-sou
 * `pitch1` (1): affects the click frequency
 * `decay` (1): changes the click duration relative to the overall timescale
 
-#### Super808
+#### super808
 
 A vaguely 808-ish kick drum:
 
@@ -368,14 +368,14 @@ A vaguely 808-ish kick drum:
 * `rate` (1): controls the filter sweep speed
 `voice` (0): sets the sinewave feedback
 
-#### Superhat
+#### superhat
 
 Hi-hat using [Rumble-San](http://blog.rumblesan.com/post/53271713518/drum-sounds-in-supercollider-part-1)’s implementation as a starting point:
 
 * `n`: provides some variation on the frequency in a weird way
 * `accelerate` (0): sweeps the filter
 
-#### Supersnare
+#### supersnare
 
 Snare drum using [Rumble-San](http://blog.rumblesan.com/post/53271713518/drum-sounds-in-supercollider-part-1)’s implementation as a starting point:
 
@@ -383,7 +383,7 @@ Snare drum using [Rumble-San](http://blog.rumblesan.com/post/53271713518/drum-so
 * `decay` (1): for scaling noise duration relative to tonal part
 * `accelerate` (0): for tonal glide
 
-#### Superclap
+#### superclap
 
 Hand clap using [Rumble-San](http://blog.rumblesan.com/post/53271713518/drum-sounds-in-supercollider-part-1)’s implementation as a starting point:
 
@@ -392,7 +392,7 @@ Hand clap using [Rumble-San](http://blog.rumblesan.com/post/53271713518/drum-sou
 * `rate` (1): affects the decay time
 * `pitch1` (1): scales the bandpass frequency
 
-#### SOSKick
+#### soskick
 
 Kick drum synth. Increase `pitch1` and `voice` for interesting electronic percussion:
 
@@ -403,20 +403,20 @@ Kick drum synth. Increase `pitch1` and `voice` for interesting electronic percus
 * `speed` (0.3): controls WhiteNoise sweep (min: 0, max: 1)
 * `freq` (65)
 
-#### SOSHats
+#### soshats
 
 * `resonance` (1): bandpass filter resonance value (min: 0, max: 1)
 * `pitch1` (238.5): oscillator modulation in radians (min: 0, max: `SampleRate.ir / 2`)
 * `sustain` (0.5): sustain amount
 * `freq` (220): frequency
 
-#### SOSToms
+#### sostoms
 
 * `voice` (0.5): controls modulation input phase in radians (min: 0, max: your sanity)
 * `sustain` (0.5): sustain amount
 * `freq` (261.626): frequency
 
-#### SOSSnare
+#### sossnare
 
 `voice` (0.385): controls modulation input phase in radians (min: 0, max: your sanity)
 `semitone` (0.452): modulation frequency in semitones of fundamental
@@ -458,11 +458,11 @@ Gabor grain
 Shepard on a cycle:
 * `accelerate` (0): pitch-glide amount.
 
-#### Supersiren
+#### supersiren
 
 A controllable synth siren, defaults to 1 second, draw it out with `sustain`.
 
-### Supergrind
+#### supergrind
 
 From `synthdef.art` fragment(2018-08-16):
 
