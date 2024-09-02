@@ -366,7 +366,7 @@ A vaguely 808-ish kick drum:
 
 * `n`: controls the chirp frequency
 * `rate` (1): controls the filter sweep speed
-`voice` (0): sets the sinewave feedback
+* `voice` (0): sets the sinewave feedback
 
 #### superhat
 
