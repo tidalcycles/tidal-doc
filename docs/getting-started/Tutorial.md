@@ -664,6 +664,14 @@ starts on a different step:
 
     d1 $ sound "bd(5,8,2)"
 
+What this third parameter actually does it rotate time. To better illustrate this you can run `drawLine x(3,8)`, which shows the pattern on a linear timeline, with x showing events:
+
+`|x..x..x.|x..x..x.|x..x..x.|x..x..x.|x..x..x.|x..x..x.|x..x..x.`
+
+By rotating it by one step (3,8,1) the pattern now looks like this
+
+`|..x..x.x|..x..x.x|..x..x.x|..x..x.x|..x..x.x|..x..x.x|..x..x.x|..x..x.x`
+
 You can also use the euclid function to apply a Euclidean algorithm over
 a complex pattern, although the structure of that pattern will be lost:
 
