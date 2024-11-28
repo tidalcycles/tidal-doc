@@ -133,7 +133,7 @@ d1 silence
 ### interpolateIn
 
 ```haskell
-Type: interpolateIn :: Time -> [ControlPattern] -> ControlPattern
+Type: interpolateIn :: Show a => a -> Time -> [ControlPattern] -> ControlPattern
 ```
 
 Morph control values between patterns in a given number of cycles. The first argument supplied to `interpolate` is the ID of the new pattern that is created and the second is the number of cycles.
