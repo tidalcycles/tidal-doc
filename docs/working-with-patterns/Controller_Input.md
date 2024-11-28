@@ -191,7 +191,7 @@ OSC. You can get puredata from <https://puredata.info/> (the 'vanilla'
 version is recommended).
 
 Then download this file:
-<https://raw.githubusercontent.com/tidalcycles/Tidal/main/pd/midi-osc-bridge.pd>
+<https://raw.githubusercontent.com/tidalcycles/Tidal/dev/pd/midi-osc-bridge.pd>
 
 Then if you start tidal, open that file in puredata, and configure your
 MIDI device in puredata, things should start working.
