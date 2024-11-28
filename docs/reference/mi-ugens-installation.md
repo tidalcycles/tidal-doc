@@ -26,7 +26,7 @@ The SuperCollider Extensions folder can be found by running `Platform.userExtens
 
  - Linux:   `/home/<youruser>/.local/share/SuperCollider/synthdefs/mi-ugens.scd`
  - Windows: `C:\Users\<youruser>\AppData\Local\SuperCollider\synthdefs\mi-ugens.scd`
- - OSX:     `/home/<youruser>/Library/Application Support/SuperCollider/synthdefs/mi-ugens.scd`
+ - OSX:     `/Users/<youruser>/Library/Application Support/SuperCollider/synthdefs/mi-ugens.scd`
 
 
 4. Create a new parameter definitions file, `mi-ugens-params.hs`, with [these parameters](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/master/files/mutable-instruments-ugens_parameters.hs)
