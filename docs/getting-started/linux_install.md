@@ -134,7 +134,7 @@ sclang
 2\.b. Paste this line and press Enter (and wait, it returns immediately but processes in the background).
 
 ```c
-Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.3"); thisProcess.recompile()})
+Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.4"); thisProcess.recompile()})
 ```
     
 ---
