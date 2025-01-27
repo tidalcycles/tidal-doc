@@ -141,3 +141,34 @@ d1 $ s "bass:5*8" # lpf (slow 4 $ range 200 5000 $ sine)
 :::tip
 Notice that most of the time, the speed up/down will be in sync with your pattern. How convenient!
 :::
+
+## Sampling oscillators and signals
+
+### segment
+
+```haskell
+Type: segment :: Pattern Time -> Pattern a -> Pattern a
+```
+
+`segment` 'samples' the pattern at a rate of `n` events per cycle. Useful for turning a continuous pattern into a discrete one. In this example, the pattern originates from the shape of a sine wave, a continuous pattern. Without segment the samples will get triggered at an undefined frequency which may be very high.
+
+```haskell
+d1 $ n (slow 2 $ segment 16 $ range 0 32 $ sine) # sound "amencutup"
+```
+
+### discretise
+
+`segment` used to be known as `discretise`. The old name remains as an alias and will still work, but may be removed or repurposed in a future version of **Tidal**. 
+
+## Creating oscillators
+
+### sig
+
+```haskell
+Type: sig :: (Time -> a) -> Pattern a
+```
+`sig` takes a function of time and turns it into a pattern. It's very useful for creating continuous patterns such as `sine` or `perlin`. For example, `saw` is defined as
+
+```haskell
+saw = sig $ \t -> mod' (fromRational t) 1
+```
