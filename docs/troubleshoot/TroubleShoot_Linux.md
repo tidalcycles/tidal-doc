@@ -60,7 +60,7 @@ cabal v1-install tidal
 You can ignore warnings about *'legacy v1 style'*.
 :::
 
-If you still see an error message, then make sure you have installed the **Full** Haskell Platform and try again. If it still doesn't work, ask help on the Forum or on the Discord or RocketChat.
+If you still see an error message, then make sure you have installed the **Full** Haskell Platform and try again. If it still doesn't work, ask help on one of the [community pages](https://tidalcycles.org/docs/community).
 
 ## Is SuperDirt alright?
 
