@@ -592,4 +592,4 @@ d1 $ drum "bd sd rush"
 
 ### Alternative with Pure Data
 
-The above **SuperCollider** instructions are most convenient if you're using **SuperDirt**, but as an alternative you can use **Pure Data** to convert midi to **OSC**. You can get puredata from [here](https://puredata.info/) (the `vanilla` version is recommended). Then, download [this file](https://raw.githubusercontent.com/tidalcycles/Tidal/main/pd/midi-osc-bridge.pd). Then if you start **Tidal**, open that file in **Pure Data**, and configure your **MIDI** device in **Pure Data**, things should start working.
+The above **SuperCollider** instructions are most convenient if you're using **SuperDirt**, but as an alternative you can use **Pure Data** to convert midi to **OSC**. You can get puredata from [here](https://puredata.info/) (the `vanilla` version is recommended). Then, download [this file](https://raw.githubusercontent.com/tidalcycles/Tidal/dev/pd/midi-osc-bridge.pd). Then if you start **Tidal**, open that file in **Pure Data**, and configure your **MIDI** device in **Pure Data**, things should start working.
