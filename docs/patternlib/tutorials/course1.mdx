@@ -31,6 +31,9 @@ They are interesting because of the questions and answers from the participants.
 
 Aimed at people new to live coding, and goes through the basics of how to interact with **Tidal** - starting and stopping code and so on. Look at the video description to jump to different parts, and switch subtitles on if I'm speaking too fast.
 
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-1-lesson-1-tidal-interaction), as there is a lot of additional information there.
+
+
 ----
 
 ### Lesson 2: Loading sample packs
@@ -80,6 +83,9 @@ Here's the contents of samples-extra:
 * `hi` - 'hi' handdrum samples
 * `lo` - 'lo' handdrum samples
 * `snare` - snare drums
+
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-1-lesson-2-loading-sample-packs/), as there is a lot of additional information there.
+
 
 -----
 
@@ -144,6 +150,9 @@ d1 $ sound "[hi lo hi] [hi lo hi lo]"
 There's a lot more to go through with the `mini-notation`. Have fun with it, while also exploring the sounds in the `default samples` and `extra-samples` samplepack (You'll see a list of them in the **SuperCollider** "post window" when you start **SuperDirt**). If you haven't loaded up the `extra-samples` yet, have a look at the previous lesson 5.
 
 If you make something you like, be sure to save it somewhere and keep it safe! You might also like to keep several versions of a pattern, saving not only the final pattern but how you got there.. A lot of the music in live coding is in the edits, and not just the end result!
+
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-1-lesson-3-sequencing-with-the-mini-notation/), as there is a lot of additional information there.
+
 
 -----
 
@@ -326,6 +335,79 @@ d1 $ sound "bd sd sd sd bd [sd sd sd]"
 -- is actually much easier to understand and edit!
 ```
 
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-1-lesson-4-mini-notation-part-2/), as there is a lot of additional information there.
+
+
+### Lesson 5: mini-notation (part III)
+
+<YouTube id="aD-35W7rnFM" />
+
+In which I find out I really can't say the word "mininotation"..
+
+This video is a few things lumped together - a run through the tasks on the last worksheet, how to upgrade tidal, and finally how to use the "Euclidean notation".
+
+In brief:
+
+Upgrade Tidal by opening a terminal window and running
+```plain
+cabal update
+cabal install tidal --lib
+```
+If you're on an older version of haskell, you might have to remove the `--lib` and just run `cabal install tidal`.
+If you're on a mac and get 'command not found' or similar, you might have to run `. ~/.ghcup/env` before the above.
+
+The main difference is the addition of the `draw` function, which I use in the video to explore what the euclidean syntax is doing. There's also `drawLine` which I forgot to show in the video - it's actually clearer as it shows multiple cycles.. e.g.:
+
+```
+drawLine $ "[x [a c b]/2 x x, a x [c d]]"
+```
+draws:
+```
+[6 cycles]
+|x--a-c---x--|x-- b-x--x--|x--a-c---x--|x-- b-x--x--|x--a-c---x--|x-- b-x--x--
+|a---x---c-d-|a---x---c-d-|a---x---c-d-|a---x---c-d-|a---x---c-d-|a---x---c-d-
+```
+
+I'll paste the list of example Euclidean structures below. So for the Persian rhythm "Khafif-e-ramal"
+```
+d1 $ sound "clap(3,5,2)"
+```
+It's useful to have a kick or something at the start of each cycle as a reference point:
+```
+d1 $ sound "kick:5"
+```
+
+```plain
+The Euclidean Algorithm Generates Traditional Musical Rhythms by Toussaint
+(2,5) : A thirteenth century Persian rhythm called Khafif-e-ramal.
+(3,4) : The archetypal pattern of the Cumbia from Colombia, as well as a Calypso rhythm from Trinidad.
+(3,5,2) : Another thirteenth century Persian rhythm by the name of Khafif-e-ramal, as well as a Rumanian folk-dance rhythm.
+(3,7) : A Ruchenitza rhythm used in a Bulgarian folk-dance.
+(3,8) : The Cuban tresillo pattern.
+(4,7) : Another Ruchenitza Bulgarian folk-dance rhythm.
+(4,9) : The Aksak rhythm of Turkey.
+(4,11) : The metric pattern used by Frank Zappa in his piece titled Outside Now.
+(5,6) : Yields the York-Samai pattern, a popular Arab rhythm.
+(5,7) : The Nawakhat pattern, another popular Arab rhythm.
+(5,8) : The Cuban cinquillo pattern.
+(5,9) : A popular Arab rhythm called Agsag-Samai.
+(5,11) : The metric pattern used by Moussorgsky in Pictures at an Exhibition.
+(5,12) : The Venda clapping pattern of a South African children’s song.
+(5,16) : The Bossa-Nova rhythm necklace of Brazil.
+(7,8) : A typical rhythm played on the Bendir (frame drum).
+(7,12) : A common West African bell pattern.
+(7,16,14) : A Samba rhythm necklace from Brazil.
+(9,16) : A rhythm necklace used in the Central African Republic.
+(11,24,14) : A rhythm necklace of the Aka Pygmies of Central Africa.
+(13,24,5) : Another rhythm necklace of the Aka Pygmies of the upper Sangha.
+```
+
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/c/course/week1/16), as there is a lot of additional information there.
+
+Have fun!
+
+
+
 ## Week 2
 
 -----
@@ -402,6 +484,9 @@ d1 $ sound "kurt:4 kurt:4"
 
 d1 $ sound "kurt:4(3,8)" # shape "0 0.98" # gain "0.7"
 ```
+
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-2-lesson-1-starting-out-with-effects/), as there is a lot of additional information there.
+
 
 -----
 
@@ -491,6 +576,9 @@ d1 $ slow "0.5 <1 2>" $
 -- Your experience may vary :)
 setcps 0.7
 ```
+
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-2-lesson-2-manipulating-time-with-setcps-cps-patterns-and-fast-slow-functions/), as there is a lot of additional information there.
+
 
 -----
 
@@ -655,6 +743,10 @@ d1 $ n "[0 4 2] [4 1] 3 [2 0] 3 [3 1] 4 4" # sound "cpu"
   |+ speed (slow 4 saw)
 ```
 
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-2-lesson-3-combining-patterns-with-arithmetic-plus-the-hurry-function/), as there is a lot of additional information there.
+
+
+
 -----
 
 ## Week 3
@@ -778,6 +870,9 @@ d1 $ every 3 $ fast 2 $ sound "bd sd ~ cp"
 -- result in silence!
 ```
 
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-3-lesson-1-exploring-the-every-function-including-tackling-the-meaning-of/), as there is a lot of additional information there.
+
+
 -----
 
 ### Lesson 2: cut VS legato
@@ -794,6 +889,7 @@ d2 $ jux rev $ sound "sax(3,8)" # legato 1 # n 3
   # note "<[9 7] 5 [9 12]>" # djf 0.7 # sz 0.4 # room 0.4
 ```
 
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-3-lesson-2-cut-vs-legato/), as there is a lot of additional information there.
 -----
 
 ### Lesson 3: slice and splice
@@ -826,6 +922,9 @@ d1 $ splice 8 (fast "1 [0.5 0.75]" "6 1 [2 3] ~ 4 1 6*2 7")
 d1 $ splice 8 ("0 1 2 3 4 5") $ sound "break:4" # gain 1.1
 d2 $ sound "kick snare*2 clap:4" # speed 2
 ```
+
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-3-lesson-3-slice-and-splice/), as there is a lot of additional information there.
+
 
 -----
 
@@ -894,6 +993,10 @@ d1 $ loopAt 16 $ striate 32 $ sound "bev"
 
 d1 $ slow 4 $ jux rev $ loopAt 16 $ striate 128 $ sound "bev*4"
 ```
+
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-3-lesson-4-chop-and-striate/), as there is a lot of additional information there.
+
+
 
 ## Week 4
 
@@ -992,6 +1095,9 @@ d1 $ sound "bd(7,16)"
    # room 0.7
    # sz (range 0.4 1 $ slow 4 perlin)
 ```
+
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-4-lesson-1-continuous-patterns-sine-square-tri-saw-and-random-functions/), as there is a lot of additional information there.
+
 
 -----
 
@@ -1188,6 +1294,9 @@ d1 $ sound "clap*2" # speed (range 0.1 2 rand)
 -- you're as likely to get lower speeds on the left as on the right.
 ```
 
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-4-lesson-2-random-marathon-rand-irand-mininotation-randomness-scramble-shuffle-choose-more/), as there is a lot of additional information there.
+
+
 -----
 
 ### Lesson 3: random marathon (part II)
@@ -1313,3 +1422,5 @@ d1 $ loopAt 1 $ randslice 4 $ sound "break:8*4"
 -- a random pattern:
 d1 $ splice 4 (segment 4 $ irand 4) $ sound "break:8"
 ```
+
+Always remember to check the [forum page for the lesson](https://club.tidalcycles.org/t/week-4-lesson-3-random-marathon-part-2-randcat-stripe-degrade-sometimes-somecycles-randslice-more/), as there is a lot of additional information there.
