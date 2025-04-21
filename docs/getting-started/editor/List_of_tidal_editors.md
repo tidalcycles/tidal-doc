@@ -7,7 +7,7 @@ layout: wiki
 The following editors support Tidal programming through
 either an extension, plugin, or manual configuration:
 
-- [Atom](Atom "wikilink")
+- [Pulsar](Pulsar "wikilink")
 - [Vim](Vim "wikilink")
 - [Emacs](Emacs "wikilink")
 - [VS Code](VS_Code "wikilink")
