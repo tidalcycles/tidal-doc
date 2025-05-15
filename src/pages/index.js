@@ -15,7 +15,9 @@ const features = [
       <>
         Tidal Cycles (or 'Tidal' for short) is a free/open source live coding environment
         for algorithmic patterns, written in Haskell. Tidal is using SuperCollider, another open-source software,
-        for synthesis and I/O.
+        for synthesis and MIDI.
+
+        Tidal has inspired a open source family of similar environments adopting its model of patterns of time known as <em><a href="https://uzu.lurk.org/">Uzulangs</a></em>, including the web-based <a href="https://strudel.cc">Strudel</a> environment.
       </>
     ),
   },
