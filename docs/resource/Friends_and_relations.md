@@ -8,7 +8,9 @@ Here follows is a list of projects connected with TidalCycles, whether they inte
 
 (For a long list of \_all\_ the live coding environments, see the [all things livecoding](https://github.com/toplap/awesome-livecoding) list.)
 
-# Ports and parsers
+# Ports and parsers - Uzulangs
+
+TidalCycles has spawned a family of live coding environments known as [uzulangs](https://uzu.lurk.org/), that follow tidal's model of patterns of time, and often adopt/expand on its mininotation for rhythm. For examples:
 
 -   [Estuary](https://github.com/dktr0/estuary) is a platform for
     collaboration and learning through live coding, hosting a range of
