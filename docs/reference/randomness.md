@@ -197,3 +197,42 @@ Similar to `choose`, but only picks once per cycle:
 ```haskell
 d1 $ sound "drum ~ drum drum" # n (cycleChoose [0,2,3])
 ```
+
+### markovPat
+
+```haskell
+Type: markovPat :: Pattern Int -> Pattern Int -> [[Double]] -> Pattern Int
+```
+
+`markovPat` is a way to generate (pseudo-)random patterns based on Markov chains. Rather than a predefined pattern, a Markov chain is a predefined sequence of probabilities. These probabilities govern the transitions from one step to another. This gives you direct control over the randomness of the pattern that is generated. `markovPat` takes three arguments: the sequence length, the index of the starting step, and a matrix of probabilities.
+
+First, identify the values for each state. For example, if you want to sequence three sounds `bd`, `sd`, and `clap`:
+
+```haskell
+d1 $ s (fmap (["bd", "sd", "clap"]!!)
+     $ -- the Markov chains will go here
+)
+```
+
+With this mapping, `"bd"` has an index of 0, `"sd"` has an index of 1, and `"clap"` has an index of 2. Note that you can include rests by including `"~"` as one of the sounds.
+
+Next, define the probability that each step will transition to each other step. Note, the values will be normalized, so they don't need to add up to 1.
+
+| Current Step | `bd` [0] | `sd` [1] | `clap` [2] |
+|:------------:|:--------:|:--------:|:----------:|
+| `bd`         | 0.1      | 0.7      | 0.2        |
+| `sd`         | 0.15     | 0.1      | 0.8        |
+| `clap`       | 0.5      | 0.3      | 0.4        |
+
+In the above example, `bd` will have a 10% chance to repeat another `bd`, a 70% chance to transition to a `sd`, and a 20% chance to transition to a `clap`. Add this to our pattern with a sequence length of 16 and a starting index of 0:
+
+```haskell
+d1 $ s (fmap (["bd", "sd", "clap"]!!)
+       $ markovPat 16 0 [
+           [0.1,  0.7, 0.2],
+           [0.15, 0.1, 0.8],
+           [0.5,  0.3, 0.4]
+         ] )
+```
+
+Like other sources of randomness, rhythmic structure can be added using functions such as `mask`.
