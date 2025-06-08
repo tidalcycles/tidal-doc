@@ -45,7 +45,6 @@ module.exports = {
           "configuration/boot-tidal",
         ],
         "Tidal Tools": [
-          "configuration/tidal-vis",
           "configuration/tidal-listener",
         ],
 
