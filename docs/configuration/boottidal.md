@@ -3,25 +3,25 @@ title: The Boot File
 id: boot-tidal
 ---
 
-Everytime you start Tidal, the software is reading from a configuration file usually named `BootTidal.hs`. Generally, this file will be attached to your text editor (check the plugin you are using). Save this file somewhere safe, you will have to tweak it sometimes: changing options, adding new functionality, etc...
+Every time you start Tidal, the software is reading from a configuration file usually named `BootTidal.hs`. Generally, this file will be attached to your text editor (check the plugin you are using). Save this file somewhere safe, you will have to tweak it sometimes: changing options, adding new functionality, etc...
 
 Some users went really far into customizing their setup: [Jarmlib](https://github.com/jarmitage/jarmlib). You can take a look at their work to see how to extend your configuration file by adding new aliases to it.
 
-As an example, here is the *vanilla* `BootTidal.hs` file used by the [upstream Tidal Package](https://github.com/tidalcycles/Tidal/blob/1.9-dev/BootTidal.hs) (yours may look different if you're using an earlier version):
+As an example, here is the *vanilla* `BootTidal.hs` file used by the [upstream Tidal Package](https://github.com/tidalcycles/Tidal/blob/v1.10.0/BootTidal.hs) (yours may look different if you're using an earlier version):
 ```haskell
-:set -fno-warn-orphans
-:set -XMultiParamTypeClasses
-:set -XOverloadedStrings
+:set -fno-warn-orphans -Wno-type-defaults -XMultiParamTypeClasses -XOverloadedStrings
 :set prompt ""
 
 -- Import all the boot functions and aliases.
 import Sound.Tidal.Boot
 
-default (Pattern String, Integer, Double)
+default (Rational, Integer, Double, Pattern String)
 
 -- Create a Tidal Stream with the default settings.
--- Use 'mkTidalWith' to customize these settings.
+-- To customize these settings, use 'mkTidalWith' instead
 tidalInst <- mkTidal
+
+-- tidalInst <- mkTidalWith [(superdirtTarget { oLatency = 0.01 }, [superdirtShape])] (defaultConfig {cFrameTimespan = 1/50, cProcessAhead = 1/20})
 
 -- This orphan instance makes the boot aliases work!
 -- It has to go after you define 'tidalInst'.
@@ -34,7 +34,6 @@ instance Tidally where tidal = tidalInst
 -- You can also add your own aliases in this file. For example:
 -- fastsquizzed pat = fast 2 $ pat # squiz 1.5
 
-:set -fwarn-orphans
 :set prompt "tidal> "
 :set prompt-cont ""
 ```
@@ -44,7 +43,7 @@ instance Tidally where tidal = tidalInst
 There are three configuration values which relate to latency: `cProcessAhead`, `cFrameTimespan`, and `oLatency`. Here's an example configuration:
 
 ```haskell
-tidalInst <- mkTidalWith [(superdirtTarget { oLatency = 0.05 }, [superdirtShape])] (setFrameTimespan (1/20) $ setProcessAhead (3/10) defaultConfig)
+tidalInst <- mkTidalWith [(superdirtTarget { oLatency = 0.05 }, [superdirtShape])] (defaultConfig {cFrameTimespan = 1/20, cProcessAhead = 3/10})
 ```
 * **Frame timespan**: This is the duration of Tidal's calculation window in seconds. The default is `0.05 seconds`, in other words a calculation rate of 20 frames per second. If you find Tidal is using too much CPU, increasing the frame timespan will probably help. 
 
