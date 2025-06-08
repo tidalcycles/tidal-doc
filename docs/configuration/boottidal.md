@@ -7,7 +7,7 @@ Every time you start Tidal, the software is reading from a configuration file us
 
 Some users went really far into customizing their setup: [Jarmlib](https://github.com/jarmitage/jarmlib). You can take a look at their work to see how to extend your configuration file by adding new aliases to it.
 
-As an example, here is the *vanilla* `BootTidal.hs` file used by the [upstream Tidal Package](https://github.com/tidalcycles/Tidal/blob/v1.10.0/BootTidal.hs) (yours may look different if you're using an earlier version):
+As an example, here is the *vanilla* `BootTidal.hs` file used by the [upstream Tidal Package](https://github.com/tidalcycles/Tidal/blob/v1.10.0/BootTidal.hs) (yours may look different if you're using an earlier version - see below):
 ```haskell
 :set -fno-warn-orphans -Wno-type-defaults -XMultiParamTypeClasses -XOverloadedStrings
 :set prompt ""
@@ -45,6 +45,13 @@ There are three configuration values which relate to latency: `cProcessAhead`, `
 ```haskell
 tidalInst <- mkTidalWith [(superdirtTarget { oLatency = 0.05 }, [superdirtShape])] (defaultConfig {cFrameTimespan = 1/20, cProcessAhead = 3/10})
 ```
+
+If you are running an earlier version of tidal, your BootTidal.hs file will look different. You can still configure the same settings by changing a line that looks like this:
+
+```hs
+tidal <- startTidal (superdirtTarget {oLatency = 0.05, oAddress = "127.0.0.1", oPort = 57120}) (defaultConfig {cVerbose = True, cFrameTimespan = 1/20, cProcessAhead = 3/10})
+```
+
 * **Frame timespan**: This is the duration of Tidal's calculation window in seconds. The default is `0.05 seconds`, in other words a calculation rate of 20 frames per second. If you find Tidal is using too much CPU, increasing the frame timespan will probably help. 
 
 *  **Latency**: This parameter lets you account for the time a target takes to produce a sound. For example, we might need SuperDirt to schedule the event 100 ms before it should hit the speaker. A higher latency parameter will move the sound earlier in time. The default is `0.05 seconds`.
