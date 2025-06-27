@@ -114,5 +114,5 @@ You can find more about the custom functions I use on the Tidal Club, where I al
 * Organize [Algoraves in Buenos Aires](https://www.instagram.com/algorave_arg/)
 * I published a [very popular drum machines sample pack](https://club.tidalcycles.org/t/a-huge-drum-machine-library-for-tidal-72-drum-machines/)
 * Reporting [bugs](https://github.com/musikinformatik/SuperDirt/issues/282)
-* Proposing [new ideas](https://github.com/tidalcycles/Tidal/issues/915)
+* Proposing [new ideas](https://codeberg.org/uzu/tidal/issues/915)
 * [Fixing bugs](https://github.com/musikinformatik/SuperDirt/pull/294)

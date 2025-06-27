@@ -43,9 +43,9 @@
     "message": "Blog",
     "description": "The label of footer link with label=Blog linking to blog"
   },
-  "link.item.label.GitHub": {
-    "message": "GitHub",
-    "description": "The label of footer link with label=GitHub linking to https://github.com/tidalcycles/Tidal"
+  "link.item.label.Codeberg": {
+    "message": "Codeberg",
+    "description": "The label of footer link with label=Codeberg linking to https://codeberg.org/uzu/tidal"
   },
   "copyright": {
     "message": "Copyright © 2021 TidalCycles. Built with Docusaurus.",

@@ -38,7 +38,7 @@ TidalCycles has spawned a family of live coding environments known as [uzulangs]
 
 ## Editor plugins
 
--   [Emacs](https://github.com/tidalcycles/Tidal/blob/master/tidal.el)
+-   [Emacs](https://codeberg.org/uzu/tidal/src/branch/main/tidal.el)
 -   [Sublime text](https://tidalcycles.org/index.php/Sublime_Text)
 -   [vim](https://github.com/supercollider/scvim)
 -   [VS Code](https://github.com/tidalcycles/vscode-tidalcycles)

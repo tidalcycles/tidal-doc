@@ -13,7 +13,7 @@ For live chat, you can find other TidalCyclists on the [TidalCycles discord serv
 ## Development and reporting issues
 
 For Tidal development and issue tracker, see the [tidal
-repository](https://github.com/tidalcycles/tidal) on github.
+repository](https://codeberg.org/uzu/tidal) on Codeberg.
 
 ## Social media
 

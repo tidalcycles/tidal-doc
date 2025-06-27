@@ -23,7 +23,7 @@ git clone https://gist.github.com/lvm/e0943b0d42507af60eee174ed263adde Tidal
 ```
 :::caution
 The boot up code used by the **Sublime REPL** is currently broken. A simple fix is to copy and paste the code from
-[this link](https://github.com/tidalcycles/Tidal/blob/main/BootTidal.hs) into `\~/Library/Application Support/Sublime Text
+[this link](https://codeberg.org/uzu/tidal/src/branch/main/BootTidal.hs) into `\~/Library/Application Support/Sublime Text
 3/Packages/SublimeREPL/config/Tidal/ghci-tidal.conf` replacing whatever was already there.
 :::
 

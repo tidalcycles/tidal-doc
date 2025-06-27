@@ -122,7 +122,7 @@ groups USERNAME
 
 You may need to log out and log back in for this to take effect.
 
-If you are on Arch and the issue still persist, you can try [this](https://jackaudio.org/faq/linux_rt_config.html) as suggested [here](https://github.com/tidalcycles/Tidal/issues/707).
+If you are on Arch and the issue still persist, you can try [this](https://jackaudio.org/faq/linux_rt_config.html) as suggested [here](https://codeberg.org/uzu/tidal/issues/707).
 
 ## Compilation errors
 
