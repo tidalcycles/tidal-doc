@@ -165,7 +165,7 @@ tidal <- startTidal superdirtTarget (defaultConfig {cEnableLink = False})
 
 Link does not align beat/cycle values between session participants. Quoting [Link documentation](http://ableton.github.io/link/) "For example, beat 1 on one participant’s timeline might correspond to beat 3 or beat 4 on another’s, but it cannot correspond to beat 3.5". If aligned cycles is desired, use `resetcycles` in each Tidal instance simultaneously.
 
-See [Automatic alignment of cycles in Link sessions - issue #936](https://github.com/tidalcycles/Tidal/issues/936) for further discussion.
+See [Automatic alignment of cycles in Link sessions - issue #936](https://codeberg.org/uzu/tidal/issues/936) for further discussion.
 
 ## Link Protocol Synchronization using Carabiner
 

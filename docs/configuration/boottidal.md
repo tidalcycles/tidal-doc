@@ -7,7 +7,7 @@ Every time you start Tidal, the software is reading from a configuration file us
 
 Some users went really far into customizing their setup: [Jarmlib](https://github.com/jarmitage/jarmlib). You can take a look at their work to see how to extend your configuration file by adding new aliases to it.
 
-As an example, here is the *vanilla* `BootTidal.hs` file used by the [upstream Tidal Package](https://github.com/tidalcycles/Tidal/blob/v1.10.0/BootTidal.hs) (yours may look different if you're using an earlier version - see below):
+As an example, here is the *vanilla* `BootTidal.hs` file used by the [upstream Tidal Package](https://codeberg.org/uzu/tidal/src/branch/main/BootTidal.hs) (yours may look different if you're using an earlier version - see below):
 ```haskell
 :set -fno-warn-orphans -Wno-type-defaults -XMultiParamTypeClasses -XOverloadedStrings
 :set prompt ""

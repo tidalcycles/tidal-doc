@@ -12,7 +12,7 @@ patterns has changed a bit.
 
 The range of functions for interaction set up by default can be seen in
 the [bootup
-code](https://github.com/tidalcycles/Tidal/blob/master/BootTidal.hs).
+code](https://codeberg.org/uzu/tidal/src/branch/main/BootTidal.hs).
 
 # Patterns by number and by name
 

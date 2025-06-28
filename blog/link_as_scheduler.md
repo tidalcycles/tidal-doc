@@ -34,7 +34,7 @@ but the idea got me started on integrating Tidal with Link...
 ## I get started
 
 November 2021 is the start of my journey for adding Link support to Tidal.
-I started discussing the path forward with Yaxu, Tidal's inventor, in two Github Issues ([1](https://github.com/yaxu/hylia-haskell/issues/1), [2](https://github.com/tidalcycles/Tidal/issues/660)).
+I started discussing the path forward with Yaxu, Tidal's inventor, in two Github Issues ([1](https://github.com/yaxu/hylia-haskell/issues/1), [2](https://codeberg.org/uzu/tidal/issues/660)).
 Yaxu had already done some thinking about adding Link to Tidal and he had also done some exploration that I could learn from.
 His positive responses motivated me and brought me confidence that this was a pursuit worth taking!
 
@@ -49,7 +49,7 @@ Some parts of the Link library was working, but when calling the crucial code `t
 
 Debugging internal GHC crashes is tricky for most people, so I made many twists and turns to find out what might be wrong.
 Several long nights were spent reinstalling Haskell and battling build system configuration.
-The full details are documented in [the issue for Link support in Tidal](https://github.com/tidalcycles/Tidal/issues/660), but the short story is that I found out that could avoid the crash by including Link as a shared Library.
+The full details are documented in [the issue for Link support in Tidal](https://codeberg.org/uzu/tidal/issues/660), but the short story is that I found out that could avoid the crash by including Link as a shared Library.
 This workaround was not suitable for the final release of Link support, but it let me continue the work.
 
 After making great progress on the Link integration, I became ready to start replacing the workaround.
@@ -276,7 +276,7 @@ For that, and incountable other things: Moa, I love you!
 To the rest of the Tidal community, you're awesome too, and I'm happy to be a part of your world!
 
 ## References
-* [GitHub Issue - Link support](https://github.com/tidalcycles/Tidal/issues/660)
+* [Codeberg Issue - Link support](https://codeberg.org/uzu/tidal/issues/660)
 * [GHC Issue - Sudden exit in GHCi for FFI code - works when run as executable](https://gitlab.haskell.org/ghc/ghc/-/issues/20918)
 * [Link documentation](http://ableton.github.io/link/)
 * [What is a pattern?](https://tidalcycles.org/docs/innards/what_is_a_pattern)

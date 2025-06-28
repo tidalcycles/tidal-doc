@@ -48,8 +48,8 @@ module.exports = {
           position: "right",
         },
         {
-          href: "https://github.com/tidalcycles/Tidal",
-          label: "GitHub",
+          href: "https://codeberg.org/uzu/tidal",
+          label: "Source Code",
           position: "right",
         },
       ],
@@ -103,8 +103,8 @@ module.exports = {
               to: "blog",
             },
             {
-              label: "GitHub",
-              href: "https://github.com/tidalcycles/Tidal",
+              label: "Source Code",
+              href: "https://codeberg.org/uzu/tidal",
             },
             {
               label: "Creative Commons Attribution ShareAlike",

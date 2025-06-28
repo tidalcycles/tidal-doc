@@ -11,7 +11,7 @@ Unit tests are small bits of code that check that a function works as expected. 
 
 ## Test modules
 
-You can browse the test modules that already exist [here](https://github.com/tidalcycles/Tidal/tree/master/test/Sound/Tidal).
+You can browse the test modules that already exist [here](https://codeberg.org/uzu/tidal/src/branch/main/test/Sound/Tidal).
 
 The test modules are named after the modules they are testing, e.g. `/test/Sound/Tidal/UITest.hs` has tests for `Sound.Tidal.UITest`. Here's an example from that file:
 
@@ -31,12 +31,12 @@ You'll also see `comparePD` - the final 'D' stands for defragment. There are cas
 
 ## Contributing tests
 
-To contribute a test, you'll have to fork the **Tidal** project. You'll need to create a (free!) account on GitHub if you don't already have one, then go to the [Tidal](https://github.com/tidalcycles/tidal) and click the `fork` button.
+To contribute a test, you'll have to fork the **Tidal** project. You'll need to create a (free!) account on Codeberg if you don't already have one, then go to the [Tidal](https://codeberg.org/uzu/tidal) and click the `fork` button.
 
 Once you've done that, you'll need to `clone` your new fork to your computer, and set that folder to be your current working directory. You can do that with this command, being sure to replace `"<your username>"` in the above with whatever your username is on GitHub.
 
 ```bash
-git clone https://github.com/<your username>/Tidal/
+git clone https://codeberg.org/<your username>/Tidal/
 cd Tidal
 ```
 

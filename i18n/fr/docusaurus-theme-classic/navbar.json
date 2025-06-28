@@ -11,8 +11,8 @@
     "message": "French Blog",
     "description": "Navbar item with label Blog"
   },
-  "item.label.GitHub": {
-    "message": "GitHub",
-    "description": "Navbar item with label GitHub"
+  "item.label.Codeberg": {
+    "message": "Codeberg",
+    "description": "Navbar item with label Codeberg"
   }
 }

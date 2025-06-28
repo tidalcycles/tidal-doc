@@ -45,7 +45,7 @@ other live coding topics and systems)
 # Development, bug reporting etc
 
 For tidal development, see the [tidal
-repository](https://github.com/tidalcycles/tidal) on github.
+repository](https://codeberg.org/uzu/tidal) on Codeberg.
 
 # Social media
 

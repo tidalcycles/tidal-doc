@@ -10,7 +10,7 @@ description: Live coding environment for making algorithmic patterns
 
 ----
 
-[Tidal Cycles](https://github.com/tidalcycles/Tidal) (or just **Tidal** for short) is software for making patterns with code, whether live coding music at algoraves or composing in the studio. It includes a simple and flexible notation
+[Tidal Cycles](https://codeberg.org/uzu/tidal) (or just **Tidal** for short) is software for making patterns with code, whether live coding music at algoraves or composing in the studio. It includes a simple and flexible notation
 for rhythmic sequences, and an extensive library of patterning functions for combining and transforming them. This allows you to quickly create complex patterns from simple ingredients.
 
 By default, sound is made with the featureful [SuperDirt](https://github.com/musikinformatik/SuperDirt)
@@ -34,7 +34,7 @@ If you enjoy using **Tidal Cycles**, please consider contributing to the [Tidal 
 
 ## Credits
 
-**Tidal Cycles** and **SuperDirt** have been developed with contributions from a wide range of people - [Tidal contributors](https://github.com/tidalcycles/Tidal/graphs/contributors) / [SuperDirt contributors](https://github.com/musikinformatik/SuperDirt/graphs/contributors).
+**Tidal Cycles** and **SuperDirt** have been developed with contributions from a wide range of people - [Tidal contributors](https://codeberg.org/uzu/tidal/activity/contributors) / [SuperDirt contributors](https://github.com/musikinformatik/SuperDirt/graphs/contributors).
 
 **Tidal Cycles** was initiated by Alex McLean around 2009 during doctoral work funded by EPSRC. Alex' ongoing work on Tidal has been supported in part by various ad-hoc contributors, and grants (eg the [PENELOPE](https://penelope.hypotheses.org/) project, under the Horizon 2020 research and innovation programme of the European Union, grant agreement No 682711).
 

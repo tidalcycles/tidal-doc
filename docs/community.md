@@ -24,7 +24,7 @@ For live chat and troubleshooting, you can find other TidalCyclists and live-cod
 ## Development and reporting issues
 
 If you wish to report an issue or to be involved in the development process:
-- [Tidal Cycles](https://github.com/tidalcycles/tidal) repository on GitHub (language and pattern library).
+- [Tidal Cycles](https://codeberg.org/uzu/tidal) repository on Codeberg (language and pattern library).
 - [SuperDirt](https://github.com/musikinformatik/SuperDirt) repository on GitHub (sound synthesis and SC).
 
 For Tidal development and issue tracker, see the [tidal
