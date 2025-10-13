@@ -11,7 +11,7 @@ Open access publications on Tidal and related things.
 -   N. Del Angel, Luis, Teixido, Marianne, Ocelotl, Emilio, Cotrina,
     Ivanka, & Ogborn, David. (2019). [Bellacode: localized textual
     interfaces for live coding
-    music](http://iclc.livecodenetwork.org/2019/papers/paper111.pdf). In
+    music](https://iclc.toplap.org/2019/papers/paper111.pdf). In
     Proceedings of the International Conference on Live Coding, Madrid,
     Spain.
 -   McLean, Alex, & Harlizius-Klück, Ellen. (2018). [Fabricating
