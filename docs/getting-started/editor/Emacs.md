@@ -50,7 +50,7 @@ To install the Emacs interface to Tidal, you’ll need to edit a configuration f
 
 #### Download tidal.el
 
-The `tidal.el` file can be found here: [tidal.el](https://raw.github.com/tidalcycles/Tidal/master/tidal.el).
+The `tidal.el` file can be found here: [tidal.el](https://codeberg.org/uzu/tidal/raw/branch/main/tidal.el).
 
 ### Using Spacemacs
 
@@ -117,7 +117,7 @@ It is now time to configure Emacs. Do the following:
 ```bash
 mkdir ~/tidal
 cd ~/tidal
-curl -L https://raw.githubusercontent.com/yaxu/Tidal/master/tidal.el > tidal.el
+curl -L https://codeberg.org/uzu/tidal/raw/branch/main/tidal.el > tidal.el
 ```
 
 Create a file in your home folder called `.emacs` (unless it exists already). Open the file in a text editor and insert the following lines:
@@ -261,12 +261,12 @@ In `.emacs` add the following lines to enable Tidal:
 
 Replace `c:/projects/tidal` with the path to the folder that
 contains `tidal.el`. This file can be obtained from the Tidal repository,
-[here](https://github.com/yaxu/Tidal). The easiest way to use it is to
+[here](https://codeberg.org/uzu/tidal). The easiest way to use it is to
 clone the Tidal repository and modify the `.emacs` file to use the path
 where you cloned it:
 
 ```shell
-git clone https://github.com/yaxu/Tidal c:\tidal
+git clone https://codeberg.org/uzu/tidal c:\tidal
 ```
 
 If you do the same, your `.emacs` configuration file should look like this:
