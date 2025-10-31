@@ -130,6 +130,20 @@ Here is an example of it being used conditionally:
 d1 $ every 3 (ply 4) $ s "bd ~ sn cp"
 ```
 
+### spaceOut
+
+```haskell
+spaceOut :: [Time] -> Pattern a -> Pattern a
+```
+
+`spaceOut xs p` repeats a Pattern p at different durations given by the list of time values in xs.
+
+```haskell
+d1 $ spaceOut [2, 1, (1/2)] $ s "kurt:2 ul:7"
+```
+
+...will effectively play the pattern in twice the time, normally and then at half the duration over three cycles.
+
 ### stutter
 ```haskell
 Type: stutter :: Integral i => i -> Time -> Pattern a -> Pattern a
@@ -207,6 +221,22 @@ d1 $ slow 2 $ sound "arpy:0 arpy:1 arpy:2 arpy:3 arpy:3 arpy:2 arpy:1 arpy:0"
 
 ```haskell
 d1 $ every 2 rev $ sound "arpy:0 arpy:1 arpy:2 arpy:3"
+```
+
+### snowball
+
+```haskell
+snowball :: Int -> (Pattern a -> Pattern a -> Pattern a) -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+
+snowball takes a function that can combine patterns (like +), a function that transforms a pattern (like slow), a depth, and a starting pattern, it will then transform the pattern and combine it with the last transformation until the depth is reached. This is like putting an effect (like a filter) in the feedback of a delay line; each echo is more affected.
+
+```haskell
+d1 $ note (
+  scale "hexDorian"
+  $ snowball 8 (+) (slow 2 . rev) "0 ~ . -1 _ 5 3 4 . ~ -2"
+)
+  # s "gtr"
 ```
 
 ### soak
