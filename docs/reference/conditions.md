@@ -314,6 +314,18 @@ d1 $ struct (every 3 inv "t(3,8)") $ sound "cp"
 
 In the above, the euclidean pattern creates `"t f t f t f f t"` which gets inverted to `"f t f t f t t f"` every third cycle. Note that if you prefer you can use `1` and `0` instead of `t` and `f`.
 
+### substruct
+
+```haskell
+substruct :: Pattern Bool -> Pattern b -> Pattern b 
+```
+
+`substruct a b` is similar to `struct`, but each event in pattern `a` gets replaced with pattern `b`, compressed to fit the timespan of the event.
+
+```haskell
+d1 $ substruct (ascii "<T C>") $ s "bd sd"
+```
+
 ### mask
 
 ```haskell
