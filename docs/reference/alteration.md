@@ -209,6 +209,21 @@ d1 $ slow 2 $ sound "arpy:0 arpy:1 arpy:2 arpy:3 arpy:3 arpy:2 arpy:1 arpy:0"
 d1 $ every 2 rev $ sound "arpy:0 arpy:1 arpy:2 arpy:3"
 ```
 
+### soak
+
+```haskell
+Type: soak :: Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+
+Applies a function to a pattern and cats the resulting pattern, then continues applying the function until the depth is reached. This can be used to create a pattern that wanders away from the original pattern by continually adding random numbers.
+
+```haskell
+d1
+$ soak 12 (fast 1.2) $ s "[808hc, bd sd/2]"
+```
+
+This will speed up your pattern by 1.2 on each cycle 12 times and then start from the beginning.
+
 ## Truncation
 ### trunc
 
