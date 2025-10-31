@@ -341,10 +341,22 @@ d1 $ chunk 4 (hurry 2) $ sound "bd sn:2 [~ bd] sn:2"
 d1 $ loopFirst $ s "<<bd*4 ht*8> cp*4>"
 ```
 
+
 This function combines with sometimes to insert events from the first cycle randomly into subsequent cycles of the pattern:
+
+###timeLoop
+
 ```haskell
-d1 $ sometimes loopFirst $ s "<<bd*4 ht*8> cp*4>"
+timeLoop :: Pattern Time -> Pattern a -> Pattern a
 ```
+
+`timeLoop t` is like applying a modulo `t` to your sequence of cycles. So:
+
+```haskell
+d1 $ timeLoop 7 $ s "<bd sn cp hh>"
+```
+
+...is equivalent to: `d1 $ s "<bd sn cp hh bd sn cp>"`
 
 ## Shuffling and scrambling
 
@@ -367,6 +379,18 @@ d1 $ bite 4 "2 0 1 3" $ n "0 .. 7" # sound "arpy"
 The slices bits of pattern will be squeezed or contracted to fit:
 ```haskell
 d1 $ bite 4 "2 [0 3] 1*4 1" $ n "0 .. 7" # sound "arpy"
+```
+
+### permstep
+
+```haskell
+permstep :: RealFrac b => Int -> [a] -> Pattern b -> Pattern a 
+```
+
+Steps through permutations of a list, partitioned by the input pattern.
+
+```haskell
+d1 $ permstep 8 [0,1,2,3,4] (slow "[1|2]" $ range 0 1 tri) # s "arpy"
 ```
 
 ### shuffle

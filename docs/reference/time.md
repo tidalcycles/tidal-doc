@@ -395,6 +395,14 @@ d1 $ weaveWith 3 (sound "bd [sn drum:2*2] bd*2 [sn drum:1]")
   ]
 ```
 
+### tabby
+
+```haskell
+tabby :: Int -> Pattern a -> Pattern a -> Pattern a 
+```
+
+A more literal weaving than the weave function. Given `tabby threads p1 p`, parameters representing the threads per cycle and the patterns to weave, and this function will weave them together using a plain (aka 'tabby') weave, with a simple over/under structure
+
 ## Reversing time
 ### rev
 
