@@ -6,7 +6,7 @@ date: 2025-12-04
 | Author        | Bernard Gray                                             |
 |--------------:|:---------------------------------------------------------|
 |           aka | cleary                                               |
-|      Comments | [TBD](TBD) |
+|      Comments | [Forums](https://club.tidalcycles.org/t/estuary-jams/2336/70) or [Discord](https://discord.com/channels/779427371270275082/779481771388698664) |
 
 ## Preamble
 
