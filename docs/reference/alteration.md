@@ -130,6 +130,20 @@ Here is an example of it being used conditionally:
 d1 $ every 3 (ply 4) $ s "bd ~ sn cp"
 ```
 
+### spaceOut
+
+```haskell
+spaceOut :: [Time] -> Pattern a -> Pattern a
+```
+
+`spaceOut xs p` repeats a Pattern p at different durations given by the list of time values in xs.
+
+```haskell
+d1 $ spaceOut [2, 1, (1/2)] $ s "kurt:2 ul:7"
+```
+
+...will effectively play the pattern in twice the time, normally and then at half the duration over three cycles.
+
 ### plyWith
 
 ```haskell
@@ -231,6 +245,37 @@ d1 $ slow 2 $ sound "arpy:0 arpy:1 arpy:2 arpy:3 arpy:3 arpy:2 arpy:1 arpy:0"
 d1 $ every 2 rev $ sound "arpy:0 arpy:1 arpy:2 arpy:3"
 ```
 
+### snowball
+
+```haskell
+snowball :: Int -> (Pattern a -> Pattern a -> Pattern a) -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+
+snowball takes a function that can combine patterns (like +), a function that transforms a pattern (like slow), a depth, and a starting pattern, it will then transform the pattern and combine it with the last transformation until the depth is reached. This is like putting an effect (like a filter) in the feedback of a delay line; each echo is more affected.
+
+```haskell
+d1 $ note (
+  scale "hexDorian"
+  $ snowball 8 (+) (slow 2 . rev) "0 ~ . -1 _ 5 3 4 . ~ -2"
+)
+  # s "gtr"
+```
+
+### soak
+
+```haskell
+Type: soak :: Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+
+Applies a function to a pattern and cats the resulting pattern, then continues applying the function until the depth is reached. This can be used to create a pattern that wanders away from the original pattern by continually adding random numbers.
+
+```haskell
+d1
+$ soak 12 (fast 1.2) $ s "[808hc, bd sd/2]"
+```
+
+This will speed up your pattern by 1.2 on each cycle 12 times and then start from the beginning.
+
 ## Truncation
 ### trunc
 
@@ -318,10 +363,22 @@ d1 $ chunk 4 (hurry 2) $ sound "bd sn:2 [~ bd] sn:2"
 d1 $ loopFirst $ s "<<bd*4 ht*8> cp*4>"
 ```
 
+
 This function combines with sometimes to insert events from the first cycle randomly into subsequent cycles of the pattern:
+
+###timeLoop
+
 ```haskell
-d1 $ sometimes loopFirst $ s "<<bd*4 ht*8> cp*4>"
+timeLoop :: Pattern Time -> Pattern a -> Pattern a
 ```
+
+`timeLoop t` is like applying a modulo `t` to your sequence of cycles. So:
+
+```haskell
+d1 $ timeLoop 7 $ s "<bd sn cp hh>"
+```
+
+...is equivalent to: `d1 $ s "<bd sn cp hh bd sn cp>"`
 
 ## Shuffling and scrambling
 
@@ -344,6 +401,18 @@ d1 $ bite 4 "2 0 1 3" $ n "0 .. 7" # sound "arpy"
 The slices bits of pattern will be squeezed or contracted to fit:
 ```haskell
 d1 $ bite 4 "2 [0 3] 1*4 1" $ n "0 .. 7" # sound "arpy"
+```
+
+### permstep
+
+```haskell
+permstep :: RealFrac b => Int -> [a] -> Pattern b -> Pattern a 
+```
+
+Steps through permutations of a list, partitioned by the input pattern.
+
+```haskell
+d1 $ permstep 8 [0,1,2,3,4] (slow "[1|2]" $ range 0 1 tri) # s "arpy"
 ```
 
 ### shuffle
