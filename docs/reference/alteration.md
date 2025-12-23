@@ -144,6 +144,28 @@ d1 $ spaceOut [2, 1, (1/2)] $ s "kurt:2 ul:7"
 
 ...will effectively play the pattern in twice the time, normally and then at half the duration over three cycles.
 
+### plyWith
+
+```haskell
+Type: plyWith :: Pattern t -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+```
+
+The `plyWith` function expands on the `ply` function, repeating each event the given number of times with another function applied. For example:
+
+```haskell
+d1 $ plyWith "2 3" (# speed "1.2") $ s "bd ~ sn cp"
+```
+... is equivalent to ...
+
+```haskell
+d1 $ ply "2 3" $ s "bd ~ sn cp" # speed "1.2"
+```
+`plyWith` can also be used for multiplicative operations. Here is an example, also being used conditionally:
+
+```haskell
+d1 $ every 3 (plyWith "2 3" (|* speed "1.5")) $ s "bd ~ sn cp"
+```
+
 ### stutter
 ```haskell
 Type: stutter :: Integral i => i -> Time -> Pattern a -> Pattern a
