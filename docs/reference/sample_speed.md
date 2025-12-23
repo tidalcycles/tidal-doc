@@ -1,66 +1,18 @@
 ---
-title: Samplers
-id: samplers
+title: Sample speed
+id: sample_speed
 ---
 
-This page presents many functions related to the use of samples inside TidalCycles.
-
-For specific information about functions used to slice and loop samples see [Sampling](https://tidalcycles.org/docs/reference/sampling).
+This page presents many functions that allow to change the speed at which samples play.
 
 Each function will be presented following the same model:
 * **Type signature**: how the function is declared on the **Haskell** side.
 * **Description**: verbal description of the function.
 * **Examples**: a small list of examples that you can copy/paste in your editor.
 
-## Amplitude manipulation
+## Playback-rate effects
 
-These functions are used to control the amplitude (volume) of the sounds.
-
-### amp
-
-```haskell
-Type: amp :: Pattern Double -> ControlPattern
-```
-
-`amp` controls the amplitude of the sound using a linear function. Its default value is `0.4`. For the power function equivalent, see `gain`.
-
-```haskell
-d1 $ s "arpy" # amp 0.6
-```
-
-This will play the first `arpy` sample at a volume slightly louder than the default.
-
-```haskell
-d1 $ s "arpy" # amp "<0.4 0.8 0.2>"
-```
-
-In the above example, the volume changes at each cycle.
-
-### gain
-
-```haskell
-Type: gain :: Pattern Double -> ControlPattern
-```
-
-`gain` controls the amplitude of the sound using a power function. Its default value is `1`. Smaller values make the sound quieter, and greater values make the sound louder.
-
-As `gain` uses a power function, the volume change around `1` is subtle, but it gets more noticable as it increases or decreases. Typical values for `gain` are between `0` and `1.5`. For the linear equivalent, see `amp`.
-
-```haskell
-d1 $ s "arpy" # gain 0.8
-```
-
-This plays the first `arpy` sample at a quieter level than the default.
-
-```haskell
-d1 $ s "ab*16" # gain (range 0.8 1.3 $ sine)
-```
-
-This plays a hihat sound, `16` times per cycle, with a `gain` moving from `0.8` to `1.3` following a sine wave.
-
-## Speed-related effects
-
-This section presents effects that change both the speed and the pitch of the samples.
+This section presents effects that change both the speed and the pitch of the samples. As frequencies are scaled at the same ratio of the speed, a 2x playback rate will correspond to half the duration and the pitch sounding an octave higher, and a 0.5x playback rate will correspond to double the duration and the pitch sounding an octave lower.
 
 ### accelerate
 
@@ -81,6 +33,29 @@ d1 $ arp "up" $ note "c'maj'4" # s "arpy" # accelerateTake "susan" [0.2,1,-1]
 ```
 
 Using [state values](https://tidalcycles.org/docs/reference/state_values/#introduction-to-state-values), in this example we apply a different acceleration to each played note.
+
+### loopAt
+    
+```haskell
+Type: loopAt :: Pattern Time -> ControlPattern -> ControlPattern
+```
+
+`loopAt` makes sample fit the given number of cycles. Internally, it works by setting the unit control to "c", changing the playback speed of the sample with the speed parameter, and setting the density of the pattern to match.
+
+```haskell
+d1 $ loopAt 4 $ sound "breaks125"
+```
+
+It’s a good idea to use this in conjuction with `chop`, so the break is chopped into pieces and you don’t have to wait for the whole sample to start/stop.
+
+```haskell
+d1 $ loopAt 4 $ chop 32 $ sound "breaks125"
+```
+
+Like all **Tidal** functions, you can mess about with this considerably. The below example shows how you can supply a pattern of cycle counts to `loopAt`:
+```haskell
+d1 $ juxBy 0.6 (|* speed "2") $ loopAt "<4 6 2 3>" $ chop 12 $ sound "fm:14"
+```
 
 ### speed
 
