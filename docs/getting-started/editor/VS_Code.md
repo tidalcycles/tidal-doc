@@ -16,7 +16,7 @@ Installing VSCode on your computer should be straigthforward. Head to the [offic
 
 ## Tidal Cycles Extension
 
-There is [Tidal Cycles Extension](https://marketplace.visualstudio.com/items?itemName=tidalcycles.vscode-tidalcycles) for **VSCode**. You can also check out the main [repository](https://github.com/kindohm/vscode-tidalcycles) if you want to report an issue or contribute to the development of this extension.
+There is [Tidal Cycles Extension](https://marketplace.visualstudio.com/items?itemName=tidalcycles.vscode-tidalcycles) for **VSCode**. You can also check out the main [repository](https://github.com/tidalcycles/vscode-tidalcycles) if you want to report an issue or contribute to the development of this extension.
 
 The installation process is simple:
 
