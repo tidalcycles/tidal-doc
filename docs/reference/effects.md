@@ -47,9 +47,9 @@ Made by Ben Gold. Ring modulation:
 **Tidal** default delay effect:
 
 * `delay`: wet/dry
-* `delaytime` / `delayt`: delay time
+* `delaytime` / `delayt`: delay time, measured in seconds
 * `delayfeedback` / `delayfb`: feedback amount
-* `lock`: a pattern of numbers. Specifies whether `delaytime` is calculated relative to cps. When set to 1, `delaytime` is a direct multiple of a cycle.
+* `lock`: a pattern of numbers. Specifies whether `delaytime` is calculated relative to cps. When set to 1, `delaytime` is a direct multiple of a cycle
 
 #### Reverb
 
