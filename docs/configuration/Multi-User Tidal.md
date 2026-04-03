@@ -96,6 +96,7 @@ Tidal version 1.9 directly integrates with Ableton Link.  Link
 Synchronization is enabled by default and Tidal will automatically
 connect with other link-compatible applications on the same local
 network, including other Tidal instances.
+Tidal version 1.10 has the link protocol _disabled_ by default. To enable it uncomment the line with `streamEnableLink tidal` in bootTidal.hs
 
 ### Adjusting Quantum and Cycles per Beat
 

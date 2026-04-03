@@ -84,10 +84,8 @@ two or more connections to the synthesizer:
 
     d1 $ sound "bd sd:1"
 
-    <!--T:19-->
     d2 $ sound "hh hh hh hh"
 
-    <!--T:20-->
     d3 $ sound "arpy"
 
 NOTE: each connection must be evaluated separately in your text editor.
@@ -105,7 +103,6 @@ number, you can do that with
 
     p "susan" $ sound "bd sd:1"
 
-    <!--T:24-->
     p "gerard" $ sound "hh hh hh hh"
 
 ### What is a Cycle?
@@ -125,10 +122,8 @@ The patterns below all loop over the same amount of time:
 
     d1 $ sound "bd sd"
 
-    <!--T:29-->
     d1 $ sound "bd sd hh cp mt arpy drum"
 
-    <!--T:30-->
     d1 $ sound "bd sd hh cp mt arpy drum odx bd arpy bass2 feel future"
 
 Note how the more steps you add to the pattern, the faster it plays
@@ -157,14 +152,11 @@ function. You can do this like so:
 
     d1 $ sound "bd"
 
-    <!--T:38-->
     d2 $ sound "~ cp"
 
-    <!--T:39-->
     -- run this and only the bd plays
     solo 1
 
-    <!--T:40-->
     -- unsolo it and the cp plays again
     unsolo 1
 
@@ -181,19 +173,14 @@ Practically, this means you can create denser sub-divisions of cycles:
 
     d1 $ sound "bd [sd sd]"
 
-    <!--T:46-->
     d1 $ sound "bd [sd sd sd]"
 
-    <!--T:47-->
     d1 $ sound "bd [sd sd sd sd]"
 
-    <!--T:48-->
     d1 $ sound "[bd bd] [sd sd sd sd]"
 
-    <!--T:49-->
     d1 $ sound "[bd bd bd] [sd sd]"
 
-    <!--T:50-->
     d1 $ sound "[bd bd bd bd] [sd]"
 
 You can even nest groups inside groups to create increasingly dense and
@@ -208,7 +195,6 @@ equivalent:
 
     d1 $ sound "bd bd . sd sd sd . bd sd"
 
-    <!--T:55-->
     d1 $ sound "[bd bd] [sd sd sd] [bd sd]"
 
 The former approach is often easier to type, but is a relatively new
@@ -282,13 +268,10 @@ You can apply the \* and / symbols on groups of patterns:
 
     d1 $ sound "[bd sn]*2 cp"
 
-    <!--T:80-->
     d1 $ sound "[bd sn] cp/2"
 
-    <!--T:81-->
     d1 $ sound "[[bd sn] cp]*2" -- speeds up the entire pattern by 2
 
-    <!--T:82-->
     d1 $ sound "[[bd sn] cp]/2" -- slows down the entire pattern by 2
 
 You can also use the symbols on nested groups to create more complex
@@ -296,7 +279,6 @@ rhythms:
 
     d1 $ sound "[bd sn sn*3]/2 [bd sn*3 bd*4]/3"
 
-    <!--T:85-->
     d1 $ sound "[bd [sn sn]*2]/2 [bd [sn bd]/2]*2"
 
 ## Modifying Sequences With Functions
@@ -555,10 +537,8 @@ For example doing algebra:
 
     d1 $ sound "arpy(3,8)" # n ("0 2" * 2)
 
-    <!--T:153-->
     d1 $ sound "arpy(3,8)" # n (every 4 (* 2) "0 2")
 
-    <!--T:154-->
     d1 $ n (off 0.125 (+12) $ off 0.25 (+7) $ slow 2 $ "0(3,8) [5 7]") # sound "supergong"
 
 (The
@@ -601,10 +581,8 @@ You can set a sample’s speed by using the speed effect with a number.
 
     d1 $ sound "arpy" # speed "1"
 
-    <!--T:166-->
     d1 $ sound "arpy" # speed "0.5"
 
-    <!--T:167-->
     d1 $ sound "arpy" # speed "2"
 
 Just like other effects, you can specify a pattern for speed:
