@@ -399,6 +399,23 @@ The slices bits of pattern will be squeezed or contracted to fit:
 d1 $ bite 4 "2 [0 3] 1*4 1" $ n "0 .. 7" # sound "arpy"
 ```
 
+### ribbon
+
+```haskell
+Type: ribbon :: Pattern Time -> Pattern Time -> Pattern a -> Pattern a
+```
+
+Loops a pattern inside an `offset` for `cycles` . If you think of the entire span of time in `cycles` as a ribbon, you can cut a single piece and loop it.
+
+```haskell
+-- This one would take cycle 1 as a starting point and loop 2 cycles from there:
+d1 $ ribbon 1 2 $ s "<bd sd hh ht>"
+-- So it's essentially the same as:
+d1 $ s "<sd hh>"
+```
+
+`ribbon` has `rib` as an alias.
+
 ### permstep
 
 ```haskell

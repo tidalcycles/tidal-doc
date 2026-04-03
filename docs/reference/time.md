@@ -403,6 +403,31 @@ tabby :: Int -> Pattern a -> Pattern a -> Pattern a
 
 A more literal weaving than the weave function. Given `tabby threads p1 p`, parameters representing the threads per cycle and the patterns to weave, and this function will weave them together using a plain (aka 'tabby') weave, with a simple over/under structure
 
+### rolled / rolledBy
+
+```haskell
+Type: rolled :: Pattern a -> Pattern a
+Type: rolledBy :: Pattern (Ratio Integer) -> Pattern a -> Pattern a
+```
+
+`rolled` plays each note of a chord quickly in order, as opposed to simultaneously; to give a chord a harp-like or strum effect. Notes are played low to high (or first to last), and are evenly distributed within one fourth of the chord event length, as opposed to arparpeggiate that spread the notes over the whole event.
+
+```haskell
+d1 $ rolled $ n "c'maj7" # s "superpiano"
+```
+
+`rolled` is just a shorthand version for `rolledBy (1/4)`. So with `rolledBy` you are not bound to the 1/4 division. The `rolledBy` function lets you determine by what division the events should be distributed:
+
+```haskell
+d1 $ rolledBy (1/6) $ n "ds'min11" # s "superpiano"
+```
+
+`rolled` and `rolledBy` work with stacked notes or sounds as well, which means you are not forced to use chord notation and you can also _strum drums_, so to say:
+
+```haskell
+d1 $ rolledBy (1/8) & s "[bd,sd,cp]"  -- would be the same as d1 $ s "[bd sd cp] ~!7"
+```
+
 ## Reversing time
 ### rev
 
