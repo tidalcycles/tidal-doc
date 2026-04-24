@@ -3,11 +3,11 @@ title: Alteration
 id: alteration
 ---
 
-
 This page will present you all the functions that can be used to manipulate and alter your patterns. Each function will be presented following the same model:
-* **Type signature**: how the function is declared on the **Haskell** side.
-* **Description**: verbal description of the function.
-* **Examples**: a small list of examples that you can copy/paste in your editor.
+
+- **Type signature**: how the function is declared on the **Haskell** side.
+- **Description**: verbal description of the function.
+- **Examples**: a small list of examples that you can copy/paste in your editor.
 
 ## Scaling
 
@@ -23,7 +23,9 @@ Type: range :: Num a => Pattern a -> Pattern a -> Pattern a -> Pattern a
 d1 $ jux (iter 4) $ sound "arpy arpy:2*2"
   |+ speed (slow 4 $ range 1 1.5 sine)
 ```
+
 The above is equivalent to the following:
+
 ```haskell
 d1 $ jux (iter 4) $ sound "arpy arpy:2*2"
   |+ speed (slow 4 $ sine * 0.5 + 1)
@@ -44,11 +46,13 @@ Type: quantise :: (Functor f, RealFrac b) => b -> f b -> f b
 ```
 
 `quantise` is useful for rounding a collection of numbers to some particular base fraction. For example,
+
 ```haskell
 quantise 5 [0, 1.3 ,2.6,3.2,4.7,5]
 ```
 
 It will round all the values to the nearest `(1/5)=0.2` and thus will output the list `[0.0,1.2,2.6,3.2,4.8,5.0]`. You can use this function to force a continuous pattern like sine into specific values. In the following example:
+
 ```haskell
 d1 $ s "superchip*8" # n (quantise 1 $ range (-10) (10) $ slow 8 $ cosine)
                      # release (quantise 5 $ slow 8 $ sine + 0.1)
@@ -97,6 +101,7 @@ Type: unDegradeBy :: Double -> Pattern a -> Pattern a
 `unDegradeBy` is `degradeBy` but with the percentage describing how many events to keep on average not remove.
 
 ## Repetitions
+
 ### ply
 
 ```haskell
@@ -108,6 +113,7 @@ The `ply` function repeats each event the given number of times. For example:
 ```haskell
 d1 $ ply 3 $ s "bd ~ sn cp"
 ```
+
 ... is equivalent to ...
 
 ```haskell
@@ -119,11 +125,13 @@ The first parameter may be given as a pattern, so that:
 ```haskell
 d1 $ ply "2 3" $ s "bd ~ sn cp"
 ```
+
 ... is equivalent to ...
 
 ```haskell
 d1 $ s "[bd bd] ~ [sn sn sn] [cp cp cp]"
 ```
+
 Here is an example of it being used conditionally:
 
 ```haskell
@@ -167,6 +175,7 @@ d1 $ every 3 (plyWith "2 3" (|* speed "1.5")) $ s "bd ~ sn cp"
 ```
 
 ### stutter
+
 ```haskell
 Type: stutter :: Integral i => i -> Time -> Pattern a -> Pattern a
 ```
@@ -233,6 +242,7 @@ The `palindrome` function applies `rev` to a pattern every other cycle, so that 
 ```haskell
 d1 $ palindrome $ sound "arpy:0 arpy:1 arpy:2 arpy:3"
 ```
+
 ... is the same as this:
 
 ```haskell
@@ -277,6 +287,7 @@ $ soak 12 (fast 1.2) $ s "[808hc, bd sd/2]"
 This will speed up your pattern by 1.2 on each cycle 12 times and then start from the beginning.
 
 ## Truncation
+
 ### trunc
 
 ```haskell
@@ -322,6 +333,7 @@ d1 $ every 2 (linger 0.25) $ loopAt 2 $ chop 8 $ sound "breaks125"
 ```
 
 You can also pattern the first parameter, for example to cycle through three values, one per cycle:
+
 ```haskell
 d1 $ linger "<0.75 0.25 1>" $ sound "bd sn:2 [mt rs] hc"
 
@@ -341,13 +353,16 @@ d1 $ chunk 4 (# speed 2) $ sound "bd hh sn cp"
 ```
 
 The below highlights in uppercase which part of the above pattern has the (# speed 2) function applied to it over four cycles:
+
 ```plaintext
 BD hh sn cp
 bd HH sn cp
 bd hh SN cp
 bd hh sn CP
 ```
+
 Another example:
+
 ```haskell
 d1 $ chunk 4 (hurry 2) $ sound "bd sn:2 [~ bd] sn:2"
 ```
@@ -359,10 +374,10 @@ d1 $ chunk 4 (hurry 2) $ sound "bd sn:2 [~ bd] sn:2"
 ### loopFirst
 
 `loopFirst` is a function that takes a pattern and loops only the first cycle of the pattern. For example, in the following code will only play the bass drum sample.
+
 ```haskell
 d1 $ loopFirst $ s "<<bd*4 ht*8> cp*4>"
 ```
-
 
 This function combines with sometimes to insert events from the first cycle randomly into subsequent cycles of the pattern:
 
@@ -387,6 +402,7 @@ d1 $ timeLoop 7 $ s "<bd sn cp hh>"
 ```haskell
 Type: bite :: Int -> Pattern Int -> Pattern a -> Pattern a
 ```
+
 The `bite` function allows you to slice each cycle into a given number of equal sized bits, and then pattern those bits by number. It's similar to `slice`, but is for slicing up patterns, rather than samples. The following slices the pattern into four bits, and then plays those bits in turn.
 
 ```haskell
@@ -394,19 +410,38 @@ d1 $ bite 4 "0 1 2 3" $ n "0 .. 7" # sound "arpy"
 ```
 
 Of course that doesn't actually change anything, but then you can reorder those bits:
+
 ```haskell
 d1 $ bite 4 "2 0 1 3" $ n "0 .. 7" # sound "arpy"
 ```
 
 The slices bits of pattern will be squeezed or contracted to fit:
+
 ```haskell
 d1 $ bite 4 "2 [0 3] 1*4 1" $ n "0 .. 7" # sound "arpy"
 ```
 
+### ribbon
+
+```haskell
+Type: ribbon :: Pattern Time -> Pattern Time -> Pattern a -> Pattern a
+```
+
+Loops a pattern inside an `offset` for `cycles` . If you think of the entire span of time in `cycles` as a ribbon, you can cut a single piece and loop it.
+
+```haskell
+-- This one would take cycle 1 as a starting point and loop 2 cycles from there:
+d1 $ ribbon 1 2 $ s "<bd sd hh ht>"
+-- So it's essentially the same as:
+d1 $ s "<sd hh>"
+```
+
+`ribbon` has `rib` as an alias.
+
 ### permstep
 
 ```haskell
-permstep :: RealFrac b => Int -> [a] -> Pattern b -> Pattern a 
+permstep :: RealFrac b => Int -> [a] -> Pattern b -> Pattern a
 ```
 
 Steps through permutations of a list, partitioned by the input pattern.
@@ -426,6 +461,7 @@ Type: shuffle :: Int -> Pattern a -> Pattern a
 ```haskell
 d1 $ sound $ shuffle 3 "bd sn hh"
 ```
+
 ... will sometimes play `"sn bd hh"` or `"hh sn bd"`, but will never play `"bd sn bd"` or `"hh hh hh"`, because that isn't a permutation of the three parts.
 
 ### scramble
@@ -435,9 +471,11 @@ Type: scramble :: Int -> Pattern a -> Pattern a
 ```
 
 `scramble` takes a number and a pattern as input, divides the pattern into the given number of parts, and returns a new pattern by randomly selecting from the parts. This could also be called "sampling with replacement". For example:
+
 ```haskell
 d1 $ sound $ scramble 3 "bd sn hh"
 ```
+
 ... will sometimes play `"sn bd hh"` or `"hh sn bd"`, but can also play `"bd sn bd"` or `"hh hh hh"`, because it can make any random combination of the three parts.
 
 ### rot
@@ -445,23 +483,29 @@ d1 $ sound $ scramble 3 "bd sn hh"
 ```haskell
 Type: rot :: Ord a => Pattern Int -> Pattern a -> Pattern a
 ```
+
 The `rot` function 'rotates' the values in a pattern, while preserving its structure. For example in the following, each value will shift to its neighbour's position one step to the left, so that `b` takes the place of `a`, `a` of `c`, and `c` of `b`:
+
 ```haskell
 rot 1 "a ~ b c"
 ```
+
 The result is equivalent of:
+
 ```haskell
 "b ~ c a"
 ```
+
 The first parameter is the number of steps, and may be given as a pattern, for example:
+
 ```haskell
 d1 $ rot "<0 0 1 3>" $ n "0 ~ 1 2 0 2 ~ 3*2" # sound "drum"
 ```
+
 The above will not rotate the pattern for the first two cycles, will rotate it by one the third cycle, and by three the fourth cycle.
 
-
-
 ## Step sequencers
+
 ### step
 
 ```haskell
@@ -477,6 +521,7 @@ d1 $ s (step "sn" "x x 12 ")
 ```
 
 ### step'
+
 ```haskell
 Type: step' :: [String] -> String -> Pattern String
 ```
@@ -486,6 +531,7 @@ Type: step' :: [String] -> String -> Pattern String
 ```haskell
 d1 $ s (step' ["superpiano","supermandolin"] "0 1 000 1") # sustain 4 # n 0
 ```
+
 is equivalent to
 
 ```haskell
@@ -503,11 +549,13 @@ Type: Num b => Int -> String -> String -> [b]
 ```
 
 `lindenmayer` takes an integer `b`, a Lindenmayer system rule set and an initiating string as input in order to generate an L-system tree string of `b` iterations. It can be used in conjunction with a step function to convert the generated string into a playable pattern. For example:
+
 ```haskell
 d1 $ slow 16 $ sound $ step' ["feel:0", "sn:1", "bd:0"]
 (take 512 $ lindenmayer 5 "0:1~~~,1:0~~~2~~~~~0~~~2~,2:2~1~,~:~~1~"
 "0")
 ```
+
 ... generates an L-system with initiating string "0" and maps it onto a list of samples.
 
 Complex L-system trees with many rules and iterations can sometimes result in unwieldy strings. Using `take n` to only use the first `n` elements of the string, along with a `slow` function, can make the generated values more manageable.
@@ -525,10 +573,13 @@ The `spread` function allows you to take a pattern transformation which takes a 
 ```haskell
 d1 $ sound "ho ho:2 ho:3 hc"
 ```
+
 We can speed it up by different amounts, such as by 2x:
+
 ```haskell
 d1 $ fast 2 $ sound "ho ho:2 ho:3 hc"
 ```
+
 Or by 3x:
 
 ```haskell
@@ -536,19 +587,23 @@ d1 $ fast 3 $ sound "ho ho:2 ho:3 hc"
 ```
 
 But if we use `spread`, we can make a pattern which alternates between the two speeds:
+
 ```haskell
 d1 $ spread fast[2,3] $ sound "ho ho:2 ho:3 hc"
 ```
 
 Note that many functions now allow pattern input. This is equivalent to the above:
+
 ```haskell
 d1 $ fast "<2 3>" $ sound "ho ho:2 ho:3 hc"
 ```
 
 Note that if you pass (`$`) as the function to spread values over, you can put different functions as the list of values. For example:
+
 ```haskell
 d1 $ spread ($) [density 2, rev, slow 2, striate 3, (# speed "0.8")] $ sound "[bd*2 [~ bd]] [sn future]*2 cp jvbass*4"
 ```
+
 Above, the pattern will have these transforms applied to it, one at a time, per cycle:
 
 ```plaintext
@@ -558,6 +613,7 @@ cycle 3: slow 2 - pattern will decrease in speed
 cycle 4: striate 3 - pattern will be granualized
 cycle 5: (# speed "0.8") - pattern samples will be played back more slowly
 ```
+
 After `(# speed "0.8")`, the transforms will repeat and start at `density 2` again.
 
 (This is the same as `slowspread` in earlier versions of TidalCycles.)
@@ -582,3 +638,13 @@ d1 $ fastspread ($) [gap 4, striate 4] $ sound "ho ho:2 ho:3 hc"
 ```haskell
 d1 $ spreadChoose ($) [gap 4, striate 4] $ sound "ho ho:2 ho:3 hc"
 ```
+
+### const
+
+`const` can be used to completely replace a playing pattern with another one:
+
+```haskell
+d1 $ every 3 (const $ sound "arpy*3") $ sound "bd sn cp hh"
+```
+
+This one will play `arpy*3` every third cycle and otherwise play `bd sn cp hh`. Check the [Creating "Fills" and using "const"](/getting-started/tutorial/#creating-fills-and-using-const) section in the tutorials for more details and examples.

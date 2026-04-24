@@ -314,6 +314,61 @@ d1 $ struct (every 3 inv "t(3,8)") $ sound "cp"
 
 In the above, the euclidean pattern creates `"t f t f t f f t"` which gets inverted to `"f t f t f t t f"` every third cycle. Note that if you prefer you can use `1` and `0` instead of `t` and `f`.
 
+### ascii / binary / binaryN
+
+There are a number of functions in TidalCycles that will generate the previously mentioned boolean patterns, such as `ascii`, which will convert strings into their binary representation and use those as boolean patterns. So a string like "xy" in binary representation would be 01111000 01111001, which would be the pattern "f t t t t f f f f t t t t f f t":
+
+```haskell
+d1 $ struct (ascii "x y") $ s "hh"
+-- same as:
+d1 $ struct "f t t t t f f f f t t t t f f t" $ s "hh"
+```
+
+Note, that this function does not respect spaces in the ASCII strings. However, you can spread the resulting boolean patterns over cycles with the mini-notation for alternation:
+
+```haskell
+d1 $ struct (ascii "<x y>") $ s "hh"
+```
+
+```haskell
+Type: binary :: Pattern Int -> Pattern Bool
+```
+
+You can do the same with integers instead of strings using `binary` or `binaryN`. `binary` will convert an integer into an 8-bit binary representation in form of a bollean pattern.
+
+```haskell
+d1 $ struct (binary 2946) $ s "hh"
+-- 2946 as 8-digit binary number would be 10000010 and becomes:
+d1 $ struct ("t f f f f f t f ") $ s "hh"
+```
+
+`binaryN` is similar, but lets you specify the number of digits:
+
+```haskell
+Type: binaryN :: Pattern Int -> Pattern Int -> Pattern Bool
+
+d1 $ struct (binaryN 12 2946) $ s "hh"
+-- 2946 as 12-digit binary number would be 101110000010 and becomes:
+d1 $ struct ("t f t t t f f f f f t f ") $ s "hh"
+```
+
+### necklace
+
+```haskell
+Type: necklace :: Rational -> [Int] -> Pattern Bool
+```
+
+Another boolean pattern generator is `necklace`, which lets you specify such patterns according to a list of offsets (aka inter-onset intervals). For example `necklace 12 [4,2]` is the same as "t f f f t f t f f f t f". That is, 12 steps per cycle, with true values alternating between every 4 and every 2 steps.
+
+You can use it in combination with `struct`, for example, in order to create interesting rhythmic patterns:
+
+```haskell
+d1 $ stack [
+    struct (necklace 16 [3,5,4,2,1]) $ s "sd",
+    struct (inv (necklace 16 [3,5,4,2,1])) $ s "bd"
+]
+```
+
 ### substruct
 
 ```haskell
