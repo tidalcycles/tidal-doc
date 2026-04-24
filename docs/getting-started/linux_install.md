@@ -68,7 +68,7 @@ sudo apt update; sudo apt install git jackd2 qjackctl zlib1g-dev gcc g++ ghc cab
 
 ***arch***
 ```bash
-sudo pacman -Syu; sudo pacman -Sy git jack2 qjackctl
+sudo pacman -Syu; sudo pacman -S git jack2 qjackctl
 ```
 
 ***fedora***
@@ -94,7 +94,7 @@ sudo apt install supercollider sc3-{plugins,plugins-language,plugins-server}
     
 ***arch***
 ```bash
-sudo pacman -Sy supercollider sc3-plugins
+sudo pacman -S supercollider sc3-plugins
 ```
 
 ***fedora***
@@ -147,7 +147,7 @@ Quarks.checkForUpdates({Quarks.install("SuperDirt", "v1.7.4"); thisProcess.recom
 
 ***arch***
 ```bash
-sudo pacman -Sy ghc ghc-libs haskell-{tidal,bifunctors,colour,hosc,mwc-random,network,primitive,random,vector,microspec}
+sudo pacman -S ghc ghc-libs haskell-{tidal,bifunctors,colour,hosc,mwc-random,network,primitive,random,vector,microspec}
 ```
             
 ***all others***
