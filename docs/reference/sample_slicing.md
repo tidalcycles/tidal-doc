@@ -1,16 +1,15 @@
 ---
-title: Sampling
-id: sampling
+title: Sample slicing
+id: sample_slicing
 ---
 
 
-This page will present you all the functions that can be used to slice, cut, reverse or explode your audio samples, incoming signals or oscillators. Each function will be presented following the same model:
+This page will present you all the functions that can be used to slice, cut, reverse or explode your samples. Each function will be presented following the same model:
 * **Type signature**: how the function is declared on the **Haskell** side.
 * **Description**: verbal description of the function.
 * **Examples**: a small list of examples that you can copy/paste in your editor.
 
 
-## Audio sampling
 ### chop
 
 ```haskell
@@ -161,29 +160,6 @@ d1 $ bite 4 "0 1*2 2*2 [~ 3]" $ n "0 .. 7" # sound "drum"
 d1 $ chew 4 "0 1*2 2*2 [~ 3]" $ n "0 .. 7" # sound "drum"
 ```
 
-### loopAt
-    
-```haskell
-Type: loopAt :: Pattern Time -> ControlPattern -> ControlPattern
-```
-
-`loopAt` makes sample fit the given number of cycles. Internally, it works by setting the unit control to "c", changing the playback speed of the sample with the speed parameter, and setting the density of the pattern to match.
-
-```haskell
-d1 $ loopAt 4 $ sound "breaks125"
-```
-
-It’s a good idea to use this in conjuction with `chop`, so the break is chopped into pieces and you don’t have to wait for the whole sample to start/stop.
-
-```haskell
-d1 $ loopAt 4 $ chop 32 $ sound "breaks125"
-```
-
-Like all **Tidal** functions, you can mess about with this considerably. The below example shows how you can supply a pattern of cycle counts to `loopAt`:
-```haskell
-d1 $ juxBy 0.6 (|* speed "2") $ loopAt "<4 6 2 3>" $ chop 12 $ sound "fm:14"
-```
-
 ### smash
 
 ```haskell
@@ -227,31 +203,3 @@ vs
 d1 $ smash' 12 [2,3,4] $ s "bev*4"
 ```
 for a dramatic difference.
-
-## Signal sampling 
-### segment
-
-```haskell
-Type: segment :: Pattern Time -> Pattern a -> Pattern a
-```
-
-`segment` 'samples' the pattern at a rate of `n` events per cycle. Useful for turning a continuous pattern into a discrete one. In this example, the pattern originates from the shape of a sine wave, a continuous pattern. Without segment the samples will get triggered at an undefined frequency which may be very high.
-
-```haskell
-d1 $ n (slow 2 $ segment 16 $ range 0 32 $ sine) # sound "amencutup"
-```
-
-### discretise
-
-`segment` used to be known as `discretise`. The old name remains as an alias and will still work, but may be removed or repurposed in a future version of **Tidal**. 
-
-### sig
-
-```haskell
-Type: sig :: (Time -> a) -> Pattern a
-```
-`sig` takes a function of time and turns it into a pattern. It's very useful for creating continuous patterns such as `sine` or `perlin`. For example, `saw` is defined as
-
-```haskell
-saw = sig $ \t -> mod' (fromRational t) 1
-```
